@@ -72,6 +72,9 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'MyHub.home',
+    'MyHub.resume',
+    'MyHub.projects',
+    'MyHub.contact',
 )
 
 MIDDLEWARE_CLASSES = (

@@ -26,7 +26,33 @@
 	
   </head>
   <body>
-  	
+  	<nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+
+		<!-- Brand and toggle get grouped for better mobile display -->
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	      <span class="sr-only">Toggle navigation</span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    
+		<a class="navbar-brand" href="#">Sébastien BARBIER | MyHub</a>
+	  </div>
+	
+	  <!-- Collect the nav links, forms, and other content for toggling -->
+	  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-left">
+			
+		      <li {% block nav_home %}{% endblock %}><a href="/"><span class="livicon" data-name="home" data-size="18" data-color="#999" data-hovercolor="white" style="margin: -6px 5px 0px 0px;"></span> Accueil</a></li>   		      
+   		      <li {% block nav_resume %}{% endblock %}><a href="/resume/"><span class="livicon" data-name="doc-portrait" data-size="18" data-color="#999" data-hovercolor="white" style="margin: -6px 5px 0px 0px;"></span> Mon CV</a><li></li>
+		      <li {% block nav_projects %}{% endblock %}><a href="/projects/"><span class="livicon" data-name="lab" data-size="18" data-color="#999" data-hovercolor="white" style="margin: -6px 5px 0px 0px;"></span> Mes projets</a></li>
+		      <li {% block nav_contact %}{% endblock %}><a href="/contact/"><span class="livicon" data-name="mail" data-size="18" data-color="#999" data-hovercolor="white" style="margin: -6px 5px 0px 0px;"></span> Contact</a></li>
+		   
+		    </ul>
+	   </div>
+	</nav>
+
 	
 	{% block page %}
 	

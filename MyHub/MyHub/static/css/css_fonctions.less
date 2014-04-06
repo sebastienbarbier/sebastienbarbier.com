@@ -1,0 +1,57 @@
+
+@font-face {
+    font-family: 'MarketingScriptRegular';
+    src: url('fonts/MarketingScript-webfont.eot');
+    src: url('fonts/MarketingScript-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/MarketingScript-webfont.woff') format('woff'),
+         url('fonts/MarketingScript-webfont.ttf') format('truetype'),
+         url('fonts/MarketingScript-webfont.svg#MarketingScriptRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.border-radius (@radius: 5px) {
+  	border-radius: @radius;
+  	-moz-border-radius: @radius;
+  	-webkit-border-radius: @radius;
+}
+
+.border-radius-bottom (@radius: 5px)
+{
+	-webkit-border-bottom-right-radius: @radius;
+	-webkit-border-bottom-left-radius: @radius;
+	-moz-border-radius-bottomright: @radius;
+	-moz-border-radius-bottomleft: @radius;
+	border-bottom-right-radius: @radius;
+	border-bottom-left-radius: @radius;
+}
+
+.shadow-box(@color: @shadow, @x: 0px, @y: 0px, @blur: 5px, @spread: 5px){
+	-moz-box-shadow: @x @y @blur @spread @color;
+	-webkit-box-shadow: @x @y @blur @spread @color;
+	box-shadow: @x @y @blur @spread @color;
+}
+
+.inset-shadow-box(@color: @shadow, @x: 0px, @y: 0px, @blur: 5px, @spread: 5px){
+	-moz-box-shadow: inset @x @y @blur @spread @color;
+	-webkit-box-shadow: inset @x @y @blur @spread @color;
+	box-shadow: inset @x @y @blur @spread @color;
+}
+
+.gradient-background(@top: #718DA9, @bottom: #415D79){
+	background: -moz-linear-gradient(top, @top 0%, @bottom 100%); /* firefox */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@top), color-stop(100%,@bottom)); /* webkit */
+	
+}
+
+.text-shadow(@color: #6374AB, @size: 2px, @x: 0px, @y:0px){
+	text-shadow:  @color @x @y @size;
+}
+
+.rotate(@rotate: 90deg){
+	-webkit-transform: rotate(@rotate);	
+	-moz-transform: rotate(@rotate);
+	-ms-transform: rotate(@rotate);
+	-o-transform: rotate(@rotate);
+	transform: rotate(@rotate);
+}

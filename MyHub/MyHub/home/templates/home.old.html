@@ -1,0 +1,101 @@
+{% extends "loader.html" %}
+{% load static from staticfiles %}
+
+{% block nav_home %}class="active"{% endblock %}
+
+{% block page %}
+
+
+
+	<div class="container" style="margin-top: 80px;">
+		<div class="row">
+			<div class="well">
+				<div class="row">
+					<div class="col-md-4 hidden-xs hidden-sm" style="height: 280px;">
+						<span class="livicon" data-name="code" data-size="300" style="margin-top: -10px; width: 300px; display: block; margin: auto;" data-duration="2500" data-color="#0067b7" data-hovercolor="#a5cdea"></span>
+					</div>
+					
+					<div class="col-md-4 col-xs-12 hidden-md hidden-lg" style="height: 140px;">
+						<span class="livicon" data-name="code" data-size="150" style="margin-top: -10px; width: 300px; display: block; margin: auto;" data-duration="2500" data-color="#0067b7" data-hovercolor="#a5cdea"></span>
+					</div>
+					
+					<div class="col-md-8 col-xs-12">
+						<div></div>
+						<h1>
+							<span class="livicon" data-name="quote-left" data-size="30" style="margin-top: -25px;"></span>
+							Bienvenue sur mon hub perso
+							<span class="livicon" data-name="quote-right" data-size="30" style="margin-top: -25px;"></span>
+
+						</h1>
+						
+						<p style="text-align: justify;">Cet espace, que j'appelle mon hub, a pour but de me présenter et synthétiser l'ensemble de mes activités. Rien d'égocentrique dans cette démarche, juste un aspect pratique vis à vis de mes domaines d'activités que sont le dévéloppement d'application et les nouvelles technologies.</p>
+						
+						<p style="text-align: justify;">Beaucoup de chose à venir, dans un premier temps mon CV et une description des projets sur lesquels je travaille. Dans un second temps un blog, et peut être je l'espère une touche artistique sous forme de photo ou création graphique. En tout cas promis, dès que possible j'améliore ce texte d'intro qui me laisse perplexe. Affaire à suivre.</p>
+						
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	
+		<div class="row" style="margin: 0px 0px;">
+			<div class="col-sm-7 col-xs-12">
+				<h2>Actuellement</h2>
+				<p style="text-align: justify;">Depuis septembre 2012 en poste chez Covalia Interactive, ingénieur développement sur la solution Covotem (application de télémédecine autours d'un espace de collaboration temps réel).</p>
+				<!--
+				<p>Pour plus d'information, vous pouvez consulter la rubrique expérience de mon CV.</p>
+				<button class="btn btn-primary" style="float: left;"><span class="livicon shadowed" data-name="briefcase" data-size="18" data-color="white" data-hc="0" data-onparent="true" style="margin: -5px 5px 0px -5px;"></span> Consulter mes expériences</button>
+				-->
+			</div>
+			<div class="col-sm-3 col-sm-offset-1 col-xs-12">
+				<div class="row">
+					<div class="col-sm-12 col-xs-12 socialNetworks">
+						<h2>Réseaux sociaux</h2>
+						<p>
+							<a href="http://www.facebook.com/sebastienbarbier/" data-toggle="tooltip" title="Facebook">
+							<span class="livicon" data-name="facebook-alt" data-size="32"></span>
+							</a>
+							<a href="http://www.twitter.com/SebBarbier/" data-toggle="tooltip" title="Twitter">
+							<span class="livicon" data-name="twitter" data-size="32"></span>
+							</a>
+							<a href="http://fr.linkedin.com/in/sebbarbier/" data-toggle="tooltip" title="LinkedIn">
+							<span class="livicon" data-name="linkedin-alt" data-size="32"></span>
+							</a>
+							<a href="https://github.com/sebastienbarbier/" data-toggle="tooltip" title="Github">
+							<span class="livicon" data-name="github" data-size="32"></span>
+							</a>
+						</p>
+						<script type="text/javascript">
+							$(document).ready(function() {
+								$('.socialNetworks a').tooltip({});
+							});
+
+						</script>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+			<div class="row" style="margin: 40px 0px;">
+			<div class="col-sm-7 col-xs-12">
+				<div class="row">
+					<div class="col-md-3 col-sm-3 col-xs-3">
+						<img src="{% static "images/SebastienBarbier.jpg" %}" alt="Portrait de Sébastien BARBIER" class="img-circle img-responsive" style="border: solid 1px white; margin-top: 20px;" />
+					</div>
+					<div class="col-md-9 col-sm-9 col-xs-9">
+						<h2>A propos</h2>
+						<p>Développeur, passionné par le web, ses technos, et son économie.</p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-sm-5 col-xs-12">
+				
+					<h2>Localisation <span class="livicon" data-name="location" data-size="30" style="margin-top: -18px;" data-duration="2500" data-color="#0067b7" data-hovercolor="#a5cdea"></span></h2>
+					<p style="font-size: 1.2em;">Besançon, <small>France</small>.</p>
+				
+			</div>
+		</div>
+	</div>
+
+{% endblock %}

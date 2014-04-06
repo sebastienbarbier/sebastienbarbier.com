@@ -1,0 +1,133 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{% block title %}Sébastien BARBIER - Besançon, Développeur | MyHub{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
+    <link href="{% static "css/styles.css" %}" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="{% static "js/jquery-2.1.0.min.js" %}"></script>
+    <script src="{% static "js/jquery-ui-1.10.4.custom.min.js" %}"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="{% static "js/bootstrap.min.js" %}"></script>
+    <script src="{% static "js/raphael-min.js" %}"></script>
+    <script src="{% static "js/livicons-1.3.min.js" %}"></script>
+    <script src="{% static "js/scrollToggle.js" %}"></script>
+    <!--[if lt IE 8]>
+	  <script src="{% static "js/json2.min.js" %}"></script>
+	<![endif]-->
+	
+  </head>
+  <body>
+  	
+  	
+  	<!--
+  		<div class="css_nav js_nav">
+	  		<div class="css_bar">
+	  			
+	  		</div>
+	  		
+	  		<div class="css_button">
+	  			<span class="livicon" data-name="responsive-menu" data-size="28"></span>
+	  		</div>
+	  	</div>
+	  -->
+		  	
+	  	<div class="header">
+		  
+		  	<div class="js_title css_title">
+				  	<h1>Sébastien BARBIER</h1>
+					<h2>Développeur web</h2>
+		  	</div>
+		  	
+		  	<div class="js_scrolldown css_scrolldown">
+				<span class="livicon" data-name="angle-wide-down" data-size="60" data-eventtype="click" data-iteration="4"></span>
+		  	</div>
+		  	
+		  	<div class="js_loader css_loader">
+		  		
+		  		<div class="js_progress css_progress">
+		  			<div class="js_bar css_bar">
+		  				
+		  			</div>
+		  		</div>
+		  		
+		  	</div>
+	  	</div>
+	  	
+	  	<div class="content">
+	  		{% block page %}
+	  		
+	  		{% endblock %}
+	  	</div>
+	  	
+	  	
+	  	<div class="js_network css_network">
+	  			<ul>
+	  			<li><a href="http://www.twitter.com/SebBarbier/" data-toggle="tooltip" title="Twitter">
+								<span class="livicon" data-name="twitter" data-size="28"></span>
+								</a></li>
+	  			<li><a href="http://www.facebook.com/sebastienbarbier/" data-toggle="tooltip" title="Facebook">
+								<span class="livicon" data-name="facebook-alt" data-size="28"></span>
+								</a></li>
+	  			<li><a href="http://fr.linkedin.com/in/sebbarbier/" data-toggle="tooltip" title="LinkedIn">
+								<span class="livicon" data-name="linkedin-alt" data-size="28"></span>
+								</a></li>
+	  			<li><a href="https://github.com/sebastienbarbier/" data-toggle="tooltip" title="Github">
+								<span class="livicon" data-name="github" data-size="28"></span>
+								</a></li>
+	  		</ul>
+	  		
+	  	</div>
+	  	
+  	<script type="text/javascript">
+  		$(document).ready(function(){
+  			height = $(window).height() / 2 - $(".css_title").height() / 2 - 15;
+  			$(".js_title").css("padding-top", height).delay(200).show('fade', {duration: 1000});
+  			
+  			$(".js_progress").delay(1200).show('fade', {duration: 400}, function(){
+  				$(".js_bar").animate({
+  					width: "100%",
+  				}, 1000, function(){
+  					$(".js_progress").hide('fade', {duration: 300}, function(){
+  						$(".js_bar").css("width", '0px');
+  						$(".js_network").show('slide', {direction: "down"}, 700);
+  						$(".css_button").show('fade', {direction: "down"}, 1000);
+  						$(".js_scrolldown").show('fade', {direction: "down"}, 1000, function(){
+  							$(".js_scrolldown span").click();
+  							$(".content").show();
+  						});
+  						
+  					});
+  				});
+  			});
+  		});
+  		
+  	</script>
+
+
+	<script>
+		//	Google Analytics
+		(function(i, s, o, g, r, a, m) {
+			i['GoogleAnalyticsObject'] = r;
+			i[r] = i[r] ||
+			function() {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date(); a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+			a.async = 1;
+			a.src = g;
+			m.parentNode.insertBefore(a, m)
+		})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+		ga('create', 'UA-26715145-1', 'sebastienbarbier.com');
+		ga('send', 'pageview');
+
+	</script>
+      </body>
+</html>
