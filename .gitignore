@@ -3,3 +3,4 @@
 *.pyc
 local_settings.py
 MyHub/MyHub/static/js/livicons-1.3.min.js
+MyHub/apps
