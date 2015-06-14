@@ -1,200 +1,181 @@
 /* LESS definition. By Sebastien BARBIER */
+
 //@import "reset.css";
 @import "fonts.less";
 @import "css_fonctions.less";
-
-body, html{
-  height: 100%;
+body, html {
+	height: 100%;
 }
-
-body{
-   font-family: "robotolight", Arial !important;
-   background: url('../images/gplaypattern.png');
-   font-size: 14px !important;
+body {
+	font-family: "robotolight", Arial !important;
+	background: url('../images/gplaypattern.png');
+	font-size: 14px !important;
 }
-
-.header{
-    position: static;
-    width: 100%;
-    height: 100%;
+.header {
+	position: static;
+	width: 100%;
+	height: 100%;
 }
-
 .livicon {
-    display: inline-block;
-    line-height: inherit;
-    vertical-align: middle;
-    height: 18px!important;
+	display: inline-block;
+	line-height: inherit;
+	vertical-align: middle;
+	height: 18px!important;
 }
-
-.css_nav{
-    position: fixed;
-    z-index: 1001;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 50px;
-    .css_button{
-        display: none;
-        background: #DDD;
-        width: 40px;
-        height: 40px;
-        .border-radius(10px);
-        border: solid 1px #CCC;
-        padding: 2px 5px;
-        float: right;
-        margin: 10px 10px;
-        cursor: pointer;
-    }
+.css_nav {
+	position: fixed;
+	z-index: 1001;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 50px;
+	.css_button {
+		display: none;
+		background: #DDD;
+		width: 40px;
+		height: 40px;
+		.border-radius(10px);
+		border: solid 1px #CCC;
+		padding: 2px 5px;
+		float: right;
+		margin: 10px 10px;
+		cursor: pointer;
+	}
 }
-
-.css_title{
-    font-family: "robotothin", Arial;
-    display: none;
-    text-shadow: 1px 1px 20px #000;
-    z-index: 100;
-    
-    .visible-lg, .visible-md, .visible-sm{
-        
-    }
-    
-    .visible-xs{
-        
-    }
-    
-    h1{
-      text-align: center;    
-      font-family: "robotothin", Arial;
-      margin-bottom: 0;
-      padding-bottom: 0;
-    }
-    
-    h2{
-      text-align: center;
-      font-family: "robotothin", Arial;   
-      margin-top: 0;
-      padding-top: 0;  
-    }
-    
+.css_title {
+	font-family: "robotothin", Arial;
+	display: none;
+	text-shadow: 1px 1px 20px #000;
+	z-index: 100;
+	.visible-lg, .visible-md, .visible-sm {} .visible-xs {} h1 {
+		text-align: center;
+		font-family: "robotothin", Arial;
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
+	h2 {
+		text-align: center;
+		font-family: "robotothin", Arial;
+		margin-top: 0;
+		padding-top: 0;
+	}
 }
-
 @media (min-width: 767px) {
-    .css_title{
-    h1{
-          font-size: 60px;
-        }
-        h2{
-          font-size: 34px;
-        }
-    }
+	.css_title {
+		h1 {
+			font-size: 60px;
+		}
+		h2 {
+			font-size: 34px;
+		}
+	}
 }
- 
-@media (max-width: 768px){
-  .css_title{
-    h1{
-          font-size: 30px;
-        }
-        h2{
-          font-size: 19px;
-        }
-    }
+@media (max-width: 768px) {
+	.css_title {
+		h1 {
+			font-size: 30px;
+		}
+		h2 {
+			font-size: 19px;
+		}
+	}
 }
-
-.css_scrolldown{
-  width: 60px;
-  margin: auto;
-  display: none;
-  text-align: center;
-  position: absolute;
-  bottom: 15%;
-  left: 50%;
-  margin-left: -30px;
+.css_scrolldown {
+	width: 60px;
+	margin: auto;
+	display: none;
+	text-align: center;
+	position: absolute;
+	bottom: 15%;
+	left: 50%;
+	margin-left: -30px;
 }
-
-
-.css_network{
-    height: 50px;
-    background: #CCC;
-    display: none;
-    
-    ul{
-      float: right;
-      margin-right: 20px;
-      list-style: none;
-      li{
-        background: #EEE;
-        float: left;
-        width: 36px;
-        height: 36px;
-        margin: 6px 8px 0px 0px;
-        .border-radius (20px);
-        span{
-          margin: 4px 0 0 4px;
-        }
-      }
-    }
+.css_network {
+	height: 50px;
+	background: #CCC;
+	display: none;
+	ul {
+		float: right;
+		margin-right: 20px;
+		list-style: none;
+		li {
+			background: #EEE;
+			float: left;
+			width: 36px;
+			height: 36px;
+			margin: 6px 8px 0px 0px;
+			.border-radius (20px);
+			.fa {
+				font-size: 24px;
+				padding: 5px 0 0 7px;
+			}
+			.fa-twitter {
+				padding: 6px 0 0 7px;
+			}
+			.fa-facebook {
+				padding: 6px 0 0 9px;
+				color: #3B5998;
+			}
+			.fa-linkedin {
+				padding: 5px 0 0 8px;
+			}
+			.fa-github {
+				color: black;
+			}
+			.fa-stack-overflow {
+				color: orange;
+			}
+		}
+	}
 }
-
 @media (max-width: 767px) {
-  .css_network{
-    position: static;
-  }
+	.css_network {
+		position: static;
+	}
 }
- 
-@media (min-width: 768px){
-
-  .css_network{
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
+@media (min-width: 768px) {
+	.css_network {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
 }
-
-.css_loader{
-  
-    z-index: 10;
-    .css_progress{
-      
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        display: none;
-        
-        .css_bar{
-            position: absolute;
-            top: 0;
-            left: 0;
-            background: black;
-            height: 3px;
-            width: 0%;
-        }
-        
-    }
-    
+.css_loader {
+	z-index: 10;
+	.css_progress {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		display: none;
+		.css_bar {
+			position: absolute;
+			top: 0;
+			left: 0;
+			background: black;
+			height: 3px;
+			width: 0%;
+		}
+	}
 }
-
-.content{
-  display: none;
-  position: relative;
-  padding-bottom: 60px;
-  width: 100%;
+.content {
+	display: none;
+	position: relative;
+	padding-bottom: 60px;
+	width: 100%;
 }
-
-.css_portrait{
-    text-align: center;
-    img{
-        width: 100px;
-    }
+.css_portrait {
+	text-align: center;
+	img {
+		width: 100px;
+	}
 }
-  
-
 @media (max-width: 767px) {
-  .css_portrait{
-    text-align: left;
-  }
+	.css_portrait {
+		text-align: left;
+	}
 }
-
-.css_clear{
-  clear: both;
+.css_clear {
+	clear: both;
 }
