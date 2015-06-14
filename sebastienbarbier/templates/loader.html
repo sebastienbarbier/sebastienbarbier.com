@@ -21,12 +21,12 @@
 	<body>
 		<div class="header">
 			<div class="js_title css_title">
-				<h1>Hi, I'm Sébastien BARBIER</h1>
-				<h2>Web developer</h2>
+				<h1>Hi, I'm Sébastien BARBIER<br/>
+				<small>Web developer</small></h1>
 			</div>
 
 			<div class="js_scrolldown css_scrolldown">
-				<span class="livicon" data-name="angle-wide-down" data-size="60" data-eventtype="click" data-iteration="4"></span>
+				<i class="fa fa-angle-down"></i>
 			</div>
 
 			<div class="js_loader css_loader">
@@ -76,6 +76,9 @@
 							$(".js_bar").css("width", '0px');
 							$(".js_network").show('slide', {direction: "down"}, 700);
 							$(".css_button").show('fade', {direction: "down"}, 1000);
+							
+							$(".js_scrolldown").show('fade', {direction: "down"}, 1000);
+							
 							$(".content").show();
 
 						});
