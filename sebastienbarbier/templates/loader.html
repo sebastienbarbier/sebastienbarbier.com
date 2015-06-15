@@ -14,21 +14,14 @@
 		<link href="{% static "css/font-awesome.min.css" %}" rel="stylesheet">
 	</head>
 	<body>
-		<header class="header">
-			<div class="js_title css_title">
-				<h1>Hi, I'm Sébastien BARBIER<br/>
-				<small>Web developer</small></h1>
-			</div>
+		<header>
+			<div class="css_loader"></div>
 
-			<div class="js_scrolldown css_scrolldown">
+			<h1>Hi, I'm Sébastien BARBIER<br/>
+			<small>Web developer</small></h1>
+
+			<div class="css_scrolldown">
 				<i class="fa fa-angle-down"></i>
-			</div>
-
-			<div class="js_loader css_loader">
-				<div class="js_progress css_progress">
-					<div class="js_bar css_bar">
-					</div>
-				</div>
 			</div>
 		</header>
 
@@ -37,7 +30,7 @@
 			{% endblock %}
 		</div>
 
-		<footer class="js_network css_network">
+		<footer>
 			<ul>
 				<li><a href="http://www.twitter.com/SebBarbier/" title="Twitter profil">
 					<i class="fa fa-twitter"></i>
@@ -58,26 +51,12 @@
 		</footer>
 
 		<script src="{% static "js/jquery-2.1.0.min.js" %}"></script>
-		<script src="{% static "js/jquery-ui-1.10.4.custom.min.js" %}"></script>
-		<script src="{% static "js/bootstrap.min.js" %}"></script>
 		<script type="text/javascript">
 			$(document).ready(function(){
-				height = $(window).height() / 2 - $(".css_title").height() / 2 - 15;
-				$(".js_title").css("padding-top", height).delay(200).show('fade', {duration: 1000});
-
-				$(".js_progress").delay(1200).show('fade', {duration: 400}, function(){
-					$(".js_bar").animate({
-						width: "100%",
-					}, 1000, function(){
-						$(".js_progress").hide('fade', {duration: 300}, function(){
-							$(".js_bar").css("width", '0px');
-							$(".js_network").show('slide', {direction: "down"}, 700);
-							$(".css_button").show('fade', {direction: "down"}, 1000);
-							$(".js_scrolldown").show('fade', {direction: "down"}, 1000);
-							$(".content").show();
-						});
-					});
-				});
+				$(".content").hide();
+				setTimeout(function () {
+					$(".content").show();
+				}, 2200);
 			});
 
 		 	// Piwik
