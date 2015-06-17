@@ -24,6 +24,8 @@ DEBUG = True
 
 TEMPLATE_DEBUG = True
 
+# SITE ID is required for sitemap.xml
+SITE_ID = 1
 
 ALLOWED_HOSTS = []
 
@@ -71,7 +73,9 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'sebastienbarbier.home',
+    'django.contrib.sites',
+    'django.contrib.sitemaps',
+    'sebastienbarbier.home'
 )
 
 MIDDLEWARE_CLASSES = (
