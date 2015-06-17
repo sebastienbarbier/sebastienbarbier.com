@@ -50,9 +50,9 @@ STATIC_URL = '/_static/'
 
 
 # Override Template position.
-TEMPLATE_DIRS = (
+TEMPLATE_DIRS = [(
     PROJECT_PATH + '/templates/'
-)
+)]
 
 # Additional locations of static files
 STATICFILES_DIRS = (
