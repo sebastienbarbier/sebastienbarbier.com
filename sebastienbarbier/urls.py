@@ -5,6 +5,7 @@ from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib.sitemaps.views import sitemap
+from django.views.generic.base import TemplateView
 
 admin.autodiscover()
 
@@ -25,5 +26,6 @@ urlpatterns = patterns('',
     # url(r'^projects/$', projects_page, name='projects'),
     # url(r'^contact/$', contact_page, name='contact'),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^robots\.txt$', TemplateView.as_view(template_name='robots.txt')),
     url(r'^sitemap\.xml$', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
 ) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
