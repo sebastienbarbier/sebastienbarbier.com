@@ -19,7 +19,7 @@ urlpatterns = patterns('',
     # url(r'^$', 'sebastienbarbier.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
 
-    url(r'^$', home_page, name='home'),
+    url(r'^$', TemplateView.as_view(template_name='home.html')),
 
     # url(r'^home/$', home_page, name='index'),
     # url(r'^resume/$', resume_page, name='resume'),
