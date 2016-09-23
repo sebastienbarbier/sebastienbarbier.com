@@ -1,9 +1,20 @@
-<html>
-<head>
-	<title>{% block title %}Sébastien BARBIER{% endblock %}</title>
-</head>
-<body>
-{% block content %}
-{% endblock %}
-</body>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>{% block title %}Sébastien BARBIER{% endblock %}</title>
+		<meta charset="utf-8">
+		<meta name="description" content="Hi ! My name is Sébastien and I am a software engineer from France.">
+	</head>
+	<body>
+		<header>
+			<h1><a href="{% url 'home' %}">Sébastien BARBIER</a></h1>
+		</header>
+		<main>
+		{% block content %}
+		{% endblock %}
+		</main>
+		<footer>
+			<p><a href="{% url 'legal' %}">Legal &amp; copyright</a></p>
+		</footer>
+	</body>
 </html>
