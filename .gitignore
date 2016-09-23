@@ -2,3 +2,4 @@ apps
 collectstatic
 *.pyc
 db.sqlite3
+static/CACHE

@@ -1,9 +1,13 @@
+{% load static compress %}
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<title>{% block title %}Sébastien BARBIER{% endblock %}</title>
 		<meta charset="utf-8">
 		<meta name="description" content="Hi ! My name is Sébastien and I am a software engineer from France.">
+		{% compress css %}
+    	<link rel="stylesheet" href="{% static 'sass/styles.scss' %}" type="text/x-sass" charset="utf-8">
+    	{% endcompress %}
 	</head>
 	<body>
 		<header>
