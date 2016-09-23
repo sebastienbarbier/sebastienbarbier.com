@@ -122,7 +122,6 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATIC_ROOT = BASE_DIR + '/collectstatic/'
-COMPRESS_ROOT = 'static/'
 
 STATICFILES_DIRS = [
     "static/",
@@ -138,3 +137,4 @@ STATICFILES_FINDERS = (
 COMPRESS_PRECOMPILERS = (
     ('text/x-sass', 'sass {infile} {outfile}'),
 )
+
