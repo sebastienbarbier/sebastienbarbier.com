@@ -6,19 +6,32 @@
 		<meta charset="utf-8">
 		<meta name="description" content="Hi ! My name is Sébastien and I am a software engineer from France.">
 		{% compress css %}
+    	<link rel="stylesheet" href="{% static 'sass/normalize.scss' %}" type="text/x-sass" charset="utf-8">
+    	<link rel="stylesheet" href="{% static 'sass/fonts.scss' %}" type="text/x-sass" charset="utf-8">
     	<link rel="stylesheet" href="{% static 'sass/styles.scss' %}" type="text/x-sass" charset="utf-8">
     	{% endcompress %}
 	</head>
 	<body>
 		<header>
-			<h1><a href="{% url 'home' %}">Sébastien BARBIER</a></h1>
+			<h1><a href="{% url 'home' %}">sebastienbarbier</a></h1>
+			<nav>
+				<ul>
+					<li><a href="{% url 'about' %}">About</a></li>
+					<li><a href="{% url 'contact' %}">Contact</a></li>
+				</ul>
+			</nav>
 		</header>
 		<main>
 		{% block content %}
 		{% endblock %}
 		</main>
 		<footer>
-			<p><a href="{% url 'legal' %}">Legal &amp; copyright</a></p>
+			<nav>
+				<ul>
+					<li><small>{% now "Y" %}</small></li>
+					<li><a href="{% url 'legal' %}">Legal &amp; copyright</a></li>
+				</ul>
+			</nav>
 		</footer>
 	</body>
 </html>
