@@ -1,0 +1,5 @@
+ {
+      "deploy": {
+         "module": "sebastienbarbier.wsgi:application"
+      }
+   }
