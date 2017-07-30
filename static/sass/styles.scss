@@ -2,13 +2,14 @@ html {
 	height: 100%;
 	padding: 0;
 	margin: 0;
-	font-family: "open_sanslight";
+	color: #333;
+	font-family: 'Open Sans', sans-serif;
+	// font-family: "open_sanslight";
 	font-weight: 300;
 	font-size: 15px;
 	letter-spacing: -0.3px;
 	text-rendering: optimizelegibility;
 	font-kerning: auto;
-	color: #333;
 	body {
 		padding: 0;
 		margin: 0;
@@ -22,9 +23,9 @@ html {
 				margin: 0px;
 				float: left;
 				font-size: 2.6em;
-				padding: 30px 0 0 10px;
-				font-family: "open_sansbold";
-				font-weight: 300;
+				padding: 32px 0 0 10px;
+				// font-family: "open_sansbold";
+				font-weight: 700;
 				a {
 					color: black;
 					text-decoration: none;
@@ -103,7 +104,8 @@ html {
 }
 
 strong {
-	font-family: "open_sanssemibold";
+	// font-family: "open_sanssemibold";
+	font-weight: 500;
 }
 
 a {
