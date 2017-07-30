@@ -1,5 +1,6 @@
  {
       "deploy": {
-         "module": "sebastienbarbier.wsgi:application"
+         "module": "sebastienbarbier.wsgi:application",
+         "managetasks": [ "collectstatic" ]
       }
    }
