@@ -5,8 +5,8 @@
 		<title>{% block title %}Sébastien BARBIER{% endblock %}</title>
 		<meta charset="utf-8">
 		<meta name="description" content="Hi ! My name is Sébastien and I am a software engineer from France.">
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 		{% compress css %}
+    	<link rel="stylesheet" href="{% static 'sass/fonts.scss' %}" type="text/x-sass" charset="utf-8">
     	<link rel="stylesheet" href="{% static 'sass/normalize.scss' %}" type="text/x-sass" charset="utf-8">
     	<link rel="stylesheet" href="{% static 'sass/styles.scss' %}" type="text/x-sass" charset="utf-8">
     	{% endcompress %}
