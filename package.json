@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "install": "build:dynamic",
+    "install": "npm run build:dynamic",
     "start": "cd dist && node server",
     "build": "ng build",
     "build:static": "ng build --prod && ng build --prod --app 1 --output-hashing=false && node prerender",
