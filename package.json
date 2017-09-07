@@ -12,7 +12,8 @@
     "serve:dynamic": "npm run build:dynamic && cd dist && node server",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "install": "build:dynamic"
   },
   "private": true,
   "dependencies": {
