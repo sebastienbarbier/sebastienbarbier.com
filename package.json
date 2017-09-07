@@ -4,7 +4,8 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "install": "build:dynamic",
+    "start": "cd dist && node server",
     "build": "ng build",
     "build:static": "ng build --prod && ng build --prod --app 1 --output-hashing=false && node prerender",
     "build:dynamic": "ng build --prod && ng build --prod --app 1 --output-hashing=false && cpy ./server.js ./dist",
@@ -12,8 +13,7 @@
     "serve:dynamic": "npm run build:dynamic && cd dist && node server",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "install": "npm run build:dynamic"
+    "e2e": "ng e2e"
   },
   "engines" : {
     "node" : "~7.0"
