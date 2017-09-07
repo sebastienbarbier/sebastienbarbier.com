@@ -13,7 +13,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "install": "build:dynamic"
+    "install": "npm run build:dynamic"
   },
   "engines" : {
     "node" : "~7.0"
