@@ -1,6 +1,0 @@
- {
-      "deploy": {
-         "module": "sebastienbarbier.wsgi:application",
-         "managetasks": [ "collectstatic --no-input" ]
-      }
-   }
