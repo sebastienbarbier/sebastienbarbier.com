@@ -1,4 +1,4 @@
-<header [ngClass]="theme">
+<header>
   <h1><a routerLink="/">sebastienbarbier</a></h1>
   <nav>
     <ul>
@@ -6,7 +6,7 @@
     </ul>
   </nav>
 </header>
-<main>
+<main [ngClass]="theme">
   <router-outlet></router-outlet>
 </main>
 <footer>

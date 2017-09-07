@@ -32,7 +32,10 @@ export class AppComponent implements OnInit {
       })
       .filter((route) => route.outlet === 'primary')
       .mergeMap((route) => route.data)
-      .subscribe((event) => this.theme = event['theme']);
+      .subscribe((event) =>
+        setTimeout(() => {
+          this.theme = event['theme'];
+        }, 10));
   }
 
 }
