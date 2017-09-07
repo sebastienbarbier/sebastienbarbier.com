@@ -13,7 +13,7 @@ const { provideModuleMap } = require('@nguniversal/module-map-ngfactory-loader')
 const { AppServerModuleNgFactory, LAZY_MODULE_MAP } = require(`./dist-server/main.bundle`);
 
 const app = express();
-const port = 8000;
+const port = 8080;
 const baseUrl = `http://localhost:${port}`;
 
 // Set the engine
