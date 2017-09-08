@@ -29,6 +29,25 @@ app.set('view engine', 'html');
 app.set('views', './');
 app.use('/', express.static('./', {index: false}));
 
+// Return static keybase file. Same path keybase/keybase.txt for src and dist
+app.get('/keybase.txt', function (req, res, next) {
+
+  var options = {
+    root: __dirname,
+    dotfiles: 'deny',
+    headers: {
+        'x-timestamp': Date.now(),
+        'x-sent': true
+    }
+  };
+
+  res.sendFile('keybase/keybase.txt', options, function (err) {
+    if (err) {
+      next(err);
+    }
+  });
+});
+
 app.get('*', (req, res) => {
   res.render('index', {
     req,
