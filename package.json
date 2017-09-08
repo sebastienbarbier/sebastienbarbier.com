@@ -8,7 +8,7 @@
     "start": "cd dist && node server",
     "build": "ng build",
     "build:static": "ng build --prod && ng build --prod --app 1 --output-hashing=false && node prerender",
-    "build:dynamic": "ng build --prod && ng build --prod --app 1 --output-hashing=false && cpy ./server.js ./dist",
+    "build:dynamic": "ng build --prod && ng build --prod --app 1 --output-hashing=false && cpy ./server.js ./dist &&  cpy ./keybase/keybase.txt ./dist",
     "serve:static": "npm run build:static && cd dist && http-server",
     "serve:dynamic": "npm run build:dynamic && cd dist && node server",
     "test": "ng test",

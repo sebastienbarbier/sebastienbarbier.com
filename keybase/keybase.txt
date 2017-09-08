@@ -1,0 +1,86 @@
+==================================================================
+https://keybase.io/sebastienbarbier
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://sebastienbarbier.com
+  * I am sebastienbarbier (https://keybase.io/sebastienbarbier) on keybase.
+  * I have a public key with fingerprint 57A5 47B4 F5FE 8F33 8E08  9436 FCFC 85C1 DF52 FBD3
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0101788754bc0e1e6b0b5e38e6a5cf1420c0bd833d32ec2e52766c722f73aa9fed6d0a",
+      "fingerprint": "57a547b4f5fe8f338e089436fcfc85c1df52fbd3",
+      "host": "keybase.io",
+      "key_id": "fcfc85c1df52fbd3",
+      "kid": "0101788754bc0e1e6b0b5e38e6a5cf1420c0bd833d32ec2e52766c722f73aa9fed6d0a",
+      "uid": "044a463229d0b0cad4d7e5c89b1f8b19",
+      "username": "sebastienbarbier"
+    },
+    "merkle_root": {
+      "ctime": 1504835626,
+      "hash_meta": "aefd955ea15caba082340870da97f67bd9f9bb268b651a321d0c2f66bc641934",
+      "seqno": 1374268
+    },
+    "revoke": {
+      "sig_ids": [
+        "61b923a249cec170b41c77dcbc1cc2b0e366b754da09a6492b9ef4d6868d163f0f"
+      ]
+    },
+    "service": {
+      "hostname": "sebastienbarbier.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1504835650,
+  "expire_in": 157680000,
+  "prev": "c92c3a6d42d0f8cfe3e1ca3265b36d3bed5345335d28e8278f655569e6f48d68",
+  "seqno": 11,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Comment: GPGTools - https://gpgtools.org
+
+owGtU31MVlUc5hV1giPT0lZq6SWHNKT7dc49l6zNkbJ009T8IMHXe77gCrwX7/vy
+GuqrSLySaaYomU0LNMVpYjSWS6fF3NwQmeVHThNx4Bc2NWmKE5LOtdpaq/86/5yd
+s+f3PM/vOee3PiE2Jt7X0xNtaJ3RfdrX1IFjMuseTF8qYYcWS2lLpTz2eGP5lAVD
+/jybSmmSrMiKgZABdExkpjCIZQyYhhi0AOGKrspExhRpGtVURlQGVANCYqgqNzTL
+MjmjkMqWlCJxO5DD3ELXDoQELTAsoBtY54AzxDXBJyNT1yAnnCBAFMqByjHVRGGu
+E/QqhDlsBVmq7Yg7cfA/tvcv+P/Zd9EfdLpu6VBTVZPKWCYW1anBAEEmVjjCiukB
+g8wNWAVMoINMWA3ZLIAtF9vMlSIpUgFz8/KZ33WckBcyCdkeVAGyjjQAVSgatYK5
+/gIWsgSDxTg1AWCWAoiFLRmpmi4jQ6aWaXBoYGpyE2MVIgyBYmmqQmWicggxgbpi
+arrwE2SLAo5Q0Axd4IQDl4WdPOaJB+0cEV/wu3IpbZ4EFWyqmqXqJmFEMWSsK8Qw
+KMFEIUTFMtMErciRWrJpQd1Uscm4TiGCiCpQ4zKXsiOenBu2yWN678X+I4lU4hQI
+b4WuE3KIky8QuaFQYTDNSyhUXOiVLGbY/yeZH9sBKv6NqAgzN2g7AdGPQP4jPCCn
+SOydQttlfttDAAMiWSxPh4UFJTFVolmQ6iqVOSKcaUwhIjUIsAaphhkFmg40DVAV
+MaQaiEMAADQZ5DoSnf4tTUX4tHK8zuycgBUqcpkUiV/dZ0TfGF98TP9+fbyJiomP
+e/KvMctIGdQ7U7m8qzYS03qzJmFYuOKHrYejzdvnRD6sT+qYU9w+ZftgvWn3rQFs
+QcKhxQNGLN2TVDr2vfLhb0zqevPA/blZJQvjUnq+OlrWtTU9y77aPLCffiH7xgcb
+n7MnTEscf//lbt+4L3ckTvx5fdHh0qZhu6+deWJZ3ryzSiFKzt+YPOXotodb72wq
+WB5dsXM+6drMMxvv9Tx6sMl3alLzlcDVSXb7o/a7R/b/oqLn9w2NTLcrxm/oXDay
+/qmpFxd9dLHs69iMUzPvnWmYd67qp7qnZ72dUD2mow0/G6k6PufCQHXMMxn3v22s
+TfXvllv2b2v5JgtWkhn917SdOJu8ZMnHsXMvHqt+96VbcXUja1bGdaXyYU1Z4/b7
+h8xGm6+fj+JxvLe1pa645M4943xSWsHUDUVVN/t2Dngttiz86Y7uyY2VviVDw+fP
+DTyd3XdvYuOIuWv3Voza935brbHg6uJNq2bNz3z99osT6o85qzJyW/3pur/Eqazj
+Q/IXxdY4Tb0J1yaUbHl1Wo2yPH1dUvWNE6Vjt4w8cjA0eeOhqgNNyQ2dmb9W3hoy
+enz+qpTLoP1SQ7+7IOGL4SvW9O89bi0v940++XAQy94pSTXL1l56ZRD6LHr7hcSJ
+aZV3K9quLyw/pzXHXYher04/sbp2VLBlXUPp7GhOR8Wag+Vt9Zc7Pxl98scysuPK
+yp2Df6vv/v6tPbsiKz6fdiTxdw==
+=rAl/
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/sebastienbarbier
+
+==================================================================
