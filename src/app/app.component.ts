@@ -20,8 +20,8 @@ import {
   animations: [
     trigger('routingState', [
       transition('* => *', [
-        style({transform: 'translateY(20px)', opacity: 0}),
-        animate(200, style({transform: 'translateY(0)', opacity: 1}))
+        style({transform: 'translate(0px, 20px)', opacity: 0}),
+        animate(200, style({transform: 'translate(0px, 0)', opacity: 1}))
       ])
     ])
   ]
