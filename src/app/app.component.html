@@ -6,8 +6,10 @@
     </ul>
   </nav>
 </header>
-<main [ngClass]="theme">
-  <router-outlet></router-outlet>
+<main>
+  <div [@routingState]="routerState">
+    <router-outlet></router-outlet>
+  </div>
 </main>
 <footer>
   <nav>
