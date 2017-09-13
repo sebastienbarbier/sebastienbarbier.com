@@ -12,6 +12,7 @@ import { HomeComponent } from './home/home.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { PhotographyComponent } from './photography/photography.component';
 import { BlogComponent } from './blog/blog.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -20,7 +21,7 @@ const appRoutes: Routes = [
   { path: 'blog', component: BlogComponent, data: { title: 'Blog' } },
   { path: 'contact', component: ContactComponent, data: { title: 'Contact', theme: 'dark' } },
   { path: 'legal', component: LegalComponent, data: { title: 'Legal & copyright' } },
-  // { path: '**', component: PageNotFoundComponent }
+  { path: '**', component: PageNotFoundComponent }
 ];
 
 @NgModule({
@@ -31,7 +32,8 @@ const appRoutes: Routes = [
     HomeComponent,
     ProjectsComponent,
     PhotographyComponent,
-    BlogComponent
+    BlogComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'my-app'}),
