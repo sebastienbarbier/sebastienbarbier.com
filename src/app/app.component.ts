@@ -22,7 +22,6 @@ export class AppComponent implements OnInit {
 
   headerState: string;
   navigationMenuStatus: Boolean;
-  title = 'app';
 
   constructor(
     private route: ActivatedRoute,
@@ -48,18 +47,9 @@ export class AppComponent implements OnInit {
         }
       }
     });
+  }
 
-    this.router.events
-      .filter(event => event instanceof NavigationEnd)
-      .map(() => this.route)
-      .map(route => {
-        while (route.firstChild) {
-          route = route.firstChild;
-        }
-        return route;
-      })
-      .filter(route => route.outlet === 'primary')
-      .mergeMap(route => route.data)
-      .subscribe((event) => this.title = event['title']);
+  getState(outlet) {
+    return outlet.activatedRouteData.state;
   }
 }

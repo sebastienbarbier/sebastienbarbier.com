@@ -1,5 +1,5 @@
 <header [class]="headerState">
-  <h1><a routerLink="/">sebastienbarbier</a> \ <small>{{ title }}</small></h1>
+  <h1><a routerLink="/">sebastienbarbier</a> \ <small>{{ o.activatedRouteData.title }}</small></h1>
 </header>
 
 <aside>
@@ -19,7 +19,7 @@
 
 <main>
   <div>
-    <router-outlet></router-outlet>
+    <router-outlet #o="outlet"></router-outlet>
   </div>
 </main>
 
