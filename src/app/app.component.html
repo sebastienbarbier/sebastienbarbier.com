@@ -1,16 +1,28 @@
-<header>
-  <h1><a routerLink="/">sebastienbarbier</a></h1>
+<header [class]="headerState">
+  <h1><a routerLink="/">sebastienbarbier</a> \ <small>{{ title }}</small></h1>
+</header>
+
+<aside>
+  <label for="navigationMenu">Navigation Menu</label>
+  <input type="checkbox" name="navigationMenu" id="navigationMenu" [(ngModel)]="navigationMenuStatus" checked="checked" />
   <nav>
+    <label for="navigationMenu">Navigation Menu</label>
     <ul>
-      <li><a routerLink="/contact">Contact</a></li>
+      <li><a routerLink="/">Home</a></li>
+      <li><a routerLink="/projects" routerLinkActive="active">Projects</a></li>
+      <li><a routerLink="/photography" routerLinkActive="active">Photography</a></li>
+      <li><a routerLink="/blog" routerLinkActive="active">Blog</a></li>
+      <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
     </ul>
   </nav>
-</header>
+</aside>
+
 <main>
-  <div [@routingState]="routerState">
+  <div>
     <router-outlet></router-outlet>
   </div>
 </main>
+
 <footer>
   <nav>
     <ul>

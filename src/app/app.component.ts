@@ -16,36 +16,50 @@ import {
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
-  animations: [
-    trigger('routingState', [
-      transition('* => *', [
-        style({transform: 'translate(0px, 20px)', opacity: 0}),
-        animate(200, style({transform: 'translate(0px, 0)', opacity: 1}))
-      ])
-    ])
-  ]
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
 
-  routerState: string;
+  headerState: string;
+  navigationMenuStatus: Boolean;
   title = 'app';
 
   constructor(
     private route: ActivatedRoute,
     private router: Router
-  ) {}
+  ) {
+    this.headerState = 'hide';
+    this.navigationMenuStatus = false;
+  }
 
   ngOnInit() {
     this.router.events.subscribe(event => {
+      // NavigationStart, NavigationEnd, NavigationCancel, NavigationError, RoutesRecognized
       if (event instanceof NavigationEnd) {
-        this.routerState = event.url;
+        // If home page, we hide header
+        if (event.url === '/') {
+          this.headerState = 'hide';
+        } else {
+          this.headerState = 'show';
+        }
+        // On page change, we close navigation menu
+        if (this.navigationMenuStatus === true) {
+          this.navigationMenuStatus = !this.navigationMenuStatus;
+        }
       }
-      // NavigationStart
-      // NavigationEnd
-      // NavigationCancel
-      // NavigationError
-      // RoutesRecognized
     });
+
+    this.router.events
+      .filter(event => event instanceof NavigationEnd)
+      .map(() => this.route)
+      .map(route => {
+        while (route.firstChild) {
+          route = route.firstChild;
+        }
+        return route;
+      })
+      .filter(route => route.outlet === 'primary')
+      .mergeMap(route => route.data)
+      .subscribe((event) => this.title = event['title']);
   }
 }

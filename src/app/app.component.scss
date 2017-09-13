@@ -1,21 +1,98 @@
+
 header {
   padding-left: 50px;
-  margin: auto;
-  position: relative;
+  top: 0px;
+  position: absolute;
 
+  &.hide {
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility 0s 0.2s, opacity 0.2s ease-out;
+  }
+  &.show {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.4s ease-in 0s;
+  }
+
+  h1 {
+    text-align: left;
+    margin: 0px;
+    font-size: 2em;
+    padding: 32px 0 0 10px;
+    font-family: "open_sansbold";
+    a {
+      color: black;
+      text-decoration: none;
+      border-bottom: none;
+      font-size: 1.3em;
+      padding-right: 6px;
+    }
+    small {
+      padding-left: 6px;
+      font-family: "open_sanslight";
+      font-size: 0.9em;
+      padding-bottom: 1px;
+    }
+  }
+}
+
+aside{
+  font-family: "open_sanslight";
+  label{
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 40px;
+  }
+  input[type=checkbox]{
+    visibility: hidden;
+  }
+  input[type=checkbox]:checked + nav {
+    visibility: visible;
+    opacity: 1;
+    transform : scale(1);
+    transition: visibility 0s, opacity 0.2s ease-out, transform 0.1s ease-out;
+  }
   nav {
-    float: left;
-    margin-top: 36px;
+    transition: visibility 0s 0.2s, opacity 0.2s ease-out, transform 0.1s ease-out;
+    transform : scale(0.95);
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
     ul {
+      margin-top: 10px;
       li{
         list-style: none;
-        float: left;
         margin: 2px 30px 2px 0px;
+        color: white;
+        text-align: center;
+        border-bottom: solid 1px white;
+        padding: 10px 20px;
+        max-width: 400px;
+        font-family: "open_sansbold";
+        &:last-child {
+          border-bottom: 0px;
+        }
         a{
           border: none;
           text-transform: uppercase;
-          font-size: 1.2em;
+          font-size: 1.4em;
           letter-spacing: 0px;
+          color: white;
+          &.active {
+            color: #888;
+            cursor: default;
+          }
         }
       }
     }
