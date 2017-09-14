@@ -31,3 +31,33 @@ main {
     margin: auto;
   }
 }
+
+body.light {
+  background: white;
+  color: black;
+  transition: background-color 0.5s 0.5s, color 1s;
+  a {
+    color: black;
+  }
+  .svgFillBlack {
+    fill: black;
+  }
+  .svgFillWhite {
+    fill: white;
+  }
+}
+
+body.dark {
+  background: black;
+  color: white;
+  transition: background-color 0.5s 0.5s, color 1s;
+  h1, a {
+    color: white;
+  }
+  .svgFillBlack {
+    fill: white;
+  }
+  .svgFillWhite {
+    fill: white;
+  }
+}

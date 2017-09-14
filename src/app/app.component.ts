@@ -2,7 +2,8 @@ import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/mergeMap';
 
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { DOCUMENT } from '@angular/platform-browser';
 import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
 import { routerTransition } from './router.animations';
 
@@ -27,7 +28,8 @@ export class AppComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    @Inject(DOCUMENT) private document
   ) {
     this.headerState = 'hide';
     this.navigationMenuStatus = false;
@@ -52,6 +54,8 @@ export class AppComponent implements OnInit {
   }
 
   getState(outlet) {
+    this.document.getElementById('body').setAttribute('class', outlet.activatedRouteData.theme);
     return outlet.activatedRouteData.state;
   }
+
 }
