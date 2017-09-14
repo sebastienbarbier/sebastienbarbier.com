@@ -15,12 +15,13 @@ import { BlogComponent } from './blog/blog.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const appRoutes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'photography', component: PhotographyComponent, data: { title: 'Photography' } },
-  { path: 'projects', component: ProjectsComponent, data: { title: 'Projects' } },
-  { path: 'blog', component: BlogComponent, data: { title: 'Blog' } },
-  { path: 'contact', component: ContactComponent, data: { title: 'Contact', theme: 'dark' } },
-  { path: 'legal', component: LegalComponent, data: { title: 'Legal & copyright' } },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent, data: { title: 'Home', state: 'home' } },
+  { path: 'projects', component: ProjectsComponent, data: { title: 'Projects', state: 'projects' } },
+  { path: 'photography', component: PhotographyComponent, data: { title: 'Photography', state: 'photography' } },
+  { path: 'blog', component: BlogComponent, data: { title: 'Blog', state: 'blog' } },
+  { path: 'contact', component: ContactComponent, data: { title: 'Contact', theme: 'dark', state: 'contact' } },
+  { path: 'legal', component: LegalComponent, data: { title: 'Legal & copyright', state: 'legal' } },
   { path: '**', component: PageNotFoundComponent }
 ];
 

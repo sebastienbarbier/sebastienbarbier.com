@@ -1,5 +1,5 @@
 <header [class]="headerState">
-  <h1><a routerLink="/">sebastienbarbier</a> \ <small>{{ o.activatedRouteData.title }}</small></h1>
+  <h1><a routerLink="/home">sebastienbarbier</a> \ <small>{{ o.activatedRouteData.title }}</small></h1>
 </header>
 
 <aside>
@@ -8,7 +8,7 @@
   <nav>
     <label for="navigationMenu">Navigation Menu</label>
     <ul>
-      <li><a routerLink="/">Home</a></li>
+      <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
       <li><a routerLink="/projects" routerLinkActive="active">Projects</a></li>
       <li><a routerLink="/photography" routerLinkActive="active">Photography</a></li>
       <li><a routerLink="/blog" routerLinkActive="active">Blog</a></li>
@@ -18,7 +18,7 @@
 </aside>
 
 <main>
-  <div>
+  <div [@routerTransition]="getState(o)">
     <router-outlet #o="outlet"></router-outlet>
   </div>
 </main>

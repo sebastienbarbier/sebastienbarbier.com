@@ -4,6 +4,7 @@ import 'rxjs/add/operator/mergeMap';
 
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
+import { routerTransition } from './router.animations';
 
 import {
   trigger,
@@ -15,6 +16,7 @@ import {
 
 @Component({
   selector: 'app-root',
+  animations: [ routerTransition ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
@@ -36,7 +38,7 @@ export class AppComponent implements OnInit {
       // NavigationStart, NavigationEnd, NavigationCancel, NavigationError, RoutesRecognized
       if (event instanceof NavigationEnd) {
         // If home page, we hide header
-        if (event.url === '/') {
+        if (event.url === '/' || event.url === '/home') {
           this.headerState = 'hide';
         } else {
           this.headerState = 'show';
