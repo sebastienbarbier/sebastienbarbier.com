@@ -23,12 +23,12 @@ export const routerTransition = trigger('routerTransition', [
       group([
         query(':leave', [
           style({ opacity: 1 }),
-          animate('500ms cubic-bezier(.75,-0.48,.26,1.52)',
+          animate('500ms ease-out',
           style({ opacity: 0 }))
         ], {optional: true}),
         query(':enter', [
           style({ opacity: 0 }),
-          animate('500ms cubic-bezier(.75,-0.48,.26,1.52)',
+          animate('500ms 300ms ease-in',
           style({ opacity: 1 }))
         ], {optional: true}),
       ]),
