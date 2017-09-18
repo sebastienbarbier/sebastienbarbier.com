@@ -1,6 +1,11 @@
 @import 'assets/scss/fonts';
 @import 'assets/scss/styling';
 
+
+$dark-background: rgb(31, 29, 29);
+
+$light-background: white;
+
 html {
   height: 100%;
   padding: 0;
@@ -33,11 +38,12 @@ main {
 }
 
 body.light {
-  background: white;
+  background: $light-background;
   color: black;
   transition: background-color 0.5s 0.5s, color 1s;
-  a {
+  h1, a {
     color: black;
+  transition: color 1s;
   }
   .svgFillBlack {
     fill: black;
@@ -48,11 +54,12 @@ body.light {
 }
 
 body.dark {
-  background: black;
+  background: $dark-background;
   color: white;
   transition: background-color 0.5s 0.5s, color 1s;
   h1, a {
     color: white;
+  transition: color 1s;
   }
   .svgFillBlack {
     fill: white;
