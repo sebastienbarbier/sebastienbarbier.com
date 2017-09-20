@@ -1,4 +1,5 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
+
 import {
   sequence,
   trigger,

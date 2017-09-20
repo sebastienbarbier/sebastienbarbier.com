@@ -1,10 +1,6 @@
+@import 'assets/scss/variables';
 @import 'assets/scss/fonts';
 @import 'assets/scss/styling';
-
-
-$dark-background: rgb(31, 29, 29);
-
-$light-background: white;
 
 html {
   height: 100%;
@@ -13,28 +9,12 @@ html {
   body {
     padding: 0;
     margin: 0;
-    height: 100%;
   }
 }
 
 main {
   clear: both;
-  margin: auto;
-  padding: 15px 0 100px 0;
-  section {
-    padding: 10px 10px 20px 10px;
-    width: 760px;
-    margin: auto;
-  }
-  article {
-    padding: 110px 10px 20px 10px;
-    width: 760px;
-    margin: auto;
-  }
-  footer {
-    width: 760px;
-    margin: auto;
-  }
+  padding: 0px 0 100px 0;
 }
 
 body.light {

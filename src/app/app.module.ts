@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule }    from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
@@ -26,6 +27,15 @@ const appRoutes: Routes = [
 ];
 
 @NgModule({
+  imports: [
+    BrowserModule.withServerTransition({appId: 'my-app'}),
+    BrowserAnimationsModule,
+    FormsModule,
+    HttpModule,
+    RouterModule.forRoot(
+      appRoutes
+    )
+  ],
   declarations: [
     AppComponent,
     ContactComponent,
@@ -35,14 +45,6 @@ const appRoutes: Routes = [
     PhotographyComponent,
     BlogComponent,
     PageNotFoundComponent
-  ],
-  imports: [
-    BrowserModule.withServerTransition({appId: 'my-app'}),
-    BrowserAnimationsModule,
-    FormsModule,
-    RouterModule.forRoot(
-      appRoutes
-    )
   ],
   providers: [],
   bootstrap: [AppComponent]
