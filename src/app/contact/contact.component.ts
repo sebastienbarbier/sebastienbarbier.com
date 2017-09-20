@@ -15,7 +15,7 @@ import {
 const contactTransition = trigger('contactTransition', [
   transition(':enter', [
     query('li', style({ opacity: 0 }), {optional: true}),
-    query('li', stagger(50, [
+    query('li', stagger(20, [
       style({ transform: 'translateY(20px)' }),
       animate('1s cubic-bezier(.75,-0.48,.26,1.52)', style({transform: 'translateY(0px)', opacity: 1})),
     ]), {optional: true}),
