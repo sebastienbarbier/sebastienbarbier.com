@@ -39,12 +39,13 @@ header {
   }
 }
 .intro, .location {
-  border-bottom: solid 1px $light2;
+
 
   @media screen and (max-width: 999px) {
     flex: 100%;
     padding: 30px 10px;
     font-size: 1.1em;
+    border-bottom: solid 1px $light2;
   }
   @media screen and (min-width: 1000px) {
     flex: 50%;

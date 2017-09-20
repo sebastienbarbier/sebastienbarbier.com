@@ -20,7 +20,7 @@ main {
 body.light {
   background: $light-background;
   color: black;
-  transition: background-color 0.5s 0.5s, color 1s;
+  transition: background-color 0.5s 0.5s, color 0.6s;
   h1, a {
     color: black;
   transition: color 1s;
@@ -36,7 +36,7 @@ body.light {
 body.dark {
   background: $dark-background;
   color: white;
-  transition: background-color 0.5s 0.5s, color 1s;
+  transition: background-color 0.5s 0.5s, color 0.6s;
   h1, a {
     color: white;
   transition: color 1s;

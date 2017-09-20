@@ -88,6 +88,7 @@ aside{
     left: 0px;
     right: 0px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background: rgba(0, 0, 0, 0.8);
@@ -105,6 +106,10 @@ aside{
         font-family: "open_sansbold";
         &:last-child {
           border-bottom: 0px;
+        }
+        &.small {
+          font-size: 0.6em;
+          font-family: "open_sanslight";
         }
         a{
           border: none;

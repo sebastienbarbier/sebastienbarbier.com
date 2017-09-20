@@ -1,20 +1,45 @@
 article {
-  margin: 140px 20px 20px 80px;
+
   font-size: 1.1em;
 
   @media screen and (max-width: 599px) {
-    margin: 160px 20px 20px 20px;
+    margin: 140px 20px 20px 20px;
     font-size: 1em;
   }
   @media screen and (min-width: 600px) and (max-width: 999px) {
-    margin: 160px 20px 20px 60px;
+    margin: 140px 20px 20px 20px;
     font-size: 1em;
   }
   @media screen and (min-width: 1000px) {
-    margin: 140px 20px 20px 80px;
+    margin: 140px 20px 20px 20px;
     font-size: 1.1em;
-    width: 720px;
     margin: auto;
     margin-top: 140px;
+    width: 620px;
+  }
+
+  section {
+    padding-left: 40px;
+    padding-right: 40px;
+
+    &:first-child {
+      padding-top: 30px;
+      padding-bottom: 50px;
+      margin: auto;
+    }
+  }
+
+  ul {
+    max-width: 600px;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    li {
+      flex: 50%;
+      padding: 20px 0;
+      list-style: none;
+      text-align: left;
+    }
   }
 }
