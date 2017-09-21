@@ -2,6 +2,8 @@
 
 </header>
 <article class="block">
-  <img *ngFor="let photo of photos" [src]="photo.url" [alt]="photo.alt"  />
+  <div *ngFor="let photo of photos" >
+    <img [src]="photo.url" [alt]="photo.alt"  />
+  </div>
 </article>
 
