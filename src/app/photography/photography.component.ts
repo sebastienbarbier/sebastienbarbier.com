@@ -58,14 +58,14 @@ export class PhotographyComponent implements OnInit {
     { url: '../../assets/images/instagram/018 - Torii.jpg', alt: '' },
     { url: '../../assets/images/instagram/019 - Meiji Jingū.jpg', alt: '' },
     { url: '../../assets/images/instagram/020 - Prayer.jpg', alt: '' },
-    { url: '../../assets/images/instagram/023 - Golden Pavillion_1495115886730.jpg', alt: '' },
+    { url: '../../assets/images/instagram/023 - Golden Pavillion.jpg', alt: '' },
     { url: '../../assets/images/instagram/024 - Red Torii.jpg', alt: '' },
-    { url: '../../assets/images/instagram/025 - Fort bloqué.jpg', alt: '' },
-    { url: '../../assets/images/instagram/026 - Fort bloqué.jpg', alt: '' },
-    { url: '../../assets/images/instagram/027 - Fort bloqué.jpg', alt: '' },
-    { url: '../../assets/images/instagram/028 - Fort bloqué.jpg', alt: '' },
-    { url: '../../assets/images/instagram/029 - Dreamy Glénan.JPG', alt: '' },
-    { url: '../../assets/images/instagram/030 - Morning Glénan.JPG', alt: '' },
+    { url: '../../assets/images/instagram/025 - Fort bloque.jpg', alt: '' },
+    { url: '../../assets/images/instagram/026 - Fort bloque.jpg', alt: '' },
+    { url: '../../assets/images/instagram/027 - Fort bloque.jpg', alt: '' },
+    { url: '../../assets/images/instagram/028 - Fort bloque.jpg', alt: '' },
+    { url: '../../assets/images/instagram/029 - Dreamy Glenan.JPG', alt: '' },
+    { url: '../../assets/images/instagram/030 - Morning Glenan.JPG', alt: '' },
     { url: '../../assets/images/instagram/031 - Peaceful Giant.jpg', alt: '' }
   ];
 
