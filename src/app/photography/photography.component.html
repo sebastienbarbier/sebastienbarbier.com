@@ -2,12 +2,6 @@
 
 </header>
 <article>
-
-  <p>
-    I have been giving many thought about photography, learn the basics but never really dived into it.
-    Here are some of my experimentation, waiting for a more structured project.
-  </p>
-
-  <p>Insagram</p>
+  <img *ngFor="let photo of photos.reverse()" [src]="photo.url" [alt]="photo.alt"  />
 </article>
 
