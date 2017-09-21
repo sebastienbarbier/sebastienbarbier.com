@@ -69,7 +69,9 @@ export class PhotographyComponent implements OnInit {
     { url: '../../assets/images/instagram/031 - Peaceful Giant.jpg', alt: '' }
   ];
 
-  constructor() { }
+  constructor() {
+    this.photos = this.photos.reverse();
+  }
 
   @HostBinding('@photosTransition') '';
 
