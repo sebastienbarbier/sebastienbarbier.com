@@ -56,7 +56,7 @@ export class PhotographyComponent implements OnInit {
     { url: '../../assets/images/instagram/016 - Moonrise.jpg', alt: '' },
     { url: '../../assets/images/instagram/017 - Tokyo Tower.jpg', alt: '' },
     { url: '../../assets/images/instagram/018 - Torii.jpg', alt: '' },
-    { url: '../../assets/images/instagram/019 - Meiji Jingū.jpg', alt: '' },
+    { url: '../../assets/images/instagram/019 - Meiji Jingu.jpg', alt: '' },
     { url: '../../assets/images/instagram/020 - Prayer.jpg', alt: '' },
     { url: '../../assets/images/instagram/023 - Golden Pavillion.jpg', alt: '' },
     { url: '../../assets/images/instagram/024 - Red Torii.jpg', alt: '' },
