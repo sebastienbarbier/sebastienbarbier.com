@@ -1,12 +1,41 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostBinding } from '@angular/core';
+
+import {
+  sequence,
+  trigger,
+  stagger,
+  animate,
+  style,
+  group,
+  query,
+  transition,
+  keyframes,
+  animateChild } from '@angular/animations';
+
+const photosTransition = trigger('photosTransition', [
+  transition(':enter', [
+    query('.block', style({ opacity: 0 }), {optional: true}),
+    query('.block', stagger(100, [
+      style({ opacity: 0 }),
+      animate('0.6s cubic-bezier(.75,-0.48,.26,1.52)', style({opacity: 1})),
+    ]), {optional: true}),
+  ]),
+  transition(':leave', [
+    query('.block', stagger(100, [
+      style({ opacity: 1 }),
+      animate('0.6s cubic-bezier(.75,-0.48,.26,1.52)', style({opacity: 0})),
+    ]), {optional: true}),
+  ])
+]);
+
 
 @Component({
   selector: 'app-photography',
   templateUrl: './photography.component.html',
-  styleUrls: ['./photography.component.scss']
+  styleUrls: ['./photography.component.scss'],
+  animations: [ photosTransition ]
 })
 export class PhotographyComponent implements OnInit {
-
 
   photos = [
     { url: '../../assets/images/instagram/001 - Long Beach Koh Lanta.jpg', alt: '' },
@@ -41,6 +70,8 @@ export class PhotographyComponent implements OnInit {
   ];
 
   constructor() { }
+
+  @HostBinding('@photosTransition') '';
 
   ngOnInit() {
   }
