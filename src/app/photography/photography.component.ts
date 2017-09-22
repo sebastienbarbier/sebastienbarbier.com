@@ -37,69 +37,100 @@ const photosTransition = trigger('photosTransition', [
 })
 export class PhotographyComponent implements OnInit {
 
+  selectedPhoto;
   photos = [
-    { url: '../../assets/images/instagram/001 - Long Beach Koh Lanta.jpg',
+    { thumbnail: '../../assets/images/instagram/001 - Long Beach Koh Lanta.jpg',
+      source: '../../assets/images/instagram/large/001 - Long Beach Koh Lanta.jpg',
       alt: 'Long beach Ko Lanta' },
-    { url: '../../assets/images/instagram/002 - That feeling.jpg',
+    { thumbnail: '../../assets/images/instagram/002 - That feeling.jpg',
+      source: '../../assets/images/instagram/large/002 - That feeling.jpg',
       alt: 'That feeling' },
-    { url: '../../assets/images/instagram/003 - Reggae bar.jpg',
+    { thumbnail: '../../assets/images/instagram/003 - Reggae bar.jpg',
+      source: '../../assets/images/instagram/large/003 - Reggae bar.jpg',
       alt: 'Reggae bar' },
-    { url: '../../assets/images/instagram/004 - Kohub.jpg',
+    { thumbnail: '../../assets/images/instagram/004 - Kohub.jpg',
+      source: '../../assets/images/instagram/large/004 - Kohub.jpg',
       alt: 'Kohub' },
-    { url: '../../assets/images/instagram/005 - Kohub 2.jpg',
+    { thumbnail: '../../assets/images/instagram/005 - Kohub 2.jpg',
+      source: '../../assets/images/instagram/large/005 - Kohub 2.jpg',
       alt: 'Kohub' },
-    { url: '../../assets/images/instagram/006 - Taken road.jpg',
+    { thumbnail: '../../assets/images/instagram/006 - Taken road.jpg',
+      source: '../../assets/images/instagram/large/006 - Taken road.jpg',
       alt: 'Taken road' },
-    { url: '../../assets/images/instagram/007 - Family boat.jpg',
+    { thumbnail: '../../assets/images/instagram/007 - Family boat.jpg',
+      source: '../../assets/images/instagram/large/007 - Family boat.jpg',
       alt: 'Family boat' },
-    { url: '../../assets/images/instagram/008 - Gorgeous Petronas.jpg',
+    { thumbnail: '../../assets/images/instagram/008 - Gorgeous Petronas.jpg',
+      source: '../../assets/images/instagram/large/008 - Gorgeous Petronas.jpg',
       alt: 'Gorgeous Petronas' },
-    { url: '../../assets/images/instagram/009 - Petronas again.jpg',
+    { thumbnail: '../../assets/images/instagram/009 - Petronas again.jpg',
+      source: '../../assets/images/instagram/large/009 - Petronas again.jpg',
       alt: 'Petronas again' },
-    { url: '../../assets/images/instagram/010 - Good Morning Manila.jpg',
+    { thumbnail: '../../assets/images/instagram/010 - Good Morning Manila.jpg',
+      source: '../../assets/images/instagram/large/010 - Good Morning Manila.jpg',
       alt: 'Good Morning Manila' },
-    { url: '../../assets/images/instagram/011 - Mini Basket.jpg',
+    { thumbnail: '../../assets/images/instagram/011 - Mini Basket.jpg',
+      source: '../../assets/images/instagram/large/011 - Mini Basket.jpg',
       alt: 'Mini Basket' },
-    { url: '../../assets/images/instagram/012 - Nagtabon.jpg',
+    { thumbnail: '../../assets/images/instagram/012 - Nagtabon.jpg',
+      source: '../../assets/images/instagram/large/012 - Nagtabon.jpg',
       alt: 'Nagtabon' },
-    { url: '../../assets/images/instagram/013 - Modessa Sand.jpg',
+    { thumbnail: '../../assets/images/instagram/013 - Modessa Sand.jpg',
+      source: '../../assets/images/instagram/large/013 - Modessa Sand.jpg',
       alt: 'Modessa' },
-    { url: '../../assets/images/instagram/014 - Modessa Sand 2.jpg',
+    { thumbnail: '../../assets/images/instagram/014 - Modessa Sand 2.jpg',
+      source: '../../assets/images/instagram/large/014 - Modessa Sand 2.jpg',
       alt: 'Modessa' },
-    { url: '../../assets/images/instagram/015 - Hammock guy.jpg',
+    { thumbnail: '../../assets/images/instagram/015 - Hammock guy.jpg',
+      source: '../../assets/images/instagram/large/015 - Hammock guy.jpg',
       alt: 'Hammock guy' },
-    { url: '../../assets/images/instagram/016 - Moonrise.jpg',
+    { thumbnail: '../../assets/images/instagram/016 - Moonrise.jpg',
+      source: '../../assets/images/instagram/large/016 - Moonrise.jpg',
       alt: 'Moonrise' },
-    { url: '../../assets/images/instagram/017 - Tokyo Tower.jpg',
+    { thumbnail: '../../assets/images/instagram/017 - Tokyo Tower.jpg',
+      source: '../../assets/images/instagram/large/017 - Tokyo Tower.jpg',
       alt: 'Tokyo Tower' },
-    { url: '../../assets/images/instagram/018 - Torii.jpg',
+    { thumbnail: '../../assets/images/instagram/018 - Torii.jpg',
+      source: '../../assets/images/instagram/large/018 - Torii.jpg',
       alt: 'Torii' },
-    { url: '../../assets/images/instagram/019 - Meiji Jingu.jpg',
+    { thumbnail: '../../assets/images/instagram/019 - Meiji Jingu.jpg',
+      source: '../../assets/images/instagram/large/019 - Meiji Jingu.jpg',
       alt: 'Meiji Jingu' },
-    { url: '../../assets/images/instagram/020 - Prayer.jpg',
+    { thumbnail: '../../assets/images/instagram/020 - Prayer.jpg',
+      source: '../../assets/images/instagram/large/020 - Prayer.jpg',
       alt: 'Prayer' },
-    { url: '../../assets/images/instagram/023 - Golden Pavillion.jpg',
+    { thumbnail: '../../assets/images/instagram/023 - Golden Pavillion.jpg',
+      source: '../../assets/images/instagram/large/023 - Golden Pavillion.jpg',
       alt: 'Golden Pavillion' },
-    { url: '../../assets/images/instagram/024 - Red Torii.jpg',
+    { thumbnail: '../../assets/images/instagram/024 - Red Torii.jpg',
+      source: '../../assets/images/instagram/large/024 - Red Torii.jpg',
       alt: 'Red Torii' },
-    { url: '../../assets/images/instagram/025 - Fort bloque.jpg',
+    { thumbnail: '../../assets/images/instagram/025 - Fort bloque.jpg',
+      source: '../../assets/images/instagram/large/025 - Fort bloque.jpg',
       alt: 'Fort Bloque' },
-    { url: '../../assets/images/instagram/026 - Fort bloque.jpg',
+    { thumbnail: '../../assets/images/instagram/026 - Fort bloque.jpg',
+      source: '../../assets/images/instagram/large/026 - Fort bloque.jpg',
       alt: 'Fort Bloque' },
-    { url: '../../assets/images/instagram/027 - Fort bloque.jpg',
+    { thumbnail: '../../assets/images/instagram/027 - Fort bloque.jpg',
+      source: '../../assets/images/instagram/large/027 - Fort bloque.jpg',
       alt: 'Fort Bloque' },
-    { url: '../../assets/images/instagram/028 - Fort bloque.jpg',
+    { thumbnail: '../../assets/images/instagram/028 - Fort bloque.jpg',
+      source: '../../assets/images/instagram/large/028 - Fort bloque.jpg',
       alt: 'Fort Bloque' },
-    { url: '../../assets/images/instagram/029 - Dreamy Glenan.JPG',
+    { thumbnail: '../../assets/images/instagram/029 - Dreamy Glenan.JPG',
+      source: '../../assets/images/instagram/large/029 - Dreamy Glenan.JPG',
       alt: 'Dreamy Glenan' },
-    { url: '../../assets/images/instagram/030 - Morning Glenan.JPG',
+    { thumbnail: '../../assets/images/instagram/030 - Morning Glenan.JPG',
+      source: '../../assets/images/instagram/large/030 - Morning Glenan.JPG',
       alt: 'Morning Glenan' },
-    { url: '../../assets/images/instagram/031 - Peaceful Giant.jpg',
+    { thumbnail: '../../assets/images/instagram/031 - Peaceful Giant.jpg',
+      source: '../../assets/images/instagram/large/031 - Peaceful Giant.jpg',
       alt: 'Peaceful Giant' }
   ];
 
   constructor() {
     this.photos = this.photos.reverse();
+    this.selectedPhoto = null;
   }
 
   @HostBinding('@photosTransition') '';
@@ -107,9 +138,10 @@ export class PhotographyComponent implements OnInit {
   ngOnInit() {
   }
 
-  view(photo) {
-    console.log(photo);
-    return false;
+  view(event, photo) {
+    this.selectedPhoto = photo;
+    // Disable href if javascript is activated
+    event.preventDefault();
   }
 
 }

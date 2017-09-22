@@ -1,7 +1,12 @@
 
 <article class="block">
-  <div *ngFor="let photo of photos" (click)="view(photo)">
-    <img [src]="photo.url" [alt]="photo.alt" />
+  <div *ngFor="let photo of photos">
+    <a [href]="photo.source" (click)="view($event, photo)">
+      <img [src]="photo.thumbnail" [alt]="photo.alt" />
+    </a>
   </div>
 </article>
+<div [ngClass]="{'show': selectedPhoto, 'hide': !selectedPhoto}" class="viewer" (click)="view($event)">
+  <img *ngIf="selectedPhoto" [src]="selectedPhoto.source" [alt]="selectedPhoto.alt" />
+</div>
 
