@@ -9,8 +9,8 @@ article {
   align-items: center;
 
 
-  @media screen and (width: 599px) {
-    padding: 460px 20px 20px 20px;
+  @media screen and (max-width: 599px) {
+    padding: 120px 20px 20px 20px;
     font-size: 1em;
 
     div {
@@ -41,5 +41,9 @@ article {
     border-radius: 8px;
     box-sizing: border-box;
     padding: 4px;
+  }
+
+  a {
+    border: none;
   }
 }

@@ -107,4 +107,9 @@ export class PhotographyComponent implements OnInit {
   ngOnInit() {
   }
 
+  view(photo) {
+    console.log(photo);
+    return false;
+  }
+
 }
