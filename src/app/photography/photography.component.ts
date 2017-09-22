@@ -138,7 +138,7 @@ export class PhotographyComponent implements OnInit {
   ngOnInit() {
   }
 
-  view(event, photo) {
+  view(event, photo = null) {
     this.selectedPhoto = photo;
     // Disable href if javascript is activated
     event.preventDefault();

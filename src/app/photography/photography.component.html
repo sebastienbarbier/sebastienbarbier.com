@@ -1,4 +1,3 @@
-
 <article class="block">
   <div *ngFor="let photo of photos">
     <a [href]="photo.source" (click)="view($event, photo)">
@@ -9,4 +8,3 @@
 <div [ngClass]="{'show': selectedPhoto, 'hide': !selectedPhoto}" class="viewer" (click)="view($event)">
   <img *ngIf="selectedPhoto" [src]="selectedPhoto.source" [alt]="selectedPhoto.alt" />
 </div>
-
