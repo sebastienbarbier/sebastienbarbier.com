@@ -1,0 +1,34 @@
+@import '../../assets/scss/variables';
+
+article {
+  font-size: 1.1em;
+
+  @media screen and (max-width: 599px) {
+    margin: 140px 20px 20px 20px;
+    font-size: 1em;
+  }
+  @media screen and (min-width: 600px) and (max-width: 999px) {
+    margin: 220px 20px 20px 60px;
+    font-size: 1em;
+  }
+  @media screen and (min-width: 1000px) {
+    font-size: 1.1em;
+    margin: 220px 120px 20px 120px;
+  }
+
+  section {
+    border-top: solid 1px $light2;
+    &:last-child {
+      border-bottom: solid 1px $light2;
+    }
+    @media screen and (max-width: 599px) {
+      padding: 40px 10px;
+    }
+    @media screen and (min-width: 600px) and (max-width: 999px) {
+      padding: 40px 30px;
+    }
+    @media screen and (min-width: 1000px) {
+      padding: 40px 60px;
+    }
+  }
+}
