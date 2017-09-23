@@ -1,7 +1,16 @@
 header {
-  padding-left: 50px;
   top: 0px;
   position: absolute;
+
+  @media screen and (max-width: 599px) {
+    padding-left: 10px;
+  }
+  @media screen and (min-width: 600px) and (max-width: 999px) {
+    padding-left: 20px;
+  }
+  @media screen and (min-width: 1000px) {
+    padding-left: 50px;
+  }
 
   &.hide {
     opacity: 0;
@@ -65,8 +74,18 @@ aside{
   label{
     cursor: pointer;
     position: absolute;
-    top: 45px;
-    right: 60px;
+    @media screen and (max-width: 599px) {
+      top: 45px;
+      right: 30px;
+    }
+    @media screen and (min-width: 600px) and (max-width: 999px) {
+      top: 45px;
+      right: 40px;
+    }
+    @media screen and (min-width: 1000px) {
+      top: 45px;
+      right: 60px;
+    }
   }
   input[type=checkbox]{
     visibility: hidden;
