@@ -40,7 +40,7 @@ export class AppComponent implements OnInit {
       // NavigationStart, NavigationEnd, NavigationCancel, NavigationError, RoutesRecognized
       if (event instanceof NavigationEnd) {
         // If home page, we hide header
-        if (event.url === '/' || event.url === '/home') {
+        if (event.url === '/') {
           this.headerState = 'hide';
         } else {
           this.headerState = 'show';

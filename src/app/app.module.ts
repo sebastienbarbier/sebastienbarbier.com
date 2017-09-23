@@ -16,14 +16,13 @@ import { BlogComponent } from './blog/blog.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const appRoutes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent, data: { title: 'Home', theme: 'light', state: 'home' } },
+  { path: '', component: HomeComponent, data: { title: 'Home', theme: 'light', state: 'home' } },
   { path: 'projects', component: ProjectsComponent, data: { title: 'Projects', theme: 'light', state: 'projects' } },
   { path: 'photography', component: PhotographyComponent, data: { title: 'Photography', theme: 'dark', state: 'photography' } },
   { path: 'blog', component: BlogComponent, data: { title: 'Blog', theme: 'light', state: 'blog' } },
   { path: 'contact', component: ContactComponent, data: { title: 'Contact', theme: 'light', state: 'contact' } },
   { path: 'legal', component: LegalComponent, data: { title: 'Legal & copyright', theme: 'light', state: 'legal' } },
-  { path: '**', component: PageNotFoundComponent }
+  { path: '**', component: PageNotFoundComponent, data: { title: 'Page not found', theme: 'light', state: '404' }  }
 ];
 
 @NgModule({
