@@ -41,7 +41,26 @@ app.get('/keybase.txt', function (req, res, next) {
     }
   };
 
-  res.sendFile('keybase/keybase.txt', options, function (err) {
+  res.sendFile('static/keybase.txt', options, function (err) {
+    if (err) {
+      next(err);
+    }
+  });
+});
+
+// Return static keybase file. Same path keybase/keybase.txt for src and dist
+app.get('/sitemap.xml', function (req, res, next) {
+
+  var options = {
+    root: __dirname,
+    dotfiles: 'deny',
+    headers: {
+        'x-timestamp': Date.now(),
+        'x-sent': true
+    }
+  };
+
+  res.sendFile('static/sitemap.xml', options, function (err) {
     if (err) {
       next(err);
     }
