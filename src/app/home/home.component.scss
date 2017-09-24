@@ -30,9 +30,14 @@ header {
     }
   }
   @media screen and (min-width: 1000px) {
-    padding: 260px 0 200px 0;
     width: 780px;
     margin: auto;
+    height: 672px;
+    height: 70vh;
+    min-height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     img {
       width: 140px;
       float: left;
