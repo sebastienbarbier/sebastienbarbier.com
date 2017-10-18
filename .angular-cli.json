@@ -28,12 +28,12 @@
       }
     },
     {
-      "platform": "server",
       "root": "src",
       "outDir": "dist/dist-server",
       "assets": [
         "assets"
       ],
+      "platform": "server",
       "index": "index.html",
       "main": "main.server.ts",
       "test": "test.ts",
@@ -77,6 +77,10 @@
   },
   "defaults": {
     "styleExt": "css",
-    "component": {}
+    "component": {
+    }
+  },
+  "warnings": {
+    "typescriptMismatch": false
   }
 }

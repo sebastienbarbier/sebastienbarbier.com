@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpModule }    from '@angular/http';
+import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
@@ -14,6 +14,7 @@ import { ProjectsComponent } from './projects/projects.component';
 import { PhotographyComponent } from './photography/photography.component';
 import { BlogComponent } from './blog/blog.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent, data: { title: 'Home', theme: 'light', state: 'home' } },
