@@ -6,7 +6,11 @@ import { Component, OnInit, Inject, Renderer2, ElementRef, PLATFORM_ID } from '@
 import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
 import { routerTransition } from './router.animations';
 
- import { isPlatformBrowser, isPlatformServer } from '@angular/common';
+import { isPlatformBrowser, isPlatformServer } from '@angular/common';
+import {DOCUMENT} from '@angular/platform-browser';
+
+// AOT issue : https://github.com/ngx-translate/core/issues/537
+import { TranslateService } from '@ngx-translate/core';
 
 import {
   trigger,
@@ -32,13 +36,24 @@ export class AppComponent implements OnInit {
       private router: Router,
       private element: ElementRef,
       private renderer: Renderer2,
-      @Inject(PLATFORM_ID) private platformId: Object
+      private translate: TranslateService,
+      @Inject(PLATFORM_ID) private platformId: Object,
+      @Inject(DOCUMENT) private document
     ) {
     this.headerState = 'hide';
     this.navigationMenuStatus = false;
     this.element = element;
     this.renderer = renderer;
     this.platformId = platformId;
+
+    // Define lang based on domain
+    if (document.location.hostname.endsWith('sebastienbarbier.fr')) {
+      translate.setDefaultLang('fr');
+      translate.use('fr');
+    } else {
+      translate.setDefaultLang('en');
+      translate.use('en');
+    }
   }
 
   ngOnInit() {
@@ -60,15 +75,14 @@ export class AppComponent implements OnInit {
   }
 
   getState(outlet) {
-   if (isPlatformBrowser(this.platformId)) {
-      // Client only code.
-      this.renderer.setAttribute(this.element.nativeElement.parentElement, 'class', outlet.activatedRouteData.theme);
-   }
-   if (isPlatformServer(this.platformId)) {
-     // Server only code.
-      this.renderer.setAttribute(this.element.nativeElement.parent, 'class', outlet.activatedRouteData.theme);
-   }
+    if (isPlatformBrowser(this.platformId)) {
+       // Client only code.
+       this.renderer.setAttribute(this.element.nativeElement.parentElement, 'class', outlet.activatedRouteData.theme);
+    }
+    if (isPlatformServer(this.platformId)) {
+      // Server only code.
+       this.renderer.setAttribute(this.element.nativeElement.parent, 'class', outlet.activatedRouteData.theme);
+    }
     return outlet.activatedRouteData.state;
   }
-
 }

@@ -1,8 +1,8 @@
 <header>
   <div>
     <img src="../../assets/images/sebastienbarbier_profile.jpg" alt="Sébastien Barbier" class="block"  />
-    <h2 class="block">Hi !</h2>
-    <p class="block">My name is Sébastien and I am a <strong>software engineer</strong> from France.</p>
+    <h2 class="block">{{ 'HOME.HI' | translate }}</h2>
+    <p class="block" [innerHTML]="'HOME.MYNAMEIS' | translate"></p>
   </div>
 </header>
 
