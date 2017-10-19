@@ -26,11 +26,11 @@ export function createTranslateLoader(http: HttpClient) {
 // State is use to bind animation
 const appRoutes: Routes = [
   { path: '', component: HomeComponent, data: { title: null, theme: 'light', state: 'home' } },
-  { path: 'projects', component: ProjectsComponent, data: { title: 'Projects', theme: 'light', state: 'projects' } },
-  { path: 'photography', component: PhotographyComponent, data: { title: 'Photography', theme: 'dark', state: 'photography' } },
-  { path: 'contact', component: ContactComponent, data: { title: 'Contact', theme: 'light', state: 'contact' } },
-  { path: 'legal', component: LegalComponent, data: { title: 'Legal & copyright', theme: 'light', state: 'legal' } },
-  { path: '**', component: PageNotFoundComponent, data: { title: 'Page not found', theme: 'light', state: '404' }  }
+  { path: 'projects', component: ProjectsComponent, data: { title: 'nav.projects', theme: 'light', state: 'projects' } },
+  { path: 'photography', component: PhotographyComponent, data: { title: 'nav.photography', theme: 'dark', state: 'photography' } },
+  { path: 'contact', component: ContactComponent, data: { title: 'nav.contact', theme: 'light', state: 'contact' } },
+  { path: 'legal', component: LegalComponent, data: { title: 'nav.legal', theme: 'light', state: 'legal' } },
+  { path: '**', component: PageNotFoundComponent, data: { title: 'nav.404.title', theme: 'light', state: '404' }  }
 ];
 
 @NgModule({
