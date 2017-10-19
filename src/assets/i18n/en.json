@@ -2,5 +2,8 @@
 	"HOME": {
 		"HI": "Hi !",
 		"MYNAMEIS": "My name is Sébastien and I am a <strong>software engineer</strong> from France."
+	},
+	"INDEX": {
+		"KEYWORDS": "EN"
 	}
 }

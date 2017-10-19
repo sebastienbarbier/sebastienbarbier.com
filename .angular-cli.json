@@ -10,7 +10,30 @@
       "assets": [
         "assets"
       ],
-      "index": "index.html",
+      "index": "index.en.html",
+      "main": "main.ts",
+      "polyfills": "polyfills.ts",
+      "test": "test.ts",
+      "tsconfig": "tsconfig.app.json",
+      "testTsconfig": "tsconfig.spec.json",
+      "prefix": "app",
+      "styles": [
+        "styles.scss"
+      ],
+      "scripts": [],
+      "environmentSource": "environments/environment.ts",
+      "environments": {
+        "dev": "environments/environment.ts",
+        "prod": "environments/environment.prod.ts"
+      }
+    },
+    {
+      "root": "src",
+      "outDir": "dist/browser",
+      "assets": [
+        "assets"
+      ],
+      "index": "index.fr.html",
       "main": "main.ts",
       "polyfills": "polyfills.ts",
       "test": "test.ts",
