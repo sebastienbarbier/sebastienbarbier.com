@@ -6,18 +6,18 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
 <url>
-  <loc>https://sebastienbarbier.com/</loc>
+  <loc>https://sebastienbarbier.fr</loc>
 </url>
 <url>
-  <loc>https://sebastienbarbier.com/projects</loc>
+  <loc>https://sebastienbarbier.fr/projects</loc>
 </url>
 <url>
-  <loc>https://sebastienbarbier.com/photography</loc>
+  <loc>https://sebastienbarbier.fr/photography</loc>
 </url>
 <url>
-  <loc>https://sebastienbarbier.com/contact</loc>
+  <loc>https://sebastienbarbier.fr/contact</loc>
 </url>
 <url>
-  <loc>https://sebastienbarbier.com/legal</loc>
+  <loc>https://sebastienbarbier.fr/legal</loc>
 </url>
 </urlset>
