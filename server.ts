@@ -7,8 +7,6 @@ import * as express from 'express';
 import { join } from 'path';
 import { readFileSync } from 'fs';
 
-import * as vhost from 'vhost';
-
 // Faster server renders w/ Prod mode (dev mode never needed)
 enableProdMode();
 
@@ -42,33 +40,28 @@ app.engine('html', ngExpressEngine({
 app.set('view engine', 'html');
 app.set('views', join(DIST_FOLDER, 'browser'));
 
-/* - Example Express Rest API endpoints -
-  app.get('/api/**', (req, res) => { });
-*/
+app.get('/sitemap.xml', (req, res) => {
+  const lang = req.get('host').includes('sebastienbarbier.fr') ? 'fr' : 'en';
+  res.sendFile(join(DIST_FOLDER, 'static', `sitemap.${lang}.xml`), {
+    req
+  });
+});
 
-// Server static files from /browser
+app.get('/keybase.txt', (req, res) => {
+  const lang = req.get('host').includes('sebastienbarbier.fr') ? 'fr' : 'en';
+  res.sendFile(join(DIST_FOLDER, 'static', `keybase.${lang}.txt`), {
+    req
+  });
+});
 
-const appEnglish = express();
-
-// app.get('/sitemap.xml', (req, res) => {
-//   res.sendFile(join(DIST_FOLDER, 'static', 'sitemap.en.xml'), {
-//     req
-//   });
-// });
-
-// app.get('/keybase.txt', (req, res) => {
-//   res.sendFile(join(DIST_FOLDER, 'static', 'keybase.en.txt'), {
-//     req
-//   });
-// });
-
-appEnglish.get('*.*', express.static(join(DIST_FOLDER, 'browser'), {
+app.get('*.*', express.static(join(DIST_FOLDER, 'browser'), {
   maxAge: '1y'
 }));
 
 // ALl regular routes use the Universal engine
-appEnglish.get('*', (req, res) => {
-  res.sendFile(join(DIST_FOLDER, 'browser', 'index.en.html'), {
+app.get('*', (req, res) => {
+  const lang = req.get('host').includes('sebastienbarbier.fr') ? 'fr' : 'en';
+  res.sendFile(join(DIST_FOLDER, 'browser', `index.${lang}.html`), {
     req,
     res,
     providers: [{
@@ -77,40 +70,6 @@ appEnglish.get('*', (req, res) => {
     }]
   });
 });
-
-// const appFrench = express();
-
-// appFrench.get('/sitemap.xml', (req, res) => {
-//   res.sendFile(join(DIST_FOLDER, 'static', 'sitemap.fr.xml'), {
-//     req
-//   });
-// });
-
-// appFrench.get('/keybase.txt', (req, res) => {
-//   res.sendFile(join(DIST_FOLDER, 'static', 'keybase.fr.txt'), {
-//     req
-//   });
-// });
-
-// appFrench.get('*.*', express.static(join(DIST_FOLDER, 'browser'), {
-//   maxAge: '1y'
-// }));
-
-// // ALl regular routes use the Universal engine
-// appFrench.get('*', (req, res) => {
-//   res.sendFile(join(DIST_FOLDER, 'browser', 'index.fr.html'), {
-//     req,
-//     res,
-//     providers: [{
-//       provide: 'serverUrl',
-//       useValue: `${req.protocol}://${req.get('host')}`
-//     }]
-//   });
-// });
-
-app.use(vhost('*.sebastienbarbier.com', appEnglish));
-// app.use(vhost('*.sebastienbarbier.fr', appFrench));
-// app.use(vhost('localhost', appEnglish));
 
 // Start up the Node server
 app.listen(PORT, () => {
