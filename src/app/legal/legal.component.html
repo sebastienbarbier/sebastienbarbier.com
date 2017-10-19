@@ -1,7 +1,7 @@
 <article>
-  <p>This website is edited as individual and private content. It is not attached to any company of any kind.</p>
-  <h3>Author</h3>
-  <p>Sébastien BARBIER, 46E rue du mont bart, 25200 Montbéliard, France<br/>Phone : <a href="tel:+33695675110">+33 6 95 67 51 10</a><br/>Contact : <a href="mailto:hello@sebastienbarbier.com">hello@sebastienbarbier.com</a></p>
-  <h3>Hosting</h3>
-  <p>This website is hosted by Clever Cloud SAS.3 rue de l'Allier, 44000 Nantes, France.<br/>Website : <a href="https://www.clever-cloud.com">www.clever-cloud.com</a><br/>General support (commercial and other requests): <a href="tel:+33285520769">+33 2 85 52 07 69</a><br/>Technical support: <a href="mailto:support@clever-cloud.com">support@clever-cloud.com</a>.</p>
+  <p [innerHTML]="'legal.description' | translate"></p>
+  <h3 [innerHTML]="'legal.author.title' | translate"></h3>
+  <p [innerHTML]="'legal.author.description' | translate"></p>
+  <h3 [innerHTML]="'legal.hosting.title' | translate"></h3>
+  <p [innerHTML]="'legal.hosting.description' | translate"></p>
 </article>

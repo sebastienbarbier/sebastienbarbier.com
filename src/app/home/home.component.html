@@ -1,19 +1,19 @@
 <header>
   <div>
     <img src="../../assets/images/sebastienbarbier_profile.jpg" alt="Sébastien Barbier" class="block"  />
-    <h2 class="block">{{ 'HOME.HI' | translate }}</h2>
-    <p class="block" [innerHTML]="'HOME.MYNAMEIS' | translate"></p>
+    <h2 class="block">{{ 'home.hi' | translate }}</h2>
+    <p class="block" [innerHTML]="'home.mynameis' | translate"></p>
   </div>
 </header>
 
 <div class="line block">
   <div class="intro">
-    <h2>What do I do</h2>
-    <p>Working as a <strong>full-stack javascript/python</strong>, I share my time between freelancing and personal projects.</p>
+    <h2>{{ 'home.whatido.title' | translate }}</h2>
+    <p [innerHTML]="'home.whatido.description' | translate"></p>
   </div>
 
   <div class="location">
-    <h2>Where am I</h2>
-    <p>Having a location independant lifestyle, you can follow my journey on <a href="https://nomadlist.com/@sebbarbier">my nomadlist profile</a>. I am currently based in <strong>Chiang Mai, Thailand</strong>.</p>
+    <h2>{{ 'home.whereami.title' | translate }}</h2>
+    <p [innerHTML]="'home.whereami.description' | translate"></p>
   </div>
 </div>

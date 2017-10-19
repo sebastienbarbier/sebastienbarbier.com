@@ -1,9 +1,50 @@
 {
-	"HOME": {
-		"HI": "Bonjour !",
-		"MYNAMEIS": "My name is Sébastien and I am a <strong>software engineer</strong> from France."
+	"404": {
+		"description": "Désolé, mais cette page n'existe plus ou a été supprimé.",
+		"title": "Erreur 404"
 	},
-	"INDEX": {
-		"KEYWORDS": "FR"
+	"contact": {
+		"email": "Mail",
+		"socialnetworks": "Réseaux sociaux"
+	},
+	"home": {
+		"hi": "Bonjour!",
+		"mynameis": "Je m'appelle Sébastien, je suis un ingénieur logiciel originaire de France.",
+		"whatido": {
+			"description": "Je travail en tant qu'ingenieur Full Stack python Javascript, en alternant missions de Freelance et projet personnel.",
+			"title": "Ce que je fait"
+		},
+		"whereami": {
+			"description": "Ayant adopté un style de vie nomade, vous pouvez suivre mes déplacement sur <a href=\"https://nomadlist.com/@sebbarbier\">mon profile Nomadlist</a>. Je suis actuellement à <strong>Chiang Mai, en Thailand</strong>.",
+			"title": "Ou je suis"
+		}
+	},
+	"legal": {
+		"author": {
+			"description": "Sébastien BARBIER, 46E rue du mont bart, 25200 Montbéliard, France<br/>Téléphone : <a href=\"tel:+33695675110\">+33 6 95 67 51 10</a><br/>Mail : <a href=\"mailto:hello@sebastienbarbier.com\">hello@sebastienbarbier.com</a>",
+			"title": "Auteur"
+		},
+		"description": "Ce site internet est attaché à un individu privé, une entreprise.",
+		"hosting": {
+			"description": "Site internet hébergé par Clever Cloud SAS. 3 rue de l'Allier, 44000 Nantes, France.<br/>Site internet : <a href=\"https://www.clever-cloud.com\">www.clever-cloud.com</a><br/>Support général (commercial et autres requêtes): <a href=\"tel:+33285520769\">+33 2 85 52 07 69</a><br/>Support technique: <a href=\"mailto:support@clever-cloud.com\">support@clever-cloud.com</a>.",
+			"title": "Hébergement"
+		}
+	},
+	"nav": {
+		"contact": "Contact",
+		"home": "Accueil",
+		"legal": "Mentions légales",
+		"photography": "Photographie",
+		"projects": "Projets"
+	},
+	"projects": {
+		"mpdbox": {
+			"description": "Prototype de lecteur mp3 controllé par puces NFC."
+		},
+		"server": "Serveur",
+		"seven23": {
+			"description": "Application de budget personnel pour nomade, mais pas que."
+		},
+		"website": "Site internet"
 	}
 }

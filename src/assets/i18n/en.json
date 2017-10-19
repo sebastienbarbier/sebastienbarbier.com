@@ -1,9 +1,50 @@
 {
-	"HOME": {
-		"HI": "Hi !",
-		"MYNAMEIS": "My name is Sébastien and I am a <strong>software engineer</strong> from France."
+	"404": {
+		"description": "Sorry, this page does not exist or might have been removed.",
+		"title": "Error 404"
 	},
-	"INDEX": {
-		"KEYWORDS": "EN"
+	"contact": {
+		"email": "Email",
+		"socialnetworks": "Social networks"
+	},
+	"home": {
+		"hi": "Hi!",
+		"mynameis": "My name is Sébastien, I am a <strong>Software engineer</strong> from France.",
+		"whatido": {
+			"description": "Working as a <strong>full-stack javascript/python</strong>, I share my time between freelancing and personal projects.",
+			"title": "What do I do"
+		},
+		"whereami": {
+			"description": "Having a location independant lifestyle, you can follow my journey on <a href=\"https://nomadlist.com/@sebbarbier\">my nomadlist profile</a>. I am currently based in <strong>Chiang Mai, Thailand</strong>.",
+			"title": "Where am I"
+		}
+	},
+	"legal": {
+		"author": {
+			"description": "Sébastien BARBIER, 46E rue du mont bart, 25200 Montbéliard, France<br/>Phone : <a href=\"tel:+33695675110\">+33 6 95 67 51 10</a><br/>Contact : <a href=\"mailto:hello@sebastienbarbier.com\">hello@sebastienbarbier.com</a>",
+			"title": "Author"
+		},
+		"description": "This website is edited as individual and private content. It is not attached to any company of any kind.",
+		"hosting": {
+			"description": "This website is hosted by Clever Cloud SAS. 3 rue de l'Allier, 44000 Nantes, France.<br/>Website : <a href=\"https://www.clever-cloud.com\">www.clever-cloud.com</a><br/>General support (commercial and other requests): <a href=\"tel:+33285520769\">+33 2 85 52 07 69</a><br/>Technical support: <a href=\"mailto:support@clever-cloud.com\">support@clever-cloud.com</a>.",
+			"title": "Hosting"
+		}
+	},
+	"nav": {
+		"contact": "Contact",
+		"home": "Home",
+		"legal": "Legal &amp; copyright",
+		"photography": "Photography",
+		"projects": "Projects"
+	},
+	"projects": {
+		"mpdbox": {
+			"description": "Build a NFC music reader using a raspberry Pi."
+		},
+		"server": "Server",
+		"seven23": {
+			"description": "Personal budget application for nomads, but not only."
+		},
+		"website": "Website"
 	}
 }
