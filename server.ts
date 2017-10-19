@@ -48,26 +48,26 @@ app.set('views', join(DIST_FOLDER, 'browser'));
 
 // Server static files from /browser
 
-// const appEnglish = express();
+const appEnglish = express();
 
-app.get('/sitemap.xml', (req, res) => {
-  res.sendFile(join(DIST_FOLDER, 'static', 'sitemap.en.xml'), {
-    req
-  });
-});
+// app.get('/sitemap.xml', (req, res) => {
+//   res.sendFile(join(DIST_FOLDER, 'static', 'sitemap.en.xml'), {
+//     req
+//   });
+// });
 
-app.get('/keybase.txt', (req, res) => {
-  res.sendFile(join(DIST_FOLDER, 'static', 'keybase.en.txt'), {
-    req
-  });
-});
+// app.get('/keybase.txt', (req, res) => {
+//   res.sendFile(join(DIST_FOLDER, 'static', 'keybase.en.txt'), {
+//     req
+//   });
+// });
 
-app.get('*.*', express.static(join(DIST_FOLDER, 'browser'), {
+appEnglish.get('*.*', express.static(join(DIST_FOLDER, 'browser'), {
   maxAge: '1y'
 }));
 
 // ALl regular routes use the Universal engine
-app.get('*', (req, res) => {
+appEnglish.get('*', (req, res) => {
   res.sendFile(join(DIST_FOLDER, 'browser', 'index.en.html'), {
     req,
     res,
@@ -78,37 +78,37 @@ app.get('*', (req, res) => {
   });
 });
 
-const appFrench = express();
+// const appFrench = express();
 
-appFrench.get('/sitemap.xml', (req, res) => {
-  res.sendFile(join(DIST_FOLDER, 'static', 'sitemap.fr.xml'), {
-    req
-  });
-});
+// appFrench.get('/sitemap.xml', (req, res) => {
+//   res.sendFile(join(DIST_FOLDER, 'static', 'sitemap.fr.xml'), {
+//     req
+//   });
+// });
 
-appFrench.get('/keybase.txt', (req, res) => {
-  res.sendFile(join(DIST_FOLDER, 'static', 'keybase.fr.txt'), {
-    req
-  });
-});
+// appFrench.get('/keybase.txt', (req, res) => {
+//   res.sendFile(join(DIST_FOLDER, 'static', 'keybase.fr.txt'), {
+//     req
+//   });
+// });
 
-appFrench.get('*.*', express.static(join(DIST_FOLDER, 'browser'), {
-  maxAge: '1y'
-}));
+// appFrench.get('*.*', express.static(join(DIST_FOLDER, 'browser'), {
+//   maxAge: '1y'
+// }));
 
-// ALl regular routes use the Universal engine
-appFrench.get('*', (req, res) => {
-  res.sendFile(join(DIST_FOLDER, 'browser', 'index.fr.html'), {
-    req,
-    res,
-    providers: [{
-      provide: 'serverUrl',
-      useValue: `${req.protocol}://${req.get('host')}`
-    }]
-  });
-});
+// // ALl regular routes use the Universal engine
+// appFrench.get('*', (req, res) => {
+//   res.sendFile(join(DIST_FOLDER, 'browser', 'index.fr.html'), {
+//     req,
+//     res,
+//     providers: [{
+//       provide: 'serverUrl',
+//       useValue: `${req.protocol}://${req.get('host')}`
+//     }]
+//   });
+// });
 
-// app.use(vhost('*.sebastienbarbier.com', appEnglish));
+app.use(vhost('*.sebastienbarbier.com', appEnglish));
 // app.use(vhost('*.sebastienbarbier.fr', appFrench));
 // app.use(vhost('localhost', appEnglish));
 
