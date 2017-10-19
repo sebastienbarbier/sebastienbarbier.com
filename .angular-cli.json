@@ -6,7 +6,7 @@
   "apps": [
     {
       "root": "src",
-      "outDir": "dist",
+      "outDir": "dist/browser",
       "assets": [
         "assets"
       ],
@@ -29,7 +29,7 @@
     },
     {
       "root": "src",
-      "outDir": "dist/dist-server",
+      "outDir": "dist/server",
       "assets": [
         "assets"
       ],

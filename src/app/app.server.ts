@@ -1,6 +1,8 @@
 import {NgModule} from '@angular/core';
 import {ServerModule} from '@angular/platform-server';
 import {ModuleMapLoaderModule} from '@nguniversal/module-map-ngfactory-loader';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { UniversalInterceptor } from './universal.interceptor';
 
 import {AppModule} from './app.module';
 import {AppComponent} from './app.component';
@@ -13,6 +15,11 @@ import {AppComponent} from './app.component';
     ServerModule,
     ModuleMapLoaderModule,
   ],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: UniversalInterceptor,
+    multi: true
+  }],
   // Since the bootstrapped component is not inherited from your
   // imported AppModule, it needs to be repeated here.
   bootstrap: [AppComponent],

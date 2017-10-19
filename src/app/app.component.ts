@@ -2,12 +2,13 @@ import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/mergeMap';
 
-import { Component, OnInit, Inject, Renderer2, ElementRef, PLATFORM_ID } from '@angular/core';
+import { Component, OnInit, Inject, Renderer2, ElementRef, PLATFORM_ID, Optional } from '@angular/core';
 import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
 import { routerTransition } from './router.animations';
 
 import { isPlatformBrowser, isPlatformServer } from '@angular/common';
-import {DOCUMENT} from '@angular/platform-browser';
+import { DOCUMENT } from '@angular/platform-browser';
+import { Location } from '@angular/common';
 
 // AOT issue : https://github.com/ngx-translate/core/issues/537
 import { TranslateService } from '@ngx-translate/core';
@@ -38,22 +39,20 @@ export class AppComponent implements OnInit {
       private renderer: Renderer2,
       private translate: TranslateService,
       @Inject(PLATFORM_ID) private platformId: Object,
-      @Inject(DOCUMENT) private document
+      @Inject(DOCUMENT) private d,
+      @Optional() @Inject('serverUrl') protected serverUrl: string
     ) {
     this.headerState = 'hide';
     this.navigationMenuStatus = false;
-    this.element = element;
-    this.renderer = renderer;
-    this.platformId = platformId;
 
-    // Define lang based on domain
-    if (document.location.hostname.endsWith('sebastienbarbier.fr')) {
-      translate.setDefaultLang('fr');
-      translate.use('fr');
-    } else {
-      translate.setDefaultLang('en');
-      translate.use('en');
+    let lang = 'en';
+    if (isPlatformBrowser(platformId) && d.location.hostname.endsWith('sebastienbarbier.fr')) {
+      lang = 'fr';
+    } else if (isPlatformServer(platformId) && serverUrl.split(':')[1].endsWith('sebastienbarbier.fr')) {
+      lang = 'fr';
     }
+    translate.setDefaultLang(lang);
+    translate.use(lang);
   }
 
   ngOnInit() {
