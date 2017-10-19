@@ -15,7 +15,7 @@
 			"title": "Ce que je fait"
 		},
 		"whereami": {
-			"description": "Ayant adopté un style de vie nomade, vous pouvez suivre mes déplacements sur <a href=\"https://nomadlist.com/@sebbarbier\">mon profile Nomadlist</a>. Je suis actuellement installé à <strong>Chiang Mai, Thailand</strong>.",
+			"description": "Actuellement dans un style de vie nomade, vous pouvez suivre mes déplacements sur <a href=\"https://nomadlist.com/@sebbarbier\">mon profile Nomadlist</a>. Je suis pour le moment installé à <strong>Chiang Mai, Thailand</strong>.",
 			"title": "Ou suis je"
 		}
 	},
@@ -26,7 +26,7 @@
 		},
 		"description": "Ce site internet est attaché à un individu privé.",
 		"hosting": {
-			"description": "Site internet hébergé par Clever Cloud SAS. 3 rue de l'Allier, 44000 Nantes, France.<br/>Url : <a href=\"https://www.clever-cloud.com\">www.clever-cloud.com</a><br/>Support général (commercial et autres requêtes): <a href=\"tel:+33285520769\">+33 2 85 52 07 69</a><br/>Support technique: <a href=\"mailto:support@clever-cloud.com\">support@clever-cloud.com</a>.",
+			"description": "Contenu hébergé par Clever Cloud SAS. 3 rue de l'Allier, 44000 Nantes, France.<br/>Site internet : <a href=\"https://www.clever-cloud.com\">www.clever-cloud.com</a><br/>Support général (commercial et autres requêtes): <a href=\"tel:+33285520769\">+33 2 85 52 07 69</a><br/>Support technique: <a href=\"mailto:support@clever-cloud.com\">support@clever-cloud.com</a>.",
 			"title": "Hébergement"
 		}
 	},
