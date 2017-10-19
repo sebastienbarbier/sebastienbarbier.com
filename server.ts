@@ -57,7 +57,7 @@ appEnglish.get('/sitemap.xml', (req, res) => {
 });
 
 appEnglish.get('/keybase.txt', (req, res) => {
-  res.sendFile(join(DIST_FOLDER, 'static', 'keybase.txt'), {
+  res.sendFile(join(DIST_FOLDER, 'static', 'keybase.en.txt'), {
     req
   });
 });
@@ -87,7 +87,7 @@ appFrench.get('/sitemap.xml', (req, res) => {
 });
 
 appFrench.get('/keybase.txt', (req, res) => {
-  res.sendFile(join(DIST_FOLDER, 'static', 'keybase.txt'), {
+  res.sendFile(join(DIST_FOLDER, 'static', 'keybase.fr.txt'), {
     req
   });
 });

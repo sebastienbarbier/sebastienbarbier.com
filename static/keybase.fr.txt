@@ -1,0 +1,73 @@
+==================================================================
+https://keybase.io/sebastienbarbier
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://sebastienbarbier.fr
+  * I am sebastienbarbier (https://keybase.io/sebastienbarbier) on keybase.
+  * I have a public key with fingerprint 57A5 47B4 F5FE 8F33 8E08  9436 FCFC 85C1 DF52 FBD3
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0101788754bc0e1e6b0b5e38e6a5cf1420c0bd833d32ec2e52766c722f73aa9fed6d0a",
+      "fingerprint": "57a547b4f5fe8f338e089436fcfc85c1df52fbd3",
+      "host": "keybase.io",
+      "key_id": "fcfc85c1df52fbd3",
+      "kid": "0101788754bc0e1e6b0b5e38e6a5cf1420c0bd833d32ec2e52766c722f73aa9fed6d0a",
+      "uid": "044a463229d0b0cad4d7e5c89b1f8b19",
+      "username": "sebastienbarbier"
+    },
+    "service": {
+      "hostname": "sebastienbarbier.fr",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1508411436,
+  "expire_in": 157680000,
+  "prev": "3cb5b72b47d3825d8794da153e63ccce2814d4e6203642bf290222440b97859c",
+  "seqno": 18,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Comment: GPGTools - https://gpgtools.org
+
+owGtkm1QVFUYx3clLbYIHEllQKRLVqMrc+8993XFmIZ0CMWXAB3MWu+551z2tri7
+3F3WdhBNVEAlZjXFt6DUaMgBJ96KGmWIEFIaZAIFrBkdnCGgcNR0AsKxe62+1bfO
+lzPnmf//d/7PM08wLMRkMU9P7/3mxht/9Jq7RqEpa6SEyyegGwUIWz7hxI8vnIOw
+12d3qoiwESRFUrwg8CwDZRJTmIMkZDEQMCexskIxNCmTEAkAIEBjmcYszXOczNO0
+wgNJEhWMOERKhJVQVFc21jya6vLpWJaXWIaHjMIqWFCAziMFkQGcIiuywMoUUlha
+gQjoRofbazj0cFDy4gTVrdf0h/1xvH/R/8+58/7CMYzEcICmRURCUpYQg3jMyoII
+KUWAlGgIvVhzSVuxrvZiPapPxS4oaVDFGlFg1WuaX5WxMWCjo/9QJiiajvJobp9b
+dufoAofP5/HaDIAv4DEc2zC0/82yQ9WF9LHqDj/WvKrbRdgoXSn7VANOsaTAUJQ+
+VSuB3/WoGrarhoLlOYHUj9Whf4T9OhPIkIU8DRkeAYFmkcCLDJIoFmAOyLKMaYFi
+EIM5mgQcQ0OFFkmaphmGhCIvsKJMGO3lutw6XNCDStlGZ2q2S/LlaZgosOybEfOE
+yWwxzZo5w9g4kyU04p81BHz4VMj09baqqCUDz+zeXntu3frFS4Gz/fLGzpaMX+CW
+7Staes7Ht0f+1FGSqR62BIKgb/KpiYGQsr3Dnx8WT5b1pCWVVuP41CVje55NP04P
+Lefzmgdjuy3Bck1VupvfLAHmonB7ibnCOXe0mbmbv/qlZYFRoqz4STCnt7l+1boP
+Cx4VRq58oW7Ha1cCtOdm73hNv6sn+btxn2Vs1qmMtl23B8jE6KaGqvPzPcmhbRNS
+hG1xY19YpfDRjY/f2vDZjw0Pu+/fCre3Loo4cfr9F9s75jelbbxemMvNPlaP0eYP
+ro6ndgWqP4nvSrEeil7ozzywK6717MUT2Qcjth0Xo6Ocr96Lb5iXOTTUubu1XMZJ
+g3WRwbFPW2uLGuOmlu/7vXMi9WzmyOWSo2x5BLk++ctv16TcnnKcSjoz+iA25tK8
+aPZRaz0k/KvsHWuuhZvRJJq75czV5zeczqIWOO3pR2bnFX2VoaprrWMtI0FzxcIL
+OyuJ8ae/fuf1jIdK2ns1aXOK137vrNpTYZm5sj9v+NxESp1Dtuy/Vl27eecF2xc3
+F+VUhoJUR+n9wXFvtv/nI57yGGfl6oE7V+4urXs5oSaxz3qpfbK3e3AyLbKuJ6F4
+E4pb9mtidFH6posducOF7bX9b//W9QO747lg2MmGg1FNh/q23ut8JTFk/50FfFZp
+9YNGk5VaEdvpqr8F/gQ=
+=geR3
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/sebastienbarbier
+
+==================================================================
