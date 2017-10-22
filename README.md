@@ -52,4 +52,4 @@ ng serve --host local.sebastienbarbier.fr
 
 ## Licence
 
-MIT Licence, please feel free to share, copy, and republish for your own use.
+[MIT Licence](https://opensource.org/licenses/MIT), please feel free to share, copy, and republish for your own use.
