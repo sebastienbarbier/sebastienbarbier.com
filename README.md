@@ -1,28 +1,55 @@
-# Sebastienbarbier
+# sebastienbarbier.com
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.3.2.
+This repository host my personnal website, [sebastienbarbier.com](https://sebastienbarbier.com).
 
-## Development server
+It is powered by [angular framework](https://angular.io), and published with [angular universal](https://github.com/angular/universal) for server rendering.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Install
 
-## Code scaffolding
+```
+git clone git@github.com:sebastienbarbier/sebastienbarbier.com.git
+cd sebastienbarbier.com
+npm install
+ng serve
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+Following angular universal practice, you can build the app on static or dynamic mode.
 
-## Running unit tests
+### Static mode
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Using `npm run build:static` render all pages in html, and be published on a a static site hosting service like [github page](https://pages.github.com/). 
+This method currently require to manually keep a list of urls to generate, saved in `static.paths.js` file.
 
-## Running end-to-end tests
+You can use `npm run build:static && npm run serve:static` for testing locally before deploying
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+### Dymanic mode
 
-## Further help
+Using `npm run build:dynamic` generate an expressjs server to deploy and deliver the app.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Unit tests and end-to-end tests
+
+Can be run using `ng test` and `ng e2e`.
+
+## Internationalization
+
+Translation use managed using [ngx-translate](http://www.ngx-translate.com/), and is defined by domain name. 
+To run locally, you can add the following domains in your `host` file.
+
+```
+echo '127.0.0.1 local.sebastienbarbier.fr' | sudo tee -a /etc/hosts
+echo '127.0.0.1 local.sebastienbarbier.com' | sudo tee -a /etc/hosts
+```
+
+Then serve your local server with one of those.
+
+```
+ng serve --host local.sebastienbarbier.fr
+```
+
+## Licence
+
+MIT Licence, please feel free to share, copy, and republish for your own use.
