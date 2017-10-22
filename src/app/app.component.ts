@@ -31,6 +31,7 @@ export class AppComponent implements OnInit {
 
   headerState: string;
   navigationMenuStatus: Boolean;
+  lang: string;
 
   constructor(
       private route: ActivatedRoute,
@@ -45,14 +46,14 @@ export class AppComponent implements OnInit {
     this.headerState = 'hide';
     this.navigationMenuStatus = false;
 
-    let lang = 'en';
+    this.lang = 'en';
     if (isPlatformBrowser(platformId) && d.location.hostname.endsWith('sebastienbarbier.fr')) {
-      lang = 'fr';
+      this.lang = 'fr';
     } else if (isPlatformServer(platformId) && serverUrl.split(':')[1].endsWith('sebastienbarbier.fr')) {
-      lang = 'fr';
+      this.lang = 'fr';
     }
-    translate.setDefaultLang(lang);
-    translate.use(lang);
+    translate.setDefaultLang(this.lang);
+    translate.use(this.lang);
   }
 
   ngOnInit() {

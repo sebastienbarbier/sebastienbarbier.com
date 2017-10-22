@@ -1,8 +1,10 @@
 <header [class]="headerState">
   <h1><a routerLink="/">sebastienbarbier</a><span *ngIf="o.activatedRouteData.title"> \ </span><small>{{ o.activatedRouteData.title | translate }}</small></h1>
 </header>
-
 <aside>
+  <p id="lang">
+    <a [ngClass]="{'disable': lang === 'fr'}" href="https://sebastienbarbier.fr">fr</a> / <a [ngClass]="{'disable': lang === 'en'}" href="https://sebastienbarbier.com">en</a>
+  </p>
   <input type="checkbox" name="navigationMenu" id="navigationMenu" [(ngModel)]="navigationMenuStatus" />
   <label
     for="navigationMenu"
@@ -24,7 +26,6 @@
     <ul>
       <li class="small"><a routerLink="/legal">{{ 'nav.legal' | translate }}</a></li>
     </ul>
-
   </nav>
 </aside>
 

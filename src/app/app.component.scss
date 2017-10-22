@@ -65,6 +65,31 @@ header {
   }
 }
 
+#lang {
+  position: absolute;
+  @media screen and (max-width: 599px) {
+    top: 36px;
+    right: 90px;
+  }
+  @media screen and (min-width: 600px) and (max-width: 999px) {
+    top: 36px;
+    right: 110px;
+  }
+  @media screen and (min-width: 1000px) {
+    top: 36px;
+    right: 130px;
+  }
+  a {
+    border: none;
+    padding: 0 4px;
+    font-family: "open_sanssemibold";
+    &.disable{
+      opacity: 0.4;
+      cursor: default;
+    }
+  }
+}
+
 aside{
   font-family: "open_sanslight";
   position: absolute;
