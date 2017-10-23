@@ -3,7 +3,7 @@
 </header>
 <aside>
   <p id="lang">
-    <a [ngClass]="{'disable': lang === 'fr'}" href="https://sebastienbarbier.fr">fr</a> / <a [ngClass]="{'disable': lang === 'en'}" href="https://sebastienbarbier.com">en</a>
+    <a [ngClass]="{'disable': lang === 'fr'}" href="{{'https://sebastienbarbier.fr' + path}}">fr</a> / <a [ngClass]="{'disable': lang === 'en'}" href="{{'https://sebastienbarbier.com' + path}}">en</a>
   </p>
   <input type="checkbox" name="navigationMenu" id="navigationMenu" [(ngModel)]="navigationMenuStatus" />
   <label

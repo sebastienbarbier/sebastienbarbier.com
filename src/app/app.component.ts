@@ -32,6 +32,7 @@ export class AppComponent implements OnInit {
   headerState: string;
   navigationMenuStatus: Boolean;
   lang: string;
+  path: string;
 
   constructor(
       private route: ActivatedRoute,
@@ -60,6 +61,8 @@ export class AppComponent implements OnInit {
     this.router.events.subscribe(event => {
       // NavigationStart, NavigationEnd, NavigationCancel, NavigationError, RoutesRecognized
       if (event instanceof NavigationEnd) {
+
+        this.path = event.url;
         // If home page, we hide header
         if (event.url === '/') {
           this.headerState = 'hide';
