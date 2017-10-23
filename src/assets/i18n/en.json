@@ -28,6 +28,11 @@
 		"hosting": {
 			"description": "This website is hosted by Clever Cloud SAS. 3 rue de l'Allier, 44000 Nantes, France.<br/>Website : <a href=\"https://www.clever-cloud.com\">www.clever-cloud.com</a><br/>General support (commercial and other requests): <a href=\"tel:+33285520769\">+33 2 85 52 07 69</a><br/>Technical support: <a href=\"mailto:support@clever-cloud.com\">support@clever-cloud.com</a>.",
 			"title": "Hosting"
+		},
+		"licence": {
+			"content": "Content is licensed under a <a href=\"https://creativecommons.org/licenses/by/4.0/\">Creative Commons Attribution 4.0 International license</a>.",
+			"title": "Licence",
+			"website": "Website is licensed under a <a href=\"https://opensource.org/licenses/MIT\">MIT licence</a>. Source code is available <a href=\"https://github.com/sebastienbarbier/sebastienbarbier.com\">on github</a>."
 		}
 	},
 	"nav": {
