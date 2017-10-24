@@ -63,9 +63,7 @@ function nocache(req, res, next) {
 
 app.get('/assets/i18n/*', nocache, express.static(join(DIST_FOLDER, 'browser')));
 
-app.get('*.*', express.static(join(DIST_FOLDER, 'browser'), {
-  maxAge: '1y'
-}));
+app.get('*.*', express.static(join(DIST_FOLDER, 'browser')));
 
 // ALl regular routes use the Universal engine
 app.get('*', (req, res) => {
