@@ -54,6 +54,15 @@ app.get('/keybase.txt', (req, res) => {
   });
 });
 
+function nocache(req, res, next) {
+  res.header('Cache-Control', 'private, no-cache, no-store, must-revalidate');
+  res.header('Expires', '-1');
+  res.header('Pragma', 'no-cache');
+  next();
+}
+
+app.get('/assets/i18n/*', nocache, express.static(join(DIST_FOLDER, 'browser')));
+
 app.get('*.*', express.static(join(DIST_FOLDER, 'browser'), {
   maxAge: '1y'
 }));
