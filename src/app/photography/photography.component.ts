@@ -125,7 +125,10 @@ export class PhotographyComponent implements OnInit {
       alt: 'Morning Glenan' },
     { thumbnail: 'https://public.sebastienbarbier.com/images/instagram/031 - Peaceful Giant.jpg',
       source: 'https://public.sebastienbarbier.com/images/instagram/large/031 - Peaceful Giant.jpg',
-      alt: 'Peaceful Giant' }
+      alt: 'Peaceful Giant' },
+    { thumbnail: 'https://public.sebastienbarbier.com/images/instagram/032 - Loy Kratong.JPG',
+      source: 'https://public.sebastienbarbier.com/images/instagram/large/032 - Loy Kratong.JPG',
+      alt: 'Loy Kratong' }
   ];
 
   constructor() {
