@@ -7,16 +7,29 @@
 		"email": "Mail",
 		"socialnetworks": "Réseaux sociaux"
 	},
+	"freelance": {
+		"footer": "L'ensemble de mon expérience professionnelle est disponible sur <a target=\"_blank\" href=\"https://www.linkedin.com/in/sebbarbier/\">mon profile Linkedin</a>.",
+		"mila": {
+			"description": "Mila met en relation ses clients avec des personnes ayant des compétences techniques.",
+			"location": "Zurich, Suisse",
+			"stack": "L'interface de chatbot utilise les API de Facebook messenger et s'intégre dans leur couche server existante avec NodeJS. L'application front-end et le génerateur de webapp sont développés en typescript/Angular.",
+			"website": "mila.com",
+			"work": "J'ai rejoins Mila à plein temps en télétravail au sein de son équipe développement pour aider au prototypage de trois nouveaux produits: une interface de chatbot, une application front-end pour gérer le planning des techniciens, et une générateur de webapp basé sur des métadonnées hébergées sur une plateform SaaS."
+		},
+		"title": {
+			"past_experience": "Expériences passées"
+		}
+	},
 	"home": {
 		"hi": "Bonjour!",
-		"mynameis": "Je m'appelle Sébastien, je suis ingénieur en logiciel, originaire de France.",
+		"mynameis": "Je m'appelle Sébastien, je suis <strong>ingénieur en logiciel</strong>, originaire de France.",
 		"whatido": {
-			"description": "Je travail en tant qu'ingenieur <strong>Full-Stack Python/Javascript</strong>, et alterne entre les missions freelances et le développement de projets personnels.",
-			"title": "Ce que je fait"
+			"description": "Je suis <strong>consultant en technologies web, et freelance</strong>. J'interviens principalement sur des projet full-Stack Javascript ou python.",
+			"title": "À propos de moi"
 		},
 		"whereami": {
 			"description": "Actuellement dans un style de vie nomade, vous pouvez suivre mes déplacements sur <a href=\"https://nomadlist.com/@sebbarbier\">mon profile Nomadlist</a>. Je suis pour le moment installé à <strong>Chiang Mai, Thailand</strong>.",
-			"title": "Ou suis je"
+			"title": "Localisation"
 		}
 	},
 	"legal": {
@@ -30,13 +43,14 @@
 			"title": "Hébergement"
 		},
 		"licence": {
-      "content": "Contenu distributé sous licence <a href=\"https://creativecommons.org/licenses/by/4.0/deed.fr\">Creative Commons Attribution 4.0 International (CC BY 4.0) </a>.",
-      "title": "Licence",
-      "website": "Source code distribué sous <a href=\"https://opensource.org/licenses/MIT\">licence MIT</a>, et disponible sur <a href=\"https://github.com/sebastienbarbier/sebastienbarbier.com\">github</a>."
-    }
+			"content": "Contenu distributé sous licence <a href=\"https://creativecommons.org/licenses/by/4.0/deed.fr\">Creative Commons Attribution 4.0 International (CC BY 4.0) </a>.",
+			"title": "Licence",
+			"website": "Source code distribué sous <a href=\"https://opensource.org/licenses/MIT\">licence MIT</a>, et disponible sur <a href=\"https://github.com/sebastienbarbier/sebastienbarbier.com\">github</a>."
+		}
 	},
 	"nav": {
 		"contact": "Contact",
+		"freelance": "Freelance",
 		"home": "Accueil",
 		"legal": "Mentions légales",
 		"photography": "Photographie",

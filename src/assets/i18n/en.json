@@ -7,16 +7,29 @@
 		"email": "Email",
 		"socialnetworks": "Social networks"
 	},
+	"freelance": {
+		"footer": "My complete background can be found on my <a target=\"_blank\" href=\"https://www.linkedin.com/in/sebbarbier/\">linkedin profile</a>.",
+		"mila": {
+			"description": "Mila connects its customers with skilled local technicians.",
+			"location": "Zurich, Switzerland",
+			"stack": "Chatbot used Facebook messenger API and was running on existing backend with nodeJS. Front-end and webapp generator are running on typescript/Angular.",
+			"website": "mila.com",
+			"work": "I joined Mila's dev team full time remotely to help prototyping three new products: a chatbot interface, a front-end application to manage technicians's schedule, and a webapp template engine based on metadata stored on a SaaS plateform."
+		},
+		"title": {
+			"past_experience": "Past experiences"
+		}
+	},
 	"home": {
 		"hi": "Hi!",
 		"mynameis": "My name is Sébastien, I am a <strong>Software engineer</strong> from France.",
 		"whatido": {
-			"description": "Working as a <strong>full-stack javascript/python</strong>, I share my time between freelancing and personal projects.",
-			"title": "What do I do"
+			"description": "I am a <strong>web technologies consultant and freelancer</strong>, working on full-stack javascript and python projects.",
+			"title": "About me"
 		},
 		"whereami": {
 			"description": "Having a location independant lifestyle, you can follow my journey on <a href=\"https://nomadlist.com/@sebbarbier\">my nomadlist profile</a>. I am currently based in <strong>Chiang Mai, Thailand</strong>.",
-			"title": "Where am I"
+			"title": "Location"
 		}
 	},
 	"legal": {
@@ -37,6 +50,7 @@
 	},
 	"nav": {
 		"contact": "Contact",
+		"freelance": "Freelance",
 		"home": "Home",
 		"legal": "Legal & copyright",
 		"photography": "Photography",
