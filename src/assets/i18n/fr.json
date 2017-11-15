@@ -9,6 +9,10 @@
 	},
 	"freelance": {
 		"footer": "L'ensemble de mon expérience professionnelle est disponible sur <a target=\"_blank\" href=\"https://www.linkedin.com/in/sebbarbier/\">mon profile Linkedin</a>.",
+		"location": {
+			"description": "<strong>Télétravail</strong> uniquement.",
+			"title": "Localisation"
+		},
 		"mila": {
 			"description": "Mila met en relation ses clients avec des personnes ayant des compétences techniques.",
 			"location": "Zurich, Suisse",
@@ -16,8 +20,17 @@
 			"website": "mila.com",
 			"work": "J'ai rejoins Mila à plein temps en télétravail au sein de son équipe développement pour aider au prototypage de trois nouveaux produits: une interface de chatbot, une application front-end pour gérer le planning des techniciens, et une générateur de webapp basé sur des métadonnées hébergées sur une plateform SaaS."
 		},
+		"pricing": {
+			"description": "<strong>À l'heure</strong>, taux horaire fix.",
+			"title": "Tarification"
+		},
 		"title": {
 			"past_experience": "Expériences passées"
+		},
+		"tools": {
+			"description": "Promeut les <strong>standards web</strong>, et le code <strong>open source</strong>.",
+			"integration": "Intégration HTML/CSS",
+			"title": "Outils privilégiés"
 		}
 	},
 	"home": {

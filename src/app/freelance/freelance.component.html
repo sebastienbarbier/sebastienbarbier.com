@@ -1,4 +1,32 @@
 <article>
+
+  <div class="twoColumn">
+    <div>
+      <h2>{{ 'freelance.tools.title' | translate }}</h2>
+      <p [innerHTML]="'freelance.tools.description' | translate"></p>
+      <div class="stack">
+        <h3>Font-end</h3>
+        <ul>
+          <li>{{ 'freelance.tools.integration' | translate }}</li>
+          <li>React</li>
+          <li>Angular</li>
+        </ul>
+        <h3>Back-end</h3>
+        <ul>
+          <li>Python (Django, Pyramid, Flask)</li>
+          <li>NodeJS</li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <h2>{{ 'freelance.location.title' | translate }}</h2>
+      <p [innerHTML]="'freelance.location.description' | translate"></p>
+
+      <h2>{{ 'freelance.pricing.title' | translate }}</h2>
+      <p [innerHTML]="'freelance.pricing.description' | translate"></p>
+    </div>
+  </div>
+
   <h2>{{ 'freelance.title.past_experience' | translate }}</h2>
   <section>
     <img src="https://public.sebastienbarbier.com/images/mila/logo_navi_blue.png" alt="Mila logo" />
@@ -11,6 +39,7 @@
     </div>
   </section>
 </article>
+
 <footer>
   <p [innerHTML]="'freelance.footer' | translate"></p>
 </footer>

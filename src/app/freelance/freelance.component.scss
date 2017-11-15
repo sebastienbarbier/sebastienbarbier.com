@@ -8,12 +8,26 @@ article {
     font-size: 1em;
   }
   @media screen and (min-width: 600px) and (max-width: 999px) {
-    margin: 220px 20px 20px 60px;
+    margin: 220px 20px 20px 40px;
     font-size: 1em;
   }
   @media screen and (min-width: 1000px) {
     font-size: 1.1em;
     margin: 220px 120px 20px 120px;
+  }
+
+  div.twoColumn{
+    align-items: flex-start;
+    padding: 12px 0 60px 0;
+    @media screen and (min-width: 600px) {
+      display: flex;
+    }
+    div {
+      flex: 50%;
+      &:first-child{
+        padding-right: 20px;
+      }
+    }
   }
 
   section {
@@ -59,8 +73,36 @@ article {
   }
 }
 
+.stack {
+  font-size: 0.8em;
+  h3 {
+    width: 70px;
+    float: left;
+    clear: both;
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    font-weight: 300;
+    padding-top: 12px;
+  }
+  ul {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    li {
+      list-style: none;
+      background: $light2;
+      padding: 4px 7px;
+      border-radius: 4px;
+      margin-top: 4px;
+      margin-right: 4px;
+    }
+  }
+}
+
 footer {
-  text-align: center;
+  text-align: left;
   @media screen and (max-width: 599px) {
     margin: 40px 20px 20px 20px;
     font-size: 0.9em;
