@@ -14,7 +14,7 @@
 			"location": "Zurich, Switzerland",
 			"stack": "Chatbot used Facebook messenger API and was running on existing backend with nodeJS. Front-end and webapp generator are running on typescript/Angular.",
 			"website": "mila.com",
-			"work": "I joined Mila's dev team full time remotely to help prototyping three new products: a chatbot interface, a front-end application to manage technicians' schedule, and a webapp template engine based on metadata stored on a SaaS plateform."
+			"work": "I joined Mila's dev team full time remotely to help prototyping three new products: a chatbot interface, a front-end application to manage technicians' schedule, and a webapp template engine based on metadata stored on a SaaS platform."
 		},
 		"title": {
 			"past_experience": "Past experiences"
