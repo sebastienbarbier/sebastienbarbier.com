@@ -68,7 +68,7 @@ header {
 #lang {
   position: absolute;
   @media screen and (max-width: 599px) {
-    top: 36px;
+    top: 15px;
     right: 90px;
   }
   @media screen and (min-width: 600px) and (max-width: 999px) {
@@ -100,7 +100,7 @@ aside{
     cursor: pointer;
     position: absolute;
     @media screen and (max-width: 599px) {
-      top: 45px;
+      top: 25px;
       right: 30px;
     }
     @media screen and (min-width: 600px) and (max-width: 999px) {
