@@ -16,16 +16,21 @@ article {
     margin: 220px 120px 20px 120px;
   }
 
+  h2 {
+    margin-top: 30px;
+  }
+
   div.twoColumn{
     align-items: flex-start;
-    padding: 12px 0 60px 0;
+    padding-top: 12px;
     @media screen and (min-width: 600px) {
       display: flex;
+      padding-bottom: 60px;
     }
     div {
       flex: 50%;
       &:first-child{
-        padding-right: 20px;
+        padding-right: 40px;
       }
     }
   }
