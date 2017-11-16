@@ -1,5 +1,11 @@
+<header>
+  <div>
+  <p [innerHTML]="'freelance.header.description' | translate"></p>
+  <p [innerHTML]="'freelance.header.help' | translate"></p>
+  </div>
+  <a routerLink="/contact">{{ 'freelance.header.contact' | translate }}</a>
+</header>
 <article>
-
   <div class="twoColumn">
     <div>
       <h2>{{ 'freelance.tools.title' | translate }}</h2>

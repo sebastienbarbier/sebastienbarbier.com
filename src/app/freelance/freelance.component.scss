@@ -1,19 +1,67 @@
 @import '../../assets/scss/variables';
 
-article {
-  font-size: 1.1em;
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
   @media screen and (max-width: 599px) {
-    margin: 80px 20px 20px 20px;
+    margin: 120px 20px 40px 20px;
+    font-size: 1.1em;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  @media screen and (min-width: 600px) and (max-width: 999px) {
+    margin: 220px 20px 40px 40px;
+    font-size: 1.1em;
+  }
+  @media screen and (min-width: 1000px) {
+    font-size: 1.3em;
+    margin: 220px 120px 40px 120px;
+  }
+
+  a {
+    color: #333;
+    border: solid 1px #333;
+    border-shadow: 0px 0px 6px #BBB;
+    border-radius: 4px;
+    padding: 4px 12px;
+    font-size: 0.9em;
+    font-family: 'open_sanssemibold';
+    white-space: nowrap;
+    transition: background 0.3s linear;
+    background: #FAFAFA;
+
+    @media screen and (max-width: 599px) {
+      margin-top: 20px;
+      font-size: 1em;
+    }
+    @media screen and (min-width: 600px) {
+      margin-left: 40px;
+      margin-right: 20px;
+    }
+    &:hover{
+      border: solid 1px #333;
+      background: #EEE;
+      transition: background 0.2s linear;
+    }
+  }
+
+}
+
+article {
+
+  @media screen and (max-width: 599px) {
+    margin: 20px 20px 20px 20px;
     font-size: 1em;
   }
   @media screen and (min-width: 600px) and (max-width: 999px) {
-    margin: 220px 20px 20px 40px;
+    margin: 20px 20px 20px 40px;
     font-size: 1em;
   }
   @media screen and (min-width: 1000px) {
     font-size: 1.1em;
-    margin: 220px 120px 20px 120px;
+    margin: 20px 120px 20px 120px;
   }
 
   h2 {
@@ -110,14 +158,14 @@ footer {
   text-align: left;
   @media screen and (max-width: 599px) {
     margin: 40px 20px 20px 20px;
-    font-size: 0.9em;
+    font-size: 1em;
   }
   @media screen and (min-width: 600px) and (max-width: 999px) {
     margin: 40px 20px 20px 60px;
-    font-size: 0.9em;
+    font-size: 1em;
   }
   @media screen and (min-width: 1000px) {
-    font-size: 1em;
+    font-size: 1.1em;
     margin: 40px 120px 20px 120px;
   }
 }

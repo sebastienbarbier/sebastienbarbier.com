@@ -9,6 +9,11 @@
 	},
 	"freelance": {
 		"footer": "L'ensemble de mon expérience professionnelle est disponible sur <a target=\"_blank\" href=\"https://www.linkedin.com/in/sebbarbier/\">mon profile Linkedin</a>.",
+		"header": {
+			"contact": "Me contacter",
+			"description": "Je travail actuellement sur un <strong>projet personnel</strong>, <em>seven23</em>, mais prend toujours le temps pour rencontrer des porteurs de projets.",
+			"help": "Discutons ensemble de comment je pourrais vous aider!"
+		},
 		"location": {
 			"description": "<strong>Télétravail</strong> uniquement.",
 			"title": "Localisation"

@@ -9,6 +9,11 @@
 	},
 	"freelance": {
 		"footer": "Complete background can be found on my <a target=\"_blank\" href=\"https://www.linkedin.com/in/sebbarbier/\">linkedin profile</a>.",
+		"header": {
+			"contact": "Contact me",
+			"description": "I am currently <strong>working on my latest personnal project</strong>, <em>seven23</em>, but always love to hear about great ideas and exciting projects.",
+			"help": "Let's get in touch and see how I could help you!"
+		},
 		"location": {
 			"description": "<strong>Remote</strong> position only.",
 			"title": "Location"
