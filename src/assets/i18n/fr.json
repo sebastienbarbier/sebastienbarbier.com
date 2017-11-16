@@ -23,7 +23,7 @@
 			"location": "Zurich, Suisse",
 			"stack": "L'interface de chatbot utilise les API de Facebook messenger et s'intègre dans leur couche server existante avec NodeJS. L'application front-end et le générateur de webapp sont développés en typescript/Angular.",
 			"website": "mila.com",
-			"work": "J'ai rejoins Mila à plein temps en télétravail au sein de son équipe développement pour aider à la création du prototye de trois nouveaux produits: une interface de chatbot, une application front-end pour gérer le planning des techniciens, et une générateur de webapp basé sur des métadonnées hébergées sur une plateforme SaaS."
+			"work": "J'ai rejoins Mila à plein temps en télétravail au sein de son équipe développement pour aider à la création du prototye de trois nouveaux produits: une interface de chatbot, une application front-end pour gérer le planning des techniciens, et un générateur de webapp basé sur des métadonnées hébergées sur une plateforme SaaS."
 		},
 		"pricing": {
 			"description": "<strong>À l'heure</strong>, taux horaire fix.",
