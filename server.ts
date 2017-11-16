@@ -18,8 +18,8 @@ const DIST_FOLDER = join(process.cwd(), 'dist');
 
 // Our index.html we'll use as our template
 // No use of this, just check if templates are here.
-const templateEnglish = readFileSync(join(DIST_FOLDER, 'browser', 'index.en.html')).toString();
-const templateFrench = readFileSync(join(DIST_FOLDER, 'browser', 'index.fr.html')).toString();
+const templateEnglish = readFileSync(join(DIST_FOLDER, 'browser', 'index_en.html')).toString();
+const templateFrench = readFileSync(join(DIST_FOLDER, 'browser', 'index_fr.html')).toString();
 
 // * NOTE :: leave this as require() since this file is built Dynamically from webpack
 const { AppServerModuleNgFactory, LAZY_MODULE_MAP } = require('./dist/server/main.bundle');
@@ -54,15 +54,6 @@ app.get('/keybase.txt', (req, res) => {
   });
 });
 
-// function nocache(req, res, next) {
-//   res.header('Cache-Control', 'private, no-cache, no-store, must-revalidate');
-//   res.header('Expires', '-1');
-//   res.header('Pragma', 'no-cache');
-//   next();
-// }
-
-// app.get('/assets/i18n/*', nocache, express.static(join(DIST_FOLDER, 'browser')));
-
 app.get('/assets/i18n/en.*.json', (req, res) => {
   res.sendFile(join(DIST_FOLDER, 'browser', 'assets', 'i18n', 'en.json'), {
     req
@@ -77,10 +68,10 @@ app.get('/assets/i18n/fr.*.json', (req, res) => {
 
 app.get('*.*', express.static(join(DIST_FOLDER, 'browser')));
 
-// ALl regular routes use the Universal engine
+// All regular routes use the Universal engine
 app.get('*', (req, res) => {
   const lang = req.get('host').includes('sebastienbarbier.fr') ? 'fr' : 'en';
-  res.sendFile(join(DIST_FOLDER, 'browser', `index.${lang}.html`), {
+  res.render(`index_${lang}`, {
     req,
     res,
     providers: [{

@@ -10,7 +10,7 @@
       "assets": [
         "assets"
       ],
-      "index": "index.en.html",
+      "index": "index_en.html",
       "main": "main.ts",
       "polyfills": "polyfills.ts",
       "test": "test.ts",
@@ -33,7 +33,7 @@
       "assets": [
         "assets"
       ],
-      "index": "index.fr.html",
+      "index": "index_fr.html",
       "main": "main.ts",
       "polyfills": "polyfills.ts",
       "test": "test.ts",
