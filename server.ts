@@ -54,14 +54,26 @@ app.get('/keybase.txt', (req, res) => {
   });
 });
 
-function nocache(req, res, next) {
-  res.header('Cache-Control', 'private, no-cache, no-store, must-revalidate');
-  res.header('Expires', '-1');
-  res.header('Pragma', 'no-cache');
-  next();
-}
+// function nocache(req, res, next) {
+//   res.header('Cache-Control', 'private, no-cache, no-store, must-revalidate');
+//   res.header('Expires', '-1');
+//   res.header('Pragma', 'no-cache');
+//   next();
+// }
 
-app.get('/assets/i18n/*', nocache, express.static(join(DIST_FOLDER, 'browser')));
+// app.get('/assets/i18n/*', nocache, express.static(join(DIST_FOLDER, 'browser')));
+
+app.get('/assets/i18n/en.*.json', (req, res) => {
+  res.sendFile(join(DIST_FOLDER, 'browser', 'assets', 'i18n', 'en.json'), {
+    req
+  });
+});
+
+app.get('/assets/i18n/fr.*.json', (req, res) => {
+  res.sendFile(join(DIST_FOLDER, 'browser', 'assets', 'i18n', 'fr.json'), {
+    req
+  });
+});
 
 app.get('*.*', express.static(join(DIST_FOLDER, 'browser')));
 

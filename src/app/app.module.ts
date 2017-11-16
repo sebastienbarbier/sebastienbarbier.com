@@ -20,8 +20,13 @@ import { ProjectsComponent } from './projects/projects.component';
 import { PhotographyComponent } from './photography/photography.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
+import { environment } from '../environments/environment';
+
 export function createTranslateLoader(http: HttpClient) {
-  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+  return new TranslateHttpLoader(
+    http,
+    './assets/i18n/',
+    (environment.production ? '.' + Math.floor(Math.random() * 100000) + '.json' : '.json'));
 }
 
 // State is use to bind animation
