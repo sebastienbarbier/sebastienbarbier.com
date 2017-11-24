@@ -7,20 +7,80 @@
 
 <url>
   <loc>https://sebastienbarbier.fr</loc>
+  <xhtml:link
+     rel="alternate"
+     hreflang="en"
+     href="https://sebastienbarbier.com"
+     />
+   <xhtml:link
+     rel="alternate"
+     hreflang="fr"
+     href="https://sebastienbarbier.fr"
+     />
 </url>
 <url>
   <loc>https://sebastienbarbier.fr/freelance</loc>
+  <xhtml:link
+     rel="alternate"
+     hreflang="en"
+     href="https://sebastienbarbier.com/freelance"
+     />
+   <xhtml:link
+     rel="alternate"
+     hreflang="fr"
+     href="https://sebastienbarbier.fr/freelance"
+     />
 </url>
 <url>
   <loc>https://sebastienbarbier.fr/projects</loc>
+  <xhtml:link
+     rel="alternate"
+     hreflang="en"
+     href="https://sebastienbarbier.com/projects"
+     />
+   <xhtml:link
+     rel="alternate"
+     hreflang="fr"
+     href="https://sebastienbarbier.fr/projects"
+     />
 </url>
 <url>
   <loc>https://sebastienbarbier.fr/photography</loc>
+  <xhtml:link
+     rel="alternate"
+     hreflang="en"
+     href="https://sebastienbarbier.com/photography"
+     />
+   <xhtml:link
+     rel="alternate"
+     hreflang="fr"
+     href="https://sebastienbarbier.fr/photography"
+     />
 </url>
 <url>
   <loc>https://sebastienbarbier.fr/contact</loc>
+  <xhtml:link
+     rel="alternate"
+     hreflang="en"
+     href="https://sebastienbarbier.com/contact"
+     />
+   <xhtml:link
+     rel="alternate"
+     hreflang="fr"
+     href="https://sebastienbarbier.fr/contact"
+     />
 </url>
 <url>
   <loc>https://sebastienbarbier.fr/legal</loc>
+  <xhtml:link
+     rel="alternate"
+     hreflang="en"
+     href="https://sebastienbarbier.com/legal"
+     />
+   <xhtml:link
+     rel="alternate"
+     hreflang="fr"
+     href="https://sebastienbarbier.fr/legal"
+     />
 </url>
 </urlset>
