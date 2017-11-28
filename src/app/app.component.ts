@@ -55,6 +55,7 @@ export class AppComponent implements OnInit {
     }
     translate.setDefaultLang(this.lang);
     translate.use(this.lang);
+
   }
 
   ngOnInit() {
@@ -75,6 +76,14 @@ export class AppComponent implements OnInit {
         }
       }
     });
+
+    if (isPlatformServer(this.platformId)) {
+      const wrap = this.renderer.createElement('noscript');
+      const toWrap = this.element.nativeElement;
+      this.renderer.appendChild(wrap, toWrap.children[0]);
+      this.renderer.appendChild(toWrap, wrap);
+    }
+
   }
 
   getState(outlet) {
