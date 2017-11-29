@@ -7,7 +7,7 @@ import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
 import { routerTransition } from './router.animations';
 
 import { isPlatformBrowser, isPlatformServer } from '@angular/common';
-import { DOCUMENT } from '@angular/platform-browser';
+import { DOCUMENT, Title, Meta } from '@angular/platform-browser';
 import { Location } from '@angular/common';
 
 // AOT issue : https://github.com/ngx-translate/core/issues/537
@@ -40,6 +40,8 @@ export class AppComponent implements OnInit {
       private element: ElementRef,
       private renderer: Renderer2,
       private translate: TranslateService,
+      private titleService: Title,
+      private metaService: Meta,
       @Inject(PLATFORM_ID) private platformId: Object,
       @Inject(DOCUMENT) private d,
       @Optional() @Inject('serverUrl') protected serverUrl: string
@@ -59,6 +61,8 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
+
+
     this.router.events.subscribe(event => {
       // NavigationStart, NavigationEnd, NavigationCancel, NavigationError, RoutesRecognized
       if (event instanceof NavigationEnd) {
@@ -77,6 +81,7 @@ export class AppComponent implements OnInit {
       }
     });
 
+    // Handle noscript tag for SEO
     if (isPlatformServer(this.platformId)) {
       const wrap = this.renderer.createElement('noscript');
       const toWrap = this.element.nativeElement;
@@ -87,6 +92,22 @@ export class AppComponent implements OnInit {
   }
 
   getState(outlet) {
+
+    if (outlet.activatedRouteData.title) {
+      // Update title and meta data
+      this.translate.get(outlet.activatedRouteData.title).subscribe((res: string) => {
+          this.titleService.setTitle(`Sébastien Barbier - ${res}`);
+      });
+    } else {
+      this.titleService.setTitle(`Sébastien Barbier`);
+    }
+
+    // Changing meta with name="description"
+    // const tag = { name: 'description', content: event['metaDescription'] };
+    // const attributeSelector = 'name="description"';
+    // this.metaService.removeTag(attributeSelector);
+    // this.metaService.addTag(tag, false);
+
     if (isPlatformBrowser(this.platformId)) {
        // Client only code.
        this.renderer.setAttribute(this.element.nativeElement.parentElement, 'class', outlet.activatedRouteData.theme);
