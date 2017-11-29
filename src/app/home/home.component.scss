@@ -5,29 +5,11 @@ header {
   margin-left: 40px;
   margin-right: 40px;
 
-  h2, p {
-    padding: 0px 10px;
-    margin: 0px;
-  }
-
-  img {
-
-    border-radius: 70px;
-    margin-top: 0px;
-    margin-right: 40px;
-  }
-
   @media screen and (max-width: 599px) {
     padding: 160px 0 80px 0;
-    img {
-      width: 100px;
-    }
   }
   @media screen and (min-width: 600px) and (max-width: 999px) {
     padding: 160px 0 100px 0;
-    img {
-      width: 100px;
-    }
   }
   @media screen and (min-width: 1000px) {
     width: 780px;
@@ -38,11 +20,39 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    img {
-      width: 140px;
+  }
+
+  h2, p {
+    padding: 0px 10px;
+    margin: 0px;
+  }
+
+  .avatar {
+    border-radius: 70px;
+    margin-top: 0px;
+    margin-right: 40px;
+    overflow: hidden;
+    position: relative;
+    width: 140px;
+    height: 140px;
+    z-index: 1;
+
+    @media screen and (max-width: 999px) {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 10px;
+    }
+
+    @media screen and (min-width: 1000px) {
       float: left;
     }
+
+    img {
+      position: absolute;
+      width: 100%;
+    }
   }
+
 }
 
 .line {
