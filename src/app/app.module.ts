@@ -22,23 +22,14 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 
 import { environment } from '../environments/environment';
 
+import { appRoutes } from './app.routes';
+
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(
     http,
     './assets/i18n/',
     (environment.production ? '.' + Math.floor(Math.random() * 100000) + '.json' : '.json'));
 }
-
-// State is use to bind animation
-const appRoutes: Routes = [
-  { path: '', component: HomeComponent, data: { title: null, theme: 'light', state: 'home' } },
-  { path: 'freelance', component: FreelanceComponent, data: { title: 'nav.freelance', theme: 'light', state: 'freelance' } },
-  { path: 'projects', component: ProjectsComponent, data: { title: 'nav.projects', theme: 'light', state: 'projects' } },
-  { path: 'photography', component: PhotographyComponent, data: { title: 'nav.photography', theme: 'dark', state: 'photography' } },
-  { path: 'contact', component: ContactComponent, data: { title: 'nav.contact', theme: 'light', state: 'contact' } },
-  { path: 'legal', component: LegalComponent, data: { title: 'nav.legal', theme: 'light', state: 'legal' } },
-  { path: '**', component: PageNotFoundComponent, data: { title: null, theme: 'light', state: '404' }  }
-];
 
 @NgModule({
   imports: [

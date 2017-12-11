@@ -107,6 +107,7 @@ export class AppComponent implements OnInit {
     // const attributeSelector = 'name="description"';
     // this.metaService.removeTag(attributeSelector);
     // this.metaService.addTag(tag, false);
+    // this.meta.addTag({ name: 'robots', content: 'noindex' });
 
     if (isPlatformBrowser(this.platformId)) {
        // Client only code.
