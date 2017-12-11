@@ -93,6 +93,7 @@ export class AppComponent implements OnInit {
 
   getState(outlet) {
 
+    // meta title
     if (outlet.activatedRouteData.title) {
       // Update title and meta data
       this.translate.get(outlet.activatedRouteData.title).subscribe((res: string) => {
@@ -102,12 +103,18 @@ export class AppComponent implements OnInit {
       this.titleService.setTitle(`Sébastien Barbier`);
     }
 
+    // meta robots
+    if (outlet.activatedRouteData.state === '404') {
+      this.metaService.addTag({ name: 'robots', content: 'noindex'});
+    } else {
+      this.metaService.removeTag('name=robots');
+    }
+
     // Changing meta with name="description"
     // const tag = { name: 'description', content: event['metaDescription'] };
     // const attributeSelector = 'name="description"';
     // this.metaService.removeTag(attributeSelector);
     // this.metaService.addTag(tag, false);
-    // this.meta.addTag({ name: 'robots', content: 'noindex' });
 
     if (isPlatformBrowser(this.platformId)) {
        // Client only code.
