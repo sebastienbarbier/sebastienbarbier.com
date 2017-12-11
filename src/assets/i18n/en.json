@@ -7,6 +7,14 @@
 		"email": "Email",
 		"socialnetworks": "Social networks"
 	},
+	"description": {
+		"contact": "My name is Sébastien and I am a software engineer from France. Currently working as a full-stack javascript/python, I share my time between freelancing and personal projects.",
+		"freelance": "My name is Sébastien and I am a software engineer from France. Currently working as a full-stack javascript/python, I share my time between freelancing and personal projects.",
+		"home": "My name is Sébastien and I am a software engineer from France. Currently working as a full-stack javascript/python, I share my time between freelancing and personal projects.",
+		"legal": "My name is Sébastien and I am a software engineer from France. Currently working as a full-stack javascript/python, I share my time between freelancing and personal projects.",
+		"photography": "My name is Sébastien and I am a software engineer from France. Currently working as a full-stack javascript/python, I share my time between freelancing and personal projects.",
+		"projects": "My name is Sébastien and I am a software engineer from France. Currently working as a full-stack javascript/python, I share my time between freelancing and personal projects."
+	},
 	"freelance": {
 		"footer": "Complete background can be found on my <a target=\"_blank\" href=\"https://www.linkedin.com/in/sebbarbier/\">linkedin profile</a>.",
 		"header": {

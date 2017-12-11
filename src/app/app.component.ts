@@ -103,11 +103,20 @@ export class AppComponent implements OnInit {
       this.titleService.setTitle(`Sébastien Barbier`);
     }
 
+    if (outlet.activatedRouteData.description) {
+      // Update title and meta data
+      this.translate.get(outlet.activatedRouteData.description).subscribe((res: string) => {
+        this.metaService.removeTag('name="description"');
+        this.metaService.addTag({ name: 'description', content: res }, false);
+      });
+    } else {
+      this.metaService.removeTag('name="description"');
+    }
+
     // meta robots
+    this.metaService.removeTag('name=robots');
     if (outlet.activatedRouteData.state === '404') {
       this.metaService.addTag({ name: 'robots', content: 'noindex'});
-    } else {
-      this.metaService.removeTag('name=robots');
     }
 
     // Changing meta with name="description"

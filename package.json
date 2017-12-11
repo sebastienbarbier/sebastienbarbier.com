@@ -16,7 +16,7 @@
     "serve:dynamic": "node dist/server",
     "test": "ng test",
     "lint": "ng lint",
-    "i18n": "ngx-translate-extract --input ./src --output ./src/assets/i18n/{en,fr}.json --clean --sort --format namespaced-json",
+    "i18n": "ngx-translate-extract --input ./src --output ./src/assets/i18n/{en,fr}.json --clean --sort --format namespaced-json -m _",
     "e2e": "ng e2e"
   },
   "engines": {
@@ -48,7 +48,7 @@
     "@angular/cli": "1.4.7",
     "@angular/compiler-cli": "4.4.5",
     "@angular/language-service": "4.4.5",
-    "@biesbjerg/ngx-translate-extract": "^2.3.2",
+    "@biesbjerg/ngx-translate-extract": "^2.3.4",
     "@types/jasmine": "~2.6.0",
     "@types/jasminewd2": "~2.0.2",
     "@types/node": "~8.0.44",

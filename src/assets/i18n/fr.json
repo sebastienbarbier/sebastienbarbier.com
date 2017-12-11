@@ -7,6 +7,14 @@
 		"email": "Mail",
 		"socialnetworks": "Réseaux sociaux"
 	},
+	"description": {
+		"contact": "Je m'appelle Sébastien, ingénieur en logiciel, et suis originaire de France. Je partage mon temps entre des missions de freelance et des projets personnels.",
+		"freelance": "Je m'appelle Sébastien, ingénieur en logiciel, et suis originaire de France. Je partage mon temps entre des missions de freelance et des projets personnels.",
+		"home": "Je m'appelle Sébastien, ingénieur en logiciel, et suis originaire de France. Je partage mon temps entre des missions de freelance et des projets personnels.",
+		"legal": "Je m'appelle Sébastien, ingénieur en logiciel, et suis originaire de France. Je partage mon temps entre des missions de freelance et des projets personnels.",
+		"photography": "Je m'appelle Sébastien, ingénieur en logiciel, et suis originaire de France. Je partage mon temps entre des missions de freelance et des projets personnels.",
+		"projects": "Je m'appelle Sébastien, ingénieur en logiciel, et suis originaire de France. Je partage mon temps entre des missions de freelance et des projets personnels."
+	},
 	"freelance": {
 		"footer": "L'ensemble de mon expérience professionnelle est disponible sur <a target=\"_blank\" href=\"https://www.linkedin.com/in/sebbarbier/\">mon profile Linkedin</a>.",
 		"header": {
