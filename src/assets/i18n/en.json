@@ -8,12 +8,12 @@
 		"socialnetworks": "Social networks"
 	},
 	"description": {
-		"contact": "My name is Sébastien and I am a software engineer from France. Currently working as a full-stack javascript/python, I share my time between freelancing and personal projects.",
-		"freelance": "My name is Sébastien and I am a software engineer from France. Currently working as a full-stack javascript/python, I share my time between freelancing and personal projects.",
+		"contact": "You can reach to me by email hello@sebastienbarbier.com or any of my social network account.",
+		"freelance": "I am currently working on my latest personal project, seven23, but I always love to hear about great ideas and exciting projects. Let's get in touch and see how I could help you!",
 		"home": "My name is Sébastien and I am a software engineer from France. Currently working as a full-stack javascript/python, I share my time between freelancing and personal projects.",
-		"legal": "My name is Sébastien and I am a software engineer from France. Currently working as a full-stack javascript/python, I share my time between freelancing and personal projects.",
-		"photography": "My name is Sébastien and I am a software engineer from France. Currently working as a full-stack javascript/python, I share my time between freelancing and personal projects.",
-		"projects": "My name is Sébastien and I am a software engineer from France. Currently working as a full-stack javascript/python, I share my time between freelancing and personal projects."
+		"legal": "This website is edited as individual and private content. It is not attached to any company of any kind.",
+		"photography": "Photography is only a hobby for now, but I really want to invest more time on it so more will come soon.",
+		"projects": "Seven23 is a personal budget application for nomads, but not only. MPDBox is a NFC music reader using a raspberry Pi."
 	},
 	"freelance": {
 		"footer": "Complete background can be found on my <a target=\"_blank\" href=\"https://www.linkedin.com/in/sebbarbier/\">linkedin profile</a>.",
