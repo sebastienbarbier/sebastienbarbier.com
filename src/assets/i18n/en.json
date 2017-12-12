@@ -83,8 +83,20 @@
 		"projects": "Projects"
 	},
 	"projects": {
+		"archives": {
+			"title": "Archives"
+		},
+		"mainproject": {
+			"title": "Main projects"
+		},
 		"mpdbox": {
-			"description": "Build a NFC music reader using a raspberry Pi."
+			"description": "Prototype/PoC of a NFC music reader with a raspberry Pi."
+		},
+		"others": {
+			"title": "Others"
+		},
+		"sebastienbarbier": {
+			"description": "Personnal website"
 		},
 		"server": "Server",
 		"seven23": {

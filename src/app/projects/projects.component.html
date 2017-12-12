@@ -1,9 +1,10 @@
-<article>
+<main>
+  <h2>{{ 'projects.mainproject.title' | translate }}</h2>
   <section>
-    <h2>Seven23</h2>
+    <h3>Seven23</h3>
     <p>{{ 'projects.seven23.description' | translate }}</p>
     <div class="stack">
-      <h3>Webapp</h3>
+      <h4>Webapp</h4>
       <ul>
         <li>Javascript</li>
         <li>React</li>
@@ -13,7 +14,7 @@
         <li>WebWorker</li>
         <li>IndexedDb</li>
       </ul>
-      <h3>{{ 'projects.server' | translate }}</h3>
+      <h4>{{ 'projects.server' | translate }}</h4>
       <ul>
         <li>Python</li>
         <li>Django</li>
@@ -23,24 +24,47 @@
     </div>
     <p><a href="https://seven23.io">{{ 'projects.website' | translate }}</a> \ <a href="https://github.com/sebastienbarbier/seven23_webapp">Github</a></p>
   </section>
-  <section>
-    <h2>MPDBox</h2>
-    <p>{{ 'projects.mpdbox.description' | translate }}</p>
-    <div class="stack">
-      <h3>{{ 'projects.server' | translate }}</h3>
-      <ul>
-        <li>Python</li>
-        <li>SQLite</li>
-        <li>Music Player Deamon</li>
-        <li>Raspberry Pi</li>
-        <li>Linux</li>
-      </ul>
-      <h3>Client Cli</h3>
-      <ul>
-        <li>Node</li>
-        <li>Inquirer</li>
-      </ul>
+
+  <div class="line">
+    <div class="column">
+      <h2>{{ 'projects.others.title' | translate }}</h2>
+      <section>
+        <h3>sebastienbarbier.com</h3>
+        <p>{{ 'projects.sebastienbarbier.description' | translate }}</p>
+        <div class="stack">
+          <h4>Website</h4>
+          <ul>
+            <li>Typescript</li>
+            <li>Angular</li>
+            <li>Angular Universal</li>
+          </ul>
+        </div>
+        <p><a href="https://github.com/sebastienbarbier/sebastienbarbier.com">Github</a></p>
+      </section>
     </div>
-    <p><a href="https://github.com/mpd-box">Github</a></p>
-  </section>
-</article>
+
+    <div class="column">
+      <h2>{{ 'projects.archives.title' | translate }}</h2>
+      <section>
+        <h3>MPDBox <small>2015</small></h3>
+        <p>{{ 'projects.mpdbox.description' | translate }}</p>
+        <div class="stack">
+          <h4>{{ 'projects.server' | translate }}</h4>
+          <ul>
+            <li>Python</li>
+            <li>SQLite</li>
+            <li>Music Player Deamon</li>
+            <li>Raspberry Pi</li>
+            <li>Linux</li>
+          </ul>
+          <h4>Client Cli</h4>
+          <ul>
+            <li>Node</li>
+            <li>Inquirer</li>
+          </ul>
+        </div>
+        <p><a href="https://github.com/mpd-box">Github</a></p>
+      </section>
+    </div>
+  </div>
+</main>

@@ -1,8 +1,6 @@
 @import '../../assets/scss/variables';
 
-article {
-  font-size: 1.1em;
-
+main {
   @media screen and (max-width: 599px) {
     margin: 80px 20px 20px 20px;
     font-size: 1em;
@@ -14,48 +12,88 @@ article {
   @media screen and (min-width: 1000px) {
     font-size: 1.1em;
     margin: 220px 120px 20px 120px;
+    flex-direction: row;
+  }
+}
+
+h2 {
+  border-bottom: solid 1px $light2;
+  padding-bottom: 10px;
+  @media screen and (max-width: 999px) {
+    margin: 0 0px;
+  }
+  @media screen and (min-width: 1000px) {
+    margin: 0 40px;
+  }
+}
+
+.line {
+  display: flex;
+  flex-direction: row;
+  &:first-child {
   }
 
-  section {
-    border-top: solid 1px $light2;
-    &:last-child {
-      border-bottom: solid 1px $light2;
-    }
-    @media screen and (max-width: 599px) {
-      padding: 40px 10px;
-    }
+  @media screen and (max-width: 1199px) {
+    flex-direction: column;
+  }
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+  }
+
+  .column {
     @media screen and (min-width: 600px) and (max-width: 999px) {
-      padding: 40px 30px;
-    }
-    @media screen and (min-width: 1000px) {
-      padding: 40px 60px;
+      flex: 100%;
     }
 
-    .stack {
-      font-size: 0.8em;
-      h3 {
-        width: 70px;
-        float: left;
-        clear: both;
-        margin: 0;
-        text-transform: uppercase;
-        font-size: 0.9em;
-        font-weight: 300;
-        padding-top: 12px;
-      }
-      ul {
-        padding: 0;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        li {
-          list-style: none;
-          background: $light2;
-          padding: 4px 7px;
-          border-radius: 4px;
-          margin-top: 4px;
-          margin-right: 4px;
-        }
+    @media screen and (min-width: 1000px) {
+      flex: 50%;
+    }
+  }
+}
+
+section {
+  @media screen and (max-width: 599px) {
+    padding: 40px 10px;
+  }
+  @media screen and (min-width: 600px) and (max-width: 999px) {
+    padding: 40px 30px;
+  }
+  @media screen and (min-width: 1000px) {
+    padding: 40px 60px;
+  }
+
+  h3{
+    small{
+      padding-left: 10px;
+      font-size: 0.6em;
+      opacity: 0.6;
+    }
+  }
+
+  .stack {
+    font-size: 0.8em;
+    h4 {
+      width: 70px;
+      float: left;
+      clear: both;
+      margin: 0;
+      text-transform: uppercase;
+      font-size: 0.9em;
+      font-weight: 300;
+      padding-top: 12px;
+    }
+    ul {
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      li {
+        list-style: none;
+        background: $light2;
+        padding: 4px 7px;
+        border-radius: 4px;
+        margin-top: 4px;
+        margin-right: 4px;
       }
     }
   }

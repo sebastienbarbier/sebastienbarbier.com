@@ -83,8 +83,20 @@
 		"projects": "Projets"
 	},
 	"projects": {
+		"archives": {
+			"title": "Archives"
+		},
+		"mainproject": {
+			"title": "Projects principaux"
+		},
 		"mpdbox": {
 			"description": "Prototype de lecteur mp3 controllé par puces NFC."
+		},
+		"others": {
+			"title": "Autres"
+		},
+		"sebastienbarbier": {
+			"description": "Site personel"
 		},
 		"server": "Serveur",
 		"seven23": {
