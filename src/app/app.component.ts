@@ -125,14 +125,7 @@ export class AppComponent implements OnInit {
     // this.metaService.removeTag(attributeSelector);
     // this.metaService.addTag(tag, false);
 
-    if (isPlatformBrowser(this.platformId)) {
-       // Client only code.
-       this.renderer.setAttribute(this.element.nativeElement.parentElement, 'class', outlet.activatedRouteData.theme);
-    }
-    if (isPlatformServer(this.platformId)) {
-      // Server only code.
-       this.renderer.setAttribute(this.element.nativeElement.parent, 'class', outlet.activatedRouteData.theme);
-    }
+    this.renderer.setAttribute(this.renderer.parentNode(this.element.nativeElement), 'class', outlet.activatedRouteData.theme);
     return outlet.activatedRouteData.state;
   }
 }
