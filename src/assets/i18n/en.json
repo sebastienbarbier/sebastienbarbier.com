@@ -90,7 +90,7 @@
 			"title": "Main projects"
 		},
 		"mpdbox": {
-			"description": "Prototype/PoC of a NFC music reader with a raspberry Pi."
+			"description": "Prototype of a NFC music reader with a raspberry Pi."
 		},
 		"others": {
 			"title": "Others"
