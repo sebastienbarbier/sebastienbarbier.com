@@ -30,6 +30,7 @@ h2 {
 .line {
   display: flex;
   flex-direction: row;
+  margin-top: 80px;
 
   @media screen and (max-width: 1099px) {
     flex-direction: column;
