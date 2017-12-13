@@ -86,9 +86,6 @@
 		"archives": {
 			"title": "Archives"
 		},
-		"mainproject": {
-			"title": "Main projects"
-		},
 		"mpdbox": {
 			"description": "Prototype of a NFC music reader with a raspberry Pi."
 		},
