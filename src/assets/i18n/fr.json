@@ -89,9 +89,6 @@
 		"mpdbox": {
 			"description": "Prototype de lecteur mp3 controllé par puces NFC."
 		},
-		"others": {
-			"title": "Autres"
-		},
 		"sebastienbarbier": {
 			"description": "Site personel"
 		},
@@ -99,6 +96,8 @@
 		"seven23": {
 			"description": "Application de budget/finance personnel pour nomade, mais pas que!"
 		},
-		"website": "Site internet"
+		"sideproject": {
+			"title": "Projet annexe"
+		}
 	}
 }

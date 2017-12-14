@@ -89,9 +89,6 @@
 		"mpdbox": {
 			"description": "Prototype of a NFC music reader with a raspberry Pi."
 		},
-		"others": {
-			"title": "Others"
-		},
 		"sebastienbarbier": {
 			"description": "Personnal website"
 		},
@@ -99,6 +96,8 @@
 		"seven23": {
 			"description": "Personal budget application for nomads, but not only."
 		},
-		"website": "Website"
+		"sideproject": {
+			"title": "Side project"
+		}
 	}
 }
