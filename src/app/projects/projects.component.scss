@@ -51,6 +51,15 @@ h2 {
 }
 
 section {
+  display: flex;
+
+  @media screen and (max-width: 499px) {
+    flex-direction: column;
+  }
+  @media screen and (min-width: 500px) {
+    align-items: flex-start;
+  }
+
   @media screen and (max-width: 599px) {
     padding: 40px 10px;
   }
@@ -62,6 +71,7 @@ section {
   }
 
   h3{
+    margin-top: 0;
     font-size: 1.3em;
     padding-bottom: 6px;
     small{
@@ -98,40 +108,30 @@ section {
       }
     }
   }
-
-  &.large{
-
-    display: flex;
-
+  aside {
     @media screen and (max-width: 499px) {
-      flex-direction: column;
+      padding: 0px 30px 20px 0px;
     }
     @media screen and (min-width: 500px) {
-      align-items: flex-start;
+      padding: 0px 30px 20px 10px;
+    }
+    img {
+      box-shadow: 0px 0px 2px #AAA;
+      border-radius: 10px;
+      @media screen and (max-width: 999px) {
+        width: 83px;
+      }
+      @media screen and (min-width: 1000px) {
+        width: 83px;
+      }
+    }
+  }
+  &.large{
+
+    @media screen and (min-width: 500px) {
       justify-content: center;
     }
 
-    h3 {
-      margin-top: 0;
-    }
-    aside {
-      @media screen and (max-width: 499px) {
-        padding: 0px 30px 20px 0px;
-      }
-      @media screen and (min-width: 500px) {
-        padding: 0px 30px 20px 10px;
-      }
-      img {
-        box-shadow: 0px 0px 2px #AAA;
-        border-radius: 10px;
-        @media screen and (max-width: 999px) {
-          width: 83px;
-        }
-        @media screen and (min-width: 1000px) {
-          width: 83px;
-        }
-      }
-    }
     .thumbnails {
       display: flex;
       flex-wrap: wrap;
