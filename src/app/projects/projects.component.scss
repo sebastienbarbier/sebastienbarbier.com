@@ -170,6 +170,7 @@ section {
   align-items: center;
   align-content: center;
   padding: 60px;
+  z-index: 9999;
   &.hide {
     visibility: hidden;
     opacity: 0;
