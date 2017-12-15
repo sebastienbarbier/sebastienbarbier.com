@@ -29,11 +29,11 @@
           </ul>
         </div>
         <ul class="thumbnails">
-          <li><img src="https://public.sebastienbarbier.com/images/seven23/screenshots/1-dashboard.png" alt="Seven23 Dashboard" /></li>
-          <li><img src="https://public.sebastienbarbier.com/images/seven23/screenshots/2-transactions.png" alt="Seven23 Transactions" /></li>
-          <li><img src="https://public.sebastienbarbier.com/images/seven23/screenshots/3-changes.png" alt="Seven23 Changes" /></li>
-          <li><img src="https://public.sebastienbarbier.com/images/seven23/screenshots/4-categories.png" alt="Seven23 Categories" /></li>
-          <li><img src="https://public.sebastienbarbier.com/images/seven23/screenshots/5-settings.png" alt="Seven23 Settings" /></li>
+          <li *ngFor="let photo of photos" >
+            <a [href]="photo.source" (click)="view($event, photo)">
+              <img [src]="photo.thumbnail" [alt]="photo.alt" />
+            </a>
+          </li>
         </ul>
         <p>Release 2018 \ <a href="https://github.com/sebastienbarbier/seven23_webapp">Github</a></p>
       </div>
@@ -89,3 +89,8 @@
     </div>
   </div>
 </main>
+
+<div [ngClass]="{'show': selectedPhoto, 'hide': !selectedPhoto}" class="viewer" (click)="view($event)">
+  <img *ngIf="selectedPhoto" [src]="selectedPhoto.source" [alt]="selectedPhoto.alt" />
+</div>
+
