@@ -33,6 +33,14 @@
 			"website": "mila.com",
 			"work": "J'ai rejoins Mila à plein temps en télétravail au sein de son équipe développement pour aider à la création du prototye de trois nouveaux produits: une interface de chatbot, une application front-end pour gérer le planning des techniciens, et un générateur de webapp basé sur des métadonnées hébergées sur une plateforme SaaS."
 		},
+		"mozilla": {
+			"description": "Projet: Firefox, Test Pilot, Notes",
+			"github": "Dépôt Github",
+			"location": "Paris, France",
+			"stack": "Distribué sous forme d'une extention web, et construit avec ReactJS",
+			"website": "Présentation de Testpilot/Notes",
+			"work": "Notes ajoute un bloc-notes tout simple à la barre latérale de votre navigateur. Ma mission au sein de l'équipe consistait à migrer le code existant sous ReactJS, ajouter de nouvelles fonctionnalités, et améliorer les données analytiques pour la prochaine version."
+		},
 		"pricing": {
 			"description": "<strong>À l'heure</strong>, taux horaire fix.",
 			"title": "Tarification"

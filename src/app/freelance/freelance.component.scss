@@ -123,6 +123,14 @@ article {
         font-size: 0.6em;
       }
     }
+    ul {
+      display: flex;
+      padding: 0;
+      li {
+        margin-right: 18px;
+        list-style: none;
+      }
+    }
   }
 }
 
