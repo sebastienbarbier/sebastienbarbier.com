@@ -37,7 +37,7 @@
 			"description": "Project: Firefox, Test Pilot, Notes",
 			"github": "Github repository",
 			"location": "Paris, France",
-			"stack": "Build as a web extention, using react.",
+			"stack": "Build as a web extention, using react and redux.",
 			"website": "Testpilot/Notes decription",
 			"work": "Notes adds a simple, one-page notepad to your browser’s sidebar. I joined the team to work on migrating existing code with ReactJS, implements new features, and add metrics for next release."
 		},

@@ -37,7 +37,7 @@
 			"description": "Projet: Firefox, Test Pilot, Notes",
 			"github": "Dépôt Github",
 			"location": "Paris, France",
-			"stack": "Distribué sous forme d'une extention web, et construit avec ReactJS",
+			"stack": "Distribué sous forme d'extention web, autours de React et Redux",
 			"website": "Présentation de Testpilot/Notes",
 			"work": "Notes ajoute un bloc-notes tout simple à la barre latérale de votre navigateur. Ma mission au sein de l'équipe consistait à migrer le code existant sous ReactJS, ajouter de nouvelles fonctionnalités, et améliorer les données analytiques pour la prochaine version."
 		},
