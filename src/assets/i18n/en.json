@@ -90,6 +90,14 @@
 		"photography": "Photography",
 		"projects": "Projects"
 	},
+	"photography": {
+		"description": "I have great ambitions, but haven't find the right way yet. I specialy enjoy the artistic aspect of it, as a relaxing things to do. Right now, I have literally no vision for my work, and still need to learn and practice. If you think you can help, I would love to hear from you.",
+		"headline": "Photography is a hobby I love, but really struggle at practicing.",
+		"instagram": {
+			"intro": "For now, you can consult my instagram account. Hopefully, more content will come in 2018.",
+			"title": "Instagram"
+		}
+	},
 	"projects": {
 		"archives": {
 			"title": "Archives"

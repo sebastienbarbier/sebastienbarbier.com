@@ -34,9 +34,9 @@ export function createTranslateLoader(http: HttpClient) {
 @NgModule({
   imports: [
     BrowserModule.withServerTransition({appId: 'my-app'}),
+    HttpClientModule,
     BrowserAnimationsModule,
     FormsModule,
-    HttpClientModule,
     RouterModule.forRoot(
       appRoutes
     ),

@@ -10,7 +10,7 @@
     "build:client-and-server-bundles": "ng build --prod && ng build --prod --app 1 --delete-output-path false && ng build --prod --app 2 --output-hashing=false",
     "build:static": "npm run build:client-and-server-bundles && npm run webpack:server && npm run generate:static",
     "build:dynamic": "npm run build:client-and-server-bundles && npm run webpack:server",
-    "generate:static": "cd dist && node prerender",
+    "generate:static": "node scripts/instagram.js && cd dist && node prerender",
     "webpack:server": "webpack --config webpack.server.config.js --progress --colors && copy ./static/* ./dist",
     "serve:static": "cd dist/browser && http-server",
     "serve:dynamic": "node dist/server",
