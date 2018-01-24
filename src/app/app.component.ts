@@ -49,7 +49,7 @@ export class AppComponent implements OnInit {
     this.headerState = 'hide';
     this.navigationMenuStatus = false;
 
-    this.lang = 'fr';
+    this.lang = 'en';
     if (isPlatformBrowser(platformId) && d.location.hostname.endsWith('sebastienbarbier.fr')) {
       this.lang = 'fr';
     } else if (isPlatformServer(platformId) && serverUrl.split(':')[1].endsWith('sebastienbarbier.fr')) {
