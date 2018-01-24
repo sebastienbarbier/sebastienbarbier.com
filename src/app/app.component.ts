@@ -92,15 +92,15 @@ export class AppComponent implements OnInit {
   }
 
   getState(outlet) {
-
+    const accent = this.lang === 'en' ? 'e' : 'é';
     // meta title
     if (outlet.activatedRouteData.title) {
       // Update title and meta data
       this.translate.get(outlet.activatedRouteData.title).subscribe((res: string) => {
-          this.titleService.setTitle(`Sébastien Barbier - ${res}`);
+          this.titleService.setTitle(`S${accent}bastien Barbier - ${res}`);
       });
     } else {
-      this.titleService.setTitle(`Sébastien Barbier`);
+      this.titleService.setTitle(`S${accent}bastien Barbier`);
     }
 
     if (outlet.activatedRouteData.description) {
