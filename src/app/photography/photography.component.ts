@@ -59,13 +59,15 @@ export class PhotographyComponent implements OnInit {
 
     this.getInstagramPhotos().subscribe(data => {
       // Read the result field from the JSON response.
-      this.photos = data['data'];
+      this.photos = data['data'].slice(0, 16);
+      console.log(data);
     },
     err => {
       this.getInstagramPhotos(true).subscribe(data => {
         // Read the result field from the JSON response.
-        this.photos = data['data'];
-      };
+        this.photos = data['data'].slice(0, 16);
+        console.log(data);
+      });
     });
   }
 

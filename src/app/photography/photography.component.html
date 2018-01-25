@@ -1,16 +1,18 @@
-
-<article class="block">
-  <p class="headline">{{ 'photography.headline' | translate }}</p>
-  <p>{{ 'photography.description' | translate }}</p>
-  <p>{{ 'photography.instagram.intro' | translate }}</p>
-  <h2>{{ 'photography.instagram.title' | translate }}</h2>
-  <div class="photos">
-    <a *ngFor="let photo of photos" [href]="photo.source" (click)="view($event, photo)">
-      <img [src]="photo.images.thumbnail.url" [alt]="photo.caption.text" />
-    </a>
-  </div>
-  <p><a class="button" href="https://instagram.com/sebastienbarbier">instagram @sebastienbarbier</a></p>
-</article>
+<div class="container">
+  <article class="block">
+    <p class="headline">{{ 'photography.headline' | translate }}</p>
+    <p>{{ 'photography.description' | translate }}</p>
+    <p>{{ 'photography.instagram.intro' | translate }}</p>
+    <p><a class="button" href="https://instagram.com/sebastienbarbier">instagram @sebastienbarbier</a></p>
+  </article>
+  <aside class="block">
+    <div class="photos">
+      <a *ngFor="let photo of photos" [href]="photo.source" (click)="view($event, photo)">
+        <img [src]="photo.images.thumbnail.url" [alt]="photo.caption.text" />
+      </a>
+    </div>
+  </aside>
+</div>
 <div [ngClass]="{'show': selectedPhoto, 'hide': !selectedPhoto}" class="viewer" (click)="view($event)">
   <img *ngIf="selectedPhoto" [src]="selectedPhoto.images.standard_resolution.url" [alt]="selectedPhoto.caption.text" />
 </div>
