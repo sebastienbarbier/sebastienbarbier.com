@@ -68,12 +68,12 @@
 	},
 	"legal": {
 		"author": {
-			"description": "Sebastien BARBIER, 46E rue du mont bart, 25200 Montbeliard, France<br/>Phone : <a href=\"tel:+33695675110\">+33 6 95 67 51 10</a><br/>Contact : <a href=\"mailto:hello@sebastienbarbier.com\">hello@sebastienbarbier.com</a>",
+			"description": "<strong>SPRB Consulting</strong><br/>Mr Sebastien BARBIER<br/>10 rue de Penthièvre<br/>75008 Paris, France<br/>Phone : <a href=\"tel:+33184258258\">+33 1 84 25 82 58</a><br/>Contact : <a href=\"mailto:hello@sebastienbarbier.com\">hello@sebastienbarbier.com</a>",
 			"title": "Author"
 		},
-		"description": "This website is edited as individual and private content. It is not attached to any company of any kind.",
+    "description": "<strong>SPRB Consulting SASU</strong> under the name <strong>sebastienbarbier</strong> - 10 Rue De Penthièvre, 75008 Paris, France - Social capital of 1200 euros - RCS Paris 834 673 816.",
 		"hosting": {
-			"description": "This website is hosted by Clever Cloud SAS. 3 rue de l'Allier, 44000 Nantes, France.<br/>Website : <a href=\"https://www.clever-cloud.com\">www.clever-cloud.com</a><br/>General support (commercial and other requests): <a href=\"tel:+33285520769\">+33 2 85 52 07 69</a><br/>Technical support: <a href=\"mailto:support@clever-cloud.com\">support@clever-cloud.com</a>.",
+			"description": "<strong>Clever Cloud SAS</strong><br/>3 rue de l'Allier<br/>44000 Nantes, France.<br/>Website : <a href=\"https://www.clever-cloud.com\">www.clever-cloud.com</a><br/>General support (commercial and other requests): <a href=\"tel:+33285520769\">+33 2 85 52 07 69</a><br/>Technical support: <a href=\"mailto:support@clever-cloud.com\">support@clever-cloud.com</a>.",
 			"title": "Hosting"
 		},
 		"licence": {
@@ -94,8 +94,7 @@
 		"description": "I have great ambitions, but haven't find the right way yet. I specialy enjoy the artistic aspect of it, as a relaxing things to do. Right now, I have literally no vision for my work, and still need to learn and practice. If you think you can help, I would love to hear from you.",
 		"headline": "Photography is a hobby I love, but really struggle at practicing.",
 		"instagram": {
-			"intro": "For now, you can consult my instagram account. Hopefully, more content will come in 2018.",
-			"title": "Instagram"
+			"intro": "For now, you can consult my instagram account. Hopefully, more content will come in 2018."
 		}
 	},
 	"projects": {

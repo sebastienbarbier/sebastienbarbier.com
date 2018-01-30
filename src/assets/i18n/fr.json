@@ -68,12 +68,12 @@
 	},
 	"legal": {
 		"author": {
-			"description": "Sébastien BARBIER, 46E rue du mont bart, 25200 Montbéliard, France<br/>Téléphone : <a href=\"tel:+33695675110\">+33 6 95 67 51 10</a><br/>Mail : <a href=\"mailto:hello@sebastienbarbier.com\">hello@sebastienbarbier.com</a>",
+			"description": "<strong>SPRB Consulting</strong><br/>Mr Sebastien BARBIER<br/>10 rue de Penthièvre<br/>75008 Paris, France<br/>Téléphone : <a href=\"tel:+33184258258\">+33 1 84 25 82 58</a><br/>Mail : <a href=\"mailto:hello@sebastienbarbier.com\">hello@sebastienbarbier.com</a>",
 			"title": "Auteur"
 		},
-		"description": "Ce site internet est attaché à un individu privé.",
+		"description": "SPRB Consulting SASU opérant sous le nom de sebastienbarbier - 10 Rue De Penthièvre, 75008 Paris, France - Société au capital de 1200 euros - RCS Paris 834 673 816.",
 		"hosting": {
-			"description": "Contenu hébergé par Clever Cloud SAS. 3 rue de l'Allier, 44000 Nantes, France.<br/>Site internet : <a href=\"https://www.clever-cloud.com\">www.clever-cloud.com</a><br/>Support général (commercial et autres requêtes): <a href=\"tel:+33285520769\">+33 2 85 52 07 69</a><br/>Support technique: <a href=\"mailto:support@clever-cloud.com\">support@clever-cloud.com</a>.",
+			"description": "<strong>Clever Cloud SAS</strong>.<br/>3 rue de l'Allier<br/>44000 Nantes, France.<br/>Site internet : <a href=\"https://www.clever-cloud.com\">www.clever-cloud.com</a><br/>Support général (commercial et autres requêtes): <a href=\"tel:+33285520769\">+33 2 85 52 07 69</a><br/>Support technique: <a href=\"mailto:support@clever-cloud.com\">support@clever-cloud.com</a>.",
 			"title": "Hébergement"
 		},
 		"licence": {
@@ -91,11 +91,10 @@
 		"projects": "Projets"
 	},
 	"photography": {
-    "description": "De grandes ambitions, mais un manque d'investissement évident. La photography me passionne par son aspect artistique et relaxant. Actuellement sans vision sur mon travial, j'ai de partiquer et continuer à apprendre. Si vous pensez pouvoir aider, n'hésitez pas à me contacter.",
+		"description": "De grandes ambitions, mais un manque d'investissement évident. La photography me passionne par son aspect artistique et relaxant. Actuellement sans vision sur mon travial, j'ai de partiquer et continuer à apprendre. Si vous pensez pouvoir aider, n'hésitez pas à me contacter.",
 		"headline": "La photographie est un de ces loisirs que j'affectionne particulièrement, mais peine à pratiquer.",
 		"instagram": {
-      "intro": "Vous pouvez me suivre pour le moment sur Instagram, avec je l'espère d'avantage de contenu pour 2018.",
-			"title": "Instagram"
+			"intro": "Vous pouvez me suivre pour le moment sur Instagram, avec je l'espère d'avantage de contenu pour 2018."
 		}
 	},
 	"projects": {
