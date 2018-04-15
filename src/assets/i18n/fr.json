@@ -9,7 +9,7 @@
 	},
 	"description": {
 		"contact": "Vous pouvez me joindre par email via hello@sebastienbarbier.com, ou sur l'un de mes divers réseaux sociaux twitter.",
-		"freelance": "Je travail actuellement sur un projet personnel, seven23, mais prend toujours le temps pour rencontrer des porteurs de projets. Discutons ensemble de comment je pourrais vous aider!",
+		"freelance": "Ma mission consiste à aider les <strong>startups</strong> et <strong>entreprises tech</strong> à construire des solutions autours des dernières <strong>technologies web</strong>.",
 		"home": "Je m'appelle Sébastien, ingénieur en logiciel, et suis originaire de France. Je partage mon temps entre des missions de freelance et des projets personnels.",
 		"legal": "Ce site internet est attaché à un individu privé, et n'enguage aucunement employeur ou client.",
 		"photography": "Photographie n'est qu'un passe temps, mais je l'espère prendra prochainement d'avantage d'importance.",
@@ -19,8 +19,8 @@
 		"footer": "L'ensemble de mon expérience professionnelle est disponible sur <a target=\"_blank\" href=\"https://www.linkedin.com/in/sebbarbier/\">mon profile Linkedin</a>.",
 		"header": {
 			"contact": "Me contacter",
-			"description": "Actuellement partagé entre <strong>Mozilla et Seven23</strong>, et ce jusqu'à mi Mai, je prend cependant toujours le temps pour rencontrer des porteurs de projets.",
-			"help": "Prenons un café ensemble afin d'en discuter!"
+			"description": "J'aide les <strong>startups</strong> et <strong>entreprises tech</strong> à construire des solutions autours des dernières <strong>technologies web</strong>. Mon <strong>profile full-stack</strong> me permet d'intéger tous types de projet, avec une préference autours des <strong>problématiques front-end</strong>.",
+			"help": "Je garde un regard constant sur l'industrie des startups et des dernières tendances afin de toujours proposer des solutions adaptés au marché actuel."
 		},
 		"location": {
 			"description": "<strong>Télétravail</strong> uniquement.",

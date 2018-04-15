@@ -9,7 +9,7 @@
 	},
 	"description": {
 		"contact": "You can reach to me by email hello@sebastienbarbier.com or any of my social network account.",
-		"freelance": "I am currently working on my latest personal project, seven23, but I always love to hear about great ideas and exciting projects. Let's get in touch and see how I could help you!",
+		"freelance": "I help startups and tech companies to build solutions using the latest web technologies.",
 		"home": "My name is Sebastien and I am a software engineer from France. Currently working as a full-stack javascript/python, I share my time between freelancing and personal projects.",
 		"legal": "This website is edited as individual and private content. It is not attached to any company of any kind.",
 		"photography": "Photography is only a hobby for now, but I really want to invest more time on it so more will come soon.",
@@ -19,8 +19,8 @@
 		"footer": "Complete background can be found on my <a target=\"_blank\" href=\"https://www.linkedin.com/in/sebbarbier/\">linkedin profile</a>.",
 		"header": {
 			"contact": "Contact me",
-			"description": "Currently being <strong>part time Mozilla, part time Seven23</strong>, I have little time for new projects but love to hear about great and exciting ideas and exciting ideas.",
-			"help": "Let's get in touch and see how I could help you!"
+			"description": "I help <strong>startups</strong> and <strong>tech companies</strong> to build solutions using the latest <strong>web technologies</strong>. Having a <strong>full-stack profile</strong> makes it easy to integrate any project, but I particularly enjoy and perform on <strong>front-end</strong> problematics.",
+			"help": "I also follow closely the startup industry and latest trends to provide state of the art solutions."
 		},
 		"location": {
 			"description": "<strong>Remote</strong> position only.",
@@ -36,10 +36,10 @@
 		"mozilla": {
 			"description": "Project: Firefox, Test Pilot, Notes",
 			"github": "Github repository",
-			"location": "Paris, France",
+			"location": "San Francisco, United States",
 			"stack": "Build as a web extention, using react and redux.",
 			"website": "About notes add-on",
-			"work": "Notes adds a simple, one-page notepad to your browser’s sidebar. I joined the team to work on migrating existing code with ReactJS, implements new features, and add metrics for next release."
+			"work": "Notes adds a simple, multi-page notepad to your browser’s sidebar. I joined the team to work on migrating existing code with ReactJS, implements new features, and add metrics for next release."
 		},
     "chefclub": {
       "description": "HTML/CSS integration",
