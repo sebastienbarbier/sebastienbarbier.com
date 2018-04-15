@@ -1,18 +1,14 @@
 <div class="container">
-  <article class="block">
-    <p class="headline">{{ 'photography.headline' | translate }}</p>
-    <p>{{ 'photography.description' | translate }}</p>
-    <p>{{ 'photography.instagram.intro' | translate }}</p>
-    <p><a class="button" href="https://instagram.com/sebastienbarbier">instagram @sebastienbarbier</a></p>
-  </article>
-  <aside class="block">
-    <div class="photos">
-      <a *ngFor="let photo of photos" [href]="photo.source" (click)="view($event, photo)">
-        <img [src]="photo.images.thumbnail.url" [alt]="photo.caption.text" />
+
+  <ul>
+    <li *ngFor="let photo of photos">
+      <a [href]="photo.high" (click)="view($event, photo)">
+        <img [src]="photo" [alt]="photo" />
       </a>
-    </div>
-  </aside>
+    </li>
+  </ul>
+
 </div>
 <div [ngClass]="{'show': selectedPhoto, 'hide': !selectedPhoto}" class="viewer" (click)="view($event)">
-  <img *ngIf="selectedPhoto" [src]="selectedPhoto.images.standard_resolution.url" [alt]="selectedPhoto.caption.text" />
+  <img *ngIf="selectedPhoto" [src]="selectedPhoto" [alt]="selectedPhoto" />
 </div>

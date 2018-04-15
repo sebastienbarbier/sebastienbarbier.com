@@ -34,7 +34,6 @@ const photosTransition = trigger('photosTransition', [
   ])
 ]);
 
-
 @Component({
   selector: 'app-photography',
   templateUrl: './photography.component.html',
@@ -44,7 +43,9 @@ const photosTransition = trigger('photosTransition', [
 export class PhotographyComponent implements OnInit {
 
   selectedPhoto;
-  photos = [];
+  source = '/assets/images/';
+  photos = [
+  ];
 
   constructor(
     private http: HttpClient,
@@ -57,32 +58,9 @@ export class PhotographyComponent implements OnInit {
 
   ngOnInit() {
 
-    this.getInstagramPhotos().subscribe(data => {
-      // Read the result field from the JSON response.
-      this.photos = data['data'].slice(0, 16);
-      console.log(data);
-    },
-    err => {
-      this.getInstagramPhotos(true).subscribe(data => {
-        // Read the result field from the JSON response.
-        this.photos = data['data'].slice(0, 16);
-        console.log(data);
-      });
-    });
   }
 
-  /** GET heroes from the server */
-  getInstagramPhotos (forceLocal = false) {
-    const token = '487407.1677ed0.5b1098a0ca864bb09da9ba6f1b480270';
-    const INSTAGRAM_URL = `https://api.instagram.com/v1/users/self/media/recent/?access_token=${token}`;
-    if (!forceLocal && isPlatformBrowser(this.platformId)) {
-      return this.http.get<Object>(INSTAGRAM_URL);
-    } else if (forceLocal || isPlatformServer(this.platformId)) {
-      return this.http.get<Object>('/static/instagram_feed.json');
-    }
-
-  }
-
+  // Show event.
   view(event, photo = null) {
     this.selectedPhoto = photo;
     // Disable href if javascript is activated

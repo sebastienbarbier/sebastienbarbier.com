@@ -28,11 +28,11 @@ export const appRoutes: Routes = [
     component: ProjectsComponent,
     data: { title: 'nav.projects', description: _('description.projects'), theme: 'light', state: 'projects' }
   },
-  {
-    path: 'photography',
-    component: PhotographyComponent,
-    data: { title: 'nav.photography', description: _('description.photography'), theme: 'dark', state: 'photography' }
-  },
+  // {
+  //   path: 'photography',
+  //   component: PhotographyComponent,
+  //   data: { title: 'nav.photography', description: _('description.photography'), theme: 'dark', state: 'photography' }
+  // },
   {
     path: 'contact',
     component: ContactComponent,

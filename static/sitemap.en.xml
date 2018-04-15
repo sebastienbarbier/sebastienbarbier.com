@@ -47,19 +47,6 @@
      />
 </url>
 <url>
-  <loc>https://sebastienbarbier.com/photography</loc>
-  <xhtml:link
-     rel="alternate"
-     hreflang="en"
-     href="https://sebastienbarbier.com/photography"
-     />
-   <xhtml:link
-     rel="alternate"
-     hreflang="fr"
-     href="https://sebastienbarbier.fr/photography"
-     />
-</url>
-<url>
   <loc>https://sebastienbarbier.com/contact</loc>
   <xhtml:link
      rel="alternate"

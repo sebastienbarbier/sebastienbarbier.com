@@ -1,92 +1,52 @@
 @import '../../assets/scss/variables';
 
 div.container {
-  display: flex;
-  flex-align: center;
-  flex-justify: space-around;
-  align-items: center;
-  width: 100vw;
+
+  max-width: 1170px;
+  margin: auto;
+  padding: 40px;
 
   @media screen and (max-width: 599px) {
     margin-top: 80px;
     font-size: 1em;
-    flex-direction: column;
   }
   @media screen and (min-width: 600px) and (max-width: 999px) {
     margin-top: 220px;
     font-size: 1em;
-    flex-direction: column;
   }
   @media screen and (min-width: 1000px) {
     font-size: 1.1em;
+    padding: 60px;
     padding-top: 220px;
-    height: calc(100vh - 320px);
-    overflow: hidden;
-    flex-direction: row;
   }
 
-  article {
-    @media screen and (max-width: 999px) {
 
-      padding: 0 40px 100px 40px;
-    }
+  ul {
+    padding: 0;
+    list-style: none;
 
-    @media screen and (min-width: 1000px) {
-      width: 50%;
-      padding: 0 40px 100px 60px;
-    }
-    overflow: auto;
+    li {
+      margin-bottom: 40px;
 
-    .headline {
-      font-size: 1.3em;
-      margin-bottom: 18px;
-    }
+      &:nth-child(odd) {
 
-  }
-  aside {
-    @media screen and (max-width: 999px) {
-
-    }
-
-    @media screen and (min-width: 1000px) {
-      width: 50%;
-    }
-    height: calc(100vh - 220px);
-    overflow: auto;
-    padding: 0 40px;
-
-    h2 {
-      border-bottom: solid 1px $light2;
-      padding-bottom: 10px;
-      margin: 40px 0px 20px 0px;
-    }
-
-    .photos {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-
-      @media screen and (min-width: 1100px) {
-        margin: 0 0px;
-      }
-
-      img {
-        width: 100%;
-        border-radius: 8px;
-        box-sizing: border-box;
-        padding: 4px;
-        &:hover {
-          position: relative;
-        }
       }
 
       a {
+        display: block;
         border: none;
+        margin: auto;
+        max-width: 100%;
+        max-height: 90vh;
+        img {
+          max-width: 100%;
+          max-height: 90vh;
+          margin: auto;
+        }
       }
     }
   }
+
 }
 
 
