@@ -38,9 +38,15 @@
 			"github": "Github repository",
 			"location": "Paris, France",
 			"stack": "Build as a web extention, using react and redux.",
-			"website": "Testpilot/Notes decription",
+			"website": "About notes add-on",
 			"work": "Notes adds a simple, one-page notepad to your browser’s sidebar. I joined the team to work on migrating existing code with ReactJS, implements new features, and add metrics for next release."
 		},
+    "chefclub": {
+      "description": "HTML/CSS integration",
+      "location": "Paris, France",
+      "website": "chefclub.tv",
+      "work": "Builded templates for chefclub new website, based on mockups provided by the design team."
+    },
 		"pricing": {
 			"description": "<strong>Time-based</strong>, at fix hour rate.",
 			"title": "Pricing"
