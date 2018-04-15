@@ -121,7 +121,7 @@ article {
         font-size: 0.6em;
       }
     }
-    ul {
+    ul.links {
       padding: 0;
 
       @media screen and (min-width: 600px) {
@@ -137,16 +137,18 @@ article {
 }
 
 .stack {
-  font-size: 0.8em;
+  font-size: 0.8rem;
+  padding-bottom: 2px;
   h3 {
-    width: 70px;
+    font-size: 0.8rem !important;
+    width: 80px;
     float: left;
     clear: both;
     margin: 0;
     text-transform: uppercase;
     font-size: 0.9em;
     font-weight: 300;
-    padding-top: 12px;
+    padding-top: 10px;
   }
   ul {
     padding: 0;
