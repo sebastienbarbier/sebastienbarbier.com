@@ -3,14 +3,11 @@
 main {
   @media screen and (max-width: 599px) {
     margin: 80px 20px 20px 20px;
-    font-size: 1em;
   }
   @media screen and (min-width: 600px) and (max-width: 1199px) {
     margin: 220px 40px 20px 40px;
-    font-size: 1em;
   }
   @media screen and (min-width: 1200px) {
-    font-size: 1.1em;
     margin: 220px 80px 20px 80px;
     flex-direction: row;
   }
@@ -72,42 +69,13 @@ section {
 
   h3{
     margin-top: 0;
-    font-size: 1.3em;
     padding-bottom: 6px;
     small{
       padding-left: 10px;
-      font-size: 0.6em;
       opacity: 0.6;
     }
   }
 
-  .stack {
-    font-size: 0.8em;
-    h4 {
-      width: 70px;
-      float: left;
-      clear: both;
-      margin: 0;
-      text-transform: uppercase;
-      font-size: 0.9em;
-      font-weight: 300;
-      padding-top: 12px;
-    }
-    ul {
-      padding: 0;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      li {
-        list-style: none;
-        background: $light2;
-        padding: 4px 7px;
-        border-radius: 4px;
-        margin-top: 4px;
-        margin-right: 4px;
-      }
-    }
-  }
   aside {
     @media screen and (max-width: 499px) {
       padding: 0px 30px 20px 0px;

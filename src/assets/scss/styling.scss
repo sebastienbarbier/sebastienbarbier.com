@@ -1,13 +1,16 @@
 html {
   color: #333;
   font-family: 'open_sanslight', sans-serif;
-  font-weight: 300;
-  font-size: 15px;
+  font-size: 18px;
+  line-height: 1.4em;
   letter-spacing: -0.3px;
   text-rendering: optimizelegibility;
   font-kerning: auto;
 }
 
+h2, h3, h4 {
+  font-family: "open_sansregular";
+}
 
 strong {
   font-family: "open_sanssemibold";
@@ -22,10 +25,36 @@ a {
   }
 }
 
-h2 {
-  font-family: "open_sansregular";
-}
-
-h3 {
-  font-family: "open_sansregular";
+.stack {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 10px;
+  h3, h4 {
+    width: 80px;
+    float: left;
+    clear: both;
+    font-weight: 300;
+    margin: 0;
+    text-transform: uppercase;
+    line-height: 1.3em;
+    font-size: 0.6em;
+    font-family: "open_sanslight";
+  }
+  ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 0.8em;
+    line-height: 1.3em;
+    li {
+      list-style: none;
+      background: $light2;
+      padding: 4px 7px;
+      border-radius: 4px;
+      margin-top: 4px;
+      margin-right: 4px;
+    }
+  }
 }

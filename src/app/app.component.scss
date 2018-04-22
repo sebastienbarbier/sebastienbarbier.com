@@ -26,7 +26,7 @@ header {
   h1 {
     text-align: left;
     margin: 0px;
-    padding: 32px 0 0 10px;
+    padding: 46px 0 0 10px;
     font-family: "open_sansbold";
     a {
       text-decoration: none;
@@ -48,7 +48,7 @@ header {
       display: none;
     }
     @media screen and (min-width: 600px) and (max-width: 999px) {
-      font-size: 1.6em;
+      font-size: 1.4em;
       padding-top: 40px;
       h1{
         display: block;
@@ -63,23 +63,24 @@ header {
       }
     }
     @media screen and (min-width: 1000px) {
-      font-size: 2em;
+      font-size: 1.7em;
     }
   }
 }
 
 #lang {
   position: absolute;
+  font-size: 0.9em;
   @media screen and (max-width: 599px) {
     top: 15px;
     right: 90px;
   }
   @media screen and (min-width: 600px) and (max-width: 999px) {
-    top: 36px;
+    top: 30px;
     right: 110px;
   }
   @media screen and (min-width: 1000px) {
-    top: 36px;
+    top: 30px;
     right: 130px;
   }
   a {

@@ -1,9 +1,10 @@
 @import '../../assets/scss/variables';
 
 header {
-  font-size: 2em;
   margin-left: 40px;
   margin-right: 40px;
+  font-size: 1.6em;
+  line-height: 1.3em;
 
   @media screen and (max-width: 599px) {
     padding: 160px 0 80px 0;
@@ -22,7 +23,11 @@ header {
     align-items: center;
   }
 
-  h2, p {
+  h2 {
+    padding: 0px 10px;
+    margin: 0 0 10px 0;
+  }
+  p {
     padding: 0px 10px;
     margin: 0px;
   }
@@ -74,13 +79,11 @@ header {
   @media screen and (max-width: 999px) {
     flex: 100%;
     padding: 30px 10px;
-    font-size: 1.1em;
     border-bottom: solid 1px $light2;
   }
   @media screen and (min-width: 1000px) {
     flex: 50%;
     margin: 0px 40px;
     padding: 60px 10px;
-    font-size: 1.2em;
   }
 }
