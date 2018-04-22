@@ -28,7 +28,7 @@
 		},
 		"mila": {
 			"description": "Mila connects its customers with skilled local technicians.",
-			"location": "Zurich, Switzerland",
+			"location": "Switzerland",
 			"stack": "Chatbot use Facebook messenger API and runs on existing backend with nodeJS. Front-end and webapp generator are running on typescript/Angular.",
 			"website": "mila.com",
 			"work": "I joined Mila's dev team full time remotely to help prototyping three new products: a chatbot interface, a front-end application to manage technicians' schedule, and a webapp template engine based on metadata stored on a SaaS platform."
@@ -36,14 +36,14 @@
 		"mozilla": {
 			"description": "Project: Firefox, Test Pilot, Notes",
 			"github": "Github repository",
-			"location": "San Francisco, United States",
+			"location": "United States",
 			"stack": "Build as a web extention, using react and redux.",
 			"website": "About notes add-on",
 			"work": "Notes adds a simple, multi-page notepad to your browser’s sidebar. I joined the team to work on migrating existing code with ReactJS, implements new features, and add metrics for next release."
 		},
     "chefclub": {
       "description": "HTML/CSS integration",
-      "location": "Paris, France",
+      "location": "France",
       "website": "chefclub.tv",
       "work": "Builded templates for chefclub new website, based on mockups provided by the design team."
     },
