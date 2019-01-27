@@ -1,3 +1,5 @@
+@import '../assets/scss/variables';
+
 header {
   top: 0;
   position: absolute;
@@ -149,7 +151,7 @@ aside{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: rgba(31, 29, 29, 1);
+    background: $nav-background;
     color: white;
 
     @media screen and (max-width: 599px) {
@@ -199,7 +201,7 @@ aside{
         }
         a{
           border: none;
-          color: white;
+          color: $light;
           font-size: 1.8em;
           letter-spacing: 1px;
           text-transform: uppercase;

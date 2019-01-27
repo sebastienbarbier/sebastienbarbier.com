@@ -1,3 +1,5 @@
+@import './variables';
+
 html {
   color: #333;
   font-family: 'open_sanslight', sans-serif;
@@ -6,6 +8,7 @@ html {
   letter-spacing: -0.3px;
   text-rendering: optimizelegibility;
   font-kerning: auto;
+  background: $light;
 }
 
 h2, h3, h4 {
