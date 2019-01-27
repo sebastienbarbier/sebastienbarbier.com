@@ -87,8 +87,10 @@ header {
     border: none;
     padding: 0 4px;
     font-family: "open_sanssemibold";
-    &.disable{
-      opacity: 0.4;
+    opacity: 0.4;
+    cursor: pointer;
+    &.currentLang{
+      opacity: 1;
       cursor: default;
     }
   }
