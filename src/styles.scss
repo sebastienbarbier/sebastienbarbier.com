@@ -25,6 +25,14 @@ main {
   padding: 0px 0 100px 0;
 }
 
+h1 {line-height: 1.2em;}
+h2 {line-height: 1.25em;}
+h3 {line-height: 1.3em;}
+h4 {line-height: 1.35em;}
+h5 {line-height: 1.4em;}
+h6 {line-height: 1.45em;}
+p { line-height: 1.5em; }
+
 body.light {
   background: $light;
   color: black;
