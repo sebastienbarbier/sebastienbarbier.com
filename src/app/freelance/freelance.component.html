@@ -64,7 +64,7 @@
             </label>
           </header>
           <div>
-            <img src="https://cdn2.sebastienbarbier.com/images/chefclub/chefclub-logo.png" alt="Chefclub logo" />
+            <img src="{{ clients[client].logo }}" alt="{{ clients[client].label }} logo" />
             <div>
               <h3>{{ clients[client].label }} <small>{{ clients[client].location | translate }}, {{ clients[client].date }}</small></h3>
               <p><em>{{ clients[client].description | translate }}</em></p>
@@ -81,6 +81,12 @@
             </div>
           </div>
           <footer>
+            <label class="previous noselect" *ngIf="clients[client].previous" for="{{ clients[client].previous }}">
+              <img src="{{ clients[clients[client].previous].logo }}" alt="{{ clients[client].label }} logo" />
+            </label>
+            <label class="next noselect" *ngIf="clients[client].next" for="{{ clients[client].next }}">
+              <img src="{{ clients[clients[client].next].logo }}" alt="{{ clients[client].label }} logo" />
+            </label>
           </footer>
         </section>
       </div>

@@ -22,7 +22,7 @@ export class FreelanceComponent implements OnInit {
       website_url: 'https://chefclub.tv',
       github: null,
       github_url: null,
-      previous: null,
+      previous: 'mila',
       next: 'mozilla',
     },
     mozilla: {
@@ -55,7 +55,7 @@ export class FreelanceComponent implements OnInit {
       github: null,
       github_url: null,
       previous: 'mozilla',
-      next: null,
+      next: 'chefclub',
     }
   };
 

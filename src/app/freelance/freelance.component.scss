@@ -263,6 +263,20 @@ article {
             flex-shrink: 0;
             flex-grow: 0;
             height: 100px;
+            display: flex;
+            label {
+              display: flex;
+              width: 50%;
+              justify-content: center;
+              align-items: center;
+              cursor: pointer;
+              &.previous { float: left; }
+              &.next { float: right; }
+              img {
+                max-height: 40px;
+                max-width: 120px;
+              }
+            }
           }
         }
       }
