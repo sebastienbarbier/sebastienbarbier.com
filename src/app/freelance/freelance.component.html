@@ -25,6 +25,12 @@
           <li>Node.js</li>
         </ul>
       </div>
+      <div class="stack">
+        <h3>Infra</h3>
+        <ul>
+          <li>Devops</li>
+        </ul>
+      </div>
     </div>
     <div>
       <h2>{{ 'freelance.location.title' | translate }}</h2>
@@ -38,102 +44,118 @@
   <h2>{{ 'freelance.title.recent_work' | translate }}</h2>
 
   <ul class="clients">
+    <input type="radio" name="work" id="none" />
     <li>
-      <a routerLink="/freelance/chefclub" routerLinkActive="active">
+      <input type="radio" name="work" id="chefclub" />
+      <label class="client" for="chefclub">
         <img src="https://cdn2.sebastienbarbier.com/images/chefclub/chefclub-logo.png" alt="Chefclub logo" />
         <div>
           <p>2018 - 2019</p>
           <p>Site internet</p>
         </div>
-      </a>
+      </label>
+      <div>
+        <label for="none">
+        </label>
+        <section>
+          <img src="https://cdn2.sebastienbarbier.com/images/chefclub/chefclub-logo.png" alt="Chefclub logo" />
+          <div>
+            <h3>Chefclub <small>{{ 'freelance.chefclub.location' | translate }}, 2018, 2019</small></h3>
+            <p><em>{{ 'freelance.chefclub.description' | translate }}</em></p>
+            <p>{{ 'freelance.chefclub.work' | translate }}</p>
+            <div class="stack">
+              <ul>
+                <li>{{ 'freelance.tools.integration' | translate }}</li>
+                <li>CSS</li>
+                <li>Vanilla JS</li>
+                <li>Vue.js</li>
+                <li>Django</li>
+              </ul>
+            </div>
+            <ul class="links">
+              <li><a target="_blank" href="https://chefclub.tv">{{ 'freelance.chefclub.website' | translate }}</a></li>
+            </ul>
+          </div>
+        </section>
+      </div>
     </li>
     <li>
-      <a routerLink="/freelance/mozilla" routerLinkActive="active">
+      <input type="radio" name="work" id="mozilla" />
+      <label class="client" for="mozilla">
         <img src="https://cdn2.sebastienbarbier.com/images/mozilla/mozilla_logo.svg" alt="Mozilla logo" />
         <div>
           <p>2018</p>
           <p>Extention web<br />Application Mobile</p>
         </div>
-      </a>
+      </label>
+      <div>
+        <label for="none">
+        </label>
+        <section>
+          <img src="https://cdn2.sebastienbarbier.com/images/mozilla/mozilla_logo.svg" alt="Mozilla logo" />
+          <div>
+            <h3>Mozilla <small>{{ 'freelance.mozilla.location' | translate }}, 2018</small></h3>
+            <p><em>{{ 'freelance.mozilla.description' | translate }}</em></p>
+            <p>{{ 'freelance.mozilla.work' | translate }}</p>
+            <div class="stack">
+              <ul>
+                <li>Web extention</li>
+                <li>React</li>
+                <li>Redux</li>
+                <li>Kinto.js</li>
+                <li>React-native</li>
+                <li>Material design</li>
+              </ul>
+            </div>
+            <ul class="links">
+              <li><a target="_blank" href="https://testpilot.firefox.com/experiments/notes">{{ 'freelance.mozilla.website' | translate }}</a></li>
+              <li><a target="_blank" href="https://github.com/mozilla/notes">{{ 'freelance.mozilla.github' | translate }}</a></li>
+            </ul>
+          </div>
+        </section>
+      </div>
     </li>
     <li>
-      <a routerLink="/freelance/mila" routerLinkActive="active">
+      <input type="radio" name="work" id="mila" />
+      <label class="client" for="mila">
         <img src="https://cdn2.sebastienbarbier.com/images/mila/logo_02_blue.png" alt="Mila logo" />
         <div>
           <p>2017</p>
           <p>Chatbot<br />Application web</p>
         </div>
-      </a>
+      </label>
+      <div>
+        <label for="none">
+        </label>
+        <section>
+          <img src="https://cdn2.sebastienbarbier.com/images/mila/logo_02_blue.png" alt="Mila logo" />
+          <div>
+            <h3>Mila AG <small>{{ 'freelance.mila.location' | translate }}, 2017</small></h3>
+            <p><em>{{ 'freelance.mila.description' | translate }}</em></p>
+            <p>{{ 'freelance.mila.work' | translate }}</p>
+            <p>{{ 'freelance.mila.stack' | translate }}</p>
+            <div class="stack">
+              <ul>
+                <li>Messenger api</li>
+                <li>Node.js</li>
+                <li>Typescript</li>
+                <li>Angular</li>
+                <li>Material design</li>
+                <li>Contentful.com services</li>
+              </ul>
+            </div>
+            <ul class="links">
+              <li><a target="_blank" href="https://mila.com">{{ 'freelance.mila.website' | translate }}</a></li>
+            </ul>
+          </div>
+        </section>
+      </div>
     </li>
   </ul>
 
   <h2>{{ 'freelance.title.portfolio' | translate }}</h2>
 
 
-  <section>
-  <img src="https://cdn2.sebastienbarbier.com/images/chefclub/chefclub-logo.png" alt="Chefclub logo" />
-    <div>
-      <h3>Chefclub <small>{{ 'freelance.chefclub.location' | translate }}, 2018, 2019</small></h3>
-      <p><em>{{ 'freelance.chefclub.description' | translate }}</em></p>
-      <p>{{ 'freelance.chefclub.work' | translate }}</p>
-      <div class="stack">
-        <ul>
-          <li>{{ 'freelance.tools.integration' | translate }}</li>
-          <li>CSS</li>
-          <li>Vanilla JS</li>
-          <li>Vue.js</li>
-          <li>Django</li>
-        </ul>
-      </div>
-      <ul class="links">
-        <li><a target="_blank" href="https://chefclub.tv">{{ 'freelance.chefclub.website' | translate }}</a></li>
-      </ul>
-    </div>
-  </section>
-  <section>
-  <img src="https://cdn2.sebastienbarbier.com/images/mozilla/mozilla_logo.svg" alt="Mozilla logo" />
-    <div>
-      <h3>Mozilla <small>{{ 'freelance.mozilla.location' | translate }}, 2018</small></h3>
-      <p><em>{{ 'freelance.mozilla.description' | translate }}</em></p>
-      <p>{{ 'freelance.mozilla.work' | translate }}</p>
-      <div class="stack">
-        <ul>
-          <li>Web extention</li>
-          <li>React</li>
-          <li>Redux</li>
-          <li>Kinto.js</li>
-          <li>React-native</li>
-          <li>Material design</li>
-        </ul>
-      </div>
-      <ul class="links">
-        <li><a target="_blank" href="https://testpilot.firefox.com/experiments/notes">{{ 'freelance.mozilla.website' | translate }}</a></li>
-        <li><a target="_blank" href="https://github.com/mozilla/notes">{{ 'freelance.mozilla.github' | translate }}</a></li>
-      </ul>
-    </div>
-  </section>
-  <section>
-    <img src="https://cdn2.sebastienbarbier.com/images/mila/logo_navi_blue.png" alt="Mila logo" />
-    <div>
-      <h3>Mila AG <small>{{ 'freelance.mila.location' | translate }}, 2017</small></h3>
-      <p><em>{{ 'freelance.mila.description' | translate }}</em></p>
-      <p>{{ 'freelance.mila.work' | translate }}</p>
-      <p>{{ 'freelance.mila.stack' | translate }}</p>
-      <div class="stack">
-        <ul>
-          <li>Messenger api</li>
-          <li>Node.js</li>
-          <li>Typescript</li>
-          <li>Angular</li>
-          <li>Material design</li>
-          <li>Contentful.com services</li>
-        </ul>
-      </div>
-      <ul class="links">
-        <li><a target="_blank" href="https://mila.com">{{ 'freelance.mila.website' | translate }}</a></li>
-      </ul>
-    </div>
-  </section>
 </article>
 
 <footer>
