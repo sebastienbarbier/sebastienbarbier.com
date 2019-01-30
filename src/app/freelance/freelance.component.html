@@ -35,7 +35,41 @@
     </div>
   </div>
 
-  <h2>{{ 'freelance.title.past_experience' | translate }}</h2>
+  <h2>{{ 'freelance.title.recent_work' | translate }}</h2>
+
+  <ul class="clients">
+    <li>
+      <a routerLink="/freelance/chefclub" routerLinkActive="active">
+        <img src="https://cdn2.sebastienbarbier.com/images/chefclub/chefclub-logo.png" alt="Chefclub logo" />
+        <div>
+          <p>2018 - 2019</p>
+          <p>Site internet</p>
+        </div>
+      </a>
+    </li>
+    <li>
+      <a routerLink="/freelance/mozilla" routerLinkActive="active">
+        <img src="https://cdn2.sebastienbarbier.com/images/mozilla/mozilla_logo.svg" alt="Mozilla logo" />
+        <div>
+          <p>2018</p>
+          <p>Extention web<br />Application Mobile</p>
+        </div>
+      </a>
+    </li>
+    <li>
+      <a routerLink="/freelance/mila" routerLinkActive="active">
+        <img src="https://cdn2.sebastienbarbier.com/images/mila/logo_02_blue.png" alt="Mila logo" />
+        <div>
+          <p>2017</p>
+          <p>Chatbot<br />Application web</p>
+        </div>
+      </a>
+    </li>
+  </ul>
+
+  <h2>{{ 'freelance.title.portfolio' | translate }}</h2>
+
+
   <section>
   <img src="https://cdn2.sebastienbarbier.com/images/chefclub/chefclub-logo.png" alt="Chefclub logo" />
     <div>

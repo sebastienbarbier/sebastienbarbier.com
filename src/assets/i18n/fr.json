@@ -52,7 +52,8 @@
 			"title": "Tarification"
 		},
 		"title": {
-			"past_experience": "Expériences passées"
+			"recent_work": "Travaux récents",
+      "portfolio": "Portfolio"
 		},
 		"tools": {
 			"description": "Promeut les <strong>standards web</strong>, et le code <strong>open source</strong>.",

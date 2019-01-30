@@ -52,7 +52,8 @@
 			"title": "Pricing"
 		},
 		"title": {
-			"past_experience": "Past experiences"
+			"recent_work": "Recent work",
+      "portfolio": "Portfolio"
 		},
 		"tools": {
 			"description": "<strong>Web standards</strong>, and <strong>open source</strong> advocate.",
