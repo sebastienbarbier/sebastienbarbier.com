@@ -61,8 +61,6 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-
-
     this.router.events.subscribe(event => {
       // NavigationStart, NavigationEnd, NavigationCancel, NavigationError, RoutesRecognized
       if (event instanceof NavigationEnd) {
@@ -78,6 +76,8 @@ export class AppComponent implements OnInit {
         if (this.navigationMenuStatus === true) {
           this.navigationMenuStatus = !this.navigationMenuStatus;
         }
+        // We enable overflow on body if fullscreen action had disabled it
+        document.body.style.overflow = "auto";
       }
     });
 
@@ -92,6 +92,7 @@ export class AppComponent implements OnInit {
   }
 
   getState(outlet) {
+
     const accent = this.lang === 'en' ? 'e' : 'é';
     // meta title
     if (outlet.activatedRouteData.title) {
