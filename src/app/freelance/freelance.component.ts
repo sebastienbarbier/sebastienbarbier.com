@@ -40,7 +40,7 @@ export class FreelanceComponent implements OnInit {
       github_url: 'https://github.com/mozilla/notes',
       previous: 'chefclub',
       next: 'mila',
-      galery: [{
+      gallery: [{
         small: 'https://cdn2.sebastienbarbier.com/images/mozilla/galery_1_screens.600.jpg',
         large: 'https://cdn2.sebastienbarbier.com/images/mozilla/galery_1_screens.1800.jpg',
         style: 'large'
@@ -72,10 +72,16 @@ export class FreelanceComponent implements OnInit {
       next: null,
     }
   };
+  gallery = []
 
   constructor() { }
 
   ngOnInit() {
+    for (let index in this.clients_order) {
+      for (let image in this.clients[this.clients_order[index]].gallery) {
+        this.gallery.push(this.clients[this.clients_order[index]].gallery[image]);
+      }
+    }
   }
 
   disableScrolling(value) {

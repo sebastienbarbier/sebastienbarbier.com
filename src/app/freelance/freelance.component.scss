@@ -378,7 +378,7 @@ article, aside {
         transform: scale(1.05);
           transition: transform .150s;
       }
-      a {
+      label {
         display: block;
         width: 100%;
         height: 100%;
@@ -386,7 +386,7 @@ article, aside {
         justify-content: center;
         align-items: center;
         overflow: hidden;
-
+        cursor: pointer;
         img {
           object-fit: cover;
           min-width: 100%;
@@ -408,6 +408,85 @@ aside {
   }
   @media screen and (max-width: 599px) {
     padding: 20px 20px 20px 20px;
+  }
+
+  input[type="radio"]#no_gallery {
+    display: none;
+    & + div.gallery_list {
+      opacity: 0;
+      transition: opacity .250s;
+    }
+
+    &:checked + div.gallery_list {
+      opacity: 1;
+      transition: opacity .250s .150s;
+    }
+
+    &:checked + div.gallery_list + div.gallery_fullscreen{
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity .250s, visibility 0s .250s;
+
+    }
+    & + div.gallery_list + div.gallery_fullscreen{
+      visibility: visible;
+      position: fixed;
+      top: 0px; bottom: 0px; left: 0px; right: 0px;
+      background: $light;
+      z-index: 200;
+      opacity: 1;
+      transition: opacity .250s .1s;
+      display: flex;
+      flex-direction: column;
+      header {
+        width: 100%;
+        flex-shrink: 0;
+        flex-grow: 0;
+        background: $light2;
+        display: flex;
+        justify-content: flex-end;
+        label {
+          cursor: pointer;
+          float: right;
+          background: $light3;
+          padding: 8px 8px 0 8px;
+
+          margin-right: constant(safe-area-inset-right);
+          margin-right: env(safe-area-inset-right);
+        }
+      }
+      ul {
+        position: relative;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        flex-grow: 1;
+        flex-shrink: 1;
+        li {
+          position: absolute;
+          top: 0px; left: 0px; right: 0px; bottom: 0px;
+          overflow: hidden;
+          display: flex;
+          justify-content: center;
+          align-itmes: center;
+          input[type="radio"]{
+            display: none;
+            & + img {
+              opacity: 0;
+              max-width: 90vw;
+              max-height: calc(90vh - 50px);
+              margin: auto;
+              z-index: 210;
+              transition: opacity .250s .250s;
+            }
+            &:checked + img {
+              opacity: 1;
+              transition: opacity .250s .250s;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
