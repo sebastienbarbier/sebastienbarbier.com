@@ -206,7 +206,7 @@ article {
       label.client + div {
         visibility: hidden;
         position: fixed;
-        top: 0px; bottom: 0px; right: -40px;
+        top: 0px; bottom: 0px; right: -20px;
         width: 500px;
         height: 100vh;
         z-index: 100;
@@ -216,7 +216,7 @@ article {
         @media screen and (max-width: 550px) {
           width: 100vw;
           right: 0px;
-          top: 40px;
+          top: 20px;
         }
         section {
           background: $light;
