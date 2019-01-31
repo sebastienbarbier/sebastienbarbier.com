@@ -44,7 +44,9 @@
   <h2>{{ 'freelance.title.recent_work' | translate }}</h2>
 
   <ul class="clients">
-    <input type="radio" name="work" id="none" />
+    <input type="radio" name="work" id="none" checked="checked" />
+    <label for="none" class="background">
+    </label>
     <li *ngFor="let client of clients_order">
       <input type="radio" name="work" id="{{ client }}" />
       <label class="client" for="{{ client }}">
@@ -55,8 +57,6 @@
         </div>
       </label>
       <div>
-        <label for="none" class="background">
-        </label>
         <section>
           <header>
             <label for="none">

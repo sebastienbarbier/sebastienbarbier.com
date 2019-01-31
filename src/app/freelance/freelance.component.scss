@@ -96,15 +96,28 @@ article {
       &:checked + label + div {
         visibility: visible;
         transition: visibility 0s;
-        label.background {
-          opacity: 1;
-          transition: opacity .250s;
-        }
         section {
           right: 0px;
           opacity: 1;
           transition: all .250s;
         }
+      }
+    }
+
+    input[type="radio"]#none {
+      &:checked + label.background {
+        transition: opacity .250s, visibility 0s .250s;
+        opacity: 0;
+        visibility: hidden;
+      }
+      & + label.background {
+        position: fixed;
+        top: 0; bottom: 0; left: 0; right: 0;
+        background: rgba(0, 0, 0, 0.2);
+        z-index: 100;
+        transition: opacity .250s .1s;
+        opacity: 1;
+        visibility: visible;
       }
     }
 
@@ -186,17 +199,6 @@ article {
         top: 0px; bottom: 0px; left: 0px; right: 0px;
         z-index: 100;
         transition: visibility 0s .250s;
-        label.background {
-          width: 100%;
-          height: 100%;
-          display: flex;
-          justify-content: flex-end;
-          align-items: center;
-          background: rgba(0, 0, 0, 0.2);
-          z-index: 100;
-          opacity: 0;
-          transition: opacity .250s .1s;
-        }
         section {
           background: $light;
           box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2),0px 2px 2px 0px rgba(0, 0, 0, 0.14),0px 3px 1px -2px rgba(0, 0, 0, 0.12);
