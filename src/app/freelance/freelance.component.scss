@@ -45,7 +45,7 @@ header.header {
 
 }
 
-article {
+article, aside {
 
   font-size: 0.9em;
   @media screen and (max-width: 599px) {
@@ -316,7 +316,7 @@ article {
                 &.previous {
                   padding-left: 20px;
                   &:before {
-                    background: url('assets/svg/baseline-chevron_right-24px.svg') no-repeat center center;
+                    background: url('/assets/svg/baseline-chevron_right-24px.svg') no-repeat center center;
                     transform: rotate(180deg);
                     left: 0px;
                   }
@@ -324,7 +324,7 @@ article {
                 &.next {
                   padding-right: 20px;
                   &:after {
-                    background: url('assets/svg/baseline-chevron_right-24px.svg') no-repeat center center;
+                    background: url('/assets/svg/baseline-chevron_right-24px.svg') no-repeat center center;
                     right: 0px;
                   }
                 }
@@ -340,8 +340,49 @@ article {
       }
     }
   }
+
+  ul.gallery {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 20px 0;
+    li {
+      flex-grow: 0;
+      flex-shrink: 1;
+      margin: 12px 60px 12px 0;
+      width: 280px;
+      height: 210px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2),0px 2px 2px 0px rgba(0, 0, 0, 0.14),0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+      cursor: pointer;
+      transform: scale(1);
+      transition: transform .150s;
+      &:hover {
+        transform: scale(1.05);
+          transition: transform .150s;
+      }
+    }
+  }
 }
 
+aside {
+  background: $light2;
+  margin: 0 !important;
+  padding: 20px 120px 20px 120px;
+  box-shadow: inset 0 0 10px $light3;
+
+  @media screen and (min-width: 600px) and (max-width: 999px) {
+    padding: 20px 20px 20px 40px;
+  }
+  @media screen and (max-width: 599px) {
+    padding: 20px 20px 20px 20px;
+  }
+}
 
 footer.footer {
   text-align: left;

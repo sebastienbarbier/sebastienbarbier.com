@@ -40,6 +40,20 @@ export class FreelanceComponent implements OnInit {
       github_url: 'https://github.com/mozilla/notes',
       previous: 'chefclub',
       next: 'mila',
+      galery: [{
+        small: 'https://cdn2.sebastienbarbier.com/images/mozilla/galery_1_screens.600.jpg',
+        large: 'https://cdn2.sebastienbarbier.com/images/mozilla/galery_1_screens.1800.jpg',
+        style: 'large'
+      },{
+        small: 'https://cdn2.sebastienbarbier.com/images/mozilla/galery_2_list.600.jpg',
+        large: 'https://cdn2.sebastienbarbier.com/images/mozilla/galery_2_list.1800.jpg'
+      },{
+        small: 'https://cdn2.sebastienbarbier.com/images/mozilla/galery_3_note.600.jpg',
+        large: 'https://cdn2.sebastienbarbier.com/images/mozilla/galery_3_note.1800.jpg'
+      },{
+        small: 'https://cdn2.sebastienbarbier.com/images/mozilla/galery_4_app.600.jpg',
+        large: 'https://cdn2.sebastienbarbier.com/images/mozilla/galery_4_app.1800.jpg'
+      }]
     },
     mila: {
       label: 'Mila',
@@ -62,6 +76,14 @@ export class FreelanceComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  disableScrolling(value) {
+    if (value) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
   }
 
 }

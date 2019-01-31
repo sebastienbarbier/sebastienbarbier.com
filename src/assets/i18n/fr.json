@@ -56,7 +56,7 @@
 		},
 		"title": {
 			"recent_work": "Travaux récents",
-      "portfolio": "Portfolio"
+      "gallery": "Galerie"
 		},
 		"tools": {
 			"description": "Promeut les <strong>standards web</strong>, et le code <strong>open source</strong>.",

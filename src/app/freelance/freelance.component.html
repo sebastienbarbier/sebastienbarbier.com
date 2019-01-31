@@ -45,11 +45,11 @@
   <h2>{{ 'freelance.title.recent_work' | translate }}</h2>
 
   <ul class="clients">
-    <input type="radio" name="work" id="none" checked="checked" />
+    <input type="radio" name="work" id="none" checked="checked" (change)="disableScrolling(false)" />
     <label for="none" class="background">
     </label>
     <li *ngFor="let client of clients_order">
-      <input type="radio" name="work" id="{{ client }}" />
+      <input type="radio" name="work" id="{{ client }}" (change)="disableScrolling(true)" />
       <label class="client" for="{{ client }}">
         <img src="{{ clients[client].logo }}" alt="{{ clients[client].label }} logo" />
         <div>
@@ -98,8 +98,21 @@
     </li>
   </ul>
 
-
 </article>
+
+<aside>
+
+  <h2>{{ 'freelance.title.gallery' | translate }}</h2>
+
+  <ul class="gallery">
+    <ng-template ngFor let-client [ngForOf]="clients_order" let-i="index">
+      <li *ngFor="let image of clients[client].galery" [ngStyle]="{'background-image': 'url(' + image.small + ')'}">
+
+      </li>
+    </ng-template>
+  </ul>
+
+</aside>
 
 <footer class="footer">
   <p [innerHTML]="'freelance.footer' | translate"></p>
