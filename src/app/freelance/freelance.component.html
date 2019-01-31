@@ -81,12 +81,16 @@
             </div>
           </div>
           <footer>
-            <label class="previous noselect" *ngIf="clients[client].previous" for="{{ clients[client].previous }}">
-              <img src="{{ clients[clients[client].previous].logo }}" alt="{{ clients[client].label }} logo" />
-            </label>
-            <label class="next noselect" *ngIf="clients[client].next" for="{{ clients[client].next }}">
-              <img src="{{ clients[clients[client].next].logo }}" alt="{{ clients[client].label }} logo" />
-            </label>
+            <div>
+              <label class="previous noselect" *ngIf="clients[client].previous" for="{{ clients[client].previous }}">
+                <img src="{{ clients[clients[client].previous].logo }}" alt="{{ clients[client].label }} logo" />
+              </label>
+            </div>
+            <div>
+              <label class="next noselect" class="next noselect" *ngIf="clients[client].next" for="{{ clients[client].next }}">
+                <img src="{{ clients[clients[client].next].logo }}" alt="{{ clients[client].label }} logo" />
+              </label>
+            </div>
           </footer>
         </section>
       </div>
