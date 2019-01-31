@@ -29,6 +29,7 @@
 		"mila": {
 			"description": "Mila met en relation ses clients avec des personnes ayant des compétences techniques.",
 			"location": "Suisse",
+      "type": "Chatbot<br />Application web",
 			"stack": "L'interface de chatbot utilise les API de Facebook messenger et s'intègre dans leur couche server existante avec NodeJS. L'application front-end et le générateur de webapp sont développés en typescript/Angular.",
 			"website": "mila.com",
 			"work": "J'ai rejoins Mila à plein temps en télétravail au sein de son équipe développement pour aider à la création du prototye de trois nouveaux produits: une interface de chatbot, une application front-end pour gérer le planning des techniciens, et un générateur de webapp basé sur des métadonnées hébergées sur une plateforme SaaS."
@@ -37,6 +38,7 @@
 			"description": "Projet: Firefox, Test Pilot, Notes",
 			"github": "Dépôt Github",
 			"location": "États-Unis",
+      "type": "Extention web<br />Application Mobile",
 			"stack": "Distribué sous forme d'extention web, autours de React et Redux",
 			"website": "À propos de Testpilot/Notes",
 			"work": "Notes ajoute un bloc-notes tout simple à la barre latérale de votre navigateur. Ma mission au sein de l'équipe consistait à migrer le code existant sous ReactJS, ajouter de nouvelles fonctionnalités, et améliorer les données analytiques pour la prochaine version."
@@ -44,6 +46,7 @@
     "chefclub": {
       "description": "Intégration HTML/CSS",
       "location": "France",
+      "type": "Site internet",
       "website": "chefclub.tv",
       "work": "Conception des modèles de page HTML/CSS du nouveau site chefclub, et ce à partir des maquettes fournies par l'équipe design."
     },
