@@ -483,22 +483,60 @@ aside {
           position: absolute;
           top: 0px; left: 0px; right: 0px; bottom: 0px;
           overflow: hidden;
-          display: flex;
-          justify-content: center;
-          align-itmes: center;
           input[type="radio"]{
             display: none;
-            & + img {
+            & + div.viewer {
               opacity: 0;
-              max-width: 90vw;
-              max-height: calc(90vh - 50px);
-              margin: auto;
               z-index: 210;
+              height: 100%;
+              display: flex;
+              justify-content: center;
+              align-itmes: center;
               transition: opacity .250s .250s;
+              img {
+                max-width: calc(100vw - 250px);
+                max-height: calc(90vh - 50px);
+                margin: auto;
+              }
+              div.next, div.previous {
+                position: absolute;
+                width: 100px;
+                height: 100px;
+                top: calc(50% - 50px);
+                visibility: hidden;
+                transition: visibility .0s .450s;
+                z-index: 230;
+                label {
+                  width: 100%;
+                  height: 100%;
+                  cursor: pointer;
+                  display: block;
+                  opacity: 0.5;
+                }
+              }
+              div.next {
+                right: 10px;
+                label {
+                  background: url('/assets/svg/baseline-chevron_right-24px.svg') no-repeat center center;
+                  background-size: 50px;
+                }
+              }
+              div.previous {
+                transform: rotate(180deg);
+                left: 10px;
+                label {
+                  background: url('/assets/svg/baseline-chevron_right-24px.svg') no-repeat center center;
+                  background-size: 50px;
+                }
+              }
             }
-            &:checked + img {
+            &:checked + div.viewer {
               opacity: 1;
               transition: opacity .250s .250s;
+              div.next, div.previous {
+                visibility: visible;
+                transition: visibility .0s;
+              }
             }
           }
         }

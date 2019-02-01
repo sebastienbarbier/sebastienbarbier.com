@@ -126,7 +126,15 @@
     <ul>
       <li *ngFor="let image of gallery; let index = index">
         <input type="radio" name="gallery" id="gallery-{{ index }}" (change)="disableScrolling(true)"  />
-        <img src="{{ image.large }}" />
+        <div class="viewer">
+          <img src="{{ image.large }}" />
+          <div class="previous">
+            <label for="gallery-{{ index - 1 }}" *ngIf="gallery[index - 1]"></label>
+          </div>
+          <div class="next">
+            <label for="gallery-{{ index + 1 }}" *ngIf="gallery[index + 1]"></label>
+          </div>
+        </div>
       </li>
     </ul>
   </div>
