@@ -93,21 +93,8 @@ article, aside {
       justify-content: center;
     }
 
-    input[type="radio"] {
-      display: none;
-      &:checked + label {
-        background: $light2;
-      }
-      &:checked + label + div {
-        visibility: visible;
-        transition: visibility 0s, right .250s .1s, top .250s .1s, opacity .250s .1s;
-        right: 0px;
-        top: 0px;
-        opacity: 1;
-      }
-    }
-
     input[type="radio"]#none {
+      display: none;
       &:checked + label.background {
         transition: opacity .250s, visibility 0s .250s;
         opacity: 0;
@@ -124,14 +111,32 @@ article, aside {
       }
     }
 
-    li {
+    li.logos {
+      @media screen and (max-width: 550px) {
+        flex: 50%;
+        flex-grow: 0;
+        flex-shrink: 0;
+      }
+
+      input[type="radio"] {
+        display: none;
+        &:checked + label {
+          background: $light2;
+        }
+        &:checked + label + div {
+          visibility: visible;
+          right: 0px;
+          top: 0px;
+          opacity: 1;
+          transition: visibility 0s, right .250s .1s, top .250s .1s, opacity .250s .1s;
+        }
+      }
       label.client {
-        display: block;
-        display: flex;
+        position: relative;
         margin: 0 16px 16px 0;
         width: 300px;
         height: 300px;
-        position: relative;
+        display: flex;
         justify-content: center;
         align-items: center;
         text-decoration: none;
@@ -145,11 +150,18 @@ article, aside {
           width: 200px;
           height: 120px;
         }
+        @media screen and (max-width: 550px) {
+          width: 80%;
+          margin: auto;
+        }
 
         img {
           max-width: 60%;
           max-height: 20vh;
           z-index: 10;
+          @media screen and (max-width: 550px) {
+            max-width: 80%;
+          }
         }
         div {
           position: absolute;
@@ -212,7 +224,6 @@ article, aside {
         z-index: 100;
         opacity: 0;
         transition: visibility 0s .250s, opacity .250s, right .250s, top .250s;
-        -webkit-overflow-scrolling: touch;
 
         @media screen and (max-width: 550px) {
           width: 100vw;
@@ -224,7 +235,7 @@ article, aside {
           box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2),0px 2px 2px 0px rgba(0, 0, 0, 0.14),0px 3px 1px -2px rgba(0, 0, 0, 0.12);
           width: 100%;
           height: 100%;
-          overflow: auto;
+          overflow: hidden;
           align-items: center;
           display: flex;
           flex-direction: column;
@@ -237,12 +248,12 @@ article, aside {
             background: $light2;
             display: flex;
             justify-content: flex-end;
+
             label {
               cursor: pointer;
               float: right;
               background: $light3;
               padding: 8px 8px 0 8px;
-
               margin-right: constant(safe-area-inset-right);
               margin-right: env(safe-area-inset-right);
             }
@@ -250,6 +261,9 @@ article, aside {
           header + div {
             padding: 20px 40px;
             flex-grow: 1;
+
+            overflow: auto;
+             -webkit-overflow-scrolling: touch;
 
             img {
               width: 160px;
@@ -349,7 +363,7 @@ article, aside {
     padding: 20px 0;
 
     @media screen and (max-width: 949px) {
-      justify-content: space-around;
+      justify-content: center;
     }
     li {
       flex-grow: 0;
@@ -386,6 +400,9 @@ article, aside {
           height: 140px;
           @media screen and (max-width: 949px) {
             height: 120px;
+          }
+          @media screen and (max-width: 549px) {
+            height: 90px;
           }
 
         }

@@ -48,7 +48,7 @@
     <input type="radio" name="work" id="none" checked="checked" (change)="disableScrolling(false)" />
     <label for="none" class="background">
     </label>
-    <li *ngFor="let client of clients_order">
+    <li class="logos" *ngFor="let client of clients_order">
       <input type="radio" name="work" id="{{ client }}" (change)="disableScrolling(true)" />
       <label class="client" for="{{ client }}">
         <img src="{{ clients[client].logo }}" alt="{{ clients[client].label }} logo" />
