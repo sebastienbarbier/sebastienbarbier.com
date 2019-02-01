@@ -92,6 +92,9 @@ article, aside {
     @media screen and (max-width: 1199px) {
       justify-content: center;
     }
+    @media screen and (max-width: 1199px) {
+      padding: 20px 0 10px;
+    }
 
     input[type="radio"]#none {
       display: none;
@@ -148,7 +151,7 @@ article, aside {
         overflow: hidden;
         @media screen and (max-width: 1199px) {
           width: 200px;
-          height: 120px;
+          height: 100px;
         }
         @media screen and (max-width: 550px) {
           width: 80%;
