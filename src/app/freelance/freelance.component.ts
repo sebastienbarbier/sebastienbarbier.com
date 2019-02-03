@@ -25,12 +25,15 @@ export class FreelanceComponent implements OnInit {
       previous: null,
       next: 'mozilla',
       gallery: [{
-        small: 'https://cdn2.sebastienbarbier.com/images/chefclub/01-saint-valentin-responsive.600.jpg',
-        large: 'https://cdn2.sebastienbarbier.com/images/chefclub/01-saint-valentin-responsive.1800.jpg',
+        small: 'https://cdn2.sebastienbarbier.com/images/chefclub/chefclub-saint-calentin.600.jpg',
+        large: 'https://cdn2.sebastienbarbier.com/images/chefclub/chefclub-saint-calentin.1800.jpg',
         style: 'large'
       },{
-        small: 'https://cdn2.sebastienbarbier.com/images/chefclub/02-mobile-web-ui.600.jpg',
-        large: 'https://cdn2.sebastienbarbier.com/images/chefclub/02-mobile-web-ui.1800.jpg'
+        small: 'https://cdn2.sebastienbarbier.com/images/chefclub/chefclub-screens.600.jpg',
+        large: 'https://cdn2.sebastienbarbier.com/images/chefclub/chefclub-screens.1800.jpg'
+      },{
+        small: 'https://cdn2.sebastienbarbier.com/images/chefclub/chefclub-mobile.600.jpg',
+        large: 'https://cdn2.sebastienbarbier.com/images/chefclub/chefclub-mobile.1800.jpg'
       }]
     },
     mozilla: {
