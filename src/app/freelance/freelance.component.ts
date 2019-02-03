@@ -24,6 +24,14 @@ export class FreelanceComponent implements OnInit {
       github_url: null,
       previous: null,
       next: 'mozilla',
+      gallery: [{
+        small: 'https://cdn2.sebastienbarbier.com/images/chefclub/01-saint-valentin-responsive.600.jpg',
+        large: 'https://cdn2.sebastienbarbier.com/images/chefclub/01-saint-valentin-responsive.1800.jpg',
+        style: 'large'
+      },{
+        small: 'https://cdn2.sebastienbarbier.com/images/chefclub/02-mobile-web-ui.600.jpg',
+        large: 'https://cdn2.sebastienbarbier.com/images/chefclub/02-mobile-web-ui.1800.jpg'
+      }]
     },
     mozilla: {
       label: 'Mozilla',
