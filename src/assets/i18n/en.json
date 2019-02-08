@@ -20,7 +20,7 @@
 		"header": {
       "contact": "Contact me",
       "title": "Full stack, Senior Front-end",
-      "description": "<p><strong>Passionnate about web technologies,</strong> I assure a constant follow up about latest trend and technologies to insure <strong>a complet accompaniment</strong> for your project.</p><p>In parallel to my personal goals <strong>of undertaking independent projects,</strong> I want to dedicate some of my time to freelance experiences, to solve various problems and meet new teams. Beyond a simple service, I offer an <strong>active participation</strong> to help you <strong>achieve your goals.</strong></p><p>My profile allows me to propose <strong>a complete service</strong> as for the creation of a website or a web application, or as <strong>integrating an existing team</strong> in support of a specific issue.</p>"
+      "description": "<p><strong>Passionnate about web technologies,</strong> I assure a constant follow up about latest trend and technologies to insure <strong>a complet accompaniment</strong> for your project.</p><p>In parallel to my personal goals <strong>of starting independent projects,</strong> I want to dedicate some of my time to freelance experiences, to solve various problems and meet new teams. Beyond a simple service, I offer an <strong>active participation</strong> to help you <strong>achieve your goals.</strong></p><p>My profile allows me to propose <strong>a complete service</strong> as for the creation of a website or a web application, or as <strong>integrating an existing team</strong> in support of a specific issue.</p>"
     },
 		"location": {
 			"description": "Currently on a <strong>nomadic lifestyle,</strong> I can only accept <strong>remote assignments</strong> but always arrange to visit the company on site to meet the teams in person.",
@@ -32,7 +32,7 @@
       "type": "Chatbot<br />Web application",
 			"stack": "Chatbot use Facebook messenger API and runs on existing backend with nodeJS. Front-end and webapp generator are running on typescript/Angular.",
 			"website": "Mila.com",
-			"work": "I joined Mila's dev team full time remotely to help prototyping three new products: a chatbot interface, a front-end application to manage technicians' schedule, and a webapp template engine based on metadata stored on a SaaS platform."
+			"work": "<p><strong>Mila connects companies with local self-employed people with technical skills.</strong></p><p>My mission within the company was <strong>the implementation of prototypes</strong> that would later be taken over by the technical team if deemed viable. During our collaboration, <strong>three projects</strong> were conducted:</p><ul><li>Experiment with a <strong>messenger chatbot</strong> integrated within the existing infrastructure<em>(Node.js, Facebook API).</em></li><li>A <strong>schedule management</strong> application for managers <em>(Web application in typescript / Angular).</em></li><li><strong>An Angular component generator</strong> from metadata hosted on the contentful platform <em>(Node.js).</em></li></ul>"
 		},
 		"mozilla": {
 			"description": "Web extention, Mobile application",
@@ -41,14 +41,14 @@
       "type": "Web extention<br />Mobile application",
 			"stack": "Build as a web extention, using react and redux.",
 			"website": "About notes add-on",
-			"work": "Notes adds a simple, multi-page notepad to your browser’s sidebar. I joined the team to work on migrating existing code with ReactJS, implements new features, and add metrics for next release."
+			"work": "<p><strong>Mozilla is the company in charge of the development of the Firefox web browser.</strong></p><p>Following discussions on the github platform, I was offered to join the team <strong>Mozilla Firefox TestPilot</strong> for a 4-month mission to <strong>manage the front-end needs</strong> of the project <strong>Notes by Firefox.</strong> The team consisted of a full-time back-end developer and a volunteer contributor. The purpose of the mission was to migrate the existing code to <strong>react.js / redux,</strong> and adding extra features. After two months, the goal reached, we were able to work on a mobile application <strong>react-native,</strong> available today on the Google store. All code and contributions are visible on the repository <strong>github mozilla/notes.</strong></p>"
 		},
     "chefclub": {
       "description": "HTML/CSS integration",
       "location": "France",
       "type": "Website",
       "website": "Chefclub.tv",
-      "work": "Builded templates for chefclub new website, based on mockups provided by the design team."
+      "work": "<p><strong>Chefclub offers entertainment around the theme of cooking.</strong></p><p>My mission within the <strong>Chefclub</strong> team is to manage <strong>all web integrations,</strong> mainly via their website <em>chefclub.tv.</em> From the mockups provided by the graphic team, I was able to implement all the screens in responsives, powered by a <strong>Django</strong> application. To this day, I remain in constant collaboration with the team on the implementation of <strong>seasonal projects,</strong> and update their visual identity.</p>"
     },
 		"pricing": {
 			"description": "Aiming for a better collaboration, I only charge work on a <strong>time-based term</strong> under the form of <strong>sprints.</strong>",
