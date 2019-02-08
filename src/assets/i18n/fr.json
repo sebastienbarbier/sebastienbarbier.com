@@ -20,10 +20,9 @@
 		"header": {
 			"contact": "Me contacter",
       "title": "Full stack, Senior Front-end",
-			"description": "<p><strong>Passionné par les technologies web,</strong> je suis assidument l'ensemble des tendances et propose de par mon expertise <strong>un accompagnement complet</strong> pour vos projets.</p><p>En parallèle à mes objectifs personnels <strong>d'entreprendre des projets indépendants,</strong> je tiens à dédier une partie de mon temps aux expérience freelances, afin de résoudre diverses problématiques et rencontrer de nouvelles équipes. Au delà d'une simple prestation, j'offre une <strong>participation active</strong> afin de vous aider dans <strong>l'accomplissement de vos objectifs.</strong></p><p>Mon profile me permet aussi bien de proposer <strong>une prestation complète</strong> quant à la création d'un site ou d'une application web, que <strong>d'intégrer une équipe existante</strong> en support à un problème précis. </p>",
-			"help": "Je reste disponible afin de <strong>répondre à vos questions,</strong> et me ferai un plaisir de discuter avec vous de <strong>vos projets</strong> et comment au mieux les réaliser."
-		},
-		"location": {
+			"description": "<p><strong>Passionné par les technologies web,</strong> je suis assidument l'ensemble des tendances et propose de par mon expertise <strong>un accompagnement complet</strong> pour vos projets.</p><p>En parallèle à mes objectifs personnels <strong>d'entreprendre des projets indépendants,</strong> je tiens à dédier une partie de mon temps aux expérience freelances, afin de résoudre diverses problématiques et rencontrer de nouvelles équipes. Au delà d'une simple prestation, j'offre une <strong>participation active</strong> afin de vous aider dans <strong>l'accomplissement de vos objectifs.</strong></p><p>Mon profile me permet aussi bien de proposer <strong>une prestation complète</strong> quant à la création d'un site ou d'une application web, que <strong>d'intégrer une équipe existante</strong> en support à un problème précis. </p>"
+    },
+    "location": {
 			"description": "Actuellement sur un <strong>style de vie nomade,</strong> je ne suis en mesure d'accepter que <strong>les missions en télétravail</strong> mais m'arrange toujours pour organiser une visite sur site afin rencontrer les équipes en personne.",
 			"title": "Localisation"
 		},
