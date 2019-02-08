@@ -19,6 +19,7 @@
 		"footer": "Complete background can be found on my <a target=\"_blank\" href=\"https://www.linkedin.com/in/sebbarbier/\">linkedin profile</a>.",
 		"header": {
 			"contact": "Contact me",
+      "title": "Full stack, Senior Front-end",
 			"description": "I help <strong>startups</strong> and <strong>tech companies</strong> to build solutions using the latest <strong>web technologies</strong>. Having a <strong>full-stack profile</strong> makes it easy to integrate any project, but I particularly enjoy and perform on <strong>front-end</strong> problematics.",
 			"help": "I also follow closely the startup industry and latest trends to provide state of the art solutions."
 		},
@@ -27,11 +28,11 @@
 			"title": "Location"
 		},
 		"mila": {
-			"description": "Mila connects its customers with skilled local technicians.",
+			"description": "Chatbot, Web application.",
 			"location": "Switzerland",
       "type": "Chatbot<br />Web application",
 			"stack": "Chatbot use Facebook messenger API and runs on existing backend with nodeJS. Front-end and webapp generator are running on typescript/Angular.",
-			"website": "mila.com",
+			"website": "Mila.com",
 			"work": "I joined Mila's dev team full time remotely to help prototyping three new products: a chatbot interface, a front-end application to manage technicians' schedule, and a webapp template engine based on metadata stored on a SaaS platform."
 		},
 		"mozilla": {
@@ -47,7 +48,7 @@
       "description": "HTML/CSS integration",
       "location": "France",
       "type": "Website",
-      "website": "chefclub.tv",
+      "website": "Chefclub.tv",
       "work": "Builded templates for chefclub new website, based on mockups provided by the design team."
     },
 		"pricing": {
@@ -61,7 +62,9 @@
 		"tools": {
 			"description": "<strong>Web standards</strong>, and <strong>open source</strong> advocate.",
 			"integration": "HTML/CSS integration",
-			"title": "Techs I like to work with"
+			"title": "Techs I like to work with",
+      "skills": "Skills",
+      "test": "Unit testing"
 		}
 	},
 	"home": {

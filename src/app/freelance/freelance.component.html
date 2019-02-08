@@ -1,9 +1,18 @@
 <header class="header">
-  <div>
-    <p [innerHTML]="'freelance.header.description' | translate"></p>
-    <p [innerHTML]="'freelance.header.help' | translate"></p>
+  <div class="avatar">
+    <img
+      src="https://cdn2.sebastienbarbier.com/images/sebastienbarbier_freelance_profile_256.jpg"
+      srcset="https://cdn2.sebastienbarbier.com/images/sebastienbarbier_freelance_profile_256.jpg 256w,
+              https://cdn2.sebastienbarbier.com/images/sebastienbarbier_freelance_profile_512.jpg 512w,
+              https://cdn2.sebastienbarbier.com/images/sebastienbarbier_freelance_profile_full.jpg 894w,"
+      alt="Sébastien Barbier portrait compte freelance" />
+    <a routerLink="/contact">{{ 'freelance.header.contact' | translate }}</a>
   </div>
-  <a routerLink="/contact">{{ 'freelance.header.contact' | translate }}</a>
+  <div>
+    <h2>{{ 'freelance.header.title' | translate }}</h2>
+    <div [innerHTML]="'freelance.header.description' | translate">
+    </div>
+  </div>
 </header>
 <article>
   <div class="twoColumn">
@@ -27,18 +36,26 @@
         </ul>
       </div>
       <div class="stack">
-        <h3>Infra</h3>
+        <h3>Mobile</h3>
         <ul>
+          <li>React native</li>
+        </ul>
+      </div>
+      <div class="stack">
+        <h3>{{ 'freelance.tools.skills' | translate }}</h3>
+        <ul>
+          <li>{{ 'freelance.tools.test' | translate }}</li>
+          <li>Documentation</li>
           <li>Devops</li>
         </ul>
       </div>
     </div>
     <div>
-      <h2>{{ 'freelance.location.title' | translate }}</h2>
-      <p [innerHTML]="'freelance.location.description' | translate"></p>
-
       <h2>{{ 'freelance.pricing.title' | translate }}</h2>
       <p [innerHTML]="'freelance.pricing.description' | translate"></p>
+
+      <h2>{{ 'freelance.location.title' | translate }}</h2>
+      <p [innerHTML]="'freelance.location.description' | translate"></p>
     </div>
   </div>
 
@@ -69,7 +86,7 @@
             <div>
               <h3>{{ clients[client].label }} <small>{{ clients[client].location | translate }}, {{ clients[client].date }}</small></h3>
               <p><em>{{ clients[client].description | translate }}</em></p>
-              <p>{{ clients[client].work | translate }}</p>
+              <div class="description" [innerHTML]="clients[client].work | translate"></div>
               <div class="stack">
                 <ul>
                   <li *ngFor="let item of clients[client].stack">{{ item | translate }}</li>
