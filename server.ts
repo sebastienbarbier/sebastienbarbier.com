@@ -40,6 +40,12 @@ app.engine('html', ngExpressEngine({
 app.set('view engine', 'html');
 app.set('views', join(DIST_FOLDER, 'browser'));
 
+app.get('/robots.txt', (req, res) => {
+  res.sendFile(join(DIST_FOLDER, 'static', `robots.txt`), {
+    req
+  });
+});
+
 app.get('/sitemap.xml', (req, res) => {
   const lang = req.get('host').includes('sebastienbarbier.fr') ? 'fr' : 'en';
   res.sendFile(join(DIST_FOLDER, 'static', `sitemap.${lang}.xml`), {
