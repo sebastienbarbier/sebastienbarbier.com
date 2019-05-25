@@ -22,7 +22,7 @@ const templateEnglish = readFileSync(join(DIST_FOLDER, 'browser', 'index_en.html
 const templateFrench = readFileSync(join(DIST_FOLDER, 'browser', 'index_fr.html')).toString();
 
 // * NOTE :: leave this as require() since this file is built Dynamically from webpack
-const { AppServerModuleNgFactory, LAZY_MODULE_MAP } = require('./dist/server/main.bundle');
+const { AppServerModuleNgFactory, LAZY_MODULE_MAP } = require('./dist/server/main');
 
 // Express Engine
 import { ngExpressEngine } from '@nguniversal/express-engine';

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DOCUMENT } from '@angular/platform-browser';
+
 
 @Component({
   selector: 'app-freelance',
@@ -85,7 +87,8 @@ export class FreelanceComponent implements OnInit {
   };
   gallery = []
 
-  constructor() { }
+  constructor(@Inject(DOCUMENT) private d ) {
+  }
 
   ngOnInit() {
     for (let index in this.clients_order) {
@@ -96,10 +99,12 @@ export class FreelanceComponent implements OnInit {
   }
 
   disableScrolling(value) {
-    if (value) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
+    if (this.d) {
+      if (value) {
+        this.d.body.style.overflow = "hidden";
+      } else {
+        this.d.body.style.overflow = "auto";
+      }
     }
   }
 

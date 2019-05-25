@@ -1,7 +1,3 @@
-import 'rxjs/add/operator/filter';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/mergeMap';
-
 import { Component, OnInit, Inject, Renderer2, ElementRef, PLATFORM_ID, Optional } from '@angular/core';
 import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
 import { routerTransition } from './router.animations';
@@ -77,7 +73,7 @@ export class AppComponent implements OnInit {
           this.navigationMenuStatus = !this.navigationMenuStatus;
         }
         // We enable overflow on body if fullscreen action had disabled it
-        document.body.style.overflow = "auto";
+        this.d.body.style.overflow = "auto";
       }
     });
 
