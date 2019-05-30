@@ -3,8 +3,8 @@ import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
 import { routerTransition } from './router.animations';
 
 import { isPlatformBrowser, isPlatformServer } from '@angular/common';
-import { DOCUMENT, Title, Meta } from '@angular/platform-browser';
-import { Location } from '@angular/common';
+import { Title, Meta } from '@angular/platform-browser';
+import { DOCUMENT, Location } from '@angular/common';
 
 // AOT issue : https://github.com/ngx-translate/core/issues/537
 import { TranslateService } from '@ngx-translate/core';
