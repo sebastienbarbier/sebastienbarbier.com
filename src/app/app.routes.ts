@@ -5,6 +5,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 export function _(str: string) {
   return str;
 }
+
 // State is use to bind animation
 export const appRoutes: Routes = [
   {
@@ -22,11 +23,6 @@ export const appRoutes: Routes = [
     loadChildren: () => import('./projects/projects.module').then(mod => mod.ProjectsModule),
     data: { title: 'nav.projects', description: _('description.projects'), theme: 'light', state: 'projects' }
   },
-  // {
-  //   path: 'photography',
-  //   component: PhotographyComponent,
-  //   data: { title: 'nav.photography', description: _('description.photography'), theme: 'dark', state: 'photography' }
-  // },
   {
     path: 'contact',
     loadChildren: () => import('./contact/contact.module').then(mod => mod.ContactModule),
