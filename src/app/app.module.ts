@@ -15,7 +15,7 @@ import { AppComponent } from './app.component';
 import { ContactComponent } from './contact/contact.component';
 import { LegalComponent } from './legal/legal.component';
 import { HomeComponent } from './home/home.component';
-import { FreelanceComponent } from './freelance/freelance.component';
+// import { FreelanceComponent } from './freelance/freelance.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { PhotographyComponent } from './photography/photography.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
@@ -54,7 +54,7 @@ export function createTranslateLoader(http: HttpClient) {
     LegalComponent,
     HomeComponent,
     ProjectsComponent,
-    FreelanceComponent,
+    // FreelanceComponent,
     PhotographyComponent,
     PageNotFoundComponent
   ],

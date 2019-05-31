@@ -3,7 +3,7 @@ import { Routes } from '@angular/router';
 import { ContactComponent } from './contact/contact.component';
 import { LegalComponent } from './legal/legal.component';
 import { HomeComponent } from './home/home.component';
-import { FreelanceComponent } from './freelance/freelance.component';
+// import { FreelanceComponent } from './freelance/freelance.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { PhotographyComponent } from './photography/photography.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
@@ -20,7 +20,8 @@ export const appRoutes: Routes = [
   },
   {
     path: 'freelance',
-    component: FreelanceComponent,
+    // component: FreelanceComponent,
+    loadChildren: () => import('./freelance/freelance.module').then(mod => mod.FreelanceModule),
     data: { title: 'nav.freelance', description: _('description.freelance'), theme: 'light', state: 'freelance' }
   },
   {
