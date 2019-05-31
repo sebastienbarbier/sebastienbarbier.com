@@ -12,12 +12,6 @@ import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 
 import { AppComponent } from './app.component';
-import { ContactComponent } from './contact/contact.component';
-import { LegalComponent } from './legal/legal.component';
-import { HomeComponent } from './home/home.component';
-// import { FreelanceComponent } from './freelance/freelance.component';
-import { ProjectsComponent } from './projects/projects.component';
-import { PhotographyComponent } from './photography/photography.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 import { environment } from '../environments/environment';
@@ -50,12 +44,7 @@ export function createTranslateLoader(http: HttpClient) {
   ],
   declarations: [
     AppComponent,
-    ContactComponent,
-    LegalComponent,
-    HomeComponent,
-    ProjectsComponent,
     // FreelanceComponent,
-    PhotographyComponent,
     PageNotFoundComponent
   ],
   providers: [],
