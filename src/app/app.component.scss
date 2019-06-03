@@ -29,28 +29,28 @@ header {
     text-align: left;
     margin: 0;
     padding: 46px 0 0 10px;
-    font-family: "open_sansbold";
     a {
       text-decoration: none;
       border-bottom: none;
-      font-size: 1.3em;
       padding-right: 6px;
-    }
-    span {
-      font-family: "open_sansregular";
+      color: inherit;
     }
     small {
       padding-left: 6px;
-      font-family: "open_sanslight";
-      font-size: 0.9em;
       padding-bottom: 1px;
+      font-size: 0.7em;
+      letter-spacing: -0.01em;
+      font-family: 'open_sanslight', sans-serif;
+    }
+    span {
+      font-size: 0.7em;
+      font-family: 'open_sansregular', sans-serif;
     }
 
     @media screen and (max-width: 599px) {
       display: none;
     }
     @media screen and (min-width: 600px) and (max-width: 999px) {
-      font-size: 1.4em;
       padding-top: 40px;
       h1{
         display: block;
@@ -65,14 +65,12 @@ header {
       }
     }
     @media screen and (min-width: 1000px) {
-      font-size: 1.7em;
     }
   }
 }
 
 #lang {
   position: absolute;
-  font-size: 0.9em;
   @media screen and (max-width: 599px) {
     top: 15px;
     right: 90px;
@@ -88,9 +86,10 @@ header {
   a {
     border: none;
     padding: 0 4px;
-    font-family: "open_sanssemibold";
     opacity: 0.4;
     cursor: pointer;
+    font-family: "open_sanssemibold";
+    color: black;
     &.currentLang{
       opacity: 1;
       cursor: default;
@@ -184,7 +183,6 @@ aside{
       list-style: none;
       li{
         padding: 14px 0px 14px 0;
-        font-family: "open_sansbold";
         position: relative;
         text-align: right;
 
@@ -202,17 +200,21 @@ aside{
         a{
           border: none;
           color: $light;
-          font-size: 1.8em;
-          letter-spacing: 1px;
           text-transform: uppercase;
+          font-family: 'open_sansbold', sans-serif;
+          font-size: 1.8rem;
+          line-height: 1;
+          letter-spacing: -0.01em;
+
           &.active {
             color: #888;
             cursor: default;
           }
           &.small {
-            font-size: 0.8em;
-            font-family: "open_sanslight";
             text-transform: capitalize;
+            font-family: 'open_sansregular', sans-serif;
+            font-size: 1rem;
+            letter-spacing: -0.01em;
           }
         }
       }

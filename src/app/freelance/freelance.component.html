@@ -44,10 +44,10 @@
 <article>
   <div class="twoColumn">
     <div>
-      <h2>{{ 'freelance.tools.title' | translate }}</h2>
+      <h3>{{ 'freelance.tools.title' | translate }}</h3>
       <p [innerHTML]="'freelance.tools.description' | translate"></p>
       <div class="stack">
-        <h3>Font-end</h3>
+        <h4>Font-end</h4>
         <ul>
           <li>{{ 'freelance.tools.integration' | translate }}</li>
           <li>React</li>
@@ -56,20 +56,20 @@
         </ul>
       </div>
       <div class="stack">
-        <h3>Back-end</h3>
+        <h4>Back-end</h4>
         <ul>
           <li>Node.js</li>
           <li>Python (Django, Pyramid, Flask)</li>
         </ul>
       </div>
       <div class="stack">
-        <h3>Mobile</h3>
+        <h4>Mobile</h4>
         <ul>
           <li>React native</li>
         </ul>
       </div>
       <div class="stack">
-        <h3>{{ 'freelance.tools.skills' | translate }}</h3>
+        <h4>{{ 'freelance.tools.skills' | translate }}</h4>
         <ul>
           <li>{{ 'freelance.tools.test' | translate }}</li>
           <li>Documentation</li>
@@ -78,15 +78,15 @@
       </div>
     </div>
     <div>
-      <h2>{{ 'freelance.pricing.title' | translate }}</h2>
+      <h3>{{ 'freelance.pricing.title' | translate }}</h3>
       <p [innerHTML]="'freelance.pricing.description' | translate"></p>
 
-      <h2>{{ 'freelance.location.title' | translate }}</h2>
+      <h3>{{ 'freelance.location.title' | translate }}</h3>
       <p [innerHTML]="'freelance.location.description' | translate"></p>
     </div>
   </div>
 
-  <h2>{{ 'freelance.title.recent_work' | translate }}</h2>
+  <h3>{{ 'freelance.title.recent_work' | translate }}</h3>
 
   <ul class="clients">
     <input type="radio" name="work" id="none" checked="checked" (change)="disableScrolling(false)" />
@@ -111,7 +111,7 @@
           <div>
             <img src="{{ clients[client].logo }}" alt="{{ clients[client].label }} logo" />
             <div>
-              <h3>{{ clients[client].label }} <small>{{ clients[client].location | translate }}, {{ clients[client].date }}</small></h3>
+              <h4>{{ clients[client].label }} <small>{{ clients[client].location | translate }}, {{ clients[client].date }}</small></h4>
               <p><em>{{ clients[client].description | translate }}</em></p>
               <div class="description" [innerHTML]="clients[client].work | translate"></div>
               <div class="stack">
@@ -149,7 +149,7 @@
   <input type="radio" name="gallery" id="no_gallery" checked="checked" (change)="disableScrolling(false)" />
   <div class="gallery_list">
 
-    <h2>{{ 'freelance.title.gallery' | translate }}</h2>
+    <h3>{{ 'freelance.title.gallery' | translate }}</h3>
 
     <ul class="gallery">
       <li *ngFor="let image of gallery; let index = index">

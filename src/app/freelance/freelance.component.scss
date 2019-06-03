@@ -24,7 +24,6 @@ header.header {
   }
 
   h2 {
-    font-size: 1.6rem;
     margin-bottom: 32px;
   }
 
@@ -68,10 +67,11 @@ header.header {
       border: solid 1px #333;
       border-radius: 4px;
       padding: 4px 12px;
-      font-family: 'open_sanssemibold';
       white-space: nowrap;
       transition: background 0.3s linear;
       background: #FAFAFA;
+      text-decoration: none;
+      font-family: 'open_sanssemibold';
 
       @media screen and (max-width: 1000px) {
         display: none;
@@ -93,7 +93,6 @@ header.header {
 
 article, aside {
 
-  font-size: 0.9em;
   @media screen and (max-width: 599px) {
     margin: 10px 20px 20px 20px;
     h2 {
@@ -226,8 +225,6 @@ article, aside {
           flex-direction: column;
           justify-content: space-between;
           padding: 8px 30px;
-          font-family: "open_sanssemibold";
-          font-size: 1rem;
           transition: all .250s;
           opacity: 0;
           transform: scale(0.95);
@@ -245,7 +242,6 @@ article, aside {
           justify-content: center;
           align-items: center;
           color: white;
-          font-family: "open_sanssemibold";
           border-radius: 0 0 0 10px;
           opacity: 1;
           transition: opacity .250s;
@@ -328,12 +324,9 @@ article, aside {
               }
 
               h3 {
-                font-size: 1.4em;
                 small {
                   padding-left: 10px;
-                  font-size: 0.6em;
                   opacity: .7;
-                  font-family: 'open_sanslight';
                 }
               }
 
@@ -626,7 +619,6 @@ aside {
 
 footer.footer {
   text-align: left;
-  font-size: 0.9em;
   @media screen and (max-width: 599px) {
     margin: 40px 20px 20px 20px;
   }
