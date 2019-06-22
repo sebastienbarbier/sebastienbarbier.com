@@ -95,12 +95,13 @@
 		}
 	},
 	"nav": {
-		"contact": "Contact",
-		"freelance": "Freelance",
 		"home": "Accueil",
-		"legal": "Mentions légales",
-		"photography": "Photographie",
-		"projects": "Projets"
+    "aboutme": "A propos",
+    "freelance": "Freelance",
+    "projects": "Projets",
+    "work": "Réalisations",
+		"contact": "Contact",
+		"legal": "Mentions légales"
 	},
 	"projects": {
 		"archives": {
@@ -114,7 +115,7 @@
 		},
 		"server": "Serveur",
 		"seven23": {
-			"description": "Application de budget/finance personnel pour nomade, mais pas que!"
+			"description": "<strong>Application de budget</strong> pour manuellement traquer ses dépenses. Totallement <strong>opensource</strong>, avec <strong>respect de la vie privée</strong>."
 		},
 		"sideproject": {
 			"title": "Projet annexe"

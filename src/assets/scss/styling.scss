@@ -13,6 +13,10 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "open_sansbold";
   letter-spacing: -0.04em;
   color: #111;
+  small {
+    font-family: "open_sanslight";
+    font-size: 0.8em;
+  }
 }
 
 h1 {

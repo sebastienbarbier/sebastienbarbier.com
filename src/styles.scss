@@ -37,7 +37,22 @@ html {
 main {
   clear: both;
   padding: 0px 0 100px 0;
+
+  &.wrapper {
+    @media screen and (max-width: 599px) {
+      margin: 80px 20px 20px 20px;
+    }
+    @media screen and (min-width: 600px) and (max-width: 1199px) {
+      margin: 220px 40px 20px 40px;
+    }
+    @media screen and (min-width: 1200px) {
+      margin: 220px 80px 20px 80px;
+      flex-direction: row;
+    }
+  }
+
 }
+
 
 .noselect {
   -moz-user-select: none;

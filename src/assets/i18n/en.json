@@ -95,12 +95,13 @@
 		}
 	},
 	"nav": {
-		"contact": "Contact",
-		"freelance": "Freelance",
 		"home": "Home",
-		"legal": "Legal & copyright",
-		"photography": "Photography",
-		"projects": "Projects"
+    "freelance": "Freelance",
+    "projects": "Projects",
+    "aboutme": "About me",
+    "work": "Work",
+		"contact": "Contact",
+		"legal": "Legal & copyright"
 	},
 	"projects": {
 		"archives": {
@@ -114,7 +115,7 @@
 		},
 		"server": "Server",
 		"seven23": {
-			"description": "Personal budget application for nomads, but not only."
+			"description": "<strong>Fully manual budget app</strong> to track your expenses. Completely <strong>opensource</strong>, with <strong>privacy by design</strong>."
 		},
 		"sideproject": {
 			"title": "Side project"
