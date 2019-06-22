@@ -13,6 +13,7 @@
 		"home": "Je m'appelle Sébastien, ingénieur en logiciel, et suis originaire de France. Je partage mon temps entre des missions de freelance et des projets personnels.",
 		"legal": "Ce site internet est attaché à un individu privé, et n'enguage aucunement employeur ou client.",
 		"photography": "Photographie n'est qu'un passe temps, mais je l'espère prendra prochainement d'avantage d'importance.",
+    "resources": "Ensemble de ressources pouvant servir dans la rédaction de contenu me concernant.",
 		"projects": "Seven23 est une application de budget/finance personnel pour nomade, mais pas seulement! MPDBox est un prototype de lecteur mp3 controllé par puces NFC."
 	},
 	"freelance": {
@@ -101,6 +102,7 @@
     "projects": "Projets",
     "work": "Réalisations",
 		"contact": "Contact",
+    "resources": "Ressources",
 		"legal": "Mentions légales"
 	},
 	"projects": {

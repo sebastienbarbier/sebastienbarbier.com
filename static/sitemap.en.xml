@@ -72,4 +72,17 @@
      href="https://sebastienbarbier.fr/legal"
      />
 </url>
+<url>
+  <loc>https://sebastienbarbier.com/resources</loc>
+  <xhtml:link
+     rel="alternate"
+     hreflang="en"
+     href="https://sebastienbarbier.com/resources"
+     />
+   <xhtml:link
+     rel="alternate"
+     hreflang="fr"
+     href="https://sebastienbarbier.fr/resources"
+     />
+</url>
 </urlset>
