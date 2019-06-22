@@ -14,16 +14,6 @@ export const appRoutes: Routes = [
     data: { title: null, description: _('description.home'), theme: 'light', state: 'home' }
   },
   {
-    path: 'aboutme',
-    loadChildren: () => import('./aboutme/aboutme.module').then(mod => mod.AboutmeModule),
-    data: { title: 'nav.aboutme', description: _('description.aboutme'), theme: 'light', state: 'aboutme' }
-  },
-  {
-    path: 'work',
-    loadChildren: () => import('./work/work.module').then(mod => mod.WorkModule),
-    data: { title: 'nav.work', description: _('description.work'), theme: 'light', state: 'work' }
-  },
-  {
     path: 'freelance',
     loadChildren: () => import('./freelance/freelance.module').then(mod => mod.FreelanceModule),
     data: { title: 'nav.freelance', description: _('description.freelance'), theme: 'light', state: 'freelance' }

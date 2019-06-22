@@ -1,4 +1,5 @@
-import { Component, OnInit, HostBinding } from '@angular/core';
+import { Component, OnInit, Inject, HostBinding } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
 
 import {
   sequence,
@@ -53,7 +54,7 @@ export class ProjectsComponent implements OnInit {
       alt: 'Seven23 Report' }
   ];
 
-  constructor() {
+  constructor(@Inject(DOCUMENT) private d ) {
   }
 
   @HostBinding('@projectTransition') '';
