@@ -35,7 +35,6 @@ const projectTransition = trigger('projectTransition', [
 })
 export class ProjectsComponent implements OnInit {
 
-  selectedPhoto;
   photos = [
     { thumbnail: 'https://cellar-c2.services.clever-cloud.com/cdn.seven23.io/static/images/screenshots/small/01-dashboard-desktop-light.png',
       source: 'https://cellar-c2.services.clever-cloud.com/cdn.seven23.io/static/images/screenshots/large/01-dashboard-desktop-light.png',
@@ -55,7 +54,6 @@ export class ProjectsComponent implements OnInit {
   ];
 
   constructor() {
-    this.selectedPhoto = null;
   }
 
   @HostBinding('@projectTransition') '';
@@ -63,10 +61,14 @@ export class ProjectsComponent implements OnInit {
   ngOnInit() {
   }
 
-  view(event, photo = null) {
-    this.selectedPhoto = photo;
-    // Disable href if javascript is activated
-    event.preventDefault();
+  disableScrolling(value) {
+    if (this.d) {
+      if (value) {
+        this.d.body.style.overflow = "hidden";
+      } else {
+        this.d.body.style.overflow = "auto";
+      }
+    }
   }
 
 }
