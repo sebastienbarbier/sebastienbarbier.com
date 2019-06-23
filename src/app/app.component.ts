@@ -1,5 +1,5 @@
 import { Component, OnInit, Inject, Renderer2, ElementRef, PLATFORM_ID, Optional } from '@angular/core';
-import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
+import { ActivatedRoute, Router, NavigationStart, NavigationEnd, RouteConfigLoadStart, RouteConfigLoadEnd } from '@angular/router';
 import { routerTransition } from './router.animations';
 
 import { isPlatformBrowser, isPlatformServer } from '@angular/common';
@@ -58,6 +58,20 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.router.events.subscribe(event => {
+      if (event instanceof NavigationStart) {
+        // console.log('NavigationStart');
+        // On page change, we close navigation menu
+        if (this.navigationMenuStatus === true) {
+          this.navigationMenuStatus = !this.navigationMenuStatus;
+        }
+      }
+      // if (event instanceof RouteConfigLoadStart) {
+      //   console.log('RouteConfigLoadStart');
+      // }
+      // if (event instanceof RouteConfigLoadEnd) {
+      //   console.log('RouteConfigLoadEnd');
+      // }
+
       // NavigationStart, NavigationEnd, NavigationCancel, NavigationError, RoutesRecognized
       if (event instanceof NavigationEnd) {
 
@@ -67,10 +81,6 @@ export class AppComponent implements OnInit {
           this.headerState = 'hide';
         } else {
           this.headerState = 'show';
-        }
-        // On page change, we close navigation menu
-        if (this.navigationMenuStatus === true) {
-          this.navigationMenuStatus = !this.navigationMenuStatus;
         }
         // We enable overflow on body if fullscreen action had disabled it
         this.d.body.style.overflow = "auto";
