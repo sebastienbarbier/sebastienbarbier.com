@@ -71,7 +71,7 @@ header.header {
       transition: background 0.3s linear;
       background: #FAFAFA;
       text-decoration: none;
-      font-family: 'open_sanssemibold';
+      font-weight: 600;
 
       @media screen and (max-width: 1000px) {
         display: none;

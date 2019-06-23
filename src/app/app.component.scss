@@ -40,11 +40,11 @@ header {
       padding-bottom: 1px;
       font-size: 0.7em;
       letter-spacing: -0.01em;
-      font-family: 'open_sanslight', sans-serif;
+      font-weight: 300;
     }
     span {
       font-size: 0.7em;
-      font-family: 'open_sansregular', sans-serif;
+      font-weight: 400;
     }
 
     @media screen and (max-width: 599px) {
@@ -88,10 +88,10 @@ header {
     padding: 0 4px;
     cursor: default;
     color: #111;
-    font-family: "open_sanssemibold";
+      font-weight: 600;
     &.notCurrentLang{
       cursor: pointer;
-      font-family: "open_sansregular";
+      font-weight: 400;
       color: #666;
     }
   }
@@ -202,7 +202,7 @@ aside{
           border: none;
           color: $light;
           text-transform: uppercase;
-          font-family: 'open_sansbold', sans-serif;
+          font-weight: 700;
           font-size: 1.8rem;
           line-height: 1;
           letter-spacing: -0.01em;
@@ -260,7 +260,7 @@ aside{
           border: none;
           color: $light;
           text-transform: capitalize;
-          font-family: 'open_sansregular', sans-serif;
+          font-weight: 400;
           font-size: .8rem;
           letter-spacing: -0.01em;
 
