@@ -1,7 +1,8 @@
 import 'zone.js';
 import 'reflect-metadata';
+
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, ErrorHandler, Injectable } from '@angular/core';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 import { RouterModule, Routes } from '@angular/router';
@@ -18,11 +19,32 @@ import { environment } from '../environments/environment';
 
 import { appRoutes } from './app.routes';
 
+import * as Sentry from "@sentry/browser";
+
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(
     http,
     './assets/i18n/',
     (environment.production ? '.' + Math.floor(Math.random() * 100000) + '.json' : '.json'));
+}
+
+@Injectable()
+export class SentryErrorHandler implements ErrorHandler {
+  constructor() {}
+  handleError(error) {
+    const eventId = Sentry.captureException(error.originalError || error);
+    Sentry.showReportDialog({ eventId });
+  }
+}
+
+const providers = [];
+if (environment.production) {
+
+  Sentry.init({
+    dsn: "https://c36d29ca446044659f503c09282f68b5@sentry.io/1488195"
+  });
+
+  providers.push({ provide: ErrorHandler, useClass: SentryErrorHandler });
 }
 
 @NgModule({
@@ -46,7 +68,7 @@ export function createTranslateLoader(http: HttpClient) {
     AppComponent,
     PageNotFoundComponent
   ],
-  providers: [],
+  providers,
   bootstrap: [AppComponent]
 })
 export class AppModule { }

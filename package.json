@@ -38,6 +38,7 @@
     "@nguniversal/module-map-ngfactory-loader": "^7.1.1",
     "@ngx-translate/core": "^11.0.1",
     "@ngx-translate/http-loader": "^4.0.0",
+    "@sentry/browser": "^5.4.3",
     "aos": "^2.3.4",
     "core-js": "^2.6.8",
     "rxjs": "^6.5.2",
