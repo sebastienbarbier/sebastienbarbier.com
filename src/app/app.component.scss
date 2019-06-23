@@ -86,14 +86,13 @@ header {
   a {
     border: none;
     padding: 0 4px;
-    opacity: 0.6;
-    cursor: pointer;
-    font-family: "open_sansregular";
-    color: black;
-    &.currentLang{
-      opacity: 1;
-      cursor: default;
-      font-family: "open_sanssemibold";
+    cursor: default;
+    color: #111;
+    font-family: "open_sanssemibold";
+    &.notCurrentLang{
+      cursor: pointer;
+      font-family: "open_sansregular";
+      color: #666;
     }
   }
 }
