@@ -103,7 +103,8 @@
     "work": "Réalisations",
 		"contact": "Contact",
     "resources": "Ressources",
-		"legal": "Mentions légales"
+		"legal": "Mentions légales",
+    "toggle": "Bascule l'affichage du menu de navigation"
 	},
 	"projects": {
 		"archives": {

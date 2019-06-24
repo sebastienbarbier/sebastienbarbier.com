@@ -103,7 +103,8 @@
     "work": "Work",
 		"contact": "Contact",
     "resources": "Resources",
-		"legal": "Legal & copyright"
+		"legal": "Legal & copyright",
+    "toggle": "Toggle navigation menu"
 	},
 	"projects": {
 		"archives": {
