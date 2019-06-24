@@ -271,7 +271,7 @@ article, aside {
         top: 0px; bottom: 0px; right: -20px;
         width: 500px;
         height: 100%;
-        z-index: 100;
+        z-index: 1200;
         opacity: 0;
         transition: visibility 0s .250s, opacity .250s, right .250s, top .250s;
 
@@ -506,7 +506,7 @@ aside {
       position: fixed;
       top: 0px; bottom: 0px; left: 0px; right: 0px;
       background: $light;
-      z-index: 200;
+      z-index: 1200;
       opacity: 1;
       transition: opacity .250s .1s;
       display: flex;
