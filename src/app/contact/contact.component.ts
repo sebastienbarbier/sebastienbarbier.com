@@ -19,6 +19,12 @@ const contactTransition = trigger('contactTransition', [
       style({ transform: 'translateY(20px)' }),
       animate('1s cubic-bezier(.75,-0.48,.26,1.52)', style({transform: 'translateY(0px)', opacity: 1})),
     ]), {optional: true}),
+  ]),
+  transition(':leave', [
+    query('section', stagger(100, [
+      style({ transform: 'translateY(0px)', opacity: 1 }),
+      animate('0.6s cubic-bezier(.75,-0.48,.26,1.52)', style({opacity: 0})),
+    ]), {optional: true}),
   ])
 ]);
 
