@@ -6,17 +6,17 @@ header.header {
   align-items: center;
 
   @media screen and (max-width: 599px) {
-    margin: 120px 20px 0px 20px;
+    margin: 140px 20px 0px 20px;
     flex-direction: column;
     align-items: flex-start;
   }
   @media screen and (min-width: 600px) and (max-width: 999px) {
-    margin: 200px 20px 20px 40px;
+    margin: 40px 20px 20px 40px;
     flex-direction: column;
     align-items: flex-start;
   }
   @media screen and (min-width: 1000px) {
-    margin: 200px 120px 60px 120px;
+    margin: 115px 120px 60px 120px;
   }
 
   @media screen and (max-width: 1200px) {

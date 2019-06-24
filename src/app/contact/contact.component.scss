@@ -2,15 +2,15 @@ article {
 
 
   @media screen and (max-width: 599px) {
-    margin: 80px 20px 20px 20px;
+    margin: 60px 20px 20px 20px;
   }
   @media screen and (min-width: 600px) and (max-width: 999px) {
-    margin: 140px 20px 20px 20px;
+    margin: 40px 20px 20px 20px;
   }
   @media screen and (min-width: 1000px) {
-    margin: 140px 20px 20px 20px;
     margin: auto;
-    margin-top: 140px;
+    margin-top: 60px;
+    margin-bottom: 20px;
     width: 620px;
   }
 

@@ -1,5 +1,18 @@
 @import '../../assets/scss/variables';
 
+div.wrapper {
+
+  @media screen and (max-width: 599px) {
+    margin: 55px 20px 20px 20px;
+  }
+  @media screen and (min-width: 600px) and (max-width: 999px) {
+    margin: 40px 20px 20px 20px;
+  }
+  @media screen and (min-width: 1000px) {
+    margin: 55px 80px 20px;
+  }
+}
+
 h2 {
   border-bottom: solid 1px $light2;
   padding-bottom: 10px;
@@ -82,6 +95,8 @@ section {
     }
   }
   &.large{
+
+    padding-top: 120px;
 
     @media screen and (min-width: 500px) {
       justify-content: center;

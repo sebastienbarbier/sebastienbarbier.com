@@ -1,8 +1,6 @@
 @import '../assets/scss/variables';
 
 header {
-  top: 0;
-  position: absolute;
 
   @media screen and (max-width: 599px) {
     padding-left: 10px;
@@ -14,21 +12,14 @@ header {
     padding-left: 50px;
   }
 
-  &.hide {
-    opacity: 0;
-    visibility: hidden;
-    transition: visibility 0s 0.2s, opacity 0.2s ease-out;
-  }
-  &.show {
-    opacity: 1;
-    visibility: visible;
-    transition: opacity 0.4s ease-in 0s;
-  }
-
   h1 {
     text-align: left;
     margin: 0;
     padding: 46px 0 0 10px;
+
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.4s ease-in 0s;
     a {
       text-decoration: none;
       border-bottom: none;
@@ -52,9 +43,6 @@ header {
     }
     @media screen and (min-width: 600px) and (max-width: 999px) {
       padding-top: 40px;
-      h1{
-        display: block;
-      }
       small{
         display: block;
         padding-top: 8px;
@@ -64,46 +52,46 @@ header {
         display: none;
       }
     }
+    &.hide {
+      opacity: 0;
+      visibility: hidden;
+      transition: visibility 0s 0.2s, opacity 0.2s ease-out;
+    }
+
+  }
+
+  #lang {
+    position: absolute;
+    @media screen and (max-width: 599px) {
+      top: 15px;
+      right: 90px;
+    }
+    @media screen and (min-width: 600px) and (max-width: 999px) {
+      top: 30px;
+      right: 110px;
+    }
     @media screen and (min-width: 1000px) {
+      top: 30px;
+      right: 130px;
+    }
+    a {
+      border: none;
+      padding: 0 4px;
+      cursor: default;
+      color: #111;
+        font-weight: 600;
+      &.notCurrentLang{
+        cursor: pointer;
+        font-weight: 400;
+        color: #666;
+      }
     }
   }
-}
 
-#lang {
-  position: absolute;
-  @media screen and (max-width: 599px) {
-    top: 15px;
-    right: 90px;
-  }
-  @media screen and (min-width: 600px) and (max-width: 999px) {
-    top: 30px;
-    right: 110px;
-  }
-  @media screen and (min-width: 1000px) {
-    top: 30px;
-    right: 130px;
-  }
-  a {
-    border: none;
-    padding: 0 4px;
-    cursor: default;
-    color: #111;
-      font-weight: 600;
-    &.notCurrentLang{
-      cursor: pointer;
-      font-weight: 400;
-      color: #666;
-    }
-  }
-}
-
-aside{
-  z-index: 100;
-  position: absolute;
-  top: 0; left: 0; right: 0;
   label{
     cursor: pointer;
     position: absolute;
+    z-index: 1001;
     @media screen and (max-width: 599px) {
       top: 25px;
       right: 30px;
@@ -116,13 +104,20 @@ aside{
       top: 45px;
       right: 60px;
     }
+    #navigation__button__close { fill:white; visibility: hidden; }
   }
   input[type=checkbox]{
     visibility: hidden;
   }
-  input[type=checkbox]:checked + label{
+  input[type=checkbox]:checked {
     visibility: hidden;
   }
+  input[type=checkbox]:checked + label {
+    position: fixed;
+    #navigation__button__open { visibility: hidden; }
+    #navigation__button__close { fill:white; visibility: visible; }
+  }
+
   input[type=checkbox]:checked + label + nav {
     // Animation
     visibility: visible;
@@ -136,6 +131,8 @@ aside{
     }
   }
   nav {
+
+    z-index: 1000;
 
     // Animation
     visibility: hidden;
@@ -156,7 +153,7 @@ aside{
     @media screen and (max-width: 599px) {
       align-items: flex-end;
       padding-right: 10vw;
-      padding-top: 100px;
+      padding-top: 5vh;
     }
     @media screen and (min-width: 600px) and (max-width: 999px) {
       align-items: flex-end;
@@ -273,4 +270,13 @@ aside{
 
     }
   }
+}
+
+
+
+aside{
+  z-index: 100;
+  position: absolute;
+  top: 0; left: 0; right: 0;
+
 }
