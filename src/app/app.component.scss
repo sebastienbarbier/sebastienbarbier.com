@@ -107,10 +107,7 @@ header {
     #navigation__button__close { fill:white; visibility: hidden; }
   }
   input[type=checkbox]{
-    visibility: hidden;
-  }
-  input[type=checkbox]:checked {
-    visibility: hidden;
+    display: none;
   }
   input[type=checkbox]:checked + label {
     position: fixed;
@@ -158,8 +155,6 @@ header {
     @media screen and (min-width: 600px) and (max-width: 999px) {
       align-items: flex-end;
       padding-right: 10vw;
-    }
-    @media screen and (min-width: 1000px) {
     }
 
     ul.links {
