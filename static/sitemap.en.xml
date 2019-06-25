@@ -21,29 +21,29 @@
      />
 </url>
 <url>
-  <loc>https://sebastienbarbier.com/freelance</loc>
+  <loc>https://sebastienbarbier.com/about-me</loc>
   <xhtml:link
      rel="alternate"
      hreflang="en"
-     href="https://sebastienbarbier.com/freelance"
+     href="https://sebastienbarbier.com/about-me"
      />
    <xhtml:link
      rel="alternate"
      hreflang="fr"
-     href="https://sebastienbarbier.fr/freelance"
+     href="https://sebastienbarbier.fr/about-me"
      />
 </url>
 <url>
-  <loc>https://sebastienbarbier.com/projects</loc>
+  <loc>https://sebastienbarbier.com/work</loc>
   <xhtml:link
      rel="alternate"
      hreflang="en"
-     href="https://sebastienbarbier.com/projects"
+     href="https://sebastienbarbier.com/work"
      />
    <xhtml:link
      rel="alternate"
      hreflang="fr"
-     href="https://sebastienbarbier.fr/projects"
+     href="https://sebastienbarbier.fr/work"
      />
 </url>
 <url>

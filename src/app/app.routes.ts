@@ -41,6 +41,7 @@ export const appRoutes: Routes = [
   // Legacy permalink
   { path: 'freelance',   redirectTo: '/about-me', pathMatch: 'full' },
   { path: 'projects',   redirectTo: '/work', pathMatch: 'full' },
+  // 404
   {
     path: '**',
     component: PageNotFoundComponent,
