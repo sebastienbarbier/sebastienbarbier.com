@@ -60,14 +60,22 @@ app.get('/keybase.txt', (req, res) => {
   });
 });
 
-app.get('/assets/i18n/en.*.json', (req, res) => {
-  res.sendFile(join(DIST_FOLDER, 'browser', 'assets', 'i18n', 'en.json'), {
+app.get('/freelance', (req, res) => res.redirect(301, '/about-me'));
+app.get('/projects', (req, res) => res.redirect(301, '/work'));
+
+app.get('/assets/i18n/fr.*.json', (req, res) => {
+  res.sendFile(join(DIST_FOLDER, 'browser', 'assets', 'i18n', 'fr.json'), {
     req
   });
 });
 
-app.get('/assets/i18n/fr.*.json', (req, res) => {
-  res.sendFile(join(DIST_FOLDER, 'browser', 'assets', 'i18n', 'fr.json'), {
+app.get('/freelance', (req, res) => {
+  res.sendFile(join(DIST_FOLDER, 'static', `robots.txt`), {
+    req
+  });
+});
+app.get('/robots.txt', (req, res) => {
+  res.sendFile(join(DIST_FOLDER, 'static', `robots.txt`), {
     req
   });
 });
