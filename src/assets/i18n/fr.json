@@ -21,13 +21,13 @@
 	},
 	"description": {
 		"contact": "Vous pouvez me joindre par email via hello@sebastienbarbier.com, ou sur l'un de mes divers réseaux sociaux twitter.",
-		"freelance": "Passionné par les technologies web,je suis assidument l'ensemble des tendances et propose de par mon expertise un accompagnement complet pour vos projets.",
+		"about_me": "Passionné par les technologies web,je suis assidument l'ensemble des tendances et propose de par mon expertise un accompagnement complet pour vos projets.",
 		"home": "Je m'appelle Sébastien, ingénieur en logiciel, et suis originaire de France. Je partage mon temps entre des missions de freelance et des projets personnels.",
 		"legal": "Ce site internet est attaché à un individu privé, et n'enguage aucunement employeur ou client.",
-		"projects": "Seven23 est une application de budget/finance personnel pour nomade, mais pas seulement! MPDBox est un prototype de lecteur mp3 controllé par puces NFC.",
+		"work": "Seven23 est une application de budget/finance personnel pour nomade, mais pas seulement! MPDBox est un prototype de lecteur mp3 controllé par puces NFC.",
 		"resources": "Ensemble de ressources pouvant servir dans la rédaction de contenu me concernant."
 	},
-	"freelance": {
+	"about_me": {
 		"footer": "L'ensemble de mon expérience professionnelle est disponible sur <a target=\"_blank\" href=\"https://www.linkedin.com/in/sebbarbier/\">mon profile Linkedin</a>.",
 		"header": {
 			"contact": "Me contacter",
@@ -84,14 +84,14 @@
 	},
 	"nav": {
 		"contact": "Contact",
-		"freelance": "Freelance",
+		"about_me": "À propos",
 		"home": "Accueil",
 		"legal": "Mentions légales",
-		"projects": "Projets",
+		"work": "Réalisations",
 		"resources": "Ressources",
 		"toggle": "Bascule l'affichage du menu de navigation"
 	},
-	"projects": {
+	"work": {
 		"archives": {
 			"title": "Archives"
 		},

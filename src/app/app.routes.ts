@@ -14,14 +14,14 @@ export const appRoutes: Routes = [
     data: { title: null, description: _('description.home'), theme: 'light', state: 'home' }
   },
   {
-    path: 'freelance',
-    loadChildren: () => import('./freelance/freelance.module').then(mod => mod.FreelanceModule),
-    data: { title: 'nav.freelance', description: _('description.freelance'), theme: 'light', state: 'freelance' }
+    path: 'about-me',
+    loadChildren: () => import('./about-me/about-me.module').then(mod => mod.AboutMeModule),
+    data: { title: 'nav.about_me', description: _('description.about_me'), theme: 'light', state: 'about_me' }
   },
   {
-    path: 'projects',
-    loadChildren: () => import('./projects/projects.module').then(mod => mod.ProjectsModule),
-    data: { title: 'nav.projects', description: _('description.projects'), theme: 'light', state: 'projects' }
+    path: 'work',
+    loadChildren: () => import('./work/work.module').then(mod => mod.WorkModule),
+    data: { title: 'nav.work', description: _('description.work'), theme: 'light', state: 'work' }
   },
   {
     path: 'contact',
@@ -38,6 +38,9 @@ export const appRoutes: Routes = [
     loadChildren: () => import('./legal/legal.module').then(mod => mod.LegalModule),
     data: { title: 'nav.legal', description: _('description.legal'), theme: 'light', state: 'legal' }
   },
+  // Legacy permalink
+  { path: 'freelance',   redirectTo: '/about-me', pathMatch: 'full' },
+  { path: 'projects',   redirectTo: '/work', pathMatch: 'full' },
   {
     path: '**',
     component: PageNotFoundComponent,

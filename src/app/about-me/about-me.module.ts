@@ -3,18 +3,18 @@ import { CommonModule } from '@angular/common';
 
 import { TranslateModule } from '@ngx-translate/core';
 
-import { FreelanceComponent } from './freelance.component';
-import { FreelanceRoutingModule } from './freelance-routing.module';
+import { AboutMeComponent } from './about-me.component';
+import { AboutMeRoutingModule } from './about-me-routing.module';
 
 
 @NgModule({
   declarations: [
-    FreelanceComponent
+    AboutMeComponent
   ],
   imports: [
     CommonModule,
-    FreelanceRoutingModule,
+    AboutMeRoutingModule,
     TranslateModule.forChild()
   ]
 })
-export class FreelanceModule { }
+export class AboutMeModule { }

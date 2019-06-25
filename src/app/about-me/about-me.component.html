@@ -33,23 +33,23 @@
         </g>
       </svg>
     </div>
-    <a routerLink="/contact">{{ 'freelance.header.contact' | translate }}</a>
+    <a routerLink="/contact">{{ 'about_me.header.contact' | translate }}</a>
   </div>
   <div>
-    <h2>{{ 'freelance.header.title' | translate }}</h2>
-    <div [innerHTML]="'freelance.header.description' | translate">
+    <h2>{{ 'about_me.header.title' | translate }}</h2>
+    <div [innerHTML]="'about_me.header.description' | translate">
     </div>
   </div>
 </header>
 <article>
   <div class="twoColumn">
     <div>
-      <h3>{{ 'freelance.tools.title' | translate }}</h3>
-      <p [innerHTML]="'freelance.tools.description' | translate"></p>
+      <h3>{{ 'about_me.tools.title' | translate }}</h3>
+      <p [innerHTML]="'about_me.tools.description' | translate"></p>
       <div class="stack">
         <h4>Font-end</h4>
         <ul>
-          <li>{{ 'freelance.tools.integration' | translate }}</li>
+          <li>{{ 'about_me.tools.integration' | translate }}</li>
           <li>React</li>
           <li>Vue.js</li>
           <li>Angular</li>
@@ -69,24 +69,24 @@
         </ul>
       </div>
       <div class="stack">
-        <h4>{{ 'freelance.tools.skills' | translate }}</h4>
+        <h4>{{ 'about_me.tools.skills' | translate }}</h4>
         <ul>
-          <li>{{ 'freelance.tools.test' | translate }}</li>
+          <li>{{ 'about_me.tools.test' | translate }}</li>
           <li>Documentation</li>
           <li>Devops</li>
         </ul>
       </div>
     </div>
     <div>
-      <h3>{{ 'freelance.pricing.title' | translate }}</h3>
-      <p [innerHTML]="'freelance.pricing.description' | translate"></p>
+      <h3>{{ 'about_me.pricing.title' | translate }}</h3>
+      <p [innerHTML]="'about_me.pricing.description' | translate"></p>
 
-      <h3>{{ 'freelance.location.title' | translate }}</h3>
-      <p [innerHTML]="'freelance.location.description' | translate"></p>
+      <h3>{{ 'about_me.location.title' | translate }}</h3>
+      <p [innerHTML]="'about_me.location.description' | translate"></p>
     </div>
   </div>
 
-  <h3>{{ 'freelance.title.recent_work' | translate }}</h3>
+  <h3>{{ 'about_me.title.recent_work' | translate }}</h3>
 
   <ul class="clients">
     <input type="radio" name="work" id="none" checked="checked" (change)="disableScrolling(false)" />
@@ -149,7 +149,7 @@
   <input type="radio" name="gallery" id="no_gallery" checked="checked" (change)="disableScrolling(false)" />
   <div class="gallery_list">
 
-    <h3>{{ 'freelance.title.gallery' | translate }}</h3>
+    <h3>{{ 'about_me.title.gallery' | translate }}</h3>
 
     <ul class="gallery">
       <li *ngFor="let image of gallery; let index = index">
@@ -186,5 +186,5 @@
 </aside>
 
 <footer class="footer">
-  <p [innerHTML]="'freelance.footer' | translate"></p>
+  <p [innerHTML]="'about_me.footer' | translate"></p>
 </footer>

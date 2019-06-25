@@ -1,20 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { ProjectsComponent } from './projects.component';
-import { ProjectsRoutingModule } from './projects-routing.module';
+import { WorkComponent } from './work.component';
+import { WorkRoutingModule } from './work-routing.module';
 
 import { TranslateModule } from '@ngx-translate/core';
 
 
 @NgModule({
   declarations: [
-    ProjectsComponent
+    WorkComponent
   ],
   imports: [
     CommonModule,
-    ProjectsRoutingModule,
+    WorkRoutingModule,
     TranslateModule.forChild()
   ]
 })
-export class ProjectsModule { }
+export class WorkModule { }

@@ -13,7 +13,7 @@ import {
   keyframes,
   animateChild } from '@angular/animations';
 
-const projectTransition = trigger('projectTransition', [
+const workTransition = trigger('workTransition', [
   transition(':enter', [
     query('.block', style({ opacity: 0 }), {optional: true}),
     query('.block', stagger(200, [
@@ -29,12 +29,12 @@ const projectTransition = trigger('projectTransition', [
 ]);
 
 @Component({
-  selector: 'app-projects',
-  templateUrl: './projects.component.html',
-  styleUrls: ['./projects.component.scss'],
-  animations: [ projectTransition ]
+  selector: 'app-work',
+  templateUrl: './work.component.html',
+  styleUrls: ['./work.component.scss'],
+  animations: [ workTransition ]
 })
-export class ProjectsComponent implements OnInit {
+export class WorkComponent implements OnInit {
 
   photos = [
     { thumbnail: 'https://cellar-c2.services.clever-cloud.com/cdn.seven23.io/static/images/screenshots/small/01-dashboard-desktop-light.png',
@@ -57,7 +57,7 @@ export class ProjectsComponent implements OnInit {
   constructor(@Inject(DOCUMENT) private d ) {
   }
 
-  @HostBinding('@projectTransition') '';
+  @HostBinding('@workTransition') '';
 
   ngOnInit() {
   }

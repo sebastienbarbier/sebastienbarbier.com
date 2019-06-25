@@ -2,11 +2,11 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 
 @Component({
-  selector: 'app-freelance',
-  templateUrl: './freelance.component.html',
-  styleUrls: ['./freelance.component.scss']
+  selector: 'about-me',
+  templateUrl: './about-me.component.html',
+  styleUrls: ['./about-me.component.scss']
 })
-export class FreelanceComponent implements OnInit {
+export class AboutMeComponent implements OnInit {
 
   clients_order = ['chefclub', 'mozilla', 'mila'];
   clients = {
