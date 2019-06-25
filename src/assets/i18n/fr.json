@@ -38,6 +38,30 @@
 			"description": "Actuellement sur un <strong>style de vie nomade,</strong> je ne suis en mesure d'accepter que <strong>les missions en télétravail</strong> mais m'arrange toujours pour organiser une visite sur site afin rencontrer les équipes en personne.",
 			"title": "Localisation"
 		},
+    "mila": {
+      "description": "Chatbot, Application web.",
+      "location": "Suisse",
+      "type": "Chatbot<br />Application web",
+      "stack": "L'interface de chatbot utilise les API de Facebook messenger et s'intègre dans leur couche server existante avec NodeJS. L'application front-end et le générateur de webapp sont développés en typescript/Angular.",
+      "website": "Mila.com",
+      "work": "<p><strong>Mila met en relation des S.A.V. d'entreprises avec des indépendants locaux ayant des compétences techniques.</strong></p><p>Ma mission au sein de l'entreprise fut <strong>l'implémentation de prototypes</strong> qui seraient par la suite repris par l'équipe technique si jugés viables. Au cours de notre collaboration, <strong>trois projets</strong> ont été mené :</p><ul><li>Expérimentation autours d'un <strong>chatbot messenger</strong> intégré au sein de l'infrastructure existante <em>(Node.js, Facebook API).</em></li><li>Une application de <strong>gestion de planning</strong> pour les managers <em>(Application web en typescript / Angular).</em></li><li><strong>Un générateur de composant Angular</strong> à partir de méta-données hébergées sur la plateforme contentful <em>(Node.js).</em></li></ul>"
+    },
+    "mozilla": {
+      "description": "Projet: Firefox, Test Pilot, Notes",
+      "github": "Dépôt Github",
+      "location": "États-Unis",
+      "type": "Extention web<br />Application Mobile",
+      "stack": "Distribué sous forme d'extention web, autours de React et Redux",
+      "website": "À propos de Testpilot/Notes",
+      "work": "<p><strong>Mozilla est l'entreprise en charge du développement du navigateur web Firefox.</strong></p><p>Suite à des échanges sur la plateforme github, il m'a été proposé de rejoindre l'équipe <strong>Mozilla Firefox TestPilot</strong> pour un mission de 4 mois afin de <strong>gérer les besoins front-end</strong> du projet <strong>Notes by Firefox.</strong> L'équipe était constituée d'un développeur back-end plein temps et un contributeur bénévole. Le but de la mission fut de migrer le code existant vers <strong>react.js / redux,</strong> et l'ajout de fonctionnalités supplémentaires. Après deux mois, l'objectif atteint, nous avons pu travailler sur une application mobile <strong>react-native,</strong> disponible aujourd'hui sur le store Google. L'ensemble du code et des contributions sont visibles sur le dépôt <strong>github mozilla/notes.</strong></p>"
+    },
+    "chefclub": {
+      "description": "Intégration HTML/CSS",
+      "location": "France",
+      "type": "Site internet",
+      "website": "Chefclub.tv",
+      "work": "<p><strong>Chefclub propose des divertissements autours du thème de la cuisine.</strong></p><p>Ma mission au sein de l'équipe <strong>Chefclub</strong> est de gérer <strong>l'ensemble des intégrations web,</strong> principalement via leur site internet <em>chefclub.tv.</em> A partir des maquettes fournies par l'équipe graphique, j'ai pu implémenter l'ensemble des écrans en responsives, le tout posé sur un application <strong>Django.</strong> A ce jours, je reste en constante collaboration avec l'équipe sur l'implémentation de <strong>projets saisonniers,</strong> et la mise à jours de leur identité visuelle.</p>"
+    },
 		"pricing": {
 			"description": "Dans un objectif de collaboration, je <strong>facture à la durée</strong> sous forme de <strong>sprint.</strong>",
 			"title": "Tarification"

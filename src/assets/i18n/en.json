@@ -38,6 +38,30 @@
 			"description": "Currently on a <strong>nomadic lifestyle,</strong> I can only accept <strong>remote assignments</strong> but always arrange to visit the company on site to meet in person.",
 			"title": "Location"
 		},
+    "mila": {
+      "description": "Chatbot, Web application.",
+      "location": "Switzerland",
+      "type": "Chatbot<br />Web application",
+      "stack": "Chatbot use Facebook messenger API and runs on existing backend with nodeJS. Front-end and webapp generator are running on typescript/Angular.",
+      "website": "Mila.com",
+      "work": "<p><strong>Mila connects companies with local self-employed technicians with specific skills.</strong></p><p>My mission within the company was <strong>experiment threw prototypes</strong> that would be taken over by the technical team if deemed viable. During our collaboration, <strong>three projects</strong> were conducted:</p><ul><li>A <strong>messenger chatbot</strong> integrated within the existing infrastructure<em>(Node.js, Facebook API).</em></li><li>A <strong>schedule management</strong> application to manage technicians' schedule <em>(Web application in typescript / Angular).</em></li><li><strong>A dynamic component generator for Angular</strong> from metadata hosted on the contentful platform <em>(Node.js).</em></li></ul>"
+    },
+    "mozilla": {
+      "description": "Web extention, Mobile application",
+      "github": "Github repository",
+      "location": "United States",
+      "type": "Web extention<br />Mobile application",
+      "stack": "Build as a web extention, using react and redux.",
+      "website": "About notes add-on",
+      "work": "<p><strong>Mozilla is the company in charge of building the Firefox web browser.</strong></p><p>Following discussions on the github platform, I was offered to join the <strong>Mozilla Firefox TestPilot team</strong> for a 4-month contact to <strong>manage all front-end needs</strong> of the <strong>Notes by Firefox project</strong>. Our team was also including a full-time back-end developer and a volunteer contributor. The purpose of the mission was to migrate existing code to <strong>react.js / redux,</strong> and adding extra features. After two months, all goals reached, we were able to work on a mobile application using <strong>react-native,</strong> now available on the Google store. All code and contributions are visible on the repository <strong>github mozilla/notes.</strong></p>"
+    },
+    "chefclub": {
+      "description": "HTML/CSS integration",
+      "location": "France",
+      "type": "Website",
+      "website": "Chefclub.tv",
+      "work": "<p><strong>Chefclub offers entertainment around the theme of cooking.</strong></p><p>My mission within the <strong>Chefclub</strong>'s team is to manage <strong>their web integrations,</strong> mainly via their website <em>chefclub.tv.</em> From mockups provided by the graphic team, I implement all screens in responsives design, powered by a <strong>Django</strong> application. To this day, I remain in constant collaboration with the team on the implementation of <strong>seasonal projects,</strong> and keep up to date their visual identity.</p>"
+    },
 		"pricing": {
 			"description": "Aiming for a better collaboration, I only charge my work on a <strong>time-based term</strong>, as <strong>sprints</strong>.",
 			"title": "Pricing"
