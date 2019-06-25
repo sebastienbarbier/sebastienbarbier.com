@@ -17,12 +17,14 @@ article {
   section {
     padding: 40px 40px;
     @media screen and (max-width: 999px) {
-      padding-left: 0px;
-      padding-right: 0px;
+      padding-left: 10px;
+      padding-right: 10px;
     }
     @media screen and (max-width: 599px) {
       padding-top: 20px;
       padding-bottom: 20px;
+      padding-left: 0px;
+      padding-right: 0px;
     }
 
     h2 {

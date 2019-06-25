@@ -18,39 +18,26 @@ html {
     padding-left: env(safe-area-inset-left);
     padding-right: env(safe-area-inset-right);
 
-
     background: $light;
     transition: background-color 0.5s 0.5s, color 0.6s;
-    h1,
-    a {
+
+    h1, a {
       transition: color 1s;
     }
-    .svgFillBlack {
-      fill: black;
+
+    main {
+      padding: 0 0 100px;
     }
+
     .svgFillWhite {
       fill: white;
     }
-  }
-}
 
-main {
-  clear: both;
-  padding: 0px 0 100px 0;
-
-  &.wrapper {
-    @media screen and (max-width: 599px) {
-      margin: 80px 20px 20px 20px;
-    }
-    @media screen and (min-width: 600px) and (max-width: 1199px) {
-      margin: 220px 40px 20px 40px;
-    }
-    @media screen and (min-width: 1200px) {
-      margin: 220px 80px 20px 80px;
-      flex-direction: row;
+    .padding {
+      padding-left: $padding;
+      padding-right: $padding;
     }
   }
-
 }
 
 
