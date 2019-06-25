@@ -4,6 +4,7 @@ header {
   height: 160px;
   @media screen and (max-width: 599px) {
     padding-left: $padding;
+    height: 140px;
   }
   @media screen and (min-width: 600px) and (max-width: 999px) {
     padding-left: 40px;
@@ -14,7 +15,7 @@ header {
 
   h1 {
     margin: 0;
-    padding: 46px 0 0;
+    padding: 36px 0 0;
 
     opacity: 1;
     visibility: visible;
@@ -41,7 +42,6 @@ header {
       display: none;
     }
     @media screen and (min-width: 600px) and (max-width: 999px) {
-      padding-top: 40px;
       small{
         display: block;
         padding-top: 8px;
