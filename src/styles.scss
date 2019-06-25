@@ -34,8 +34,25 @@ html {
     }
 
     .padding {
-      padding-left: $padding;
-      padding-right: $padding;
+
+      @media screen and (max-width: 599px) {
+        padding-left: $padding;
+        padding-right: $padding;
+      }
+      @media screen and (min-width: 600px) and (max-width: 999px) {
+        padding-left: 40px;
+        padding-right: 40px;
+      }
+
+      @media screen and (min-width: 1000px) {
+        padding-left: 120px;
+        padding-right: 120px;
+      }
+
+    }
+
+    article {
+      margin: auto;
     }
   }
 }

@@ -1,23 +1,20 @@
 @import '../../assets/scss/variables';
 
 header {
-  margin-left: 40px;
-  margin-right: 40px;
-
   font-size: 1.6rem;
 
   @media screen and (max-width: 599px) {
-    padding: 160px 0 80px 0;
+    padding: 0 0 80px 0;
   }
   @media screen and (min-width: 600px) and (max-width: 999px) {
-    padding: 80px 0 100px 0;
+    padding: 0 0 100px 0;
   }
   @media screen and (min-width: 1000px) {
     width: 780px;
     margin: auto;
-    height: calc(70vh - 165px);
+    height: calc(55vh - 160px);
     min-height: 200px;
-    padding-bottom: 80px;
+    padding-bottom: 160px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -69,8 +66,6 @@ header {
   display: flex;
   flex-direction: row;
   border-top: solid 1px $light2;
-  margin-left: 40px;
-  margin-right: 40px;
 
   @media screen and (max-width: 999px) {
     flex-direction: column;

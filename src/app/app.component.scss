@@ -1,21 +1,20 @@
 @import '../assets/scss/variables';
 
 header {
-
+  height: 160px;
   @media screen and (max-width: 599px) {
-    padding-left: 10px;
+    padding-left: $padding;
   }
   @media screen and (min-width: 600px) and (max-width: 999px) {
-    padding-left: 20px;
+    padding-left: 40px;
   }
   @media screen and (min-width: 1000px) {
-    padding-left: 50px;
+    padding-left: 60px;
   }
 
   h1 {
-    text-align: left;
     margin: 0;
-    padding: 46px 0 0 10px;
+    padding: 46px 0 0;
 
     opacity: 1;
     visibility: visible;

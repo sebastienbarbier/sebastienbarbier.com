@@ -1,21 +1,14 @@
 article {
-
-
-  @media screen and (max-width: 599px) {
-    margin: 60px 20px 20px 20px;
-  }
-  @media screen and (min-width: 600px) and (max-width: 999px) {
-    margin: 40px 20px 20px 20px;
-  }
   @media screen and (min-width: 1000px) {
     margin: auto;
-    margin-top: 60px;
+    margin-top: 0px;
     margin-bottom: 20px;
-    width: 900px;
+    width: 980px;
   }
 
   section {
     padding: 40px 40px;
+
     @media screen and (max-width: 999px) {
       padding-left: 10px;
       padding-right: 10px;
@@ -50,9 +43,9 @@ article {
       }
 
       li {
-        flex: calc(50% - 40px);
+        flex: calc(50% - 50px);
         min-width: 300px;
-        margin: 20px 40px 30px 0;
+        margin: 20px 50px 30px 0;
         list-style: none;
         text-align: left;
         display: flex;

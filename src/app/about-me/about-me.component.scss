@@ -6,22 +6,18 @@ header.header {
   align-items: center;
 
   @media screen and (max-width: 599px) {
-    margin: 140px 20px 0px 20px;
     flex-direction: column;
     align-items: flex-start;
   }
   @media screen and (min-width: 600px) and (max-width: 999px) {
-    margin: 40px 20px 20px 40px;
     flex-direction: column;
     align-items: flex-start;
   }
+
   @media screen and (min-width: 1000px) {
-    margin: 115px 120px 60px 120px;
+    padding-bottom: 60px;
   }
 
-  @media screen and (max-width: 1200px) {
-    align-items: flex-start;
-  }
 
   h2 {
     margin-bottom: 32px;
@@ -91,26 +87,11 @@ header.header {
 
 }
 
+article {
+}
+
 article, aside {
 
-  @media screen and (max-width: 599px) {
-    margin: 10px 20px 20px 20px;
-    h2 {
-      margin-top: 50px;
-    }
-  }
-  @media screen and (min-width: 600px) and (max-width: 999px) {
-    margin: 10px 20px 20px 40px;
-    h2 {
-      margin-top: 30px;
-    }
-  }
-  @media screen and (min-width: 1000px) {
-    margin: 10px 120px 20px 120px;
-    h2 {
-      margin-top: 30px;
-    }
-  }
 
   div.twoColumn{
     align-items: flex-start;

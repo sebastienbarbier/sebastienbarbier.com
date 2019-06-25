@@ -1,18 +1,5 @@
+@import '../../assets/scss/variables';
+
 article {
-
-  @media screen and (max-width: 599px) {
-    margin: 120px 20px 20px 20px;
-  }
-  @media screen and (min-width: 600px) and (max-width: 999px) {
-    margin: 120px 20px 20px 60px;
-  }
-  @media screen and (min-width: 1000px) {
-    width: 720px;
-    margin: auto;
-    margin-top: 120px;
-  }
-
-  h3 {
-    margin-top: 40px;
-  }
+  max-width: $articleWidth;
 }
