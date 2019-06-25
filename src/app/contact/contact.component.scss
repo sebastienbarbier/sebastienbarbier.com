@@ -36,6 +36,12 @@ article {
       padding: 20px 0;
       list-style: none;
       text-align: left;
+      display: flex;
+      align-items: center;
+      img {
+        height: 32px;
+        margin-right: 20px;
+      }
     }
   }
 }
