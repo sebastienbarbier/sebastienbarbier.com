@@ -8,14 +8,9 @@ section {
     max-width: 1280px;
     margin: auto;
     margin-top: 20px;
-    margin-bottom: 60px;
     display: flex;
     align-items: center;
 
-    @media screen and (max-width: 999px) {
-      flex-direction: column;
-      align-items: start;
-    }
 
     @media screen and (max-width: 599px) {
       padding-left: $padding;
@@ -24,6 +19,15 @@ section {
     @media screen and (min-width: 600px) and (max-width: 999px) {
       padding-left: $padding * 2;
       padding-right: $padding * 2;
+    }
+
+    @media screen and (max-width: 999px) {
+      flex-direction: column;
+      align-items: start;
+    }
+
+    @media screen and (min-width: 1000px) {
+      margin-bottom: 60px;
     }
 
     .thumbnail {
@@ -109,14 +113,18 @@ section {
   display: flex;
   max-width: 1280px;
   margin: auto;
-  margin-top: 20px;
-  margin-bottom: 60px;
   justify-content: space-bewteen;
 
   @media screen and (max-width: 999px) {
     flex-direction: column;
     align-items: start;
   }
+
+  @media screen and (min-width: 1000px) {
+    margin-top: 20px;
+    margin-bottom: 60px;
+  }
+
 
   section {
     flex-shrink: 0;
