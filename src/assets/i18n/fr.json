@@ -116,9 +116,6 @@
 		"toggle": "Bascule l'affichage du menu de navigation"
 	},
 	"work": {
-		"archives": {
-			"title": "Archives"
-		},
 		"mpdbox": {
 			"description": "Prototype de lecteur mp3 controllé par puces NFC."
 		},
@@ -127,10 +124,7 @@
 		},
 		"server": "Serveur",
 		"seven23": {
-			"description": "<strong>Application de budget</strong> pour manuellement traquer ses dépenses. Totallement <strong>opensource</strong>, avec <strong>respect de la vie privée</strong>."
-		},
-		"sideproject": {
-			"title": "Projet annexe"
+			"description": "<strong>Application de budget</strong> pour manuellement traquer ses dépenses personnelles. Totallement <strong>opensource</strong>, avec <strong>respect de la vie privée</strong>."
 		}
 	}
 }

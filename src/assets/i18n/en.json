@@ -116,9 +116,6 @@
 		"toggle": "Toggle navigation menu"
 	},
 	"work": {
-		"archives": {
-			"title": "Archives"
-		},
 		"mpdbox": {
 			"description": "Prototype of a NFC music reader with a raspberry Pi."
 		},
@@ -127,10 +124,7 @@
 		},
 		"server": "Server",
 		"seven23": {
-			"description": "<strong>Fully manual budget app</strong> to track your expenses. Completely <strong>opensource</strong>, with <strong>privacy by design</strong>."
-		},
-		"sideproject": {
-			"title": "Side project"
+			"description": "<strong>Fully manual budget app</strong> to track personal expenses.<br/>Completely <strong>opensource</strong>, with <strong>privacy by design</strong>."
 		}
 	}
 }

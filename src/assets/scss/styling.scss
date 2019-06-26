@@ -13,9 +13,21 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   letter-spacing: -0.04em;
   color: #111;
+}
+
+h1 {
   small {
-  font-weight: 300;
+    font-weight: 300;
     font-size: 0.8em;
+  }
+}
+
+h2, h3, h4, h5, h6 {
+  small {
+    font-weight: 300;
+    font-size: 1rem;
+    letter-spacing: -0.5px;
+    color: #666;
   }
 }
 
@@ -71,7 +83,8 @@ p, li {
   align-items: baseline;
   margin-bottom: 10px;
   h3, h4 {
-    width: 80px;
+    width: 60px;
+    flex-shrink: 0;
     float: left;
     clear: both;
     font-weight: 300;

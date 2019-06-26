@@ -40,8 +40,8 @@ html {
         padding-right: $padding;
       }
       @media screen and (min-width: 600px) and (max-width: 999px) {
-        padding-left: 40px;
-        padding-right: 40px;
+        padding-left: $padding * 2;
+        padding-right: $padding * 2;
       }
 
       @media screen and (min-width: 1000px) {
