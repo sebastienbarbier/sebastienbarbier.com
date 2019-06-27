@@ -118,29 +118,29 @@ header {
 
     svg {
       position: absolute;
-      transition: opacity 150ms;
       &:first-child {
         visibility: visible;
         opacity: 1;
-        transition: opacity 150ms, visibility 0s;
+        transition: opacity 250ms 50ms, visibility 0s;
       }
       &:last-child {
         visibility: hidden;
         opacity: 0;
-        transition: opacity 150ms, visibility 0s 150ms;
+        transition: opacity 250ms, visibility 0s 250ms;
       }
     }
     &.isLoading {
       svg:first-child {
         visibility: hidden;
         opacity: 0;
-        transition: opacity 150ms, visibility 0s 150ms;
+        transition: opacity 250ms, visibility 0s 250ms;
       }
       svg:last-child {
         visibility: visible;
         opacity: 1;
-        transition: opacity 150ms, visibility 0s;
+        transition: opacity 250ms 50ms, visibility 0s;
         animation: 1s infinite linear normal rotate;
+        animation-play-state: running;
       }
     }
   }
