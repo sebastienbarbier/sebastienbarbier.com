@@ -140,7 +140,7 @@ header {
         visibility: visible;
         opacity: 1;
         transition: opacity 150ms, visibility 0s;
-        animation: 3s infinite alternate rotate;
+        animation: 1s infinite linear normal rotate;
       }
     }
   }
