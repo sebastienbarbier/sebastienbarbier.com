@@ -29,6 +29,7 @@ export class AppComponent implements OnInit {
   navigationMenuStatus: Boolean;
   lang: string;
   path: string;
+  hideMenuAnimation: Boolean;
 
   constructor(
       private route: ActivatedRoute,
@@ -44,6 +45,7 @@ export class AppComponent implements OnInit {
     ) {
     this.headerState = 'hide';
     this.navigationMenuStatus = false;
+    this.hideMenuAnimation = true;
 
     this.lang = 'en';
     if (isPlatformBrowser(platformId) && d.location.hostname.endsWith('sebastienbarbier.fr')) {
@@ -64,10 +66,10 @@ export class AppComponent implements OnInit {
           this.navigationMenuStatus = !this.navigationMenuStatus;
         }
       }
-      if (event instanceof RouteConfigLoadStart) {
-        document.getElementById('navigation__button').classList.add('isLoading');
+      if (event instanceof RouteConfigLoadStart && !this.hideMenuAnimation) {
+          document.getElementById('navigation__button').classList.add('isLoading');
       }
-      if (event instanceof RouteConfigLoadEnd) {
+      if (event instanceof RouteConfigLoadEnd && !this.hideMenuAnimation) {
         document.getElementById('navigation__button').classList.remove('isLoading');
       }
 
@@ -83,6 +85,8 @@ export class AppComponent implements OnInit {
         }
         // We enable overflow on body if fullscreen action had disabled it
         this.d.body.style.overflow = "auto";
+
+        if (this.hideMenuAnimation) { this.hideMenuAnimation = false; }
       }
     });
 
