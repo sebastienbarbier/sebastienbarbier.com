@@ -128,7 +128,6 @@ header {
         visibility: hidden;
         opacity: 0;
         transition: opacity 150ms, visibility 0s 150ms;
-        animation: 3s infinite alternate rotate;
       }
     }
     &.isLoading {
@@ -141,6 +140,7 @@ header {
         visibility: visible;
         opacity: 1;
         transition: opacity 150ms, visibility 0s;
+        animation: 3s infinite alternate rotate;
       }
     }
   }
