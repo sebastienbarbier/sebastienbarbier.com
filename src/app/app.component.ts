@@ -59,18 +59,17 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationStart) {
-        // console.log('NavigationStart');
         // On page change, we close navigation menu
         if (this.navigationMenuStatus === true) {
           this.navigationMenuStatus = !this.navigationMenuStatus;
         }
       }
-      // if (event instanceof RouteConfigLoadStart) {
-      //   console.log('RouteConfigLoadStart');
-      // }
-      // if (event instanceof RouteConfigLoadEnd) {
-      //   console.log('RouteConfigLoadEnd');
-      // }
+      if (event instanceof RouteConfigLoadStart) {
+        document.getElementById('navigation__button').classList.add('isLoading');
+      }
+      if (event instanceof RouteConfigLoadEnd) {
+        document.getElementById('navigation__button').classList.remove('isLoading');
+      }
 
       // NavigationStart, NavigationEnd, NavigationCancel, NavigationError, RoutesRecognized
       if (event instanceof NavigationEnd) {

@@ -90,6 +90,7 @@ header {
   label{
     cursor: pointer;
     position: absolute;
+    width: 35px;
     z-index: 1001;
     @media screen and (max-width: 599px) {
       top: 25px;
@@ -104,6 +105,44 @@ header {
       right: 60px;
     }
     #navigation__button__close { fill:white; visibility: hidden; }
+
+    @keyframes rotate {
+      from {
+        transform: rotate(360deg);
+      }
+
+      to {
+        transform: rotate(0deg);
+      }
+    }
+
+    svg {
+      position: absolute;
+      transition: opacity 150ms;
+      &:first-child {
+        visibility: visible;
+        opacity: 1;
+        transition: opacity 150ms, visibility 0s;
+      }
+      &:last-child {
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 150ms, visibility 0s 150ms;
+        animation: 3s infinite alternate rotate;
+      }
+    }
+    &.isLoading {
+      svg:first-child {
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 150ms, visibility 0s 150ms;
+      }
+      svg:last-child {
+        visibility: visible;
+        opacity: 1;
+        transition: opacity 150ms, visibility 0s;
+      }
+    }
   }
   input[type=checkbox]{
     display: none;
