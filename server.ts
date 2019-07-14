@@ -37,6 +37,15 @@ app.engine('html', ngExpressEngine({
   ]
 }));
 
+app.use((req, res, next) => {
+  var host = req.get('Host');
+  if (host === 'whereis.sebastienbarbier.com') {
+    return res.redirect('https://nomadlist.com/@sebastienbarbier');
+  }
+  return next();
+});
+
+
 app.set('view engine', 'html');
 app.set('views', join(DIST_FOLDER, 'browser'));
 
