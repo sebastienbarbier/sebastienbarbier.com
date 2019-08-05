@@ -161,21 +161,22 @@ header {
     transition: visibility 0s, opacity 0.2s ease-out, transform 0.1s ease-out;
 
     $range: 0.03s;
+    $delay: 0.06s;
 
     li {
 
       @mixin inline-animation($duration) {
         transition: opacity 0.2s ease-out $duration, transform 0.2s ease-out $duration;
       }
-      &:nth-child(0) { @include inline-animation(1*$range) }
-      &:nth-child(1) { @include inline-animation(2*$range) }
-      &:nth-child(2) { @include inline-animation(3*$range) }
-      &:nth-child(3) { @include inline-animation(4*$range) }
-      &:nth-child(4) { @include inline-animation(5*$range) }
+      &:nth-child(0) { @include inline-animation($delay+(1*$range)) }
+      &:nth-child(1) { @include inline-animation($delay+(2*$range)) }
+      &:nth-child(2) { @include inline-animation($delay+(3*$range)) }
+      &:nth-child(3) { @include inline-animation($delay+(4*$range)) }
+      &:nth-child(4) { @include inline-animation($delay+(5*$range)) }
     }
 
     ul.sublinks {
-      transition: opacity 0.2s ease-out 6*$range, transform 0.2s ease-out 6*$range;
+      transition: opacity 0.2s ease-out $delay+6*$range, transform 0.2s ease-out $delay+6*$range;
     }
 
     ul.sublinks, li {
