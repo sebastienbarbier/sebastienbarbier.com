@@ -232,7 +232,7 @@ header {
         position: relative;
         text-align: right;
 
-        transform : translateX(-30px) translateY(-3px);
+        transform : translateX(-30px) translateY(-2px);
         opacity: 0;
 
         @mixin inline-animation($duration) {
@@ -276,7 +276,7 @@ header {
 
     ul.sublinks {
       // Animation
-      transform : translateX(-30px) translateY(-3px);
+      transform : translateX(-30px) translateY(-2px);
       opacity: 0;
       transition: opacity 0.2s ease-out, transform 0.1s ease-out;
 
