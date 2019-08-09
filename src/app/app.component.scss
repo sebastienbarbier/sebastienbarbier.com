@@ -1,25 +1,41 @@
 @import '../assets/scss/variables';
 
+$headerFontSize: 1.8em;
+$headerPadding: 60px;
+
 header {
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
   height: 160px;
+  z-index: 100;
+
   @media screen and (max-width: 599px) {
-    padding-left: $padding;
     height: 140px;
-  }
-  @media screen and (min-width: 600px) and (max-width: 999px) {
-    padding-left: 40px;
-  }
-  @media screen and (min-width: 1000px) {
-    padding-left: 60px;
   }
 
   h1 {
     margin: 0;
     padding: 36px 0 0;
+    font-size: $headerFontSize;
 
     opacity: 1;
     visibility: visible;
     transition: opacity 0.4s ease-in 0s;
+
+    @media screen and (max-width: 599px) {
+      margin-left: $mobilePadding;
+    }
+    @media screen and (min-width: 600px) and (max-width: 999px) {
+      margin-left: $headerPadding - 20px;
+    }
+    @media screen and (min-width: 1000px) {
+      margin-left: $headerPadding;
+    }
+
     a {
       text-decoration: none;
       border-bottom: none;
@@ -56,7 +72,6 @@ header {
       visibility: hidden;
       transition: visibility 0s 0.2s, opacity 0.2s ease-out;
     }
-
   }
 
   #lang {
@@ -78,7 +93,7 @@ header {
       padding: 0 4px;
       cursor: default;
       color: #111;
-        font-weight: 600;
+      font-weight: 600;
       &.notCurrentLang{
         cursor: pointer;
         font-weight: 400;
@@ -90,7 +105,8 @@ header {
   label{
     cursor: pointer;
     position: absolute;
-    width: 35px;
+    width: $headerFontSize;
+    height: $headerFontSize;
     z-index: 1001;
     @media screen and (max-width: 599px) {
       top: 25px;
@@ -102,7 +118,7 @@ header {
     }
     @media screen and (min-width: 1000px) {
       top: 45px;
-      right: 60px;
+      right: $headerPadding;
     }
     #navigation__button__close { fill:white; visibility: hidden; }
 

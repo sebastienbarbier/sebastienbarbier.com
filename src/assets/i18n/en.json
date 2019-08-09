@@ -25,7 +25,8 @@
 		"home": "My name is Sebastien and I am a software engineer from France. Currently working as a full-stack javascript/python, I share my time between freelancing and personal projects.",
 		"legal": "This website is edited as individual and private content. It is not attached to any company of any kind.",
 		"work": "Seven23 is a personal budget application for nomads, but not only. MPDBox is a NFC music reader using a raspberry Pi.",
-		"resources": "Set of resources which might be useful to create content and communicate about myself"
+		"resources": "Set of resources which might be useful to create content and communicate about myself",
+    "location": "Location"
 	},
 	"about_me": {
 		"footer": "Complete background can be found on my <a target=\"_blank\" href=\"https://www.linkedin.com/in/sebbarbier/\">linkedin profile</a>.",
@@ -82,7 +83,7 @@
 		"hi": "Hi!",
 		"mynameis": "My name is Sebastien, I am a <strong>Software engineer</strong> from France.",
 		"whatido": {
-			"description": "I am a <strong>web technologies consultant and freelancer</strong>, working on full-stack javascript and python projects.",
+			"description": "I am a <strong>entrepreneur, maker, remote freelance, nomad, expat in thailand</strong>, working mainly as fullstack python senior front-end developer.",
 			"title": "About me"
 		},
 		"whereami": {
@@ -108,10 +109,11 @@
 	},
 	"nav": {
 		"contact": "Contact",
-		"about_me": "Freelance",
+		"about_me": "About me",
 		"home": "Home",
 		"legal": "Legal & copyright",
-		"work": "Projects",
+    "location": "Location",
+		"work": "Work",
 		"resources": "Resources",
 		"toggle": "Toggle navigation menu"
 	},

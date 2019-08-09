@@ -25,9 +25,10 @@
 		"home": "Je m'appelle Sébastien, ingénieur en logiciel, et suis originaire de France. Je partage mon temps entre des missions de freelance et des projets personnels.",
 		"legal": "Ce site internet est attaché à un individu privé, et n'enguage aucunement employeur ou client.",
 		"work": "Seven23 est une application de budget/finance personnel pour nomade, mais pas seulement! MPDBox est un prototype de lecteur mp3 controllé par puces NFC.",
-		"resources": "Ensemble de ressources pouvant servir dans la rédaction de contenu me concernant."
+		"resources": "Ensemble de ressources pouvant servir dans la rédaction de contenu me concernant.",
+    "location": "Localisation"
 	},
-	"about_me": {
+	"about": {
 		"footer": "L'ensemble de mon expérience professionnelle est disponible sur <a target=\"_blank\" href=\"https://www.linkedin.com/in/sebbarbier/\">mon profile Linkedin</a>.",
 		"header": {
 			"contact": "Me contacter",
@@ -82,7 +83,7 @@
 		"hi": "Bonjour!",
 		"mynameis": "Je m'appelle Sébastien, je suis <strong>ingénieur en logiciel</strong>, originaire de France.",
 		"whatido": {
-			"description": "Je suis <strong>consultant en technologies web, et freelance</strong>. J'interviens principalement sur des projet full-Stack Javascript ou python.",
+			"description": "Je suis <strong>entrepreneur, maker, remote freelance, nomade</strong>, et travail principalement comme dévelopeur fullstack python front-end senior.",
 			"title": "À propos de moi"
 		},
 		"whereami": {
@@ -108,10 +109,11 @@
 	},
 	"nav": {
 		"contact": "Contact",
-		"about_me": "Freelance",
+		"about": "À propos",
 		"home": "Accueil",
+    "location": "Localisation",
 		"legal": "Mentions légales",
-		"work": "Projets",
+		"work": "Réalisations",
 		"resources": "Ressources",
 		"toggle": "Bascule l'affichage du menu de navigation"
 	},

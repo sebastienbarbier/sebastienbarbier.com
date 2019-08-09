@@ -53,3 +53,7 @@ ng serve --host local.sebastienbarbier.fr
 ## Licence
 
 [MIT Licence](https://opensource.org/licenses/MIT), please feel free to share, copy, and republish for your own use.
+
+## Inspired
+
+https://www.giacomomottin.com/

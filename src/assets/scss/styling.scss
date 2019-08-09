@@ -66,6 +66,9 @@ p, li {
     font-weight: 600;
     font-size: 1.05em;
     letter-spacing: -0.04em;
+    a {
+      color: #222;
+    }
   }
   a {
     text-decoration: none;
@@ -73,7 +76,7 @@ p, li {
     color: #666;
     outline: 0;
     &:hover {
-      color: black;
+      color: #111;
     }
   }
 }
