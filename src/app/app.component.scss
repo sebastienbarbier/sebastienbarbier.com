@@ -167,10 +167,11 @@ header {
   input[type=checkbox]:checked + label + nav {
     // Animation
     visibility: visible;
+    transition: visibility 0s;
 
     &:before {
       opacity: 1;
-      transition: opacity 0.2s ease-out;
+      transition: opacity 0.2s ease-in;
     }
 
     $range: 0.03s;
