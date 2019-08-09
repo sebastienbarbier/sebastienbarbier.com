@@ -1,8 +1,5 @@
 @import '../assets/scss/variables';
 
-$headerFontSize: 1.8em;
-$headerPadding: 60px;
-
 header {
 
   position: fixed;
@@ -54,9 +51,6 @@ header {
       font-weight: 400;
     }
 
-    @media screen and (max-width: 599px) {
-      display: none;
-    }
     @media screen and (min-width: 600px) and (max-width: 999px) {
       small{
         display: block;
@@ -173,14 +167,15 @@ header {
   input[type=checkbox]:checked + label + nav {
     // Animation
     visibility: visible;
-    opacity: 1;
-    transition: visibility 0s, opacity 0.2s ease-out, transform 0.1s ease-out;
+
+    &:before {
+      opacity: 1;
+      transition: opacity 0.2s ease-out;
+    }
 
     $range: 0.03s;
     $delay: 0.06s;
-
     li {
-
       @mixin inline-animation($duration) {
         transition: opacity 0.2s ease-out $duration, transform 0.2s ease-out $duration;
       }
@@ -200,15 +195,13 @@ header {
       opacity: 1;
     }
   }
-  nav {
 
+  nav {
     z-index: 1000;
 
     // Animation
     visibility: hidden;
-    opacity: 0;
-    transition: visibility 0s 0.2s, opacity .2s ease-out, transform .2s ease-out;
-
+    transition: visibility 0s 0.2s;
     // Position
     position: fixed;
     top: 0; bottom: 0; left: 0; right: 0;
@@ -217,8 +210,17 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: $nav-background;
     color: white;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0; bottom: 0; left: 0; right: 0;
+      background: $nav-background;
+      opacity: 0;
+      transition: opacity 0.2s ease-out;
+      z-index: 100;
+    }
 
     @media screen and (max-width: 599px) {
       align-items: flex-end;
@@ -229,6 +231,7 @@ header {
       align-items: flex-end;
       padding-right: 10vw;
     }
+
 
     ul.links {
       // Animation
@@ -243,6 +246,7 @@ header {
       }
       padding: 0;
       list-style: none;
+      z-index: 101;
 
       li{
         padding: 14px 0px 14px 0;
@@ -292,6 +296,7 @@ header {
     }
 
     ul.sublinks {
+      z-index: 101;
       // Animation
       transform : translateX(-30px);
       opacity: 0;
@@ -348,13 +353,4 @@ header {
 
     }
   }
-}
-
-
-
-aside{
-  z-index: 100;
-  position: absolute;
-  top: 0; left: 0; right: 0;
-
 }

@@ -1,9 +1,21 @@
+@import './variables';
+
 h1 {
   position: fixed;
   bottom: 0px;
   right: 0px;
-  transform: translateX(50%) rotate(-90deg) translateX(50%) translateX(60px) translateY(-60px);
+  transform: translateX(50%) rotate(-90deg) translateX(50%) translateX($headerPadding) translateY($headerPadding * -1) translateY(-1em);
   padding: 0;
   margin: 0;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
+  z-index: 99;
+
+  &:after {
+    content: '';
+    border-bottom: solid 1px black;
+    width: 20px;
+    position: absolute;
+    top: 0.7em;
+    right: -30px;
+  }
 }
