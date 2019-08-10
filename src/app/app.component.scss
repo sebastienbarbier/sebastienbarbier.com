@@ -10,7 +10,7 @@ header {
 
   // sebastienbarbier logo as text
   a.logo {
-    display: block;
+    display: inline-block;
     height: $headerFontSize;
 
     -webkit-touch-callout: none;
