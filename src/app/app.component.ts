@@ -25,7 +25,6 @@ import {
 })
 export class AppComponent implements OnInit {
 
-  headerState: string;
   navigationMenuStatus: Boolean;
   lang: string;
   path: string;
@@ -43,7 +42,6 @@ export class AppComponent implements OnInit {
       @Inject(DOCUMENT) private d,
       @Optional() @Inject('serverUrl') protected serverUrl: string
     ) {
-    this.headerState = 'show';
     this.navigationMenuStatus = false;
     this.hideMenuAnimation = true;
 
@@ -78,11 +76,11 @@ export class AppComponent implements OnInit {
 
         this.path = event.url;
         // If home page, we hide header
-        if (event.url === '/') {
-          this.headerState = '';
-        } else {
-          this.headerState = '';
-        }
+        // if (event.url === '/') {
+        //   this.headerState = '';
+        // } else {
+        //   this.headerState = '';
+        // }
         // We enable overflow on body if fullscreen action had disabled it
         this.d.body.style.overflow = "auto";
 

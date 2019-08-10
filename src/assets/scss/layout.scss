@@ -1,14 +1,13 @@
 @import './variables';
 
 h1 {
-  position: fixed;
-  bottom: 0px;
-  right: 0px;
-  transform: translateX(50%) rotate(-90deg) translateX(50%) translateX($headerPadding) translateY($headerPadding * -1) translateY(-1em);
+
   padding: 0;
   margin: 0;
-  font-size: 1.2rem;
+  font-size: $titleFontSize;
   z-index: 99;
+  position: relative;
+  display: inline-block;
 
   &:after {
     content: '';
@@ -18,4 +17,35 @@ h1 {
     top: 0.7em;
     right: -30px;
   }
+
+  @media screen and (max-width: $sm) {
+    margin: $paddingMedium $paddingSmall;
+  }
+
+  @media screen and (min-width: $sm) and (max-width: $md - 1px) {
+    margin: $paddingMedium;
+  }
+
+  @media screen and (min-width: $md) and (max-width: $lg - 1px) {
+    transform: translateX(50%) rotate(-90deg) translateX(50%) translateX($paddingMedium) translateY($paddingMedium * -1) translateY(-1em);
+  }
+
+  @media screen and (min-width: $lg) {
+    transform: translateX(50%) rotate(-90deg) translateX(50%) translateX($paddingMedium) translateY($paddingMedium * -1) translateY(-1em);
+  }
+
+  @media screen and (min-width: $md) {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    &:after {
+      content: '';
+      border-bottom: solid 1px black;
+      width: 20px;
+      position: absolute;
+      top: 0.7em;
+      right: -30px;
+    }
+  }
+
 }

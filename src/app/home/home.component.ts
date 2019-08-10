@@ -13,19 +13,27 @@ import {
   animateChild } from '@angular/animations';
 
 const homeTransition = trigger('homeTransition', [
-  transition(':enter', [
+  transition(':enter', group([
     query('.block', style({ opacity: 0 }), {optional: true}),
     query('.block', stagger(100, [
       style({ transform: 'translateY(60px)' }),
       animate('0.6s cubic-bezier(.75,-0.48,.26,1.52)', style({transform: 'translateY(0px)', opacity: 1})),
     ]), {optional: true}),
-  ]),
-  transition(':leave', [
+    query('.scrollHelper', sequence([
+      style({ opacity: 0 }),
+      animate('1s', style({ opacity: 1 })),
+    ]), {optional: true}),
+  ])),
+  transition(':leave', group([
     query('.block', stagger(100, [
       style({ transform: 'translateY(0px)', opacity: 1 }),
       animate('0.6s cubic-bezier(.75,-0.48,.26,1.52)', style({transform: 'translateY(60px)', opacity: 0})),
     ]), {optional: true}),
-  ])
+    query('.scrollHelper', sequence([
+      style({ opacity: 1 }),
+      animate('0.3s', style({ opacity: 0 })),
+    ]), {optional: true}),
+  ]))
 ]);
 
 @Component({

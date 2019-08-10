@@ -6,19 +6,19 @@ header.header {
   justify-content: space-between;
   align-items: center;
 
-  @media screen and (max-width: 599px) {
+  @media screen and (max-width: $md) {
     flex-direction: column;
     align-items: flex-start;
   }
-  @media screen and (min-width: 600px) and (max-width: 999px) {
+  @media screen and (min-width: $md + 1px) and (max-width: $lg) {
     flex-direction: column;
     align-items: flex-start;
   }
 
-  @media screen and (min-width: 1000px) {
+  @media screen and (min-width: $lg + 1px) {
+    margin-right: calc(#{$paddingLarge} + #{$paddingLarge} + 1.4rem);
     padding-bottom: 60px;
   }
-
 
   h2 {
     margin-bottom: 32px;

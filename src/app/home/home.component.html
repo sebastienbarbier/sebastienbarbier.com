@@ -1,5 +1,5 @@
-<header class="padding" style="margin-top: 160px;">
-  <div>
+<header>
+  <div class="container">
     <div class="avatar block">
       <img
         src="https://cdn2.sebastienbarbier.com/images/sebastienbarbier_profile_256.jpg"
@@ -26,9 +26,10 @@
     <h2 class="block">{{ 'home.hi' | translate }}</h2>
     <p class="block" [innerHTML]="'home.mynameis' | translate"></p>
   </div>
+  <div class="scrollHelper">Scroll</div>
 </header>
 
-<div class="line block padding">
+<div class="line padding">
   <div class="intro">
     <h2>{{ 'home.whatido.title' | translate }}</h2>
     <p [innerHTML]="'home.whatido.description' | translate"></p>

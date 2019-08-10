@@ -1,24 +1,48 @@
 @import '../../assets/scss/variables';
 @import '../../assets/scss/layout';
 
+
+@keyframes scroll {
+  0% {
+    top: 0%;
+    bottom: 100%;
+  }
+
+  50% {
+    top: 0%;
+    bottom: 0%;
+  }
+
+  100% {
+    top: 100%;
+    bottom: 0%;
+  }
+}
+
 header {
+  width: 100vw;
+  height: 100vh;
   font-size: 1.6rem;
 
-  @media screen and (max-width: 599px) {
-    padding-bottom: 80px;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 60vh; left: 70vw; right: 5vw; bottom: 5vh;
+    opacity: 0.2;
+    z-index: 0;
+    background: url('../../assets/images/coffee_cup_2.png') no-repeat center center;
+    background-size: contain;
   }
-  @media screen and (min-width: 600px) and (max-width: 999px) {
-    padding-bottom: 100px;
-  }
+
   @media screen and (min-width: 1000px) {
-    width: 780px;
-    margin: auto;
-    height: calc(55vh - 160px);
-    min-height: 200px;
-    padding-bottom: 160px;
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .container {
+    padding-bottom: 100px;
+    z-index: 50;
   }
 
   h2 {
@@ -61,12 +85,36 @@ header {
     }
   }
 
+  .scrollHelper {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    font-size: 0.4em;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 12px 8px;
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      border-left: 1px solid black;
+    }
+
+    &:after {
+      animation-name: scroll;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+    }
+    &:before {
+      opacity: 0.3;
+    }
+  }
 }
 
 .line {
   display: flex;
   flex-direction: row;
-  border-top: solid 1px $light2;
 
   @media screen and (max-width: 999px) {
     flex-direction: column;

@@ -29,11 +29,6 @@ export const appRoutes: Routes = [
     data: { title: 'nav.contact', description: _('description.contact'), theme: 'light', state: 'contact' }
   },
   {
-    path: 'location',
-    loadChildren: () => import('./location/location.module').then(mod => mod.LocationModule),
-    data: { title: 'nav.location', description: _('description.location'), theme: 'light', state: 'location' }
-  },
-  {
     path: 'resources',
     loadChildren: () => import('./resources/resources.module').then(mod => mod.ResourcesModule),
     data: { title: 'nav.resources', description: _('description.resources'), theme: 'light', state: 'resources' }

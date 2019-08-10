@@ -4,7 +4,7 @@
 section {
 
   .project {
-
+    padding-right: calc(120px + 1.4rem);
     max-width: 1280px;
     margin: auto;
     margin-top: 20px;
@@ -58,10 +58,12 @@ section {
     padding-bottom: 40px;
     margin: auto;
 
+
+
     @media screen and (min-width: 1000px) {
       max-width: 1220px;
-      padding-left: 40px;
-      padding-right: 40px;
+      padding-left: calc(120px + 1.4rem);
+      padding-right: calc(120px + 1.4rem);
     }
 
     div.gallery_list {
@@ -112,6 +114,7 @@ section {
 .line {
   display: flex;
   max-width: 1280px;
+  padding-right: calc(120px + 1.4rem);
   margin: auto;
   justify-content: space-bewteen;
 
@@ -141,7 +144,6 @@ section {
 }
 
 div.gallery {
-
   input[type="radio"]#no_gallery {
     display: none;
     & + div.gallery_list {
@@ -194,6 +196,7 @@ div.gallery {
         list-style: none;
         flex-grow: 1;
         flex-shrink: 1;
+
         li {
           position: absolute;
           top: 0px; left: 0px; right: 0px; bottom: 0px;
