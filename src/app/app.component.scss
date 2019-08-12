@@ -1,5 +1,14 @@
 @import '../assets/scss/variables';
 
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 0.2;
+  }
+}
 
 .home, .notHome, .aboutMe {
   position: relative;
@@ -21,6 +30,9 @@
     z-index: 1;
     transition: opacity 1s, transform 1s;
     pointer-events: none;
+
+    animation-name: appear;
+    animation-duration: .6s;
   }
 }
 
