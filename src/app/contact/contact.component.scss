@@ -45,6 +45,24 @@ article {
       }
     }
 
+    p.email {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      a.pgp {
+        font-size: 0.4em;
+        border: none;
+        margin-left: 12px;
+        display: inline-block;
+        background: rgba(100, 100, 100, 0.6);
+        color: white;
+        border-radius: 4px;
+        padding: 2px 4px;
+        font-weight: 700;
+      }
+    }
+
+
     ul {
       max-width: 900px;
       padding: 0;
