@@ -23,8 +23,10 @@
         </g>
       </svg>
     </div>
-    <h2 class="block">{{ 'home.hi' | translate }}</h2>
-    <p class="block" [innerHTML]="'home.mynameis' | translate"></p>
+    <div>
+      <h2 class="block">Hi, my name is Sébastien</h2>
+      <p class="block">and I am an Entrepreneur and Freelancer web.</p>
+    </div>
   </div>
   <div class="scrollHelper">Scroll</div>
 </header>
@@ -39,4 +41,16 @@
     <h2>{{ 'home.whereami.title' | translate }}</h2>
     <p [innerHTML]="'home.whereami.description' | translate"></p>
   </div>
+</div>
+
+<div>
+  <ul class="contactList">
+    <li><a href="http://www.twitter.com/SebBarbier/"><img src="/assets/images/twitter_logo.svg" alt="Twitter logo" /></a></li>
+    <li><a href="http://stackoverflow.com/users/4762763/sebastienbarbier"><img src="/assets/images/stackoverflow_logo.svg" alt="Stack Overflow logo" /></a></li>
+    <li><a href="https://www.linkedin.com/in/sebbarbier/"><img src="/assets/images/linkedin_logo.svg" alt="Linkedin logo" /></a></li>
+    <li><a href="https://github.com/sebastienbarbier/"><img src="/assets/images/github_logo.svg" alt="Github logo" /></a></li>
+    <li><a href="https://instagram.com/sebastienbarbier/"><img src="/assets/images/instagram_logo.svg" alt="Instagram logo" /></a></li>
+    <li><a href="http://www.facebook.com/sebastienbarbier/"><img src="/assets/images/facebook_logo.svg" alt="Facebook logo" /></a></li>
+    <li class="more"><a routerLink="/contact">More</a></li>
+  </ul>
 </div>

@@ -20,19 +20,20 @@
 }
 
 header {
+  position: relative;
   width: 100vw;
   height: 100vh;
   font-size: 1.6rem;
 
-  &:before {
-    content: '';
-    position: absolute;
-    top: 60vh; left: 70vw; right: 5vw; bottom: 5vh;
-    opacity: 0.2;
-    z-index: 0;
-    background: url('../../assets/images/coffee_cup_2.png') no-repeat center center;
-    background-size: contain;
-  }
+  // &:before {
+  //   content: '';
+  //   position: absolute;
+  //   top: 60vh; left: 70vw; right: 5vw; bottom: 5vh;
+  //   opacity: 0.2;
+  //   z-index: 0;
+  //   background: url('../../assets/images/coffee_cup_2.png') no-repeat center center;
+  //   background-size: contain;
+  // }
 
   @media screen and (min-width: 1000px) {
     display: flex;
@@ -43,6 +44,8 @@ header {
   .container {
     padding-bottom: 100px;
     z-index: 50;
+    display: flex;
+    align-items: center;
   }
 
   h2 {
@@ -58,13 +61,14 @@ header {
   }
 
   .avatar {
-    border-radius: 70px;
+    flex-shrink: 0;
+    border-radius: 50%;
     margin-top: 0px;
     margin-right: 40px;
     overflow: hidden;
     position: relative;
-    width: 140px;
-    height: 140px;
+    width: 240px;
+    height: 240px;
     z-index: 1;
     box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2),0px 2px 2px 0px rgba(0, 0, 0, 0.14),0px 3px 1px -2px rgba(0, 0, 0, 0.12);
 
@@ -89,7 +93,7 @@ header {
     position: absolute;
     bottom: 0;
     left: 50%;
-    font-size: 0.4em;
+    font-size: 0.6rem;
     text-transform: uppercase;
     font-weight: 700;
     padding: 12px 8px;
@@ -137,5 +141,35 @@ header {
     flex: 50%;
     margin: 0px 40px;
     padding: 60px 10px;
+  }
+}
+
+.contactList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  align-items: center;
+  padding: 10px $paddingSmall;
+  li {
+    padding: 5px 12px;
+    a {
+      border: none;
+      img {
+        height: 1.6rem;
+      }
+    }
+    &.more {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      a {
+        color: black;
+        &:after {
+          margin-left: 5px;
+          content: '>';
+        }
+      }
+    }
   }
 }

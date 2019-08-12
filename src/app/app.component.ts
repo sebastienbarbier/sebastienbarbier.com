@@ -76,11 +76,13 @@ export class AppComponent implements OnInit {
 
         this.path = event.url;
         // If home page, we hide header
-        // if (event.url === '/') {
-        //   this.headerState = '';
-        // } else {
-        //   this.headerState = '';
-        // }
+        if (event.url === '/') {
+          this.headerState = 'home';
+        } else if (event.url === '/about-me') {
+          this.headerState = 'aboutMe';
+        } else {
+          this.headerState = 'notHome';
+        }
         // We enable overflow on body if fullscreen action had disabled it
         this.d.body.style.overflow = "auto";
 
