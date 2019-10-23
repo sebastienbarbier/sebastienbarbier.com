@@ -16,7 +16,7 @@ import {
 
 export const routerTransition = trigger('routerTransition', [
   transition('* => *', [
-    query(':enter, :leave', style({ position: 'fixed', width: '100%', height: '100%' }), {optional: true}),
+    query(':enter, :leave', style({  }), {optional: true}),
     query(':enter', style({ opacity: 0 }), {optional: true}),
     sequence([
       query(':leave', animateChild(), {optional: true}),

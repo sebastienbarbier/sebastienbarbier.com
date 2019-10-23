@@ -1,7 +1,7 @@
 <div [class]="headerState"> <!-- Required by angular universal -->
   <header>
     <a class="logo" routerLink="/">
-      <img src="https://cdn2.sebastienbarbier.com/images/sebastienbarbier_logo.svg" alt="This image contains: sebastien's logo which is simply his first and last name together with a stylish font" />
+      <img src="/assets/images/sebastienbarbier_logo.svg" alt="This image contains: sebastien's logo which is simply his first and last name together with a stylish font" />
     </a>
 
     <input hidden type="checkbox" id="navigation__toggle" [(ngModel)]="navigationMenuStatus" />
@@ -43,6 +43,6 @@
   </header>
 
   <main [@routerTransition]="getState(o)">
-    <router-outlet #o="outlet"></router-outlet>
+    <router-outlet #o="outlet" class="outlet"></router-outlet>
   </main>
 </div>
