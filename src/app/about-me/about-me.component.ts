@@ -12,7 +12,7 @@ export class AboutMeComponent implements OnInit {
   clients = {
     chefclub: {
       label: 'Chefclub',
-      logo: 'https://cdn4.sebastienbarbier.com/images/chefclub/chefclub-logo.png',
+      logo: '/assets/images/chefclub/chefclub-logo.png',
       date: '2018 - 2019',
       type: 'about_me.chefclub.type',
       location: 'about_me.chefclub.location',
@@ -26,20 +26,20 @@ export class AboutMeComponent implements OnInit {
       previous: null,
       next: 'mozilla',
       gallery: [{
-        small: 'https://cdn4.sebastienbarbier.com/images/chefclub/chefclub-saint-calentin.600.jpg',
-        large: 'https://cdn4.sebastienbarbier.com/images/chefclub/chefclub-saint-calentin.1800.jpg',
+        small: '/assets/images/chefclub/chefclub-saint-calentin.600.jpg',
+        large: '/assets/images/chefclub/chefclub-saint-calentin.1800.jpg',
         style: 'large'
       },{
-        small: 'https://cdn4.sebastienbarbier.com/images/chefclub/chefclub-screens.600.jpg',
-        large: 'https://cdn4.sebastienbarbier.com/images/chefclub/chefclub-screens.1800.jpg'
+        small: '/assets/images/chefclub/chefclub-screens.600.jpg',
+        large: '/assets/images/chefclub/chefclub-screens.1800.jpg'
       },{
-        small: 'https://cdn4.sebastienbarbier.com/images/chefclub/chefclub-mobile.600.jpg',
-        large: 'https://cdn4.sebastienbarbier.com/images/chefclub/chefclub-mobile.1800.jpg'
+        small: '/assets/images/chefclub/chefclub-mobile.600.jpg',
+        large: '/assets/images/chefclub/chefclub-mobile.1800.jpg'
       }]
     },
     mozilla: {
       label: 'Mozilla',
-      logo: 'https://cdn4.sebastienbarbier.com/images/mozilla/mozilla_logo.svg',
+      logo: '/assets/images/mozilla/mozilla_logo.svg',
       date: '2018',
       type: 'about_me.mozilla.type',
       location: 'about_me.mozilla.location',
@@ -53,23 +53,23 @@ export class AboutMeComponent implements OnInit {
       previous: 'chefclub',
       next: 'mila',
       gallery: [{
-        small: 'https://cdn4.sebastienbarbier.com/images/mozilla/galery_1_screens.600.jpg',
-        large: 'https://cdn4.sebastienbarbier.com/images/mozilla/galery_1_screens.1800.jpg',
+        small: '/assets/images/mozilla/galery_1_screens.600.jpg',
+        large: '/assets/images/mozilla/galery_1_screens.1800.jpg',
         style: 'large'
       },{
-        small: 'https://cdn4.sebastienbarbier.com/images/mozilla/galery_2_list.600.jpg',
-        large: 'https://cdn4.sebastienbarbier.com/images/mozilla/galery_2_list.1800.jpg'
+        small: '/assets/images/mozilla/galery_2_list.600.jpg',
+        large: '/assets/images/mozilla/galery_2_list.1800.jpg'
       },{
-        small: 'https://cdn4.sebastienbarbier.com/images/mozilla/galery_3_note.600.jpg',
-        large: 'https://cdn4.sebastienbarbier.com/images/mozilla/galery_3_note.1800.jpg'
+        small: '/assets/images/mozilla/galery_3_note.600.jpg',
+        large: '/assets/images/mozilla/galery_3_note.1800.jpg'
       },{
-        small: 'https://cdn4.sebastienbarbier.com/images/mozilla/galery_4_app.600.jpg',
-        large: 'https://cdn4.sebastienbarbier.com/images/mozilla/galery_4_app.1800.jpg'
+        small: '/assets/images/mozilla/galery_4_app.600.jpg',
+        large: '/assets/images/mozilla/galery_4_app.1800.jpg'
       }]
     },
     mila: {
       label: 'Mila',
-      logo: 'https://cdn4.sebastienbarbier.com/images/mila/logo_02_blue.png',
+      logo: '/assets/images/mila/logo_02_blue.png',
       date: '2017',
       type: 'about_me.mila.type',
       location: 'about_me.mila.location',
