@@ -19,6 +19,7 @@ header.header {
   @media screen and (min-width: $lg + 1px) {
     margin-top: 160px;
     margin-right: calc(#{$paddingLarge} + #{$paddingLarge} + 1.4rem);
+    margin-left: 35vw;
     padding-bottom: 60px;
   }
 

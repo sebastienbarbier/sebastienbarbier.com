@@ -28,6 +28,7 @@ export class AppComponent implements OnInit {
   navigationMenuStatus: Boolean;
   lang: string;
   path: string;
+  headerState: string;
   hideMenuAnimation: Boolean;
 
   constructor(
@@ -80,6 +81,8 @@ export class AppComponent implements OnInit {
           this.headerState = 'home';
         } else if (event.url === '/about-me') {
           this.headerState = 'aboutMe';
+        } else if (event.url === '/work') {
+          this.headerState = 'work';
         } else {
           this.headerState = 'notHome';
         }

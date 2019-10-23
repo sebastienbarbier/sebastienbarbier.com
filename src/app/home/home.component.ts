@@ -44,11 +44,28 @@ const homeTransition = trigger('homeTransition', [
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  hasIntersectionObservable: Boolean;
+
+  constructor() {
+    this.hasIntersectionObservable = IntersectionObserver != undefined;
+  }
+
 
   @HostBinding('@homeTransition') '';
 
   ngOnInit() {
+    if (this.hasIntersectionObservable) {
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting && !entry.target.classList.contains('show')) {
+            entry.target.classList.add('show');
+          }
+        });
+      }, { threshold: [0] });
+
+      observer.observe(document.querySelector("#observer1"));
+      observer.observe(document.querySelector("#observer2"));
+    }
   }
 
 }

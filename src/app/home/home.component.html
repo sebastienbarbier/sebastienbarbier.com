@@ -25,19 +25,19 @@
     </div>
     <div>
       <h2 class="block">Hi, my name is Sébastien</h2>
-      <p class="block">and I am an Entrepreneur and Freelancer web.</p>
+      <p class="block">I am an Entrepreneur and Freelancer web.</p>
     </div>
   </div>
   <div class="scrollHelper">Scroll</div>
 </header>
 
 <div class="line padding">
-  <div class="intro">
+  <div class="intro" id="observer1" [ngClass]="{'isObserved': hasIntersectionObservable}">
     <h2>{{ 'home.whatido.title' | translate }}</h2>
-    <p [innerHTML]="'home.whatido.description' | translate"></p>
+    <p>At the moment, I am <strong>working full time</strong> on my first app, <strong>seven23</strong>. I am trying to pivot my activities to a fully <strong>passive income</strong> model, and will <strong>document all of it</strong> on social networks.</p>
   </div>
 
-  <div class="location">
+  <div class="location" id="observer2" [ngClass]="{'isObserved': hasIntersectionObservable}">
     <h2>{{ 'home.whereami.title' | translate }}</h2>
     <p [innerHTML]="'home.whereami.description' | translate"></p>
   </div>
@@ -45,12 +45,12 @@
 
 <div>
   <ul class="contactList">
-    <li><a href="http://www.twitter.com/SebBarbier/"><img src="/assets/images/twitter_logo.svg" alt="Twitter logo" /></a></li>
-    <li><a href="http://stackoverflow.com/users/4762763/sebastienbarbier"><img src="/assets/images/stackoverflow_logo.svg" alt="Stack Overflow logo" /></a></li>
-    <li><a href="https://www.linkedin.com/in/sebbarbier/"><img src="/assets/images/linkedin_logo.svg" alt="Linkedin logo" /></a></li>
-    <li><a href="https://github.com/sebastienbarbier/"><img src="/assets/images/github_logo.svg" alt="Github logo" /></a></li>
-    <li><a href="https://instagram.com/sebastienbarbier/"><img src="/assets/images/instagram_logo.svg" alt="Instagram logo" /></a></li>
-    <li><a href="http://www.facebook.com/sebastienbarbier/"><img src="/assets/images/facebook_logo.svg" alt="Facebook logo" /></a></li>
+    <li><a target="_blank" href="http://www.twitter.com/SebBarbier/"><img src="/assets/images/twitter_logo.svg" alt="Twitter logo" /></a></li>
+    <li><a target="_blank" href="http://stackoverflow.com/users/4762763/sebastienbarbier"><img src="/assets/images/stackoverflow_logo.svg" alt="Stack Overflow logo" /></a></li>
+    <li><a target="_blank" href="https://www.linkedin.com/in/sebbarbier/"><img src="/assets/images/linkedin_logo.svg" alt="Linkedin logo" /></a></li>
+    <li><a target="_blank" href="https://github.com/sebastienbarbier/"><img src="/assets/images/github_logo.svg" alt="Github logo" /></a></li>
+    <li><a target="_blank" href="https://instagram.com/sebastienbarbier/"><img src="/assets/images/instagram_logo.svg" alt="Instagram logo" /></a></li>
+    <li><a target="_blank" href="http://www.facebook.com/sebastienbarbier/"><img src="/assets/images/facebook_logo.svg" alt="Facebook logo" /></a></li>
     <li class="more"><a routerLink="/contact">More</a></li>
   </ul>
 </div>
