@@ -5,7 +5,8 @@ import { enableProdMode } from '@angular/core';
 
 import * as express from 'express';
 
-import { enforce } from 'express-sslify';
+import enforce from 'express-sslify';
+
 import { join } from 'path';
 import { readFileSync } from 'fs';
 
