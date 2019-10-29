@@ -1,11 +1,15 @@
-<h1>{{ 'nav.legal' | translate }}</h1>
-<article class="padding" style="margin-top: 160px;">
-  <p [innerHTML]="'legal.description' | translate"></p>
-  <h3 [innerHTML]="'legal.author.title' | translate"></h3>
-  <p [innerHTML]="'legal.author.description' | translate"></p>
-  <h3 [innerHTML]="'legal.hosting.title' | translate"></h3>
-  <p [innerHTML]="'legal.hosting.description' | translate"></p>
-  <h3 [innerHTML]="'legal.licence.title' | translate"></h3>
-  <p [innerHTML]="'legal.licence.content' | translate"></p>
-  <p [innerHTML]="'legal.licence.website' | translate"></p>
-</article>
+<div class="route">
+  <div class="container">
+    <h1>{{ 'nav.legal' | translate }}</h1>
+    <article class="padding">
+      <p [innerHTML]="'legal.description' | translate"></p>
+      <h3 [innerHTML]="'legal.author.title' | translate"></h3>
+      <p [innerHTML]="'legal.author.description' | translate"></p>
+      <h3 [innerHTML]="'legal.hosting.title' | translate"></h3>
+      <p [innerHTML]="'legal.hosting.description' | translate"></p>
+      <h3 [innerHTML]="'legal.licence.title' | translate"></h3>
+      <p [innerHTML]="'legal.licence.content' | translate"></p>
+      <p [innerHTML]="'legal.licence.website' | translate"></p>
+    </article>
+  </div>
+</div>

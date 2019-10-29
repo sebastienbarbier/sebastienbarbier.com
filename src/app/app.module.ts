@@ -54,7 +54,8 @@ if (environment.production) {
     BrowserAnimationsModule,
     FormsModule,
     RouterModule.forRoot(
-      appRoutes
+      appRoutes,
+      {onSameUrlNavigation: 'ignore',}
     ),
     TranslateModule.forRoot({
         loader: {

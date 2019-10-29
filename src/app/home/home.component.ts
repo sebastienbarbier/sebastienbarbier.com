@@ -21,7 +21,7 @@ const homeTransition = trigger('homeTransition', [
     ]), {optional: true}),
     query('.scrollHelper', sequence([
       style({ opacity: 0 }),
-      animate('1s', style({ opacity: 1 })),
+      animate('150ms', style({ opacity: 1 })),
     ]), {optional: true}),
   ])),
   transition(':leave', group([
@@ -65,6 +65,7 @@ export class HomeComponent implements OnInit {
 
       observer.observe(document.querySelector("#observer1"));
       observer.observe(document.querySelector("#observer2"));
+      observer.observe(document.querySelector("#observer3"));
     }
   }
 

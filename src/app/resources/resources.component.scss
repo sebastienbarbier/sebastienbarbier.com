@@ -1,44 +1,96 @@
 @import '../../assets/scss/variables';
 @import '../../assets/scss/layout';
 
-article {
-  max-width: $articleWidth;
+// Asset with thumbnail and list of resolution available.
+div.ressources-asset {
+  width: 100%;
+  padding: 16px 16px;
+  border-radius: 4px;
+  background: $light2;
+  &.light {
+    background: $light;
+  }
 
-  // Asset with thumbnail and list of resolution available.
-  div {
-    margin: 0 10px 60px;
+  h3 {
+    margin-top: 12px;
+  }
 
-    h3 {
-      margin-top: 40px;
-    }
+  img {
+    max-width: 200px;
+    max-height: 80px;
+  }
 
-    img {
-      max-width: 200px;
-      max-height: 80px;
-    }
-
-    ul {
-      list-style: none;
-      display: flex;
-      padding: 0;
-      margin: 0;
-      li {
-        margin: 4px 8px 4px 0;
-        a {
-          background: #AAA;
-          color: white;
-          text-decoration: none;
-          padding: 4px 8px;
-          font-weight: 600;
-          font-size: 0.9em;
-          border-radius: 4px;
-          border: none;
-          &.primary {
-            background: rgb(44, 124, 176);
-          }
+  ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    li {
+      margin: 4px 8px 4px 0;
+      a {
+        background: #AAA;
+        color: white;
+        text-decoration: none;
+        padding: 4px 8px;
+        font-weight: 600;
+        font-size: 0.9em;
+        border-radius: 4px;
+        border: none;
+        &.primary {
+          background: rgb(44, 124, 176);
         }
       }
     }
   }
+}
+.banner {
+  background-color: $light2;
+}
 
+ul.colors {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  li {
+    margin: 0;
+    padding: 0 0 20px 0;
+  }
+  li:before {
+    content: '';
+    width: 50px;
+    height: 50px;
+    display: block;
+    border: solid 1px $light3;
+  }
+  li.colorNavigation:before { background-color: rgb(31, 29, 29); }
+  li.light:before { background-color: rgb(247, 247, 246); }
+  li.light2:before { background-color: rgb(235, 235, 235); }
+  li.light3:before { background-color: rgb(200, 200, 200); }
+  li.colorPolo:before { background-color: #8baed7; }
+  li.colorBlack:before { background-color: #080d15; }
+  li.colorBlackRock:before { background-color: #232435; }
+  li.colorChambray:before { background-color: #455671; }
+  li.colorLight:before { background-color: #8c6c71; }
+  li.colorCab:before { background-color: #594043; }
+  li.colorScarpa:before { background-color: #676569; }
+  li.colorDawn:before { background-color: #9d9990; }
+}
+
+ul.fonts {
+  flex-direction: column;
+  li {
+    font-size: 3em;
+    line-height: 1em;
+    @media screen and (min-width: $sm) and (max-width: $md - 1px) {
+      font-size: 2em;
+    }
+    @media screen and (max-width: $sm) {
+      font-size: 1.5em;
+    }
+  }
+  li:nth-child(1) { font-weight: 700; }
+  li:nth-child(2) { font-weight: 600; }
+  li:nth-child(3) { font-weight: 400; }
+  li:nth-child(4) { font-weight: 300; }
 }

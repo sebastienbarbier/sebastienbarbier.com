@@ -21,7 +21,8 @@ export const appRoutes: Routes = [
   {
     path: 'work',
     loadChildren: () => import('./work/work.module').then(mod => mod.WorkModule),
-    data: { title: 'nav.work', description: _('description.work'), theme: 'light', state: 'work' }
+    data: { title: 'nav.work', description: _('description.work'), theme: 'light', state: 'work' },
+    runGuardsAndResolvers: 'always'
   },
   {
     path: 'contact',

@@ -10,6 +10,14 @@
   }
 }
 
+main {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0; left: 0; right: 0; bottom: 0;
+  overflow: hidden;
+}
+
 .home, .notHome, .aboutMe, .work {
   position: relative;
   width: 100%;
@@ -234,7 +242,7 @@ header {
       content: '';
       position: absolute;
       top: 0; bottom: 0; left: 0; right: 0;
-      background: $nav-background;
+      background: $colorNavigation;
       opacity: 0;
       transition: opacity 0.2s ease-out;
       z-index: 100;

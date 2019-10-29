@@ -1,58 +1,47 @@
-<div class="container">
-  <header id="home">
-    <div class="row align-items-center">
-      <div class="avatar col-sm-3">
-        <img
-          src="/assets/images/sebastienbarbier_profile_256.jpg"
-          srcset="/assets/images/sebastienbarbier_profile_256.jpg 256w,
-                  /assets/images/sebastienbarbier_profile_512.jpg 512w,
-                  /assets/images/sebastienbarbier_profile_1024.jpg 1024w,"
-          alt="Sébastien Barbier profile picture" />
-        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 140 140">
-          <rect x="0" y="0" width="140" height="140" fill="#4c586b" />
-          <g transform="scale(0.546875) translate(0.5 0.5)">
-            <polygon fill="#c8ffff" fill-opacity="0.501961" points="-9,127 2,-16 271,12" />
-            <polygon fill="#000000" fill-opacity="0.501961" points="-16,247 271,271 250,68" />
-            <polygon fill="#9ccaff" fill-opacity="0.501961" points="251,89 -16,8 271,-16" />
-            <polygon fill="#000000" fill-opacity="0.501961" points="271,113 103,93 244,271" />
-            <polygon fill="#a46e6c" fill-opacity="0.501961" points="109,209 191,182 22,60" />
-            <polygon fill="#0a060d" fill-opacity="0.501961" points="-16,261 271,253 29,141" />
-            <polygon fill="#14253b" fill-opacity="0.501961" points="36,81 94,81 27,162" />
-            <polygon fill="#83a9e0" fill-opacity="0.501961" points="7,106 221,62 -16,11" />
-            <polygon fill="#7e544f" fill-opacity="0.501961" points="113,218 33,143 189,175" />
-            <polygon fill="#000000" fill-opacity="0.501961" points="271,118 253,271 92,243" />
-          </g>
-        </svg>
+<div class="route" style="padding-top: 0;">
+  <div class="container-fluid">
+    <header id="home">
+      <div class="row align-items-center">
+        <div class="col-md-3 justify-content-center">
+          <img
+            class="avatar"
+            src="/assets/images/ressources/sebastienbarbier_profile_256.jpg"
+            srcset="/assets/images/ressources/sebastienbarbier_profile_256.jpg 256w,
+                    /assets/images/ressources/sebastienbarbier_profile_512.jpg 512w,
+                    /assets/images/ressources/sebastienbarbier_profile_1024.jpg 1024w,"
+            alt="Sébastien Barbier profile picture" />
+        </div>
+        <div class="col-md-9">
+          <p><em>Hey, I'm</em></p>
+          <h2>Sebastien Barbier</h2>
+        </div>
       </div>
-      <div class="col-sm-8 offset-sm-1">
-        <h2>Hi, my name is Sébastien</h2>
-        <p>I am an Entrepreneur and Freelancer web.</p>
-      </div>
-    </div>
-    <div class="scrollHelper col-sm-8">Scroll</div>
-  </header>
-
-  <div class="line padding">
-    <div class="intro" id="observer1" [ngClass]="{'isObserved': hasIntersectionObservable}">
-      <h2>{{ 'home.whatido.title' | translate }}</h2>
-      <p>At the moment, I am <strong>working full time</strong> on my first app, <strong>seven23</strong>. I am trying to pivot my activities to a fully <strong>passive income</strong> model, and will <strong>document all of it</strong> on social networks.</p>
-    </div>
-
-    <div class="location" id="observer2" [ngClass]="{'isObserved': hasIntersectionObservable}">
-      <h2>{{ 'home.whereami.title' | translate }}</h2>
-      <p [innerHTML]="'home.whereami.description' | translate"></p>
-    </div>
+      <div class="scrollHelper">Scroll</div>
+    </header>
   </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-6 intro" id="observer1" [ngClass]="{'isObserved': hasIntersectionObservable}">
+        <h2>{{ 'home.whatido.title' | translate }}</h2>
+        <p>At the moment, I am <strong>working full time</strong> on my first app, <strong>seven23</strong>. I am trying to pivot my activities to a fully <strong>passive income</strong> model, and will <strong>document all of it</strong> on social networks.</p>
+      </div>
 
-  <div>
-    <ul class="contactList">
-      <li><a target="_blank" href="http://www.twitter.com/SebBarbier/"><img src="/assets/images/twitter_logo.svg" alt="Twitter logo" /></a></li>
-      <li><a target="_blank" href="http://stackoverflow.com/users/4762763/sebastienbarbier"><img src="/assets/images/stackoverflow_logo.svg" alt="Stack Overflow logo" /></a></li>
-      <li><a target="_blank" href="https://www.linkedin.com/in/sebbarbier/"><img src="/assets/images/linkedin_logo.svg" alt="Linkedin logo" /></a></li>
-      <li><a target="_blank" href="https://github.com/sebastienbarbier/"><img src="/assets/images/github_logo.svg" alt="Github logo" /></a></li>
-      <li><a target="_blank" href="https://instagram.com/sebastienbarbier/"><img src="/assets/images/instagram_logo.svg" alt="Instagram logo" /></a></li>
-      <li><a target="_blank" href="http://www.facebook.com/sebastienbarbier/"><img src="/assets/images/facebook_logo.svg" alt="Facebook logo" /></a></li>
-      <li class="more"><a routerLink="/contact">More</a></li>
-    </ul>
+      <div class="col-sm-12 col-md-6 location" id="observer2" [ngClass]="{'isObserved': hasIntersectionObservable}">
+        <h2>{{ 'home.whereami.title' | translate }}</h2>
+        <p [innerHTML]="'home.whereami.description' | translate"></p>
+      </div>
+    </div>
+
+    <div id="observer3" [ngClass]="{'isObserved': hasIntersectionObservable}">
+      <ul class="contactList">
+        <li><a target="_blank" href="http://www.twitter.com/SebBarbier/"><img src="/assets/images/logos/twitter_logo.svg" alt="Twitter logo" /></a></li>
+        <li><a target="_blank" href="http://stackoverflow.com/users/4762763/sebastienbarbier"><img src="/assets/images/logos/stackoverflow_logo.svg" alt="Stack Overflow logo" /></a></li>
+        <li><a target="_blank" href="https://www.linkedin.com/in/sebbarbier/"><img src="/assets/images/logos/linkedin_logo.svg" alt="Linkedin logo" /></a></li>
+        <li><a target="_blank" href="https://github.com/sebastienbarbier/"><img src="/assets/images/logos/github_logo.svg" alt="Github logo" /></a></li>
+        <li><a target="_blank" href="https://instagram.com/sebastienbarbier/"><img src="/assets/images/logos/instagram_logo.svg" alt="Instagram logo" /></a></li>
+        <li><a target="_blank" href="http://www.facebook.com/sebastienbarbier/"><img src="/assets/images/logos/facebook_logo.svg" alt="Facebook logo" /></a></li>
+        <li class="more"><a routerLink="/contact">More</a></li>
+      </ul>
+    </div>
   </div>
 </div>

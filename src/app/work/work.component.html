@@ -1,95 +1,41 @@
-<h1>{{ 'nav.work' | translate }}</h1>
-<header class="title">
-  <h2 class="animate">Full stack python, Front end senior</h2>
+<div class="route">
 
-  <p class="animate">I work on <strong>designing</strong> and <strong>building products</strong> which might be useful. In the mean time, I also <strong>work as a freelance</strong> to help financing the development.<br/>Here is a <strong>presentation</strong> of my latest work.</p>
-</header>
-
-<section class="project">
-  <input type="radio" name="gallery" id="no_gallery" checked="checked" (change)="disableScrolling(false)" />
-  <ul class="gallery_list">
-
-    <li *ngFor="let photo of photos; let index = index" >
-      <label for="gallery-{{index}}"><img src="{{ photo.thumbnail }}" alt="{{ photo.alt }}" /></label>
-    </li>
-  </ul>
-  <div class="gallery_fullscreen">
-    <header>
-      <label for="no_gallery">
-        <svg height="32px" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="32px" xml:space="preserve" xmlns:xlink="http://www.w3.org/1999/xlink"><path class="svgFillWhite" d="M443.6,387.1L312.4,255.4l131.5-130c5.4-5.4,5.4-14.2,0-19.6l-37.4-37.6c-2.6-2.6-6.1-4-9.8-4c-3.7,0-7.2,1.5-9.8,4  L256,197.8L124.9,68.3c-2.6-2.6-6.1-4-9.8-4c-3.7,0-7.2,1.5-9.8,4L68,105.9c-5.4,5.4-5.4,14.2,0,19.6l131.5,130L68.4,387.1  c-2.6,2.6-4.1,6.1-4.1,9.8c0,3.7,1.4,7.2,4.1,9.8l37.4,37.6c2.7,2.7,6.2,4.1,9.8,4.1c3.5,0,7.1-1.3,9.8-4.1L256,313.1l130.7,131.1  c2.7,2.7,6.2,4.1,9.8,4.1c3.5,0,7.1-1.3,9.8-4.1l37.4-37.6c2.6-2.6,4.1-6.1,4.1-9.8C447.7,393.2,446.2,389.7,443.6,387.1z"/></svg>
-      </label>
-    </header>
-    <ul>
-      <li *ngFor="let photo of photos; let index = index">
-        <input type="radio" name="gallery" id="gallery-{{ index }}" (change)="disableScrolling(true)"  />
-        <div class="viewer">
-          <img src="{{ photo.source }}" alt="{{ photo.alt }}" />
-          <div class="previous">
-            <label for="gallery-{{ index - 1 }}" *ngIf="photos[index - 1]"></label>
-          </div>
-          <div class="next">
-            <label for="gallery-{{ index + 1 }}" *ngIf="photos[index + 1]"></label>
-          </div>
-        </div>
-      </li>
-    </ul>
-  </div>
+  <h1>{{ 'nav.work' | translate }}</h1>
   <div class="container">
-    <h3><img src="/assets/svg/seven23_square.svg" alt="Seven23 logo" />Seven23</h3>
-    <div>
-      <p><strong>2019</strong><br/>Founder, Full stack developer</p>
+    <div class="row">
+      <header class="title col-10 offset-1 col-md-8 offset-md-2 justify-content-center">
+        <h2 class="animate">Work I do</h2>
+
+        <p class="animate">I work on <strong>designing</strong> and <strong>building products</strong> which might be useful. In the mean time, I also <strong>work as a freelance</strong> to help financing the development.<br/>Here is a <strong>presentation</strong> of my latest work.</p>
+      </header>
     </div>
-    <div>
-      <p [innerHTML]="'work.seven23.description' | translate"></p>
+    <div class="row">
+      <div class="col-12">
+        <h3>Personal projects</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="card large">
+          <div class="row align-items-center">
+            <div class="col-12 col-md-6">
+              <h3 class="icon"><img src="/assets/svg/seven23_square.svg" alt="Seven23 logo" style="max-width: 60px;" />Seven23</h3>
+              <p><strong>2019</strong>, Founder, Full stack developer</p>
+            </div>
+            <div class="col-12 col-md-6">
+              <p [innerHTML]="'work.seven23.description' | translate"></p>
+            </div>
+          </div>
+          <div class="">
+              <a [routerLink]="['/work']">More about</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <p>Full list of older/archived projects can be find on my <a href="" target="_blank">github profile</a>.</p>
+      </div>
     </div>
   </div>
-</section>
-
-
-<div class="line">
-  <section class="block">
-    <div class="project">
-      <div class="description">
-        <h2>sebastienbarbier.com</h2>
-        <p>{{ 'work.sebastienbarbier.description' | translate }}</p>
-        <div class="stack">
-            <h4>Website</h4>
-            <ul>
-              <li>Typescript</li>
-              <li>Angular</li>
-              <li>Angular Universal</li>
-            </ul>
-          </div>
-        <p><a href="https://github.com/sebastienbarbier/sebastienbarbier.com">Github</a></p>
-      </div>
-    </div>
-  </section>
-
-  <section class="block">
-    <div class="project">
-      <div class="description">
-        <h2>MPDBox <small>2015</small></h2>
-        <p>{{ 'work.mpdbox.description' | translate }}</p>
-        <div class="stack">
-          <h4>{{ 'work.server' | translate }}</h4>
-          <ul>
-            <li>Python</li>
-            <li>SQLite</li>
-            <li>Music Player Deamon</li>
-            <li>Raspberry Pi</li>
-            <li>Linux</li>
-          </ul>
-        </div>
-        <div class="stack">
-          <h4>Client Cli</h4>
-          <ul>
-            <li>Node.js</li>
-            <li>Inquirer</li>
-          </ul>
-        </div>
-        <p><a href="https://mpd-box.readthedocs.io">Documentation</a> / <a href="https://github.com/mpd-box">Github</a></p>
-      </div>
-    </div>
-  </section>
-
 </div>
