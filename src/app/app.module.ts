@@ -67,8 +67,9 @@ if (environment.production) {
   ],
   declarations: [
     AppComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
   ],
+
   providers,
   bootstrap: [AppComponent]
 })

@@ -18,15 +18,9 @@ const workTransition = trigger('workTransition', [
     query('header .animate', style({ opacity: 0, transform: 'translateY(-10px) scale(0.9)', position: 'relative' }), {optional: true}),
     query('section', style({ opacity: 0 }), {optional: true}),
     query('header .animate', stagger(200, [animate('0.3s', style({opacity: 1, transform: 'translateY(0px) scale(1)'}))]), {optional: true}),
-    query('section', stagger(200, [
-      animate('0.3s ease-in', style({opacity: 1})),
-    ]), {optional: true}),
+
   ]),
   transition(':leave', [
-    query('section, header', stagger(200, [
-      style({ opacity: 1 }),
-      animate('0.3s ease-out', style({opacity: 0})),
-    ]), {optional: true}),
   ])
 ]);
 
@@ -42,7 +36,6 @@ export class WorkComponent implements OnInit {
   ];
 
   constructor(@Inject(DOCUMENT) private d ) {
-    console.log('WorkComponent', d);
   }
 
   @HostBinding('@workTransition') '';
