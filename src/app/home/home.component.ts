@@ -12,6 +12,8 @@ import {
   keyframes,
   animateChild } from '@angular/animations';
 
+import nomadlist from '../../assets/json/nomadlist_feed.json';
+
 const homeTransition = trigger('homeTransition', [
   transition(':enter', group([
     query('.block', style({ opacity: 0 }), {optional: true}),
@@ -48,8 +50,9 @@ export class HomeComponent implements OnInit {
 
   constructor() {
     this.hasIntersectionObservable = IntersectionObserver != undefined;
+    this.nomadlist = nomadlist;
+    console.log(nomadlist);
   }
-
 
   @HostBinding('@homeTransition') '';
 

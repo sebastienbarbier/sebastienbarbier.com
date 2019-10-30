@@ -30,6 +30,7 @@
       <div class="col-sm-12 col-md-6 location" id="observer2" [ngClass]="{'isObserved': hasIntersectionObservable}">
         <h2>{{ 'home.whereami.title' | translate }}</h2>
         <p [innerHTML]="'home.whereami.description' | translate"></p>
+        <p>{{ nomadlist.location.now.city }}, {{ nomadlist.location.now.country }}</p>
       </div>
     </div>
 
