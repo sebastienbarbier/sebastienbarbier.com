@@ -5,6 +5,7 @@ import { LegalComponent } from './legal.component';
 import { LegalRoutingModule } from './legal-routing.module';
 
 import { TranslateModule } from '@ngx-translate/core';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -12,6 +13,7 @@ import { TranslateModule } from '@ngx-translate/core';
   ],
   imports: [
     CommonModule,
+    SharedModule,
     LegalRoutingModule,
     TranslateModule.forChild()
   ]

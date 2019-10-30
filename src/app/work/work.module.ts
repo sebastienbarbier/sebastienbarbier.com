@@ -5,6 +5,7 @@ import { WorkComponent } from './work.component';
 import { WorkRoutingModule } from './work-routing.module';
 
 import { TranslateModule } from '@ngx-translate/core';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -13,6 +14,7 @@ import { TranslateModule } from '@ngx-translate/core';
   ],
   imports: [
     CommonModule,
+    SharedModule,
     WorkRoutingModule,
     TranslateModule.forChild()
   ]

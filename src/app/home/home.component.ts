@@ -1,5 +1,4 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
-import { FooterComponent } from '../footer/footer.component';
 
 import {
   sequence,
