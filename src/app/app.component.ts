@@ -9,10 +9,6 @@ import { DOCUMENT, Location } from '@angular/common';
 // AOT issue : https://github.com/ngx-translate/core/issues/537
 import { TranslateService } from '@ngx-translate/core';
 
-import instagram from '../assets/json/instagram_feed.json';
-
-console.log(instagram);
-
 import {
   trigger,
   state,

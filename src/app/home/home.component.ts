@@ -47,11 +47,11 @@ const homeTransition = trigger('homeTransition', [
 export class HomeComponent implements OnInit {
 
   hasIntersectionObservable: Boolean;
+  nomadlist: Object;
 
   constructor() {
     this.hasIntersectionObservable = IntersectionObserver != undefined;
     this.nomadlist = nomadlist;
-    console.log(nomadlist);
   }
 
   @HostBinding('@homeTransition') '';

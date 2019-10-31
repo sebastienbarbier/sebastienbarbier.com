@@ -82,6 +82,13 @@ p, li {
   }
 }
 
+.banner {
+  width: 100%;
+  &.white {
+    background: white;
+  }
+}
+
 .stack {
   display: flex;
   align-items: baseline;
