@@ -82,46 +82,103 @@ header#home {
   }
 }
 
+
 .intro, .location, #observer3 {
-  padding: 80px 40px;
   &.isObserved {
     opacity: 0;
-    transform: translateY(50px);
     transition: opacity 1s, transform 1s;
     &.show {
       opacity: 1;
-      transform: translateY(0px);
       transition: opacity 1s, transform 1s;
     }
   }
 }
 
-.contactList {
+.intro {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  &.isObserved {
+    transform: translateX(50px);
+    &.show {
+      transform: translateX(0px);
+    }
+  }
+}
+
+.location {
+  padding: 80px 40px;
+  &.isObserved {
+    transform: translateX(-50px);
+    &.show {
+      transform: translateX(0px);
+    }
+  }
+}
+
+#observer3 {
+  &.isObserved {
+    transform: translateY(50px);
+    &.show {
+      transform: translateY(0px);
+    }
+  }
+}
+
+.banner {
+  padding-top: 30px;
+  padding-bottom: 60px;
+}
+a.instagram_thumbnail {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  list-style: none;
-  align-items: center;
-  padding: 10px $paddingSmall;
-  li {
-    padding: 5px 12px;
-    a {
-      border: none;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 100%;
+  border-radius: 2px;
+  box-shadow: 0 30px 60px -12px rgba(50,50,93,.25),0 18px 36px -18px rgba(0,0,0,.3),0 -12px 36px -8px rgba(0,0,0,.025);
+
+  &:before {
+    content: '';
+    padding-top: 100%;
+    position: relative;
+  }
+
+  div {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
       img {
-        height: 1.6rem;
+        transform: scale(1);
       }
     }
-    &.more {
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      a {
-        font-weight: 700;
-        color: black;
-        &:after {
-          margin-left: 5px;
-          content: '>';
-        }
-      }
+    img {
+      transform: scale(1.05);
+      transition: transform 800ms;
+      object-fit: cover;
+      object-position: 50% 50%;
     }
+
+  }
+
+}
+
+.icon {
+  font-size: 2rem;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  img {
+    height: 1.5em;
+    border-radius: 4px;
+    margin-right: 20px;
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),0px 1px 1px 0px rgba(0, 0, 0, 0.14),0px 1px 3px 0px rgba(0,0,0,.12);
   }
 }

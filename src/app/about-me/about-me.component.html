@@ -19,22 +19,6 @@
           </div>
         </div>
       </div>
-      <div class="banner white">
-        <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <h3 style="text-align: center;">Instagram</h3>
-            </div>
-            <div class="col-6 col-sm-4 col-md-3" *ngFor="let post of instagram.data">
-              <a href="{{ post.link }}" class="instagram_thumbnail" target="_blank">
-                <div>
-                  <img src="{{ post.images.local.url }}" alt="{{ post.caption.text }}" />
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
   <route-footer></route-footer>

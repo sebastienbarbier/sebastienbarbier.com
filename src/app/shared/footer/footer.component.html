@@ -1,9 +1,29 @@
 <footer id="footer">
-  <ul class="links">
-    <li><a routerLink="/">Home</a></li>
-    <li><a routerLink="/about-me">About</a></li>
-    <li><a routerLink="/work">Work</a></li>
-    <li><a routerLink="/contact" >Contact</a></li>
-  </ul>
-  <p><a routerLink="/legal">{{ 'nav.legal' | translate }}</a></p>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-sm-12 col-md-5">
+        <a class="logo" routerLink="/">
+          <img src="/assets/images/ressources/sebastienbarbier_logo_white.svg" alt="This image contains: sebastien's logo which is simply his first and last name together with a stylish font" />
+        </a>
+        <ul class="contactList">
+          <li><a target="_blank" href="http://www.twitter.com/SebBarbier/"><img src="/assets/images/logos/twitter_logo_white.svg" alt="Twitter logo" /></a></li>
+          <li><a target="_blank" href="http://stackoverflow.com/users/4762763/sebastienbarbier"><img src="/assets/images/logos/stackoverflow_logo_white.svg" alt="Stack Overflow logo" /></a></li>
+          <li><a target="_blank" href="https://www.linkedin.com/in/sebbarbier/"><img src="/assets/images/logos/linkedin_logo_white.svg" alt="Linkedin logo" /></a></li>
+          <li><a target="_blank" href="https://github.com/sebastienbarbier/"><img src="/assets/images/logos/github_logo_white.svg" alt="Github logo" /></a></li>
+          <li><a target="_blank" href="https://instagram.com/sebastienbarbier/"><img src="/assets/images/logos/instagram_logo_white.svg" alt="Instagram logo" /></a></li>
+          <li><a target="_blank" href="http://www.facebook.com/sebastienbarbier/"><img src="/assets/images/logos/facebook_logo_white.svg" alt="Facebook logo" /></a></li>
+        </ul>
+      </div>
+      <div class="col-12 col-sm-12 col-md-6 offset-md-1">
+        <ul class="links">
+          <li><a routerLink="/">Home</a></li>
+          <li><a routerLink="/about-me">About</a></li>
+          <li><a routerLink="/work">Work</a></li>
+          <li><a routerLink="/contact" >Contact</a></li>
+        </ul>
+        <p><a routerLink="/legal">{{ 'nav.legal' | translate }}</a></p>
+      </div>
+    </div>
+  </div>
 </footer>

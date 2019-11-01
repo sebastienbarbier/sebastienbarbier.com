@@ -12,6 +12,7 @@ import {
   keyframes,
   animateChild } from '@angular/animations';
 
+import instagram from '../../assets/json/instagram_feed.json';
 import nomadlist from '../../assets/json/nomadlist_feed.json';
 
 const homeTransition = trigger('homeTransition', [
@@ -47,11 +48,11 @@ const homeTransition = trigger('homeTransition', [
 export class HomeComponent implements OnInit {
 
   hasIntersectionObservable: Boolean;
-  nomadlist: Object;
+  instagram = { data: instagram.data.slice(0, 8) };
+  nomadlist = nomadlist;
 
   constructor() {
     this.hasIntersectionObservable = IntersectionObserver != undefined;
-    this.nomadlist = nomadlist;
   }
 
   @HostBinding('@homeTransition') '';
