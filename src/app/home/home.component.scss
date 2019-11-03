@@ -24,6 +24,7 @@ header#home {
   height: 100vh;
   font-size: 1.6rem;
   padding-bottom: 6vh;
+  margin-bottom: 20px;
 
   display: flex;
   justify-content: center;
@@ -86,10 +87,10 @@ header#home {
 .intro, .location, #observer3 {
   &.isObserved {
     opacity: 0;
-    transition: opacity 1s, transform 1s;
+    transition: opacity 1s 250ms, transform 1s 250ms;
     &.show {
       opacity: 1;
-      transition: opacity 1s, transform 1s;
+      transition: opacity 1s 250ms, transform 1s 250ms;
     }
   }
 }
@@ -124,9 +125,19 @@ header#home {
   }
 }
 
+#map {
+  position: absolute;
+  top: 20px; bottom: 20px; left: 20px; right: 20px;
+  box-shadow: 0 30px 60px -12px rgba(50,50,93,.25),0 18px 36px -18px rgba(0,0,0,.3),0 -12px 36px -8px rgba(0,0,0,.025);
+}
+
 .banner {
   padding-top: 30px;
-  padding-bottom: 60px;
+  padding-bottom: 40px;
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
 }
 a.instagram_thumbnail {
   display: flex;
@@ -168,7 +179,7 @@ a.instagram_thumbnail {
 
 }
 
-.icon {
+.icon:first-child {
   font-size: 2rem;
   padding: 0;
   margin: 0;
