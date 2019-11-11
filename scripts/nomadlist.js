@@ -1,22 +1,37 @@
-// https://api.instagram.com/v1/users/self/media/recent/?access_token=487407.1677ed0.5b1098a0ca864bb09da9ba6f1b480270
+require('dotenv').config()
 var https = require('https');
 var fs = require('fs');
+var geoTz = require('geo-tz');
 
-https.get({
-  host: 'nomadlist.com',
-  path: '/@sebastienbarbier.json'
-}, function(response) {
-  // Continuously update stream with data
-  var body = '';
-  response.on('data', function(d) {
-      body += d;
-  });
-  response.on('end', function() {
-    fs.writeFile("src/assets/json/nomadlist_feed.json", body, function(err) {
+const fetch = require('node-fetch');
+
+fetch(`https://nomadlist.com/@sebastienbarbier.json`)
+  .then(res => res.json())
+  .then(json => {
+
+    // Fetch timezone from NOW location
+    const now = json.location.now;
+    const timezone = geoTz(now.latitude, now.longitude);
+    if (timezone && timezone.length) {
+      json.location.now.timezone = timezone[0];
+    }
+
+    const next = json.location.next;
+    const timezone_next = geoTz(next.latitude, next.longitude);
+    if (timezone_next && timezone_next.length) {
+      json.location.next.timezone = timezone_next[0];
+    }
+
+    const path = "src/assets/json/nomadlist_feed.json";
+    fs.writeFile(path, JSON.stringify(json), function(err) {
       if(err) {
-          return console.log(err);
+        console.log(err);
+        return process.exit(-1);
       }
-      console.log("Nomadlist feed cached in src/assets/json/nomadlist_feed.json");
+      console.log(`Nomadlist feed cached in ${path}`);
+      process.exit(0);
     });
+  }).catch(e => {
+    console.error(e);
+    return process.exit(-1);
   });
-});

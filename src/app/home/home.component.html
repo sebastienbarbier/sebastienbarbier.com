@@ -22,7 +22,7 @@
   </div>
   <div class="container">
     <div class="row intro align-items-center" id="observer1" [ngClass]="{'isObserved': hasIntersectionObservable}">
-      <div class="col-sm-12 col-md-8">
+      <div class="col-sm-12 col-md-7 offset-md-1">
         <h2>{{ 'home.whatido.title' | translate }}</h2>
         <p>At the moment, I am <strong>working full time</strong> on my first app, <strong>seven23</strong>. I am trying to pivot my activities to a fully <strong>passive income</strong> model, and will <strong>document all of it</strong> on social networks.</p>
       </div>
@@ -37,28 +37,22 @@
         <a routerLink="/work" class="col-12 col-sm-12 col-md-4 offset-md-1">
           <h3 class="subtitle">Working on</h3>
           <div class="icon">
-            <img src="/assets/svg/seven23_square.svg" alt="Seven23 logo" style="max-width: 60px;" /> <img src="/assets/images/seven23/seven23.svg" alt="Seven23 text logo" style="max-height: 50px; margin: 5px 20px;" />
+            <img src="/assets/svg/seven23_square.svg" alt="Seven23 logo" style="max-width: 50px;" /> <img src="/assets/images/seven23/seven23.svg" alt="Seven23 text logo" style="max-height: 50px; margin: 0px 20px;" />
           </div>
-
         </a>
         <a routerLink="/work" class="col-12 col-sm-12 col-md-4 offset-md-2">
           <h3 class="subtitle">Freelancing with</h3>
-          <img src="/assets/images/chefclub/chefclub-logo.png" alt="Chefclub" style="max-height: 60px;" />
-
+          <img src="/assets/images/chefclub/chefclub-logo.png" alt="Chefclub" style="max-height: 50px; margin-top: 8px;" />
         </a>
       </div>
     </div>
   </div>
   <div class="container">
-    <div class="row align-items-stretch">
-      <div class="col-md-4" style="position: relative; min-height: 300px;">
-        <div id="map"></div>
-      </div>
-      <div class="col-sm-12 col-md-8 location" id="observer2" [ngClass]="{'isObserved': hasIntersectionObservable}">
+    <div class="row">
+      <div class="col-sm-12 col-md-10 offset-md-1 location" id="observer2" [ngClass]="{'isObserved': hasIntersectionObservable}">
         <h2>{{ 'home.whereami.title' | translate }}</h2>
-        <p [innerHTML]="'home.whereami.description' | translate"></p>
-        <p>{{ nomadlist.location.now.city }}, {{ nomadlist.location.now.country }}</p>
-        <a routerLink="/work" class="btn">Nomadlist profile</a>
+        <p>I'm presently located in {{ nomadlist.location.now.city }}, {{ nomadlist.location.now.country }} (UTC{{ timezone }}). I collaborate with clients worldwide.</p>
+        <a routerLink="/work" class="btn"><img src="/assets/images/logos/nomadlist_logo.png" alt="Instagram logo" /> Nomadlist profile</a>
       </div>
     </div>
   </div>
