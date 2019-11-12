@@ -94,6 +94,20 @@ header#home {
     }
   }
 }
+#observer4 {
+  &.isObserved {
+    a {
+      opacity: 0;
+      transition: opacity 1s 250ms, transform 1s 250ms;
+    }
+    &.show {
+      a {
+        opacity: 1;
+        transition: opacity 1s 250ms, transform 1s 250ms;
+      }
+    }
+  }
+}
 
 .intro {
   padding-top: 80px;
@@ -124,6 +138,20 @@ header#home {
     }
   }
 }
+
+#observer4 {
+  &.isObserved {
+    a {
+      transform: scale(0.9);
+    }
+    &.show {
+      a {
+        transform: scale(1);
+      }
+    }
+  }
+}
+
 
 #map {
   position: absolute;

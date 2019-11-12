@@ -76,6 +76,7 @@ export class HomeComponent implements OnInit {
       observer.observe(document.querySelector("#observer1"));
       observer.observe(document.querySelector("#observer2"));
       observer.observe(document.querySelector("#observer3"));
+      observer.observe(document.querySelector("#observer4"));
 
     }
   }

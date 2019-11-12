@@ -33,7 +33,7 @@
   </div>
   <div class="banner">
     <div class="container">
-      <div class="row">
+      <div class="row" id="observer4" [ngClass]="{'isObserved': hasIntersectionObservable}">
         <a routerLink="/work" class="col-12 col-sm-12 col-md-4 offset-md-1">
           <h3 class="subtitle">Working on</h3>
           <div class="icon">
