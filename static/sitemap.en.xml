@@ -20,32 +20,6 @@
      />
 </url>
 <url>
-  <loc>https://sebastienbarbier.com/about-me</loc>
-  <xhtml:link
-     rel="alternate"
-     hreflang="en"
-     href="https://sebastienbarbier.com/about-me"
-     />
-   <xhtml:link
-     rel="alternate"
-     hreflang="fr"
-     href="https://sebastienbarbier.fr/about-me"
-     />
-</url>
-<url>
-  <loc>https://sebastienbarbier.com/work</loc>
-  <xhtml:link
-     rel="alternate"
-     hreflang="en"
-     href="https://sebastienbarbier.com/work"
-     />
-   <xhtml:link
-     rel="alternate"
-     hreflang="fr"
-     href="https://sebastienbarbier.fr/work"
-     />
-</url>
-<url>
   <loc>https://sebastienbarbier.com/contact</loc>
   <xhtml:link
      rel="alternate"

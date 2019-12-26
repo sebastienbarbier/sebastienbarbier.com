@@ -50,35 +50,39 @@ export class HomeComponent implements OnInit {
   hasIntersectionObservable: Boolean;
   instagram = { data: instagram.data.slice(0, 8) };
   nomadlist = nomadlist;
-  timezone = (new Date().getUTCHours() - new Date(new Date().toLocaleString("en-US", {timeZone: nomadlist.location.now.timezone})).getHours()) * -1;
+  now: Date = new Date(new Date().toLocaleString("en-US", {timeZone: nomadlist.location.now.timezone}));
+  diff: number =(new Date().getUTCHours() - new Date(new Date().toLocaleString("en-US", {timeZone: nomadlist.location.now.timezone})).getHours()) * -1;
+  timezone: string;
 
 
   constructor() {
     this.hasIntersectionObservable = IntersectionObserver != undefined;
 
-    if (this.timezone >= 0) {
-      this.timezone = "+" + this.timezone;
+    if (this.diff >= 0) {
+      this.timezone = `+${this.diff}`;
+    } else {
+      this.timezone = `${this.diff}`;
     }
   }
 
   @HostBinding('@homeTransition') '';
 
   ngOnInit() {
-    if (this.hasIntersectionObservable) {
-      var observer = new IntersectionObserver(function(entries) {
-        entries.forEach(function(entry) {
-          if (entry.isIntersecting && !entry.target.classList.contains('show')) {
-            entry.target.classList.add('show');
-          }
-        });
-      }, { threshold: [0] });
+    // if (this.hasIntersectionObservable) {
+    //   var observer = new IntersectionObserver(function(entries) {
+    //     entries.forEach(function(entry) {
+    //       if (entry.isIntersecting && !entry.target.classList.contains('show')) {
+    //         entry.target.classList.add('show');
+    //       }
+    //     });
+    //   }, { threshold: [0] });
 
-      observer.observe(document.querySelector("#observer1"));
-      observer.observe(document.querySelector("#observer2"));
-      observer.observe(document.querySelector("#observer3"));
-      observer.observe(document.querySelector("#observer4"));
+    //   observer.observe(document.querySelector("#observer1"));
+    //   observer.observe(document.querySelector("#observer2"));
+    //   observer.observe(document.querySelector("#observer3"));
+    //   observer.observe(document.querySelector("#observer4"));
 
-    }
+    // }
   }
 
 }

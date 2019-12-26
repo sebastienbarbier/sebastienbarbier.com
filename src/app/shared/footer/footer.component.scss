@@ -1,57 +1,17 @@
 @import '../../../assets/scss/variables';
 
 footer#footer {
-  background: $colorNavigation;
   width: 100%;
-  min-height: $footerMinHeight;
+  // min-height: $footerMinHeight;
   color: $light1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  a.logo {
-    @media screen and (max-width: $md - 1px) {
-      display: flex;
-      justify-content: center;
-    }
-    img {
-      height: 2.2rem;
-      @media screen and (max-width: $md - 1px) {
-        width: 260px;
-        height:auto;
-      }
-    }
-  }
-
-  ul.links {
-    padding: 0;
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-
-    @media screen and (max-width: $md - 1px) {
-      justify-content: center;
-      display: none;
-    }
-
-
-    li {
-      padding: 0px 20px 10px;
-      a {
-        text-decoration: none;
-        border: none;
-        color: $light1;
-        font-size: 1.4em;
-        font-weight: 600;
-        text-transform: uppercase;
-      }
-    }
-  }
   p {
     font-size: 0.8em;
-    text-align: right;
+    text-align: center;
     margin-right: 20px;
 
     @media screen and (max-width: $md - 1px) {
@@ -59,31 +19,6 @@ footer#footer {
     }
   }
   p, a {
-    color: $light1;
     border: none;
-  }
-}
-
-.contactList {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-
-  list-style: none;
-  align-items: center;
-  padding: 10px 0;
-
-  @media screen and (max-width: $md - 1px) {
-    justify-content: center;
-  }
-
-  li {
-    padding: 5px 8px;
-    a {
-      border: none;
-      img {
-        height: 1.3rem;
-      }
-    }
   }
 }

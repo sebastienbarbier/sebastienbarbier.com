@@ -21,19 +21,16 @@
     </header>
   </div>
   <div class="container">
-    <div class="row intro align-items-center" id="observer1" [ngClass]="{'isObserved': hasIntersectionObservable}">
-      <div class="col-sm-12 col-md-7 offset-md-1">
+    <div class="row intro align-items-center">
+      <div class="col-sm-12 col-md-10 offset-md-1">
         <h2>{{ 'home.whatido.title' | translate }}</h2>
-        <p>At the moment, I am <strong>working full time</strong> on my first app, <strong>seven23</strong>. I am trying to pivot my activities to a fully <strong>passive income</strong> model, and will <strong>document all of it</strong> on social networks.</p>
-      </div>
-      <div class="col-sm12 col-md-4">
-        <p style="text-align: center;"><a routerLink="/about-me" class="btn">More about me</a></p>
+        <p>I am an <strong>indie maker</strong>, founder of <strong>seven23.io</strong>, playing with <strong>photography</strong>, and currently trying to do some <strong>writting and speaking</strong>. I also help companies as a <strong>web technologies consultant</strong> and <strong>freelancer</strong>, currently <strong>available for hire</strong>.</p>
       </div>
     </div>
   </div>
-  <div class="banner">
+  <!-- <div class="banner">
     <div class="container">
-      <div class="row" id="observer4" [ngClass]="{'isObserved': hasIntersectionObservable}">
+      <div class="row">
         <a routerLink="/work" class="col-12 col-sm-12 col-md-4 offset-md-1">
           <h3 class="subtitle">Working on</h3>
           <div class="icon">
@@ -46,23 +43,37 @@
         </a>
       </div>
     </div>
-  </div>
+  </div> -->
   <div class="container">
     <div class="row">
-      <div class="col-sm-12 col-md-10 offset-md-1 location" id="observer2" [ngClass]="{'isObserved': hasIntersectionObservable}">
-        <h2>{{ 'home.whereami.title' | translate }}</h2>
-        <p>I'm presently located in {{ nomadlist.location.now.city }}, {{ nomadlist.location.now.country }} (UTC{{ timezone }}). I collaborate with clients worldwide.</p>
-        <a routerLink="/work" class="btn"><img src="/assets/images/logos/nomadlist_logo.png" alt="Instagram logo" /> Nomadlist profile</a>
+      <div class="col-sm-12 col-md-10 offset-md-1 location">
+        <h2>Location</h2>
+        <p>Since <strong>2016</strong>, I adopted a <strong>location independant lifestyle</strong> and <strong>travel full time</strong> while collaborating with <strong>clients worldwide</strong>.</p>
+
+        <div class="row">
+          <div class="col-12 col-sm-6 col-md-4">
+            <h3>Current city</h3>
+            <p>{{ nomadlist.location.now.city }}, {{ nomadlist.location.now.flag }} {{ nomadlist.location.now.country }}</p>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4">
+            <h3>Time</h3>
+            <p>{{ now.toTimeString().slice(0, 5) }} <small>(UTC{{ timezone }})</small></p>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4">
+            <h3>Next</h3>
+            <p>{{ nomadlist.location.next.city }}, {{ nomadlist.location.next.flag }} {{ nomadlist.location.next.country }}</p>
+          </div>
+        </div>
+        <p style="text-align: center;"><a href="https://nomadlist.com/@sebastienbarbier" target="_blank" class="btn"><img src="/assets/images/logos/nomadlist_logo.png" alt="Instagram logo" />Follow me on nomadlist</a></p>
       </div>
     </div>
   </div>
   <div class="banner white">
-    <div class="container" id="observer3" [ngClass]="{'isObserved': hasIntersectionObservable}">
+    <div class="container">
       <div class="row">
-        <div class="col-sm-12 col-md-8 offset-md-2" style="text-align: center; padding-bottom: 20px;">
+        <div class="col-sm-12 col-md-10 offset-md-1" style="padding-bottom: 20px;">
           <h2>Instagram</h2>
-          <p>I practice photography and keep a small instagram account with very random content. If that might interest you, please subscribe, I am putting a lots of effort to it and would love to have your opinion.</p>
-          <p style="text-align: right;"><a routerLink="/" class="btn"><img src="/assets/images/logos/instagram_logo.svg" alt="Instagram logo" />Follow me on instagram</a></p>
+          <p>I practice photography and share on instagram random content. If that might interest you, please subscribe, I am putting a lots of effort to it and would love to have your opinion.</p>
         </div>
       </div>
       <div class="row">
@@ -72,6 +83,11 @@
               <img src="{{ post.images.local.url }}" alt="{{ post.caption.text }}" />
             </div>
           </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 col-md-10 offset-md-1" style="padding-top: 20px;">
+          <p style="text-align: center;"><a href="https://instagram.com/sebastienbarbier/" target="_blank" class="btn"><img src="/assets/images/logos/instagram_logo.svg" alt="Instagram logo" />Follow me on instagram</a></p>
         </div>
       </div>
     </div>

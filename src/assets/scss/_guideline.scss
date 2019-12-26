@@ -26,7 +26,7 @@ h2, h3, h4, h5, h6 {
   small {
     font-weight: 300;
     font-size: 1rem;
-    letter-spacing: -0.5px;
+    letter-spacing: normal;
     color: #666;
   }
 }
@@ -47,7 +47,7 @@ h3 {
     font-weight: 600;
     font-size: 0.8em;
     margin-bottom: 2em;
-    letter-spacing: -0.5px;
+    letter-spacing: normal;
     text-transform: uppercase;
     opacity: 0.8;
   }
@@ -93,9 +93,8 @@ p, li {
 
 .banner {
   width: 100%;
-  background-color: $light2;
   &.white {
-    background: white;
+    // background: white;
   }
 }
 

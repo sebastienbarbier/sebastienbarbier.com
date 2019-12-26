@@ -44,30 +44,27 @@ main {
   }
 }
 
-.home {
-  &:before {
-    transform: rotate(-45deg) translate(180vw, 0vh);
-  }
-}
+.contactList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 
-.aboutMe {
-  &:before {
-    transform: rotate(0deg) translate(135vw, 0);
-  }
-}
+  list-style: none;
+  align-items: center;
+  padding: 10px 0;
 
-.work {
-  &:before {
-    transform: rotate(-90deg) translate(140vw, 0);
+  @media screen and (max-width: $md - 1px) {
+    justify-content: center;
   }
-}
 
-.notHome {
-  &:before {
-    transform: rotate(-45deg) translate(200vw, 200vh);
-    transition: opacity .6s, transform 0s .6s;
-    opacity: 0;
-    animation: none;
+  li {
+    padding: 5px 8px;
+    a {
+      border: none;
+      img {
+        height: 1.3rem;
+      }
+    }
   }
 }
 
@@ -200,24 +197,18 @@ header {
 
     $range: 0.03s;
     $delay: 0.06s;
-    li {
+    ul {
+      opacity: 1;
+      transform: translateX(0px);
       @mixin inline-animation($duration) {
         transition: opacity 0.2s ease-out $duration, transform 0.2s ease-out $duration;
       }
-      &:nth-child(0) { @include inline-animation($delay+(1*$range)) }
-      &:nth-child(1) { @include inline-animation($delay+(2*$range)) }
-      &:nth-child(2) { @include inline-animation($delay+(3*$range)) }
-      &:nth-child(3) { @include inline-animation($delay+(4*$range)) }
-      &:nth-child(4) { @include inline-animation($delay+(5*$range)) }
-    }
-
-    ul.sublinks {
-      transition: opacity 0.2s ease-out $delay+6*$range, transform 0.2s ease-out $delay+6*$range;
-    }
-
-    ul.sublinks, li {
-      transform : translateX(0px);
-      opacity: 1;
+      &:nth-child(0) { @include inline-animation($delay+(2*$range)) }
+      &:nth-child(1) { @include inline-animation($delay+(3*$range)) }
+      &:nth-child(2) { @include inline-animation($delay+(4*$range)) }
+      &:nth-child(3) { @include inline-animation($delay+(5*$range)) }
+      &:nth-child(4) { @include inline-animation($delay+(6*$range)) }
+      &:nth-child(5) { @include inline-animation($delay+(7*$range)) }
     }
   }
 
@@ -258,9 +249,8 @@ header {
     }
 
 
-    ul.links {
+    ul {
       // Animation
-
       @media screen and (max-width: 599px) {
       }
       @media screen and (min-width: 600px) and (max-width: 999px) {
@@ -270,44 +260,47 @@ header {
         width: 60vw;
       }
       padding: 0;
+      margin-bottom: 0;
       list-style: none;
       z-index: 101;
+      opacity: 0;
+      transform: translateX(-30px);
+
+      display: flex;
+      justify-content: flex-end;
+
+      &.noMargin {
+        margin: 0 0 6px 0;
+      }
 
       li{
-        padding: 14px 0px 14px 0;
+        padding: 14px 20px 14px 20px;
         position: relative;
         text-align: right;
+        opacity: 1;
 
-        transform : translateX(-30px);
-        opacity: 0;
-
-        @mixin inline-animation($duration) {
-          transition: opacity 0.2s ease-out $duration, transform 0.1s ease-out $duration;
+        &:last-child {
+          padding-right: 0;
         }
-
-        &:nth-child(0) { @include inline-animation(0s) }
-        &:nth-child(1) { @include inline-animation(0s) }
-        &:nth-child(2) { @include inline-animation(0s) }
-        &:nth-child(3) { @include inline-animation(0s) }
-        &:nth-child(4) { @include inline-animation(0s) }
 
         &:not(:last-child) {
           &:after {
             content: '';
             position: absolute;
-            bottom: 0;
-            right: 10px;
-            width: 45px;
-            height: 1px;
-            border-bottom: solid 1px white;
+            top: 14px;
+            bottom: 14px;
+            right: 0;
+            width: 1px;
+            border-left: solid 1px white;
           }
         }
+
         a{
           border: none;
           color: $light;
           text-transform: uppercase;
           font-weight: 700;
-          font-size: 1.8rem;
+          font-size: 2.8rem;
           line-height: 1;
           letter-spacing: -0.01em;
 
@@ -319,62 +312,27 @@ header {
         }
       }
 
-    }
+      &.small li a{
+        border: none;
+        color: $light;
+        text-transform: capitalize;
+        font-weight: 400;
+        font-size: .8rem;
+        letter-spacing: -0.01em;
 
-    ul.sublinks {
-      z-index: 101;
-      // Animation
-      transform : translateX(-30px);
-      opacity: 0;
-      margin-bottom: 0;
-      transition: opacity 0.2s ease-out, transform 0.1s ease-out;
-
-      @media screen and (max-width: 599px) {
-      }
-      @media screen and (min-width: 600px) and (max-width: 999px) {
-        width: 60vw;
-      }
-      @media screen and (min-width: 1000px) {
-        width: 60vw;
-      }
-      padding: 0;
-      list-style: none;
-      display: flex;
-      justify-content: flex-end;
-
-      li{
-        padding: 0px 20px 0px 20px;
-        position: relative;
-        text-align: right;
-
-        &:last-child {
-          padding-right: 0;
+        &.active {
+          color: #888;
+          cursor: default;
         }
+      }
 
-        &:not(:last-child) {
-          &:after {
-            content: '';
-            position: absolute;
-            top: 5px;
-            bottom: 0px;
-            right: 0;
-            width: 1px;
-            border-left: solid 1px white;
-          }
+      &.icons li {
+        padding: 0px 12px;
+        img {
+          height: 1.8em;
         }
-
-        a{
-          border: none;
-          color: $light;
-          text-transform: capitalize;
-          font-weight: 400;
-          font-size: .8rem;
-          letter-spacing: -0.01em;
-
-          &.active {
-            color: #888;
-            cursor: default;
-          }
+        &:after {
+          border: none !important;
         }
       }
 

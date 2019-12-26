@@ -44,6 +44,7 @@
     "@sentry/browser": "^5.4.3",
     "aos": "^2.3.4",
     "core-js": "^2.6.8",
+    "country-flag-emoji": "^1.0.3",
     "express-sslify": "^1.2.0",
     "geo-tz": "^5.0.5",
     "mapbox-gl": "^1.2.0",

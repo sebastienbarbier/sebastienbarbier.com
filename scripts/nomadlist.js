@@ -3,6 +3,8 @@ var https = require('https');
 var fs = require('fs');
 var geoTz = require('geo-tz');
 
+var countryFlagEmoji = require("country-flag-emoji");
+
 const fetch = require('node-fetch');
 
 fetch(`https://nomadlist.com/@sebastienbarbier.json`)
@@ -15,11 +17,21 @@ fetch(`https://nomadlist.com/@sebastienbarbier.json`)
     if (timezone && timezone.length) {
       json.location.now.timezone = timezone[0];
     }
+    if (json.location.now.country_code === "UK") {
+      json.location.now.country_code = "GB";
+    }
+    json.location.now.flag = countryFlagEmoji.get(json.location.now.country_code).emoji;
 
     const next = json.location.next;
-    const timezone_next = geoTz(next.latitude, next.longitude);
-    if (timezone_next && timezone_next.length) {
-      json.location.next.timezone = timezone_next[0];
+    if (next) {
+      const timezone_next = geoTz(next.latitude, next.longitude);
+      if (timezone_next && timezone_next.length) {
+        json.location.next.timezone = timezone_next[0];
+      }
+      if (json.location.next.country_code === "UK") {
+        json.location.next.country_code = "GB";
+      }
+      json.location.next.flag = countryFlagEmoji.get(json.location.next.country_code).emoji;
     }
 
     const path = "src/assets/json/nomadlist_feed.json";
