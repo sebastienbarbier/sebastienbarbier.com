@@ -6,6 +6,16 @@ var fs = require('fs');
 
 const fetch = require('node-fetch');
 
+var dir = './src/assets/images/instagram/';
+if (!fs.existsSync(dir)){
+    fs.mkdirSync(dir);
+}
+
+var dir = './src/assets/json/';
+if (!fs.existsSync(dir)){
+    fs.mkdirSync(dir);
+}
+
 fetch(`https://api.instagram.com/v1/users/self/media/recent/?access_token=${process.env.INSTAGRAM_TOKEN}`)
   .then(res => res.json())
   .then(json => {

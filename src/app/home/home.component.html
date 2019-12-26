@@ -51,7 +51,7 @@
     <div class="row">
       <div class="col-sm-12 col-md-10 offset-md-1 location" id="observer2" [ngClass]="{'isObserved': hasIntersectionObservable}">
         <h2>{{ 'home.whereami.title' | translate }}</h2>
-        <p>I'm presently located in {{ nomadlist.location.now.city }}, {{ nomadlist.location.now.country }} (UTC{{ timezone }}). I collaborate with clients worldwide.</p>
+        <p>I'm presently located in {{ nomadlist.location.now.city }}, {{ nomadlist.location.now.country }} (UTC{{timezone > 0 ? '+' : ''}}{{ timezone }}). I collaborate with clients worldwide.</p>
         <a routerLink="/work" class="btn"><img src="/assets/images/logos/nomadlist_logo.png" alt="Instagram logo" /> Nomadlist profile</a>
       </div>
     </div>
