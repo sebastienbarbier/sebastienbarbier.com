@@ -57,12 +57,6 @@ export class HomeComponent implements OnInit {
 
   constructor() {
     this.hasIntersectionObservable = IntersectionObserver != undefined;
-
-    if (this.diff >= 0) {
-      this.timezone = `+${this.diff}`;
-    } else {
-      this.timezone = `${this.diff}`;
-    }
   }
 
   @HostBinding('@homeTransition') '';

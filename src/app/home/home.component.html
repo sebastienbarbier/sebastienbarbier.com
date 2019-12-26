@@ -57,7 +57,7 @@
           </div>
           <div class="col-12 col-sm-6 col-md-4">
             <h3>Time</h3>
-            <p>{{ now.toTimeString().slice(0, 5) }} <small>(UTC{{ timezone }})</small></p>
+            <p>{{ now.toTimeString().slice(0, 5) }} <small>(UTC{{timezone > 0 ? '+' : ''}}{{ timezone }})</small></p>
           </div>
           <div class="col-12 col-sm-6 col-md-4">
             <h3>Next</h3>

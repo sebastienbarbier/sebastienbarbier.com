@@ -7,6 +7,11 @@ var countryFlagEmoji = require("country-flag-emoji");
 
 const fetch = require('node-fetch');
 
+var dir = './src/assets/json/';
+if (!fs.existsSync(dir)){
+    fs.mkdirSync(dir);
+}
+
 fetch(`https://nomadlist.com/@sebastienbarbier.json`)
   .then(res => res.json())
   .then(json => {
