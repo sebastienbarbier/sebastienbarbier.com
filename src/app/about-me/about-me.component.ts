@@ -1,16 +1,12 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 
-import instagram from '../../assets/json/instagram_feed.json';
-
 @Component({
   selector: 'about-me',
   templateUrl: './about-me.component.html',
   styleUrls: ['./about-me.component.scss']
 })
 export class AboutMeComponent implements OnInit {
-
-  instagram = { data: instagram.data.slice(0, 8) };
 
   clients_order = ['chefclub', 'mozilla', 'mila'];
   clients = {
@@ -91,7 +87,6 @@ export class AboutMeComponent implements OnInit {
   gallery = []
 
   constructor(@Inject(DOCUMENT) private d ) {
-    console.log(instagram);
   }
 
   ngOnInit() {

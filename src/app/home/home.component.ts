@@ -52,8 +52,6 @@ export class HomeComponent implements OnInit {
   nomadlist = nomadlist;
   now: Date = new Date(new Date().toLocaleString("en-US", {timeZone: nomadlist.location.now.timezone}));
   diff: number =(new Date().getUTCHours() - new Date(new Date().toLocaleString("en-US", {timeZone: nomadlist.location.now.timezone})).getHours()) * -1;
-  timezone: string;
-
 
   constructor() {
     this.hasIntersectionObservable = IntersectionObserver != undefined;

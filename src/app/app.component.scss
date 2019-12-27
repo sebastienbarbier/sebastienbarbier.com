@@ -25,7 +25,7 @@ main {
   height: 100%;
   min-height: 100vh;
   overflow: hidden;
-  z-index: 1;
+  z-index: $indexContent;
 
   &:before {
     content: '';
@@ -36,7 +36,7 @@ main {
     left: -100vw;
     background: $colorPolo;
     opacity: 0; //0.1;
-    z-index: 1;
+    z-index: $indexContent;
     transition: opacity .6s .3s, transform .6s;
     pointer-events: none;
     animation-name: appear;
@@ -70,10 +70,10 @@ main {
 
 header {
 
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
-  z-index: 100;
+  z-index: $indexContent;
 
   // sebastienbarbier logo as text
   a.logo {
@@ -113,7 +113,7 @@ header {
     position: fixed;
     width: $headerFontSize;
     height: $headerFontSize;
-    z-index: 1001;
+    z-index: $indexContent - 1;
 
     @media screen and (max-width: $sm) {
       position: absolute;
@@ -213,7 +213,7 @@ header {
   }
 
   nav {
-    z-index: 1000;
+    z-index: $indexNavigation;
 
     // Animation
     visibility: hidden;
@@ -235,7 +235,7 @@ header {
       background: $colorNavigation;
       opacity: 0;
       transition: opacity 0.2s ease-out;
-      z-index: 100;
+      z-index: $indexContent;
     }
 
     @media screen and (max-width: 599px) {
@@ -262,7 +262,7 @@ header {
       padding: 0;
       margin-bottom: 0;
       list-style: none;
-      z-index: 101;
+      z-index: $indexContent+1;
       opacity: 0;
       transform: translateX(-30px);
 

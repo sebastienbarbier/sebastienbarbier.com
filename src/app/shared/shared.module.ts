@@ -6,6 +6,7 @@ import { TranslateModule } from '@ngx-translate/core';
 
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
+import { NavigationComponent } from './navigation/navigation.component';
 
 
 export const providers = [
@@ -16,6 +17,7 @@ export const providers = [
   declarations: [
     FooterComponent,
     HeaderComponent,
+    NavigationComponent,
   ],
   imports: [
     RouterModule,
@@ -25,6 +27,7 @@ export const providers = [
   exports: [
     FooterComponent,
     HeaderComponent,
+    NavigationComponent,
   ]
 })
 export class SharedModule {

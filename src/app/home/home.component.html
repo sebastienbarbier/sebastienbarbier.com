@@ -24,7 +24,7 @@
     <div class="row intro align-items-center">
       <div class="col-sm-12 col-md-10 offset-md-1">
         <h2>{{ 'home.whatido.title' | translate }}</h2>
-        <p>I am an <strong>indie maker</strong>, founder of <strong>seven23.io</strong>, playing with <strong>photography</strong>, and currently trying to do some <strong>writting and speaking</strong>. I also help companies as a <strong>web technologies consultant</strong> and <strong>freelancer</strong>, currently <strong>available for hire</strong>.</p>
+        <p>I am an <strong>indie maker</strong>, founder of <strong>seven23.io</strong>, playing with <strong>photography</strong>, and currently trying to do some <strong>writting and speaking</strong>. I also work with companies as a <strong>web technologies consultant</strong> and <strong>freelancer</strong>, currently <strong>available for hire</strong>.</p>
       </div>
     </div>
   </div>
@@ -57,10 +57,10 @@
           </div>
           <div class="col-12 col-sm-6 col-md-4">
             <h3>Time</h3>
-            <p>{{ now.toTimeString().slice(0, 5) }} <small>(UTC{{timezone > 0 ? '+' : ''}}{{ timezone }})</small></p>
+            <p>{{ now.toTimeString().slice(0, 5) }} <small>(UTC{{diff > 0 ? '+' : ''}}{{ diff }})</small></p>
           </div>
           <div class="col-12 col-sm-6 col-md-4">
-            <h3>Next</h3>
+            <h3>Next trip</h3>
             <p>{{ nomadlist.location.next.city }}, {{ nomadlist.location.next.flag }} {{ nomadlist.location.next.country }}</p>
           </div>
         </div>

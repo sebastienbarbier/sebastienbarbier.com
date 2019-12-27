@@ -14,15 +14,14 @@ export const appRoutes: Routes = [
     data: { title: null, description: _('description.home'), theme: 'light', state: 'home' }
   },
   {
-    path: 'about-me',
+    path: 'freelance',
     loadChildren: () => import('./about-me/about-me.module').then(mod => mod.AboutMeModule),
     data: { title: 'nav.about_me', description: _('description.about_me'), theme: 'light', state: 'about_me' }
   },
   {
     path: 'work',
     loadChildren: () => import('./work/work.module').then(mod => mod.WorkModule),
-    data: { title: 'nav.work', description: _('description.work'), theme: 'light', state: 'work' },
-    runGuardsAndResolvers: 'always'
+    data: { title: 'nav.work', description: _('description.work'), theme: 'light', state: 'work' }
   },
   {
     path: 'contact',
