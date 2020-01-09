@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit, Inject, Renderer2 } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 
 @Component({
@@ -86,7 +86,8 @@ export class AboutMeComponent implements OnInit {
   };
   gallery = []
 
-  constructor(@Inject(DOCUMENT) private d ) {
+  constructor(private renderer: Renderer2,
+              @Inject(DOCUMENT) private d) {
   }
 
   ngOnInit() {
@@ -100,8 +101,10 @@ export class AboutMeComponent implements OnInit {
   disableScrolling(value) {
     if (this.d) {
       if (value) {
+        this.renderer.setAttribute(this.d.getElementById('navigation__button'), 'class', 'hide');
         this.d.body.style.overflow = "hidden";
       } else {
+        this.renderer.setAttribute(this.d.getElementById('navigation__button'), 'class', 'show');
         this.d.body.style.overflow = "auto";
       }
     }

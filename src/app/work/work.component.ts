@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject, HostBinding } from '@angular/core';
+import { Component, OnInit, Inject, HostBinding, Renderer2 } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 
 import {
@@ -73,7 +73,8 @@ export class WorkComponent implements OnInit {
       alt: 'Seven23 Report mobile' }
   ];
 
-  constructor(@Inject(DOCUMENT) private d ) {
+  constructor(private renderer: Renderer2,
+              @Inject(DOCUMENT) private d ) {
   }
 
   @HostBinding('@workTransition') '';
@@ -84,8 +85,10 @@ export class WorkComponent implements OnInit {
   disableScrolling(value) {
     if (this.d) {
       if (value) {
+        this.renderer.setAttribute(this.d.getElementById('navigation__button'), 'class', 'hide');
         this.d.body.style.overflow = "hidden";
       } else {
+        this.renderer.setAttribute(this.d.getElementById('navigation__button'), 'class', 'show');
         this.d.body.style.overflow = "auto";
       }
     }

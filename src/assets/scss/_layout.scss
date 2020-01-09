@@ -73,5 +73,13 @@
         }
       }
     }
+
+    h1 + .container,
+    h1 + .container-fluid {
+      @media screen and (min-width: $md) {
+        padding-left: 50px;
+        padding-right: 70px;
+      }
+    }
   }
 }

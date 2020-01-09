@@ -113,7 +113,7 @@ header {
     position: fixed;
     width: $headerFontSize;
     height: $headerFontSize;
-    z-index: $indexContent - 1;
+    z-index: $indexNavigation + 1;
 
     @media screen and (max-width: $sm) {
       position: absolute;
@@ -134,6 +134,15 @@ header {
     @media screen and (min-width: $lg) {
       top: $paddingMedium;
       right: $paddingLarge;
+    }
+
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 400ms, transform 400ms;
+    &.hide {
+      opacity: 0;
+      transform: scale(0.9);
+      transition: opacity 400ms, transform 400ms;
     }
 
     #navigation__button__close { fill:white; visibility: hidden; }
