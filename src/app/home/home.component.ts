@@ -12,8 +12,8 @@ import {
   keyframes,
   animateChild } from '@angular/animations';
 
-import instagram from '../../assets/json/instagram_feed.json';
-import nomadlist from '../../assets/json/nomadlist_feed.json';
+// import instagram from '../../assets/json/instagram_feed.json';
+// import nomadlist from '../../assets/json/nomadlist_feed.json';
 
 const homeTransition = trigger('homeTransition', [
   transition(':enter', group([
@@ -48,8 +48,8 @@ const homeTransition = trigger('homeTransition', [
 export class HomeComponent implements OnInit {
 
   hasIntersectionObservable: Boolean;
-  instagram = { data: instagram.data.slice(0, 8) };
-  nomadlist = nomadlist;
+  // instagram = { data: instagram.data.slice(0, 8) };
+  // nomadlist = nomadlist;
   now: Date = new Date(new Date().toLocaleString("en-US", {timeZone: nomadlist.location.now.timezone}));
   diff: number =(new Date().getUTCHours() - new Date(new Date().toLocaleString("en-US", {timeZone: nomadlist.location.now.timezone})).getHours()) * -1;
 
