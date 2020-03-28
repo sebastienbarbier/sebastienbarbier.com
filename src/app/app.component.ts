@@ -48,9 +48,9 @@ export class AppComponent implements OnInit {
 
     this.lang = 'en';
     if (isPlatformBrowser(platformId) && d.location.hostname.endsWith('sebastienbarbier.fr')) {
-      this.lang = 'fr';
+      this.lang = 'en';
     } else if (isPlatformServer(platformId) && serverUrl.split(':')[1].endsWith('sebastienbarbier.fr')) {
-      this.lang = 'fr';
+      this.lang = 'en';
     }
     translate.setDefaultLang(this.lang);
     translate.use(this.lang);

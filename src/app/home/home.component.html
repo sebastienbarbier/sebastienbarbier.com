@@ -2,95 +2,19 @@
 
   <div class="container-fluid">
     <header id="home">
-      <div class="row align-items-center">
-        <div class="col-md-3 justify-content-center">
-          <img
-            class="avatar"
-            src="/assets/images/ressources/sebastienbarbier_profile_256.jpg"
-            srcset="/assets/images/ressources/sebastienbarbier_profile_256.jpg 256w,
-                    /assets/images/ressources/sebastienbarbier_profile_512.jpg 512w,
-                    /assets/images/ressources/sebastienbarbier_profile_1024.jpg 1024w,"
-            alt="Sébastien Barbier profile picture" />
+      <img
+        class="avatar"
+        src="/assets/images/ressources/sebastienbarbier_profile_256.jpg"
+        srcset="/assets/images/ressources/sebastienbarbier_profile_256.jpg 256w,
+                /assets/images/ressources/sebastienbarbier_profile_512.jpg 512w,
+                /assets/images/ressources/sebastienbarbier_profile_1024.jpg 1024w,"
+        alt="Sébastien Barbier profile picture" />
+        <div>
+          <p><span class="hi">Hi 👋</span><br/>
+            <span class="name">My name is <strong>Sébastien Barbier</strong></span><br/>
+              I am a <strong>web developer</strong> from <strong>France</strong>, currently <strong>working at SAP</strong>, and based in <strong>Zurich Switzerland</strong>.</p>
         </div>
-        <div class="col-md-9">
-          <p><em>Hey, I'm</em></p>
-          <h2>Sebastien Barbier</h2>
-        </div>
-      </div>
-      <div class="scrollHelper">Scroll</div>
     </header>
   </div>
-  <div class="container">
-    <div class="row intro align-items-center">
-      <div class="col-sm-12 col-md-10 offset-md-1">
-        <h2>{{ 'home.whatido.title' | translate }}</h2>
-        <p>I am an <strong>indie maker</strong>, founder of <strong>seven23.io</strong>, playing with <strong>photography</strong>, and currently trying to do some <strong>writting and speaking</strong>. I also work with companies as a <strong>web technologies consultant</strong> and <strong>freelancer</strong>, currently <strong>available for hire</strong>.</p>
-      </div>
-    </div>
-  </div>
-  <!-- <div class="banner">
-    <div class="container">
-      <div class="row">
-        <a routerLink="/work" class="col-12 col-sm-12 col-md-4 offset-md-1">
-          <h3 class="subtitle">Working on</h3>
-          <div class="icon">
-            <img src="/assets/svg/seven23_square.svg" alt="Seven23 logo" style="max-width: 50px;" /> <img src="/assets/images/seven23/seven23.svg" alt="Seven23 text logo" style="max-height: 50px; margin: 0px 20px;" />
-          </div>
-        </a>
-        <a routerLink="/work" class="col-12 col-sm-12 col-md-4 offset-md-2">
-          <h3 class="subtitle">Freelancing with</h3>
-          <img src="/assets/images/chefclub/chefclub-logo.png" alt="Chefclub" style="max-height: 50px; margin-top: 8px;" />
-        </a>
-      </div>
-    </div>
-  </div> -->
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12 col-md-10 offset-md-1 location">
-        <h2>Location</h2>
-        <p>Since <strong>2016</strong>, I adopted a <strong>location independant lifestyle</strong> and <strong>travel full time</strong> while collaborating with <strong>clients worldwide</strong>.</p>
 
-        <div class="row">
-          <div class="col-12 col-sm-6 col-md-4">
-            <h3>Current city</h3>
-            <p>{{ nomadlist.location.now.city }}, {{ nomadlist.location.now.flag }} {{ nomadlist.location.now.country }}</p>
-          </div>
-          <div class="col-12 col-sm-6 col-md-4">
-            <h3>Time</h3>
-            <p>{{ now.toTimeString().slice(0, 5) }} <small>(UTC{{diff > 0 ? '+' : ''}}{{ diff }})</small></p>
-          </div>
-          <div class="col-12 col-sm-6 col-md-4">
-            <h3>Next trip</h3>
-            <p>{{ nomadlist.location.next.city }}, {{ nomadlist.location.next.flag }} {{ nomadlist.location.next.country }}</p>
-          </div>
-        </div>
-        <p style="text-align: center;"><a href="https://nomadlist.com/@sebastienbarbier" target="_blank" class="btn"><img src="/assets/images/logos/nomadlist_logo.png" alt="Instagram logo" />Follow me on nomadlist</a></p>
-      </div>
-    </div>
-  </div>
-  <div class="banner white">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12 col-md-10 offset-md-1" style="padding-bottom: 20px;">
-          <h2>Instagram</h2>
-          <p>I practice photography and share on instagram random content. If that might interest you, please subscribe, I am putting a lots of effort to it and would love to have your opinion.</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-6 col-sm-4 col-md-3" *ngFor="let post of instagram.data">
-          <a href="{{ post.link }}" class="instagram_thumbnail" target="_blank">
-            <div>
-              <img src="{{ post.images.local.url }}" alt="{{ post.caption.text }}" />
-            </div>
-          </a>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-12 col-md-10 offset-md-1" style="padding-top: 20px;">
-          <p style="text-align: center;"><a href="https://instagram.com/sebastienbarbier/" target="_blank" class="btn"><img src="/assets/images/logos/instagram_logo.svg" alt="Instagram logo" />Follow me on instagram</a></p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <route-footer></route-footer>
 </div>
