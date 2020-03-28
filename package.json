@@ -9,7 +9,7 @@
     "build": "ng build",
     "build:client-and-server-bundles": "ng build sebastienbarbier_en --prod && ng build sebastienbarbier_fr --prod --delete-output-path false && ng run sebastienbarbier_en:server",
     "build:static": "npm run build:client-and-server-bundles && npm run webpack:server && npm run generate:static",
-    "build:dynamic": "npm run fetch:socials && npm run build:client-and-server-bundles && npm run webpack:server",
+    "build:dynamic": "npm run build:client-and-server-bundles && npm run webpack:server",
     "generate:static": "node scripts/instagram.js && node scripts/nomadlist.js && cd dist && node prerender",
     "webpack:server": "webpack --config webpack.server.config.js --progress --colors && copy ./static/* ./dist",
     "serve:static": "cd dist/browser && http-server",
