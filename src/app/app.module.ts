@@ -2,7 +2,7 @@ import 'zone.js';
 import 'reflect-metadata';
 
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, ErrorHandler, Injectable } from '@angular/core';
+import { NgModule, ErrorHandler, Injectable, Input, Component } from '@angular/core';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 import { RouterModule, Routes } from '@angular/router';
@@ -14,6 +14,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { AppComponent } from './app.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { SharedModule } from './shared/shared.module';
 
 import { environment } from '../environments/environment';
 
@@ -47,6 +48,7 @@ if (environment.production) {
   providers.push({ provide: ErrorHandler, useClass: SentryErrorHandler });
 }
 
+
 @NgModule({
   imports: [
     BrowserModule.withServerTransition({appId: 'my-app'}),
@@ -54,7 +56,8 @@ if (environment.production) {
     BrowserAnimationsModule,
     FormsModule,
     RouterModule.forRoot(
-      appRoutes
+      appRoutes,
+      {onSameUrlNavigation: 'ignore',}
     ),
     TranslateModule.forRoot({
         loader: {
@@ -62,12 +65,14 @@ if (environment.production) {
             useFactory: (createTranslateLoader),
             deps: [HttpClient]
         }
-    })
+    }),
+    SharedModule.forRoot(),
   ],
   declarations: [
     AppComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
   ],
+
   providers,
   bootstrap: [AppComponent]
 })

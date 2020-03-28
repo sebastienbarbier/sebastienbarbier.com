@@ -1,7 +1,10 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
 # Static Instagram
-static/instagram_feed.json
+src/assets/json/instagram_feed.json
+src/assets/json/nomadlist_feed.json
+src/assets/images/instagram/
+.env
 
 # compiled output
 /dist

@@ -1,109 +1,150 @@
 @import '../assets/scss/variables';
 
-header {
-  height: 160px;
-  @media screen and (max-width: 599px) {
-    padding-left: $padding;
-    height: 140px;
-  }
-  @media screen and (min-width: 600px) and (max-width: 999px) {
-    padding-left: 40px;
-  }
-  @media screen and (min-width: 1000px) {
-    padding-left: 60px;
+@keyframes appear {
+  from {
+    opacity: 0;
   }
 
-  h1 {
-    margin: 0;
-    padding: 36px 0 0;
-
-    opacity: 1;
-    visibility: visible;
-    transition: opacity 0.4s ease-in 0s;
-    a {
-      text-decoration: none;
-      border-bottom: none;
-      padding-right: 6px;
-      color: inherit;
-    }
-    small {
-      padding-left: 6px;
-      padding-bottom: 1px;
-      font-size: 0.7em;
-      letter-spacing: -0.01em;
-      font-weight: 300;
-    }
-    span {
-      font-size: 0.7em;
-      font-weight: 400;
-    }
-
-    @media screen and (max-width: 599px) {
-      display: none;
-    }
-    @media screen and (min-width: 600px) and (max-width: 999px) {
-      small{
-        display: block;
-        padding-top: 8px;
-        padding-left: 0;
-      }
-      span{
-        display: none;
-      }
-    }
-    &.hide {
-      opacity: 0;
-      visibility: hidden;
-      transition: visibility 0s 0.2s, opacity 0.2s ease-out;
-    }
-
+  to {
+    opacity: 0;
   }
+}
 
-  #lang {
+main {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0; left: 0; right: 0; bottom: 0;
+  overflow: hidden;
+}
+
+.home, .notHome, .aboutMe, .work {
+  position: relative;
+  width: 100%;
+  min-width: 100vw;
+  height: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  z-index: $indexContent;
+
+  &:before {
+    content: '';
     position: absolute;
-    @media screen and (max-width: 599px) {
-      top: 15px;
-      right: 90px;
-    }
-    @media screen and (min-width: 600px) and (max-width: 999px) {
-      top: 30px;
-      right: 110px;
-    }
-    @media screen and (min-width: 1000px) {
-      top: 30px;
-      right: 130px;
-    }
+    width: 300vw;
+    height: 300vh;
+    top: -100vh;
+    left: -100vw;
+    background: $colorPolo;
+    opacity: 0; //0.1;
+    z-index: $indexContent;
+    transition: opacity .6s .3s, transform .6s;
+    pointer-events: none;
+    animation-name: appear;
+    animation-duration: .6s;
+  }
+}
+
+.contactList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  list-style: none;
+  align-items: center;
+  padding: 10px 0;
+
+  @media screen and (max-width: $md - 1px) {
+    justify-content: center;
+  }
+
+  li {
+    padding: 5px 8px;
     a {
       border: none;
-      padding: 0 4px;
-      cursor: default;
-      color: #111;
-        font-weight: 600;
-      &.notCurrentLang{
-        cursor: pointer;
-        font-weight: 400;
-        color: #666;
+      img {
+        height: 1.3rem;
       }
+    }
+  }
+}
+
+header {
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: $indexContent;
+
+  // sebastienbarbier logo as text
+  a.logo {
+    display: inline-block;
+    height: $headerFontSize;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    position: relative;
+    left: -8px;
+    @media screen and (max-width: $md - 1px) {
+      display: none;
+    }
+
+    @media screen and (min-width: $md) and (max-width: $lg - 1px) {
+      margin: $paddingMedium 0 0;
+      margin-left: $paddingMedium;
+    }
+    @media screen and (min-width: $lg) {
+      margin: $paddingMedium 0 0;
+      margin-left: $paddingLarge;
+    }
+
+    img {
+      height: 100%;
+      color: transparent;
     }
   }
 
   label{
     cursor: pointer;
-    position: absolute;
-    width: 35px;
-    z-index: 1001;
-    @media screen and (max-width: 599px) {
-      top: 25px;
-      right: 30px;
+    position: fixed;
+    width: $headerFontSize;
+    height: $headerFontSize;
+    z-index: $indexNavigation + 1;
+
+    @media screen and (max-width: $sm) {
+      position: absolute;
+      top: $paddingMedium;
+      right: $paddingSmall;
     }
-    @media screen and (min-width: 600px) and (max-width: 999px) {
-      top: 45px;
-      right: 40px;
+
+    @media screen and (min-width: $sm) and (max-width: $md - 1px) {
+      position: absolute;
+      top: $paddingMedium;
+      right: $paddingMedium;
     }
-    @media screen and (min-width: 1000px) {
-      top: 45px;
-      right: 60px;
+
+    @media screen and (min-width: $md) and (max-width: $lg - 1px) {
+      top: $paddingMedium;
+      right: $paddingMedium;
     }
+    @media screen and (min-width: $lg) {
+      top: $paddingMedium;
+      right: $paddingLarge;
+    }
+
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 400ms, transform 400ms;
+    &.hide {
+      opacity: 0;
+      transform: scale(0.9);
+      transition: opacity 400ms, transform 400ms;
+    }
+
     #navigation__button__close { fill:white; visibility: hidden; }
 
     @keyframes rotate {
@@ -149,7 +190,6 @@ header {
     display: none;
   }
   input[type=checkbox]:checked + label {
-    position: fixed;
     #navigation__button__open { visibility: hidden; }
     #navigation__button__close { fill:white; visibility: visible; }
   }
@@ -157,42 +197,37 @@ header {
   input[type=checkbox]:checked + label + nav {
     // Animation
     visibility: visible;
-    opacity: 1;
-    transition: visibility 0s, opacity 0.2s ease-out, transform 0.1s ease-out;
+    transition: visibility 0s;
+
+    &:before {
+      opacity: 1;
+      transition: opacity 0.2s ease-in;
+    }
 
     $range: 0.03s;
     $delay: 0.06s;
-
-    li {
-
+    ul {
+      opacity: 1;
+      transform: translateX(0px);
+      flex-wrap: wrap;
       @mixin inline-animation($duration) {
         transition: opacity 0.2s ease-out $duration, transform 0.2s ease-out $duration;
       }
-      &:nth-child(0) { @include inline-animation($delay+(1*$range)) }
-      &:nth-child(1) { @include inline-animation($delay+(2*$range)) }
-      &:nth-child(2) { @include inline-animation($delay+(3*$range)) }
-      &:nth-child(3) { @include inline-animation($delay+(4*$range)) }
-      &:nth-child(4) { @include inline-animation($delay+(5*$range)) }
-    }
-
-    ul.sublinks {
-      transition: opacity 0.2s ease-out $delay+6*$range, transform 0.2s ease-out $delay+6*$range;
-    }
-
-    ul.sublinks, li {
-      transform : translateX(0px);
-      opacity: 1;
+      &:nth-child(0) { @include inline-animation($delay+(2*$range)) }
+      &:nth-child(1) { @include inline-animation($delay+(3*$range)) }
+      &:nth-child(2) { @include inline-animation($delay+(4*$range)) }
+      &:nth-child(3) { @include inline-animation($delay+(5*$range)) }
+      &:nth-child(4) { @include inline-animation($delay+(6*$range)) }
+      &:nth-child(5) { @include inline-animation($delay+(7*$range)) }
     }
   }
-  nav {
 
-    z-index: 1000;
+  nav {
+    z-index: $indexNavigation;
 
     // Animation
     visibility: hidden;
-    opacity: 0;
-    transition: visibility 0s 0.2s, opacity .2s ease-out, transform .2s ease-out;
-
+    transition: visibility 0s 0.2s;
     // Position
     position: fixed;
     top: 0; bottom: 0; left: 0; right: 0;
@@ -201,8 +236,17 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: $nav-background;
     color: white;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0; bottom: 0; left: 0; right: 0;
+      background: $colorNavigation;
+      opacity: 0;
+      transition: opacity 0.2s ease-out;
+      z-index: $indexContent;
+    }
 
     @media screen and (max-width: 599px) {
       align-items: flex-end;
@@ -214,9 +258,9 @@ header {
       padding-right: 10vw;
     }
 
-    ul.links {
-      // Animation
 
+    ul {
+      // Animation
       @media screen and (max-width: 599px) {
       }
       @media screen and (min-width: 600px) and (max-width: 999px) {
@@ -226,78 +270,24 @@ header {
         width: 60vw;
       }
       padding: 0;
+      margin-bottom: 0;
       list-style: none;
-
-      li{
-        padding: 14px 0px 14px 0;
-        position: relative;
-        text-align: right;
-
-        transform : translateX(-30px);
-        opacity: 0;
-
-        @mixin inline-animation($duration) {
-          transition: opacity 0.2s ease-out $duration, transform 0.1s ease-out $duration;
-        }
-
-        &:nth-child(0) { @include inline-animation(0s) }
-        &:nth-child(1) { @include inline-animation(0s) }
-        &:nth-child(2) { @include inline-animation(0s) }
-        &:nth-child(3) { @include inline-animation(0s) }
-        &:nth-child(4) { @include inline-animation(0s) }
-
-        &:not(:last-child) {
-          &:after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            right: 10px;
-            width: 45px;
-            height: 1px;
-            border-bottom: solid 1px white;
-          }
-        }
-        a{
-          border: none;
-          color: $light;
-          text-transform: uppercase;
-          font-weight: 700;
-          font-size: 1.8rem;
-          line-height: 1;
-          letter-spacing: -0.01em;
-
-          &.active {
-            color: #888;
-            cursor: default;
-          }
-        }
-      }
-
-    }
-
-    ul.sublinks {
-      // Animation
-      transform : translateX(-30px);
+      z-index: $indexContent+1;
       opacity: 0;
-      transition: opacity 0.2s ease-out, transform 0.1s ease-out;
+      transform: translateX(-30px);
 
-      @media screen and (max-width: 599px) {
-      }
-      @media screen and (min-width: 600px) and (max-width: 999px) {
-        width: 60vw;
-      }
-      @media screen and (min-width: 1000px) {
-        width: 60vw;
-      }
-      padding: 0;
-      list-style: none;
       display: flex;
       justify-content: flex-end;
 
+      &.noMargin {
+        margin: 0 0 6px 0;
+      }
+
       li{
-        padding: 0px 20px 0px 20px;
+        padding: 14px 20px 14px 20px;
         position: relative;
         text-align: right;
+        opacity: 1;
 
         &:last-child {
           padding-right: 0;
@@ -307,8 +297,8 @@ header {
           &:after {
             content: '';
             position: absolute;
-            top: 5px;
-            bottom: 0px;
+            top: 14px;
+            bottom: 14px;
             right: 0;
             width: 1px;
             border-left: solid 1px white;
@@ -318,27 +308,44 @@ header {
         a{
           border: none;
           color: $light;
-          text-transform: capitalize;
-          font-weight: 400;
-          font-size: .8rem;
+          text-transform: uppercase;
+          font-weight: 700;
+          font-size: 2.8rem;
+          line-height: 1;
           letter-spacing: -0.01em;
 
           &.active {
-            color: #888;
+            color: $colorGold;
             cursor: default;
+            opacity: 0.4;
           }
+        }
+      }
+
+      &.small li a{
+        border: none;
+        color: $light;
+        text-transform: capitalize;
+        font-weight: 400;
+        font-size: .8rem;
+        letter-spacing: -0.01em;
+
+        &.active {
+          color: #888;
+          cursor: default;
+        }
+      }
+
+      &.icons li {
+        padding: 0px 12px;
+        img {
+          height: 1.8em;
+        }
+        &:after {
+          border: none !important;
         }
       }
 
     }
   }
-}
-
-
-
-aside{
-  z-index: 100;
-  position: absolute;
-  top: 0; left: 0; right: 0;
-
 }

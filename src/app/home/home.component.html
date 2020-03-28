@@ -1,41 +1,20 @@
-<header class="padding">
-  <div>
-    <div class="avatar block">
+<div class="route" style="padding-top: 0;">
+
+  <div class="container-fluid block">
+    <header id="home">
       <img
-        src="/assets/images/sebastienbarbier_profile_256.jpg"
-        srcset="/assets/images/sebastienbarbier_profile_256.jpg 256w,
-                /assets/images/sebastienbarbier_profile_512.jpg 512w,
-                /assets/images/sebastienbarbier_profile_1024.jpg 1024w,"
+        class="avatar"
+        src="/assets/images/ressources/sebastienbarbier_profile_256.jpg"
+        srcset="/assets/images/ressources/sebastienbarbier_profile_256.jpg 256w,
+                /assets/images/ressources/sebastienbarbier_profile_512.jpg 512w,
+                /assets/images/ressources/sebastienbarbier_profile_1024.jpg 1024w,"
         alt="Sébastien Barbier profile picture" />
-      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 140 140">
-        <rect x="0" y="0" width="140" height="140" fill="#4c586b" />
-        <g transform="scale(0.546875) translate(0.5 0.5)">
-          <polygon fill="#c8ffff" fill-opacity="0.501961" points="-9,127 2,-16 271,12" />
-          <polygon fill="#000000" fill-opacity="0.501961" points="-16,247 271,271 250,68" />
-          <polygon fill="#9ccaff" fill-opacity="0.501961" points="251,89 -16,8 271,-16" />
-          <polygon fill="#000000" fill-opacity="0.501961" points="271,113 103,93 244,271" />
-          <polygon fill="#a46e6c" fill-opacity="0.501961" points="109,209 191,182 22,60" />
-          <polygon fill="#0a060d" fill-opacity="0.501961" points="-16,261 271,253 29,141" />
-          <polygon fill="#14253b" fill-opacity="0.501961" points="36,81 94,81 27,162" />
-          <polygon fill="#83a9e0" fill-opacity="0.501961" points="7,106 221,62 -16,11" />
-          <polygon fill="#7e544f" fill-opacity="0.501961" points="113,218 33,143 189,175" />
-          <polygon fill="#000000" fill-opacity="0.501961" points="271,118 253,271 92,243" />
-        </g>
-      </svg>
-    </div>
-    <h2 class="block">{{ 'home.hi' | translate }}</h2>
-    <p class="block" [innerHTML]="'home.mynameis' | translate"></p>
-  </div>
-</header>
-
-<div class="line block padding">
-  <div class="intro">
-    <h2>{{ 'home.whatido.title' | translate }}</h2>
-    <p [innerHTML]="'home.whatido.description' | translate"></p>
+        <div>
+          <p><span class="hi">Hi 👋</span><br/>
+            <span class="name">My name is <strong>Sébastien Barbier</strong></span><br/>
+              I am a <strong>web developer</strong> from <strong>France</strong>, currently <strong>working at SAP</strong>, and based in <strong>Zurich Switzerland</strong>.</p>
+        </div>
+    </header>
   </div>
 
-  <div class="location">
-    <h2>{{ 'home.whereami.title' | translate }}</h2>
-    <p [innerHTML]="'home.whereami.description' | translate"></p>
-  </div>
 </div>

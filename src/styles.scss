@@ -1,6 +1,7 @@
+@import 'assets/scss/bootstrap-grid';
 @import "assets/scss/variables";
 @import "assets/scss/fonts";
-@import "assets/scss/styling";
+@import "assets/scss/guideline";
 
 html {
   height: 100%;
@@ -35,18 +36,18 @@ html {
 
     .padding {
 
-      @media screen and (max-width: 599px) {
-        padding-left: $padding;
-        padding-right: $padding;
+      @media screen and (max-width: $sm - 1px) {
+        padding-left: $paddingSmall;
+        padding-right: $paddingSmall;
       }
-      @media screen and (min-width: 600px) and (max-width: 999px) {
-        padding-left: $padding * 2;
-        padding-right: $padding * 2;
+      @media screen and (min-width: $sm) and (max-width: $lg - 1px) {
+        padding-left: $paddingMedium;
+        padding-right: $paddingMedium;
       }
 
-      @media screen and (min-width: 1000px) {
-        padding-left: 120px;
-        padding-right: 120px;
+      @media screen and (min-width: $lg) {
+        padding-left: $paddingLarge;
+        padding-right: $paddingLarge;
       }
 
     }

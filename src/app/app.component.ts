@@ -25,10 +25,10 @@ import {
 })
 export class AppComponent implements OnInit {
 
-  headerState: string;
   navigationMenuStatus: Boolean;
   lang: string;
   path: string;
+  headerState: string;
   hideMenuAnimation: Boolean;
 
   constructor(
@@ -43,15 +43,14 @@ export class AppComponent implements OnInit {
       @Inject(DOCUMENT) private d,
       @Optional() @Inject('serverUrl') protected serverUrl: string
     ) {
-    this.headerState = 'hide';
     this.navigationMenuStatus = false;
     this.hideMenuAnimation = true;
 
     this.lang = 'en';
     if (isPlatformBrowser(platformId) && d.location.hostname.endsWith('sebastienbarbier.fr')) {
-      this.lang = 'fr';
+      this.lang = 'en';
     } else if (isPlatformServer(platformId) && serverUrl.split(':')[1].endsWith('sebastienbarbier.fr')) {
-      this.lang = 'fr';
+      this.lang = 'en';
     }
     translate.setDefaultLang(this.lang);
     translate.use(this.lang);
@@ -79,9 +78,13 @@ export class AppComponent implements OnInit {
         this.path = event.url;
         // If home page, we hide header
         if (event.url === '/') {
-          this.headerState = 'hide';
+          this.headerState = 'home';
+        } else if (event.url === '/about-me') {
+          this.headerState = 'aboutMe';
+        } else if (event.url === '/work') {
+          this.headerState = 'work';
         } else {
-          this.headerState = 'show';
+          this.headerState = 'notHome';
         }
         // We enable overflow on body if fullscreen action had disabled it
         this.d.body.style.overflow = "auto";
