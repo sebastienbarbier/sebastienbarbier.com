@@ -22,8 +22,7 @@ const DIST_FOLDER = join(process.cwd(), 'dist');
 
 // Our index.html we'll use as our template
 // No use of this, just check if templates are here.
-const templateEnglish = readFileSync(join(DIST_FOLDER, 'browser', 'index_en.html')).toString();
-const templateFrench = readFileSync(join(DIST_FOLDER, 'browser', 'index_fr.html')).toString();
+const templateEnglish = readFileSync(join(DIST_FOLDER, 'browser', 'index.html')).toString();
 
 // * NOTE :: leave this as require() since this file is built Dynamically from webpack
 const { AppServerModuleNgFactory, LAZY_MODULE_MAP } = require('./dist/server/main');

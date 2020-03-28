@@ -47,11 +47,11 @@ export class AppComponent implements OnInit {
     this.hideMenuAnimation = true;
 
     this.lang = 'en';
-    if (isPlatformBrowser(platformId) && d.location.hostname.endsWith('sebastienbarbier.fr')) {
-      this.lang = 'en';
-    } else if (isPlatformServer(platformId) && serverUrl.split(':')[1].endsWith('sebastienbarbier.fr')) {
-      this.lang = 'en';
-    }
+    // if (isPlatformBrowser(platformId) && d.location.hostname.endsWith('sebastienbarbier.fr')) {
+    //   this.lang = 'en';
+    // } else if (isPlatformServer(platformId) && serverUrl.split(':')[1].endsWith('sebastienbarbier.fr')) {
+    //   this.lang = 'en';
+    // }
     translate.setDefaultLang(this.lang);
     translate.use(this.lang);
 
@@ -109,19 +109,15 @@ export class AppComponent implements OnInit {
     // meta title
     if (outlet.activatedRouteData.title) {
       // Update title and meta data
-      this.translate.get(outlet.activatedRouteData.title).subscribe((res: string) => {
-          this.titleService.setTitle(`S${accent}bastien Barbier - ${res}`);
-      });
+      this.titleService.setTitle(`Sébastien Barbier - ${outlet.activatedRouteData.title}`);
     } else {
-      this.titleService.setTitle(`S${accent}bastien Barbier`);
+      this.titleService.setTitle(`Sébastien Barbier`);
     }
 
     if (outlet.activatedRouteData.description) {
       // Update title and meta data
-      this.translate.get(outlet.activatedRouteData.description).subscribe((res: string) => {
-        this.metaService.removeTag('name="description"');
-        this.metaService.addTag({ name: 'description', content: res }, false);
-      });
+      this.metaService.removeTag('name="description"');
+      this.metaService.addTag({ name: 'description', content: outlet.activatedRouteData.description }, false);
     } else {
       this.metaService.removeTag('name="description"');
     }

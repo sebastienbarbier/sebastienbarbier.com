@@ -21,7 +21,6 @@ const { AppServerModuleNgFactory, LAZY_MODULE_MAP } = require('./dist/server/mai
 
 // Get route paths to prerender only static pages
 const PATHS = require('./static.paths');
-
 const BROWSER_FOLDER = join(process.cwd(), 'browser');
 
 // Load the index.html file containing referances to your application bundle.
@@ -29,11 +28,13 @@ const index = readFileSync(join('browser', 'index.html'), 'utf8');
 
 let prom = Promise.resolve();
 
+console.log(PATHS);
 // Iterate each route path
 PATHS.forEach(function (route) {
   // Changes current directory to ./dist/browser
   chdir(BROWSER_FOLDER);
 
+  console.log(route);
   // Creates new directories (if not exists) and changes current directory for the nested one
   route.split('/').filter(val => val !== '')
     .forEach(function (dir) {

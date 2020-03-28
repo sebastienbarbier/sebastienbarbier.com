@@ -5,19 +5,18 @@
 	},
 	"contact": {
 		"about_life": "About life",
-		"about_work": "About work",
-		"cremedelacreme_description": "Freelance profile, french platform to connect with companies.",
-		"email": "Email",
+		"about_work": "",
+		"email": "",
 		"facebook_description": "Close list of friends and family, very unlikely to use.",
-		"github_description": "Code repository where all of my opensource projects are stored.",
-		"instagram_description": "Share mostly about traveling and nomadism.",
-		"keybase_description": "Authentication service to provide proof of identity.",
-		"linkedin_description": "Mostly use as an online resume.",
+		"github_description": "",
+		"instagram_description": "",
+		"keybase_description": "",
+		"linkedin_description": "",
 		"malt_description": "Freelance profile, french platform to connect with companies.",
-		"nomadlist_description": "Travel logs to connect with other nomads.",
-		"others": "Others",
-		"stackoverflow_description": "Q/A platform about tech issues. Try to help when I can.",
-		"twitter_description": "Everyday use to share work and tech related content."
+		"nomadlist_description": "",
+		"others": "",
+		"stackoverflow_description": "",
+		"twitter_description": ""
 	},
 	"description": {
 		"contact": "You can reach to me by email hello@sebastienbarbier.com or any of my social network account.",
@@ -40,28 +39,28 @@
 	},
 	"legal": {
 		"author": {
-			"description": "<strong>SPRB Consulting</strong><br/>Mr Sebastien BARBIER<br/>10 rue de Penthièvre<br/>75008 Paris, France<br/>Contact : <a href=\"mailto:hello@sebastienbarbier.com\">hello@sebastienbarbier.com</a>",
-			"title": "Author"
+			"description": "",
+			"title": ""
 		},
-		"description": "<strong>SPRB Consulting SASU</strong> under the name <strong>sebastienbarbier</strong> - 10 Rue De Penthièvre, 75008 Paris, France - Social capital of 1200 euros - RCS Paris 834 673 816.",
+		"description": "",
 		"hosting": {
-			"description": "<strong>Clever Cloud SAS</strong><br/>3 rue de l'Allier<br/>44000 Nantes, France.<br/>Website : <a href=\"https://www.clever-cloud.com\">www.clever-cloud.com</a><br/>General support (commercial and other requests): <a href=\"tel:+33285520769\">+33 2 85 52 07 69</a><br/>Technical support: <a href=\"mailto:support@clever-cloud.com\">support@clever-cloud.com</a>.",
-			"title": "Hosting"
+			"description": "",
+			"title": ""
 		},
 		"licence": {
-			"content": "Content is licensed under a <a href=\"https://creativecommons.org/licenses/by/4.0/\">Creative Commons Attribution 4.0 International license</a>.",
-			"title": "Licence",
-			"website": "Website is licensed under a <a href=\"https://opensource.org/licenses/MIT\">MIT licence</a>. Source code is available <a href=\"https://github.com/sebastienbarbier/sebastienbarbier.com\">on github</a>."
+			"content": "",
+			"title": "",
+			"website": ""
 		}
 	},
 	"nav": {
-		"contact": "Contact",
+		"contact": "",
 		"about_me": "freelance",
-		"home": "Home",
-		"legal": "Legal & copyright",
+		"home": "",
+		"legal": "",
     	"location": "Location",
 		"work": "Work",
-		"resources": "Resources",
+		"resources": "",
 		"toggle": "Toggle navigation menu"
 	}
 }

@@ -9,7 +9,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 
-import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { AppComponent } from './app.component';
@@ -20,14 +19,7 @@ import { environment } from '../environments/environment';
 
 import { appRoutes } from './app.routes';
 
-import * as Sentry from "@sentry/browser";
-
-export function createTranslateLoader(http: HttpClient) {
-  return new TranslateHttpLoader(
-    http,
-    './assets/i18n/',
-    (environment.production ? '.' + Math.floor(Math.random() * 100000) + '.json' : '.json'));
-}
+import * as Sentry from '@sentry/browser';
 
 @Injectable()
 export class SentryErrorHandler implements ErrorHandler {
@@ -42,7 +34,7 @@ const providers = [];
 if (environment.production) {
 
   Sentry.init({
-    dsn: "https://c36d29ca446044659f503c09282f68b5@sentry.io/1488195"
+    dsn: 'https://c36d29ca446044659f503c09282f68b5@sentry.io/1488195'
   });
 
   providers.push({ provide: ErrorHandler, useClass: SentryErrorHandler });
@@ -59,13 +51,6 @@ if (environment.production) {
       appRoutes,
       {onSameUrlNavigation: 'ignore',}
     ),
-    TranslateModule.forRoot({
-        loader: {
-            provide: TranslateLoader,
-            useFactory: (createTranslateLoader),
-            deps: [HttpClient]
-        }
-    }),
     SharedModule.forRoot(),
   ],
   declarations: [
