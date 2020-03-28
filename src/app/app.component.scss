@@ -209,6 +209,7 @@ header {
     ul {
       opacity: 1;
       transform: translateX(0px);
+      flex-wrap: wrap;
       @mixin inline-animation($duration) {
         transition: opacity 0.2s ease-out $duration, transform 0.2s ease-out $duration;
       }

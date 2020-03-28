@@ -23,17 +23,22 @@ header#home {
   position: relative;
   min-height: 100vh;
   font-size: 1.4em;
-  padding: 100px 0;
+  padding: 100px 0 150px;
 
   display: flex;
   justify-content: center;
   align-items: center;
   
+  @media screen and (max-width: $lg - 1px) {
+
+    padding: 100px 20px 150px;
+  } 
 
   @media screen and (max-width: $md - 1px) {
     flex-direction: column;
     align-items: flex-start;
     font-size: 1.2em;
+    padding: 10vh 0 10px;
   }
 
   h2 {
