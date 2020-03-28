@@ -50,11 +50,11 @@ export class HomeComponent implements OnInit {
   hasIntersectionObservable: Boolean;
   // instagram = { data: instagram.data.slice(0, 8) };
   // nomadlist = nomadlist;
-  now: Date = new Date(new Date().toLocaleString("en-US", {timeZone: nomadlist.location.now.timezone}));
-  diff: number =(new Date().getUTCHours() - new Date(new Date().toLocaleString("en-US", {timeZone: nomadlist.location.now.timezone})).getHours()) * -1;
+  // now: Date = new Date(new Date().toLocaleString("en-US", {timeZone: nomadlist.location.now.timezone}));
+  // diff: number =(new Date().getUTCHours() - new Date(new Date().toLocaleString("en-US", {timeZone: nomadlist.location.now.timezone})).getHours()) * -1;
 
   constructor() {
-    this.hasIntersectionObservable = IntersectionObserver != undefined;
+    // this.hasIntersectionObservable = IntersectionObserver != undefined;
   }
 
   @HostBinding('@homeTransition') '';
