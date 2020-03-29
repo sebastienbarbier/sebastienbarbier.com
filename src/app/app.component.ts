@@ -6,9 +6,6 @@ import { isPlatformBrowser, isPlatformServer } from '@angular/common';
 import { Title, Meta } from '@angular/platform-browser';
 import { DOCUMENT, Location } from '@angular/common';
 
-// AOT issue : https://github.com/ngx-translate/core/issues/537
-import { TranslateService } from '@ngx-translate/core';
-
 import {
   trigger,
   state,
@@ -36,7 +33,6 @@ export class AppComponent implements OnInit {
       private router: Router,
       private element: ElementRef,
       private renderer: Renderer2,
-      private translate: TranslateService,
       private titleService: Title,
       private metaService: Meta,
       @Inject(PLATFORM_ID) private platformId: Object,
@@ -52,8 +48,8 @@ export class AppComponent implements OnInit {
     // } else if (isPlatformServer(platformId) && serverUrl.split(':')[1].endsWith('sebastienbarbier.fr')) {
     //   this.lang = 'en';
     // }
-    translate.setDefaultLang(this.lang);
-    translate.use(this.lang);
+    // translate.setDefaultLang(this.lang);
+    // translate.use(this.lang);
 
   }
 
