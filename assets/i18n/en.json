@@ -1,0 +1,66 @@
+{
+	"404": {
+		"description": "Sorry, this page does not exist or might have been removed.",
+		"title": "Error 404"
+	},
+	"contact": {
+		"about_life": "About life",
+		"about_work": "",
+		"email": "",
+		"facebook_description": "Close list of friends and family, very unlikely to use.",
+		"github_description": "",
+		"instagram_description": "",
+		"keybase_description": "",
+		"linkedin_description": "",
+		"malt_description": "Freelance profile, french platform to connect with companies.",
+		"nomadlist_description": "",
+		"others": "",
+		"stackoverflow_description": "",
+		"twitter_description": ""
+	},
+	"description": {
+		"contact": "You can reach to me by email hello@sebastienbarbier.com or any of my social network account.",
+		"home": "My name is Sébastien Barbier, I am a web developer from France, currently working at SAP and based in Zurich Switzerland",
+		"legal": "This website is edited as individual and private content. It is not attached to any company of any kind.",
+		"resources": "Set of resources which might be useful to create content and communicate about myself",
+    	"location": "Location"
+	},
+	"home": {
+		"hi": "Hi!",
+		"mynameis": "My name is Sebastien, I am a <strong>Software engineer</strong> from France.",
+		"whatido": {
+			"description": "I am a <strong>entrepreneur, maker, remote freelance, nomad, expat in thailand</strong>, working mainly as fullstack python senior front-end developer.",
+			"title": "About me"
+		},
+		"whereami": {
+			"description": "Having a location independant lifestyle, you can follow my journey on <a href=\"https://nomadlist.com/@sebastienbarbier\">my nomad list profile</a>. I am currently based in <strong>Chiang Mai, Thailand</strong>.",
+			"title": "Location"
+		}
+	},
+	"legal": {
+		"author": {
+			"description": "",
+			"title": ""
+		},
+		"description": "",
+		"hosting": {
+			"description": "",
+			"title": ""
+		},
+		"licence": {
+			"content": "",
+			"title": "",
+			"website": ""
+		}
+	},
+	"nav": {
+		"contact": "",
+		"about_me": "freelance",
+		"home": "",
+		"legal": "",
+    	"location": "Location",
+		"work": "Work",
+		"resources": "",
+		"toggle": "Toggle navigation menu"
+	}
+}
