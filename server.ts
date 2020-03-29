@@ -60,14 +60,14 @@ app.get('/robots.txt', (req, res) => {
 
 app.get('/sitemap.xml', (req, res) => {
   const lang = req.get('host').includes('sebastienbarbier.fr') ? 'fr' : 'en';
-  res.sendFile(join(DIST_FOLDER, 'static', `sitemap.${lang}.xml`), {
+  res.sendFile(join(DIST_FOLDER, 'static', `sitemap.xml`), {
     req
   });
 });
 
 app.get('/keybase.txt', (req, res) => {
   const lang = req.get('host').includes('sebastienbarbier.fr') ? 'fr' : 'en';
-  res.sendFile(join(DIST_FOLDER, 'static', `keybase.${lang}.txt`), {
+  res.sendFile(join(DIST_FOLDER, 'static', `keybase.txt`), {
     req
   });
 });
@@ -91,15 +91,12 @@ app.get('/robots.txt', (req, res) => {
   });
 });
 
-app.get('/freelance', (req, res) => res.redirect(301, '/about-me'));
-app.get('/projects', (req, res) => res.redirect(301, '/work'));
-
 app.get('*.*', express.static(join(DIST_FOLDER, 'browser')));
 
 // All regular routes use the Universal engine
 app.get('*', (req, res) => {
   const lang = req.get('host').includes('sebastienbarbier.fr') ? 'fr' : 'en';
-  res.render(`index_${lang}`, {
+  res.render(`index`, {
     req,
     res,
     providers: [{
