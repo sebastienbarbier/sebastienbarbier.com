@@ -10,6 +10,7 @@ src/assets/images/instagram/
 /dist
 /tmp
 /out-tsc
+/app
 
 # dependencies
 /node_modules
