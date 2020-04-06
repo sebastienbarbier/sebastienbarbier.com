@@ -1,2 +1,2 @@
-cd $TRAVIS_BUILD_DIR/build
-swift upload app .
+cd $TRAVIS_BUILD_DIR/dist/browser
+swift upload website .
