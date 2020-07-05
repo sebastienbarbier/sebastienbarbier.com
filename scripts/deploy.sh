@@ -1,3 +1,4 @@
-cd $TRAVIS_BUILD_DIR/dist
-rm -rf server prerender.js server.js
-swift upload website .
+cd $TRAVIS_BUILD_DIR/dist/en
+swift upload sebastienbarbier_en .
+cd $TRAVIS_BUILD_DIR/dist/fr
+swift upload sebastienbarbier_fr .
