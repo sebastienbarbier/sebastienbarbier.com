@@ -21,16 +21,23 @@ const { AppServerModuleNgFactory, LAZY_MODULE_MAP } = require('./dist/server/mai
 
 // Get route paths to prerender only static pages
 const PATHS = require('./static.paths');
-const BROWSER_FOLDER = join(process.cwd(), 'browser');
 
+//
+// ENGLISH
+//
+
+const BROWSER_FOLDER = join(process.cwd(), 'en');
+const BROWSER_FOLDER2 = join(process.cwd(), 'fr');
 // Load the index.html file containing referances to your application bundle.
-const index = readFileSync(join('browser', 'index.html'), 'utf8');
+const index = readFileSync(join('en', 'index.html'), 'utf8');
+const index2 = readFileSync(join('fr', 'index.html'), 'utf8');
 
 let prom = Promise.resolve();
+let prom2 = Promise.resolve();
 
 // Iterate each route path
 PATHS.forEach(function (route) {
-  // Changes current directory to ./dist/browser
+  // Changes current directory to ./dist/en
   chdir(BROWSER_FOLDER);
 
   // Creates new directories (if not exists) and changes current directory for the nested one
@@ -50,4 +57,33 @@ PATHS.forEach(function (route) {
       provideModuleMap(LAZY_MODULE_MAP)
     ]
   })).then(html => writeFileSync(join(BROWSER_FOLDER, route, 'index.html'), html));
+});
+
+
+//
+// FRENCH
+//
+
+// Iterate each route path
+PATHS.forEach(function (route) {
+  // Changes current directory to ./dist/fr
+  chdir(BROWSER_FOLDER2);
+
+  // Creates new directories (if not exists) and changes current directory for the nested one
+  route.split('/').filter(val => val !== '')
+    .forEach(function (dir) {
+      if (!existsSync(dir)) {
+        mkdirSync(dir);
+      }
+      chdir(dir);
+    });
+
+  // Writes rendered HTML to index.html, replacing the file if it already exists.
+  prom2 = prom2.then(_ => renderModuleFactory(AppServerModuleNgFactory, {
+    document: index2,
+    url: route,
+    extraProviders: [
+      provideModuleMap(LAZY_MODULE_MAP)
+    ]
+  })).then(html => writeFileSync(join(BROWSER_FOLDER2, route, 'index.html'), html));
 });

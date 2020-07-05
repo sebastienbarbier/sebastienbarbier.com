@@ -1,6 +1,6 @@
 module.exports = [
   '/',
-  '/contact',
+  'contact',
   'resources',
   'legal'
 ];
