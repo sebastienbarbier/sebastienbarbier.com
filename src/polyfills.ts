@@ -38,7 +38,7 @@
 // import 'classlist.js';  // Run `npm install --save classlist.js`.
 
 /** Evergreen browsers require these. **/
-import 'core-js/es6/reflect';
+// import 'core-js/es6/reflect';
 
 
 /**
@@ -55,7 +55,6 @@ import 'core-js/es6/reflect';
 import 'zone.js/dist/zone';  // Included with Angular CLI.
 
 import 'web-animations-js/web-animations.min';
-
 
 import 'aos';
 

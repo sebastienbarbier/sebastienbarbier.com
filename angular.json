@@ -26,7 +26,6 @@
           },
           "configurations": {
             "production": {
-              "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
               "extractCss": true,
@@ -35,6 +34,14 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
+              "optimization": {
+                "scripts": true,
+                "styles": {
+                  "minify": true,
+                  "inlineCritical": false
+                },
+                "fonts": true
+              },
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
@@ -122,7 +129,14 @@
           },
           "configurations": {
             "production": {
-              "optimization": true,
+              "optimization": {
+                "scripts": true,
+                "styles": {
+                  "minify": true,
+                  "inlineCritical": false
+                },
+                "fonts": true
+              },
               "outputHashing": "all",
               "sourceMap": false,
               "extractCss": true,
