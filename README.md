@@ -1,5 +1,7 @@
 # sebastienbarbier.com
 
+[![Build Status](https://travis-ci.com/sebastienbarbier/sebastienbarbier.com.svg?branch=main)](https://travis-ci.com/sebastienbarbier/sebastienbarbier.com)
+
 This repository host my personnal website, [sebastienbarbier.com](https://sebastienbarbier.com).
 
 It is powered by [angular framework](https://angular.io), and published with [angular universal](https://github.com/angular/universal) for server rendering.
