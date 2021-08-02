@@ -1,6 +1,5 @@
 import {NgModule} from '@angular/core';
 import {ServerModule} from '@angular/platform-server';
-import {ModuleMapLoaderModule} from '@nguniversal/module-map-ngfactory-loader';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { UniversalInterceptor } from './universal.interceptor';
 import { HttpClientModule } from '@angular/common/http';
@@ -14,7 +13,6 @@ import {AppComponent} from './app.component';
     // by the ServerModule from @angular/platform-server.
     AppModule,
     ServerModule,
-    ModuleMapLoaderModule,
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,

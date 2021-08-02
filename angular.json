@@ -28,7 +28,6 @@
             "production": {
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "aot": true,
               "extractLicenses": true,
@@ -100,9 +99,42 @@
           "builder": "@angular-devkit/build-angular:server",
           "options": {
             "outputPath": "dist/server",
-            "main": "src/main.server.ts",
+            "main": "server.ts",
             "tsConfig": "src/tsconfig.server.json"
           }
+        },
+        "serve-ssr": {
+          "builder": "@nguniversal/builders:ssr-dev-server",
+          "configurations": {
+            "development": {
+              "browserTarget": "sebastienbarbier_en:build:development",
+              "serverTarget": "sebastienbarbier_en:server:development"
+            },
+            "production": {
+              "browserTarget": "sebastienbarbier_en:build:production",
+              "serverTarget": "sebastienbarbier_en:server:production"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "prerender": {
+          "builder": "@nguniversal/builders:prerender",
+          "options": {
+            "routes": [
+              "/"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "sebastienbarbier_en:build:production",
+              "serverTarget": "sebastienbarbier_en:server:production"
+            },
+            "development": {
+              "browserTarget": "sebastienbarbier_en:build:development",
+              "serverTarget": "sebastienbarbier_en:server:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     },
@@ -139,7 +171,6 @@
               },
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "aot": true,
               "extractLicenses": true,

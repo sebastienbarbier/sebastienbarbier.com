@@ -20,5 +20,8 @@
       "dom"
     ],
     "baseUrl": "./"
-  }
+  },
+  "include": [
+    "server.ts"
+  ]
 }

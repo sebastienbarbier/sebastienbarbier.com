@@ -47,10 +47,7 @@ if (environment.production) {
     HttpClientModule,
     BrowserAnimationsModule,
     FormsModule,
-    RouterModule.forRoot(
-      appRoutes,
-      {onSameUrlNavigation: 'ignore',}
-    ),
+    RouterModule.forRoot(appRoutes, { onSameUrlNavigation: 'ignore', initialNavigation: 'enabled' }),
     SharedModule.forRoot(),
   ],
   declarations: [
