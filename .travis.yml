@@ -14,7 +14,7 @@ deploy:
     skip_cleanup: true
     script: bash scripts/deploy.sh
     on:
-      branch: master
+      branch: main
   # deploy next.seven23.io on github page
   - provider: pages
     skip_cleanup: true
