@@ -56,6 +56,6 @@ ng serve --host local.sebastienbarbier.fr
 
 ## Inspired
 
-https://www.giacomomottin.com/
-https://www.devonstank.com/
-https://new.damirkotoric.com/
+- https://www.giacomomottin.com/  
+- https://www.devonstank.com/  
+- https://new.damirkotoric.com/  
