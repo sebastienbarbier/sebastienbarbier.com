@@ -25,6 +25,7 @@
             "scripts": []
           },
           "configurations": {
+            "development": {},
             "production": {
               "outputHashing": "all",
               "sourceMap": false,
@@ -58,7 +59,11 @@
           "configurations": {
             "production": {
               "browserTarget": "sebastienbarbier_en:build:production"
+            },
+            "development": {
+              "browserTarget": "sebastienbarbier_en:build:development"
             }
+
           }
         },
         "extract-i18n": {
@@ -101,6 +106,10 @@
             "outputPath": "dist/server",
             "main": "server.ts",
             "tsConfig": "src/tsconfig.server.json"
+          },
+          "configurations": {
+            "production": {},
+            "development": {}
           }
         },
         "serve-ssr": {
@@ -120,19 +129,12 @@
         "prerender": {
           "builder": "@nguniversal/builders:prerender",
           "options": {
-            "routes": [
-              "/"
-            ]
+            "browserTarget": "sebastienbarbier_en:build:production",
+            "serverTarget": "sebastienbarbier_en:server:production",
+            "routesFile": "./static.paths.txt"
           },
           "configurations": {
-            "production": {
-              "browserTarget": "sebastienbarbier_en:build:production",
-              "serverTarget": "sebastienbarbier_en:server:production"
-            },
-            "development": {
-              "browserTarget": "sebastienbarbier_en:build:development",
-              "serverTarget": "sebastienbarbier_en:server:development"
-            }
+            "production": {}
           },
           "defaultConfiguration": "production"
         }
