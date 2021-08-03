@@ -1,10 +1,11 @@
 import { Component, OnInit, Inject, Renderer2, ElementRef, PLATFORM_ID, Optional } from '@angular/core';
-import { ActivatedRoute, Router, NavigationStart, NavigationEnd, RouteConfigLoadStart, RouteConfigLoadEnd } from '@angular/router';
+import { ActivatedRoute, Router, NavigationStart, NavigationEnd, RouteConfigLoadStart, RouteConfigLoadEnd, RouterOutlet } from '@angular/router';
 import { routerTransition } from './router.animations';
 
 import { isPlatformBrowser, isPlatformServer } from '@angular/common';
 import { Title, Meta } from '@angular/platform-browser';
 import { DOCUMENT, Location } from '@angular/common';
+import { Routes } from '@angular/router';
 
 import {
   trigger,
@@ -36,13 +37,15 @@ export class AppComponent implements OnInit {
       private titleService: Title,
       private metaService: Meta,
       @Inject(PLATFORM_ID) private platformId: Object,
-      @Inject(DOCUMENT) private d,
+      @Inject(DOCUMENT) private d: Document,
       @Optional() @Inject('serverUrl') protected serverUrl: string
     ) {
     this.navigationMenuStatus = false;
     this.hideMenuAnimation = true;
 
     this.lang = 'en';
+    this.path = '';
+    this.headerState = '';
     // if (isPlatformBrowser(platformId) && d.location.hostname.endsWith('sebastienbarbier.fr')) {
     //   this.lang = 'en';
     // } else if (isPlatformServer(platformId) && serverUrl.split(':')[1].endsWith('sebastienbarbier.fr')) {
@@ -62,10 +65,10 @@ export class AppComponent implements OnInit {
         }
       }
       if (event instanceof RouteConfigLoadStart && !this.hideMenuAnimation) {
-          document.getElementById('navigation__button').classList.add('isLoading');
+          document.getElementById('navigation__button')?.classList.add('isLoading');
       }
       if (event instanceof RouteConfigLoadEnd && !this.hideMenuAnimation) {
-        document.getElementById('navigation__button').classList.remove('isLoading');
+        document.getElementById('navigation__button')?.classList.remove('isLoading');
       }
 
       // NavigationStart, NavigationEnd, NavigationCancel, NavigationError, RoutesRecognized
@@ -99,7 +102,7 @@ export class AppComponent implements OnInit {
 
   }
 
-  getState(outlet) {
+  getState(outlet: RouterOutlet) {
 
     const accent = this.lang === 'en' ? 'e' : 'é';
     // meta title

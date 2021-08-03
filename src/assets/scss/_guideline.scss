@@ -93,9 +93,6 @@ p, li {
 
 .banner {
   width: 100%;
-  &.white {
-    // background: white;
-  }
 }
 
 
@@ -148,7 +145,7 @@ p, li {
   border-radius: 4px;
   font-size: 0.9em;
   color: $colorNavigation;
-  // background: $light;
+  /* background: $light; */
   &:before {
     background: rgba(0, 0, 0, 0.05);
     content: '';
@@ -162,7 +159,7 @@ p, li {
      &:before {
       opacity: 1;
       visibility: visible;
-    transition: opacity 250ms, visibility 0s;
+      transition: opacity 250ms, visibility 0s;
     }
     img {
       transform: scale(1.1);
@@ -173,7 +170,7 @@ p, li {
     font-size: 0.8125rem;
   }
   &.large {
-    .font-size: 0.8125rem;
+    font-size: 0.8125rem;
   }
   &.outlined {
     border: 1px solid rgba($colorNavigation, 0.6);
@@ -188,4 +185,3 @@ p, li {
     transition: transform 500ms;
   }
 }
-// .banner .btn { background: $light; }

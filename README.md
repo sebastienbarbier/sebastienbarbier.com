@@ -21,16 +21,22 @@ Navigate to `http://localhost:4200/`. The app will automatically reload if you c
 
 Following angular universal practice, you can build the app on static or dynamic mode.
 
+### Dymanic mode
+
+Using `npm run dev:ssr` generate an expressjs server to deploy and deliver the app.
+
+Deploying dynamic more require to build then start server
+```
+npm run build:ssr
+npm run serve:ssr
+```
+
 ### Static mode
 
 Using `npm run build:static` render all pages in html, and be published on a a static site hosting service like [github page](https://pages.github.com/). 
 This method currently require to manually keep a list of urls to generate, saved in `static.paths.js` file.
 
 You can use `npm run build:static && npm run serve:static` for testing locally before deploying
-
-### Dymanic mode
-
-Using `npm run build:dynamic` generate an expressjs server to deploy and deliver the app.
 
 ## Unit tests and end-to-end tests
 

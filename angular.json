@@ -25,16 +25,23 @@
             "scripts": []
           },
           "configurations": {
+            "development": {},
             "production": {
-              "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
+              "optimization": {
+                "scripts": true,
+                "styles": {
+                  "minify": true,
+                  "inlineCritical": false
+                },
+                "fonts": true
+              },
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
@@ -52,7 +59,11 @@
           "configurations": {
             "production": {
               "browserTarget": "sebastienbarbier_en:build:production"
+            },
+            "development": {
+              "browserTarget": "sebastienbarbier_en:build:development"
             }
+
           }
         },
         "extract-i18n": {
@@ -93,9 +104,39 @@
           "builder": "@angular-devkit/build-angular:server",
           "options": {
             "outputPath": "dist/server",
-            "main": "src/main.server.ts",
+            "main": "server.ts",
             "tsConfig": "src/tsconfig.server.json"
+          },
+          "configurations": {
+            "production": {},
+            "development": {}
           }
+        },
+        "serve-ssr": {
+          "builder": "@nguniversal/builders:ssr-dev-server",
+          "configurations": {
+            "development": {
+              "browserTarget": "sebastienbarbier_en:build:development",
+              "serverTarget": "sebastienbarbier_en:server:development"
+            },
+            "production": {
+              "browserTarget": "sebastienbarbier_en:build:production",
+              "serverTarget": "sebastienbarbier_en:server:production"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "prerender": {
+          "builder": "@nguniversal/builders:prerender",
+          "options": {
+            "browserTarget": "sebastienbarbier_en:build:production",
+            "serverTarget": "sebastienbarbier_en:server:production",
+            "routesFile": "./static.paths.txt"
+          },
+          "configurations": {
+            "production": {}
+          },
+          "defaultConfiguration": "production"
         }
       }
     },
@@ -122,10 +163,16 @@
           },
           "configurations": {
             "production": {
-              "optimization": true,
+              "optimization": {
+                "scripts": true,
+                "styles": {
+                  "minify": true,
+                  "inlineCritical": false
+                },
+                "fonts": true
+              },
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "aot": true,
               "extractLicenses": true,
