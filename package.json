@@ -18,7 +18,7 @@
     "serve:ssr": "node dist/server/main.js",
     "build:ssr": "ng build && ng run sebastienbarbier_en:server",
     "prerender": "ng run sebastienbarbier_en:prerender",
-    "serve:prerender": "cd dist/en && http-server",
+    "serve:prerender": "cd dist/en && http-server"
   },
   "engines": {
     "node": "~14"
