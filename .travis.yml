@@ -4,7 +4,7 @@ node_js:
 install:
   - npm install
 script:
-  - npm run build:static
+  - npm run prerender
 before_deploy:
   - source scripts/4660933598635778-openrc.sh
   - pip install python-swiftclient python-keystoneclient --user

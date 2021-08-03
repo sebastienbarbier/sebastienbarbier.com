@@ -4,12 +4,9 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "install": "npm run build:ssr",
     "start": "node dist/server",
     "build": "ng build",
-    "build:client-and-server-bundles": "ng build sebastienbarbier_en --configuration production && ng build sebastienbarbier_fr --configuration production && ng run sebastienbarbier_en:server",
-    "build:static": "npm run build:client-and-server-bundles && npm run webpack:server && npm run generate:static",
-    "serve:static": "cd dist/en && http-server",
+    "serve:static": "npm run serve:prerender",
     "test": "ng test",
     "lint": "ng lint",
     "i18n": "ngx-translate-extract --input ./src --output ./src/assets/i18n/{en,fr}.json --clean --sort --format namespaced-json -m _",
@@ -20,7 +17,8 @@
     "dev:ssr": "ng run sebastienbarbier_en:serve-ssr",
     "serve:ssr": "node dist/server/main.js",
     "build:ssr": "ng build && ng run sebastienbarbier_en:server",
-    "prerender": "ng run sebastienbarbier_en:prerender"
+    "prerender": "ng run sebastienbarbier_en:prerender",
+    "serve:prerender": "cd dist/en && http-server",
   },
   "engines": {
     "node": "~14"
