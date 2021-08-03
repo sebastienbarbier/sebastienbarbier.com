@@ -4,13 +4,11 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "install": "npm run build:dynamic",
+    "install": "npm run build:ssr",
     "start": "node dist/server",
     "build": "ng build",
     "build:client-and-server-bundles": "ng build sebastienbarbier_en --configuration production && ng build sebastienbarbier_fr --configuration production && ng run sebastienbarbier_en:server",
     "build:static": "npm run build:client-and-server-bundles && npm run webpack:server && npm run generate:static",
-    "generate:static": "cd dist && node prerender",
-    "webpack:server": "webpack --config webpack.server.config.js --progress && cd static/en && copy ./* ../../dist/en && cd ../fr && copy ./* ../../dist/fr",
     "serve:static": "cd dist/en && http-server",
     "test": "ng test",
     "lint": "ng lint",
@@ -85,7 +83,7 @@
     "ts-loader": "^9.2.4",
     "ts-node": "^10.1.0",
     "tslint": "^6.1.3",
-    "typescript": "^4.3.5",
+    "typescript": "~4.3.2",
     "webpack": "^5.47.1",
     "webpack-cli": "^4.7.2",
     "webpack-dev-server": "^3.11.2"

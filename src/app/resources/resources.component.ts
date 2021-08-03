@@ -29,7 +29,7 @@ export class ResourcesComponent implements OnInit {
 
   constructor() { }
 
-  @HostBinding('@resourcesTransition') '';
+  @HostBinding('@resourcesTransition') '': string;
 
   ngOnInit() {
   }

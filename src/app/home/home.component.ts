@@ -55,9 +55,10 @@ export class HomeComponent implements OnInit {
 
   constructor() {
     // this.hasIntersectionObservable = IntersectionObserver != undefined;
+    this.hasIntersectionObservable = false;
   }
 
-  @HostBinding('@homeTransition') '';
+  @HostBinding('@homeTransition') '': string;
 
   ngOnInit() {
     // if (this.hasIntersectionObservable) {
