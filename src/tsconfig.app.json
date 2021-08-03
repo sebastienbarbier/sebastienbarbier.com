@@ -5,8 +5,13 @@
     "baseUrl": "./",
     "types": []
   },
+  "include": [
+    "**/*.ts"
+  ],
   "exclude": [
     "test.ts",
-    "**/*.spec.ts"
+    "**/*.spec.ts",
+    "main.server.ts",
+    "app/app.server.ts"
   ]
 }

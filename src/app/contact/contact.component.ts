@@ -38,7 +38,7 @@ export class ContactComponent implements OnInit {
 
   constructor() { }
 
-  @HostBinding('@contactTransition') '';
+  @HostBinding('@contactTransition') '': string;
 
   ngOnInit() {
   }
