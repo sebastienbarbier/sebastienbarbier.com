@@ -31,12 +31,12 @@ npm run build:ssr
 npm run serve:ssr
 ```
 
-### Static mode
+### Prerender mode
 
-Using `npm run build:static` render all pages in html, and be published on a a static site hosting service like [github page](https://pages.github.com/). 
+Using `npm run prerender` render all pages in static html, and can be publish on a static site hosting service like [github page](https://pages.github.com/). 
 This method currently require to manually keep a list of urls to generate, saved in `static.paths.js` file.
 
-You can use `npm run build:static && npm run serve:static` for testing locally before deploying
+You can use `npm run prerender && npm run serve:prerender` for testing locally before deploying
 
 ## Unit tests and end-to-end tests
 
