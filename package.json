@@ -80,6 +80,7 @@
     "node-fetch": "^2.6.1",
     "protractor": "^7.0.0",
     "reflect-metadata": "^0.1.13",
+    "set-value": ">=4.0.1",
     "ts-loader": "^9.2.5",
     "ts-node": "^10.2.1",
     "tslint": "^6.1.3",
