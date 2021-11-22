@@ -89,4 +89,5 @@ nosetests.xml
 # Translations
 *.mo
 
-# Mac shit
+# Angular code
+.angular
