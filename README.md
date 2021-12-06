@@ -12,6 +12,11 @@ It is powered by [angular framework](https://angular.io), and published with [an
 git clone git@github.com:sebastienbarbier/sebastienbarbier.com.git
 cd sebastienbarbier.com
 npm install
+```
+
+## Run locally for development purpose
+
+```
 ng serve (npx ng serve to run local @angular/cli)
 ```
 
