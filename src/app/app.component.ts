@@ -56,6 +56,10 @@ export class AppComponent implements OnInit {
 
   }
 
+  closeNavigation() {
+    this.navigationMenuStatus = false;
+  }
+
   ngOnInit() {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationStart) {
