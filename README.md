@@ -63,6 +63,14 @@ Then serve your local server with one of those.
 ng serve --host local.sebastienbarbier.fr
 ```
 
+## Deploy to production
+
+```
+npm run deploy
+```
+
+Required to define env var `OS_TENANT_ID`, `OS_TENANT_NAME`, `OS_USERNAME`, `OS_PASSWORD`
+
 ## Licence
 
 [MIT Licence](https://opensource.org/licenses/MIT), please feel free to share, copy, and republish for your own use.
