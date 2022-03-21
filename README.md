@@ -1,6 +1,6 @@
 # sebastienbarbier.com
 
-[![Build Status](https://travis-ci.com/sebastienbarbier/sebastienbarbier.com.svg?branch=main)](https://travis-ci.com/sebastienbarbier/sebastienbarbier.com)
+[![Build action badge](https://github.com/sebastienbarbier/sebastienbarbier.com/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/sebastienbarbier/sebastienbarbier.com/actions/)
 
 This repository host my personnal website, [sebastienbarbier.com](https://sebastienbarbier.com).
 
