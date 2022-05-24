@@ -86,6 +86,8 @@ export class AppComponent implements OnInit {
           this.headerState = 'aboutMe';
         } else if (event.url === '/work') {
           this.headerState = 'work';
+        } else if (event.url === '/resume') {
+          this.headerState = 'resume';
         } else {
           this.headerState = 'notHome';
         }

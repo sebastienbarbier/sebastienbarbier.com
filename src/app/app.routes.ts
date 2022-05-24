@@ -10,6 +10,7 @@ const DESCRIPTION = {
   'contact': 'You can reach to me by email hello@sebastienbarbier.com or any of my social network account.',
   'home': 'My name is Sébastien Barbier, I am a web developer from France, currently working at SAP and based in Zurich Switzerland',
   'legal': 'This website is edited as individual and private content. It is not attached to any company of any kind.',
+  'resume': 'Summary of my work and exprience.',
   'resources': 'Set of resources which might be useful to create content and communicate about myself'
 };
 
@@ -34,6 +35,11 @@ export const appRoutes: Routes = [
     path: 'legal',
     loadChildren: () => import('./legal/legal.module').then(mod => mod.LegalModule),
     data: { title: 'Legal & copyright', description: DESCRIPTION.legal, theme: 'light', state: 'legal' }
+  },
+  {
+    path: 'resume',
+    loadChildren: () => import('./resume/resume.module').then(mod => mod.ResumeModule),
+    data: { title: 'Resume', description: DESCRIPTION.resume, theme: 'light', state: 'resume' }
   },
   // Legacy permalink
   // { path: 'freelance',   redirectTo: '/about-me', pathMatch: 'full' },
