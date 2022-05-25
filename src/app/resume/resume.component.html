@@ -6,8 +6,29 @@
       <article>
         <section class="row">
           <h2 class="col-sm-12">Cloud Software Architect</h2>
-          <p class="col-sm-12">31 January 1988, French nationality.<br/>Based in Zurich, Switzerland 🇨🇭.<br />contact@sebastienbarbier.com</p>
+          <p class="col-sm-12">31 January 1988, French nationality, based in Zurich, Switzerland 🇨🇭.<br />Lanugages: French (native language), English (Fluent), and German (A1)</p>
         </section>
+
+        <section>
+          <h2>Technologies</h2>
+          <ul>
+            <li><strong>Front-end</strong> : React, Angular, CSS3 Responsive, Html5. Redux, IndexedDB, web/service workers. Webpack, Npm. Test environment with jasmine, Moka, Karma.</li>
+            <li><strong>Back-end</strong> : Python Django, Flask, Restful API, Unitary test, Web services, Continuous integration, Sphinx (technical documentation).</li>
+            <li>Devops, Monitoring, Server skills, Open source advocate, Git, Scrum.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Work experience</h2>
+          <ul>
+            <li *ngFor="let experience of experiences;">
+              <strong>{{ experience.company.name}} </strong> : {{ experience.title}}, {{ experience.company.location }}.<br/>
+              <em>{{ experience.date }}</em><br/>
+              {{ experience.description }}
+           </li>
+          </ul>
+        </section>
+
 
         <section>
           <h2>Education</h2>
@@ -32,60 +53,27 @@ application in purpose to have real time document edition.</li>
         </section>
 
         <section>
-          <h2>Work experience</h2>
-          <ul>
-            <li>
-              <strong>SAP</strong> : Associate Development Architect. Zurich, Switzerland.<br/>
-              <em>February 2020 - July 2021 (18 months)</em><br/>
-              Full stack lead developer (6 month), then Associate Development Architect within the SAP FSM project.<br/>
-              Working with micro front-end framework to build a unified interface. Angular base with node backend.
-            </li>
-
-            <li>
-              <strong>Web technologies consultant and freelancer</strong> : Self employed, Remote work, Thailand.<br/>Senior front-end for companies like Mila, Mozilla, or Chefclub.<br/>
-              <em>November 2016 - January 2020 (3 years and 3 months)</em><br/>
-            </li>
-            <li>
-              <strong>Genolier Swiss Medical network</strong> : Front-end Software Engineer. Solothurn, Switzerland.<br/>
-              <em>June 2014 - August 2016 (2 years and 3 months)</em><br/>
-              Full-time front-end development on Fluance project : developed an app to aggregate content from HL7 feed of clinics in a generic unified web interface. Team of four front-end. Used mostly AngularJS/jQuery. Manager with Gulp, tested with Jasmine/Karma. Documentation generated using Dgeni. Using SCRUM method.
-            </li>
-
-            <li>
-              <strong>Covalia</strong> : Software Engineer. Besançon, France.<br/>
-              <em>September 2012 - June 2014 (1 year and 10 months)</em><br/>
-              Work on Covotem, a video chat application for remote medical consultation. Mostly worked on : Java with
-              internal libraries. Interoperability in healthcare system (HL7, DICOM).<br/>
-            </li>
-
-            <li>
-              <strong>Part-time lecturer</strong> at the university of ISIFC and UFR ST, Besançon. <br/>
-              <em>First semester 2011 and first semester 2012</em><br/>
-              Java Courses. Practical, Tutorial class, and Projects - respectively 66 and 32 hours, third year students.
-            </li>
-
-            <li>
-              <strong>Ionyse : Web agency, co-founder, web developer</strong>. Besançon, France.<br/>
-              <em>July 2009 - June 2012 (2 years part time, 1 year full time)</em><br/>
-              Start this project in parallel of our studies, to help financing them. After 24 months part-time change to a
-              full-time job. Web agency, worked on web application for small companies.
-            </li>
-          </ul>
-        </section>
-
-        <section>
-          <h2>Skills</h2>
-          <ul>
-            <li><strong>Front-end</strong> : React, Angular, CSS3 Responsive, Html5. Redux, IndexedDB, web/service workers. Webpack, Npm. Test environment with jasmine, Moka, Karma.</li>
-            <li><strong>Back-end</strong> : Python Django, Flask, Restful API, Unitary test, Web services, Continuous integration, Sphinx (technical documentation).</li>
-            <li>Devops, Monitoring, Server skills, Open source advocate, Git, Scrum.</li>
-            <li><strong>Languages</strong> : French (native language), English (Fluent), and German (A1).</li>
-          </ul>
-        </section>
-
-        <section>
           <h2>Additional informations</h2>
-          <p>Like to attend conferences. Have side-projects, like Seven23 which keep track of my expenses (open source - work in progress). Big use of twitter to follow tech news. Have fun with photography and would like to spend more time and progress.</p>
+          <p>Have side-projects, like Seven23 which keep track of my expenses (open source - work in progress). Big use of twitter to follow tech news. Have fun with photography and would like to spend more time and progress.</p>
+
+          <h3>I like to attend conferences</h3>
+          <ul>
+            <li>April 2022 - Devvox France, Paris, France</li>
+            <li>March 2022 - ETHDubai, Dubai, United Arab Emirates</li>
+            <li>August 2021 - Frontend conference, Zurich, Switzerland</li>
+            <li>January 2020 - FOSDEM, Bruxelles, Belgium</li>
+            <li>May 2019 - CSSConfEU and JSConfEU, Berlin, Germany</li>
+            <li>August 2018 - Frontend conference, Zurich, Switzerland</li>
+            <li>May 2018 - DjangoCon Europe, Heidelberg, Germany</li>
+            <li>June 2017 - ELM Europe, Villejuif, France</li>
+            <li>March 2016 - DjangoCon Europ, Budapest, Hungary</li>
+            <li>October 2015 - Fronteers conference, Amsterdam, Netherland</li>
+            <li>July 2015 - React Europe, Paris, France</li>
+            <li>June 2015 - DjangoCon Europe, Cardiff, Wales</li>
+            <li>January 2015 - FOSDEM, Bruxelles, Belgium</li>
+            <li>May 2014 - DjangoCon Europe, Toulon, France</li>
+            <li>April 2012 - DjangoCong, Carnon-Montpellier, France</li>
+          </ul>
         </section>
 
       </article>
