@@ -28,6 +28,7 @@ const resumeTransition = trigger('resumeTransition', [
 export class ResumeComponent implements OnInit {
 
   experiences: any;
+  conferences: any;
 
   constructor() {
     this.experiences = [
@@ -89,6 +90,68 @@ export class ResumeComponent implements OnInit {
         description: 'Start this project in parallel of our studies, to help financing them. After 24 months part-time change to a full-time job. Web agency, worked on web application for small companies. ',
       }
     ];
+
+    this.conferences = [{
+      date: 'April 2022',
+      name: 'Devvox France',
+      location: 'Paris, France 🇫🇷'
+    },{
+      date: 'March 2022',
+      name: 'ETHDubai',
+      location: 'Dubai, United Arab Emirates 🇦🇪'
+    },{
+      date: 'August 2021',
+      name: 'Frontend conference',
+      location: 'Zurich, Switzerland 🇨🇭'
+    },{
+      date: 'January 2020',
+      name: 'FOSDEM',
+      location: 'Bruxelles, Belgium 🇧🇪'
+    },{
+      date: 'May 2019',
+      name: 'CSSConfEU and JSConfEU',
+      location: 'Berlin, Germany 🇩🇪'
+    },{
+      date: 'August 2018',
+      name: 'Frontend conference',
+      location: 'Zurich, Switzerland 🇨🇭'
+    },{
+      date: 'May 2018',
+      name: 'DjangoCon Europe',
+      location: 'Heidelberg, Germany 🇩🇪'
+    },{
+      date: 'June 2017',
+      name: 'ELM Europe',
+      location: 'Villejuif, France 🇫🇷'
+    },{
+      date: 'March 2016',
+      name: 'DjangoCon Europe',
+      location: 'Budapest, Hungary 🇭🇺'
+    },{
+      date: 'October 2015',
+      name: 'Fronteers conference',
+      location: 'Amsterdam, Netherland 🇳🇱'
+    },{
+      date: 'July 2015',
+      name: 'React Europe',
+      location: 'Paris, France 🇫🇷'
+    },{
+      date: 'June 2015',
+      name: 'DjangoCon Europe',
+      location: 'Cardiff, Wales 🏴󠁧󠁢󠁷󠁬󠁳󠁿'
+    },{
+      date: 'January 2015',
+      name: 'FOSDEM',
+      location: 'Bruxelles, Belgium 🇧🇪'
+    },{
+      date: 'May 2014',
+      name: 'DjangoCon Europe',
+      location: 'Toulon, France 🇫🇷'
+    },{
+      date: 'April 2012',
+      name: 'DjangoCong',
+      location: 'Carnon-Montpellier, France 🇫🇷'
+    }];
   }
 
   @HostBinding('@resumeTransition') '': string;

@@ -6,7 +6,7 @@
       <article>
         <section class="row">
           <h2 class="col-sm-12">Cloud Software Architect</h2>
-          <p class="col-sm-12">31 January 1988, French nationality, based in Zurich, Switzerland 🇨🇭.<br />Lanugages: French (native language), English (Fluent), and German (A1)</p>
+          <p class="col-sm-12">34 years old, French nationality, based in Zurich, Switzerland 🇨🇭.<br />Languages: French (native language), English (Fluent), and German (A1)</p>
         </section>
 
         <section>
@@ -58,21 +58,7 @@ application in purpose to have real time document edition.</li>
 
           <h3>I like to attend conferences</h3>
           <ul>
-            <li>April 2022 - Devvox France, Paris, France</li>
-            <li>March 2022 - ETHDubai, Dubai, United Arab Emirates</li>
-            <li>August 2021 - Frontend conference, Zurich, Switzerland</li>
-            <li>January 2020 - FOSDEM, Bruxelles, Belgium</li>
-            <li>May 2019 - CSSConfEU and JSConfEU, Berlin, Germany</li>
-            <li>August 2018 - Frontend conference, Zurich, Switzerland</li>
-            <li>May 2018 - DjangoCon Europe, Heidelberg, Germany</li>
-            <li>June 2017 - ELM Europe, Villejuif, France</li>
-            <li>March 2016 - DjangoCon Europe, Budapest, Hungary</li>
-            <li>October 2015 - Fronteers conference, Amsterdam, Netherland</li>
-            <li>July 2015 - React Europe, Paris, France</li>
-            <li>June 2015 - DjangoCon Europe, Cardiff, Wales</li>
-            <li>January 2015 - FOSDEM, Bruxelles, Belgium</li>
-            <li>May 2014 - DjangoCon Europe, Toulon, France</li>
-            <li>April 2012 - DjangoCong, Carnon-Montpellier, France</li>
+            <li *ngFor="let conference of conferences;">{{ conference.date }} - <strong>{{ conference.name }}</strong>, {{ conference.location }}</li>
           </ul>
         </section>
 
