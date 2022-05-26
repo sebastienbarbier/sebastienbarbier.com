@@ -331,8 +331,9 @@ header {
         letter-spacing: -0.01em;
 
         &.active {
-          color: #888;
+          color: $colorGold;
           cursor: default;
+          opacity: 0.4;
         }
       }
 

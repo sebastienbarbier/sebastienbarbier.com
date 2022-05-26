@@ -24,5 +24,5 @@ if [ -z "$OS_REGION_NAME" ]; then unset OS_REGION_NAME; fi
 
 
 cd dist/en
-swift upload sebastienbarbier_en .
-swift upload sebastienbarbier_fr .
+swift upload sebastienbarbier_en . --changed --skip-identical
+swift upload sebastienbarbier_fr . --changed --skip-identical
