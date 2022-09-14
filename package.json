@@ -80,7 +80,7 @@
     "karma-jasmine": "^4.0.1",
     "karma-jasmine-html-reporter": "^1.7.0",
     "minimist": "^1.2.6",
-    "node-fetch": "^3.2.3",
+    "node-fetch": "^3.2.10",
     "protractor": "^7.0.0",
     "reflect-metadata": "^0.1.13",
     "set-value": ">=4.0.1",
