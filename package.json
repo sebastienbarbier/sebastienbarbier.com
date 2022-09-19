@@ -5,7 +5,7 @@
   "scripts": {
     "ng": "ng",
     "start": "node dist/server",
-    "build": "ng build",
+    "build": "ng run sebastienbarbier_en:prerender",
     "serve:static": "npm run serve:prerender",
     "test": "ng test",
     "lint": "ng lint",

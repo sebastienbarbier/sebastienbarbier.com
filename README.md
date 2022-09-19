@@ -17,31 +17,18 @@ npm install
 ## Run locally for development purpose
 
 ```
-ng serve (npx ng serve to run local @angular/cli)
+npx ng serve
 ```
 
 Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Build
 
-Following angular universal practice, you can build the app on static or dynamic mode.
+Default build will prerender static file for each page specified in `static.paths.txt`.
 
-### Dymanic mode
-
-Using `npm run dev:ssr` generate an expressjs server to deploy and deliver the app.
-
-Deploying dynamic more require to build then start server
 ```
-npm run build:ssr
-npm run serve:ssr
+npm run build
 ```
-
-### Prerender mode
-
-Using `npm run prerender` render all pages in static html, and can be publish on a static site hosting service like [github page](https://pages.github.com/). 
-This method currently require to manually keep a list of urls to generate, saved in `static.paths.js` file.
-
-You can use `npm run prerender && npm run serve:prerender` for testing locally before deploying
 
 ## Unit tests and end-to-end tests
 
