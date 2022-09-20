@@ -30,26 +30,6 @@ Default build will prerender static file for each page specified in `static.path
 npm run build
 ```
 
-## Unit tests and end-to-end tests
-
-Can be run using `ng test` and `ng e2e`.
-
-## Internationalization
-
-Translation use managed using [ngx-translate](http://www.ngx-translate.com/), and is defined by domain name. 
-To run locally, you can add the following domains in your `host` file.
-
-```
-echo '127.0.0.1 local.sebastienbarbier.fr' | sudo tee -a /etc/hosts
-echo '127.0.0.1 local.sebastienbarbier.com' | sudo tee -a /etc/hosts
-```
-
-Then serve your local server with one of those.
-
-```
-ng serve --host local.sebastienbarbier.fr
-```
-
 ## Deploy to production
 
 ```
