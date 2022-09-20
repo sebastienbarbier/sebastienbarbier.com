@@ -14,7 +14,7 @@ cd sebastienbarbier.com
 npm install
 ```
 
-## Run locally for development purpose
+## Serve locally
 
 ```
 npx ng serve
