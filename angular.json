@@ -272,7 +272,8 @@
   "cli": {
     "warnings": {
       "typescriptMismatch": false
-    }
+    },
+    "analytics": false
   },
   "schematics": {
     "@schematics/angular:component": {
