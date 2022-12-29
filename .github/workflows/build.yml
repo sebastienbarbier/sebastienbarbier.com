@@ -24,7 +24,7 @@ jobs:
       with:
         email: contact@sebastienbarbier.com
         build_dir: dist/en
-        cname: develop.sebastienbarbier.io
+        cname: develop.sebastienbarbier.com
     - name: "Predeploy"
       if: github.ref == 'refs/heads/main'
       run: npm run predeploy
