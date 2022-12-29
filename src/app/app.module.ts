@@ -9,8 +9,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 
-import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-
 import { AppComponent } from './app.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { SharedModule } from './shared/shared.module';
@@ -47,7 +45,7 @@ if (environment.production) {
     HttpClientModule,
     BrowserAnimationsModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes, { onSameUrlNavigation: 'ignore', initialNavigation: 'enabled' }),
+    RouterModule.forRoot(appRoutes, { onSameUrlNavigation: 'ignore' }),
     SharedModule.forRoot(),
   ],
   declarations: [

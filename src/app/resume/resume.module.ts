@@ -4,7 +4,6 @@ import { CommonModule } from '@angular/common';
 import { ResumeComponent } from './resume.component';
 import { ResumeRoutingModule } from './resume-routing.module';
 
-import { TranslateModule } from '@ngx-translate/core';
 import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
@@ -15,7 +14,6 @@ import { SharedModule } from '../shared/shared.module';
     CommonModule,
     SharedModule,
     ResumeRoutingModule,
-    TranslateModule.forChild()
   ]
 })
 export class ResumeModule { }

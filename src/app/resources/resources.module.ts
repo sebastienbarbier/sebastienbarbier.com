@@ -4,7 +4,6 @@ import { CommonModule } from '@angular/common';
 import { ResourcesComponent } from './resources.component';
 import { ResourcesRoutingModule } from './resources-routing.module';
 
-import { TranslateModule } from '@ngx-translate/core';
 import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
@@ -15,7 +14,6 @@ import { SharedModule } from '../shared/shared.module';
     CommonModule,
     SharedModule,
     ResourcesRoutingModule,
-    TranslateModule.forChild()
   ]
 })
 export class ResourcesModule { }
