@@ -10,6 +10,7 @@ const DESCRIPTION = {
   'contact': 'You can reach to me by email hello@sebastienbarbier.com or any of my social network account.',
   'home': 'My name is Sébastien Barbier, I am a web developer from France, currently working at SAP and based in Zurich Switzerland',
   'legal': 'This website is edited as individual and private content. It is not attached to any company of any kind.',
+  'projects': 'List of projects I currenty work on.',
   'resume': 'Summary of my work and exprience.',
   'resources': 'Set of resources which might be useful to create content and communicate about myself'
 };
@@ -30,6 +31,11 @@ export const appRoutes: Routes = [
     path: 'resources',
     loadChildren: () => import('./resources/resources.module').then(mod => mod.ResourcesModule),
     data: { title: 'Resources', description: DESCRIPTION.resources, theme: 'light', state: 'resources' }
+  },
+  {
+    path: 'projects',
+    loadChildren: () => import('./projects/projects.module').then(mod => mod.ProjectsModule),
+    data: { title: 'Projects', description: DESCRIPTION.projects, theme: 'light', state: 'projects' }
   },
   {
     path: 'legal',
