@@ -1,3 +1,2 @@
 User-agent: *
 Disallow: /freelance
-Disallow: /projects

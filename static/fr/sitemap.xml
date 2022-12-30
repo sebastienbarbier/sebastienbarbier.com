@@ -58,4 +58,17 @@
      href="https://sebastienbarbier.fr/resources"
      />
 </url>
+<url>
+  <loc>https://sebastienbarbier.fr/projects</loc>
+  <xhtml:link
+     rel="alternate"
+     hreflang="en"
+     href="https://sebastienbarbier.com/projects"
+     />
+   <xhtml:link
+     rel="alternate"
+     hreflang="fr"
+     href="https://sebastienbarbier.fr/projects"
+     />
+</url>
 </urlset>

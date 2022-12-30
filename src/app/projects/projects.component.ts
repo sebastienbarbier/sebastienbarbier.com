@@ -14,8 +14,17 @@ import {
 
 const projectsTransition = trigger('projectsTransition', [
   transition(':enter', [
+    query('.project_thumbnail', style({ opacity: 0 }), {optional: true}),
+    query('.project_thumbnail', stagger(100, [
+      style({ transform: 'translateY(20px)' }),
+      animate('800ms cubic-bezier(.75,-0.48,.26,1.52)', style({transform: 'translateY(0px)', opacity: 1})),
+    ]), {optional: true}),
   ]),
   transition(':leave', [
+    query('.project_thumbnail', stagger(100, [
+      style({ transform: 'translateY(0px)', opacity: 1 }),
+      animate('200ms cubic-bezier(.75,-0.48,.26,1.52)', style({opacity: 0})),
+    ]), {optional: true}),
   ])
 ]);
 

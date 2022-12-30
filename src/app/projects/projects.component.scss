@@ -31,3 +31,78 @@ article {
 
   }
 }
+
+.project_thumbnail {
+  width: 100%;
+  border: solid 1px #ccc;
+  height: 450px;
+  border-radius: 6px;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  cursor: pointer;
+
+  .description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    text-align: left;
+
+    opacity: 0.6;
+    margin: 0 8px 4px 8px;
+    transition: opacity 250ms linear;
+
+    p {
+      padding: 0;
+      margin: 0;
+      font-size: 16px !important;
+      
+      span {
+        text-transform: uppercase;
+        opacity: 0.7;
+        font-size: 0.6em;
+        transition: all 250ms linear;
+        font-weight: 600;
+
+        background: linear-gradient(to right, #000 0%, transparent 200px);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      strong {
+        font-size: 1em;
+        opacity: 1;
+        padding-right: 8px;
+      }
+    }
+
+  }
+
+  &:hover {
+    .description {
+
+      opacity: 1;
+      transition: opacity 250ms linear;
+      span {
+        opacity: 1;
+        transition: all 250ms linear;
+      }
+    }
+  }
+}
+
+.seven23 {
+  .logo {
+    img:first-child {
+      height: 70px;
+      margin-right: 10px;
+    }
+    img:last-child {
+      height: 50px;
+    }
+  }
+}

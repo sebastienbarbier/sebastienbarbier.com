@@ -35,7 +35,7 @@ export const appRoutes: Routes = [
   {
     path: 'projects',
     loadChildren: () => import('./projects/projects.module').then(mod => mod.ProjectsModule),
-    data: { title: 'Projects', description: DESCRIPTION.projects, theme: 'light', state: 'projects' }
+    data: { title: 'Projects', description: DESCRIPTION.projects, theme: 'light', state: 'projects' },
   },
   {
     path: 'legal',
