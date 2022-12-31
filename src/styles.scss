@@ -6,7 +6,6 @@ $prefix: "mo-";
 // Then import Bootstrap
 @import "../node_modules/bootstrap/scss/bootstrap";
 
-@import './assets/scss/bootstrap-grid';
 @import "./assets/scss/variables";
 @import "./assets/scss/fonts";
 @import "./assets/scss/guideline";
@@ -65,7 +64,6 @@ html {
     }
   }
 }
-
 
 .noselect {
   -moz-user-select: none;

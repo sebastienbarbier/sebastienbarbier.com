@@ -12,10 +12,12 @@ const routes: Routes = [
   {
     path: 'seven23',
     component: Seven23Component,
+    data: { title: 'Projects Seven23', description: '', theme: 'light', state: 'seven23' },
   },
   {
     path: 'fromedwin',
     component: FromedwinComponent,
+    data: { title: 'Projects FromEdwin', description: '', theme: 'light', state: 'fromedwin' },
   }
 ];
 

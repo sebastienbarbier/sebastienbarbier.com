@@ -6,32 +6,45 @@
       <article>
         <section class="column">
           <h2 class="col-sm-12">Projects</h2>
-
           <div class="vstack gap-3" style="margin-top: 40px">
 
             <div class="project_thumbnail seven23">
-              <div class="logo">
-                <img src="/assets/images/seven23/seven23_round.svg" alt="Seven23 icon"/> <img src="/assets/images/seven23/seven23_v2.svg" alt="seven23 logo" />
+              <div class="container text-start">
+                <div class="row">
+                  <div class="col-12 col-md-6 tablet_mobile_wrapper">
+                    <img src="/assets/images/seven23/screens/mini-browser-transactions.png" alt="" class="browser"/>
+                    <img src="/assets/images/seven23/screens/mini-iphone-transactions.png" alt="" class="mobile"/>
+                  </div>
+                  <div class="col-12 col-md-6 d-flex flex-column align-items-start justify-content-center">
+                    <div class="logo">
+                      <img src="/assets/images/seven23/seven23_round.svg" alt="Seven23 icon"/> <img src="/assets/images/seven23/seven23_v2.svg" alt="seven23 logo" />
+                    </div>
+
+                    <p style="font-size: 18px">Fully manual budget app to track personal expenses.<br/>Completely opensource, with privacy by design.</p>
+
+                    <a class="btn btn-secondary" routerLink="/projects/seven23" role="button">More about it</a>
+                  </div>
+
+                  <!-- Force next columns to break to new line -->
+                  <div class="w-100"></div>
+                </div>
               </div>
 
-              <p>Fully manual budget app to track personal expenses.<br/>Completely opensource, with privacy by design.</p>
-
-              <a class="btn btn-secondary" href="/projects/seven23" role="button">More about it</a>
-                
-
-              <div class="description">
-                <p><strong>2011 - Present</strong> <span>React, Django, Material UI, D3.js, Next.js, cypress, JWT Encryption, IndexedDB, Jest, Sphynx</span></p>
-              </div>
+             <!--  <div class="description">
+                <p><strong>2011 - Present</strong> <span class="techs">React, Django, Material UI, D3.js, Next.js, cypress, JWT Encryption, IndexedDB, Jest, Sphynx</span></p>
+              </div> -->
             </div>
 
 
             <div class="project_thumbnail">
               <h3>FromEdwin</h3>
               <p>Opinionated no code monitoring tool monitoring availability.</p>
-              <p><span class="badge text-bg-warning">Work in progress</span></p>
-              <div class="description">   
-                <p><strong>2021 - Present</strong> <span>Django, Taiwind CSS, Prometheus, SSO</span></p>
-              </div>
+              
+              <a class="btn btn-secondary" routerLink="/projects/fromedwin" role="button">More about it</a>
+              
+              <!-- <div class="description">   
+                <p><strong>2021 - Present</strong> <span class="techs">Django, Taiwind CSS, Prometheus, SSO</span></p>
+              </div> -->
             </div>
           </div>
         </section>

@@ -23,7 +23,7 @@ const projectsTransition = trigger('projectsTransition', [
   transition(':leave', [
     query('.project_thumbnail', stagger(100, [
       style({ transform: 'translateY(0px)', opacity: 1 }),
-      animate('200ms cubic-bezier(.75,-0.48,.26,1.52)', style({opacity: 0})),
+      animate('600ms cubic-bezier(.75,-0.48,.26,1.52)', style({opacity: 0})),
     ]), {optional: true}),
   ])
 ]);

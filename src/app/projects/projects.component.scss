@@ -1,3 +1,4 @@
+
 @import '../../assets/scss/variables';
 @import '../../assets/scss/layout';
 
@@ -28,14 +29,13 @@ article {
         letter-spacing: -0.5px;
       }
     }
-
   }
 }
 
 .project_thumbnail {
   width: 100%;
   border: solid 1px #ccc;
-  height: 450px;
+  min-height: 450px;
   border-radius: 6px;
   position: relative;
 
@@ -47,14 +47,13 @@ article {
   cursor: pointer;
 
   .description {
-    position: absolute;
-    bottom: 0;
-    left: 0;
+    width: 100%;
 
     text-align: left;
 
     opacity: 0.6;
-    margin: 0 8px 4px 8px;
+    padding: 20px 8px 0px 8px;
+    margin: 0;
     transition: opacity 250ms linear;
 
     p {
@@ -62,12 +61,13 @@ article {
       margin: 0;
       font-size: 16px !important;
       
-      span {
+      span.techs {
         text-transform: uppercase;
         opacity: 0.7;
         font-size: 0.6em;
         transition: all 250ms linear;
         font-weight: 600;
+        padding-left: 8px;
 
         background: linear-gradient(to right, #000 0%, transparent 200px);
         -webkit-background-clip: text;
@@ -76,7 +76,6 @@ article {
       strong {
         font-size: 1em;
         opacity: 1;
-        padding-right: 8px;
       }
     }
 
@@ -87,7 +86,7 @@ article {
 
       opacity: 1;
       transition: opacity 250ms linear;
-      span {
+      span.techs {
         opacity: 1;
         transition: all 250ms linear;
       }
@@ -96,13 +95,50 @@ article {
 }
 
 .seven23 {
+
   .logo {
+    margin: 8px 10px;
+    p {
+      text-align: left;
+    }
     img:first-child {
       height: 70px;
       margin-right: 10px;
     }
     img:last-child {
       height: 50px;
+    }
+  }
+
+  .tablet_mobile_wrapper {
+    padding: 40px;
+    height: 450px;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    $ipad-width: 38%;
+    $ipad-height: $ipad-width * 2448 / 3132;
+    $iPhone-width: $ipad-width / 2 - $ipad-width / 10;
+
+    .browser, .mobile {
+      -webkit-filter: drop-shadow(0 2px 4px rgba(0,0,0,.3));
+      -moz-filter: drop-shadow(0 2px 4px rgba(0,0,0,.3));
+      -ms-filter: drop-shadow(0 2px 4px rgba(0,0,0,.3));
+      -o-filter: drop-shadow(0 2px 4px rgba(0,0,0,.3));
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,.3));
+    }
+    .browser {
+      width: 100%;
+      margin-right: 5%;
+    }
+    .mobile {
+      position: absolute;
+      width: 20%;
+      margin-top: 20%;
+      margin-left: 55%;
     }
   }
 }
