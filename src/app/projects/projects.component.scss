@@ -35,17 +35,22 @@ article {
 .project_thumbnail {
   width: 100%;
   border: solid 1px #ccc;
-  min-height: 450px;
+  min-height: 410px;
   border-radius: 6px;
   position: relative;
+  padding-top: 20px;
+  padding-bottom: 20px;
 
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 
-  cursor: pointer;
 
+  img {
+    max-width: 100%;
+  }
+  
   .description {
     width: 100%;
 
@@ -97,9 +102,12 @@ article {
 .seven23 {
 
   .logo {
-    margin: 8px 10px;
+    margin: 8px 10px 8px 0;
     p {
       text-align: left;
+    }
+    img {
+      max-width: 100%;
     }
     img:first-child {
       height: 70px;
@@ -112,8 +120,8 @@ article {
 
   .tablet_mobile_wrapper {
     padding: 40px;
-    height: 450px;
     position: relative;
+    aspect-ratio: 1.5;
 
     display: flex;
     align-items: center;
