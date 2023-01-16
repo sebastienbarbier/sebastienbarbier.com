@@ -44,6 +44,10 @@ Required to define env var `OS_TENANT_ID`, `OS_TENANT_NAME`, `OS_USERNAME`, `OS_
 
 ## Inspired
 
+New:
+- https://zhenyary.com/
+
+Old:
 - https://www.giacomomottin.com/  
 - https://www.devonstank.com/  
 - https://damirkotoric.com/  
