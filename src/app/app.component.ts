@@ -114,7 +114,7 @@ export class AppComponent implements OnInit {
     // meta title
     if (outlet.activatedRouteData.title) {
       // Update title and meta data
-      this.titleService.setTitle(`Sébastien Barbier - ${outlet.activatedRouteData.title}`);
+      this.titleService.setTitle(`${outlet.activatedRouteData.title} - Sébastien Barbier`);
     } else {
       this.titleService.setTitle(`Sébastien Barbier`);
     }

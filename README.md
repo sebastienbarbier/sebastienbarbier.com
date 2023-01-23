@@ -1,6 +1,6 @@
 # sebastienbarbier.com
 
-[![Build action badge](https://github.com/sebastienbarbier/sebastienbarbier.com/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/sebastienbarbier/sebastienbarbier.com/actions/) [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/sebastienbarbier/sebastienbarbier.com/blob/main/LICENCE)
+[![Build action badge](https://github.com/sebastienbarbier/sebastienbarbier.com/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/sebastienbarbier/sebastienbarbier.com/actions/) [![Status](https://status.sebastienbarbier.com/badge.svg)](https://status.sebastienbarbier.com) [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/sebastienbarbier/sebastienbarbier.com/blob/main/LICENCE)
 
 This repository host my personnal website, [sebastienbarbier.com](https://sebastienbarbier.com).
 
@@ -44,6 +44,11 @@ Required to define env var `OS_TENANT_ID`, `OS_TENANT_NAME`, `OS_USERNAME`, `OS_
 
 ## Inspired
 
+New:
+- https://zhenyary.com/
+- https://xpdesignsystem.com/
+
+Old:
 - https://www.giacomomottin.com/  
 - https://www.devonstank.com/  
 - https://damirkotoric.com/  
