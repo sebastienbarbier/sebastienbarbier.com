@@ -10,62 +10,15 @@
   }
 }
 
+.content {
+  padding-top: 100px;
+}
+
 main {
   position: fixed;
   width: 100vw;
   height: 100vh;
   top: 0; left: 0; right: 0; bottom: 0;
-  overflow: hidden;
-}
-
-.home, .notHome, .aboutMe, .work {
-  position: relative;
-  width: 100%;
-  min-width: 100vw;
-  height: 100%;
-  min-height: 100vh;
-  overflow: hidden;
-  z-index: $indexContent;
-
-  &:before {
-    content: '';
-    position: absolute;
-    width: 300vw;
-    height: 300vh;
-    top: -100vh;
-    left: -100vw;
-    background: $colorPolo;
-    opacity: 0; //0.1;
-    z-index: $indexContent;
-    transition: opacity .6s .3s, transform .6s;
-    pointer-events: none;
-    animation-name: appear;
-    animation-duration: .6s;
-  }
-}
-
-.contactList {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-
-  list-style: none;
-  align-items: center;
-  padding: 10px 0;
-
-  @media screen and (max-width: $md - 1px) {
-    justify-content: center;
-  }
-
-  li {
-    padding: 5px 8px;
-    a {
-      border: none;
-      img {
-        height: 1.3rem;
-      }
-    }
-  }
 }
 
 header {
@@ -73,6 +26,7 @@ header {
   position: fixed;
   top: 0;
   right: 0;
+  width: 100%;
   z-index: $indexContent;
 
   // sebastienbarbier logo as text
@@ -311,7 +265,6 @@ header {
           text-transform: uppercase;
           font-weight: 700;
           font-size: 2.8rem;
-          line-height: 1;
           letter-spacing: -0.01em;
 
           &.active {

@@ -1,0 +1,10 @@
+@import './variables';
+
+html {
+  font-family: 'Atkinson Hyperlegible', Helvetica, sans-serif;
+  font-size: $font_size;
+  background: $background_light;
+  color: $primary_text_light;
+  font-weight: 400;
+  line-height: 1.4;
+}

@@ -1,5 +1,4 @@
 @import '../../assets/scss/variables';
-@import '../../assets/scss/layout';
 
 // Asset with thumbnail and list of resolution available.
 div.ressources-asset {
@@ -79,7 +78,6 @@ ul.fonts {
   flex-direction: column;
   li {
     font-size: 3em;
-    line-height: 1em;
     @media screen and (min-width: $sm) and (max-width: $md - 1px) {
       font-size: 2em;
     }

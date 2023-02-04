@@ -1,7 +1,6 @@
-@import '../../assets/scss/layout';
+@import '../../assets/scss/variables';
 
 article {
-
   section {
     padding: 40px 0;
 
@@ -55,9 +54,6 @@ article {
         text-align: left;
         display: flex;
         align-items: flex-start;
-
-        @media screen and (max-width: 599px) {
-        }
 
         h3 {
           margin: 2px 0 6px;

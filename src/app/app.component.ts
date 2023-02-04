@@ -22,6 +22,11 @@ import {
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+  /**
+   * AppComponent define the general layout common to all pages.
+   * It include header, navigation, and footer.
+   * It also include some logic regarding Angular for smooth transitions between pages.
+   **/
 
   navigationMenuStatus: Boolean;
   lang: string;
@@ -94,7 +99,9 @@ export class AppComponent implements OnInit {
         // We enable overflow on body if fullscreen action had disabled it
         this.d.body.style.overflow = "auto";
 
-        if (this.hideMenuAnimation) { this.hideMenuAnimation = false; }
+        if (this.hideMenuAnimation) {
+          this.hideMenuAnimation = false;
+        }
       }
     });
 
@@ -105,41 +112,38 @@ export class AppComponent implements OnInit {
       this.renderer.appendChild(wrap, toWrap.children[0]);
       this.renderer.appendChild(toWrap, wrap);
     }
-
   }
 
   getState(outlet: RouterOutlet) {
+    /**
+     * Will be triggered on every page navigation
+     **/
 
-    const accent = this.lang === 'en' ? 'e' : 'é';
-    // meta title
+    // Update page title, different on every page
     if (outlet.activatedRouteData.title) {
-      // Update title and meta data
-      this.titleService.setTitle(`${outlet.activatedRouteData.title} - Sébastien Barbier`);
+      this.titleService.setTitle(`${outlet.activatedRouteData.title} - Sebastien Barbier`);
     } else {
-      this.titleService.setTitle(`Sébastien Barbier`);
+      this.titleService.setTitle(`Sebastien Barbier`);
     }
 
+    // Update metadata description field
+
+    this.metaService.removeTag('name="description"');
     if (outlet.activatedRouteData.description) {
       // Update title and meta data
-      this.metaService.removeTag('name="description"');
       this.metaService.addTag({ name: 'description', content: outlet.activatedRouteData.description }, false);
-    } else {
-      this.metaService.removeTag('name="description"');
     }
 
-    // meta robots
+    // Add noindex on page 404 to avoid browser referencing it
     this.metaService.removeTag('name=robots');
     if (outlet.activatedRouteData.state === '404') {
       this.metaService.addTag({ name: 'robots', content: 'noindex'});
     }
 
-    // Changing meta with name="description"
-    // const tag = { name: 'description', content: event['metaDescription'] };
-    // const attributeSelector = 'name="description"';
-    // this.metaService.removeTag(attributeSelector);
-    // this.metaService.addTag(tag, false);
-
+    // Update theme value (light/dark) based on route description
     this.renderer.setAttribute(this.renderer.parentNode(this.element.nativeElement), 'class', outlet.activatedRouteData.theme);
+
+    // Return state
     return outlet.activatedRouteData.state;
   }
 }
