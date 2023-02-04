@@ -42,7 +42,7 @@ export class AppComponent implements OnInit {
       private titleService: Title,
       private metaService: Meta,
       @Inject(PLATFORM_ID) private platformId: Object,
-      @Inject(DOCUMENT) private d: Document,
+      @Inject(DOCUMENT) private _document: Document,
       @Optional() @Inject('serverUrl') protected serverUrl: string
     ) {
     this.navigationMenuStatus = false;
@@ -97,7 +97,7 @@ export class AppComponent implements OnInit {
           this.headerState = 'notHome';
         }
         // We enable overflow on body if fullscreen action had disabled it
-        this.d.body.style.overflow = "auto";
+        this._document.body.style.overflow = "auto";
 
         if (this.hideMenuAnimation) {
           this.hideMenuAnimation = false;
