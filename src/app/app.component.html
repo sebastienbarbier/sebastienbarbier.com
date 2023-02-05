@@ -3,48 +3,21 @@
     <a class="logo" routerLink="/">
       <img src="/assets/images/ressources/sebastienbarbier_logo.svg" alt="This image contains: sebastien's logo which is simply his first and last name together with a stylish font" />
     </a>
-
-    <div>
-      <input hidden type="checkbox" id="navigation__toggle" [(ngModel)]="navigationMenuStatus" />
-      <label
-        id="navigation__button"
-        class=""
-        for="navigation__toggle"
-        role="button"
-        aria-controls="navigation"
-        aria-label="Toggle navigation menu">
-
-        <svg style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" xml:space="preserve" xmlns:xlink="http://www.w3.org/1999/xlink">
-          <path id="navigation__button__open" d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/>
-          <path id="navigation__button__close" d="m27.725 24.194-8.2-8.231 8.219-8.125c.337-.338.337-.888 0-1.225l-2.338-2.35c-.162-.163-.381-.25-.612-.25s-.45.093-.613.25l-8.181 8.1-8.194-8.094c-.162-.163-.381-.25-.612-.25s-.45.094-.613.25l-2.331 2.35c-.337.337-.337.887 0 1.225l8.219 8.125-8.194 8.225c-.162.162-.256.381-.256.612 0 .232.087.45.256.613l2.338 2.35c.168.169.387.256.612.256.219 0 .444-.081.613-.256l8.162-8.2 8.169 8.194c.168.168.387.256.612.256.219 0 .444-.081.613-.256l2.337-2.35c.163-.163.257-.382.257-.613-.007-.225-.1-.444-.263-.606z" fill-rule="nonzero" transform="translate(-.0242 .0549)"/>
-        </svg>
-
-        <svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" width="32px" height="32px" viewBox="0 0 128 128" xml:space="preserve">
-          <g><path d="M75.4 126.63a11.43 11.43 0 0 1-2.1-22.65 40.9 40.9 0 0 0 30.5-30.6 11.4 11.4 0 1 1 22.27 4.87h.02a63.77 63.77 0 0 1-47.8 48.05v-.02a11.38 11.38 0 0 1-2.93.37z" fill="#000000" fill-opacity="1"/></g>
-        </svg>
-      </label>
-
-      <nav id="navigation" role="menu" aria-labelledby="navigation__button">
-        <ul>
-          <li><a role="menuitem" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a></li>
-          <li><a role="menuitem" routerLink="/projects" routerLinkActive="active">Projects</a></li>
-          <li><a role="menuitem" routerLink="/contact" routerLinkActive="active">Contact</a></li>
-        </ul>
-        <ul class="small noMargin">
-          <li><a role="menuitem" routerLink="/resume" class="small" routerLinkActive="active">Resume</a></li>
-          <li><a role="menuitem" routerLink="/resources" class="small" routerLinkActive="active">Resources</a></li>
-          <li><a (click)="closeNavigation()" href="https://status.sebastienbarbier.com/" class="small" target="_blank">Status</a></li>
-          <li><a role="menuitem" routerLink="/legal" class="small" routerLinkActive="active">Legal & copyright</a></li>
-        </ul>
-        <ul class="small icons">
-          <li><a target="_blank" href="http://www.twitter.com/SebBarbier/"><img src="/assets/images/logos/twitter_logo_white.svg" alt="Twitter logo" /></a></li>
-          <li><a target="_blank" href="http://stackoverflow.com/users/4762763/sebastienbarbier"><img src="/assets/images/logos/stackoverflow_logo_white.svg" alt="Stack Overflow logo" /></a></li>
-          <li><a target="_blank" href="https://www.linkedin.com/in/sebbarbier/"><img src="/assets/images/logos/linkedin_logo_white.svg" alt="Linkedin logo" /></a></li>
-          <li><a target="_blank" href="https://github.com/sebastienbarbier/"><img src="/assets/images/logos/github_logo_white.svg" alt="Github logo" /></a></li>
-          <li><a target="_blank" href="https://instagram.com/sebastienbarbier/"><img src="/assets/images/logos/instagram_logo_white.svg" alt="Instagram logo" /></a></li>
-        </ul>
-      </nav>
-    </div>
+    <nav role="menu" aria-labelledby="navigation__button">
+      <ul>
+        <li><a role="menuitem" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a></li>
+        <li><a role="menuitem" routerLink="/projects" routerLinkActive="active">Projects</a></li>
+        <li><a role="menuitem" routerLink="/contact" routerLinkActive="active">Contact</a></li>
+        <li><a role="menuitem" routerLink="/resume" class="small" routerLinkActive="active">Resume</a></li>
+        <li><a role="menuitem" routerLink="/resources" class="small" routerLinkActive="active">Resources</a></li>
+        <li><a role="menuitem" routerLink="/legal" class="small" routerLinkActive="active">Legal & copyright</a></li>
+        <li><a target="_blank" href="http://www.twitter.com/SebBarbier/"><img src="/assets/images/logos/twitter_logo.svg" alt="Twitter logo" /></a></li>
+        <li><a target="_blank" href="http://stackoverflow.com/users/4762763/sebastienbarbier"><img src="/assets/images/logos/stackoverflow_logo.svg" alt="Stack Overflow logo" /></a></li>
+        <li><a target="_blank" href="https://www.linkedin.com/in/sebbarbier/"><img src="/assets/images/logos/linkedin_logo.svg" alt="Linkedin logo" /></a></li>
+        <li><a target="_blank" href="https://github.com/sebastienbarbier/"><img src="/assets/images/logos/github_logo.svg" alt="Github logo" /></a></li>
+        <li><a target="_blank" href="https://instagram.com/sebastienbarbier/"><img src="/assets/images/logos/instagram_logo.svg" alt="Instagram logo" /></a></li>
+      </ul>
+    </nav>
   </header>
 
   <main id="content" [@routerTransition]="getState(o)">

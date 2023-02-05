@@ -1,305 +1,36 @@
 @import '../assets/scss/variables';
 
-@keyframes appear {
-  from {
-    opacity: 0;
-  }
+a.logo {
+  display: inline-block;
+  height: $headerFontSize;
 
-  to {
-    opacity: 0;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  margin: $paddingMedium 0 0;
+  margin-left: $paddingMedium;
+
+  position: relative;
+  left: -8px;
+
+  img {
+    height: 100%;
+    color: transparent;
+  }
+}
+
+
+li {
+  padding: 0px 12px;
+  img {
+    height: 1.8em;
+  }
+  &:after {
+    border: none !important;
   }
 }
 
-.content {
-  padding-top: 100px;
-}
-
-main {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  top: 0; left: 0; right: 0; bottom: 0;
-}
-
-header {
-
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 100%;
-  z-index: $indexContent;
-
-  // sebastienbarbier logo as text
-  a.logo {
-    display: inline-block;
-    height: $headerFontSize;
-
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-
-    position: relative;
-    left: -8px;
-    @media screen and (max-width: $md - 1px) {
-      display: none;
-    }
-
-    @media screen and (min-width: $md) and (max-width: $lg - 1px) {
-      margin: $paddingMedium 0 0;
-      margin-left: $paddingMedium;
-    }
-    @media screen and (min-width: $lg) {
-      margin: $paddingMedium 0 0;
-      margin-left: $paddingLarge;
-    }
-
-    img {
-      height: 100%;
-      color: transparent;
-    }
-  }
-
-  label{
-    cursor: pointer;
-    position: fixed;
-    width: $headerFontSize;
-    height: $headerFontSize;
-    z-index: $indexNavigation + 1;
-
-    @media screen and (max-width: $sm) {
-      position: absolute;
-      top: $paddingMedium;
-      right: $paddingSmall;
-    }
-
-    @media screen and (min-width: $sm) and (max-width: $md - 1px) {
-      position: absolute;
-      top: $paddingMedium;
-      right: $paddingMedium;
-    }
-
-    @media screen and (min-width: $md) and (max-width: $lg - 1px) {
-      top: $paddingMedium;
-      right: $paddingMedium;
-    }
-    @media screen and (min-width: $lg) {
-      top: $paddingMedium;
-      right: $paddingLarge;
-    }
-
-    opacity: 1;
-    transform: scale(1);
-    transition: opacity 400ms, transform 400ms;
-    &.hide {
-      opacity: 0;
-      transform: scale(0.9);
-      transition: opacity 400ms, transform 400ms;
-    }
-
-    #navigation__button__close { fill:white; visibility: hidden; }
-
-    @keyframes rotate {
-      from {
-        transform: rotate(360deg);
-      }
-
-      to {
-        transform: rotate(0deg);
-      }
-    }
-
-    svg {
-      position: absolute;
-      &:first-child {
-        visibility: visible;
-        opacity: 1;
-        transition: opacity 150ms 50ms, visibility 0s;
-      }
-      &:last-child {
-        visibility: hidden;
-        opacity: 0;
-        animation: 1s infinite linear normal rotate;
-        animation-play-state: paused;
-        transition: opacity 150ms, visibility 0s 150ms;
-      }
-    }
-    &.isLoading {
-      svg:first-child {
-        visibility: hidden;
-        opacity: 0;
-        transition: opacity 150ms, visibility 0s 150ms;
-      }
-      svg:last-child {
-        visibility: visible;
-        opacity: 1;
-        transition: opacity 150ms 50ms, visibility 0s;
-        animation-play-state: running;
-      }
-    }
-  }
-  input[type=checkbox]{
-    display: none;
-  }
-  input[type=checkbox]:checked + label {
-    #navigation__button__open { visibility: hidden; }
-    #navigation__button__close { fill:white; visibility: visible; }
-  }
-
-  input[type=checkbox]:checked + label + nav {
-    // Animation
-    visibility: visible;
-    transition: visibility 0s;
-
-    &:before {
-      opacity: 1;
-      transition: opacity 0.2s ease-in;
-    }
-
-    $range: 0.03s;
-    $delay: 0.06s;
-    ul {
-      opacity: 1;
-      transform: translateX(0px);
-      flex-wrap: wrap;
-      @mixin inline-animation($duration) {
-        transition: opacity 0.2s ease-out $duration, transform 0.2s ease-out $duration;
-      }
-      &:nth-child(0) { @include inline-animation($delay+(2*$range)) }
-      &:nth-child(1) { @include inline-animation($delay+(3*$range)) }
-      &:nth-child(2) { @include inline-animation($delay+(4*$range)) }
-      &:nth-child(3) { @include inline-animation($delay+(5*$range)) }
-      &:nth-child(4) { @include inline-animation($delay+(6*$range)) }
-      &:nth-child(5) { @include inline-animation($delay+(7*$range)) }
-    }
-  }
-
-  nav {
-    z-index: $indexNavigation;
-
-    // Animation
-    visibility: hidden;
-    transition: visibility 0s 0.2s;
-    // Position
-    position: fixed;
-    top: 0; bottom: 0; left: 0; right: 0;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-
-    &:before {
-      content: '';
-      position: absolute;
-      top: 0; bottom: 0; left: 0; right: 0;
-      background: $colorNavigation;
-      opacity: 0;
-      transition: opacity 0.2s ease-out;
-      z-index: $indexContent;
-    }
-
-    @media screen and (max-width: 599px) {
-      align-items: flex-end;
-      padding-right: 10vw;
-      padding-top: 5vh;
-    }
-    @media screen and (min-width: 600px) and (max-width: 999px) {
-      align-items: flex-end;
-      padding-right: 10vw;
-    }
-
-
-    ul {
-      // Animation
-      @media screen and (max-width: 599px) {
-      }
-      @media screen and (min-width: 600px) and (max-width: 999px) {
-        width: 60vw;
-      }
-      @media screen and (min-width: 1000px) {
-        width: 60vw;
-      }
-      padding: 0;
-      margin-bottom: 0;
-      list-style: none;
-      z-index: $indexContent+1;
-      opacity: 0;
-      transform: translateX(-30px);
-
-      display: flex;
-      justify-content: flex-end;
-
-      &.noMargin {
-        margin: 0 0 6px 0;
-      }
-
-      li{
-        padding: 14px 20px 14px 20px;
-        position: relative;
-        text-align: right;
-        opacity: 1;
-
-        &:last-child {
-          padding-right: 0;
-        }
-
-        &:not(:last-child) {
-          &:after {
-            content: '';
-            position: absolute;
-            top: 14px;
-            bottom: 14px;
-            right: 0;
-            width: 1px;
-            border-left: solid 1px white;
-          }
-        }
-
-        a{
-          border: none;
-          color: $light;
-          text-transform: uppercase;
-          font-weight: 700;
-          font-size: 2.8rem;
-          letter-spacing: -0.01em;
-
-          &.active {
-            color: $colorGold;
-            cursor: default;
-            opacity: 0.4;
-          }
-        }
-      }
-
-      &.small li a{
-        border: none;
-        color: $light;
-        text-transform: capitalize;
-        font-weight: 400;
-        font-size: .8rem;
-        letter-spacing: -0.01em;
-
-        &.active {
-          color: $colorGold;
-          cursor: default;
-          opacity: 0.4;
-        }
-      }
-
-      &.icons li {
-        padding: 0px 12px;
-        img {
-          height: 1.8em;
-        }
-        &:after {
-          border: none !important;
-        }
-      }
-
-    }
-  }
-}
