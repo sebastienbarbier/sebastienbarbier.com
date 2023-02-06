@@ -4,36 +4,51 @@ footer {
   width: 100%;
   background: $background_brown;
   color: $primary_text_white;
-  padding: 12rem 0 6rem;
 
-  h2 {
-    font-weight: 400;
-    font-size: 0.9em;
-    text-transform: uppercase;
-    margin-bottom: 4px;
+  .getintouch {
+    padding: 6rem 0 6rem;
+
+    h2 {
+      font-weight: 400;
+      font-size: 0.9em;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    a {
+      color: $primary_text_white;
+      text-decoration: none;
+      @include serif;
+      font-size: 2.8em;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: row;
+      padding: 0;
+      li {
+        margin: 0;
+        padding-right: 24px;
+        list-style: none;
+        a {
+          text-transform: uppercase;
+          color: $color_gold;
+          font-size: 0.8em;
+          font-weight: 500;
+          @include sansserif;
+        }
+      }
+    }
   }
 
-  a {
-    color: $primary_text_white;
-    text-decoration: none;
-    @include serif;
-    font-size: 2.8em;
-  }
-
-  ul {
-    display: flex;
-    flex-direction: row;
-    padding: 0;
-    li {
-      margin: 0;
-      padding-right: 24px;
-      list-style: none;
+  .links {
+    padding: 1em 0 10px;
+    font-size: 0.8em;
+    text-align: right;
+    p {
       a {
-        text-transform: uppercase;
-        color: $color_gold;
-        font-size: 0.8em;
-        font-weight: 500;
-        @include sansserif;
+        color: $primary_text_white;
+        text-decoration: none;
       }
     }
   }
