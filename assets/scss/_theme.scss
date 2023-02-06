@@ -7,11 +7,7 @@ html {
   font-weight: 400;
   line-height: 1.4;
 
-  font-family: 'Open Sans', Helvetica, sans-serif;
-  // If browser support variableFonts, use it
-  @supports (font-variation-settings: "wdth" 115) {
-    font-family: 'Open Sans Variable', Helvetica, sans-serif;
-  }
+  @include sansserif;
 
   body {
     margin: 0;
@@ -19,14 +15,37 @@ html {
 }
 
 h1, h2, h3, h4, h5, h6 {
-
-  font-family: 'Source Serif', Arial, serif;
-  // If browser support variableFonts, use it
-  @supports (font-variation-settings: "wdth" 115) {
-    font-family: 'Source Serif Variable', Arial, serif;
-  }
+  @include serif;
 }
 
 .serif {
   @include serif;
 }
+
+.sansserif {
+  @include sansserif;
+}
+
+
+// Wrapper for angular router view to animate smoothly
+// Allow also to scroll up automatically on page navigation
+.wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  z-index: $zindex_wrapper;
+
+  &.pt {
+    padding-top: 80px;
+  }
+
+  .container {
+    max-width: $container_width;
+    margin: auto;
+  }
+}
+
