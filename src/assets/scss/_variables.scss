@@ -1,7 +1,7 @@
 
-$primary_text_white: #202124;
+$primary_text_white: #e8eaed;
 $primary_text_beige: rgb(205, 188, 165);
-$primary_text_black: #e8eaed;
+$primary_text_black: #202124;
 
 $background_white: rgb(247, 247, 246);
 $background_beige: rgb(250, 248, 245);
@@ -12,3 +12,12 @@ $color_gold: rgb(219, 183, 120);
 
 // General variables
 $font_size: 16px;
+
+// Mixins used in the project
+@mixin serif {
+  font-family: 'Source Serif', Arial, serif;
+  // If browser support variableFonts, use it
+  @supports (font-variation-settings: "wdth" 115) {
+    font-family: 'Source Serif Variable', Arial, serif;
+  }
+}

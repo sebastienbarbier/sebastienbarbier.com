@@ -3,30 +3,35 @@
     <a class="logo" routerLink="/">
       <img src="/assets/images/ressources/sebastienbarbier_logo.svg" alt="This image contains: sebastien's logo which is simply his first and last name together with a stylish font" />
     </a>
-    <nav role="menu" aria-labelledby="navigation__button">
-      <ul>
-        <li><a role="menuitem" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a></li>
-        <li><a role="menuitem" routerLink="/works" routerLinkActive="active">Works</a></li>
-        <li><a role="menuitem" routerLink="/contact" routerLinkActive="active">Contact</a></li>
-        <li><a role="menuitem" routerLink="/resume" class="small" routerLinkActive="active">Resume</a></li>
-        <li><a role="menuitem" routerLink="/resources" class="small" routerLinkActive="active">Resources</a></li>
-        <li><a role="menuitem" routerLink="/legal" class="small" routerLinkActive="active">Legal & copyright</a></li>
-        <li><a target="_blank" href="http://www.twitter.com/SebBarbier/"><img src="/assets/images/logos/twitter_logo.svg" alt="Twitter logo" /></a></li>
-        <li><a target="_blank" href="http://stackoverflow.com/users/4762763/sebastienbarbier"><img src="/assets/images/logos/stackoverflow_logo.svg" alt="Stack Overflow logo" /></a></li>
-        <li><a target="_blank" href="https://www.linkedin.com/in/sebbarbier/"><img src="/assets/images/logos/linkedin_logo.svg" alt="Linkedin logo" /></a></li>
-        <li><a target="_blank" href="https://github.com/sebastienbarbier/"><img src="/assets/images/logos/github_logo.svg" alt="Github logo" /></a></li>
-        <li><a target="_blank" href="https://instagram.com/sebastienbarbier/"><img src="/assets/images/logos/instagram_logo.svg" alt="Instagram logo" /></a></li>
-      </ul>
-    </nav>
 
     <!-- Hamburger menu -->
-    <input id="navigation" type="checkbox" aria-label="Menu" aria-hidden="true" aria-controls="navigation__button" />
+    <input [(ngModel)]="navigationMenuStatus" id="navigation" type="checkbox" aria-label="Menu" aria-hidden="true" aria-controls="navigation__button" />
+    <!-- <input checked="checked" id="navigation" type="checkbox" aria-label="Menu" aria-hidden="true" aria-controls="navigation__button" /> -->
     <label for="navigation">
       <div>
         <span></span>
         <span></span>
       </div>
     </label>
+
+    <!-- Navigation menu -->
+    <nav role="menu" aria-labelledby="navigation__button">
+      <ul>
+        <li><a role="menuitem" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a></li>
+        <li><a role="menuitem" routerLink="/works" routerLinkActive="active">Works</a></li>
+        <li><a role="menuitem" routerLink="/contact" routerLinkActive="active">Contact</a></li>
+
+        <!-- <li><a role="menuitem" routerLink="/resume" class="small" routerLinkActive="active">Resume</a></li>
+        <li><a role="menuitem" routerLink="/resources" class="small" routerLinkActive="active">Resources</a></li>
+        <li><a role="menuitem" routerLink="/legal" class="small" routerLinkActive="active">Legal & copyright</a></li> -->
+
+        <!-- <li><a target="_blank" href="http://www.twitter.com/SebBarbier/"><img src="/assets/images/logos/twitter_logo.svg" alt="Twitter logo" /></a></li>
+        <li><a target="_blank" href="http://stackoverflow.com/users/4762763/sebastienbarbier"><img src="/assets/images/logos/stackoverflow_logo.svg" alt="Stack Overflow logo" /></a></li>
+        <li><a target="_blank" href="https://www.linkedin.com/in/sebbarbier/"><img src="/assets/images/logos/linkedin_logo.svg" alt="Linkedin logo" /></a></li>
+        <li><a target="_blank" href="https://github.com/sebastienbarbier/"><img src="/assets/images/logos/github_logo.svg" alt="Github logo" /></a></li>
+        <li><a target="_blank" href="https://instagram.com/sebastienbarbier/"><img src="/assets/images/logos/instagram_logo.svg" alt="Instagram logo" /></a></li> -->
+      </ul>
+    </nav>
   </header>
 
   <main id="content" [@routerTransition]="getState(o)">
