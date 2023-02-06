@@ -1,6 +1,6 @@
 @import '../assets/scss/variables';
 
-// sebastienbarbier logo
+// Header logo as svg
 a.logo {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -13,9 +13,12 @@ a.logo {
   margin-top: 30px;
   margin-left: 45px;
 
-  img {
+  svg {
     width: 240px;
     color: transparent;
+    g {
+      fill: #16161D;
+    }
   }
 }
 
