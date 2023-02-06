@@ -32,7 +32,6 @@ $zindex_navigation: 100;
   }
 }
 
-
 @mixin serif {
   font-family: 'Source Serif', Arial, serif;
   font-variation-settings: 'opsz' 24;
@@ -41,3 +40,39 @@ $zindex_navigation: 100;
     font-family: 'Source Serif Variable', Arial, serif;
   }
 }
+
+@mixin for-phone-only {
+  @media (max-width: 599px) { @content; }
+}
+@mixin for-tablet-portrait-down {
+  @media (max-width: 599px) { @content; }
+}
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) { @content; }
+}
+@mixin for-tablet-landscape-down {
+  @media (max-width: 899px) { @content; }
+}
+@mixin for-tablet-landscape-up {
+  @media (min-width: 900px) { @content; }
+}
+@mixin for-desktop-down {
+  @media (max-width: 1200px) { @content; }
+}
+@mixin for-desktop-up {
+  @media (min-width: 1200px) { @content; }
+}
+@mixin for-big-desktop-down {
+  @media (max-width: 1799px) { @content; }
+}
+@mixin for-big-desktop-up {
+  @media (min-width: 1800px) { @content; }
+}
+/**
+ *  .class {
+ *     ...
+ *     @include for-phone-only {
+ *        font-size: 1rem;
+ *     }
+ *  }
+ **/

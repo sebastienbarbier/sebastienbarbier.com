@@ -8,6 +8,10 @@ footer {
   .getintouch {
     padding: 6rem 0 6rem;
 
+    @include for-tablet-landscape-down {
+      text-align: center;
+    }
+
     h2 {
       font-weight: 400;
       font-size: 0.9em;
@@ -20,12 +24,23 @@ footer {
       text-decoration: none;
       @include serif;
       font-size: 2.8em;
+
+      @include for-tablet-landscape-down {
+        text-align: center;
+        font-size: 1.5em;
+      }
     }
 
     ul {
       display: flex;
       flex-direction: row;
       padding: 0;
+
+
+      @include for-tablet-landscape-down {
+        justify-content: center;
+      }
+
       li {
         margin: 0;
         padding-right: 24px;
@@ -45,6 +60,11 @@ footer {
     padding: 1em 0 10px;
     font-size: 0.8em;
     text-align: right;
+
+    @include for-tablet-landscape-down {
+      text-align: center;
+    }
+
     p {
       a {
         color: $primary_text_white;

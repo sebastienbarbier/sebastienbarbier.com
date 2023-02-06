@@ -1,35 +1,40 @@
 @import '../assets/scss/variables';
 
 // Header logo as svg
-a.logo {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 50px;
 
-  display: inline-block;
-  margin-top: 30px;
-  margin-left: 45px;
-  position: absolute;
-
-  z-index: $zindex_header;
-
-  svg {
-    width: 240px;
-    color: transparent;
-    g {
-      fill: #16161D;
-    }
+  @include for-tablet-landscape-down {
+    padding: 20px 20px;
   }
-}
 
-// Social networks
-li {
-  padding: 0px 12px;
-  img {
-    height: 1.8em;
+  @include for-phone-only {
+    padding: 10px 10px;
+  }
+
+  a.logo {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    display: inline-block;
+
+    z-index: $zindex_header;
+
+    svg {
+      width: 240px;
+      color: transparent;
+      g {
+        fill: #16161D;
+      }
+    }
   }
 }
 
@@ -37,7 +42,7 @@ li {
 // HAMBURGER MENU
 //
 
-$navigation_button_size: 80px;
+$navigation_button_size: 46px;
 
 // Input checkbox store the navigaiton menu state to open/close
 input#navigation {
@@ -66,9 +71,7 @@ input#navigation {
 
 // Button object to toggle navigation state
 input#navigation + label {
-  position: absolute;
-  top: 15px;
-  right: 55px;
+  position: relative;
   width: $navigation_button_size;
   height: $navigation_button_size;
   cursor: pointer;
@@ -130,6 +133,8 @@ input#navigation + label +  nav {
   right: 0;
   opacity: 0;
   visibility: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
 
   background: $background_brown;
   color: $primary_text_white;
@@ -159,6 +164,23 @@ input#navigation + label +  nav {
           color: $color_gold;
         }
       }
+    }
+
+    @include for-tablet-landscape-down {
+        width: 100%;
+        padding: 0;
+        text-align: center;
+        li a {
+          font-size: 3em;
+        }
+    }
+
+    @include for-tablet-landscape-up {
+        width: 50%;
+    }
+
+    @include for-desktop-up {
+        width: 40%;
     }
   }
 

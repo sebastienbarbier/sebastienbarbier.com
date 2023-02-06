@@ -6,6 +6,7 @@
     "ng": "ng",
     "start": "node dist/server",
     "build": "ng run sebastienbarbier_en:prerender",
+    "serve": "npx ng serve --host 0.0.0.0",
     "serve:static": "npm run serve:prerender",
     "test": "ng test",
     "lint": "ng lint",
