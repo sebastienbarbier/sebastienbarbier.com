@@ -12,6 +12,10 @@ html {
   @supports (font-variation-settings: "wdth" 115) {
     font-family: 'Open Sans Variable', Helvetica, sans-serif;
   }
+
+  body {
+    margin: 0;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {

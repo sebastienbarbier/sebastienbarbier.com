@@ -18,6 +18,15 @@
         <li><a target="_blank" href="https://instagram.com/sebastienbarbier/"><img src="/assets/images/logos/instagram_logo.svg" alt="Instagram logo" /></a></li>
       </ul>
     </nav>
+
+    <!-- Hamburger menu -->
+    <input id="navigation" type="checkbox" aria-label="Menu" aria-hidden="true" aria-controls="navigation__button" />
+    <label for="navigation">
+      <div>
+        <span></span>
+        <span></span>
+      </div>
+    </label>
   </header>
 
   <main id="content" [@routerTransition]="getState(o)">

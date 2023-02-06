@@ -46,6 +46,7 @@ Required to define env var `OS_TENANT_ID`, `OS_TENANT_NAME`, `OS_USERNAME`, `OS_
 
 New:
 - https://zhenyary.com/
+- https://www.mkosowska.com/
 - https://xpdesignsystem.com/
 
 Old:
