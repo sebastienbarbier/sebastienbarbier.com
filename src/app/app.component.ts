@@ -67,35 +67,37 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.router.events.subscribe(event => {
+      // Main instanceof event:
+      // NavigationStart, NavigationEnd, NavigationCancel, NavigationError, RoutesRecognized
       if (event instanceof NavigationStart) {
         // On page change, we close navigation menu
         if (this.navigationMenuStatus === true) {
           this.navigationMenuStatus = !this.navigationMenuStatus;
         }
       }
+      // Start loading animation on menu icon
       if (event instanceof RouteConfigLoadStart && !this.hideMenuAnimation) {
           document.getElementById('navigation__button')?.classList.add('isLoading');
       }
+      // Stop loading animation on menu icon
       if (event instanceof RouteConfigLoadEnd && !this.hideMenuAnimation) {
         document.getElementById('navigation__button')?.classList.remove('isLoading');
       }
-
-      // NavigationStart, NavigationEnd, NavigationCancel, NavigationError, RoutesRecognized
       if (event instanceof NavigationEnd) {
 
         this.path = event.url;
         // If home page, we hide header
-        if (event.url === '/') {
-          this.headerState = 'home';
-        } else if (event.url === '/about-me') {
-          this.headerState = 'aboutMe';
-        } else if (event.url === '/work') {
-          this.headerState = 'work';
-        } else if (event.url === '/resume') {
-          this.headerState = 'resume';
-        } else {
-          this.headerState = 'notHome';
-        }
+        // if (event.url === '/') {
+        //   this.headerState = 'home';
+        // } else if (event.url === '/about-me') {
+        //   this.headerState = 'aboutMe';
+        // } else if (event.url === '/work') {
+        //   this.headerState = 'work';
+        // } else if (event.url === '/resume') {
+        //   this.headerState = 'resume';
+        // } else {
+        //   this.headerState = 'notHome';
+        // }
         // We enable overflow on body if fullscreen action had disabled it
         this._document.body.style.overflow = "auto";
 

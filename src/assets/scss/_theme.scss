@@ -1,10 +1,32 @@
 @import './variables';
 
 html {
-  font-family: 'Atkinson Hyperlegible', Helvetica, sans-serif;
   font-size: $font_size;
-  background: $background_light;
-  color: $primary_text_light;
+  background: $background_white;
+  color: $primary_text_white;
   font-weight: 400;
   line-height: 1.4;
+
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  // If browser support variableFonts, use it
+  @supports (font-variation-settings: "wdth" 115) {
+    font-family: 'Open Sans Variable', Helvetica, sans-serif;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+
+  font-family: 'Source Serif', Helvetica, sans-serif;
+  // If browser support variableFonts, use it
+  @supports (font-variation-settings: "wdth" 115) {
+    font-family: 'Source Serif Variable', Helvetica, sans-serif;
+  }
+}
+
+.serif {
+  font-family: 'Source Serif', Helvetica, sans-serif;
+  // If browser support variableFonts, use it
+  @supports (font-variation-settings: "wdth" 115) {
+    font-family: 'Source Serif Variable', Helvetica, sans-serif;
+  }
 }
