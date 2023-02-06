@@ -1,57 +1,23 @@
-// Light mode
-$primary_text_light: #202124;;
-$background_light: #F0F0F4;
 
-// Dark mode
-$primary_text_dark: #e8eaed;
-$background_dark: #16161D; // Eigengrau color: https://en.wikipedia.org/wiki/Eigengrau
+$primary_text_white: #e8eaed;
+$primary_text_beige: rgb(205, 188, 165);
+$primary_text_black: #202124;
+
+$background_white: rgb(247, 247, 246);
+$background_beige: rgb(250, 248, 245);
+$background_brown: rgb(31, 29, 29);
+$background_eigengrau: #16161D; // Eigengrau color: https://en.wikipedia.org/wiki/Eigengrau
+
+$color_gold: rgb(219, 183, 120);
 
 // General variables
 $font_size: 16px;
 
-
-///////////////////////////////////////
-// OLD VARIABLES. TO DELETE
-///////////////////////////////////////
-$colorNavigation  : rgb(31, 29, 29);
-
-/* Theming */
-$light           : rgb(247, 247, 246);
-$light1          : $light;
-$light2          : rgb(235, 235, 235);
-$light3          : rgb(200, 200, 200);
-
-/* Color based on profile picture */
-$colorPolo       : #8baed7; /* 32.4 % Polo Blue (Blue) */
-$colorBlack      : #080d15; /* 24.1 % Black (Black) */
-$colorBlackRock  : #232435; /* 17.7 % Black Rock (Blue) */
-$colorChambray   : #455671; /* 9.6 % Chambray (Blue) */
-$colorLight      : #8c6c71; /* 7.1 % Light Wood (Brown) */
-$colorCab        : #594043; /* 5.5 % Cab Sav (Brown) */
-$colorScarpa     : #676569; /* 2.4 % Scarpa Flow (Grey) */
-$colorDawn       : #9d9990; /* 1.2 % Dawn (Grey) */
-$colorGold       : rgb(219, 183, 120);
-
-$mobilePadding   : 22px;
-$articleWidth    : 720px;
-
-$sm              : 576px;
-$md              : 768px;
-$lg              : 992px;
-$xl              : 1200px;
-
-$headerFontSize  : 1.8rem;
-$titleFontSize   : 1.4rem;
-
-/* Padding used to show fixed elements */
-$paddingSmall    : 20px;
-$paddingMedium   : 40px;
-$paddingLarge    : 60px;
-
-$footerMinHeight : 400px;
-
-$padding : 17px;
-
-$indexContent: 1000;
-$indexNavigation: 2000;
-$indexSlideshow: 3000;
+// Mixins used in the project
+@mixin serif {
+  font-family: 'Source Serif', Arial, serif;
+  // If browser support variableFonts, use it
+  @supports (font-variation-settings: "wdth" 115) {
+    font-family: 'Source Serif Variable', Arial, serif;
+  }
+}
