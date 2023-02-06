@@ -3,9 +3,6 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 
 import { FooterComponent } from './footer/footer.component';
-import { HeaderComponent } from './header/header.component';
-import { NavigationComponent } from './navigation/navigation.component';
-
 
 export const providers = [
     // ... your shared services here
@@ -14,8 +11,6 @@ export const providers = [
 @NgModule({
   declarations: [
     FooterComponent,
-    HeaderComponent,
-    NavigationComponent,
   ],
   imports: [
     RouterModule,
@@ -23,8 +18,6 @@ export const providers = [
   ],
   exports: [
     FooterComponent,
-    HeaderComponent,
-    NavigationComponent,
   ]
 })
 export class SharedModule {

@@ -13,9 +13,29 @@ $color_gold: rgb(219, 183, 120);
 // General variables
 $font_size: 16px;
 
+// Screen Size
+
+$container_width: 1200px;
+
+// z-index
+$zindex_wrapper: 1;
+$zindex_header: 10;
+$zindex_modal: 500;
+$zindex_navigation: 100;
+
 // Mixins used in the project
+@mixin sansserif {
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  // If browser support variableFonts, use it
+  @supports (font-variation-settings: "wdth" 115) {
+    font-family: 'Open Sans Variable', Helvetica, sans-serif;
+  }
+}
+
+
 @mixin serif {
   font-family: 'Source Serif', Arial, serif;
+  font-variation-settings: 'opsz' 24;
   // If browser support variableFonts, use it
   @supports (font-variation-settings: "wdth" 115) {
     font-family: 'Source Serif Variable', Arial, serif;

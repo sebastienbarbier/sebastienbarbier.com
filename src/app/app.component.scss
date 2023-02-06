@@ -12,6 +12,9 @@ a.logo {
   display: inline-block;
   margin-top: 30px;
   margin-left: 45px;
+  position: absolute;
+
+  z-index: $zindex_header;
 
   svg {
     width: 240px;
@@ -145,8 +148,9 @@ input#navigation + label +  nav {
       a {
         @include serif;
         text-decoration: none;
-        font-size: 4em;
+        font-size: 3.6em;
         color: $primary_text_white;
+        font-variation-settings: 'opsz' 24;
         transition: all 0.2s cubic-bezier(0.1, 0.82, 0.76, 0.965);
         &.active {
           color: $color_gold;
@@ -158,7 +162,7 @@ input#navigation + label +  nav {
     }
   }
 
-  z-index: 99;
+  z-index: $zindex_navigation;
   transition: opacity 0.2s ease-in-out, visibility 0s 0.2s;
 }
 

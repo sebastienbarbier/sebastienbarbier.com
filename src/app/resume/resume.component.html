@@ -1,68 +1,65 @@
-<div class="route">
-  <route-header></route-header>
-  <div class="content">
-    <h1>Resume</h1>
-    <div class="container">
-      <article>
-        <section class="row">
-          <h2 class="col-sm-12">Cloud Software Architect</h2>
-          <p class="col-sm-12">34 years old, French nationality, based in Zurich, Switzerland 🇨🇭.<br />Languages: French (native language), English (Fluent), and German (A2)</p>
-        </section>
+<div class="wrapper pt">
+  <div class="container">
+    <article>
+      <section class="row">
+        <h2 class="col-sm-12">Cloud Software Architect</h2>
+        <p class="col-sm-12">34 years old, French nationality, based in Zurich, Switzerland 🇨🇭.<br />Languages: French (native language), English (Fluent), and German (A2)</p>
+      </section>
 
-        <section>
-          <h2>Technologies</h2>
-          <ul>
-            <li><strong>Front-end</strong> : React, Angular, CSS3 Responsive, Html5. Redux, IndexedDB, web/service workers. Webpack, Npm. Test environment with jasmine, Moka, Karma.</li>
-            <li><strong>Back-end</strong> : Python Django, Flask, Restful API, Unitary test, Web services, Continuous integration, Sphinx (technical documentation).</li>
-            <li>Devops, Monitoring, Server skills, Open source advocate, Git, Scrum.</li>
-          </ul>
-        </section>
+      <section>
+        <h2>Technologies</h2>
+        <ul>
+          <li><strong>Front-end</strong> : React, Angular, CSS3 Responsive, Html5. Redux, IndexedDB, web/service workers. Webpack, Npm. Test environment with jasmine, Moka, Karma.</li>
+          <li><strong>Back-end</strong> : Python Django, Flask, Restful API, Unitary test, Web services, Continuous integration, Sphinx (technical documentation).</li>
+          <li>Devops, Monitoring, Server skills, Open source advocate, Git, Scrum.</li>
+        </ul>
+      </section>
 
-        <section>
-          <h2>Work experience</h2>
-          <ul>
-            <li *ngFor="let experience of experiences;">
-              <strong>{{ experience.company.name}} </strong> : {{ experience.title}}, {{ experience.company.location }}.<br/>
-              <em>{{ experience.date }}</em><br/>
-              {{ experience.description }}
-           </li>
-          </ul>
-        </section>
+      <section>
+        <h2>Work experience</h2>
+        <ul>
+          <li *ngFor="let experience of experiences;">
+            <strong>{{ experience.company.name}} </strong> : {{ experience.title}}, {{ experience.company.location }}.<br/>
+            <em>{{ experience.date }}</em><br/>
+            {{ experience.description }}
+         </li>
+        </ul>
+      </section>
 
 
-        <section>
-          <h2>Education</h2>
-          <ul>
-            <li>
+      <section>
+        <h2>Education</h2>
+        <ul>
+          <li>
 <strong>2011 - Master degree in computer science - Distributed systems and networks</strong><br/>
 « University of Franche-Comté, Science and technology » - Besançon, France 🇫🇷 - magna cum laude<br/>
 <strong>Internship 3 months:</strong> Nav6 Laboratory - Penang, Malaysia 🇲🇾. Developed C# application using Google API in a real time collaborative space. Integrated to a video chat
 application in purpose to have real time document edition.</li>
-            <li>
+          <li>
 <strong>2009 - Bachelor degree in computer science</strong><br/>
 « University of Franche-Comté, Science and technology » - Besançon, France 🇫🇷 - cum laude<br/>
 <strong>Internship 3 months:</strong> MagicLabVision Laboratory - Adelaide, Australia 🇦🇺. Joined a research team on an augmented reality application based on Python.</li>
-            <li>
+          <li>
 <strong>2008 - “Final year in computer science”</strong><br/>
 « University of Portsmouth » - ERASMUS exchange, England 🇬🇧</li>
-            <li>
+          <li>
 <strong>2007 - HNC, Computer Science</strong><br/>
 « IUT of Belfort » - Belfort, France 🇫🇷<br />
 <strong>Internship 3 months:</strong> Thales Avionics Electrical Systems - Chatou, France 🇫🇷. PHP Developer, using Oracle databases, access archives from a previous ERP.</li>
-          </ul>
-        </section>
+        </ul>
+      </section>
 
-        <section>
-          <h2>Additional informations</h2>
-          <p>Have side-projects, like Seven23 which keep track of my expenses (open source - work in progress). Big use of twitter to follow tech news. Have fun with photography and would like to spend more time and progress.</p>
+      <section>
+        <h2>Additional informations</h2>
+        <p>Have side-projects, like Seven23 which keep track of my expenses (open source - work in progress). Big use of twitter to follow tech news. Have fun with photography and would like to spend more time and progress.</p>
 
-          <h3>I like to attend conferences</h3>
-          <ul>
-            <li *ngFor="let conference of conferences;">{{ conference.date }} - <strong>{{ conference.name }}</strong>, {{ conference.location }}</li>
-          </ul>
-        </section>
+        <h3>I like to attend conferences</h3>
+        <ul>
+          <li *ngFor="let conference of conferences;">{{ conference.date }} - <strong>{{ conference.name }}</strong>, {{ conference.location }}</li>
+        </ul>
+      </section>
 
-      </article>
-    </div>
+    </article>
   </div>
+  <route-footer></route-footer>
 </div>
