@@ -46,6 +46,22 @@ h1, h2, h3, h4, h5, h6 {
   .container {
     max-width: $container_width;
     margin: auto;
+
+
+    @include for-tablet-landscape-up {
+      margin-left: 80px;
+      margin-right: 80px;
+    }
+
+    @include for-tablet-landscape-down {
+      margin-left: 50px;
+      margin-right: 50px;
+    }
+
+    @include for-phone-only {
+      margin-left: 15px;
+      margin-right: 15px;
+    }
   }
 }
 
