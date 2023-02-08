@@ -109,8 +109,9 @@ export class AppComponent implements OnInit {
         }
 
         // Add listenner to hider with opacity te header logo
-
-        this.contentIsScrolledTop = true;
+        setTimeout(() => {
+          this.contentIsScrolledTop = true;
+        }, 200);
         const wrappers = document.getElementsByClassName('wrapper');
         if (wrappers.length != 0) {
           const element = wrappers[wrappers.length - 1];
