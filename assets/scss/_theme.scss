@@ -19,6 +19,8 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   font-variation-settings: 'opsz' 24;
   position: relative;
+  margin-top: 1.2em;
+  margin-bottom: 0.8em;
 
   small {
     @include sansserif;
@@ -27,7 +29,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 0.3em;
     position: absolute;
     text-transform: uppercase;
-    top: -0.8em;
+    top: -0.4em;
     opacity: 0.8;
   }
 
@@ -36,8 +38,8 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-$h1_size: 3.2em;
-$h2_size: $h1_size - 1.2em;
+$h1_size: 4.2em;
+$h2_size: $h1_size - 2.2em;
 $h3_size: $h2_size - 0.4em;
 $h4_size: $h3_size - 0.4em;
 $h5_size: $h4_size - 0.4em;
@@ -46,6 +48,9 @@ $h6_size: $h5_size - 0.4em;
 h1 {
   font-size: $h1_size;
   font-weight: 600;
+  small {
+    font-size: 0.2em;
+  }
 }
 h2 {
   font-size: $h2_size;
@@ -103,6 +108,14 @@ h6  {
     &.centered {
       max-width: 700px;
       margin: auto;
+    }
+
+    a {
+      color: $color_gold_dark_visited;
+      text-decoration: none;
+      &:visited {
+        color: $color_gold_dark_visited;
+      }
     }
 
     @include for-tablet-landscape-up {
