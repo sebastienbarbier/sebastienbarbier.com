@@ -1,4 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, HostBinding } from '@angular/core';
+
+import {
+  sequence,
+  trigger,
+  stagger,
+  animate,
+  style,
+  group,
+  query,
+  transition,
+  keyframes,
+  animateChild } from '@angular/animations';
+
+const pageNotFoundTransition = trigger('pageNotFoundTransition', []);
 
 @Component({
   selector: 'app-page-not-found',
@@ -8,5 +22,7 @@ import { Component } from '@angular/core';
 export class PageNotFoundComponent {
 
   constructor() { }
+
+  @HostBinding('@pageNotFoundTransition') '': string;
 
 }
