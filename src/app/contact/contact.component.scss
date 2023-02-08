@@ -1,5 +1,28 @@
 @import '../../assets/scss/variables';
 
 img {
-  width: 100px;
+  float: right;
+  width: 2em;
+  margin: 1em 2em;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  padding-top: 2.5em;
+  padding-bottom: 0.5em;
+}
+
+.container {
+  max-width: 700px;
+  margin: auto;
+}
+
+.email {
+  @include serif;
+  font-size: 2em;
+  padding-top: 0px;
+  margin-top: 0px;
 }

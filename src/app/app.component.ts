@@ -49,7 +49,7 @@ export class AppComponent implements OnInit {
     ) {
     this.navigationMenuStatus = false;
     this.hideMenuAnimation = true;
-    this.contentIsScrolledTop = true;
+    this.contentIsScrolledTop = false;
 
     this.lang = 'en';
     this.path = '';
@@ -109,12 +109,15 @@ export class AppComponent implements OnInit {
         }
 
         // Add listenner to hider with opacity te header logo
-        setTimeout(() => {
-          this.contentIsScrolledTop = true;
-        }, 200);
         const wrappers = document.getElementsByClassName('wrapper');
         if (wrappers.length != 0) {
           const element = wrappers[wrappers.length - 1];
+
+          if (element.scrollTop < 100) {
+            setTimeout(() => {
+              this.contentIsScrolledTop = true;
+            }, 200);
+          }
 
           element.addEventListener("scroll", (event) => {
             if (element.scrollTop < 100) {
