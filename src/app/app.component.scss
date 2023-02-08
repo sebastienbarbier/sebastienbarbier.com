@@ -27,6 +27,17 @@ header {
     display: inline-block;
 
     z-index: $zindex_header;
+    transition: visibility 0s, left 0.3s ease, opacity 0.3s ease;
+    position: relative;
+    left: 0px;
+    visibility: visible;
+
+    &.hidden {
+      opacity: 0;
+      visibility: hidden;
+      left: 10px;
+      transition: opacity 0.3s ease, left 0.3s ease, visibility 0s 0.3s;
+    }
 
     svg {
       width: 240px;

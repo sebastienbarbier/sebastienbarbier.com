@@ -33,6 +33,8 @@ export class AppComponent implements OnInit {
   path: string;
   headerState: string;
   hideMenuAnimation: Boolean;
+  // Boolean to toggle the logo opacity effect
+  contentIsScrolledTop: Boolean;
 
   constructor(
       private route: ActivatedRoute,
@@ -47,6 +49,7 @@ export class AppComponent implements OnInit {
     ) {
     this.navigationMenuStatus = false;
     this.hideMenuAnimation = true;
+    this.contentIsScrolledTop = true;
 
     this.lang = 'en';
     this.path = '';
@@ -103,6 +106,22 @@ export class AppComponent implements OnInit {
 
         if (this.hideMenuAnimation) {
           this.hideMenuAnimation = false;
+        }
+
+        // Add listenner to hider with opacity te header logo
+
+        this.contentIsScrolledTop = true;
+        const wrappers = document.getElementsByClassName('wrapper');
+        if (wrappers.length != 0) {
+          const element = wrappers[wrappers.length - 1];
+
+          element.addEventListener("scroll", (event) => {
+            if (element.scrollTop < 100) {
+              this.contentIsScrolledTop = true;
+            } else {
+              this.contentIsScrolledTop = false;
+            }
+          });
         }
       }
     });

@@ -1,8 +1,9 @@
 @import '../../assets/scss/variables';
 
-article {
-  height: 50vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.container {
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  padding-top: 80px;
+  padding-bottom: 250px;
 }
