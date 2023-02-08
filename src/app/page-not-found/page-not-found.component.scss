@@ -1,9 +1,21 @@
 @import '../../assets/scss/variables';
 
-.container {
-  width: 100%;
-  max-width: 800px;
-  margin: auto;
-  padding-top: 80px;
-  padding-bottom: 250px;
+h2 {
+  padding-top: 1em;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  li {
+    padding: 0;
+    list-style: none;
+    padding: 5px 20px 5px 0;
+    a {
+      text-transform: uppercase;
+      text-decoration: none;
+      color: $color_gold;
+    }
+  }
 }
