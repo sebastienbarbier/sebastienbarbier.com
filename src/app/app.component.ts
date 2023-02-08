@@ -108,19 +108,24 @@ export class AppComponent implements OnInit {
           this.hideMenuAnimation = false;
         }
 
-        // Add listenner to hider with opacity te header logo
+        /**
+         * Handle header animation on scroll to avoid overlapping content together
+         *
+         **/
+        const SCROLL_PX_TRIGGER_HEADER_ANIMATION = 40;
         const wrappers = document.getElementsByClassName('wrapper');
         if (wrappers.length != 0) {
           const element = wrappers[wrappers.length - 1];
 
-          if (element.scrollTop < 100) {
+          if (element.scrollTop < SCROLL_PX_TRIGGER_HEADER_ANIMATION) {
             setTimeout(() => {
               this.contentIsScrolledTop = true;
-            }, 200);
+            }, 400);
           }
 
+          // Add listenner to hider with opacity te header logo
           element.addEventListener("scroll", (event) => {
-            if (element.scrollTop < 100) {
+            if (element.scrollTop < SCROLL_PX_TRIGGER_HEADER_ANIMATION) {
               this.contentIsScrolledTop = true;
             } else {
               this.contentIsScrolledTop = false;
