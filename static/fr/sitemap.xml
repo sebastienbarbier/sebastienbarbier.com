@@ -59,16 +59,16 @@
      />
 </url>
 <url>
-  <loc>https://sebastienbarbier.fr/projects</loc>
+  <loc>https://sebastienbarbier.fr/works</loc>
   <xhtml:link
      rel="alternate"
      hreflang="en"
-     href="https://sebastienbarbier.com/projects"
+     href="https://sebastienbarbier.com/works"
      />
    <xhtml:link
      rel="alternate"
      hreflang="fr"
-     href="https://sebastienbarbier.fr/projects"
+     href="https://sebastienbarbier.fr/works"
      />
 </url>
 </urlset>

@@ -12,7 +12,7 @@ import {
   keyframes,
   animateChild } from '@angular/animations';
 
-const projectsTransition = trigger('projectsTransition', [
+const worksTransition = trigger('worksTransition', [
   transition(':enter', [
     query('.project_thumbnail', style({ opacity: 0 }), {optional: true}),
     query('.project_thumbnail', stagger(100, [
@@ -29,17 +29,17 @@ const projectsTransition = trigger('projectsTransition', [
 ]);
 
 @Component({
-  selector: 'app-projects',
-  templateUrl: './projects.component.html',
-  styleUrls: ['./projects.component.scss'],
-  animations: [ projectsTransition ]
+  selector: 'app-works',
+  templateUrl: './works.component.html',
+  styleUrls: ['./works.component.scss'],
+  animations: [ worksTransition ]
 })
-export class ProjectsComponent implements OnInit {
+export class WorksComponent implements OnInit {
 
   constructor() {
   }
 
-  @HostBinding('@projectsTransition') '': string;
+  @HostBinding('@worksTransition') '': string;
 
   ngOnInit(): void {
   }

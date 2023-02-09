@@ -1,7 +1,7 @@
 /contact
-/projects
-/projects/seven23
-/projects/fromedwin
+/works
+/works/seven23
+/works/fromedwin
 /resources
 /legal
 /resume
