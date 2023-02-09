@@ -38,6 +38,10 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+p.centered {
+  text-align: center;
+}
+
 $h1_size: 4.2em;
 $h2_size: $h1_size - 2.2em;
 $h3_size: $h2_size - 0.4em;
