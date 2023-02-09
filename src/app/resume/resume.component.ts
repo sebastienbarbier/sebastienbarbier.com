@@ -19,6 +19,17 @@ const resumeTransition = trigger('resumeTransition', [
   ])
 ]);
 
+// copilot generated function calculat today's age
+function getAge (birthDate: Date) {
+  var today = new Date();
+  var age = today.getFullYear() - birthDate.getFullYear();
+  var m = today.getMonth() - birthDate.getMonth();
+  if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+      age--;
+  }
+  return age;
+}
+
 @Component({
   selector: 'app-resume',
   templateUrl: './resume.component.html',
@@ -29,8 +40,11 @@ export class ResumeComponent implements OnInit {
 
   experiences: any;
   conferences: any;
+  age: number;
 
   constructor() {
+    this.age = getAge(new Date(1988, 0, 31));
+
     this.experiences = [
       {
         date: 'February 2020 - July 2021 (18 months)',
