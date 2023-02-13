@@ -3,3 +3,28 @@
 img {
   max-width: 100%;
 }
+
+
+
+.two_tablets_two_mobiles {
+  position: relative;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  align-items: center;
+  justify-content: space-around;
+
+  .tablet_landscape {
+      width: 50%;
+  }
+  .tablet_portrait {
+      width: 50%;
+  }
+  .mobile_portrait {
+      width: 25%;
+  }
+  .mobile_rotated {
+      width: 25%;
+  }
+}
