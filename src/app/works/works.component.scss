@@ -10,7 +10,7 @@ img {
 }
 
 ul.projects {
-  margin: 0;
+  margin: 40px 0 0 0;
   padding: 0;
 
   display: flex;
@@ -25,11 +25,13 @@ ul.projects {
     }
 
     list-style: none;
-    // background: $background_beige_dark;
-
-    // border-left: solid 1px $background_brown;
-
     margin: 30px 0;
+
+    &:nth-of-type(odd) {
+      @include for-tablet-landscape-up {
+        margin-top: 100px;
+      }
+    }
 
 
     @include for-tablet-landscape-down {
@@ -42,8 +44,14 @@ ul.projects {
 
     }
 
+    h3, p, a {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+
     img {
       width: 100%;
+      background: $background_beige_dark;
     }
 
     a {
