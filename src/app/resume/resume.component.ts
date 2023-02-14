@@ -106,6 +106,10 @@ export class ResumeComponent implements OnInit {
     ];
 
     this.conferences = [{
+      date: 'August 2022',
+      name: 'Frontend conference',
+      location: 'Zurich, Switzerland 🇨🇭'
+    },{
       date: 'April 2022',
       name: 'Devvox France',
       location: 'Paris, France 🇫🇷'
