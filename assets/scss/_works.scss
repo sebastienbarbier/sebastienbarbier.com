@@ -19,6 +19,12 @@
         border-right:  solid 1px #BBB;
         justify-content: flex-end;
       }
+
+      svg {
+        fill: $color_gold_dark_visited;
+        margin-right: 20px;
+        height: 1.5em;
+      }
     }
   }
 }
