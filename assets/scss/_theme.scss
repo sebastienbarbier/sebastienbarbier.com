@@ -96,6 +96,13 @@ a {
     &.mb {
       margin-bottom: 40px;
     }
+
+    &.small {
+      letter-spacing: 1px;
+      font-size: 0.7em;
+      padding: 4px 10px;
+      font-weight: 600;
+    }
   }
 
 }
