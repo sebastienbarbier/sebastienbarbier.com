@@ -42,7 +42,6 @@ img {
   .container {
     display: grid;
     gap: 10px;
-    width: 100%;
     align-items: center;
 
     h1 {
@@ -89,6 +88,30 @@ img {
   }
 }
 
+span.censored {
+    position: relative;
+    color: transparent;
+
+    &:after {
+        background: $background_beige_dark;
+        position: absolute;
+        content: '';
+        transform: rotate(-5deg);
+        top: 0; left: 0; right: 0; bottom: 0;
+    }
+
+    &:before {
+        position: absolute;
+        content: '🤬';
+        z-index: 999;
+        font-style: normal;
+        font-size: 1.3em;
+        text-align: center;
+        opacity: 1;
+        color: black;
+        top: -0.3em; left: 0; right: 0; bottom: 0;
+    }
+}
 
 .two_tablets_two_mobiles {
   position: relative;
