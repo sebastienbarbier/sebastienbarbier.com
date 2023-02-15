@@ -19,27 +19,15 @@ ul.projects {
   justify-content: space-between;
 
   li {
-    position: relative;
     width: 100%;
-
     @include for-tablet-landscape-up {
       width: 45%;
     }
 
+    position: relative;
     list-style: none;
     margin: 0px 0 60px;
-
-
-
-    @include for-tablet-landscape-down {
-      padding: 10px 0px;
-    }
-
-    @include for-tablet-landscape-up {
-
-      padding: 10px 0px;
-
-    }
+    padding: 10px 0px;
 
     h3, p, a {
       margin-left: 20px;

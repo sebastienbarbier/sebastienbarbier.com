@@ -75,6 +75,31 @@ h6  {
   font-size: $h6_size;
 }
 
+a {
+  &.btn {
+    display: flex;
+    justify-content: center;
+    color: $color_gold_dark_visited;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    padding: 16px 40px;
+
+    &.centered {
+      display: flex;
+      justify-content: center;
+    }
+
+    &.mt {
+      margin-bottom: 40px;
+    }
+
+    &.mb {
+      margin-bottom: 40px;
+    }
+  }
+
+}
+
 .serif {
   @include serif;
 }
