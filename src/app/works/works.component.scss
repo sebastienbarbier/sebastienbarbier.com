@@ -5,10 +5,6 @@ h3, h2 {
   clear: both;
 }
 
-img {
-  width: 50%;
-}
-
 ul.projects {
   margin: 40px 0 0 0;
   padding: 0;
@@ -87,6 +83,7 @@ ul.logos {
     }
     img {
       max-height: 80px;
+      width: 50%;
       // css contrast black and white then color on hover with animation
       filter: grayscale(100%);
       // transition: all 0.5s ease;
