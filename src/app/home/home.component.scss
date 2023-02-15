@@ -10,6 +10,62 @@ img.avatar {
 
 }
 
+ul.projects {
+  margin: 40px 0 0 0;
+  padding: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  li {
+    position: relative;
+    width: 100%;
+
+    @include for-tablet-landscape-up {
+      width: 45%;
+    }
+
+    list-style: none;
+    margin: 0px 0 60px;
+
+
+
+    @include for-tablet-landscape-down {
+      padding: 10px 0px;
+    }
+
+    @include for-tablet-landscape-up {
+
+      padding: 10px 0px;
+
+    }
+
+    h3, p, a {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+
+    .thumbnail {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: $background_beige_dark;
+    }
+
+    img {
+      max-height: 300px;
+      max-width: 100%;
+    }
+
+    a {
+      display: flex;
+      justify-content: flex-start;
+    }
+  }
+}
+
+
 ul.logos {
   display: flex;
   justify-content: space-around;
@@ -36,13 +92,7 @@ ul.logos {
     img {
       max-height: 80px;
       width: 50%;
-      // css contrast black and white then color on hover with animation
       filter: grayscale(100%);
-      // transition: all 0.5s ease;
-      // cursor: pointer;
-      // &:hover {
-      //   filter: grayscale(0%);
-      // }
     }
   }
 }
