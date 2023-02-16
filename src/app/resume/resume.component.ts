@@ -112,6 +112,10 @@ export class ResumeComponent implements OnInit {
       name: 'Frontend conference',
       location: 'Zurich, Switzerland'
     },{
+      date: new Date('June 01, 2022'),
+      name: 'NFT Art Day ZRH',
+      location: 'Zurich, Switzerland'
+    },{
       date: new Date('April 01, 2022'),
       name: 'Devvox France',
       location: 'Paris, France'
