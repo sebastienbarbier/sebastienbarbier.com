@@ -1,7 +1,7 @@
 <div class="wrapper pt">
   <div class="container pb">
     <h1 class="centered">
-      <small>My resume</small> Cloud Software Architect
+      <small>My resume</small>  Cloud Software Architect
     </h1>
 
     <p>{{ age }} years old, French nationality, based in Zurich, Switzerland.<br />Languages: French (native language), English (fluent), and German (A2)</p>
@@ -27,7 +27,7 @@
       <li>
 <strong>2011 - Master degree in computer science - Distributed systems and networks</strong><br/>
 « University of Franche-Comté, Science and technology » - Besançon, France - magna cum laude<br/>
-<strong>Internship 3 months:</strong> Nav6 Laboratory - Penang, Malaysia. Developed C# application using Google API in a real time collaborative space. Integrated to a video chat
+<strong>Internship 4 months:</strong> Nav6 Laboratory - Penang, Malaysia. Developed C# application using Google API in a real time collaborative space. Integrated to a video chat
 application in purpose to have real time document edition.</li>
       <li>
 <strong>2009 - Bachelor degree in computer science</strong><br/>
@@ -37,7 +37,7 @@ application in purpose to have real time document edition.</li>
 <strong>2008 - “Final year in computer science”</strong><br/>
 « University of Portsmouth » - ERASMUS exchange, England</li>
       <li>
-<strong>2007 - HNC, Computer Science</strong><br/>
+<strong>2007 - Higher National Certificate, Computer Science</strong><br/>
 « IUT of Belfort » - Belfort, France<br />
 <strong>Internship 3 months:</strong> Thales Avionics Electrical Systems - Chatou, France. PHP Developer, using Oracle databases, access archives from a previous ERP.</li>
     </ul>
@@ -47,9 +47,22 @@ application in purpose to have real time document edition.</li>
 
     <h2>Attending conferences</h2>
     <p>While the internet contains unlimited knowledge, there's nothing quite like talking with people who actually use that knowledge. That's why I insist on regularly attending conferences.</p>
-    <ul>
-      <li *ngFor="let conference of conferences;">{{ conference.date }} - <strong>{{ conference.name }}</strong>, {{ conference.location }}</li>
-    </ul>
+    <p>Here's a list of the conferences I attended in the past years:</p>
+
+    <table>
+      <tr>
+        <th>Year</th>
+        <th>Conference's name</th>
+        <th>Location</th>
+      </tr>
+      <ng-container *ngFor="let year of years">
+        <tr *ngFor="let confs of conferences[year]; let loopcounter = index">
+          <td class="year" *ngIf="loopcounter == 0" [attr.rowspan]="conferences[year].length">{{ year }}</td>
+          <td class="name">{{ confs.name }}</td>
+          <td class="location">{{ confs.location }}</td>
+        </tr>
+      </ng-container>
+    </table>
   </div>
   <route-footer></route-footer>
 </div>

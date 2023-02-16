@@ -1,4 +1,5 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
+import { formatDate } from '@angular/common';
 
 import {
   sequence,
@@ -40,6 +41,7 @@ export class ResumeComponent implements OnInit {
 
   experiences: any;
   conferences: any;
+  years: any;
   age: number;
 
   constructor() {
@@ -106,70 +108,81 @@ export class ResumeComponent implements OnInit {
     ];
 
     this.conferences = [{
-      date: 'August 2022',
+      date: new Date('August 01, 2022'),
       name: 'Frontend conference',
       location: 'Zurich, Switzerland'
     },{
-      date: 'April 2022',
+      date: new Date('April 01, 2022'),
       name: 'Devvox France',
       location: 'Paris, France'
     },{
-      date: 'March 2022',
+      date: new Date('March 01, 2022'),
       name: 'ETHDubai',
       location: 'Dubai, United Arab Emirates'
     },{
-      date: 'August 2021',
+      date: new Date('August 01, 2021'),
       name: 'Frontend conference',
       location: 'Zurich, Switzerland'
     },{
-      date: 'January 2020',
+      date: new Date('January 01, 2020'),
       name: 'FOSDEM',
       location: 'Bruxelles, Belgium'
     },{
-      date: 'May 2019',
+      date: new Date('May 01, 2019'),
       name: 'CSSConfEU and JSConfEU',
       location: 'Berlin, Germany'
     },{
-      date: 'August 2018',
+      date: new Date('August 01, 2018'),
       name: 'Frontend conference',
       location: 'Zurich, Switzerland'
     },{
-      date: 'May 2018',
+      date: new Date('May 01, 2018'),
       name: 'DjangoCon Europe',
       location: 'Heidelberg, Germany'
     },{
-      date: 'June 2017',
+      date: new Date('June 01, 2017'),
       name: 'ELM Europe',
       location: 'Villejuif, France'
     },{
-      date: 'March 2016',
+      date: new Date('March 01, 2016'),
       name: 'DjangoCon Europe',
       location: 'Budapest, Hungary'
     },{
-      date: 'October 2015',
+      date: new Date('October 01, 2015'),
       name: 'Fronteers conference',
       location: 'Amsterdam, Netherland'
     },{
-      date: 'July 2015',
+      date: new Date('July 01, 2015'),
       name: 'React Europe',
       location: 'Paris, France'
     },{
-      date: 'June 2015',
+      date: new Date('June 01, 2015'),
       name: 'DjangoCon Europe',
       location: 'Cardiff, Wales'
     },{
-      date: 'January 2015',
+      date: new Date('January 01, 2015'),
       name: 'FOSDEM',
       location: 'Bruxelles, Belgium'
     },{
-      date: 'May 2014',
+      date: new Date('May 01, 2014'),
       name: 'DjangoCon Europe',
       location: 'Toulon, France'
     },{
-      date: 'April 2012',
+      date: new Date('April 01, 2012'),
       name: 'DjangoCong',
       location: 'Carnon-Montpellier, France'
     }];
+
+    this.conferences = this.conferences.reduce((acc: any, conf: any) => {
+      const year = conf.date.getFullYear();
+      if (!acc[year]) {
+        acc[year] = [];
+      }
+      acc[year].push(conf);
+      return acc;
+    }, {});
+
+    this.years = Object.keys(this.conferences).sort((a, b) => b > a ? 1 : -1);
   }
 
   @HostBinding('@resumeTransition') '': string;
