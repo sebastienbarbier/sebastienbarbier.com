@@ -58,15 +58,15 @@ export class ResumeComponent implements OnInit {
         positions: [{
           title: 'Associate Development Architect',
           date: {
-           from: new Date('August 01, 2020'),
-           until: new Date('July 31, 2021'),
+           start: new Date('November 01, 2020'),
+           end: new Date('July 31, 2021'),
           },
           description: 'Associate Development Architect within the SAP FSM project. Working with micro front-end framework to build a unified interface. Angular base with node backend. ',
         }, {
           title: 'Senior Developer',
           date: {
-           from: new Date('February 01, 2020'),
-           until: new Date('July 31, 2020'),
+           start: new Date('February 01, 2020'),
+           end: new Date('October 31, 2020'),
           },
           description: 'Full stack lead developer within the SAP FSM project. Working with micro front-end framework to build a unified interface. Angular base with node backend. ',
         }],
@@ -79,8 +79,8 @@ export class ResumeComponent implements OnInit {
         positions: [{
           title: 'Web technologies consultant and freelancer',
           date: {
-           from: new Date('November 01, 2016'),
-           until: new Date('January 31, 2020'),
+           start: new Date('September 01, 2016'),
+           end: new Date('January 31, 2020'),
           },
           description: 'Senior front-end for companies like Mila AG, Mozilla, or Chefclub.',
         }],
@@ -94,8 +94,8 @@ export class ResumeComponent implements OnInit {
         positions: [{
           title: 'Front-end Software Engineer',
           date: {
-           from: new Date('June 01, 2014'),
-           until: new Date('August 31, 2016'),
+           start: new Date('June 01, 2014'),
+           end: new Date('August 31, 2016'),
           },
           description: 'Full-time front-end development on Fluance project : developed an app to aggregate content from HL7 feed of clinics in a generic unified web interface. Team of four front-end. Used mostly AngularJS/jQuery. Manager with Gulp, tested with Jasmine/Karma. Documentation generated using Dgeni. Using SCRUM method.',
         }],
@@ -108,8 +108,8 @@ export class ResumeComponent implements OnInit {
         positions: [{
           title: 'Software Engineer',
           date: {
-           from: new Date('September 01, 2012'),
-           until: new Date('June 30, 2014'),
+           start: new Date('September 01, 2012'),
+           end: new Date('June 30, 2014'),
           },
           description: 'Work on Covotem, a video chat application for remote medical consultation. Mostly worked on : Java with internal libraries. Interoperability in healthcare system (HL7, DICOM).',
         }],
@@ -123,15 +123,15 @@ export class ResumeComponent implements OnInit {
         positions: [{
           title: 'Part-time Lecturer at ISIFC and UFR ST',
           date: {
-           from: new Date('September 01, 2012'),
-           until: new Date('January 31, 2013'),
+           start: new Date('September 01, 2012'),
+           end: new Date('January 31, 2013'),
           },
           description: 'Java Courses. Practical, Tutorial class, and Projects - 32 hours, third year students. In parallel to my work at Covalia Interactive S.A.',
         }, {
           title: 'Part-time Lecturer at ISIFC and UFR ST',
           date: {
-           from: new Date('September 01, 2011'),
-           until: new Date('December 31, 2011'),
+           start: new Date('September 01, 2011'),
+           end: new Date('January 31, 2011'),
           },
           description: 'Java Courses. Practical, Tutorial class, and Projects - 66 hours, third year students. In parallel to my work at Ionyse.',
         }],
@@ -144,8 +144,8 @@ export class ResumeComponent implements OnInit {
         positions: [{
           title: 'Co-founder and Full-stack developer',
           date: {
-           from: new Date('July 01, 2009'),
-           until: new Date('June 30, 2012'),
+           start: new Date('July 01, 2009'),
+           end: new Date('June 30, 2012'),
           },
           description: 'Start this project in parallel of our studies, to help financing them. After 24 months part-time change to a full-time job. Web agency, worked on web application for small companies. ',
         }],

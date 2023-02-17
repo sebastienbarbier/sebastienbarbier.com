@@ -5,10 +5,12 @@ import { ResumeComponent } from './resume.component';
 import { ResumeRoutingModule } from './resume-routing.module';
 
 import { SharedModule } from '../shared/shared.module';
+import { DurationPipe } from './duration.pipe';
 
 @NgModule({
   declarations: [
-    ResumeComponent
+    ResumeComponent,
+    DurationPipe,
   ],
   imports: [
     CommonModule,
