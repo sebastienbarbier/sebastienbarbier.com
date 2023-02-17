@@ -4,6 +4,40 @@ li {
   padding-bottom: 10px;
 }
 
+ul.education {
+  padding: 0;
+  li {
+    list-style: none;
+    display: flex;
+
+    @include for-tablet-landscape-down {
+      flex-direction: column;
+      .year {
+        margin-bottom: 4px;
+      }
+    }
+
+    .year {
+      margin-top: 0;
+      margin-right: 20px;
+      color: $color_gold_dark_visited;
+      font-weight: bold;
+    }
+    .location {
+      font-style: italic;
+    }
+    header {
+      margin-bottom: 8px;
+    }
+    .internship {
+      margin: 0;
+      margin-bottom: 8px;
+      opacity: 0.7;
+      font-size: 0.8em;
+    }
+  }
+}
+
 table {
   tr {
     th {
@@ -13,7 +47,7 @@ table {
       padding: 2px 10px;
       vertical-align: text-top;
       &.year {
-        color: $color_gold_dark;
+        color: $color_gold_dark_visited;
         font-weight: bold;
       }
       &.name {

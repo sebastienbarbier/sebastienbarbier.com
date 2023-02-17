@@ -23,11 +23,18 @@
     </ul>
 
     <h2>Education</h2>
-    <ul>
+    <ul class="education">
       <li *ngFor="let education of educations">
-        <strong>{{ education.year }} - {{ education.title }}</strong><br/>
-{{ education.university }} - {{ education.location }}<span *ngIf="education.grade"> - {{ education.grade }}</span><ng-container *ngIf="education.internship"><br />
-<strong>Internship {{ education.internship.duration_in_months }} months:</strong> {{ education.internship.company }} - {{ education.internship.location }}. {{ education.internship.description }}</ng-container>
+        <p class="year">{{ education.year }}</p>
+        <div>
+          <header>
+            <strong>{{ education.title }}</strong><span *ngIf="education.grade"> - {{ education.grade }}</span><br/>
+  {{ education.university }} - <span class="location">{{ education.location }}</span>
+          </header>
+          <ng-container *ngIf="education.internship">
+            <p class="internship">Internship: <strong>{{ education.internship.company }}</strong> - <span class="location">{{ education.internship.location }}</span> - {{ education.internship.duration_in_months }} months.<br />{{ education.internship.description }}</p>
+          </ng-container>
+        </div>
       </li>
     </ul>
 

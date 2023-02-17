@@ -167,7 +167,7 @@ export class ResumeComponent implements OnInit {
       location: 'Paris, France'
     },{
       date: new Date('March 01, 2022'),
-      name: 'ETHDubai',
+      name: 'ETH Dubai',
       location: 'Dubai, United Arab Emirates'
     },{
       date: new Date('August 01, 2021'),
@@ -179,7 +179,7 @@ export class ResumeComponent implements OnInit {
       location: 'Bruxelles, Belgium'
     },{
       date: new Date('May 01, 2019'),
-      name: 'CSSConfEU and JSConfEU',
+      name: 'CSSConf EU and JSConf EU',
       location: 'Berlin, Germany'
     },{
       date: new Date('August 01, 2018'),
