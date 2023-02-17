@@ -131,7 +131,7 @@ export class ResumeComponent implements OnInit {
           title: 'Part-time Lecturer at ISIFC and UFR ST',
           date: {
            start: new Date('September 01, 2011'),
-           end: new Date('January 31, 2011'),
+           end: new Date('January 31, 2012'),
           },
           description: 'Java Courses. Practical, Tutorial class, and Projects - 66 hours, third year students. In parallel to my work at Ionyse.',
         }],
