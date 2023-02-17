@@ -14,11 +14,32 @@
     </ul>
 
     <h2>Work experience</h2>
-    <ul>
-      <li *ngFor="let experience of experiences;">
-        <strong>{{ experience.company.name}} </strong> : {{ experience.title}}, {{ experience.company.location }}.<br/>
-        <em>{{ experience.date }}</em><br/>
-        {{ experience.description }}
+    <ul class="experiences">
+      <li *ngFor="let experience of experiences;" class="experience">
+        <aside>
+          <img [src]="experience.logo" alt="" />
+        </aside>
+        <div>
+          <ng-container *ngIf="experience.positions.length == 1">
+            <p><strong>{{ experience.positions[0].title}}</strong><br/>
+            {{ experience.name}} - {{ experience.type}}</p>
+            <p class="date_and_location">{{ experience.positions[0].date.from | date: 'MMMM YYYY' }} - {{ experience.positions[0].date.until | date: 'MMMM YYYY' }}<br/>
+            {{ experience.location }}</p>
+            <p>{{ experience.positions[0].description }}</p>
+          </ng-container>
+
+          <ng-container *ngIf="experience.positions.length > 1">
+            <p><strong>{{ experience.name}} </strong></p>
+            <p class="date_and_location">{{ experience.type }}<br/>{{ experience.location }}</p>
+            <ul>
+              <li *ngFor="let position of experience.positions;">
+                <p><strong>{{ position.title}}</strong></p>
+                <p class="date_and_location">{{ position.date.from | date: 'MMMM YYYY' }} - {{ position.date.until | date: 'MMMM YYYY' }}</p>
+                <p>{{ position.description }}</p>
+              </li>
+            </ul>
+          </ng-container>
+      </div>
      </li>
     </ul>
 

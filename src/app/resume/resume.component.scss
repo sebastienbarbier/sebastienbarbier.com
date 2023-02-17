@@ -1,7 +1,74 @@
 @import '../../assets/scss/variables';
 
-li {
-  padding-bottom: 10px;
+
+ul.experiences {
+  list-style: none;
+  padding: 0;
+
+  li.experience {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 10px;
+    &:hover aside img {
+
+        filter: grayscale(0%);
+    }
+    aside {
+      padding: 10px 20px 0 0;
+      img {
+        max-width: 60px;
+        transition: filter ease 0.150s;
+        filter: grayscale(100%);
+      }
+    }
+    aside + div {
+      flex-grow: 1;
+    }
+    ul {
+      padding: 0;
+    }
+    $left_padding: -52px;
+    li {
+      padding-top: 10px;
+      padding-bottom: 0;
+      list-style: none;
+      position: relative;
+      &:before {
+        content: "";
+        background: $color_gold_dark_visited;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        position: absolute;
+        top: 1.2em;
+        left: $left_padding;
+      }
+      &:after {
+        content: "";
+        background: $color_gold_dark_visited;
+        opacity: 0.4;
+        width: 1px;
+        position: absolute;
+        top: calc(1.2em + 18px);
+        left: $left_padding + 3px;
+        bottom: -10px;
+      }
+      // Disable last row
+      &:last-of-type:after {
+        display: none;
+      }
+    }
+    p {
+      margin-top: 0;
+      margin-bottom: 0;
+      &.date_and_location {
+        opacity: 0.7;
+        font-size: 1em;
+        margin-bottom: 0.5em;
+      }
+    }
+  }
 }
 
 ul.education {
