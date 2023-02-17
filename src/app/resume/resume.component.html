@@ -1,7 +1,7 @@
 <div class="wrapper pt">
   <div class="container pb">
     <h1 class="centered">
-      <small>My resume</small>  Cloud Software Architect
+      <small>My resume</small> Full-stack developer
     </h1>
 
     <p>{{ age }} years old, French nationality, based in Zurich, Switzerland.<br />Languages: French (native language), English (fluent), and German (A2)</p>
@@ -24,22 +24,11 @@
 
     <h2>Education</h2>
     <ul>
-      <li>
-<strong>2011 - Master degree in computer science - Distributed systems and networks</strong><br/>
-« University of Franche-Comté, Science and technology » - Besançon, France - magna cum laude<br/>
-<strong>Internship 4 months:</strong> Nav6 Laboratory - Penang, Malaysia. Developed C# application using Google API in a real time collaborative space. Integrated to a video chat
-application in purpose to have real time document edition.</li>
-      <li>
-<strong>2009 - Bachelor degree in computer science</strong><br/>
-« University of Franche-Comté, Science and technology » - Besançon, France - cum laude<br/>
-<strong>Internship 3 months:</strong> MagicLabVision Laboratory - Adelaide, Australia. Joined a research team on an augmented reality application based on Python.</li>
-      <li>
-<strong>2008 - “Final year in computer science”</strong><br/>
-« University of Portsmouth » - ERASMUS exchange, England</li>
-      <li>
-<strong>2007 - Higher National Certificate, Computer Science</strong><br/>
-« IUT of Belfort » - Belfort, France<br />
-<strong>Internship 3 months:</strong> Thales Avionics Electrical Systems - Chatou, France. PHP Developer, using Oracle databases, access archives from a previous ERP.</li>
+      <li *ngFor="let education of educations">
+        <strong>{{ education.year }} - {{ education.title }}</strong><br/>
+{{ education.university }} - {{ education.location }}<span *ngIf="education.grade"> - {{ education.grade }}</span><ng-container *ngIf="education.internship"><br />
+<strong>Internship {{ education.internship.duration_in_months }} months:</strong> {{ education.internship.company }} - {{ education.internship.location }}. {{ education.internship.description }}</ng-container>
+      </li>
     </ul>
 
     <h2>About me</h2>

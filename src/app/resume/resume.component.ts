@@ -41,6 +41,7 @@ export class ResumeComponent implements OnInit {
 
   experiences: any;
   conferences: any;
+  educations: any;
   years: any;
   age: number;
 
@@ -102,10 +103,55 @@ export class ResumeComponent implements OnInit {
           name: 'Ionyse',
           location: 'Besançon, France',
         },
-        title: 'Co-founder and web developer',
+        title: 'Co-founder and Full-stack developer',
         description: 'Start this project in parallel of our studies, to help financing them. After 24 months part-time change to a full-time job. Web agency, worked on web application for small companies. ',
       }
     ];
+
+    this.educations = [
+      {
+        year: 2011,
+        title: 'Master degree in Computer Science - Distributed systems and networks',
+        grade: 'magna cum laude',
+        university: 'University of Franche-Comté, Science and technology',
+        location: 'Besançon, France',
+        internship: {
+          company: 'Nav6 Laboratory',
+          location: 'Penang, Malaysia',
+          description: 'Developed C# application using Google API in a real time collaborative space. Integrated to a video chat application in purpose to have real time document edition.',
+          duration_in_months: 4,
+        }
+      }, {
+        year: 2009,
+        title: 'Bachelor degree in Computer Science',
+        grade: 'cum laude',
+        university: 'University of Franche-Comté, Science and technology',
+        location: 'Besançon, France',
+        internship: {
+          company: 'MagicLabVision Laboratory',
+          location: 'Adelaide, Australia',
+          description: 'Joined a research team on an augmented reality application based on Python.',
+          duration_in_months: 3,
+        }
+      }, {
+        year: 2008,
+        title: 'Final year in Computer Science - ERASMUS',
+        university: 'University of Portsmouth',
+        location: 'Portsmouth, England',
+      }, {
+        year: 2007,
+        title: 'Higher National Certificate in Computer Science',
+        university: 'IUT of Belfort',
+        location: 'Belfort, France',
+        internship: {
+          company: 'Thales Avionics Electrical Systems',
+          location: 'Chatou, France',
+          description: 'PHP Developer, using Oracle databases, access archives from a previous ERP.',
+          duration_in_months: 3,
+        }
+      },
+    ];
+
 
     this.conferences = [{
       date: new Date('August 01, 2022'),
