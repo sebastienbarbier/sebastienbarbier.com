@@ -61,8 +61,15 @@ img {
     }
 
     div.two_tablets_two_mobiles {
-      grid-row: 4;
+      grid-row: 3;
       grid-column: 1 / span 4;
+    }
+
+    div.full_stack {
+      grid-row: 5;
+      grid-column: 1 / span 4;
+
+      display: grid;
     }
   }
 
@@ -75,6 +82,7 @@ img {
       letter-spacing: 2px;
     }
     dd {
+      margin-left: 0;
       margin-bottom: 2em;
       opacity: 0.8;
       &:last-of-type {
@@ -82,9 +90,15 @@ img {
       }
     }
     dt, dd {
-      text-align: right;
       font-size: 0.9em;
     }
+    ul {
+      padding: 0;
+    }
+  }
+
+  h1 + div + dl {
+    text-align: right;
   }
 }
 
