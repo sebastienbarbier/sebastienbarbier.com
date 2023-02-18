@@ -23,11 +23,9 @@ export class DurationPipe implements PipeTransform {
     let duration_str = "";
     if (years > 0) {
       duration_str += years + " yr" + (years > 1 ? "s" : "");
-      console.log(duration, duration_str);
     }
     if (months > 0) {
       duration_str += (years > 0 ? " " : "") + months + " mo" + (months > 1 ? "s" : "");
-      console.log(months, duration_str);
     }
 
     return duration_str;
