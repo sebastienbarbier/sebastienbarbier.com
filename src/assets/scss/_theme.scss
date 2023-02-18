@@ -219,3 +219,16 @@ a {
 .clear {
   clear: both;
 }
+
+ul.skills {
+  padding: 0;
+  li {
+    display: inline-block;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    padding: 4px 8px;
+    background: $background_beige_dark;
+    font-size: 0.8em;
+    border-radius: 3px;
+  }
+}

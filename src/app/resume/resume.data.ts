@@ -90,7 +90,7 @@ export default {
     {
       name: 'Ionyse',
       location: 'Besançon, France',
-      type: 'Full-time then Part-time',
+      type: 'Part-time then Full-time',
       logo: '/assets/images/ionyse/ionyse_logo.png',
       positions: [{
         title: 'Co-founder and Full-stack developer',
