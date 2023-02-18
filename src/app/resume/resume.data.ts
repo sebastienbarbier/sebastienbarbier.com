@@ -41,7 +41,9 @@ Responsible for the following tasks:
          start: new Date('September 01, 2016'),
          end: new Date('January 31, 2020'),
         },
-        description: 'I help startups and tech companies to build solutions using the latest web technologies. Having a full-stack profile makes it easy to integrate any project, but I particularly enjoy and perform on front-end problematics. Main clients: **Mila AG**, **Mozilla**, and **Chefclub**.',
+        description: `I help startups and tech companies to build solutions using the latest web technologies. Having a full-stack profile makes it easy to integrate any project, but I particularly enjoy and perform on front-end problematics.
+
+Main clients: **Mila AG**, **Mozilla**, and **Chefclub**.`,
       }],
     },
     {
