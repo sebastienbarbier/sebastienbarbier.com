@@ -33,6 +33,7 @@
     <ul class="skills">
       <li>Python</li>
       <li>Django</li>
+      <li>Node.js</li>
       <li>Restful API</li>
       <li>Unitary test</li>
       <li>CI/CD</li>
@@ -69,7 +70,7 @@
           <ng-container *ngIf="experience.positions.length > 1">
             <p><strong>{{ experience.name }} </strong></p>
             <p class="date_and_location">{{ experience.type }} • {{ experience.positions|duration }}<br/>{{ experience.location }}</p>
-            <ul>
+            <ul class="experience">
               <li *ngFor="let position of experience.positions;">
                 <p><strong>{{ position.title }}</strong></p>
                 <p class="date_and_location">{{ position.date.start | date: 'MMMM YYYY' }} - {{ position.date.end | date: 'MMMM YYYY' }} • {{ position|duration}}</p>

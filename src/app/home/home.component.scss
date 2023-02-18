@@ -61,7 +61,7 @@ ul.projects {
   flex-wrap: wrap;
   justify-content: space-between;
 
-  li {
+  & > li {
     width: 100%;
     @include for-tablet-landscape-up {
       width: 45%;
@@ -72,7 +72,7 @@ ul.projects {
     margin: 0px 0 60px;
     padding: 10px 0px;
 
-    h3, p, a {
+    h3, p, a, ul {
       margin-left: 20px;
       margin-right: 20px;
     }
@@ -92,6 +92,10 @@ ul.projects {
     a {
       display: flex;
       justify-content: flex-start;
+    }
+
+    ul {
+      margin-bottom: 8px;
     }
   }
 }

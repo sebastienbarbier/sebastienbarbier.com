@@ -13,7 +13,7 @@ ul.projects {
   flex-wrap: wrap;
   justify-content: space-between;
 
-  li {
+  & > li {
     position: relative;
 
     @include for-tablet-landscape-up {
@@ -30,7 +30,7 @@ ul.projects {
       }
     }
 
-    h3, p, a {
+    h3, p, a, ul {
       margin-left: 20px;
       margin-right: 20px;
     }
@@ -43,6 +43,10 @@ ul.projects {
     a {
       display: flex;
       justify-content: flex-start;
+    }
+
+    ul {
+      margin-bottom: 8px;
     }
   }
 }
