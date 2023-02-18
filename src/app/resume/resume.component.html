@@ -21,19 +21,19 @@
         </aside>
         <div>
           <ng-container *ngIf="experience.positions.length == 1">
-            <p><strong>{{ experience.positions[0].title}}</strong><br/>
-            {{ experience.name}} - {{ experience.type}}</p>
+            <p><strong>{{ experience.positions[0].title }}</strong><br/>
+            {{ experience.name }} • {{ experience.type }}</p>
             <p class="date_and_location">{{ experience.positions[0].date.start|date: 'MMMM YYYY' }} - {{ experience.positions[0].date.end|date: 'MMMM YYYY' }} • {{ experience.positions[0]|duration }}<br/>
             {{ experience.location }}</p>
             <p class="description">{{ experience.positions[0].description }}</p>
           </ng-container>
 
           <ng-container *ngIf="experience.positions.length > 1">
-            <p><strong>{{ experience.name}} </strong></p>
+            <p><strong>{{ experience.name }} </strong></p>
             <p class="date_and_location">{{ experience.type }} • {{ experience.positions|duration }}<br/>{{ experience.location }}</p>
             <ul>
               <li *ngFor="let position of experience.positions;">
-                <p><strong>{{ position.title}}</strong></p>
+                <p><strong>{{ position.title }}</strong></p>
                 <p class="date_and_location">{{ position.date.start | date: 'MMMM YYYY' }} - {{ position.date.end | date: 'MMMM YYYY' }} • {{ position|duration}}</p>
                 <p class="description">{{ position.description }}</p>
               </li>
