@@ -1,5 +1,31 @@
 @import '../../assets/scss/variables';
 
+.presentation {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  dl {
+    padding: 10px 20px 10px 0;
+    dt {
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    dd {
+      margin-left: 0;
+      margin-bottom: 2em;
+      opacity: 0.8;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+    dt, dd {
+      font-size: 0.9em;
+      padding: 2px 4px;
+    }
+  }
+}
 
 ul.experiences {
   list-style: none;
