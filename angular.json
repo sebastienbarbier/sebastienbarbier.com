@@ -22,7 +22,9 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/marked/marked.min.js"
+            ]
           },
           "configurations": {
             "development": {},
@@ -79,7 +81,9 @@
             "karmaConfig": "./karma.conf.js",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.spec.json",
-            "scripts": [],
+            "scripts": [
+              "node_modules/marked/marked.min.js"
+            ],
             "styles": [
               "src/styles.scss"
             ],
@@ -159,7 +163,9 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/marked/marked.min.js"
+            ]
           },
           "configurations": {
             "production": {

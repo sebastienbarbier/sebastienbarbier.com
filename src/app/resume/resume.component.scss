@@ -31,11 +31,17 @@ ul.experiences {
         font-size: 1em;
         margin-bottom: 0.5em;
       }
-      &.description {
-        opacity: 0.7;
-        font-size: 0.8em;
+
+    }
+    div.description {
+      opacity: 0.7;
+      font-size: 0.8em;
+      padding-bottom: 8px;
+      ul {
+        list-style: disc;
       }
     }
+
     // Styling of sublist with gold timeline and dot styling
     $left_padding: -52px;
     li {

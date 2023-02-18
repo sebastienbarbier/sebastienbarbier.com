@@ -12,14 +12,22 @@ export default {
          start: new Date('November 01, 2020'),
          end: new Date('July 31, 2021'),
         },
-        description: 'Associate Development Architect within the SAP FSM project. Working with micro front-end framework to build a unified interface. Angular base with node backend. ',
+        description: `Associate Development Architect in the Product Engineering - S/4HANA Cloud - Field Service Management (FSM) Self-Service & Platform Extensibility department.
+Responsible for the following tasks:
+- Working in tech lead position, coaching and advising the implementation team on all aspects which have impact on the architecture as well as advocating for simplicity and latest Best Practices
+- Taking on the responsibility for development focusing on design, coding, testing, and quality assurance of complex product features, incl. resolving complex issues within own area of expertise and supporting others in resolving issues
+- Contributing to the aligned and consistent architecture strategy and target architecture of product line
+- Evaluating architecture risks, estimating effort for business case or backlog item, and preparing management decisions on these topics
+- Supporting and consulting Product Owner by ensuring technical and architectural feasibility, readiness, and compliance
+- Contributing to designing and building the FSM extensibility concept, driving product adoption through technical support for partners and customers, meaningful code samples, and public webinars
+- Mentoring Junior Developers`,
       }, {
         title: 'Senior Developer',
         date: {
          start: new Date('February 01, 2020'),
          end: new Date('October 31, 2020'),
         },
-        description: 'Full stack lead developer within the SAP FSM project. Working with micro front-end framework to build a unified interface. Angular base with node backend. ',
+        description: 'Taking on the responsibility for development focusing on design, coding, testing, and quality assurance of complex product features, incl. resolving complex issues within own area of expertise and supporting others in resolving issues.',
       }],
     },
     {
@@ -33,7 +41,7 @@ export default {
          start: new Date('September 01, 2016'),
          end: new Date('January 31, 2020'),
         },
-        description: 'Senior front-end for companies like Mila AG, Mozilla, or Chefclub.',
+        description: 'I help startups and tech companies to build solutions using the latest web technologies. Having a full-stack profile makes it easy to integrate any project, but I particularly enjoy and perform on front-end problematics. Main clients: **Mila AG**, **Mozilla**, and **Chefclub**.',
       }],
     },
     {
@@ -48,7 +56,7 @@ export default {
          start: new Date('June 01, 2014'),
          end: new Date('August 31, 2016'),
         },
-        description: 'Full-time front-end development on Fluance project : developed an app to aggregate content from HL7 feed of clinics in a generic unified web interface. Team of four front-end. Used mostly AngularJS/jQuery. Manager with Gulp, tested with Jasmine/Karma. Documentation generated using Dgeni. Using SCRUM method.',
+        description: 'Full-time front-end development on Fluance project : developed an application to aggregate content from HL7 feed of clinics in a generic unified web interface. Team of four front-end. Used mostly AngularJS/jQuery. Managed with Gulp, tested with Jasmine/Karma. Documentation generated using Dgeni. Using SCRUM method.',
       }],
     },
     {
@@ -62,7 +70,8 @@ export default {
          start: new Date('September 01, 2012'),
          end: new Date('June 30, 2014'),
         },
-        description: 'Work on Covotem, a video chat application for remote medical consultation. Mostly worked on : Java with internal libraries. Interoperability in healthcare system (HL7, DICOM).',
+        description: `Joined Covalia in September 2012 as a Research Engineer preparing a Phd on Cloud Computing in healthcare environment. After 7 months, we decided to stop the research and joined existant dev team as core-developer.
+Mostly used Java, with internal libraries. Interoperability in healthcare system (HL7, DICOM). Real time environment. IP Camera (Axis). ISO 13485 standard. Occasionally : deployment and phone support.`,
       }],
     },
     {
@@ -98,7 +107,7 @@ export default {
          start: new Date('July 01, 2009'),
          end: new Date('June 30, 2012'),
         },
-        description: 'Start this project in parallel of our studies, to help financing them. After 24 months part-time change to a full-time job. Web agency, worked on web application for small companies. ',
+        description: `Start this project in parallel of our studies, to help financing them. After 24 months part-time moved to a full-time position. Web agency, worked on web application for small companies. Mostly Django websites, but also web apps, and intranet platforms. Large variety of activities, but specialized in front-end development, specially HTML5 CSS3 and jQuery. Developed our own CMS : ionyweb.`,
       }],
     }
   ],
