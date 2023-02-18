@@ -147,7 +147,7 @@ a {
   position: absolute;
   top: 0;
   left: 0;
-  bottom: 0;
+  bottom: calc(-1 * env(safe-area-inset-top));
   right: 0;
   overflow-x: hidden;
   overflow-y: auto;

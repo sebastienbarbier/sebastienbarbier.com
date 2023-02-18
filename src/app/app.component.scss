@@ -7,13 +7,27 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 30px 50px;
+  padding-top: calc(30px + env(safe-area-inset-top));
 
   @include for-tablet-landscape-down {
     padding: 20px 20px;
+    padding-top: calc(20px + env(safe-area-inset-top));
   }
 
   @include for-phone-only {
     padding: 10px 10px;
+    padding-top: calc(10px + env(safe-area-inset-top));
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: env(safe-area-inset-top);
+    background: $background_brown;
+    z-index: $zindex_navigation+1;
   }
 
   a.logo {
@@ -139,7 +153,7 @@ input#navigation + label {
 input#navigation + label +  nav {
   position: absolute;
   top: 0;
-  bottom: 0;
+  bottom: calc(-1 * env(safe-area-inset-top));
   left: 0;
   right: 0;
   opacity: 0;
