@@ -27,6 +27,12 @@
   }
 }
 
+div.description {
+  opacity: 0.7;
+  font-size: 0.8em;
+  padding-bottom: 8px;
+}
+
 ul.experiences {
   list-style: none;
   padding: 0;
@@ -58,14 +64,6 @@ ul.experiences {
         margin-bottom: 0.5em;
       }
 
-    }
-    div.description {
-      opacity: 0.7;
-      font-size: 0.8em;
-      padding-bottom: 8px;
-      ul {
-        list-style: disc;
-      }
     }
 
     // Styling of sublist with gold timeline and dot styling
