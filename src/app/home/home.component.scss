@@ -25,6 +25,10 @@ header {
     @include for-tablet-landscape-down {
       font-size: 3em;
     }
+
+    @include for-phone-only {
+      font-size: 2.5em;
+    }
   }
 
   ul {
@@ -79,16 +83,18 @@ ul.projects {
     margin: 0px 0 60px;
     padding: 10px 0px;
 
-    h3, p, a, ul {
-      margin-left: 20px;
-      margin-right: 20px;
-    }
-
     .thumbnail {
       display: flex;
       justify-content: center;
       align-items: center;
       background: $background_beige_dark;
+    }
+
+    @include for-tablet-landscape-up {
+      h3, p, a, ul {
+        margin-left: 20px;
+        margin-right: 20px;
+      }
     }
 
     img {
@@ -119,6 +125,10 @@ ul.logos {
     flex-wrap: wrap;
   }
 
+  @include for-phone-only {
+    padding: 10px 0 40px 0;
+  }
+
   li {
     width: 25%;
     padding: 10px 20px;
@@ -126,10 +136,19 @@ ul.logos {
     display: flex;
     justify-content: center;
 
+    @include for-tablet-portrait-down {
+      width: 40%;
+      padding: 10px 20px 30px;
+    }
 
     @include for-tablet-landscape-down {
       width: 40%;
-      padding-bottom: 80px;
+      padding: 10px 20px 50px;
+    }
+
+    @include for-phone-only {
+      width: 40%;
+      padding: 10px 10px;
     }
 
     a {

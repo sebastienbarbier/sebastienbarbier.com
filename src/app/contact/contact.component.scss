@@ -19,4 +19,12 @@ h2 {
   font-size: 2em;
   padding-top: 0px;
   margin-top: 0px;
+
+  @include for-tablet-landscape-down {
+    font-size: 1.5em;
+  }
+
+  @include for-phone-only {
+    font-size: 1.3em;
+  }
 }

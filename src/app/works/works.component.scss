@@ -63,6 +63,11 @@ ul.logos {
   @include for-tablet-landscape-down {
     flex-wrap: wrap;
   }
+
+  @include for-phone-only {
+    padding: 10px 0 40px 0;
+  }
+
   li {
     width: 25%;
     padding: 10px 20px;
@@ -72,9 +77,14 @@ ul.logos {
 
     @include for-tablet-landscape-down {
       width: 40%;
+      padding: 10px 20px;
       padding-bottom: 80px;
     }
 
+    @include for-phone-only {
+      width: 40%;
+      padding: 10px 10px;
+    }
     a {
       display: inline-block;
     }
