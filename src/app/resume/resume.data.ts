@@ -41,9 +41,7 @@ Responsible for the following tasks:
          start: new Date('September 01, 2016'),
          end: new Date('January 31, 2020'),
         },
-        description: `I help startups and tech companies to build solutions using the latest web technologies. Having a full-stack profile makes it easy to integrate any project, but I particularly enjoy and perform on front-end problematics.
-
-Main clients: **Chefclub**, **Mozilla**, and **Mila AG**.`,
+        description: `I leveraged my full-stack knowledge to support startups and tech companies in building solutions using the latest web technologies. While being great at integrating diverse projects, I particularly enjoyed tackling complex front-end challenges. Notable clients I have worked with include **Chefclub**, **Mozilla**, and **Mila AG**.`,
         images: [
           { src: '/assets/images/chefclub/chefclub-logo.png', alt: 'Chefclub logo'},
           { src: '/assets/images/mozilla/mozilla_logo.svg', alt: 'Mozilla logo'},
@@ -63,7 +61,7 @@ Main clients: **Chefclub**, **Mozilla**, and **Mila AG**.`,
          start: new Date('June 01, 2014'),
          end: new Date('August 31, 2016'),
         },
-        description: 'Full-time front-end development on Fluance project : developed an application to aggregate content from HL7 feed of clinics in a generic unified web interface. Team of four front-end. Used mostly AngularJS/jQuery. Managed with Gulp, tested with Jasmine/Karma. Documentation generated using Dgeni. Using SCRUM method.',
+        description: 'I served as a full-time front-end developer on the Fluance project, leading a team of four in developing an application that aggregates content from HL7 feeds of clinics into a unified web interface. Leveraging my expertise in AngularJS and jQuery, I managed the project with Gulp and tested it using Jasmine/Karma. I prioritized documentation, generating it using Dgeni, and utilized the SCRUM method to ensure project success.',
       }],
     },
     {
@@ -77,8 +75,7 @@ Main clients: **Chefclub**, **Mozilla**, and **Mila AG**.`,
          start: new Date('September 01, 2012'),
          end: new Date('June 30, 2014'),
         },
-        description: `Joined Covalia in September 2012 as a Research Engineer preparing a Phd on Cloud Computing in healthcare environment. After 7 months, we decided to stop the research and joined existant dev team as core-developer.
-Mostly used Java, with internal libraries. Interoperability in healthcare system (HL7, DICOM). Real time environment. IP Camera (Axis). ISO 13485 standard. Occasionally : deployment and phone support.`,
+        description: `I joined Covalia as a Research Engineer in September 2012 to prepare for a Ph.D. in Cloud Computing within the healthcare environment. After 7 months, I transitioned to the existing development team as a core-developer. My primary expertise was in Java, and I mostly used internal libraries to ensure smooth project operation. My responsibilities centered around ensuring interoperability within the healthcare system, specifically with HL7 and DICOM protocols, in a real-time environment. Additionally, I worked with IP Cameras (Axis) and followed ISO 13485 standard. In addition to my development work, I also provided occasional deployment and phone support to the team.`,
       }],
     },
     {
@@ -93,14 +90,14 @@ Mostly used Java, with internal libraries. Interoperability in healthcare system
          start: new Date('September 01, 2012'),
          end: new Date('January 31, 2013'),
         },
-        description: 'Java Courses. Practical, Tutorial class, and Projects - 32 hours, third year students at ISIFC and UFR ST. In parallel to my work at Covalia Interactive S.A.',
+        description: 'In addition to my role at Covalia Interactive S.A., I provided 32 hours of practical Java and HTML/CSS instructions to third-year students at both ISIFC and UFR ST. This included delivering tutorial classes and project-based learning opportunities.',
       }, {
         title: 'Part-time Lecturer',
         date: {
          start: new Date('September 01, 2011'),
          end: new Date('January 31, 2012'),
         },
-        description: 'Java Courses. Practical, Tutorial class, and Projects - 66 hours, third year students at ISIFC and UFR ST. In parallel to my work at Ionyse.',
+        description: 'In addition to my role at Ionyse, I provided 66 hours of practical Java instruction to third-year students at both ISIFC and UFR ST. This included delivering tutorial classes and project-based learning opportunities.',
       }],
     },
     {
@@ -114,7 +111,7 @@ Mostly used Java, with internal libraries. Interoperability in healthcare system
          start: new Date('July 01, 2009'),
          end: new Date('June 30, 2012'),
         },
-        description: `Start this project in parallel of our studies, to help financing them. After 24 months part-time moved to a full-time position. Web agency, worked on web application for small companies. Mostly Django websites, but also web apps, and intranet platforms. Large variety of activities, but specialized in front-end development, specially HTML5 CSS3 and jQuery. Developed our own CMS : ionyweb.`,
+        description: `A web agency was founded by me and two partners while I was pursuing my master's degree, as a student job. After working part-time for two years, the job became a full-time position. Our focus was on creating websites and web applications for small businesses, utilizing the Django framework. Due to the small size of our agency, I had the opportunity to explore a wide range of topics, ultimately specializing in front-end development, with a particular focus on HTML5, CSS3, and jQuery. In addition, we created our own CMS, which was called ionyweb.`,
       }],
     }
   ],
