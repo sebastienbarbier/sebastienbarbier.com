@@ -45,9 +45,9 @@ Responsible for the following tasks:
 
 Main clients: **Chefclub**, **Mozilla**, and **Mila AG**.`,
         images: [
-          '/assets/images/chefclub/chefclub-logo.png',
-          '/assets/images/mozilla/mozilla_logo.svg',
-          '/assets/images/mila/logo_02_blue.png',
+          { src: '/assets/images/chefclub/chefclub-logo.png', alt: 'Chefclub logo'},
+          { src: '/assets/images/mozilla/mozilla_logo.svg', alt: 'Mozilla logo'},
+          { src: '/assets/images/mila/logo_02_blue.png', alt: 'Mila AG logo'},
         ]
       }],
     },

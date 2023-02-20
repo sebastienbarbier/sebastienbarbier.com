@@ -84,7 +84,7 @@
             <div class="description" [innerHTML]="experience.positions[0].description | markdown">
             </div>
             <ul class="images" *ngIf="experience.positions[0].images">
-              <li *ngFor="let image of experience.positions[0].images;"><img src="{{ image }}" /></li>
+              <li *ngFor="let image of experience.positions[0].images;"><img src="{{ image.src }}" alt="{{ image.alt}}" /></li>
             </ul>
           </ng-container>
 
@@ -98,7 +98,7 @@
                 <div class="description" [innerHTML]="position.description | markdown">
                 </div>
                 <ul class="images" *ngIf="position.images">
-                  <li *ngFor="let image of experience.positions[0].images;"><img src="{{ image }}" /></li>
+                  <li *ngFor="let image of experience.positions[0].images;"><img src="{{ image.src }}" alt="{{ image.alt}}" /></li>
                 </ul>
               </li>
             </ul>
