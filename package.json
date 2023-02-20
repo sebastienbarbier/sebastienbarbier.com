@@ -5,7 +5,7 @@
   "scripts": {
     "ng": "ng",
     "start": "node dist/server",
-    "build": "ng run sebastienbarbier_en:prerender",
+    "build": "ng run sebastienbarbier:prerender",
     "serve": "npx ng serve --host 0.0.0.0",
     "serve:static": "npm run serve:prerender",
     "test": "ng test",
@@ -14,10 +14,10 @@
     "fetch:socials": "npm run instagram && npm run nomadlist",
     "instagram": "node scripts/instagram.js",
     "nomadlist": "node scripts/nomadlist.js",
-    "dev:ssr": "ng run sebastienbarbier_en:serve-ssr",
+    "dev:ssr": "ng run sebastienbarbier:serve-ssr",
     "serve:ssr": "node dist/server/main.js",
-    "build:ssr": "ng build && ng run sebastienbarbier_en:server",
-    "prerender": "ng run sebastienbarbier_en:prerender",
+    "build:ssr": "ng build && ng run sebastienbarbier:server",
+    "prerender": "ng run sebastienbarbier:prerender",
     "serve:prerender": "cd dist/en && http-server",
     "predeploy": "./scripts/predeploy.sh",
     "deploy": "./scripts/deploy.sh"
