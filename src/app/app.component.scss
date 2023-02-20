@@ -13,11 +13,7 @@ header {
     padding: 20px 20px;
     padding-top: calc(20px + env(safe-area-inset-top));
   }
-
-  @include for-phone-only {
-    padding: 10px 10px;
-    padding-top: calc(10px + env(safe-area-inset-top));
-  }
+  // @include for-phone-only ...
 
   &:after {
     content: '';
@@ -46,6 +42,7 @@ header {
     left: 0px;
     visibility: visible;
 
+
     &.hidden {
       opacity: 0;
       visibility: hidden;
@@ -56,8 +53,13 @@ header {
     svg {
       width: 240px;
       color: transparent;
+      transition: all 0.3s ease;
       g {
         fill: #16161D;
+      }
+
+      @include for-phone-only {
+        width: 190px;
       }
     }
   }
