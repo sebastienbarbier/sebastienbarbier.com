@@ -41,16 +41,22 @@ ul.experiences {
     margin-bottom: 20px;
     display: flex;
     flex-direction: row;
-
     @include for-phone-only {
       flex-direction: column;
     }
     padding-bottom: 10px;
     aside {
       margin: 10px 20px 0 0;
+      @include for-phone-only {
+        padding-bottom: 20px;
+      }
       img {
         width: 60px;
         filter: grayscale(100%);
+
+        @include for-phone-only {
+          width: 80px;
+        }
       }
     }
     aside + div {
@@ -72,7 +78,6 @@ ul.experiences {
 
     // Styling of sublist with gold timeline and dot styling
     $left_padding: -52px;
-
 
     li {
       padding-top: 10px;
