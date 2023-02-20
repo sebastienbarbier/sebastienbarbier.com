@@ -8,54 +8,26 @@
 >
 <url>
   <loc>https://sebastienbarbier.com</loc>
-  <xhtml:link
-     rel="alternate"
-     hreflang="en"
-     href="https://sebastienbarbier.com"
-     />
-   <xhtml:link
-     rel="alternate"
-     hreflang="fr"
-     href="https://sebastienbarbier.fr"
-     />
 </url>
 <url>
   <loc>https://sebastienbarbier.com/contact</loc>
-  <xhtml:link
-     rel="alternate"
-     hreflang="en"
-     href="https://sebastienbarbier.com/contact"
-     />
-   <xhtml:link
-     rel="alternate"
-     hreflang="fr"
-     href="https://sebastienbarbier.fr/contact"
-     />
 </url>
 <url>
   <loc>https://sebastienbarbier.com/legal</loc>
-  <xhtml:link
-     rel="alternate"
-     hreflang="en"
-     href="https://sebastienbarbier.com/legal"
-     />
-   <xhtml:link
-     rel="alternate"
-     hreflang="fr"
-     href="https://sebastienbarbier.fr/legal"
-     />
 </url>
 <url>
   <loc>https://sebastienbarbier.com/resources</loc>
-  <xhtml:link
-     rel="alternate"
-     hreflang="en"
-     href="https://sebastienbarbier.com/resources"
-     />
-   <xhtml:link
-     rel="alternate"
-     hreflang="fr"
-     href="https://sebastienbarbier.fr/resources"
-     />
+</url>
+<url>
+  <loc>https://sebastienbarbier.com/works</loc>
+</url>
+<url>
+  <loc>https://sebastienbarbier.com/works/seven23</loc>
+</url>
+<url>
+  <loc>https://sebastienbarbier.com/works/fromedwin</loc>
+</url>
+<url>
+  <loc>https://sebastienbarbier.com/resume</loc>
 </url>
 </urlset>

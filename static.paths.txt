@@ -1,4 +1,7 @@
 /contact
+/works
+/works/seven23
+/works/fromedwin
 /resources
 /legal
 /resume

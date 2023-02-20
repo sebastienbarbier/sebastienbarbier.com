@@ -1,85 +1,32 @@
 @import '../assets/scss/variables';
 
-@keyframes appear {
-  from {
-    opacity: 0;
+// Header logo as svg
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 50px;
+  padding-top: calc(30px + env(safe-area-inset-top));
+
+  @include for-tablet-landscape-down {
+    padding: 20px 20px;
+    padding-top: calc(20px + env(safe-area-inset-top));
   }
+  // @include for-phone-only ...
 
-  to {
-    opacity: 0;
-  }
-}
-
-main {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  top: 0; left: 0; right: 0; bottom: 0;
-  overflow: hidden;
-}
-
-.home, .notHome, .aboutMe, .work {
-  position: relative;
-  width: 100%;
-  min-width: 100vw;
-  height: 100%;
-  min-height: 100vh;
-  overflow: hidden;
-  z-index: $indexContent;
-
-  &:before {
+  &:after {
     content: '';
     position: absolute;
-    width: 300vw;
-    height: 300vh;
-    top: -100vh;
-    left: -100vw;
-    background: $colorPolo;
-    opacity: 0; //0.1;
-    z-index: $indexContent;
-    transition: opacity .6s .3s, transform .6s;
-    pointer-events: none;
-    animation-name: appear;
-    animation-duration: .6s;
-  }
-}
-
-.contactList {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-
-  list-style: none;
-  align-items: center;
-  padding: 10px 0;
-
-  @media screen and (max-width: $md - 1px) {
-    justify-content: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: env(safe-area-inset-top);
+    background: $background_brown;
+    z-index: $zindex_navigation+1;
   }
 
-  li {
-    padding: 5px 8px;
-    a {
-      border: none;
-      img {
-        height: 1.3rem;
-      }
-    }
-  }
-}
-
-header {
-
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: $indexContent;
-
-  // sebastienbarbier logo as text
   a.logo {
-    display: inline-block;
-    height: $headerFontSize;
-
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -87,266 +34,190 @@ header {
     -ms-user-select: none;
     user-select: none;
 
+    display: inline-block;
+
+    z-index: $zindex_header;
+    transition: visibility 0s, left 0.3s ease, opacity 0.3s ease;
     position: relative;
-    left: -8px;
-    @media screen and (max-width: $md - 1px) {
-      display: none;
-    }
+    left: 0px;
+    visibility: visible;
 
-    @media screen and (min-width: $md) and (max-width: $lg - 1px) {
-      margin: $paddingMedium 0 0;
-      margin-left: $paddingMedium;
-    }
-    @media screen and (min-width: $lg) {
-      margin: $paddingMedium 0 0;
-      margin-left: $paddingLarge;
-    }
 
-    img {
-      height: 100%;
-      color: transparent;
-    }
-  }
-
-  label{
-    cursor: pointer;
-    position: fixed;
-    width: $headerFontSize;
-    height: $headerFontSize;
-    z-index: $indexNavigation + 1;
-
-    @media screen and (max-width: $sm) {
-      position: absolute;
-      top: $paddingMedium;
-      right: $paddingSmall;
-    }
-
-    @media screen and (min-width: $sm) and (max-width: $md - 1px) {
-      position: absolute;
-      top: $paddingMedium;
-      right: $paddingMedium;
-    }
-
-    @media screen and (min-width: $md) and (max-width: $lg - 1px) {
-      top: $paddingMedium;
-      right: $paddingMedium;
-    }
-    @media screen and (min-width: $lg) {
-      top: $paddingMedium;
-      right: $paddingLarge;
-    }
-
-    opacity: 1;
-    transform: scale(1);
-    transition: opacity 400ms, transform 400ms;
-    &.hide {
+    &.hidden {
       opacity: 0;
-      transform: scale(0.9);
-      transition: opacity 400ms, transform 400ms;
-    }
-
-    #navigation__button__close { fill:white; visibility: hidden; }
-
-    @keyframes rotate {
-      from {
-        transform: rotate(360deg);
-      }
-
-      to {
-        transform: rotate(0deg);
-      }
+      visibility: hidden;
+      left: 10px;
+      transition: opacity 0.3s ease, left 0.3s ease, visibility 0s 0.3s;
     }
 
     svg {
-      position: absolute;
-      &:first-child {
-        visibility: visible;
-        opacity: 1;
-        transition: opacity 150ms 50ms, visibility 0s;
+      width: 240px;
+      color: transparent;
+      transition: all 0.3s ease;
+      g {
+        fill: #16161D;
       }
-      &:last-child {
-        visibility: hidden;
-        opacity: 0;
-        animation: 1s infinite linear normal rotate;
-        animation-play-state: paused;
-        transition: opacity 150ms, visibility 0s 150ms;
-      }
-    }
-    &.isLoading {
-      svg:first-child {
-        visibility: hidden;
-        opacity: 0;
-        transition: opacity 150ms, visibility 0s 150ms;
-      }
-      svg:last-child {
-        visibility: visible;
-        opacity: 1;
-        transition: opacity 150ms 50ms, visibility 0s;
-        animation-play-state: running;
+
+      @include for-phone-only {
+        width: 190px;
       }
     }
   }
-  input[type=checkbox]{
-    display: none;
-  }
-  input[type=checkbox]:checked + label {
-    #navigation__button__open { visibility: hidden; }
-    #navigation__button__close { fill:white; visibility: visible; }
-  }
+}
 
-  input[type=checkbox]:checked + label + nav {
-    // Animation
-    visibility: visible;
-    transition: visibility 0s;
+//
+// HAMBURGER MENU
+//
 
-    &:before {
-      opacity: 1;
-      transition: opacity 0.2s ease-in;
-    }
+$navigation_button_size: 46px;
 
-    $range: 0.03s;
-    $delay: 0.06s;
-    ul {
-      opacity: 1;
-      transform: translateX(0px);
-      flex-wrap: wrap;
-      @mixin inline-animation($duration) {
-        transition: opacity 0.2s ease-out $duration, transform 0.2s ease-out $duration;
+// Input checkbox store the navigaiton menu state to open/close
+input#navigation {
+  display: none;
+
+  &:checked + label div {
+    span {
+      &:first-of-type {
+        transform: rotate(45deg);
+        top: 5px;
+        background-color: $background_white !important;
       }
-      &:nth-child(0) { @include inline-animation($delay+(2*$range)) }
-      &:nth-child(1) { @include inline-animation($delay+(3*$range)) }
-      &:nth-child(2) { @include inline-animation($delay+(4*$range)) }
-      &:nth-child(3) { @include inline-animation($delay+(5*$range)) }
-      &:nth-child(4) { @include inline-animation($delay+(6*$range)) }
-      &:nth-child(5) { @include inline-animation($delay+(7*$range)) }
+      &:last-of-type {
+        transform: rotate(-45deg);
+        bottom: 5px;
+        background-color: $background_white !important;
+      }
     }
   }
+  // hover when checked keep size consiste and override preivous styling
+  &:checked + label:hover div span:first-of-type,
+  &:checked + label:hover div span:last-of-type {
+    width: 32px;
+  }
+}
 
-  nav {
-    z-index: $indexNavigation;
+// Button object to toggle navigation state
+input#navigation + label {
+  position: relative;
+  width: $navigation_button_size;
+  height: $navigation_button_size;
+  cursor: pointer;
+  display: block;
 
-    // Animation
-    visibility: hidden;
-    transition: visibility 0s 0.2s;
-    // Position
-    position: fixed;
-    top: 0; bottom: 0; left: 0; right: 0;
+  z-index: 999;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
+  div {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 32px;
+    height: 12px;
 
-    &:before {
-      content: '';
-      position: absolute;
-      top: 0; bottom: 0; left: 0; right: 0;
-      background: $colorNavigation;
-      opacity: 0;
-      transition: opacity 0.2s ease-out;
-      z-index: $indexContent;
+    cursor: pointer;
+  }
+
+  // Button bars are represented as span
+  span {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: $background_eigengrau;
+    border-radius: 1px;
+    transition: all 0.2s cubic-bezier(0.1, 0.82, 0.76, 0.965);
+    &:first-of-type {
+      top: 0;
     }
-
-    @media screen and (max-width: 599px) {
-      align-items: flex-end;
-      padding-right: 10vw;
-      padding-top: 5vh;
+    &:last-of-type {
+      bottom: 0;
     }
-    @media screen and (min-width: 600px) and (max-width: 999px) {
-      align-items: flex-end;
-      padding-right: 10vw;
+  }
+
+  // Animate menu bar on hover effect
+  &:hover {
+    // Disable hover effect on mobile.
+    @media (min-width: 1024px) {
+      span:first-of-type {
+        width: 26px;
+      }
+
+      span:last-of-type {
+        width: 12px;
+      }
     }
+  }
+}
 
+// Navigation Menu
+input#navigation + label +  nav {
+  position: absolute;
+  top: 0;
+  bottom: calc(-1 * env(safe-area-inset-top));
+  left: 0;
+  right: 0;
+  opacity: 0;
+  visibility: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
 
-    ul {
-      // Animation
-      @media screen and (max-width: 599px) {
-      }
-      @media screen and (min-width: 600px) and (max-width: 999px) {
-        width: 60vw;
-      }
-      @media screen and (min-width: 1000px) {
-        width: 60vw;
-      }
-      padding: 0;
-      margin-bottom: 0;
+  background: $background_brown;
+  color: $primary_text_white;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  ul {
+    text-align: left;
+    width: 40%;
+    li {
       list-style: none;
-      z-index: $indexContent+1;
-      opacity: 0;
-      transform: translateX(-30px);
-
-      display: flex;
-      justify-content: flex-end;
-
-      &.noMargin {
-        margin: 0 0 6px 0;
-      }
-
-      li{
-        padding: 14px 20px 14px 20px;
-        position: relative;
-        text-align: right;
-        opacity: 1;
-
-        &:last-child {
-          padding-right: 0;
-        }
-
-        &:not(:last-child) {
-          &:after {
-            content: '';
-            position: absolute;
-            top: 14px;
-            bottom: 14px;
-            right: 0;
-            width: 1px;
-            border-left: solid 1px white;
-          }
-        }
-
-        a{
-          border: none;
-          color: $light;
-          text-transform: uppercase;
-          font-weight: 700;
-          font-size: 2.8rem;
-          line-height: 1;
-          letter-spacing: -0.01em;
-
-          &.active {
-            color: $colorGold;
-            cursor: default;
-            opacity: 0.4;
-          }
-        }
-      }
-
-      &.small li a{
-        border: none;
-        color: $light;
-        text-transform: capitalize;
-        font-weight: 400;
-        font-size: .8rem;
-        letter-spacing: -0.01em;
-
+      margin: 0;
+      padding: 5px 0;
+      a {
+        @include serif;
+        text-decoration: none;
+        font-size: 3.6em;
+        color: $primary_text_white;
+        font-variation-settings: 'opsz' 24;
+        transition: all 0.2s cubic-bezier(0.1, 0.82, 0.76, 0.965);
         &.active {
-          color: $colorGold;
-          cursor: default;
-          opacity: 0.4;
+          color: $color_gold;
+        }
+        &:hover {
+          color: $color_gold;
         }
       }
+    }
 
-      &.icons li {
-        padding: 0px 12px;
-        img {
-          height: 1.8em;
+    @include for-tablet-landscape-down {
+        width: 100%;
+        padding: 0;
+        text-align: center;
+        li a {
+          font-size: 3em;
         }
-        &:after {
-          border: none !important;
-        }
-      }
+    }
 
+    @include for-tablet-landscape-up {
+        width: 50%;
+    }
+
+    @include for-desktop-up {
+        width: 40%;
     }
   }
+
+  z-index: $zindex_navigation;
+  transition: opacity 0.2s ease-in-out, visibility 0s 0.2s;
+}
+
+// Animation to display navigation menu
+input#navigation:checked + label + nav {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s, opacity 0.2s ease-in-out;
 }

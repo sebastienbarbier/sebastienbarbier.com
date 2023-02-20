@@ -1,0 +1,151 @@
+@import '../../../assets/scss/variables';
+
+img {
+  max-width: 100%;
+}
+
+
+@include for-tablet-landscape-down {
+
+  dl {
+    width: 100%;
+    margin: 0;
+
+    display: grid;
+    margin-top: 3em;
+    margin-bottom: 4em;
+
+    dt {
+      font-weight: bold;
+      text-transform: uppercase;
+      text-align: left;
+      grid-row: 1;
+    }
+    dd {
+      margin-left: 0;
+      opacity: 0.8;
+      text-align: left;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+
+      grid-row: 2;
+    }
+    dt, dd {
+      font-size: 0.9em;
+    }
+  }
+}
+
+@include for-tablet-landscape-up {
+
+  .container {
+    display: grid;
+    gap: 10px;
+    align-items: center;
+
+    h1 {
+      grid-column: 1 / span 4;
+      grid-row: 1;
+    }
+
+    h1 + div {
+      grid-column: 2 / span 3;
+      grid-row: 2;
+      margin: 0;
+    }
+
+    p + dl {
+      grid-column: 1 / span 1;
+      grid-row: 2 / span 2;
+    }
+
+    div.two_tablets_two_mobiles {
+      grid-row: 3;
+      grid-column: 1 / span 4;
+    }
+
+    div.full_stack {
+      grid-row: 5;
+      grid-column: 1 / span 4;
+
+      display: grid;
+    }
+  }
+
+  dl {
+    margin-right: 80px;
+    dt {
+      font-weight: bold;
+      margin-bottom: 0.2em;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    dd {
+      margin-left: 0;
+      margin-bottom: 2em;
+      opacity: 0.8;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+    dt, dd {
+      font-size: 0.9em;
+    }
+    ul {
+      padding: 0;
+    }
+  }
+
+  h1 + div + dl {
+    text-align: right;
+  }
+}
+
+span.censored {
+    position: relative;
+    color: transparent;
+
+    &:after {
+        background: $background_beige_dark;
+        position: absolute;
+        content: '';
+        transform: rotate(-5deg);
+        top: 0; left: 0; right: 0; bottom: 0;
+    }
+
+    &:before {
+        position: absolute;
+        content: '🤬';
+        z-index: 999;
+        font-style: normal;
+        font-size: 1.3em;
+        text-align: center;
+        opacity: 1;
+        color: black;
+        top: -0.3em; left: 0; right: 0; bottom: 0;
+    }
+}
+
+.two_tablets_two_mobiles {
+  position: relative;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  align-items: center;
+  justify-content: space-around;
+
+  .tablet_landscape {
+      width: 50%;
+  }
+  .tablet_portrait {
+      width: 50%;
+  }
+  .mobile_portrait {
+      width: 25%;
+  }
+  .mobile_rotated {
+      width: 25%;
+  }
+}

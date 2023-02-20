@@ -1,68 +1,153 @@
-<div class="route">
-  <route-header></route-header>
-  <div class="content">
-    <h1>Resume</h1>
-    <div class="container">
-      <article>
-        <section class="row">
-          <h2 class="col-sm-12">Cloud Software Architect</h2>
-          <p class="col-sm-12">34 years old, French nationality, based in Zurich, Switzerland 🇨🇭.<br />Languages: French (native language), English (Fluent), and German (A2)</p>
-        </section>
+<div class="wrapper pt">
+  <div class="container pb">
+    <h1 class="centered">
+      <small>My resume</small> Cloud software architect
+    </h1>
 
-        <section>
-          <h2>Technologies</h2>
-          <ul>
-            <li><strong>Front-end</strong> : React, Angular, CSS3 Responsive, Html5. Redux, IndexedDB, web/service workers. Webpack, Npm. Test environment with jasmine, Moka, Karma.</li>
-            <li><strong>Back-end</strong> : Python Django, Flask, Restful API, Unitary test, Web services, Continuous integration, Sphinx (technical documentation).</li>
-            <li>Devops, Monitoring, Server skills, Open source advocate, Git, Scrum.</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2>Work experience</h2>
-          <ul>
-            <li *ngFor="let experience of experiences;">
-              <strong>{{ experience.company.name}} </strong> : {{ experience.title}}, {{ experience.company.location }}.<br/>
-              <em>{{ experience.date }}</em><br/>
-              {{ experience.description }}
-           </li>
-          </ul>
-        </section>
-
-
-        <section>
-          <h2>Education</h2>
-          <ul>
-            <li>
-<strong>2011 - Master degree in computer science - Distributed systems and networks</strong><br/>
-« University of Franche-Comté, Science and technology » - Besançon, France 🇫🇷 - magna cum laude<br/>
-<strong>Internship 3 months:</strong> Nav6 Laboratory - Penang, Malaysia 🇲🇾. Developed C# application using Google API in a real time collaborative space. Integrated to a video chat
-application in purpose to have real time document edition.</li>
-            <li>
-<strong>2009 - Bachelor degree in computer science</strong><br/>
-« University of Franche-Comté, Science and technology » - Besançon, France 🇫🇷 - cum laude<br/>
-<strong>Internship 3 months:</strong> MagicLabVision Laboratory - Adelaide, Australia 🇦🇺. Joined a research team on an augmented reality application based on Python.</li>
-            <li>
-<strong>2008 - “Final year in computer science”</strong><br/>
-« University of Portsmouth » - ERASMUS exchange, England 🇬🇧</li>
-            <li>
-<strong>2007 - HNC, Computer Science</strong><br/>
-« IUT of Belfort » - Belfort, France 🇫🇷<br />
-<strong>Internship 3 months:</strong> Thales Avionics Electrical Systems - Chatou, France 🇫🇷. PHP Developer, using Oracle databases, access archives from a previous ERP.</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2>Additional informations</h2>
-          <p>Have side-projects, like Seven23 which keep track of my expenses (open source - work in progress). Big use of twitter to follow tech news. Have fun with photography and would like to spend more time and progress.</p>
-
-          <h3>I like to attend conferences</h3>
-          <ul>
-            <li *ngFor="let conference of conferences;">{{ conference.date }} - <strong>{{ conference.name }}</strong>, {{ conference.location }}</li>
-          </ul>
-        </section>
-
-      </article>
+    <div class="presentation">
+      <dl>
+        <dt>Age</dt>
+        <dd>{{ age }} years old</dd>
+      </dl>
+      <dl>
+        <dt>Nationality</dt>
+        <dd>French</dd>
+      </dl>
+      <dl>
+        <dt>Location</dt>
+        <dd>Zurich, Switzerland</dd>
+      </dl>
+      <dl>
+        <dt>Languages</dt>
+        <dd>French <em>(native language)</em>, English <em>(fluent)</em>, and German <em>(A2)</em></dd>
+      </dl>
     </div>
+
+
+    <h2>Technologies</h2>
+
+    <!-- <h3>Front-end</h3> -->
+
+    <ul class="skills">
+      <li>React</li>
+      <li>Angular</li>
+      <li>Javascript</li>
+      <li>Typescript</li>
+      <li>HTML / CSS</li>
+      <li>CSS animations</li>
+      <li>Redux</li>
+      <li>IndexedDB</li>
+      <li>Web/Service workers</li>
+      <li>Webpack</li>
+      <li>Npm</li>
+      <li>Jasmine, Moka, Karma</li>
+      <li>D3.js</li>
+      <li>Cypress</li>
+    </ul>
+
+    <!-- <h3>Back-end</h3> -->
+
+    <ul class="skills">
+      <li>Python</li>
+      <li>Django</li>
+      <li>Node.js</li>
+      <li>Restful API</li>
+      <li>Unitary test</li>
+      <li>CI/CD</li>
+      <li>Sphinx</li>
+      <li>Jet</li>
+    </ul>
+
+    <!-- <h3>Skills</h3> -->
+
+    <ul class="skills">
+      <li>Devops</li>
+      <li>Monitoring</li>
+      <li>Server skills</li>
+      <li>Open source advocate</li>
+      <li>Git</li>
+      <li>Scrum</li>
+    </ul>
+
+    <h2>Work experience</h2>
+    <ul class="experiences">
+      <li *ngFor="let experience of experiences;" class="experience">
+        <aside>
+          <img [src]="experience.logo" alt="" />
+        </aside>
+        <div>
+          <ng-container *ngIf="experience.positions.length == 1">
+            <p><strong>{{ experience.positions[0].title }}</strong><br/>
+            {{ experience.name }} • {{ experience.type }}</p>
+            <p class="date_and_location">{{ experience.positions[0].date.start|date: 'MMMM YYYY' }} - {{ experience.positions[0].date.end|date: 'MMMM YYYY' }} • {{ experience.positions[0]|language: 'typescript'|duration }}<br/>
+            {{ experience.location }}</p>
+            <div class="description" [innerHTML]="experience.positions[0].description | markdown">
+            </div>
+            <ul class="images" *ngIf="experience.positions[0].images">
+              <li *ngFor="let image of experience.positions[0].images;"><img src="{{ image.src }}" alt="{{ image.alt}}" /></li>
+            </ul>
+          </ng-container>
+
+          <ng-container *ngIf="experience.positions.length > 1">
+            <p><strong>{{ experience.name }} </strong></p>
+            <p class="date_and_location">{{ experience.type }} • {{ experience.positions|duration }}<br/>{{ experience.location }}</p>
+            <ul class="experience">
+              <li class="dot" *ngFor="let position of experience.positions;">
+                <p><strong>{{ position.title }}</strong></p>
+                <p class="date_and_location">{{ position.date.start | date: 'MMMM YYYY' }} - {{ position.date.end | date: 'MMMM YYYY' }} • {{ position|duration}}</p>
+                <div class="description" [innerHTML]="position.description | markdown">
+                </div>
+                <ul class="images" *ngIf="position.images">
+                  <li *ngFor="let image of experience.positions[0].images;"><img src="{{ image.src }}" alt="{{ image.alt}}" /></li>
+                </ul>
+              </li>
+            </ul>
+          </ng-container>
+      </div>
+     </li>
+    </ul>
+
+    <h2>Education</h2>
+    <ul class="education">
+      <li *ngFor="let education of educations">
+        <p class="year">{{ education.year }}</p>
+        <div>
+          <header>
+            <strong>{{ education.title }}</strong><span *ngIf="education.grade"> - {{ education.grade }}</span><br/>
+  {{ education.university }} - <span class="location">{{ education.location }}</span>
+          </header>
+          <ng-container *ngIf="education.internship">
+            <p class="internship">Internship: <strong>{{ education.internship.company }}</strong> - <span class="location">{{ education.internship.location }}</span> - {{ education.internship.duration_in_months }} months.<br />{{ education.internship.description }}</p>
+          </ng-container>
+        </div>
+      </li>
+    </ul>
+
+    <h2>About me</h2>
+    <p>Growing interest in <strong>blockchain technology</strong> and <strong>cryptocurrencies</strong>. Having fun with <strong>photography</strong> and would like to spend more time to learn it. <strong>Motobiker</strong>. Addicted to <strong>traveling</strong>.</p>
+
+    <h2>Attending conferences</h2>
+    <p>While the internet contains unlimited knowledge, there's nothing quite like talking with people who actually use that knowledge. That's why I insist on regularly attending conferences.</p>
+    <p>Here's a list of the conferences I attended in the past years:</p>
+
+    <table>
+      <tr>
+        <th>Year</th>
+        <th>Conference's name</th>
+        <th>Location</th>
+      </tr>
+      <ng-container *ngFor="let year of years">
+        <tr *ngFor="let confs of conferences[year]; let loopcounter = index">
+          <td class="year" *ngIf="loopcounter == 0" [attr.rowspan]="conferences[year].length">{{ year }}</td>
+          <td class="name">{{ confs.name }}</td>
+          <td class="location">{{ confs.location }}</td>
+        </tr>
+      </ng-container>
+    </table>
   </div>
+  <nav class="end_page">
+    <a routerLink="/works" class="back" role="button">Explore recent projects</a>
+    <a routerLink="/contact" class="back" role="button">Contact me</a>
+  </nav>
+  <route-footer></route-footer>
 </div>

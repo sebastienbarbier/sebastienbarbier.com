@@ -1,102 +1,177 @@
 @import '../../assets/scss/variables';
-@import '../../assets/scss/layout';
 
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: align-items;
+  justify-content: center;
 
-@keyframes scroll {
-  0% {
-    top: 0%;
-    bottom: 100%;
+  min-height: 100vh;
+
+  @include for-tablet-portrait-down {
+    min-height: auto;
+    padding-top: 100px;
+    padding-bottom: 80px;
   }
 
-  50% {
-    top: 0%;
-    bottom: 0%;
+  h1 {
+    padding-bottom: 0;
+
+
+    @include for-desktop-down {
+      font-size: 3.5em;
+    }
+
+    @include for-tablet-landscape-down {
+      font-size: 3em;
+    }
+
+    @include for-phone-only {
+      font-size: 2.5em;
+    }
   }
 
-  100% {
-    top: 100%;
-    bottom: 0%;
+  ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+
+    justify-content: center;
+
+    @include for-tablet-landscape-up {
+      justify-content: flex-start;
+      &:before {
+        content:  '';
+        width: 200px;
+        border-top: solid 1px $background_brown;
+        margin-right: 20px;
+      }
+    }
+
+    li {
+      list-style: none;
+      padding: 2px 4px;
+      img {
+        height: 1.6em;
+        opacity: 0.7;
+        transition: opacity ease 0.2s;
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
   }
 }
 
-header#home {
-  position: relative;
-  min-height: 100vh;
-  font-size: 1.4em;
-  padding: 100px 0 150px;
+ul.projects {
+  margin: 40px 0 0 0;
+  padding: 0;
 
   display: flex;
-  justify-content: center;
-  align-items: center;
-  
-  @media screen and (max-width: $lg - 1px) {
+  flex-wrap: wrap;
+  justify-content: space-between;
 
-    padding: 100px 20px 150px;
-  } 
-
-  @media screen and (max-width: $md - 1px) {
-    flex-direction: column;
-    align-items: flex-start;
-    font-size: 1.2em;
-    padding: 10vh 0 10px;
-  }
-
-  h2 {
-    margin: 0;
-    font-weight: 700;
-    font-size: 1.8em;
-    padding: 0;
-  }
-
-  p {
-    padding: 0;
-    max-width: 700px;
-    margin: 10px 1em 0;
-    line-height: 1.5em;
-
-    .hi {
-      font-weight: 700;
-      display: inline-block;
-      font-size: 1.4em;
-      line-height: 1.5em;
-    }
-
-    .name {
-      font-weight: 300;
-      display: inline-block;
-      font-size: 1.2em;
-      line-height: 1.5em;
-    }
-
-    strong {
-      font-size: 0.95em;
-    }
-
-    @media screen and (max-width: $md - 1px) {
-      margin: 10px 20px;
-    }
-  }
-
-  img.avatar {
-    max-width: 200px;
+  & > li {
     width: 100%;
-    color: transparent;
-    width: 100%;
-    border-radius: 50%;
-    margin-right: 2em;
-    margin-left: 4em;
-    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2),0px 2px 2px 0px rgba(0, 0, 0, 0.14),0px 3px 1px -2px rgba(0, 0, 0, 0.12);
-
-    @media screen and (max-width: $lg - 1px) {
-      max-width: 140px;
-      margin-right: 1em;
-      margin-left: 1em;
+    @include for-tablet-landscape-up {
+      width: 45%;
     }
-    @media screen and (max-width: $md - 1px) {
-      max-width: 100px;
-      margin: 0 0 8px 18px;
+
+    position: relative;
+    list-style: none;
+    margin: 0px 0 60px;
+    padding: 10px 0px;
+
+    .thumbnail {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: $background_beige_dark;
+    }
+
+    @include for-tablet-landscape-up {
+      h3, p, a, ul {
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+    }
+
+    img {
+      max-height: 300px;
+      max-width: 100%;
+    }
+
+    a {
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    ul {
+      margin-bottom: 8px;
     }
   }
 }
 
+ul.logos {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  margin: 0;
+  padding: 20px 0 30px 0;
 
+  @include for-tablet-landscape-down {
+    flex-wrap: wrap;
+  }
+
+  @include for-phone-only {
+    padding: 10px 0 40px 0;
+  }
+
+  li {
+    width: 25%;
+    padding: 10px 20px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+
+    @include for-tablet-portrait-down {
+      width: 40%;
+      padding: 10px 20px 30px;
+    }
+
+    @include for-tablet-landscape-down {
+      width: 40%;
+      padding: 10px 20px 50px;
+    }
+
+    @include for-phone-only {
+      width: 40%;
+      padding: 10px 10px;
+    }
+
+    a {
+      display: inline-block;
+    }
+    &:first-of-type {
+      img {
+        height: 80px;
+        max-height: 80px;
+      }
+    }
+    img {
+      max-height: 80px;
+      width: 50%;
+      filter: grayscale(100%);
+
+      @include for-tablet-landscape-down {
+        width: 50%;
+      }
+
+      @include for-phone-only {
+        width: 60%;
+      }
+    }
+  }
+}

@@ -4,6 +4,7 @@ import 'reflect-metadata';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, ErrorHandler, Injectable, Input, Component } from '@angular/core';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { MarkdownModule } from 'ngx-markdown';
 
 import { RouterModule, Routes } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -43,6 +44,7 @@ if (environment.production) {
   imports: [
     BrowserModule.withServerTransition({appId: 'my-app'}),
     HttpClientModule,
+    MarkdownModule.forRoot(),
     BrowserAnimationsModule,
     FormsModule,
     RouterModule.forRoot(appRoutes, { onSameUrlNavigation: 'ignore' }),
@@ -52,7 +54,6 @@ if (environment.production) {
     AppComponent,
     PageNotFoundComponent,
   ],
-
   providers,
   bootstrap: [AppComponent]
 })

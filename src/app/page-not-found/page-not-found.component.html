@@ -1,12 +1,19 @@
-<div class="route">
-  <route-header></route-header>
-  <div class="content">
-    <h1>Page not found</h1>
-    <div class="container">
-      <article>
-        <h2>Error 404</h2>
-        <p>Sorry, this page does not exist or might have been removed.</p>
-      </article>
-    </div>
+<div class="wrapper pt">
+  <div class="container pb centered">
+    <h1><small>Error 404 </small>Page not found</h1>
+    <p>Sorry, this page does not exist or might have been removed.</p>
+    <h2>You might be looking for one of the following:</h2>
+    <nav>
+      <ul>
+        <li><a role="menuitem" routerLink="/home">Home</a></li>
+        <!-- <li><a role="menuitem" routerLink="/about">About</a></li> -->
+        <li><a role="menuitem" routerLink="/works">Works</a></li>
+        <li><a role="menuitem" routerLink="/resume">Resume</a></li>
+        <li><a role="menuitem" routerLink="/resources">Resources</a></li>
+        <li><a role="menuitem" routerLink="/contact">Contact</a></li>
+        <li><a role="menuitem" routerLink="/legal">Legal & copyright</a></li>
+      </ul>
+    </nav>
   </div>
+  <route-footer></route-footer>
 </div>

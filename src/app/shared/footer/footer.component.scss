@@ -1,24 +1,80 @@
 @import '../../../assets/scss/variables';
 
-footer#footer {
+footer {
   width: 100%;
-  // min-height: $footerMinHeight;
-  color: $light1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  background: $background_brown;
+  color: $primary_text_white;
+  padding-right: env(safe-area-inset-right);
+  padding-left: env(safe-area-inset-left);
+  padding-bottom: env(safe-area-inset-bottom);
 
-  p {
-    font-size: 0.8em;
-    text-align: center;
-    margin-right: 20px;
+  .getintouch {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
 
-    @media screen and (max-width: $md - 1px) {
+    @include for-tablet-landscape-down {
       text-align: center;
     }
+
+    h2 {
+      font-weight: 400;
+      font-size: 0.9em;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    a {
+      color: $primary_text_white;
+      text-decoration: none;
+      @include serif;
+      font-size: 2.8em;
+
+      @include for-tablet-landscape-down {
+        text-align: center;
+        font-size: 1.5em;
+      }
+    }
+
+    ul {
+      display: flex;
+      flex-direction: row;
+      padding: 0;
+
+
+      @include for-tablet-landscape-down {
+        justify-content: center;
+      }
+
+      li {
+        margin: 0;
+        padding-right: 24px;
+        list-style: none;
+        a {
+          text-transform: uppercase;
+          color: $color_gold;
+          font-size: 0.8em;
+          font-weight: 500;
+          @include sansserif;
+        }
+      }
+    }
   }
-  p, a {
-    border: none;
+
+  .links {
+    padding-top: 1em;
+    padding-bottom: 10px;
+    font-size: 0.8em;
+    text-align: right;
+
+    @include for-tablet-landscape-down {
+      text-align: center;
+    }
+
+    p {
+      a {
+        color: $primary_text_white;
+        text-decoration: none;
+      }
+    }
   }
 }

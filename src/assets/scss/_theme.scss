@@ -1,0 +1,261 @@
+@import './variables';
+@import './works';
+@import './resume';
+
+html {
+  font-size: $font_size;
+  background: $background_beige;
+  color: $primary_text_black;
+  font-weight: 400;
+  line-height: 1.4;
+
+  @include sansserif;
+
+  body {
+    margin: 0;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @include serif;
+  font-weight: 600;
+  font-variation-settings: 'opsz' 24;
+  position: relative;
+  margin-top: 1.2em;
+  margin-bottom: 0.8em;
+  line-height: 1.2em;
+
+  small {
+    @include sansserif;
+    display: inline;
+    font-weight: 400;
+    font-size: 0.3em;
+    position: absolute;
+    text-transform: uppercase;
+    top: -2.5em;
+    opacity: 0.8;
+  }
+
+  &.centered {
+    text-align: center;
+  }
+}
+p.centered {
+  text-align: center;
+}
+
+$h1_size: 4.2em;
+$h2_size: $h1_size - 1.4em;
+$h3_size: $h2_size - 0.6em;
+$h4_size: $h3_size - 0.2em;
+$h5_size: $h4_size - 0.2em;
+$h6_size: $h5_size - 0.2em;
+
+h1 {
+  font-size: $h1_size;
+  font-weight: 600;
+  padding-bottom: 1em;
+  small {
+    font-size: 0.2em;
+    top: -3.5em;
+  }
+
+  @include for-tablet-landscape-down {
+    font-size: $h1_size - 1;
+  }
+
+  @include for-phone-only {
+    font-size: $h1_size - 1.5;
+  }
+}
+h2 {
+  font-size: $h2_size;
+
+  @include for-tablet-landscape-down {
+    font-size: $h2_size - 0.4;
+  }
+
+  @include for-phone-only {
+    font-size: $h2_size - 0.6;
+  }
+}
+h3 {
+  font-size: $h3_size;
+
+  @include for-tablet-landscape-down {
+    font-size: $h3_size - 0.4;
+  }
+
+  @include for-phone-only {
+    font-size: $h3_size - 0.6;
+  }
+}
+h4 {
+  font-size: $h4_size;
+
+  @include for-tablet-landscape-down {
+    font-size: $h4_size - 0.4;
+  }
+
+  @include for-phone-only {
+    font-size: $h4_size - 0.6;
+  }
+}
+h5 {
+  font-size: $h5_size;
+
+  @include for-tablet-landscape-down {
+    font-size: $h5_size - 0.4;
+  }
+
+  @include for-phone-only {
+    font-size: $h5_size - 0.6;
+  }
+}
+h6  {
+  font-size: $h6_size;
+
+  @include for-tablet-landscape-down {
+    font-size: $h6_size - 0.4;
+  }
+
+  @include for-phone-only {
+    font-size: $h6_size - 0.6;
+  }
+}
+
+a {
+  &.btn {
+    display: flex;
+    justify-content: center;
+    color: $color_gold_dark_visited;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    padding: 16px 40px;
+
+    &.centered {
+      display: flex;
+      justify-content: center;
+    }
+
+    &.mt {
+      margin-bottom: 40px;
+    }
+
+    &.mb {
+      margin-bottom: 40px;
+    }
+
+    &.small {
+      letter-spacing: 1px;
+      font-size: 0.7em;
+      padding: 4px 10px;
+      font-weight: 600;
+    }
+  }
+
+}
+
+.serif {
+  @include serif;
+}
+
+.sansserif {
+  @include sansserif;
+}
+
+
+// Wrapper for angular router view to animate smoothly
+// Allow also to scroll up automatically on page navigation
+.wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: calc(-1 * env(safe-area-inset-top));
+  right: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  z-index: $zindex_wrapper;
+
+  &.pt {
+    padding-top: 130px;
+  }
+
+  &.pb {
+    padding-bottom: 60px;
+  }
+
+  section {
+    background: $background_beige_dark;
+    clear: both;
+    .container {
+      padding-top: 35px;
+      padding-bottom: 30px;
+    }
+    .mt {
+      margin-top: 50px;
+    }
+    .mb {
+      margin-bottom: 50px;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 0;
+    }
+  }
+
+  .container {
+    max-width: $container_width;
+    margin: auto;
+    padding-right: env(safe-area-inset-right);
+    padding-left: env(safe-area-inset-left);
+
+    &.pb {
+      padding-bottom: 60px;
+    }
+
+    &.centered {
+      max-width: 700px;
+      margin: auto;
+    }
+
+    a {
+      color: $color_gold_dark_visited;
+      text-decoration: none;
+      &:visited {
+        color: $color_gold_dark_visited;
+      }
+    }
+
+    @include for-tablet-landscape-up {
+      padding-left: 80px;
+      padding-right: 80px;
+    }
+
+    @include for-tablet-landscape-down {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+
+    @include for-phone-only {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+}
+
+.clear {
+  clear: both;
+}
+
+ul.skills {
+  padding: 0;
+  li {
+    display: inline-block;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    padding: 4px 8px;
+    background: $background_beige_dark;
+    font-size: 0.8em;
+    border-radius: 3px;
+  }
+}

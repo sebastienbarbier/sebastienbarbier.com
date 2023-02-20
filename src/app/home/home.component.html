@@ -1,20 +1,60 @@
-<div class="route" style="padding-top: 0;">
-
-  <div class="container-fluid block">
+<div class="wrapper">
+  <div class="container">
     <header id="home">
-      <img
-        class="avatar"
-        src="/assets/images/ressources/sebastienbarbier_profile_256.jpg"
-        srcset="/assets/images/ressources/sebastienbarbier_profile_256.jpg 256w,
-                /assets/images/ressources/sebastienbarbier_profile_512.jpg 512w,
-                /assets/images/ressources/sebastienbarbier_profile_1024.jpg 1024w,"
-        alt="Sébastien Barbier profile picture" />
-        <div>
-          <p><span class="hi">Hi 👋</span><br/>
-            <span class="name">My name is <strong>Sébastien Barbier</strong></span><br/>
-              I am a <strong>cloud software architect</strong> based in <strong>Zurich Switzerland 🇨🇭</strong>.</p>
-        </div>
+      <h1>Hi, my name is Sébastien,<br/>I am a full-stack developer with over twelve years of work experience.</h1>
+      <ul>
+        <li><a href="https://twitter.com/SebBarbier" role="button"><img src="/assets/images/logos/twitter_logo_gold.svg" alt="Twitter logo" /></a><li>
+        <li><a href="https://github.com/sebastienbarbier/" role="button"><img src="/assets/images/logos/github_logo_gold.svg" alt="Github logo" /></a><li>
+        <li><a href="https://www.linkedin.com/in/sebbarbier/" role="button"><img src="/assets/images/logos/linkedin_logo_gold.svg" alt="Linkedin logo" /></a><li>
+        <li><a href="https://instagram.com/sebastienbarbier/" role="button"><img src="/assets/images/logos/instagram_logo_gold.svg" alt="Instagram logo" /></a><li>
+        <li><a routerLink="/contact" role="button" class="btn small">More</a><li>
+      </ul>
     </header>
-  </div>
 
+    <h2>Personal projects</h2>
+    <ul class="projects">
+      <li>
+        <div class="thumbnail">
+          <img src="/assets/images/seven23/screens/mini-browser-transactions.png" alt="" />
+        </div>
+        <h3><small>2011 - Present</small> Seven23</h3>
+        <p>Fully manual budget app to track personal expenses. Completely <strong>opensource</strong>, with <strong>privacy by design</strong>.</p>
+        <ul class="skills">
+          <li>React.js</li>
+          <li>Django</li>
+          <li>Material-ui</li>
+          <li>Next.js</li>
+        </ul>
+        <a routerLink="/works/seven23" role="button">More about it</a>
+      </li>
+      <li>
+        <div class="thumbnail">
+          <img src="/assets/images/fromedwin/macbook-status-sebastienbarbier.png" alt=""/>
+        </div>
+        <h3><small>2022 - Present</small> FromEdwin</h3>
+        <p><strong>Opinionated no code monitoring tool</strong> for web projects.</p>
+        <ul class="skills">
+          <li>Django</li>
+          <li>Tailwind.css</li>
+        </ul>
+        <a routerLink="/works/fromedwin" role="button">More about it</a>
+      </li>
+    </ul>
+    <a routerLink="/works" role="button" class="btn centered mt mb">See more projects</a>
+  </div>
+  <section>
+    <div class="container">
+      <h2>We worked together</h2>
+
+      <ul class="logos">
+        <li><img src="/assets/images/sap/sap.svg" /></li>
+        <li><img src="/assets/images/chefclub/chefclub-logo.png" /></li>
+        <li><img src="/assets/images/mozilla/mozilla_logo.svg" /></li>
+        <li><img src="/assets/images/mila/logo_02_blue.png" /></li>
+      </ul>
+
+      <p class="centered">Learn more about my past experiences through <a routerLink="/resume">my resume</a>.</p>
+    </div>
+  </section>
+  <route-footer></route-footer>
 </div>

@@ -1,6 +1,9 @@
+/////////////////////////////////////
+// Open Sans Font
+/////////////////////////////////////
 @font-face {
     font-family: 'Open Sans';
-    src: url('../fonts/OpenSans-Light.ttf') format('truetype');
+    src: url('../fonts/OpenSans/OpenSans-Light.ttf') format('truetype');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -8,7 +11,7 @@
 
 @font-face {
     font-family: 'Open Sans';
-    src: url('../fonts/OpenSans-LightItalic.ttf') format('truetype');
+    src: url('../fonts/OpenSans/OpenSans-LightItalic.ttf') format('truetype');
     font-weight: 300;
     font-style: italic;
     font-display: swap;
@@ -16,7 +19,7 @@
 
 @font-face {
     font-family: 'Open Sans';
-    src: url('../fonts/OpenSans-Regular.ttf') format('truetype');
+    src: url('../fonts/OpenSans/OpenSans-Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -24,7 +27,7 @@
 
 @font-face {
     font-family: 'Open Sans';
-    src: url('../fonts/OpenSans-Italic.ttf') format('truetype');
+    src: url('../fonts/OpenSans/OpenSans-Italic.ttf') format('truetype');
     font-weight: 400;
     font-style: italic;
     font-display: swap;
@@ -32,7 +35,7 @@
 
 @font-face {
     font-family: 'Open Sans';
-    src: url('../fonts/OpenSans-SemiBold.ttf') format('truetype');
+    src: url('../fonts/OpenSans/OpenSans-SemiBold.ttf') format('truetype');
     font-weight: 600;
     font-style: normal;
     font-display: swap;
@@ -40,7 +43,7 @@
 
 @font-face {
     font-family: 'Open Sans';
-    src: url('../fonts/OpenSans-SemiBoldItalic.ttf') format('truetype');
+    src: url('../fonts/OpenSans/OpenSans-SemiBoldItalic.ttf') format('truetype');
     font-weight: 600;
     font-style: italic;
     font-display: swap;
@@ -48,7 +51,7 @@
 
 @font-face {
     font-family: 'Open Sans';
-    src: url('../fonts/OpenSans-Bold.ttf') format('truetype');
+    src: url('../fonts/OpenSans/OpenSans-Bold.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
@@ -56,7 +59,7 @@
 
 @font-face {
     font-family: 'Open Sans';
-    src: url('../fonts/OpenSans-BoldItalic.ttf') format('truetype');
+    src: url('../fonts/OpenSans/OpenSans-BoldItalic.ttf') format('truetype');
     font-weight: 700;
     font-style: italic;
     font-display: swap;
@@ -64,7 +67,7 @@
 
 @font-face {
     font-family: 'Open Sans';
-    src: url('../fonts/OpenSans-ExtraBold.ttf') format('truetype');
+    src: url('../fonts/OpenSans/OpenSans-ExtraBold.ttf') format('truetype');
     font-weight: 800;
     font-style: normal;
     font-display: swap;
@@ -72,8 +75,173 @@
 
 @font-face {
     font-family: 'Open Sans';
-    src: url('../fonts/OpenSans-ExtraBoldItalic.ttf') format('truetype');
+    src: url('../fonts/OpenSans/OpenSans-ExtraBoldItalic.ttf') format('truetype');
     font-weight: 800;
     font-style: italic;
     font-display: swap;
+}
+
+@font-face {
+  font-family: "Open Sans Variable";
+  src: url("../fonts/OpenSans/OpenSans-VariableFont_wdth,wght.ttf") format("truetype-variations");
+  font-weight: 125 950;
+  font-stretch: 75% 125%;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Open Sans Variable";
+  src: url("../fonts/OpenSans/OpenSans-Italic-VariableFont_wdth,wght.ttf") format("truetype-variations");
+  font-weight: 125 950;
+  font-stretch: 75% 125%;
+  font-style: italic;
+}
+
+/////////////////////////////////////
+// Source serif 4
+/////////////////////////////////////
+
+@font-face {
+  font-family: "Source Serif";
+  src: url("../fonts/SourceSerif4/SourceSerif4-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Serif";
+  src: url("../fonts/SourceSerif4/SourceSerif4-BlackItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Serif";
+  src: url("../fonts/SourceSerif4/SourceSerif4-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Serif";
+  src: url("../fonts/SourceSerif4/SourceSerif4-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Serif";
+  src: url("../fonts/SourceSerif4/SourceSerif4-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Serif";
+  src: url("../fonts/SourceSerif4/SourceSerif4-ExtraBoldItalic.ttf") format("truetype");
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Serif";
+  src: url("../fonts/SourceSerif4/SourceSerif4-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Serif";
+  src: url("../fonts/SourceSerif4/SourceSerif4-ExtraLightItalic.ttf") format("truetype");
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Serif";
+  src: url("../fonts/SourceSerif4/SourceSerif4-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Serif";
+  src: url("../fonts/SourceSerif4/SourceSerif4-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Serif";
+  src: url("../fonts/SourceSerif4/SourceSerif4-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Serif";
+  src: url("../fonts/SourceSerif4/SourceSerif4-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Serif";
+  src: url("../fonts/SourceSerif4/SourceSerif4-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Serif";
+  src: url("../fonts/SourceSerif4/SourceSerif4-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Serif";
+  src: url("../fonts/SourceSerif4/SourceSerif4-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Serif";
+  src: url("../fonts/SourceSerif4/SourceSerif4-SemiBoldItalic.ttf") format("truetype");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: "Source Serif Variable";
+  src: url("../fonts/SourceSerif4/SourceSerif4-VariableFont_opsz,wght.ttf") format("truetype-variations");
+  font-weight: 125 950;
+  font-stretch: 75% 125%;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Source Serif Variable";
+  src: url("../fonts/SourceSerif4/SourceSerif4-VariableFont_opsz,wght.ttf") format("truetype-variations");
+  font-weight: 125 950;
+  font-stretch: 75% 125%;
+  font-style: italic;
 }
