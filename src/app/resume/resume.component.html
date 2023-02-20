@@ -83,17 +83,23 @@
             {{ experience.location }}</p>
             <div class="description" [innerHTML]="experience.positions[0].description | markdown">
             </div>
+            <ul class="images" *ngIf="experience.positions[0].images">
+              <li *ngFor="let image of experience.positions[0].images;"><img src="{{ image }}" /></li>
+            </ul>
           </ng-container>
 
           <ng-container *ngIf="experience.positions.length > 1">
             <p><strong>{{ experience.name }} </strong></p>
             <p class="date_and_location">{{ experience.type }} • {{ experience.positions|duration }}<br/>{{ experience.location }}</p>
             <ul class="experience">
-              <li *ngFor="let position of experience.positions;">
+              <li class="dot" *ngFor="let position of experience.positions;">
                 <p><strong>{{ position.title }}</strong></p>
                 <p class="date_and_location">{{ position.date.start | date: 'MMMM YYYY' }} - {{ position.date.end | date: 'MMMM YYYY' }} • {{ position|duration}}</p>
                 <div class="description" [innerHTML]="position.description | markdown">
                 </div>
+                <ul class="images" *ngIf="position.images">
+                  <li *ngFor="let image of experience.positions[0].images;"><img src="{{ image }}" /></li>
+                </ul>
               </li>
             </ul>
           </ng-container>

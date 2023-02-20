@@ -43,7 +43,12 @@ Responsible for the following tasks:
         },
         description: `I help startups and tech companies to build solutions using the latest web technologies. Having a full-stack profile makes it easy to integrate any project, but I particularly enjoy and perform on front-end problematics.
 
-Main clients: **Mila AG**, **Mozilla**, and **Chefclub**.`,
+Main clients: **Chefclub**, **Mozilla**, and **Mila AG**.`,
+        images: [
+          '/assets/images/chefclub/chefclub-logo.png',
+          '/assets/images/mozilla/mozilla_logo.svg',
+          '/assets/images/mila/logo_02_blue.png',
+        ]
       }],
     },
     {

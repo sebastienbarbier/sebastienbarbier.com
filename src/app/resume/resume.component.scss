@@ -62,9 +62,10 @@ ul.experiences {
     aside + div {
       flex-grow: 1;
     }
-    ul {
+    ul.experience {
       padding: 0;
     }
+
     p {
       margin-top: 0;
       margin-bottom: 0;
@@ -75,16 +76,14 @@ ul.experiences {
       }
 
     }
-
     // Styling of sublist with gold timeline and dot styling
     $left_padding: -52px;
 
-    li {
+    li.dot {
       padding-top: 10px;
       padding-bottom: 0;
       list-style: none;
       position: relative;
-
       @include for-phone-only {
         padding-left: 20px;
       }
@@ -118,6 +117,21 @@ ul.experiences {
       // Disable last row
       &:last-of-type:after {
         display: none;
+      }
+    }
+  }
+
+  // Galery for resume
+  ul.images {
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    li {
+      list-style: none !important;
+      padding: 0 18px 0 0;
+      img {
+        width: 60px;
+        filter: grayscale(100%);
       }
     }
   }
