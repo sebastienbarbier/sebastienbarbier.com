@@ -3,17 +3,24 @@
 header {
   display: flex;
   flex-direction: column;
-  min-height: 50vh;
   align-items: align-items;
   justify-content: center;
-  margin-bottom: 180px;
+
+  min-height: 100vh;
 
   @include for-tablet-landscape-down {
-    margin-bottom: 100px;
+    min-height: auto;
+    padding-top: 100px;
+    padding-bottom: 80px;
   }
 
   h1 {
     padding-bottom: 0;
+
+
+    @include for-desktop-down {
+      font-size: 3.5em;
+    }
 
     @include for-tablet-landscape-down {
       font-size: 3em;
