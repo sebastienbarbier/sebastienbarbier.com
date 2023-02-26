@@ -24,7 +24,10 @@ See for sample https://raw.githubusercontent.com/favoloso/conventional-changelog
 ## [2.0.1] - 2023-02-20
 ### ✨ Feature
 - Add missing sitemap link to robots.txt (#56)
+- Improve SEO (#59)
+### 🐛 Bug Fixes
 - Fix header alignment with text on mobile (#57)
+### 🏗 Chore
 - Remove duplicated code with different styling (#58)
 
 ## [2.0.0] - 2023-02-20
