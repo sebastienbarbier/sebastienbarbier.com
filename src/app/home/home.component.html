@@ -12,49 +12,11 @@
     </header>
 
     <h2>Personal projects</h2>
-    <ul class="projects">
-      <li>
-        <div class="thumbnail">
-          <img src="/assets/images/seven23/screens/mini-browser-transactions.png" alt="" />
-        </div>
-        <h3><small>2011 - Present</small> Seven23</h3>
-        <p>Fully manual budget app to track personal expenses. Completely <strong>opensource</strong>, with <strong>privacy by design</strong>.</p>
-        <ul class="skills">
-          <li>React.js</li>
-          <li>Django</li>
-          <li>Material-ui</li>
-          <li>Next.js</li>
-        </ul>
-        <a routerLink="/works/seven23" role="button">More about it</a>
-      </li>
-      <li>
-        <div class="thumbnail">
-          <img src="/assets/images/fromedwin/macbook-status-sebastienbarbier.png" alt=""/>
-        </div>
-        <h3><small>2022 - Present</small> FromEdwin</h3>
-        <p><strong>Opinionated no code monitoring tool</strong> for web projects.</p>
-        <ul class="skills">
-          <li>Django</li>
-          <li>Tailwind.css</li>
-        </ul>
-        <a routerLink="/works/fromedwin" role="button">More about it</a>
-      </li>
-    </ul>
+
+    <app-projects></app-projects>
+
     <a routerLink="/works" role="button" class="btn centered mt mb">See more projects</a>
   </div>
-  <section>
-    <div class="container">
-      <h2>We worked together</h2>
-
-      <ul class="logos">
-        <li><img src="/assets/images/sap/sap.svg" /></li>
-        <li><img src="/assets/images/chefclub/chefclub-logo.png" /></li>
-        <li><img src="/assets/images/mozilla/mozilla_logo.svg" /></li>
-        <li><img src="/assets/images/mila/logo_02_blue.png" /></li>
-      </ul>
-
-      <p class="centered">Learn more about my past experiences through <a routerLink="/resume">my resume</a>.</p>
-    </div>
-  </section>
+  <app-logos></app-logos>
   <route-footer></route-footer>
 </div>

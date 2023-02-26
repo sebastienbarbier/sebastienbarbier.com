@@ -12,7 +12,7 @@ import { FromedwinComponent } from './fromedwin/fromedwin.component';
   declarations: [
     WorksComponent,
     Seven23Component,
-    FromedwinComponent
+    FromedwinComponent,
   ],
   imports: [
     CommonModule,
