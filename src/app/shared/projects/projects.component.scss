@@ -1,0 +1,60 @@
+@import '../../../assets/scss/variables';
+
+ul.projects {
+  margin: 40px 0 0 0;
+  padding: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  // ul.projects has ngClass for quinconce attributs to add spacing on top of one column
+  &.quinconce {
+    & > li:nth-of-type(odd) {
+      @include for-tablet-landscape-up {
+        margin-top: 100px;
+      }
+    }
+  }
+
+  & > li {
+    width: 100%;
+    @include for-tablet-landscape-up {
+      width: 45%;
+    }
+
+    position: relative;
+    list-style: none;
+    margin: 0px 0 60px;
+    padding: 10px 0px;
+
+    .thumbnail {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: $background_beige_dark;
+    }
+
+    @include for-tablet-landscape-up {
+      h3, p, a, ul {
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+    }
+
+    img {
+      max-height: 300px;
+      max-width: 100%;
+    }
+
+    a {
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    ul {
+      margin-bottom: 8px;
+    }
+  }
+}
