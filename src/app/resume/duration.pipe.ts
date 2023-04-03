@@ -13,7 +13,11 @@ export class DurationPipe implements PipeTransform {
 
     let duration = 0;
     position_list.forEach((position: any) => {
-      duration = duration + (position.date.end.getTime() + 1000 * 60 * 60 * 24 - position.date.start.getTime());
+      let dateEnd = new Date().getTime()
+      if (position.date.end) {
+        dateEnd = position.date.end.getTime()
+      }
+      duration = duration + (dateEnd + 1000 * 60 * 60 * 24 - position.date.start.getTime());
     });
 
     // Display from duration in millisecond a string with x years and y months
