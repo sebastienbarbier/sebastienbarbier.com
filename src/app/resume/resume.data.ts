@@ -1,6 +1,19 @@
 export default {
   "experiences": [
     {
+      name: 'Self employed',
+      location: 'Zurich, Switzerland',
+      type: 'Full-time',
+      logo: '/assets/images/sprb/sebastienbarbier_logo.png',
+      positions: [{
+        title: 'Full-stack Developer',
+        date: {
+         start: new Date('August 01, 2021'),
+        },
+        description: `On August 2021, I left my position at SAP to dedicate time studying blockchain technologies and solutions to bootstraps some ideas as projects. I learned a lot about Defi and NFTs, while in the mean time building tools that I would own and wanted to use for myself. Feeling solid technically, my main challenge goes around marketing and being able to provide a great user experience.`,
+      }],
+    },
+    {
       name: 'SAP',
       url: 'sap.com',
       location: 'Zurich, Switzerland',

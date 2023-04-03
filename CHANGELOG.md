@@ -21,7 +21,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 See for sample https://raw.githubusercontent.com/favoloso/conventional-changelog-emoji/master/CHANGELOG.md
 -->
 
-## [2.0.1] - 2023-02-20
+## [2.0.1] - 2023-02-26
 ### ✨ Feature
 - Add missing sitemap link to robots.txt (#56)
 - Improve SEO (#59)
