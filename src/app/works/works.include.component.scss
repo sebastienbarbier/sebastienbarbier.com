@@ -1,0 +1,94 @@
+
+@import '../../assets/scss/variables';
+
+h3, h2 {
+  clear: both;
+}
+
+img {
+  max-width: 100%;
+}
+
+
+@include for-tablet-landscape-up {
+  .container {
+    display: grid;
+    gap: 10px;
+    align-items: center;
+
+    h1 {
+      grid-column: 1 / span 4;
+      grid-row: 1;
+    }
+
+    h1 + div {
+      grid-column: 2 / span 3;
+      grid-row: 2;
+      margin: 0;
+    }
+
+    p + dl {
+      grid-column: 1 / span 1;
+      grid-row: 2 / span 2;
+    }
+
+    div.two_tablets_two_mobiles {
+      grid-row: 3;
+      grid-column: 1 / span 4;
+    }
+
+    div.full_stack {
+      grid-row: 5;
+      grid-column: 1 / span 4;
+
+      display: grid;
+
+      max-width: 800px;
+      margin: auto;
+    }
+  }
+}
+
+dl {
+  margin-right: 80px;
+
+  dt {
+    font-weight: bold;
+    margin-bottom: 0.2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    @include for-tablet-landscape-down {
+      text-align: left;
+      grid-row: 1;
+    }
+  }
+  dd {
+    margin-left: 0;
+    margin-bottom: 2em;
+    opacity: 0.8;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    @include for-tablet-landscape-down {
+      text-align: left;
+    }
+
+    .skills {
+      padding-top: 2px;
+    }
+  }
+  dt, dd {
+    font-size: 0.9em;
+  }
+  ul {
+    padding: 0;
+  }
+}
+
+h1 + div + dl {
+  text-align: right;
+
+}
+
