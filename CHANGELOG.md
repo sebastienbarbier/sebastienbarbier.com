@@ -24,7 +24,7 @@ See for sample https://raw.githubusercontent.com/favoloso/conventional-changelog
 ## [2.0.3] - 2023-04-12
 ### 🛠 Improvements
 - Improve responsiveness and styling (#66)
-- Improve content (#65)
+- Minor changes in footer (#65)
 ### 🔒 Security
 - Security update (#64)
 
