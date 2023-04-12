@@ -21,11 +21,18 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 See for sample https://raw.githubusercontent.com/favoloso/conventional-changelog-emoji/master/CHANGELOG.md
 -->
 
+## [2.0.3] - 2023-04-12
+### 🛠 Improvements
+- Improve responsiveness and styling (#66)
+- Improve content (#65)
+### 🔒 Security
+- Security update (#64)
+
 ## [2.0.2] - 2023-04-03
 ### 🛠 Improvements
-- Add current position in resume
+- Add current position in resume (#--)
 ### 🔒 Security
-- Security update
+- Security update (#--)
 
 ## [2.0.1] - 2023-02-26
 ### ✨ Feature
