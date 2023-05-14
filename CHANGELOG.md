@@ -25,7 +25,9 @@ See for sample https://raw.githubusercontent.com/favoloso/conventional-changelog
 ### 🛠 Improvements
 - Fix typos (#68) 
 - Improve performance based on lighthouse reports (#69)
-- Improve SEO (#71) 
+- Improve SEO (#71)
+### 🔒 Security
+- Bump engine.io and socket.io (#70) 
 
 ## [2.0.3] - 2023-04-12
 ### 🛠 Improvements
