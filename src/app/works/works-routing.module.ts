@@ -19,12 +19,12 @@ const routes: Routes = [
   {
     path: 'seven23',
     component: Seven23Component,
-    data: { title: 'Projects Seven23', description: DESCRIPTION.seven23, state: 'seven23' },
+    data: { title: 'Seven23', description: DESCRIPTION.seven23, state: 'seven23' },
   },
   {
     path: 'fromedwin',
     component: FromedwinComponent,
-    data: { title: 'Projects FromEdwin', description: DESCRIPTION.fromedwin, state: 'fromedwin' },
+    data: { title: 'FromEdwin', description: DESCRIPTION.fromedwin, state: 'fromedwin' },
   }
 ];
 

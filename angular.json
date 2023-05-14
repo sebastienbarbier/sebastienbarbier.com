@@ -17,7 +17,22 @@
             "tsConfig": "src/tsconfig.app.json",
             "polyfills": "src/polyfills.ts",
             "assets": [
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "keybase.txt",
+                "input": "static/en",
+                "output": "/"
+              },
+              {
+                "glob": "robots.txt",
+                "input": "static/en",
+                "output": "/"
+              },
+              {
+                "glob": "sitemap.xml",
+                "input": "static/en",
+                "output": "/"
+              },
             ],
             "styles": [
               "src/styles.scss"
@@ -88,7 +103,22 @@
               "src/styles.scss"
             ],
             "assets": [
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "keybase.txt",
+                "input": "static/en",
+                "output": "/"
+              },
+              {
+                "glob": "robots.txt",
+                "input": "static/en",
+                "output": "/"
+              },
+              {
+                "glob": "sitemap.xml",
+                "input": "static/en",
+                "output": "/"
+              },
             ]
           }
         },

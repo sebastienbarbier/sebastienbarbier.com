@@ -7,11 +7,11 @@ export function _(str: string) {
 }
 
 const DESCRIPTION = {
-  'home': `Hi, my name is Sébastien, I am a full-stack developer with over twelve years of work experience. I am currently based in Zurich Switzerland, and work on developing my projects Seven23 and FromEdwin. I worked with SAP, Chefclub, Mozilla, and Mila AG. This website present my work.`,
+  'home': `Welcome on Sebastien Barbier's personnal portfolio. He is a software engineer based in Zurich Switzerland and worked as a full-stack web developer for companies like SAP, Chefclub, Mozilla, or Mila. Sebastien Barbier now working as a freelance consultant while developing its own products as an independant solo entrepreneur. His latest projects are Seven23.io or FromEdwin.com.`,
   'resume': `Short resume of my past experiences, introducing technologies I like, my work experience, education, and conferences I attended.`,
   'contact': `You can reach to me by email or using any of my social network account. Best is probably twitter.`,
   'resources': `Set of resources which might be useful to create content and communicate about myself. I mostly use this as a way to quickly access some assets when not at home.`,
-  'legal': `Authos of this website is Sebastien Barbier. It is hosted by OVH. Code is under licence MIT, and its content under creative commons.`,
+  'legal': `Authors of this website is Sebastien Barbier. It is hosted by OVH. Code is under licence MIT, and its content under creative commons.`,
 };
 
 // State is use to bind animation
