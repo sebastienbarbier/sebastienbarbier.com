@@ -10,15 +10,6 @@
   <loc>https://sebastienbarbier.com</loc>
 </url>
 <url>
-  <loc>https://sebastienbarbier.com/contact/</loc>
-</url>
-<url>
-  <loc>https://sebastienbarbier.com/legal/</loc>
-</url>
-<url>
-  <loc>https://sebastienbarbier.com/resources/</loc>
-</url>
-<url>
   <loc>https://sebastienbarbier.com/works/</loc>
 </url>
 <url>
@@ -29,5 +20,14 @@
 </url>
 <url>
   <loc>https://sebastienbarbier.com/resume/</loc>
+</url>
+<url>
+  <loc>https://sebastienbarbier.com/contact/</loc>
+</url>
+<url>
+  <loc>https://sebastienbarbier.com/resources/</loc>
+</url>
+<url>
+  <loc>https://sebastienbarbier.com/legal/</loc>
 </url>
 </urlset>
