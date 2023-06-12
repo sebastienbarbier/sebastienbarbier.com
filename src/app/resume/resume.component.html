@@ -79,9 +79,9 @@
           <ng-container *ngIf="experience.positions.length == 1">
             <p><strong>{{ experience.positions[0].title }}</strong><br/>
             {{ experience.name }} • {{ experience.type }}</p>
-            <p *ngIf="experience.positions[0].date.end" class="date_and_location">{{ experience.positions[0].date.start|date: 'MMMM YYYY' }} - {{ experience.positions[0].date.end|date: 'MMMM YYYY' }} • {{ experience.positions[0]|language: 'typescript'|duration }}<br/>
+            <p *ngIf="experience.positions[0].date.end" class="date_and_location">{{ experience.positions[0].date.start|date: 'MMMM YYYY' }} - {{ experience.positions[0].date.end|date: 'MMMM YYYY' }} • {{ experience.positions[0]|duration }}<br/>
             {{ experience.location }}</p>
-            <p *ngIf="!experience.positions[0].date.end" class="date_and_location">{{ experience.positions[0].date.start|date: 'MMMM YYYY' }} - Present • {{ experience.positions[0]|language: 'typescript'|duration }}<br/>
+            <p *ngIf="!experience.positions[0].date.end" class="date_and_location">{{ experience.positions[0].date.start|date: 'MMMM YYYY' }} - Present • {{ experience.positions[0]|duration }}<br/>
             {{ experience.location }}</p>
             <div class="description" [innerHTML]="experience.positions[0].description | markdown">
             </div>
