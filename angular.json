@@ -200,7 +200,6 @@
       }
     }
   },
-  "defaultProject": "sebastienbarbier",
   "cli": {
     "warnings": {
       "typescriptMismatch": false
