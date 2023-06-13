@@ -21,11 +21,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 See for sample https://raw.githubusercontent.com/favoloso/conventional-changelog-emoji/master/CHANGELOG.md
 -->
 
-## [2.1.0] - 2023-05-DD
+## [2.1.0] - 2023-06-DD
 ### 🛠 Improvements
 - Fix typos (#68) 
 - Improve performance based on lighthouse reports (#69)
 - Improve SEO (#71)
+- Update dependencies (#74)
 ### 🔒 Security
 - Bump engine.io and socket.io (#70) 
 
