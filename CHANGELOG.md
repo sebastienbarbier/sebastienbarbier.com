@@ -27,6 +27,7 @@ See for sample https://raw.githubusercontent.com/favoloso/conventional-changelog
 - Improve performance based on lighthouse reports (#69)
 - Improve SEO (#71)
 - Update dependencies (#74)
+- Update resume (#75)
 ### 🔒 Security
 - Bump engine.io and socket.io (#70) 
 
