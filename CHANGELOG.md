@@ -21,7 +21,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 See for sample https://raw.githubusercontent.com/favoloso/conventional-changelog-emoji/master/CHANGELOG.md
 -->
 
-## [2.1.0] - 2023-06-DD
+## [2.1.0] - 2023-06-16
 ### 🛠 Improvements
 - Fix typos (#68) 
 - Improve performance based on lighthouse reports (#69)
