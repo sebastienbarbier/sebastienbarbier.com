@@ -1,0 +1,20 @@
+@media print {
+  /* All your print styles go here */
+  nav,
+  footer {
+    display: none !important;
+  }
+
+  .wrapper {
+    position: relative !important;
+  }
+
+  header a.logo {
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  input#navigation + label {
+    display: none !important;
+  }
+}

@@ -8,7 +8,7 @@ export function _(str: string) {
 
 const DESCRIPTION = {
   'home': `Welcome on Sebastien Barbier's personnal portfolio. He is a software engineer based in Zurich Switzerland and worked as a full-stack web developer for companies like SAP, Chefclub, Mozilla, or Mila. Sebastien Barbier now working as a freelance consultant while developing its own products as an independant solo entrepreneur. His latest projects are Seven23.io or FromEdwin.com.`,
-  'resume': `Short resume of my past experiences, introducing technologies I like, my work experience, education, and conferences I attended.`,
+  'resume': `Working as a Software Engineer, this is a short resume of my past experiences, introducing technologies I like, my work experiences, educations, and conferences I attended.`,
   'contact': `You can reach to me by email or using any of my social network account. Best is probably twitter.`,
   'resources': `Set of resources which might be useful to create content and communicate about myself. I mostly use this as a way to quickly access some assets when not at home.`,
   'legal': `Authors of this website is Sebastien Barbier. It is hosted by OVH. Code is under licence MIT, and its content under creative commons.`,

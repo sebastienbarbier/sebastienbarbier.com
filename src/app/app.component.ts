@@ -80,11 +80,11 @@ export class AppComponent implements OnInit {
       }
       // Start loading animation on menu icon
       if (event instanceof RouteConfigLoadStart && !this.hideMenuAnimation) {
-          document.getElementById('navigation__button')?.classList.add('isLoading');
+          this._document.getElementById('navigation__button')?.classList.add('isLoading');
       }
       // Stop loading animation on menu icon
       if (event instanceof RouteConfigLoadEnd && !this.hideMenuAnimation) {
-        document.getElementById('navigation__button')?.classList.remove('isLoading');
+        this._document.getElementById('navigation__button')?.classList.remove('isLoading');
       }
       if (event instanceof NavigationEnd) {
 
@@ -113,7 +113,7 @@ export class AppComponent implements OnInit {
          *
          **/
         const SCROLL_PX_TRIGGER_HEADER_ANIMATION = 40;
-        const wrappers = document.getElementsByClassName('wrapper');
+        const wrappers = this._document.getElementsByClassName('wrapper');
         if (wrappers.length != 0) {
           const element = wrappers[wrappers.length - 1];
 
