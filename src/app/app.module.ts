@@ -19,7 +19,6 @@ import { environment } from '../environments/environment';
 import { appRoutes } from './app.routes';
 
 import * as Sentry from '@sentry/browser';
-
 @Injectable()
 export class SentryErrorHandler implements ErrorHandler {
   constructor() {}

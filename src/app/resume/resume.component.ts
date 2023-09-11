@@ -46,6 +46,7 @@ export class ResumeComponent implements OnInit {
   educations: any;
   years: any;
   age: number;
+  graph: any;
 
   constructor() {
     this.age = getAge(new Date(1988, 0, 31));
@@ -68,6 +69,66 @@ export class ResumeComponent implements OnInit {
 
     // List of years for conference display
     this.years = Object.keys(this.conferences).sort((a, b) => b > a ? 1 : -1);
+
+    // Radar graph to show skills
+    this.graph = {
+      radar: {
+        indicator: [
+          { name: 'HTML/CSS', max: 8 },
+          { name: 'Javascript/Typescript', max: 8 },
+          { name: 'Python', max: 8 },
+          { name: 'Library design', max: 8 },
+          { name: 'Devops', max: 8 },
+          { name: 'Project Management', max: 8 },
+          { name: 'Concept Development', max: 8 },
+        ],
+        shape: 'circle',
+        splitNumber: 8,
+        axisName: {
+          color: 'rgb(217, 151, 0)'
+        },
+        splitLine: {
+          lineStyle: {
+            color: [
+              'rgba(217, 151, 0, 0.1)',
+              'rgba(217, 151, 0, 0.2)',
+              'rgba(217, 151, 0, 0.2)',
+              'rgba(217, 151, 0, 0.4)',
+              'rgba(217, 151, 0, 0.4)',
+              'rgba(217, 151, 0, 0.6)',
+              'rgba(217, 151, 0, 0.6)',
+              'rgba(217, 151, 0, 0.8)',
+              'rgba(217, 151, 0, 1)'
+            ].reverse(),
+          }
+        },
+        splitArea: {
+          show: false
+        },
+        axisLine: {
+          lineStyle: {
+            color: 'rgba(217, 151, 0, 0.5)'
+          }
+        }
+      },
+      series: [
+        {
+          type: 'radar',
+          lineStyle: {
+            width: 1,
+            opacity: 0.5
+          },
+          data: [[8, 8, 6, 7, 5, 7, 7]],
+          symbol: 'none',
+          itemStyle: {
+            color: 'rgb(168, 115, 0)'
+          },
+          areaStyle: {
+            opacity: 0.1
+          }
+        }
+      ]
+    };
   }
 
   @HostBinding('@resumeTransition') '': string;
