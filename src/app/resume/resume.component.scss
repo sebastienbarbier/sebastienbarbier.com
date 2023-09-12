@@ -192,3 +192,43 @@ table {
     }
   }
 }
+
+// Radar graph with revelevant skills
+
+h2 {
+  clear: both;
+  margin-bottom: 1.2em;
+}
+
+h3 {
+  font-size: 1.2em;
+}
+
+.relevantSkills {
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 40px;
+
+  @include for-desktop-down {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .radarGraph {
+    width: 50%;
+    aspect-ratio: 16 / 9;
+    @include for-desktop-down {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      max-height: 280px;
+    }
+    @include for-phone-only {
+      aspect-ratio: 17 / 9;
+      max-height: 320px;
+    }
+  }
+}
+
