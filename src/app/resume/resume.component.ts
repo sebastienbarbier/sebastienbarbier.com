@@ -1,5 +1,6 @@
-import { Component, OnInit, HostBinding } from '@angular/core';
+import { Component, Inject, OnInit, HostBinding, PLATFORM_ID } from '@angular/core';
 import { formatDate } from '@angular/common';
+import { isPlatformBrowser } from '@angular/common';
 
 import {
   sequence,
@@ -47,8 +48,11 @@ export class ResumeComponent implements OnInit {
   years: any;
   age: number;
   graph: any;
+  isBrowser: boolean;
 
-  constructor() {
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: any
+  ) {
     this.age = getAge(new Date(1988, 0, 31));
 
     // Data are stored within a typescipt object
@@ -56,6 +60,7 @@ export class ResumeComponent implements OnInit {
     this.experiences = resume_json.experiences;
     this.educations = resume_json.educations;
     this.conferences = resume_json.conferences;
+    this.isBrowser = isPlatformBrowser(platformId);
 
     // Get list of year with array or conference for display purpose
     this.conferences = this.conferences.reduce((acc: any, conf: any) => {

@@ -28,7 +28,7 @@
 
     <div class="relevantSkills">
 
-      <div echarts [options]="graph" class="radarGraph"></div>
+      <div echarts [options]="graph" class="radarGraph" *ngIf="isBrowser"></div>
       <!-- <h3>Front-end</h3> -->
       <div>
         <h3>Javacript/Typescript</h3>
