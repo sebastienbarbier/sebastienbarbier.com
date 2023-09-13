@@ -28,7 +28,7 @@ export default {
          end: new Date('July 31, 2021'),
         },
         description: `Leveraging the newly integrated micro-frontend architecture, I contributed **designing and implementing** a **distributed in-app extension solution**, enabling seamless and secure integration for **third-party developers** directly within our web interface.
-My responsabilities also included:
+My responsibilities also included:
 - **Working in tech lead position**, **coaching** and **advising the implementation team** on all aspects which have impact on the architecture as well as advocating for simplicity and latest best practices
 - Taking on the **responsibility for development** focusing on design, coding, testing, and quality assurance of complex product features, incl. resolving complex issues within own area of expertise and supporting others in resolving issues
 - Contributing to the aligned and **consistent architecture strategy and target architecture** of product line
