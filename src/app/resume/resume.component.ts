@@ -80,18 +80,24 @@ export class ResumeComponent implements OnInit {
       radar: {
         indicator: [
           { name: 'HTML/CSS', max: 8 },
-          { name: 'Javascript/Typescript', max: 8 },
+          { name: 'Javascript Front-end', max: 8 },
           { name: 'Python', max: 8 },
           { name: 'Library design', max: 8 },
           { name: 'Devops', max: 8 },
           { name: 'Project Management', max: 8 },
           { name: 'Concept Development', max: 8 },
         ],
+        center: ['48%', '55%'],
+        radius: '60%',
         shape: 'circle',
         splitNumber: 8,
         axisName: {
-          color: 'rgb(217, 151, 0)'
+          fontSize: 12,
+          color: 'rgb(217, 151, 0)',
+          overflow: 'breakAll',
         },
+        nameGap: 15,
+        scale: true,
         splitLine: {
           lineStyle: {
             color: [

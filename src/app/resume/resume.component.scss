@@ -204,7 +204,11 @@ h3 {
   font-size: 1.2em;
 }
 
-.relevantSkills {
+h2.relevantSkills {
+  margin-bottom: 0.4em;
+}
+
+h2.relevantSkills + div {
 
   display: flex;
   flex-direction: row;
@@ -226,7 +230,7 @@ h3 {
       max-height: 280px;
     }
     @include for-phone-only {
-      aspect-ratio: 17 / 9;
+      aspect-ratio: 16 / 9;
       max-height: 320px;
     }
   }

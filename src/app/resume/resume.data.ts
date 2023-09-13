@@ -2,6 +2,7 @@ export default {
   "experiences": [
     {
       name: 'Self employed',
+      company: 'sebastienbarbier',
       location: 'Zurich, Switzerland',
       type: 'Full-time',
       logo: '/assets/images/sprb/sebastienbarbier_logo.png',
@@ -15,6 +16,7 @@ export default {
     },
     {
       name: 'SAP',
+      company: 'SAP',
       url: 'sap.com',
       location: 'Zurich, Switzerland',
       logo: '/assets/images/sap/sap.svg',
@@ -45,6 +47,7 @@ Responsible for the following tasks:
     },
     {
       name: 'Self employed',
+      company: 'sebastienbarbier',
       location: 'Chiang-Mai, Thailand. Remote work.',
       type: 'Freelance',
       logo: '/assets/images/sprb/sebastienbarbier_logo.png',
@@ -64,6 +67,7 @@ Responsible for the following tasks:
     },
     {
       name: 'Fluance AG',
+      company: 'Fluance',
       url: 'fluance.ch',
       location: 'Solothurn, Switzerland',
       type: 'Full-time',
@@ -79,6 +83,7 @@ Responsible for the following tasks:
     },
     {
       name: 'Covalia',
+      company: 'Covalia',
       location: 'Besançon, France',
       type: 'Full-time',
       logo: '/assets/images/covalia/covalia_logo.png',
@@ -93,6 +98,7 @@ Responsible for the following tasks:
     },
     {
       name: 'University of Franche-Comté',
+      company: 'University of Franche-Comté',
       url: 'univ-fcomte.fr',
       location: 'Besançon, France',
       type: 'Part-time contractor',
@@ -115,6 +121,7 @@ Responsible for the following tasks:
     },
     {
       name: 'Ionyse',
+      company: 'Ionyse',
       location: 'Besançon, France',
       type: 'Part-time then Full-time',
       logo: '/assets/images/ionyse/ionyse_logo.png',

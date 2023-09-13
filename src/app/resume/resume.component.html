@@ -24,9 +24,9 @@
     </div>
 
 
-    <h2>Relevant Skills</h2>
+    <h2 class="relevantSkills">Relevant Skills</h2>
 
-    <div class="relevantSkills">
+    <div>
 
       <div echarts [options]="graph" class="radarGraph" *ngIf="isBrowser"></div>
       <!-- <h3>Front-end</h3> -->
@@ -75,7 +75,7 @@
     <ul class="experiences">
       <li *ngFor="let experience of experiences;" class="experience">
         <aside>
-          <img [src]="experience.logo" alt="" />
+          <img [src]="experience.logo" alt="Logo from {{ experience.company }}" />
         </aside>
         <div>
           <ng-container *ngIf="experience.positions.length == 1">
