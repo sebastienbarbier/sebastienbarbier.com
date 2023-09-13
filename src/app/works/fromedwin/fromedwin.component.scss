@@ -1,9 +1,28 @@
 @import '../works.include.component';
 
-@include for-tablet-landscape-up {
-
+.gallery {
+  display: flex;
+  flex-direction: row;
+  gap: 18px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  grid-column: 1 / span 4;
+  margin-top: 40px;
   img {
-      grid-column: 1 / span 4;
-      grid-row: 3;
+    width: 75%;
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 0;
+    border: $background_beige_dark solid 8px;
+    border-radius: 6px;
+
+    @include for-tablet-landscape-down {
+      width: 80%;
+    }
+    @include for-phone-only {
+      width: 95%;
+    }
   }
 }
