@@ -31,6 +31,14 @@ div.description {
   opacity: 0.7;
   font-size: 0.8em;
   padding-bottom: 8px;
+
+  ul {
+    padding-left: 25px;
+    li {
+      list-style: disc;
+      padding-left: 2px;
+    }
+  }
 }
 
 ul.experiences {
@@ -76,7 +84,7 @@ ul.experiences {
     aside {
       display: flex;
       justify-content: center;
-      align-items: start;
+      align-items: flex-start;
       flex-shrink: 0;
       width: $asideWidth;
       margin: 10px 20px 0 0;
@@ -113,7 +121,7 @@ ul.experiences {
 
     }
     // Styling of sublist with gold timeline and dot styling
-    $left_padding: -1 * ($asideWidth / 2 + $dotLineHeight + $gap);
+    $left_padding: calc(-1 * ($asideWidth / 2 + $dotLineHeight + $gap));
 
     li.dot {
       padding-top: 10px;
@@ -145,7 +153,7 @@ ul.experiences {
         width: $lineHeight;
         position: absolute;
         top: calc(1.2em + $dotSize*2);
-        left: -74px + $dotSize / 2 - $lineHeight;
+        left: calc(-74px + $dotSize / 2 - $lineHeight);
         @include for-phone-only {
           left: 3px;
         }
