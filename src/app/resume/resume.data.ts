@@ -11,7 +11,7 @@ export default {
         date: {
          start: new Date('August 01, 2021'),
         },
-        description: `I am now embraced the exciting challenge of **crafting my own products**, commencing with **[Seven23](https://seven23.io)**, a **comprehensive manual budgeting application**, and **[FromEdwin](https://fromedwin.com)**, a sleek **monitoring platform tailored for web projects**. Simultaneously, I continue to engage in **cryptocurrency trading**, maintaining my keen interest in this dynamic market.`,
+        description: `**Crafting products** as solo-entrepreneur, commencing with **[Seven23](https://seven23.io)**, a **comprehensive manual budgeting application**, then **[FromEdwin](https://fromedwin.com)**, a sleek **monitoring platform tailored for web projects**. Simultaneously, I continue to engage in **cryptocurrency trading**, maintaining my keen interest in this dynamic market.`,
       }],
     },
     {

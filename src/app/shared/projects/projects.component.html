@@ -1,6 +1,19 @@
 <ul class="projects" [ngClass]="{'quinconce': quinconce}">
   <li>
     <div class="thumbnail">
+      <img src="/assets/images/fromedwin/fromedwin_layout.png" alt="FromEdwin screenshots"/>
+      <img src="/assets/images/fromedwin/fromedwin_favicon.svg" alt="Seven23 logo" class="logo"/>
+    </div>
+    <h3><small>2022 - Present</small> FromEdwin</h3>
+    <p><strong>Opinionated no code monitoring tool</strong> for web projects.</p>
+    <ul class="skills">
+      <li>Django</li>
+      <li>Tailwind.css</li>
+    </ul>
+    <a routerLink="/works/fromedwin" role="button">More about it</a>
+  </li>
+  <li>
+    <div class="thumbnail">
       <img src="/assets/images/seven23/seven23_layout.png" alt="Seven23 screenshots"/>
       <img src="/assets/images/seven23/seven23_logo.svg" alt="Seven23 logo" class="logo"/>
     </div>
@@ -14,17 +27,17 @@
     </ul>
     <a routerLink="/works/seven23" role="button">More about it</a>
   </li>
-  <li>
+  <li *ngIf="quinconce">
     <div class="thumbnail">
-      <img src="/assets/images/fromedwin/fromedwin_layout.png" alt="FromEdwin screenshots"/>
-      <img src="/assets/images/fromedwin/fromedwin_favicon.svg" alt="Seven23 logo" class="logo"/>
+      <img src="/assets/images/mozilla/note_thumbnail.png" alt="FromEdwin screenshots"/>
+      <img src="/assets/images/mozilla/firefox.svg" alt="Firefox logo" class="logo"/>
     </div>
-    <h3><small>2022 - Present</small> FromEdwin</h3>
-    <p><strong>Opinionated no code monitoring tool</strong> for web projects.</p>
+    <h3><small>2018</small> Notes by Firefox</h3>
+    <p><strong>A notepad for Firefox</strong>. Displays a sidebar that lets you take notes on web pages.</p>
     <ul class="skills">
-      <li>Django</li>
-      <li>Tailwind.css</li>
+      <li>Web extensions</li>
+      <li>React native</li>
     </ul>
-    <a routerLink="/works/fromedwin" role="button">More about it</a>
+    <a routerLink="/works/mozilla" role="button">More about it</a>
   </li>
 </ul>

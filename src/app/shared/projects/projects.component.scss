@@ -6,11 +6,12 @@ ul.projects {
 
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row-reverse;
   justify-content: space-between;
 
   // ul.projects has ngClass for quinconce attributs to add spacing on top of one column
   &.quinconce {
-    & > li:nth-of-type(odd) {
+    & > li:nth-of-type(even) {
       @include for-tablet-landscape-up {
         margin-top: 100px;
       }
@@ -25,13 +26,13 @@ ul.projects {
 
     position: relative;
     list-style: none;
-    margin: 0px 0 60px;
+    margin: 0px 0 0px;
     padding: 10px 0px;
 
     .thumbnail {
       width: 100%;
       display: flex;
-      justify-content: center;
+      justify-content: flex-end;
       align-items: center;
       background: $background_beige_dark;
       position: relative;
@@ -45,7 +46,7 @@ ul.projects {
         left: 11px;
         width: 40px;
         opacity: 0.05;
-        grayscale: 1;
+        filter: grayscale(100%);
         z-index: 0;
         transition: opacity 0.5s ease-in-out;
         -webkit-touch-callout: none;

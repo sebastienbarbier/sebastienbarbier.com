@@ -42,7 +42,7 @@ img {
       grid-column: 1 / span 4;
 
       display: grid;
-
+      min-width: 600px;
       max-width: 800px;
       margin: auto;
     }
