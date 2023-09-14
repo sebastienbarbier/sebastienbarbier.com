@@ -2,6 +2,7 @@
 /works
 /works/seven23
 /works/fromedwin
+/works/chefclub
 /works/mozilla
 /resources
 /legal
