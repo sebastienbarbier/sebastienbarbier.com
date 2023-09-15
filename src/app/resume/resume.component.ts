@@ -49,6 +49,7 @@ export class ResumeComponent implements OnInit {
   age: number;
   graph: any;
   isBrowser: boolean;
+  isTinyScreen: boolean;
 
   constructor(
     @Inject(PLATFORM_ID) private platformId: any
@@ -75,6 +76,15 @@ export class ResumeComponent implements OnInit {
     // List of years for conference display
     this.years = Object.keys(this.conferences).sort((a, b) => b > a ? 1 : -1);
 
+
+    this.isTinyScreen = false;
+
+    try {
+      this.isTinyScreen = window.innerWidth < 390;
+    } catch (e) {
+      // Do nothing, server rendering will use default value
+    }
+
     // Radar graph to show skills
     this.graph = {
       radar: {
@@ -88,7 +98,7 @@ export class ResumeComponent implements OnInit {
           { name: 'Concept Development', max: 8 },
         ],
         center: ['48%', '55%'],
-        radius: '60%',
+        radius: this.isTinyScreen ? '40%' :'60%',
         shape: 'circle',
         splitNumber: 8,
         axisName: {
