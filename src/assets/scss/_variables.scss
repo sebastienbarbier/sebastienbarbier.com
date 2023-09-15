@@ -7,6 +7,7 @@ $background_white: rgb(247, 247, 246);
 $background_beige: rgb(250, 248, 245);
 $background_beige_dark: rgb(242, 237, 234);
 $background_brown: rgb(31, 29, 29);
+$background_brown_light: rgba(31, 29, 29, 0.9);
 $background_eigengrau: #16161D; // Eigengrau color: https://en.wikipedia.org/wiki/Eigengrau
 
 $color_gold: rgb(219, 183, 120);
@@ -15,6 +16,8 @@ $color_gold_dark_visited: rgb(168, 115, 0);
 
 // General variables
 $font_size: 16px;
+$color_text: black;
+$color_text_light: black;
 
 // Screen Size
 
@@ -71,11 +74,3 @@ $zindex_navigation: 100;
 @mixin for-big-desktop-up {
   @media (min-width: 1800px) { @content; }
 }
-/**
- *  .class {
- *     ...
- *     @include for-phone-only {
- *        font-size: 1rem;
- *     }
- *  }
- **/

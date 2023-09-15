@@ -1,7 +1,21 @@
 <ul class="projects" [ngClass]="{'quinconce': quinconce}">
   <li>
     <div class="thumbnail">
-      <img src="/assets/images/seven23/screens/mini-browser-transactions-small.png" alt=""/>
+      <img src="/assets/images/fromedwin/fromedwin_layout.png" alt="FromEdwin screenshots"/>
+      <img src="/assets/images/fromedwin/fromedwin_favicon.svg" alt="Seven23 logo" class="logo"/>
+    </div>
+    <h3><small>2022 - Present</small> FromEdwin</h3>
+    <p><strong>Opinionated no code monitoring tool</strong> for web projects.</p>
+    <ul class="skills">
+      <li>Django</li>
+      <li>Tailwind.css</li>
+    </ul>
+    <a routerLink="/works/fromedwin" role="button">More about it</a>
+  </li>
+  <li>
+    <div class="thumbnail">
+      <img src="/assets/images/seven23/seven23_layout.png" alt="Seven23 screenshots"/>
+      <img src="/assets/images/seven23/seven23_logo.svg" alt="Seven23 logo" class="logo"/>
     </div>
     <h3><small>2011 - Present</small> Seven23</h3>
     <p>Fully manual budget app to track personal expenses. Completely <strong>opensource</strong>, with <strong>privacy by design</strong>.</p>
@@ -13,16 +27,30 @@
     </ul>
     <a routerLink="/works/seven23" role="button">More about it</a>
   </li>
-  <li>
+  <li *ngIf="quinconce">
     <div class="thumbnail">
-      <img src="/assets/images/fromedwin/macbook-status-sebastienbarbier-small.png" alt=""/>
+      <img src="/assets/images/chefclub/chefclub-thumbnail.png" alt="Chefclubs"/>
+      <img src="/assets/images/chefclub/chefclub-logo-square.png" alt="Chefclub logo" class="logo"/>
     </div>
-    <h3><small>2022 - Present</small> FromEdwin</h3>
-    <p><strong>Opinionated no code monitoring tool</strong> for web projects.</p>
+    <h3><small>2018 - 2019</small> Chefclub</h3>
+    <p>Enhancing the <strong>user experience</strong> and optimizing <strong>web performance</strong> for Chefclub's website</p>
     <ul class="skills">
       <li>Django</li>
-      <li>Tailwind.css</li>
+      <li>Vus.js</li>
     </ul>
-    <a routerLink="/works/fromedwin" role="button">More about it</a>
+    <a routerLink="/works/chefclub" role="button">More about it</a>
+  </li>
+  <li *ngIf="quinconce">
+    <div class="thumbnail">
+      <img src="/assets/images/mozilla/note_thumbnail.png" alt="Notes by Firefox screenshots"/>
+      <img src="/assets/images/mozilla/firefox.svg" alt="Firefox logo" class="logo"/>
+    </div>
+    <h3><small>2018</small> Notes by Firefox</h3>
+    <p><strong>Notes by Firefox</strong> is a simple, secure notepad extension for Firefox that lets you take notes on web pages.</p>
+    <ul class="skills">
+      <li>Web extention</li>
+      <li>React native</li>
+    </ul>
+    <a routerLink="/works/mozilla" role="button">More about it</a>
   </li>
 </ul>

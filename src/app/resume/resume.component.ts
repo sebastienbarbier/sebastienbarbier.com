@@ -1,5 +1,6 @@
-import { Component, OnInit, HostBinding } from '@angular/core';
+import { Component, Inject, OnInit, HostBinding, PLATFORM_ID } from '@angular/core';
 import { formatDate } from '@angular/common';
+import { isPlatformBrowser } from '@angular/common';
 
 import {
   sequence,
@@ -47,8 +48,12 @@ export class ResumeComponent implements OnInit {
   years: any;
   age: number;
   graph: any;
+  isBrowser: boolean;
+  isTinyScreen: boolean;
 
-  constructor() {
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: any
+  ) {
     this.age = getAge(new Date(1988, 0, 31));
 
     // Data are stored within a typescipt object
@@ -56,6 +61,7 @@ export class ResumeComponent implements OnInit {
     this.experiences = resume_json.experiences;
     this.educations = resume_json.educations;
     this.conferences = resume_json.conferences;
+    this.isBrowser = isPlatformBrowser(platformId);
 
     // Get list of year with array or conference for display purpose
     this.conferences = this.conferences.reduce((acc: any, conf: any) => {
@@ -70,23 +76,38 @@ export class ResumeComponent implements OnInit {
     // List of years for conference display
     this.years = Object.keys(this.conferences).sort((a, b) => b > a ? 1 : -1);
 
+
+    this.isTinyScreen = false;
+
+    try {
+      this.isTinyScreen = window.innerWidth < 390;
+    } catch (e) {
+      // Do nothing, server rendering will use default value
+    }
+
     // Radar graph to show skills
     this.graph = {
       radar: {
         indicator: [
           { name: 'HTML/CSS', max: 8 },
-          { name: 'Javascript/Typescript', max: 8 },
+          { name: 'Javascript Front-end', max: 8 },
           { name: 'Python', max: 8 },
           { name: 'Library design', max: 8 },
           { name: 'Devops', max: 8 },
           { name: 'Project Management', max: 8 },
           { name: 'Concept Development', max: 8 },
         ],
+        center: ['48%', '55%'],
+        radius: this.isTinyScreen ? '40%' :'60%',
         shape: 'circle',
         splitNumber: 8,
         axisName: {
-          color: 'rgb(217, 151, 0)'
+          fontSize: 12,
+          color: 'rgb(217, 151, 0)',
+          overflow: 'breakAll',
         },
+        nameGap: 15,
+        scale: true,
         splitLine: {
           lineStyle: {
             color: [

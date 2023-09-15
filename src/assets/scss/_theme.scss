@@ -8,7 +8,7 @@ html {
   background: $background_beige;
   color: $primary_text_black;
   font-weight: 400;
-  line-height: 1.4;
+  line-height: 1.6;
 
   @include sansserif;
 
@@ -190,8 +190,8 @@ a {
     background: $background_beige_dark;
     clear: both;
     .container {
-      padding-top: 35px;
-      padding-bottom: 30px;
+      padding-top: 55px;
+      padding-bottom: 50px;
     }
     .mt {
       margin-top: 50px;
@@ -259,4 +259,14 @@ ul.skills {
     font-size: 0.8em;
     border-radius: 3px;
   }
+}
+
+// *::selection {
+//   color: $color_gold;
+//   background-color: $background_brown;
+// }
+
+*::selection {
+  color: $background_brown_light;
+  background-color: $color_gold;
 }

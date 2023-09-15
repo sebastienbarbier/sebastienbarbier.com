@@ -31,31 +31,75 @@ div.description {
   opacity: 0.7;
   font-size: 0.8em;
   padding-bottom: 8px;
+
+  ul {
+    padding-left: 25px;
+    li {
+      list-style: disc;
+      padding-left: 2px;
+    }
+  }
 }
 
 ul.experiences {
   list-style: none;
   padding: 0;
 
+  $asideWidth: 80px;
+  $dotLineHeight: 2px;
+  $dotSize: 9px;
+  $lineHeight: 1px;
+  $gap: 10px;
+
   li.experience {
     margin-bottom: 20px;
     display: flex;
     flex-direction: row;
+    padding-bottom: 10px;
+    gap: $gap;
+    padding-left: 20px;
+    @include for-tablet-landscape-down {
+      padding-left: 0px;
+    }
     @include for-phone-only {
       flex-direction: column;
+      padding-left: 0px;
+      gap: 0;
+
+      &:after {
+        content: '';
+        width: 50%;
+        height: 1px;
+        background: black;
+        margin: auto;
+        opacity: 0.6;
+        position: relative;
+        top: 10px;
+      }
+
+      &:last-of-type:after {
+        display: none;
+      }
     }
-    padding-bottom: 10px;
     aside {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-shrink: 0;
+      width: $asideWidth;
       margin: 10px 20px 0 0;
       @include for-phone-only {
         padding-bottom: 20px;
+        width: $asideWidth * 2;
+        justify-content: start;
       }
       img {
-        width: 60px;
+        max-width: $asideWidth;
+        max-height: 3em;
         filter: grayscale(100%);
-
         @include for-phone-only {
-          width: 80px;
+          max-width: $asideWidth * 2;
+          max-height: auto;
         }
       }
     }
@@ -77,7 +121,7 @@ ul.experiences {
 
     }
     // Styling of sublist with gold timeline and dot styling
-    $left_padding: -52px;
+    $left_padding: calc(-1 * ($asideWidth / 2 + $dotLineHeight + $gap));
 
     li.dot {
       padding-top: 10px;
@@ -91,12 +135,13 @@ ul.experiences {
       &:before {
         content: "";
         background: $color_gold_dark_visited;
-        width: 7px;
-        height: 7px;
+        width: $dotSize;
+        height: $dotSize;
         border-radius: 50%;
         position: absolute;
         top: 1.2em;
-        left: $left_padding;
+        left: -74px;
+        // left: $left_padding;
         @include for-phone-only {
           left: 0px;
         }
@@ -105,10 +150,10 @@ ul.experiences {
         content: "";
         background: $color_gold_dark_visited;
         opacity: 0.4;
-        width: 1px;
+        width: $lineHeight;
         position: absolute;
-        top: calc(1.2em + 18px);
-        left: $left_padding + 3px;
+        top: calc(1.2em + $dotSize*2);
+        left: calc(-74px + $dotSize / 2 - $lineHeight);
         @include for-phone-only {
           left: 3px;
         }
@@ -126,6 +171,8 @@ ul.experiences {
     padding: 0;
     display: flex;
     flex-direction: row;
+    padding-bottom: 20px;
+    gap: 10px;
     li {
       list-style: none !important;
       padding: 0 18px 0 0;
@@ -204,7 +251,11 @@ h3 {
   font-size: 1.2em;
 }
 
-.relevantSkills {
+h2.relevantSkills {
+  margin-bottom: 0.4em;
+}
+
+h2.relevantSkills + div {
 
   display: flex;
   flex-direction: row;
@@ -226,7 +277,7 @@ h3 {
       max-height: 280px;
     }
     @include for-phone-only {
-      aspect-ratio: 17 / 9;
+      aspect-ratio: 16 / 9;
       max-height: 320px;
     }
   }
