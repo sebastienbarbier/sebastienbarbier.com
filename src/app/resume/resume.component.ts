@@ -103,7 +103,7 @@ export class ResumeComponent implements OnInit {
         splitNumber: 8,
         axisName: {
           fontSize: 12,
-          color: 'rgb(217, 151, 0)',
+          color: 'rgb(168, 115, 0)',
           overflow: 'breakAll',
         },
         nameGap: 15,
@@ -111,15 +111,15 @@ export class ResumeComponent implements OnInit {
         splitLine: {
           lineStyle: {
             color: [
-              'rgba(217, 151, 0, 0.1)',
-              'rgba(217, 151, 0, 0.2)',
-              'rgba(217, 151, 0, 0.2)',
-              'rgba(217, 151, 0, 0.4)',
-              'rgba(217, 151, 0, 0.4)',
-              'rgba(217, 151, 0, 0.6)',
-              'rgba(217, 151, 0, 0.6)',
-              'rgba(217, 151, 0, 0.8)',
-              'rgba(217, 151, 0, 1)'
+              'rgba(168, 115, 0, 0.1)',
+              'rgba(168, 115, 0, 0.2)',
+              'rgba(168, 115, 0, 0.2)',
+              'rgba(168, 115, 0, 0.4)',
+              'rgba(168, 115, 0, 0.4)',
+              'rgba(168, 115, 0, 0.6)',
+              'rgba(168, 115, 0, 0.6)',
+              'rgba(168, 115, 0, 0.8)',
+              'rgba(168, 115, 0, 1)'
             ].reverse(),
           }
         },
@@ -128,7 +128,7 @@ export class ResumeComponent implements OnInit {
         },
         axisLine: {
           lineStyle: {
-            color: 'rgba(217, 151, 0, 0.5)'
+            color: 'rgba(168, 115, 0, 0.5)'
           }
         }
       },
