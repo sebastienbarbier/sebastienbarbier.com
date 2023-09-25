@@ -21,12 +21,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 See for sample https://raw.githubusercontent.com/favoloso/conventional-changelog-emoji/master/CHANGELOG.md
 -->
 
-## [2.2.0] - 2023-MM-DD
+## [2.2.0] - 2023-09-15
 ### 🛠 Improvements
 - Update seven23's presentation (#77)
 - Update fromEdwin's presentation (#78)
-- Add personal's avatar on the homepage (#79)
 - Add version number in app (#80)
+- Add radar graph for resume to introduice skills (#83)
+- Update projects with better screens (#84)
 
 ## [2.1.0] - 2023-06-16
 ### 🛠 Improvements
