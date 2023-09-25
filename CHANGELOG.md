@@ -26,6 +26,7 @@ See for sample https://raw.githubusercontent.com/favoloso/conventional-changelog
 - Add contrast to resume graph to be more visible (#87)
 - Improve descrition text for resume experiences (#88)
 - Improve skill section with more precise terms (#89)
+- Make images in project clickable to full screen (#90)
 
 ## [2.2.0] - 2023-09-15
 ### 🛠 Improvements
