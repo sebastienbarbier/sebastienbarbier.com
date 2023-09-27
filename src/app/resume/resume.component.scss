@@ -271,14 +271,15 @@ h2.relevantSkills + div {
   .radarGraph {
     width: 50%;
     aspect-ratio: 16 / 9;
+    margin-bottom: 30px;
     @include for-desktop-down {
       width: 100%;
-      aspect-ratio: 16 / 9;
       max-height: 280px;
+      margin-bottom: 0px;
     }
     @include for-phone-only {
-      aspect-ratio: 16 / 9;
       max-height: 320px;
+      margin-bottom: 0px;
     }
   }
 }

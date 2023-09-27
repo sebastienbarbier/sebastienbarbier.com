@@ -11,7 +11,11 @@ export default {
         date: {
          start: new Date('August 01, 2021'),
         },
-        description: `**Crafting products** as solo-entrepreneur, commencing with **[Seven23](https://seven23.io)**, a **comprehensive manual budgeting application**, then **[FromEdwin](https://fromedwin.com)**, a sleek **monitoring platform tailored for web projects**. Simultaneously, I continue to engage in **cryptocurrency trading**, maintaining my keen interest in this dynamic market.`,
+        description: `Full time as solo-entrepreneur, focusing on **upgrading two side-projects** from PoC to MvP.
+- **Seven23.io** is a personal budget PWA, constructed with React and Django for data sync.
+- **FromEdwin.com** is a minimalist opinionated monitoring platform tailored for web projects.
+
+Both projects challenged my ability to **andle by myself a full project stack**, including front-end, back-end architecture, devops, CI/CD, testing, documentation, and communication.`,
       }],
     },
     {
@@ -57,7 +61,7 @@ My responsibilities also included:
          start: new Date('September 01, 2016'),
          end: new Date('January 31, 2020'),
         },
-        description: `I leveraged my **full-stack knowledge** to support startups and tech companies in building solutions using the latest web technologies. While being great at integrating diverse projects, I particularly enjoyed tackling **complex front-end challenges**. Notable clients I have worked with include **Chefclub**, **Mozilla**, and **Mila AG**.`,
+        description: `Leveraging my knowledge of web technologies, I was able to contribute and learn from a diverse range of projects such as **Chatbots**, **PWAs**, **web extensions**, **react-native applications**, or **web integrations** from mockups. Notable clients collaborated with includes ***Chefclub***, ***Mozilla***, and ***Mila AG***.`,
         images: [
           { src: '/assets/images/chefclub/chefclub-logo.png', alt: 'Chefclub logo'},
           { src: '/assets/images/mozilla/mozilla_logo.svg', alt: 'Mozilla logo'},
@@ -78,7 +82,7 @@ My responsibilities also included:
          start: new Date('June 01, 2014'),
          end: new Date('August 31, 2016'),
         },
-        description: 'I served as a **full-time front-end developer** on the Fluance project, **leading a team of four** in developing an application that **aggregates content from HL7 feeds** of clinics into a unified web interface. Leveraging my expertise in **AngularJS** and **jQuery**, I managed the project with **Gulp** and tested it using **Jasmine/Karma**. I prioritized **documentation**, generating it using **Dgeni**, and utilized the **SCRUM method** to ensure project success.',
+        description: 'Working as a **tech lead front-end developer** within a team of four. We **fully developed** a cross platform prototype of an interface to consult HL7 aggregated patient data within the healthcare system. The solution started with **jQuery** then transitioned to **AngularJS**. Styling was done using the **FoundationCSS** framework. Documentation, testing, and service deployment were all meticulously executed under a strict **SCRUM methodology** to guarantee project success.',
       }],
     },
     {
@@ -93,7 +97,7 @@ My responsibilities also included:
          start: new Date('September 01, 2012'),
          end: new Date('June 30, 2014'),
         },
-        description: `I joined Covalia as a **Research Engineer** to prepare for a Ph.D. in **Cloud Computing within the healthcare environment**. After 7 months, I transitioned to the existing development team as a core-developer. My primary expertise was in **Java**, and I mostly used **internal libraries** to ensure smooth project operation. My responsibilities centered around ensuring **interoperability** within the healthcare system, specifically with **HL7 and DICOM protocols**, in a **real-time environment**. Additionally, I worked with **IP Cameras (Axis)** and followed **ISO 13485 standard**. In addition to my development work, I also provided occasional **deployment** and **phone support to customers**.`,
+        description: `Part of the developing team of Covotem, a unified interface for Telemedicine, Tele-diagnostic, and Tele-consultation. My responsibilities centered around **Java development** to maintain internal libraries and interoperability in a real-time environment within the healthcare system. Our application was integrating **HL7** and **DICOM** protocols, connecting with **IP Cameras**, and following the **ISO 13485** standard. I also provided **occasional deployment** and **phone support** to customers.`,
       }],
     },
     {
@@ -116,7 +120,7 @@ My responsibilities also included:
          start: new Date('September 01, 2011'),
          end: new Date('January 31, 2012'),
         },
-        description: 'In addition to my position at Ionyse, I provided **66 hours of practical Java instruction to third-year students** at both **ISIFC** and **UFR ST**. This included delivering tutorial classes and project-based learning opportunities.',
+        description: 'Founded in parallel of our master degree a **web agency** with two fellow students. Our focus was on creating **websites** and **web applications** for small businesses, using our **custom CMS** with Python and Django framework. I had the opportunity to explore a wide range of topics, ultimately specializing in **front-end development** and pixel perfect integrations using **HTML5**, **CSS3**, and **jQuery**.',
       }],
     },
     {

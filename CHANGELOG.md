@@ -21,6 +21,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 See for sample https://raw.githubusercontent.com/favoloso/conventional-changelog-emoji/master/CHANGELOG.md
 -->
 
+## [2.2.1] - 2023-09-27
+### 🛠 Improvements
+- Add contrast to resume graph to be more visible (#87)
+- Improve descrition text for resume experiences (#88)
+- Improve skill section with more precise terms (#89)
+
 ## [2.2.0] - 2023-09-15
 ### 🛠 Improvements
 - Update seven23's presentation (#77)

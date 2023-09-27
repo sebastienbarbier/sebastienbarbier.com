@@ -1,4 +1,4 @@
-import { Component, Inject, OnInit, HostBinding, PLATFORM_ID } from '@angular/core';
+import { Component, Inject, OnInit, HostBinding, HostListener, PLATFORM_ID } from '@angular/core';
 import { formatDate } from '@angular/common';
 import { isPlatformBrowser } from '@angular/common';
 
@@ -22,6 +22,8 @@ const resumeTransition = trigger('resumeTransition', [
   transition(':leave', [
   ])
 ]);
+
+const TINY_SCREEN_SIZE = 390;
 
 // copilot generated function calculat today's age
 function getAge (birthDate: Date) {
@@ -78,32 +80,52 @@ export class ResumeComponent implements OnInit {
 
 
     this.isTinyScreen = false;
-
     try {
-      this.isTinyScreen = window.innerWidth < 390;
+      this.isTinyScreen = window.innerWidth < TINY_SCREEN_SIZE;
     } catch (e) {
       // Do nothing, server rendering will use default value
     }
 
     // Radar graph to show skills
+    this.setGraph();
+  }
+
+  ngOnInit(): void {
+  }
+
+  @HostBinding('@resumeTransition') '': string;
+  @HostListener('window:resize', ['$event'])
+
+  // Event to update skill graph on resize
+  onResize(event: any) {
+    if (event.target.innerWidth < TINY_SCREEN_SIZE && !this.isTinyScreen) {
+      this.isTinyScreen = true;
+      this.setGraph();
+    } else if (event.target.innerWidth >= TINY_SCREEN_SIZE && this.isTinyScreen) {
+      this.isTinyScreen = false;
+      this.setGraph();
+    }
+  }
+
+  setGraph() {
     this.graph = {
       radar: {
         indicator: [
           { name: 'HTML/CSS', max: 8 },
-          { name: 'Javascript Front-end', max: 8 },
-          { name: 'Python', max: 8 },
+          { name: 'Front-End', max: 8 },
+          { name: 'Back-End', max: 8 },
           { name: 'Library design', max: 8 },
           { name: 'Devops', max: 8 },
           { name: 'Project Management', max: 8 },
           { name: 'Concept Development', max: 8 },
         ],
-        center: ['48%', '55%'],
-        radius: this.isTinyScreen ? '40%' :'60%',
+        center: ['40%', '55%'],
+        radius: this.isTinyScreen ? '40%' :'65%',
         shape: 'circle',
         splitNumber: 8,
         axisName: {
           fontSize: 12,
-          color: 'rgb(217, 151, 0)',
+          color: 'rgb(168, 115, 0)',
           overflow: 'breakAll',
         },
         nameGap: 15,
@@ -111,15 +133,15 @@ export class ResumeComponent implements OnInit {
         splitLine: {
           lineStyle: {
             color: [
-              'rgba(217, 151, 0, 0.1)',
-              'rgba(217, 151, 0, 0.2)',
-              'rgba(217, 151, 0, 0.2)',
-              'rgba(217, 151, 0, 0.4)',
-              'rgba(217, 151, 0, 0.4)',
-              'rgba(217, 151, 0, 0.6)',
-              'rgba(217, 151, 0, 0.6)',
-              'rgba(217, 151, 0, 0.8)',
-              'rgba(217, 151, 0, 1)'
+              'rgba(168, 115, 0, 0.1)',
+              'rgba(168, 115, 0, 0.2)',
+              'rgba(168, 115, 0, 0.2)',
+              'rgba(168, 115, 0, 0.4)',
+              'rgba(168, 115, 0, 0.4)',
+              'rgba(168, 115, 0, 0.6)',
+              'rgba(168, 115, 0, 0.6)',
+              'rgba(168, 115, 0, 0.8)',
+              'rgba(168, 115, 0, 1)'
             ].reverse(),
           }
         },
@@ -128,7 +150,7 @@ export class ResumeComponent implements OnInit {
         },
         axisLine: {
           lineStyle: {
-            color: 'rgba(217, 151, 0, 0.5)'
+            color: 'rgba(168, 115, 0, 0.5)'
           }
         }
       },
@@ -151,10 +173,4 @@ export class ResumeComponent implements OnInit {
       ]
     };
   }
-
-  @HostBinding('@resumeTransition') '': string;
-
-  ngOnInit(): void {
-  }
-
 }
