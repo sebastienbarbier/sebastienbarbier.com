@@ -1,9 +1,9 @@
-/contact
 /works
 /works/seven23
 /works/fromedwin
 /works/chefclub
 /works/mozilla
+/resume
+/contact
 /resources
 /legal
-/resume
