@@ -20,6 +20,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 See for sample https://raw.githubusercontent.com/favoloso/conventional-changelog-emoji/master/CHANGELOG.md
 -->
+## [2.3.0] - 2023-MM-DD
+### 🛠 Improvements
+- Make images in project clickable to full screen (#90)
+### 🔒 Security
+- Security update (#92)
 
 ## [2.2.1] - 2023-09-27
 ### 🛠 Improvements
