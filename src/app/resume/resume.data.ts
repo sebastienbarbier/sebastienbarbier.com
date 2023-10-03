@@ -120,7 +120,7 @@ My responsibilities also included:
          start: new Date('September 01, 2011'),
          end: new Date('January 31, 2012'),
         },
-        description: 'Founded in parallel of our master degree a **web agency** with two fellow students. Our focus was on creating **websites** and **web applications** for small businesses, using our **custom CMS** with Python and Django framework. I had the opportunity to explore a wide range of topics, ultimately specializing in **front-end development** and pixel perfect integrations using **HTML5**, **CSS3**, and **jQuery**.',
+        description: 'In addition to my position at Ionyse, I provided **66 hours of practical Java instruction to third-year students** at both **ISIFC** and **UFR ST**. This included delivering tutorial classes and project-based learning opportunities.',
       }],
     },
     {
