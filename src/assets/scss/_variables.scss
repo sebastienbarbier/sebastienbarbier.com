@@ -32,18 +32,29 @@ $zindex_navigation: 100;
 // Mixins used in the project
 @mixin sansserif {
   font-family: 'Open Sans', Helvetica, sans-serif;
-  // If browser support variableFonts, use it
+
+  // Temporary disable variable font on firefox
+  @-moz-document url-prefix() {
+    font-family: 'Open Sans', Helvetica, sans-serif !important;
+  }
+
   @supports (font-variation-settings: "wdth" 115) {
-    font-family: 'Open Sans Variable', Helvetica, sans-serif;
+    font-family: 'Open Sans Variable', 'Open Sans', Helvetica, sans-serif;
   }
 }
 
 @mixin serif {
   font-family: 'Source Serif', Arial, serif;
   font-variation-settings: 'opsz' 24;
+
+  // Temporary disable variable font on firefox
+  @-moz-document url-prefix() {
+    font-family: 'Source Serif', Arial, serif !important;
+  }
+
   // If browser support variableFonts, use it
   @supports (font-variation-settings: "wdth" 115) {
-    font-family: 'Source Serif Variable', Arial, serif;
+    font-family: 'Source Serif Variable', 'Source Serif', Arial, serif;
   }
 }
 
