@@ -35,6 +35,10 @@ $zindex_navigation: 100;
   // If browser support variableFonts, use it
   @supports (font-variation-settings: "wdth" 115) {
     font-family: 'Open Sans Variable', 'Open Sans', Helvetica, sans-serif;
+    // Temporary disable variable font on firefox
+    @-moz-document url-prefix() {
+      font-family: 'Open Sans', Helvetica, sans-serif;
+    }
   }
 }
 
@@ -44,6 +48,10 @@ $zindex_navigation: 100;
   // If browser support variableFonts, use it
   @supports (font-variation-settings: "wdth" 115) {
     font-family: 'Source Serif Variable', 'Source Serif', Arial, serif;
+    // Temporary disable variable font on firefox
+    @-moz-document url-prefix() {
+      font-family: 'Source Serif', 'Source Serif', Arial, serif;
+    }
   }
 }
 
