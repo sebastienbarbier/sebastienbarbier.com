@@ -24,6 +24,7 @@ See for sample https://raw.githubusercontent.com/favoloso/conventional-changelog
 ## [2.2.2] - 2023-10-03
 ### 🐛 Bug Fixes
 - Fix wrong description within resume (#94) 
+- Fix wrong spacing on homepage in Chrome (#95)
 
 ## [2.2.1] - 2023-09-27
 ### 🛠 Improvements

@@ -6,8 +6,8 @@ header {
   align-items: align-items;
   justify-content: center;
 
-  min-height: 100vh;
-  min-height: -webkit-fill-available;
+  height: 100vh;
+  max-height: -webkit-fill-available;
 
   @include for-tablet-landscape-down {
     justify-content: flex-end;

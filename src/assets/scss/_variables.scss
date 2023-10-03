@@ -34,7 +34,7 @@ $zindex_navigation: 100;
   font-family: 'Open Sans', Helvetica, sans-serif;
   // If browser support variableFonts, use it
   @supports (font-variation-settings: "wdth" 115) {
-    font-family: 'Open Sans Variable', Helvetica, sans-serif;
+    font-family: 'Open Sans Variable', 'Open Sans', Helvetica, sans-serif;
   }
 }
 
@@ -43,7 +43,7 @@ $zindex_navigation: 100;
   font-variation-settings: 'opsz' 24;
   // If browser support variableFonts, use it
   @supports (font-variation-settings: "wdth" 115) {
-    font-family: 'Source Serif Variable', Arial, serif;
+    font-family: 'Source Serif Variable', 'Source Serif', Arial, serif;
   }
 }
 
