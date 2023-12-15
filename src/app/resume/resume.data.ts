@@ -183,6 +183,10 @@ My responsibilities also included:
       },
     ],
   "conferences": [{
+    date: new Date('December 15, 2023'),
+    name: 'Pycon Thailand',
+    location: 'Bangkok, Thailand'
+  },{
     date: new Date('August 01, 2022'),
     name: 'Frontend conference',
     location: 'Zurich, Switzerland'
