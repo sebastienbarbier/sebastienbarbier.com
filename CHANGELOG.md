@@ -22,7 +22,7 @@ See for sample https://raw.githubusercontent.com/favoloso/conventional-changelog
 -->
 ## [2.3.0] - 2024-04-20
 ### 🛠 Improvements
-- Make images in project clickable to full screen (#90)
+- Update resume with latest position at Unique (#102)
 ### 🔒 Security
 - Security update (#92)
 
