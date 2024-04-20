@@ -71,14 +71,14 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "sebastienbarbier:build"
+            "buildTarget": "sebastienbarbier:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "sebastienbarbier:build:production"
+              "buildTarget": "sebastienbarbier:build:production"
             },
             "development": {
-              "browserTarget": "sebastienbarbier:build:development"
+              "buildTarget": "sebastienbarbier:build:development"
             }
 
           }
@@ -86,7 +86,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "sebastienbarbier:build"
+            "buildTarget": "sebastienbarbier:build"
           }
         },
         "test": {
@@ -147,7 +147,7 @@
           }
         },
         "serve-ssr": {
-          "builder": "@nguniversal/builders:ssr-dev-server",
+          "builder": "@angular-devkit/build-angular:ssr-dev-server",
           "configurations": {
             "development": {
               "browserTarget": "sebastienbarbier:build:development",
@@ -161,7 +161,7 @@
           "defaultConfiguration": "development"
         },
         "prerender": {
-          "builder": "@nguniversal/builders:prerender",
+          "builder": "@angular-devkit/build-angular:prerender",
           "options": {
             "browserTarget": "sebastienbarbier:build:production",
             "serverTarget": "sebastienbarbier:server:production",

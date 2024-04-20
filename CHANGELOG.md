@@ -20,15 +20,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 See for sample https://raw.githubusercontent.com/favoloso/conventional-changelog-emoji/master/CHANGELOG.md
 -->
-## [2.3.0] - 2023-MM-DD
+## [2.3.0] - 2024-04-20
 ### 🛠 Improvements
-- Make images in project clickable to full screen (#90)
+- Update resume with latest position at Unique (#102)
 ### 🔒 Security
 - Security update (#92)
-
-## [2.2.3] - 2023-12-15
-### 🛠 Improvements
-- Add PyconTH to attended conference (#99) 
 
 ## [2.2.2] - 2023-10-03
 ### 🐛 Bug Fixes

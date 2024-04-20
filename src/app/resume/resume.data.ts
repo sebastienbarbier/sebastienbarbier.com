@@ -1,6 +1,20 @@
 export default {
   "experiences": [
     {
+      name: 'Unique AG',
+      company: 'sebastienbarbier',
+      location: 'Zurich, Switzerland',
+      type: 'Full-time',
+      logo: '/assets/images/unique/unique-logo-black.svg',
+      positions: [{
+        title: 'Software Engineer',
+        date: {
+         start: new Date('December 01, 2023'),
+        },
+        description: ``,
+      }],
+    },
+    {
       name: 'Self employed',
       company: 'sebastienbarbier',
       location: 'Zurich, Switzerland',
@@ -10,6 +24,7 @@ export default {
         title: 'Full-stack Developer',
         date: {
          start: new Date('August 01, 2021'),
+         end: new Date('November 30, 2023'),
         },
         description: `Full time as solo-entrepreneur, focusing on **upgrading two side-projects** from PoC to MvP.
 - **Seven23.io** is a personal budget PWA, constructed with React and Django for data sync.
