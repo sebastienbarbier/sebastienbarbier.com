@@ -23,7 +23,7 @@
     "deploy": "./scripts/deploy.sh"
   },
   "engines": {
-    "node": "~18"
+    "node": "20.12"
   },
   "private": true,
   "dependencies": {
