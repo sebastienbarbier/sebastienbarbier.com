@@ -26,10 +26,6 @@ See for sample https://raw.githubusercontent.com/favoloso/conventional-changelog
 ### 🔒 Security
 - Security update (#92)
 
-## [2.2.3] - 2023-12-15
-### 🛠 Improvements
-- Add PyconTH to attended conference (#99) 
-
 ## [2.2.2] - 2023-10-03
 ### 🐛 Bug Fixes
 - Fix wrong description within resume (#94) 
