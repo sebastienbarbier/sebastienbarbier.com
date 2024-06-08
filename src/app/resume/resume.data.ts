@@ -198,6 +198,10 @@ My responsibilities also included:
       },
     ],
   "conferences": [{
+    date: new Date('June 04, 2024'),
+    name: 'DjangoCon Europe',
+    location: 'Vigo, Spain'
+  }, {
     date: new Date('December 15, 2023'),
     name: 'Pycon Thailand',
     location: 'Bangkok, Thailand'
