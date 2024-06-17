@@ -22,7 +22,7 @@ header {
     left: 0;
     right: 0;
     height: env(safe-area-inset-top);
-    background: $background_brown;
+    background: $color-primary;
     z-index: $zindex_navigation+1;
   }
 
@@ -71,7 +71,7 @@ header {
 
 $navigation_button_size: 46px;
 
-// Input checkbox store the navigaiton menu state to open/close
+// Input checkbox store the navigation menu state to open/close
 input#navigation {
   display: none;
 
@@ -80,12 +80,12 @@ input#navigation {
       &:first-of-type {
         transform: rotate(45deg);
         top: 5px;
-        background-color: $background_white !important;
+        background-color: $color-background !important;
       }
       &:last-of-type {
         transform: rotate(-45deg);
         bottom: 5px;
-        background-color: $background_white !important;
+        background-color: $color-background !important;
       }
     }
   }
@@ -125,7 +125,7 @@ input#navigation + label {
     display: block;
     width: 100%;
     height: 2px;
-    background-color: $background_eigengrau;
+    background-color: $color-primary;
     border-radius: 1px;
     transition: all 0.2s cubic-bezier(0.1, 0.82, 0.76, 0.965);
     &:first-of-type {
@@ -163,8 +163,8 @@ input#navigation + label +  nav {
   overflow-x: hidden;
   overflow-y: auto;
 
-  background: $background_brown;
-  color: $primary_text_white;
+  background: $color-primary;
+  color: $color-on-primary;
 
   display: flex;
   align-items: center;
@@ -181,14 +181,14 @@ input#navigation + label +  nav {
         @include serif;
         text-decoration: none;
         font-size: 3.6em;
-        color: $primary_text_white;
+        color: $color-on-primary;
         font-variation-settings: 'opsz' 24;
         transition: all 0.2s cubic-bezier(0.1, 0.82, 0.76, 0.965);
         &.active {
-          color: $color_gold;
+          color: $color-secondary-variant;
         }
         &:hover {
-          color: $color_gold;
+          color: $color-secondary-variant;
         }
       }
     }

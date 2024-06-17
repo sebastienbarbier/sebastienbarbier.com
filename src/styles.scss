@@ -1,15 +1,14 @@
 // This is the default style file injected in all html pages before angular start loading
 // It is injected using angular.json description within styles
 
-// Fonts import
-@import "./assets/scss/fonts";
+@use "@sebastienbarbier/design-system/dist/style";
+@use "@sebastienbarbier/design-system/dist/fonts";
 
 // Define variables
 @import "./assets/scss/variables";
 
 // Global Theming
 @import "./assets/scss/theme";
-
 
 .content {
   padding-top: 100px;

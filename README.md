@@ -58,3 +58,7 @@ Old:
 - https://damirkotoric.com/  
 - https://rameerez.com/
 - https://alitwotimes.com/
+
+## Helpful links
+
+- https://foxleytalent.com/blog/tips-to-secure-your-first-django-developer-job/

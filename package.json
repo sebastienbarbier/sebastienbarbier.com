@@ -1,6 +1,6 @@
 {
   "name": "sebastienbarbier",
-  "version": "2.3.0",
+  "version": "2.4.0",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
@@ -37,6 +37,7 @@
     "@angular/platform-server": "^17.3.5",
     "@angular/router": "^17.3.5",
     "@angular/ssr": "^17.3.5",
+    "@sebastienbarbier/design-system": "^0.1.0",
     "@sentry/browser": "^7.111.0",
     "aos": "^2.3.4",
     "core-js": "^3.37.0",

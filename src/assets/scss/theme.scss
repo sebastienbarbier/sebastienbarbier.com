@@ -1,12 +1,10 @@
 @import './variables';
-@import './works';
-@import './resume';
 @import './print';
 
 html {
   font-size: $font_size;
-  background: $background_beige;
-  color: $primary_text_black;
+  background: $color-background;
+  color: $color-on-background;
   font-weight: 400;
   line-height: 1.6;
 
@@ -129,7 +127,7 @@ a {
   &.btn {
     display: flex;
     justify-content: center;
-    color: $color_gold_dark_visited;
+    color: $color-secondary;
     text-transform: uppercase;
     letter-spacing: 1.2px;
     padding: 16px 40px;
@@ -187,7 +185,7 @@ a {
   }
 
   section {
-    background: $background_beige_dark;
+    background: $color-surface;
     clear: both;
     .container {
       padding-top: 55px;
@@ -220,10 +218,10 @@ a {
     }
 
     a {
-      color: $color_gold_dark_visited;
+      color: $color-secondary;
       text-decoration: none;
       &:visited {
-        color: $color_gold_dark_visited;
+        color: $color-secondary;
       }
     }
 
@@ -255,18 +253,53 @@ ul.skills {
     margin-right: 5px;
     margin-bottom: 5px;
     padding: 4px 8px;
-    background: $background_beige_dark;
+    background: $color-surface;
     font-size: 0.8em;
     border-radius: 3px;
   }
 }
 
-// *::selection {
-//   color: $color_gold;
-//   background-color: $background_brown;
-// }
-
 *::selection {
-  color: $background_brown_light;
-  background-color: $color_gold;
+  color: $color_on_secondary_variant;
+  background-color: $color_secondary_variant;
+}
+
+// Add this to style markdown to html as angular treeshake this css otherwise as it is not in template
+div.description {
+  ul {
+    padding-left: 25px;
+    li {
+      list-style: disc;
+      padding-left: 2px;
+    }
+  }
+}
+
+nav.end_page {
+  border-top: solid 1px #BBB;
+  display: flex;
+  margin-top: 50px;
+  a {
+    width: 50%;
+    padding: 30px 40px;
+    text-transform: uppercase;
+    color: $color-secondary;
+    text-decoration: none;
+    font-size: 0.8em;
+    letter-spacing: 2px;
+
+    display: flex;
+    align-items: center;
+
+    &:first-of-type {
+      border-right:  solid 1px #BBB;
+      justify-content: flex-end;
+    }
+
+    svg {
+      fill: $color-secondary;
+      margin-right: 20px;
+      height: 1.5em;
+    }
+  }
 }
