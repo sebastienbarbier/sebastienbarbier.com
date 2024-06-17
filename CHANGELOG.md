@@ -23,7 +23,10 @@ See for sample https://raw.githubusercontent.com/favoloso/conventional-changelog
 
 ## [2.4.0] - 2024-MM-DD
 ### 🛠 Improvements
+- Use @sebastienbarbier/design-system package for defining theming (#105) 
 - Add DjangoCon 2024 in conferences list (#104)
+### 🐛 Bug Fixes
+- Remove temporary fix for Firefox variable font bug (#97)
 
 ## [2.3.0] - 2024-04-20
 ### 🛠 Improvements
