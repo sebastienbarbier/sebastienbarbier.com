@@ -21,7 +21,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 See for sample https://raw.githubusercontent.com/favoloso/conventional-changelog-emoji/master/CHANGELOG.md
 -->
 
-## [2.4.0] - 2024-MM-DD
+## [2.4.0] - 2024-06-17
 ### 🛠 Improvements
 - Use @sebastienbarbier/design-system package for defining theming (#105) 
 - Add DjangoCon 2024 in conferences list (#104)
