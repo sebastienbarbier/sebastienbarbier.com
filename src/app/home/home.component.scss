@@ -38,7 +38,7 @@ header {
     &:before {
       content:  '';
       width: 30px;
-      border-top: solid 1px $background_brown;
+      border-top: solid 1px $color-primary;
       margin-right: 10px;
     }
 
@@ -48,7 +48,7 @@ header {
       &:before {
         content:  '';
         width: 200px;
-        border-top: solid 1px $background_brown;
+        border-top: solid 1px $color-primary;
         margin-right: 20px;
       }
     }

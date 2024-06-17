@@ -5,7 +5,7 @@ span.censored {
     color: transparent;
 
     &:after {
-        background: $background_beige_dark;
+        background: $color-surface;
         position: absolute;
         content: '';
         transform: rotate(-5deg);

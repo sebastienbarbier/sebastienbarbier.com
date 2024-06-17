@@ -4,6 +4,10 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { AppModule } from './app/app.module';
 import { environment } from './environments/environment';
 
+import design from '@sebastienbarbier/design-system';
+
+console.log(design);
+
 if (environment.production) {
   enableProdMode();
 }

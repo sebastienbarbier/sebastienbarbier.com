@@ -15,7 +15,7 @@
     display: block;
     flex-grow: 0;
     flex-shrink: 0;
-    border: $background_beige_dark solid 8px;
+    border: $color-surface solid 8px;
     border-radius: 6px;
 
     @include for-tablet-landscape-down {

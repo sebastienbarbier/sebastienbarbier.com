@@ -1,26 +1,29 @@
+/*
+  This file define all variables used wihtin the rest of the CSS
+*/
 
-$primary_text_white: #e8eaed;
-$primary_text_beige: rgb(205, 188, 165);
-$primary_text_black: #202124;
+// System colors to use from now
+$color-background: var(--sys-color-background);
+$color-on-background: var(--sys-color-on-background);
+// Darker Brown
+$color-surface: var(--sys-color-surface);
+$color-on-surface: var(--sys-color-on-surface);
+// Dark brown
+$color-primary: var(--sys-color-primary);
+$color-on-primary: var(--sys-color-on-primary);
+// Gold
+$color-secondary: var(--sys-color-secondary);
+$color-on-secondary: var(--sys-color-on-secondary);
 
-$background_white: rgb(247, 247, 246);
-$background_beige: rgb(250, 248, 245);
-$background_beige_dark: rgb(242, 237, 234);
-$background_brown: rgb(31, 29, 29);
-$background_brown_light: rgba(31, 29, 29, 0.9);
-$background_eigengrau: #16161D; // Eigengrau color: https://en.wikipedia.org/wiki/Eigengrau
+$color-secondary-variant: var(--sys-color-secondary-variant);
+$color-on-secondary-variant: var(--sys-color-on-secondary-variant);
 
-$color_gold: rgb(219, 183, 120);
-$color_gold_dark: rgb(217, 151, 0);
-$color_gold_dark_visited: rgb(168, 115, 0);
+$color-shadow: var(--sys-color-shadow);
 
 // General variables
 $font_size: 16px;
-$color_text: black;
-$color_text_light: black;
 
 // Screen Size
-
 $container_width: 1200px;
 
 // z-index
@@ -31,33 +34,25 @@ $zindex_navigation: 100;
 
 // Mixins used in the project
 @mixin sansserif {
-  font-family: 'Open Sans', Helvetica, sans-serif;
+  font-family: var(--sys-typeface-sans);
 
-  // Temporary disable variable font on firefox
-  @-moz-document url-prefix() {
-    font-family: 'Open Sans', Helvetica, sans-serif !important;
-  }
-
+  // If browser support variableFonts, use it
   @supports (font-variation-settings: "wdth" 115) {
-    font-family: 'Open Sans Variable', 'Open Sans', Helvetica, sans-serif;
+    font-family: var(--sys-typeface-sans-variable);
   }
 }
 
 @mixin serif {
-  font-family: 'Source Serif', Arial, serif;
+  font-family: var(--sys-typeface-serif);
   font-variation-settings: 'opsz' 24;
-
-  // Temporary disable variable font on firefox
-  @-moz-document url-prefix() {
-    font-family: 'Source Serif', Arial, serif !important;
-  }
 
   // If browser support variableFonts, use it
   @supports (font-variation-settings: "wdth" 115) {
-    font-family: 'Source Serif Variable', 'Source Serif', Arial, serif;
+    font-family: var(--sys-typeface-serif-variable);
   }
 }
 
+// Mixins to better understand responsive breaking points
 @mixin for-phone-only {
   @media (max-width: 599px) { @content; }
 }
