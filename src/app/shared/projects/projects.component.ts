@@ -1,5 +1,4 @@
 import { Component, OnInit, Attribute } from '@angular/core';
-import '@sebastienbarbier/design-system/badge';
 
 @Component({
   selector: 'app-projects',

@@ -1,4 +1,4 @@
-import { NgModule, ModuleWithProviders, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -24,8 +24,7 @@ export const providers = [
     FooterComponent,
     LogosComponent,
     ProjectsComponent,
-  ],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  ]
 })
 export class SharedModule {
     static forRoot(): ModuleWithProviders<SharedModule> {
