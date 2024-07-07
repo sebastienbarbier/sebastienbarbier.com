@@ -1,8 +1,8 @@
 // This is the default style file injected in all html pages before angular start loading
 // It is injected using angular.json description within styles
 
-@use "@sebastienbarbier/design-system/dist/style";
-@use "@sebastienbarbier/design-system/dist/fonts";
+@use "@sebastienbarbier/design-system/style";
+@use "@sebastienbarbier/design-system/fonts";
 
 // Define variables
 @import "./assets/scss/variables";

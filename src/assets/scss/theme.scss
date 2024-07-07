@@ -248,14 +248,12 @@ a {
 
 ul.skills {
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
   li {
+    list-style: none;
     display: inline-block;
-    margin-right: 5px;
-    margin-bottom: 5px;
-    padding: 4px 8px;
-    background: $color-surface;
-    font-size: 0.8em;
-    border-radius: 3px;
   }
 }
 
