@@ -29,6 +29,10 @@ ul.projects {
     margin: 0px 0 50px;
     padding: 10px 0px;
 
+    h3 {
+      margin-bottom: 0em !important;
+    }
+
     .thumbnail {
       width: 100%;
       display: flex;
@@ -69,10 +73,6 @@ ul.projects {
         margin-left: 20px;
         margin-right: 20px;
       }
-    }
-
-    h3 {
-      margin-bottom: 0.4em;
     }
 
     img {

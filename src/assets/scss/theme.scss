@@ -1,11 +1,10 @@
 @import './variables';
 @import './print';
 
+@import '@sebastienbarbier/design-system/baseline.css';
+
 html {
   font-size: $font_size;
-  background: $color-background;
-  color: $color-on-background;
-  font-weight: 400;
   line-height: 1.6;
 
   @include sansserif;
@@ -15,30 +14,6 @@ html {
   }
 }
 
-h1, h2, h3, h4, h5, h6 {
-  @include serif;
-  font-weight: 600;
-  font-variation-settings: 'opsz' 24;
-  position: relative;
-  margin-top: 1.2em;
-  margin-bottom: 0.8em;
-  line-height: 1.2em;
-
-  small {
-    @include sansserif;
-    display: inline;
-    font-weight: 400;
-    font-size: 0.3em;
-    position: absolute;
-    text-transform: uppercase;
-    top: -2.5em;
-    opacity: 0.8;
-  }
-
-  &.centered {
-    text-align: center;
-  }
-}
 p.centered {
   text-align: center;
 }
@@ -52,8 +27,6 @@ $h6_size: $h5_size - 0.2em;
 
 h1 {
   font-size: $h1_size;
-  font-weight: 600;
-  padding-bottom: 1em;
   small {
     font-size: 0.2em;
     top: -3.5em;
