@@ -1,16 +1,16 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Badge } from './badge/badge.component';
+import { BadgeComponent } from './badge/badge.component';
 
 @NgModule({
   declarations: [
-    Badge
+    BadgeComponent
   ],
   imports: [
     CommonModule
   ],
   exports: [
-    Badge
+    BadgeComponent
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })

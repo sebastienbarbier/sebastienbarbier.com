@@ -255,6 +255,11 @@ ul.skills {
     list-style: none;
     display: inline-block;
   }
+
+  &.right {
+    // align-items: flex-end;
+    justify-content: flex-end;
+  }
 }
 
 *::selection {

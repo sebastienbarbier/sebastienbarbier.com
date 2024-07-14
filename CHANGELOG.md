@@ -21,6 +21,19 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 See for sample https://raw.githubusercontent.com/favoloso/conventional-changelog-emoji/master/CHANGELOG.md
 -->
 
+## [2.4.1] - 2024-MM-DD
+### 🏗 Chore
+- Implement components based on design-system (#108) 
+### 🔒 Security
+- Update dependencies (#107) 
+
+## [2.4.0] - 2024-06-17
+### 🛠 Improvements
+- Use @sebastienbarbier/design-system package for defining theming (#105) 
+- Add DjangoCon 2024 in conferences list (#104)
+### 🐛 Bug Fixes
+- Remove temporary fix for Firefox variable font bug (#97)
+
 ## [2.4.0] - 2024-06-17
 ### 🛠 Improvements
 - Use @sebastienbarbier/design-system package for defining theming (#105) 
