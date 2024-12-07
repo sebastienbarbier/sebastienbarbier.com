@@ -7,11 +7,11 @@ import { MozillaComponent } from './mozilla/mozilla.component';
 import { ChefclubComponent } from './chefclub/chefclub.component';
 
 const DESCRIPTION = {
-  'work': `I am currently working on two projects: Seven23, a fully manual budget app to track personal expenses, and FromEdwin, an opinionated no code monitoring tool for web projects.`,
-  'seven23': `Seven23 is designed to answer the very simple question: 'How much did I spend on something this month'. The idea is not to track your portfolio, how much you saved or is left, but to understand where money goes and identify potential cognitive biases. With privacy by design, the app provide secure end-to-end encryption within an open source code base to protect data confidentiality. This ensures that only its owner can access and read them.`,
+  'work': `I’ve had the privilege of working with diverse teams and technologies across various projects. At Mozilla’s Test Pilot team, I developed a minimalist notepad Firefox add-on and validated cutting-edge syncing technologies. At Chefclub, I focused on enhancing user experience and performance to support the brand’s online presence. At Seven23, I helped build a privacy-focused expense tracking app, ensuring secure, end-to-end encrypted data handling. Each of these experiences has strengthened my skills in front-end development, collaboration, and delivering user-centric digital solutions.`,
+  'seven23': `Seven23 simplifies expense tracking by answering, “How much did I spend this month?” With privacy by design, open-source code, and secure end-to-end encryption, it ensures only you can access and understand where your money goes.`,
   'fromedwin': `FromEdwin is an opinionated no code monitoring tool for web projects. It is currently under development and will be released later this year.`,
-  'mozilla': `Displays a sidebar that lets you take notes on web pages.`,
-  'chefclub': ``,
+  'mozilla': `As a freelance frontend developer at Mozilla’s Test Pilot team, I created a minimalist notepad Firefox add-on while validating the Firefox Sync and Kinto stack. I also optimized the UI, integrated a native note-taking feature, and collaborated closely with designers to ensure a seamless user experience.`,
+  'chefclub': `As a freelance front-end developer at Chefclub, I focused on enhancing the website’s user experience and optimizing overall performance. I also collaborated closely with the team to ensure a cohesive, visually appealing website that aligned with the brand’s marketing objectives.`,
 };
 
 const routes: Routes = [
@@ -33,7 +33,7 @@ const routes: Routes = [
   {
     path: 'mozilla',
     component: MozillaComponent,
-    data: { title: 'Notes by Firefox', description: DESCRIPTION.fromedwin, state: 'mozilla' },
+    data: { title: 'Notes by Firefox', description: DESCRIPTION.mozilla, state: 'mozilla' },
   },
   {
     path: 'chefclub',

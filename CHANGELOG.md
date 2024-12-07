@@ -27,6 +27,12 @@ See for sample https://raw.githubusercontent.com/favoloso/conventional-changelog
 ### 🔒 Security
 - Update dependencies (#107) 
 
+## [2.4.1] - 2024-12-07
+### 🛠 Improvements
+- Add missing link to sitemap (#110)
+- Fix wrong description on Notes by Firefox (#111)
+- Fix minor typos (#112) 
+
 ## [2.4.0] - 2024-06-17
 ### 🛠 Improvements
 - Use @sebastienbarbier/design-system package for defining theming (#105) 
