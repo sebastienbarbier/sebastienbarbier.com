@@ -1,7 +1,7 @@
 @import './variables';
 @import './print';
 
-@import '@sebastienbarbier/design-system/baseline.css';
+@import '@sebastienbarbier/design-system/dist/baseline.css';
 
 html {
   font-size: $font_size;
