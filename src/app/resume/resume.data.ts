@@ -198,6 +198,10 @@ My responsibilities also included:
       },
     ],
   "conferences": [{
+    date: new Date('February 27, 2026'),
+    name: 'Front Conference',
+    location: 'Zurich, Switzerland'
+  }, {
     date: new Date('June 04, 2024'),
     name: 'DjangoCon Europe',
     location: 'Vigo, Spain'
@@ -207,7 +211,7 @@ My responsibilities also included:
     location: 'Bangkok, Thailand'
   },{
     date: new Date('August 01, 2022'),
-    name: 'Frontend conference',
+    name: 'Front Conference',
     location: 'Zurich, Switzerland'
   },{
     date: new Date('June 01, 2022'),
@@ -223,7 +227,7 @@ My responsibilities also included:
     location: 'Dubai, United Arab Emirates'
   },{
     date: new Date('August 01, 2021'),
-    name: 'Frontend conference',
+    name: 'Front Conference',
     location: 'Zurich, Switzerland'
   },{
     date: new Date('January 01, 2020'),
@@ -235,7 +239,7 @@ My responsibilities also included:
     location: 'Berlin, Germany'
   },{
     date: new Date('August 01, 2018'),
-    name: 'Frontend conference',
+    name: 'Front Conference',
     location: 'Zurich, Switzerland'
   },{
     date: new Date('May 01, 2018'),

@@ -22,6 +22,8 @@ See for sample https://raw.githubusercontent.com/favoloso/conventional-changelog
 -->
 
 ## [2.5.0] - 2025-MM-DD
+### 🛠 Improvements
+- Add Front conference 2026 (#115)
 ### 🏗 Chore
 - Implement components based on design-system (#108) 
 ### 🔒 Security
