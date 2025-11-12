@@ -21,9 +21,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 See for sample https://raw.githubusercontent.com/favoloso/conventional-changelog-emoji/master/CHANGELOG.md
 -->
 
-## [2.5.0] - 2025-09-31
+## [2.5.0] - 2025-MM-DD
 ### 🛠 Improvements
 - Add Front conference 2026 (#115)
+- Rename nomadlist social network to nomads (#114)
 ### 🔒 Security
 - Update dependencies (#107) 
 
