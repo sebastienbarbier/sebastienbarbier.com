@@ -40,7 +40,8 @@ function getAge (birthDate: Date) {
   selector: 'app-resume',
   templateUrl: './resume.component.html',
   styleUrls: ['./resume.component.scss'],
-  animations: [ resumeTransition ]
+  animations: [ resumeTransition ],
+  standalone: false
 })
 export class ResumeComponent implements OnInit {
 

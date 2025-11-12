@@ -24,6 +24,7 @@ const chefclubTransition = trigger('chefclubTransition', [
   templateUrl: './chefclub.component.html',
   styleUrls: ['./chefclub.component.scss'],
   animations: [ chefclubTransition ],
+  standalone: false
 })
 export class ChefclubComponent {
   constructor() {

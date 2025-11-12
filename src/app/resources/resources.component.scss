@@ -1,4 +1,4 @@
-@import '../../assets/scss/variables';
+@use '../../assets/scss/_variables' as *;
 
 .dark_background {
   background: $color-primary;

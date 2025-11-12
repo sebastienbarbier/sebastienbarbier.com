@@ -37,9 +37,7 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": [
-              "node_modules/marked/marked.min.js"
-            ]
+            "scripts": []
           },
           "configurations": {
             "development": {},
@@ -97,7 +95,6 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.spec.json",
             "scripts": [
-              "node_modules/marked/marked.min.js"
             ],
             "styles": [
               "src/styles.scss"

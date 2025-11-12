@@ -1,5 +1,5 @@
 
-@import '../../assets/scss/variables';
+@use '../../assets/scss/_variables' as *;
 
 h3, h2 {
   clear: both;

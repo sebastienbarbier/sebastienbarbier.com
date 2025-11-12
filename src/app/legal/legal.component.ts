@@ -4,7 +4,8 @@ import { environment } from '../../environments/environment';
 @Component({
   selector: 'app-legal',
   templateUrl: './legal.component.html',
-  styleUrls: ['./legal.component.scss']
+  styleUrls: ['./legal.component.scss'],
+  standalone: false
 })
 export class LegalComponent implements OnInit {
 

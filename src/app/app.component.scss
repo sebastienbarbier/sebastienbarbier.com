@@ -1,4 +1,4 @@
-@import '../assets/scss/variables';
+@use '../assets/scss/_variables' as *;
 
 // Header logo as svg
 header {
@@ -170,6 +170,9 @@ input#navigation + label +  nav {
   align-items: center;
   justify-content: flex-end;
 
+  z-index: $zindex_navigation;
+  transition: opacity 0.2s ease-in-out, visibility 0s 0.2s;
+
   ul {
     text-align: left;
     width: 40%;
@@ -179,11 +182,13 @@ input#navigation + label +  nav {
       padding: 5px 0;
       a {
         @include serif;
-        text-decoration: none;
-        font-size: 3.6em;
-        color: $color-on-primary;
-        font-variation-settings: 'opsz' 24;
-        transition: all 0.2s cubic-bezier(0.1, 0.82, 0.76, 0.965);
+        & {
+          text-decoration: none;
+          font-size: 3.6em;
+          color: $color-on-primary;
+          font-variation-settings: 'opsz' 24;
+          transition: all 0.2s cubic-bezier(0.1, 0.82, 0.76, 0.965);
+        }
         &.active {
           color: $color-secondary-variant;
         }
@@ -210,9 +215,6 @@ input#navigation + label +  nav {
         width: 40%;
     }
   }
-
-  z-index: $zindex_navigation;
-  transition: opacity 0.2s ease-in-out, visibility 0s 0.2s;
 }
 
 // Animation to display navigation menu

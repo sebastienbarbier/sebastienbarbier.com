@@ -24,6 +24,7 @@ const fromEdwinTransition = trigger('fromEdwinTransition', [
   templateUrl: './fromedwin.component.html',
   styleUrls: ['./fromedwin.component.scss'],
   animations: [ fromEdwinTransition ],
+  standalone: false
 })
 export class FromedwinComponent {
   constructor() {

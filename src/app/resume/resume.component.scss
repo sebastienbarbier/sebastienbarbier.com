@@ -1,4 +1,4 @@
-@import '../../assets/scss/variables';
+@use '../../assets/scss/_variables' as *;
 
 .presentation {
   display: flex;
@@ -157,7 +157,9 @@ ul.experiences {
         @include for-phone-only {
           left: 3px;
         }
-        bottom: -10px;
+        & {
+          bottom: -10px;
+        }
       }
       // Disable last row
       &:last-of-type:after {

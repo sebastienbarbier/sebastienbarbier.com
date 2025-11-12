@@ -32,7 +32,8 @@ const worksTransition = trigger('worksTransition', [
   selector: 'app-works',
   templateUrl: './works.component.html',
   styleUrls: ['./works.component.scss'],
-  animations: [ worksTransition ]
+  animations: [ worksTransition ],
+  standalone: false
 })
 export class WorksComponent implements OnInit {
 

@@ -1,5 +1,5 @@
-@import './variables';
-@import './print';
+@use './_variables' as *;
+@use './print' as *;
 
 @import '@sebastienbarbier/design-system/dist/baseline.css';
 

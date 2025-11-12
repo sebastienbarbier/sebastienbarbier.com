@@ -24,6 +24,7 @@ const mozillaTransition = trigger('mozillaTransition', [
   templateUrl: './mozilla.component.html',
   styleUrls: ['./mozilla.component.scss'],
   animations: [ mozillaTransition ],
+  standalone: false
 })
 export class MozillaComponent {
   constructor() {

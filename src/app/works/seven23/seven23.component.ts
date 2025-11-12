@@ -24,6 +24,7 @@ const seven23Transition = trigger('seven23Transition', [
   templateUrl: './seven23.component.html',
   styleUrls: ['./seven23.component.scss'],
   animations: [ seven23Transition ],
+  standalone: false
 })
 export class Seven23Component implements OnInit {
 
