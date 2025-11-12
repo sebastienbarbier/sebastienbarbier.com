@@ -3,6 +3,7 @@
 # Static Instagram
 src/assets/json/instagram_feed.json
 src/assets/json/nomadlist_feed.json
+src/assets/json/nomads_feed.json
 src/assets/images/instagram/
 .env
 
@@ -30,6 +31,7 @@ src/assets/images/instagram/
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+.vscode
 
 # misc
 /.sass-cache
