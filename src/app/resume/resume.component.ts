@@ -1,18 +1,9 @@
-import { Component, Inject, OnInit, HostBinding, HostListener, PLATFORM_ID } from '@angular/core';
-import { formatDate } from '@angular/common';
-import { isPlatformBrowser } from '@angular/common';
+import { Component, Inject, OnInit, HostBinding, PLATFORM_ID } from '@angular/core';
 
 import {
-  sequence,
   trigger,
-  stagger,
-  animate,
-  style,
-  group,
-  query,
   transition,
-  keyframes,
-  animateChild } from '@angular/animations';
+} from '@angular/animations';
 
 import resume_json from './resume.data';
 
@@ -23,9 +14,6 @@ const resumeTransition = trigger('resumeTransition', [
   ])
 ]);
 
-const TINY_SCREEN_SIZE = 390;
-
-// copilot generated function calculat today's age
 function getAge (birthDate: Date) {
   var today = new Date();
   var age = today.getFullYear() - birthDate.getFullYear();
