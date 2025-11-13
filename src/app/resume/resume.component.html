@@ -87,9 +87,9 @@
           <ng-container *ngIf="experience.positions.length == 1">
             <p><strong>{{ experience.positions[0].title }}</strong><br/>
             {{ experience.name }} • {{ experience.type }}</p>
-            <p *ngIf="experience.positions[0].date.end" class="date_and_location">{{ experience.positions[0].date.start|date: 'MMMM YYYY' }} - {{ experience.positions[0].date.end|date: 'MMMM YYYY' }} • {{ experience.positions[0]|duration }}<br/>
+            <p *ngIf="experience.positions[0].date.end" class="date_and_location">{{ experience.positions[0].date.start|date: 'MMMM y' }} - {{ experience.positions[0].date.end|date: 'MMMM y' }} • {{ experience.positions[0]|duration }}<br/>
             {{ experience.location }}</p>
-            <p *ngIf="!experience.positions[0].date.end" class="date_and_location">{{ experience.positions[0].date.start|date: 'MMMM YYYY' }} - Present • {{ experience.positions[0]|duration }}<br/>
+            <p *ngIf="!experience.positions[0].date.end" class="date_and_location">{{ experience.positions[0].date.start|date: 'MMMM y' }} - Present • {{ experience.positions[0]|duration }}<br/>
             {{ experience.location }}</p>
             <div class="description" markdown>
               {{ experience.positions[0].description }}
@@ -105,8 +105,8 @@
             <ul class="experience">
               <li class="dot" *ngFor="let position of experience.positions;">
                 <p><strong>{{ position.title }}</strong></p>
-                <p *ngIf="position.date.end" class="date_and_location">{{ position.date.start | date: 'MMMM YYYY' }} - {{ position.date.end | date: 'MMMM YYYY' }} • {{ position|duration}}</p>
-                <p *ngIf="!position.date.end" class="date_and_location">{{ position.date.start | date: 'MMMM YYYY' }} - Present • {{ position|duration}}</p>
+                <p *ngIf="position.date.end" class="date_and_location">{{ position.date.start | date: 'MMMM y' }} - {{ position.date.end | date: 'MMMM y' }} • {{ position|duration}}</p>
+                <p *ngIf="!position.date.end" class="date_and_location">{{ position.date.start | date: 'MMMM y' }} - Present • {{ position|duration}}</p>
                 <div class="description" markdown>
                   {{ position.description }}
                 </div>

@@ -7,11 +7,12 @@ export default {
       type: 'Full-time',
       logo: '/assets/images/unique/unique-logo-black.svg',
       positions: [{
-        title: 'Software Engineer',
+        title: 'Staff Frontend Engineer',
         date: {
          start: new Date('December 01, 2023'),
+         end: new Date('December 30, 2025'),
         },
-        description: ``,
+        description: `Leading frontend engineering at Unique AG to build an agentic AI chat platform for financial services, leveraging RAG and MCP to provide context-aware, compliant, and insightful client interactions.`,
       }],
     },
     {
@@ -21,16 +22,19 @@ export default {
       type: 'Full-time',
       logo: '/assets/images/sprb/sebastienbarbier_logo.png',
       positions: [{
-        title: 'Full-stack Developer',
+        title: 'Full-stack Software Engineer',
         date: {
          start: new Date('August 01, 2021'),
          end: new Date('November 30, 2023'),
         },
-        description: `Full time as solo-entrepreneur, focusing on **upgrading two side-projects** from PoC to MvP.
-- **Seven23.io** is a personal budget PWA, constructed with React and Django for data sync.
-- **FromEdwin.com** is a minimalist opinionated monitoring platform tailored for web projects.
-
-Both projects challenged my ability to **andle by myself a full project stack**, including front-end, back-end architecture, devops, CI/CD, testing, documentation, and communication.`,
+        description: `Full-time solo entrepreneur developing two projects, Seven23.io and FromEdwin.com, while independently managing the entire stack from architecture and development to DevOps, CI/CD, and delivery.`,
+      }, {
+        title: 'Crypto Liquidity Provider',
+        date: {
+         start: new Date('October 01, 2021'),
+         end: new Date('July 31, 2023'),
+        },
+        description: `Actively provided liquidity on various DeFi crypto markets, supporting decentralized trading platforms and learning about emerging projects within the blockchain ecosystem. Explored new protocols, gained hands-on experience with yield farming, and kept up with innovations in decentralized finance infrastructure.`,
       }],
     },
     {
@@ -41,27 +45,19 @@ Both projects challenged my ability to **andle by myself a full project stack**,
       logo: '/assets/images/sap/sap.svg',
       type: 'Full-time',
       positions: [{
-        title: 'Associate Development Architect',
+        title: 'Development Architect',
         date: {
          start: new Date('November 01, 2020'),
          end: new Date('July 31, 2021'),
         },
-        description: `Leveraging the newly integrated micro-frontend architecture, I contributed **designing and implementing** a **distributed in-app extension solution**, enabling seamless and secure integration for **third-party developers** directly within our web interface.
-My responsibilities also included:
-- **Working in tech lead position**, **coaching** and **advising the implementation team** on all aspects which have impact on the architecture as well as advocating for simplicity and latest best practices
-- Taking on the **responsibility for development** focusing on design, coding, testing, and quality assurance of complex product features, incl. resolving complex issues within own area of expertise and supporting others in resolving issues
-- Contributing to the aligned and **consistent architecture strategy and target architecture** of product line
-- **Evaluating architecture risks**, estimating effort for business case or backlog item, and preparing management decisions on these topics
-- **Supporting and consulting Product Owner** by ensuring technical and architectural feasibility, readiness, and compliance
-- Contributing to **designing and building the FSM extensibility concept**, driving product adoption through technical support for partners and customers, meaningful code samples, and public webinars
-- **Mentoring Junior Developers**`,
+        description: `Contributing to the design and implementation of the FSM extensibility concept - a distributed protocol enabling secure third-party integrations - while leading architecture decisions, mentoring developers, and ensuring high-quality, scalable product delivery.`,
       }, {
         title: 'Senior Developer',
         date: {
          start: new Date('February 01, 2020'),
          end: new Date('October 31, 2020'),
         },
-        description: 'I joined the team responsible for spearheading the migration of the [Field Service Management (FSM)](https://www.sap.com/products/scm/field-service-management.html) application to a **micro-frontend architecture**, contributing to the modernization and scalability of the development infrastructure. Taking on the **responsibility for development** focusing on design, coding, testing, and quality assurance of complex product features, incl. resolving complex issues within own area of expertise and supporting others in resolving issues.',
+        description: 'Joined as tech lead, supporting the migration of the Field Service Management (FSM) application to a micro- frontend architecture, contributing to its modernization and scalability.',
       }],
     },
     {
@@ -76,7 +72,7 @@ My responsibilities also included:
          start: new Date('September 01, 2016'),
          end: new Date('January 31, 2020'),
         },
-        description: `Leveraging my knowledge of web technologies, I was able to contribute and learn from a diverse range of projects such as **Chatbots**, **PWAs**, **web extensions**, **react-native applications**, or **web integrations** from mockups. Notable clients collaborated with includes ***Chefclub***, ***Mozilla***, and ***Mila AG***.`,
+        description: `Leveraged my web technology expertise to contribute to diverse projects - including chatbots, PWAs, web extensions, React Native apps, and web integrations - for clients such as Chefclub, Mozilla, and Mila AG.`,
         images: [
           { src: '/assets/images/chefclub/chefclub-logo.png', alt: 'Chefclub logo'},
           { src: '/assets/images/mozilla/mozilla_logo.svg', alt: 'Mozilla logo'},
@@ -92,12 +88,12 @@ My responsibilities also included:
       type: 'Full-time',
       logo: '/assets/images/fluance/fluance_logo.png',
       positions: [{
-        title: 'Front-end Developer',
+        title: 'Frontend Developer',
         date: {
          start: new Date('June 01, 2014'),
          end: new Date('August 31, 2016'),
         },
-        description: 'Working as a **tech lead front-end developer** within a team of four. We **fully developed** a cross platform prototype of an interface to consult HL7 aggregated patient data within the healthcare system. The solution started with **jQuery** then transitioned to **AngularJS**. Styling was done using the **FoundationCSS** framework. Documentation, testing, and service deployment were all meticulously executed under a strict **SCRUM methodology** to guarantee project success.',
+        description: 'Served as tech lead front-end developer on a four-person team, building a cross-platform HL7 patient data interface using jQuery and AngularJS with FoundationCSS, while managing documentation, testing, and deployment under strict SCRUM practices.',
       }],
     },
     {
@@ -112,7 +108,7 @@ My responsibilities also included:
          start: new Date('September 01, 2012'),
          end: new Date('June 30, 2014'),
         },
-        description: `Part of the developing team of Covotem, a unified interface for Telemedicine, Tele-diagnostic, and Tele-consultation. My responsibilities centered around **Java development** to maintain internal libraries and interoperability in a real-time environment within the healthcare system. Our application was integrating **HL7** and **DICOM** protocols, connecting with **IP Cameras**, and following the **ISO 13485** standard. I also provided **occasional deployment** and **phone support** to customers.`,
+        description: `Worked on the Covotem team developing a unified telemedicine platform, focusing on Java-based library maintenance and real-time interoperability with HL7 and DICOM, while supporting deployment, customer assistance, and compliance with ISO 13485.`,
       }],
     },
     {
@@ -128,14 +124,14 @@ My responsibilities also included:
          start: new Date('September 01, 2012'),
          end: new Date('January 31, 2013'),
         },
-        description: 'In addition to my position at Covalia Interactive S.A., I provided **32 hours of practical Java and HTML/CSS instructions** to third-year students at both **ISIFC** and **UFR ST**. This included delivering tutorial classes and project-based learning opportunities.',
+        description: 'Alongside my role at Covalia Interactive S.A., I taught 32 hours of practical Java and HTML/CSS courses to third-year students at ISIFC and UFR ST through tutorials and project-based learning.',
       }, {
         title: 'Part-time Lecturer',
         date: {
          start: new Date('September 01, 2011'),
          end: new Date('January 31, 2012'),
         },
-        description: 'In addition to my position at Ionyse, I provided **66 hours of practical Java instruction to third-year students** at both **ISIFC** and **UFR ST**. This included delivering tutorial classes and project-based learning opportunities.',
+        description: 'Alongside my role at Ionyse, I taught 66 hours of practical Java courses to third-year students at ISIFC and UFR ST through hands-on tutorials and project-based learning.',
       }],
     },
     {
@@ -150,7 +146,7 @@ My responsibilities also included:
          start: new Date('July 01, 2009'),
          end: new Date('June 30, 2012'),
         },
-        description: `**Founded in parallel of our master degree** a **web agency** with **two other students** which after two years transitioned to a full-time position. Our focus was on creating **websites** and **web applications** for small businesses, utilizing the **Django framework**. Due to the small size of our agency, I had the opportunity to explore a wide range of topics, ultimately specializing in **front-end development**, with a particular focus on **HTML5, CSS3, and jQuery**. In addition, we created our own **CMS**, which was called **ionyweb**.`,
+        description: `Co-founded a web agency during my master’s, developing websites and web applications with a custom Python/Django CMS, while specializing in front-end development and pixel-perfect integrations using HTML5, CSS3, and jQuery.`,
       }],
     }
   ],
@@ -164,7 +160,7 @@ My responsibilities also included:
         internship: {
           company: 'Nav6 Laboratory',
           location: 'Penang, Malaysia',
-          description: 'Developed C# application using Google API in a real time collaborative space. Integrated to a video chat application in purpose to have real time document edition.',
+          description: 'Developed a C# application using Google APIs for real-time collaborative document editing, integrated with a video chat platform.',
           duration_in_months: 4,
         }
       }, {
@@ -176,7 +172,7 @@ My responsibilities also included:
         internship: {
           company: 'MagicLabVision Laboratory',
           location: 'Adelaide, Australia',
-          description: 'Research team on an augmented reality application based on Python.',
+          description: 'Joined a research team developing an augmented reality application using Python.',
           duration_in_months: 3,
         }
       }, {
@@ -192,7 +188,7 @@ My responsibilities also included:
         internship: {
           company: 'Thales Avionics Electrical Systems',
           location: 'Chatou, Île-de-France, France',
-          description: 'PHP Developer, using Oracle databases, access archives from a previous ERP.',
+          description: 'Developed a PHP web interface providing read-only access to a deprecated, archived ERP database.',
           duration_in_months: 3,
         }
       },

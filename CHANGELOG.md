@@ -23,8 +23,9 @@ See for sample https://raw.githubusercontent.com/favoloso/conventional-changelog
 
 ## [2.5.0] - 2025-MM-DD
 ### 🛠 Improvements
-- Add Front conference 2026 (#115)
 - Rename nomadlist social network to nomads (#114)
+- Add Front conference 2026 (#115)
+- Update resume (#117)
 ### 🔒 Security
 - Update dependencies (#107) 
 
