@@ -1,4 +1,4 @@
-@import '../../../assets/scss/variables';
+@use '../../../assets/scss/_variables' as *;
 
 footer {
   width: 100%;
@@ -27,7 +27,9 @@ footer {
       color: $color-on-primary;
       text-decoration: none;
       @include serif;
-      font-size: 2.8em;
+      & {
+        font-size: 2.8em;
+      }
 
       @include for-tablet-landscape-down {
         text-align: center;

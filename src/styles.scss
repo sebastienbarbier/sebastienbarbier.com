@@ -5,10 +5,10 @@
 @use "@sebastienbarbier/design-system/dist/fonts";
 
 // Define variables
-@import "./assets/scss/variables";
+@use "./assets/scss/_variables" as *;
 
 // Global Theming
-@import "./assets/scss/theme";
+@use "./assets/scss/theme" as *;
 
 .content {
   padding-top: 100px;

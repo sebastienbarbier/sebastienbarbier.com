@@ -1,4 +1,4 @@
-@import '../../../assets/scss/variables';
+@use '../../../assets/scss/_variables' as *;
 
 ul.projects {
   margin: 40px 0 0 0;
@@ -23,11 +23,16 @@ ul.projects {
     @include for-tablet-landscape-up {
       width: 45%;
     }
+    & {
+      position: relative;
+      list-style: none;
+      margin: 0px 0 50px;
+      padding: 10px 0px;
+    }
 
-    position: relative;
-    list-style: none;
-    margin: 0px 0 50px;
-    padding: 10px 0px;
+    h3 {
+      margin-bottom: 0em !important;
+    }
 
     .thumbnail {
       width: 100%;
@@ -82,7 +87,7 @@ ul.projects {
     }
 
     ul {
-      margin-bottom: 8px;
+      margin-bottom: 1.4em;
     }
   }
 }

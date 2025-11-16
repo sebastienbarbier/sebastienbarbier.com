@@ -12,7 +12,7 @@ if (!fs.existsSync(dir)){
     fs.mkdirSync(dir);
 }
 
-fetch(`https://nomadlist.com/@sebastienbarbier.json`)
+fetch(`https://nomads.com/@sebastienbarbier.json`)
   .then(res => res.json())
   .then(json => {
 
@@ -39,13 +39,13 @@ fetch(`https://nomadlist.com/@sebastienbarbier.json`)
       json.location.next.flag = countryFlagEmoji.get(json.location.next.country_code).emoji;
     }
 
-    const path = "src/assets/json/nomadlist_feed.json";
+    const path = "src/assets/json/nomads_feed.json";
     fs.writeFile(path, JSON.stringify(json), function(err) {
       if(err) {
         console.log(err);
         return process.exit(-1);
       }
-      console.log(`Nomadlist feed cached in ${path}`);
+      console.log(`Nomads feed cached in ${path}`);
       process.exit(0);
     });
   }).catch(e => {

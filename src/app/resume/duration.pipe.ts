@@ -1,7 +1,8 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'duration'
+  name: 'duration',
+  standalone: false
 })
 export class DurationPipe implements PipeTransform {
   transform(value: any): String {
@@ -11,14 +12,29 @@ export class DurationPipe implements PipeTransform {
       position_list = [position_list];
     }
 
-    let duration = 0;
+    // Find minimum start date and maximum end date
+    let minStart: Date | null = null;
+    let maxEnd: Date | null = null;
+
     position_list.forEach((position: any) => {
-      let dateEnd = new Date().getTime()
-      if (position.date.end) {
-        dateEnd = position.date.end.getTime()
+      const startDate = position.date.start;
+      const endDate = position.date.end || new Date();
+
+      if (minStart === null || startDate < minStart) {
+        minStart = startDate;
       }
-      duration = duration + (dateEnd + 1000 * 60 * 60 * 24 - position.date.start.getTime());
+
+      if (maxEnd === null || endDate > maxEnd) {
+        maxEnd = endDate;
+      }
     });
+
+    if (minStart === null || maxEnd === null) {
+      return "";
+    }
+
+    // Calculate duration between min start and max end
+    const duration = (maxEnd as Date).getTime() + 1000 * 60 * 60 * 24 - (minStart as Date).getTime();
 
     // Display from duration in millisecond a string with x years and y months
     let years = Math.floor(duration / (1000 * 60 * 60 * 24 * 365));

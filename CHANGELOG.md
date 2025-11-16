@@ -21,11 +21,26 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 See for sample https://raw.githubusercontent.com/favoloso/conventional-changelog-emoji/master/CHANGELOG.md
 -->
 
+## [2.5.0] - 2025-11-16
+### 🛠 Improvements
+- Rename nomadlist social network to nomads (#114)
+- Add Front conference 2026 (#115)
+- Update resume (#117)
+### 🔒 Security
+- Update dependencies (#107) 
+
 ## [2.4.1] - 2024-12-07
 ### 🛠 Improvements
 - Add missing link to sitemap (#110)
 - Fix wrong description on Notes by Firefox (#111)
 - Fix minor typos (#112) 
+
+## [2.4.0] - 2024-06-17
+### 🛠 Improvements
+- Use @sebastienbarbier/design-system package for defining theming (#105) 
+- Add DjangoCon 2024 in conferences list (#104)
+### 🐛 Bug Fixes
+- Remove temporary fix for Firefox variable font bug (#97)
 
 ## [2.4.0] - 2024-06-17
 ### 🛠 Improvements

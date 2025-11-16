@@ -32,7 +32,8 @@ const contactTransition = trigger('contactTransition', [
   selector: 'app-contact',
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss'],
-  animations: [ contactTransition ]
+  animations: [ contactTransition ],
+  standalone: false
 })
 export class ContactComponent implements OnInit {
 

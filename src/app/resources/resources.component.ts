@@ -23,7 +23,8 @@ const resourcesTransition = trigger('resourcesTransition', [
   selector: 'app-resources',
   templateUrl: './resources.component.html',
   styleUrls: ['./resources.component.scss'],
-  animations: [ resourcesTransition ]
+  animations: [ resourcesTransition ],
+  standalone: false
 })
 export class ResourcesComponent implements OnInit {
 

@@ -43,7 +43,8 @@ const homeTransition = trigger('homeTransition', [
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
-  animations: [ homeTransition ]
+  animations: [ homeTransition ],
+  standalone: false
 })
 export class HomeComponent implements OnInit {
 

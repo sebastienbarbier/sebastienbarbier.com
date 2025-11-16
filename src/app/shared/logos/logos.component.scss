@@ -1,4 +1,4 @@
-@import '../../../assets/scss/variables';
+@use '../../../assets/scss/_variables' as *;
 
 ul.logos {
   display: flex;

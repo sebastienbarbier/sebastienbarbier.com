@@ -2,6 +2,7 @@ import 'zone.js';
 import 'reflect-metadata';
 
 import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 import { NgModule, ErrorHandler, Injectable, Input, Component } from '@angular/core';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { MarkdownModule } from 'ngx-markdown';
@@ -19,6 +20,7 @@ import { environment } from '../environments/environment';
 import { appRoutes } from './app.routes';
 
 import * as Sentry from '@sentry/browser';
+
 @Injectable()
 export class SentryErrorHandler implements ErrorHandler {
   constructor() {}
@@ -41,7 +43,8 @@ if (environment.production) {
 
 @NgModule({
   imports: [
-    BrowserModule.withServerTransition({appId: 'my-app'}),
+    BrowserModule,
+    CommonModule,
     HttpClientModule,
     MarkdownModule.forRoot(),
     BrowserAnimationsModule,
