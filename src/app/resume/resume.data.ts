@@ -194,6 +194,10 @@ export default {
       },
     ],
   "conferences": [{
+    date: new Date('April 15, 2026'),
+    name: 'DjangoCon Europe',
+    location: 'Athens, Greece'
+  },{
     date: new Date('February 27, 2026'),
     name: 'Front Conference',
     location: 'Zurich, Switzerland'
