@@ -21,10 +21,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 See for sample https://raw.githubusercontent.com/favoloso/conventional-changelog-emoji/master/CHANGELOG.md
 -->
 
+
+## [2.5.2] - 2026-01-02
+### 🛠 Improvements
+- Add ZurichJS Conf 2026 (#120)
+  
 ## [2.5.1] - 2026-01-01
 ### 🛠 Improvements
 - Add DjangoCon 2026 (#118)
-- 
+  
 ## [2.5.0] - 2025-11-16
 ### 🛠 Improvements
 - Rename nomadlist social network to nomads (#114)
