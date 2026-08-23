@@ -30,6 +30,11 @@ See for sample https://raw.githubusercontent.com/favoloso/conventional-changelog
 - Deploy to GitHub Pages only
 - Generate `static.paths.txt` and `sitemap.xml` from Angular routes before prerender
 
+### 🛠 Improvements
+
+- Improve SEO by keeping prerendered HTML visible (remove noscript wrapper) and skipping first-load enter animations to avoid a hydrate flash
+- Shorten meta descriptions and fix missing image alt attributes on work pages
+
 ### 🏗 Chore
 
 - Upgrade Angular from 20 to 22 and bump remaining dependencies

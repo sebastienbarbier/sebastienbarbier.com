@@ -1,17 +1,9 @@
-import { Component, OnInit, Inject, Renderer2, ElementRef, PLATFORM_ID, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit, Inject, Renderer2, ElementRef, PLATFORM_ID, ChangeDetectionStrategy, HostBinding } from '@angular/core';
 import { Router, NavigationStart, NavigationEnd, RouteConfigLoadStart, RouteConfigLoadEnd, RouterOutlet } from '@angular/router';
 import { routerTransition } from './router.animations';
 
-import { isPlatformServer, DOCUMENT } from '@angular/common';
+import { isPlatformBrowser, DOCUMENT } from '@angular/common';
 import { Title, Meta } from '@angular/platform-browser';
-
-import {
-  trigger,
-  state,
-  style,
-  animate,
-  transition
-} from '@angular/animations';
 
 @Component({
   selector: 'app-root',
@@ -34,6 +26,10 @@ export class AppComponent implements OnInit {
   hideMenuAnimation: Boolean;
   // Boolean to toggle the logo opacity effect
   contentIsScrolledTop: Boolean;
+
+  // Skip enter animations on first paint / hydration so prerendered HTML does not flash.
+  @HostBinding('@.disabled')
+  animationsDisabled = true;
 
   constructor(
       private router: Router,
@@ -77,23 +73,15 @@ export class AppComponent implements OnInit {
       if (event instanceof NavigationEnd) {
 
         this.path = event.url;
-        // If home page, we hide header
-        // if (event.url === '/') {
-        //   this.headerState = 'home';
-        // } else if (event.url === '/about-me') {
-        //   this.headerState = 'aboutMe';
-        // } else if (event.url === '/work') {
-        //   this.headerState = 'work';
-        // } else if (event.url === '/resume') {
-        //   this.headerState = 'resume';
-        // } else {
-        //   this.headerState = 'notHome';
-        // }
         // We enable overflow on body if fullscreen action had disabled it
         this._document.body.style.overflow = "auto";
 
         if (this.hideMenuAnimation) {
           this.hideMenuAnimation = false;
+          // Re-enable route/page animations after the first paint.
+          if (isPlatformBrowser(this.platformId)) {
+            this.animationsDisabled = false;
+          }
         }
 
         /**
@@ -122,14 +110,6 @@ export class AppComponent implements OnInit {
         }
       }
     });
-
-    // Handle noscript tag for SEO
-    if (isPlatformServer(this.platformId)) {
-      const wrap = this.renderer.createElement('noscript');
-      const toWrap = this.element.nativeElement;
-      this.renderer.appendChild(wrap, toWrap.children[0]);
-      this.renderer.appendChild(toWrap, wrap);
-    }
   }
 
   getState(outlet: RouterOutlet) {
