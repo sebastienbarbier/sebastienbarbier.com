@@ -32,11 +32,7 @@ npm run build
 
 ## Deploy to production
 
-```
-npm run deploy
-```
-
-Required to define env var `OS_TENANT_ID`, `OS_TENANT_NAME`, `OS_USERNAME`, `OS_PASSWORD`
+Push to `main`. GitHub Actions prerenders the site and publishes it to GitHub Pages at [sebastienbarbier.com](https://sebastienbarbier.com).
 
 ## Licence
 

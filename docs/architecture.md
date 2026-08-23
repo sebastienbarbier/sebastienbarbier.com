@@ -2,18 +2,10 @@
 
 ```mermaid
 flowchart LR
-  F[Browser] -->|sebastienbarbier.com| A[Nginx]
-  A --> B(Object storage)
+  F[Browser] -->|sebastienbarbier.com| A[GitHub Pages]
+  A --> B[Static prerendered files]
 ```
 
-## Nginx
+The site is prerendered as static HTML on every push to `main`, then published to GitHub Pages.
 
-Main domain name redirect to a nginx instance configured using the [config-proxy](https://github.com/sebastienbarbier/config-proxy) repository.
-
-Current instance run on an OVH VPS instance, and also generate server-side statistics.
-
-## Object storage
-
-Using S3-like infrastructure, static files are stored within an OVH object storage. 
-
-Files are generated and deployed on every commit within the main branch.
+The custom domain `sebastienbarbier.com` is set as the GitHub Pages CNAME in `.github/workflows/build.yml`.
