@@ -1,0 +1,43 @@
+// Design tokens (formerly @sebastienbarbier/design-system)
+
+:root {
+  // Color
+  --sys-color-background: #f8f5f2;
+  --sys-color-on-background: #202124;
+  --sys-color-surface: #f2edea;
+  --sys-color-on-surface: #202124;
+  --sys-color-primary: #1f1d1d;
+  --sys-color-on-primary: #e8eaed;
+  --sys-color-secondary: #a37200;
+  --sys-color-on-secondary: #fff9eb;
+  --sys-color-secondary-variant: #dbb778;
+  --sys-color-on-secondary-variant: #202124;
+  --sys-color-shadow: #16161d;
+
+  // Type
+  --sys-typeface-serif-variable: "Source Serif Variable", "Source Serif", Arial, serif;
+  --sys-typeface-sans-variable: "Open Sans Variable", "Open Sans", Helvetica, sans-serif;
+  --sys-typeface-serif: "Source Serif", Arial, serif;
+  --sys-typeface-sans: "Open Sans", Helvetica, sans-serif;
+
+  // Badge
+  --comp-badge-background-color: #f2edea;
+  --comp-badge-color: #202124;
+  --comp-badge-font-family: "Open Sans Variable", "Open Sans", Helvetica, sans-serif;
+  --comp-badge-font-size: 0.8em;
+
+  // Title
+  --comp-title-color: #202124;
+  --comp-title-font-family: "Source Serif Variable", "Source Serif", Arial, serif;
+  --comp-title-fontSizeH1: 4.2em;
+  --comp-title-fontSizeH2: 2.8em;
+  --comp-title-fontSizeH3: 2.2em;
+  --comp-title-fontSizeH4: 2em;
+  --comp-title-fontSizeH5: 1.8em;
+  --comp-title-fontSizeH6: 1.6em;
+  --comp-title-selection-backgroundColor: #dbb778;
+  --comp-title-selection-color: #202124;
+  --comp-title-headline-color: #202124;
+  --comp-title-headline-font-family: "Open Sans Variable", "Open Sans", Helvetica, sans-serif;
+  --comp-title-headline-font-size: 0.8em;
+}
