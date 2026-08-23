@@ -18,27 +18,52 @@ const routes: Routes = [
   {
     path: '',
     component: WorksComponent,
-    data: { title: 'Works', description: DESCRIPTION.work, state: 'works' },
+    data: {
+      title: 'Works',
+      description: DESCRIPTION.work,
+      state: 'works',
+      shareImage: '/assets/images/fromedwin/fromedwin_layout.png',
+    },
   },
   {
     path: 'seven23',
     component: Seven23Component,
-    data: { title: 'Seven23', description: DESCRIPTION.seven23, state: 'seven23' },
+    data: {
+      title: 'Seven23',
+      description: DESCRIPTION.seven23,
+      state: 'seven23',
+      shareImage: '/assets/images/seven23/seven23_layout.png',
+    },
   },
   {
     path: 'fromedwin',
     component: FromedwinComponent,
-    data: { title: 'FromEdwin', description: DESCRIPTION.fromedwin, state: 'fromedwin' },
+    data: {
+      title: 'FromEdwin',
+      description: DESCRIPTION.fromedwin,
+      state: 'fromedwin',
+      shareImage: '/assets/images/fromedwin/fromedwin_layout.png',
+    },
   },
   {
     path: 'mozilla',
     component: MozillaComponent,
-    data: { title: 'Notes by Firefox', description: DESCRIPTION.mozilla, state: 'mozilla' },
+    data: {
+      title: 'Notes by Firefox',
+      description: DESCRIPTION.mozilla,
+      state: 'mozilla',
+      shareImage: '/assets/images/mozilla/note_thumbnail.png',
+    },
   },
   {
     path: 'chefclub',
     component: ChefclubComponent,
-    data: { title: 'Chefclub', description: DESCRIPTION.chefclub, state: 'chefclub' },
+    data: {
+      title: 'Chefclub',
+      description: DESCRIPTION.chefclub,
+      state: 'chefclub',
+      shareImage: '/assets/images/chefclub/chefclub-thumbnail.png',
+    },
   },
 ];
 

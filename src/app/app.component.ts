@@ -181,6 +181,8 @@ export class AppComponent implements OnInit {
     const canonicalUrl = this.canonicalUrlFor(this.router.url);
     this.setCanonicalLink(canonicalUrl);
 
+    const shareImage = this.absoluteShareImage(data.shareImage);
+
     this.metaService.updateTag({ property: "og:type", content: "website" });
     this.metaService.updateTag({
       property: "og:site_name",
@@ -194,7 +196,7 @@ export class AppComponent implements OnInit {
     this.metaService.updateTag({ property: "og:url", content: canonicalUrl });
     this.metaService.updateTag({
       property: "og:image",
-      content: this.defaultShareImage,
+      content: shareImage,
     });
 
     this.metaService.updateTag({
@@ -208,8 +210,18 @@ export class AppComponent implements OnInit {
     });
     this.metaService.updateTag({
       name: "twitter:image",
-      content: this.defaultShareImage,
+      content: shareImage,
     });
+  }
+
+  private absoluteShareImage(shareImage?: string): string {
+    if (!shareImage) {
+      return this.defaultShareImage;
+    }
+    if (shareImage.startsWith("http://") || shareImage.startsWith("https://")) {
+      return shareImage;
+    }
+    return `${this.siteOrigin}${shareImage.startsWith("/") ? "" : "/"}${shareImage}`;
   }
 
   private canonicalUrlFor(routerUrl: string): string {

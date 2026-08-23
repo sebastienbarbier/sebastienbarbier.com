@@ -36,6 +36,7 @@ See for sample https://raw.githubusercontent.com/favoloso/conventional-changelog
 - Shorten meta descriptions and fix missing image alt attributes on work pages
 - Add Open Graph and Twitter Card tags, per-page canonical URLs, and richer Person JSON-LD
 - Strengthen the home page title for search click-through
+- Add lastmod to the generated sitemap, update legal hosting to GitHub Pages, and use project images for work-page social previews
 
 ### 🏗 Chore
 

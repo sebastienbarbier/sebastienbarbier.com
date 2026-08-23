@@ -100,10 +100,11 @@ function writePaths(routes) {
 }
 
 function writeSitemap(routes) {
+  const lastmod = new Date().toISOString().slice(0, 10);
   const urls = routes
     .map((route) => {
       const loc = route === '/' ? SITE_ORIGIN : `${SITE_ORIGIN}${route}`;
-      return `  <url>\n    <loc>${loc}</loc>\n  </url>`;
+      return `  <url>\n    <loc>${loc}</loc>\n    <lastmod>${lastmod}</lastmod>\n  </url>`;
     })
     .join('\n');
 
