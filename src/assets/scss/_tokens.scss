@@ -15,9 +15,9 @@
   --sys-color-shadow: #16161d;
 
   // Type
-  --sys-typeface-serif-variable: "Source Serif Variable", "Source Serif", Arial, serif;
+  --sys-typeface-serif-variable: "Source Serif Variable", "Source Serif", ui-serif, Georgia, "Times New Roman", Times, serif;
   --sys-typeface-sans-variable: "Open Sans Variable", "Open Sans", Helvetica, sans-serif;
-  --sys-typeface-serif: "Source Serif", Arial, serif;
+  --sys-typeface-serif: "Source Serif", ui-serif, Georgia, "Times New Roman", Times, serif;
   --sys-typeface-sans: "Open Sans", Helvetica, sans-serif;
 
   // Badge
@@ -28,7 +28,7 @@
 
   // Title
   --comp-title-color: #202124;
-  --comp-title-font-family: "Source Serif Variable", "Source Serif", Arial, serif;
+  --comp-title-font-family: "Source Serif Variable", "Source Serif", ui-serif, Georgia, "Times New Roman", Times, serif;
   --comp-title-fontSizeH1: 4.2em;
   --comp-title-fontSizeH2: 2.8em;
   --comp-title-fontSizeH3: 2.2em;
