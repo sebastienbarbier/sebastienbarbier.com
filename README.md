@@ -24,7 +24,7 @@ Navigate to `http://localhost:4200/`. The app will automatically reload if you c
 
 ## Build
 
-Default build will prerender static file for each page specified in `static.paths.txt`.
+Default build generates `static.paths.txt` and `static/sitemap.xml` from Angular routes, then prerenders every page for SEO.
 
 ```
 pnpm run build

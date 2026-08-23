@@ -5,7 +5,11 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --host 0.0.0.0",
-    "build": "ng run sebastienbarbier:prerender",
+    "generate:site": "node scripts/generate-site-files.js",
+    "prestart": "node scripts/generate-site-files.js",
+    "prebuild": "node scripts/generate-site-files.js",
+    "preprerender": "node scripts/generate-site-files.js",
+    "build": "NG_BUILD_MAX_WORKERS=1 ng run sebastienbarbier:prerender",
     "serve": "pnpm start",
     "serve:static": "pnpm run serve:prerender",
     "test": "ng test",
@@ -17,7 +21,7 @@
     "dev:ssr": "ng run sebastienbarbier:serve-ssr",
     "serve:ssr": "node dist/server/main.js",
     "build:ssr": "ng build && ng run sebastienbarbier:server",
-    "prerender": "ng run sebastienbarbier:prerender",
+    "prerender": "NG_BUILD_MAX_WORKERS=1 ng run sebastienbarbier:prerender",
     "serve:prerender": "cd dist/en && http-server"
   },
   "engines": {

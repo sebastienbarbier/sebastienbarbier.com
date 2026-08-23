@@ -94,3 +94,7 @@ nosetests.xml
 
 # Angular code
 .angular
+
+# Generated from Angular routes (see scripts/generate-site-files.js)
+/static.paths.txt
+/static/sitemap.xml

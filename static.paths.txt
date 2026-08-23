@@ -1,9 +1,10 @@
-/works
-/works/seven23
-/works/fromedwin
-/works/chefclub
-/works/mozilla
-/resume
 /contact
-/resources
 /legal
+/resources
+/resume
+/works
+/works/chefclub
+/works/fromedwin
+/works/mozilla
+/works/seven23
+/

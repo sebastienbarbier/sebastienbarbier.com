@@ -28,6 +28,7 @@ See for sample https://raw.githubusercontent.com/favoloso/conventional-changelog
 - Rename Twitter to X
 - Migrate from npm to pnpm
 - Deploy to GitHub Pages only
+- Generate `static.paths.txt` and `sitemap.xml` from Angular routes before prerender
 
 ### 🗑 Removed
 
