@@ -1,0 +1,37 @@
+// Variable fonts only — static weights are unused on modern browsers.
+
+@font-face {
+  font-family: "Open Sans Variable";
+  src: url("/assets/fonts/OpenSans-Variable.woff2") format("woff2");
+  font-weight: 125 950;
+  font-stretch: 75% 125%;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Open Sans Variable";
+  src: url("/assets/fonts/OpenSans-Italic-Variable.woff2") format("woff2");
+  font-weight: 125 950;
+  font-stretch: 75% 125%;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Serif Variable";
+  src: url("/assets/fonts/SourceSerif4-Variable.woff2") format("woff2");
+  font-weight: 125 950;
+  font-stretch: 75% 125%;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Serif Variable";
+  src: url("/assets/fonts/SourceSerif4-Italic-Variable.woff2") format("woff2");
+  font-weight: 125 950;
+  font-stretch: 75% 125%;
+  font-style: italic;
+  font-display: swap;
+}

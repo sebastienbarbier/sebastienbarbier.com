@@ -1,13 +1,7 @@
 // This is the default style file injected in all html pages before angular start loading
 // It is injected using angular.json description within styles
 
-@use "@sebastienbarbier/design-system/dist/style";
-@use "@sebastienbarbier/design-system/dist/fonts";
-
-// Define variables
-@use "./assets/scss/_variables" as *;
-
-// Global Theming
+@use "./assets/scss/fonts";
 @use "./assets/scss/theme" as *;
 
 .content {
