@@ -32,7 +32,8 @@ img {
       grid-row: 2 / span 2;
     }
 
-    div.two_tablets_two_mobiles {
+    div.two_tablets_two_mobiles,
+    div.devices {
       grid-row: 3;
       grid-column: 1 / span 4;
     }

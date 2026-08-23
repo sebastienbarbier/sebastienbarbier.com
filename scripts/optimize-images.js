@@ -2,6 +2,7 @@
 /**
  * Resize oversized screenshots and write WebP (+ JPEG or PNG fallback).
  * PNGs with alpha stay PNG (JPEG would paint a black background).
+ * UI screenshots can pass { lossless: true } to keep PNG + lossless WebP.
  * Run: pnpm run optimize:images
  */
 const path = require('path');
@@ -17,10 +18,14 @@ const jobs = [
   { rel: 'images/mozilla/galery_2_list.1800.jpg', max: 1800 },
   { rel: 'images/mozilla/galery_3_note.1800.jpg', max: 1800 },
   { rel: 'images/mozilla/galery_4_app.1800.jpg', max: 1800 },
-  { rel: 'images/seven23/screens/1-dashboard.png', max: 1600 },
-  { rel: 'images/seven23/screens/7-transactions.png', max: 900 },
-  { rel: 'images/seven23/screens/5-report.png', max: 1200 },
-  { rel: 'images/seven23/screens/9-changes.png', max: 900 },
+  { rel: 'images/seven23/screens/ipad-dashboard.png', max: 2400, lossless: true },
+  { rel: 'images/seven23/screens/ipad-categories.png', max: 2400, lossless: true },
+  { rel: 'images/seven23/screens/ipad-changes.png', max: 2400, lossless: true },
+  { rel: 'images/seven23/screens/ipad-search.png', max: 2400, lossless: true },
+  { rel: 'images/seven23/screens/iphone-transactions.png', max: 2400, lossless: true },
+  { rel: 'images/seven23/screens/iphone-report.png', max: 2400, lossless: true },
+  { rel: 'images/seven23/screens/iphone-changes.png', max: 2400, lossless: true },
+  { rel: 'images/seven23/screens/iphone-settings.png', max: 2400, lossless: true },
   { rel: 'images/fromedwin/screenshots/dashboard.png', max: 1200 },
   { rel: 'images/fromedwin/screenshots/availability.png', max: 1200 },
   { rel: 'images/fromedwin/screenshots/report.png', max: 1200 },
@@ -35,7 +40,7 @@ const jobs = [
   { rel: 'images/ressources/sebastienbarbier_profile_1024.jpg', max: 1024 },
 ];
 
-async function optimize({ rel, max }) {
+async function optimize({ rel, max, lossless }) {
   const inputPath = path.join(root, rel);
   if (!fs.existsSync(inputPath)) {
     console.warn('skip missing', rel);
@@ -45,7 +50,7 @@ async function optimize({ rel, max }) {
   const before = fs.statSync(inputPath).size;
   const meta = await sharp(inputPath).metadata();
   const ext = path.extname(inputPath).toLowerCase();
-  const keepPng = ext === '.png' && meta.hasAlpha;
+  const keepPng = lossless || (ext === '.png' && meta.hasAlpha);
   const outExt = keepPng ? '.png' : (ext === '.png' ? '.jpg' : ext);
   const base = inputPath.slice(0, -ext.length);
   const outPath = `${base}${outExt}`;
@@ -68,10 +73,6 @@ async function optimize({ rel, max }) {
   }
   fs.renameSync(tmpPath, outPath);
 
-  // Drop stale JPEG fallback if we restored a transparent PNG
-  if (keepPng && outPath !== inputPath) {
-    /* same path */
-  }
   if (keepPng) {
     const staleJpg = `${base}.jpg`;
     if (fs.existsSync(staleJpg)) fs.unlinkSync(staleJpg);
@@ -79,9 +80,10 @@ async function optimize({ rel, max }) {
     fs.unlinkSync(inputPath);
   }
 
-  await sharp(outPath)
-    .webp({ quality: 78, effort: 4, alphaQuality: 90 })
-    .toFile(webpPath);
+  const webpOpts = lossless
+    ? { lossless: true, effort: 4 }
+    : { quality: 78, effort: 4, alphaQuality: 90 };
+  await sharp(outPath).webp(webpOpts).toFile(webpPath);
 
   const after = fs.statSync(outPath).size;
   const webp = fs.statSync(webpPath).size;

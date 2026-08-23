@@ -26,31 +26,70 @@ span.censored {
     }
 }
 
-.two_tablets_two_mobiles {
-  position: relative;
-
+.devices {
   display: flex;
   flex-wrap: wrap;
-
   align-items: center;
   justify-content: space-around;
+  gap: 48px 0;
+  width: 100%;
+  margin-top: 40px;
+}
 
-  .tablet_landscape {
-      width: 50%;
-  }
-  .tablet_portrait {
-      width: 50%;
-  }
-  .mobile_portrait {
-      width: 25%;
-  }
-  .mobile_rotated {
-      width: 25%;
-  }
+.device {
+  box-sizing: border-box;
+  background: #161514;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  box-shadow:
+    inset 0 0 0 0.5px rgba(255, 255, 255, 0.18),
+    0 1px 1px rgba(255, 255, 255, 0.08),
+    0 10px 28px rgba(22, 22, 29, 0.12);
 
-  picture img {
+  picture,
+  img {
+    display: block;
     width: 100%;
     height: auto;
-    display: block;
+  }
+
+  &.tablet {
+    width: 62%;
+    padding: 3px;
+    border-radius: 16px;
+
+    picture,
+    img {
+      border-radius: 13px;
+    }
+  }
+
+  &.phone {
+    width: 22%;
+    padding: 3px;
+    border-radius: 28px;
+
+    picture,
+    img {
+      border-radius: 25px;
+    }
+  }
+
+  @include for-tablet-landscape-down {
+    &.tablet {
+      width: 64%;
+    }
+    &.phone {
+      width: 28%;
+    }
+  }
+
+  @include for-phone-only {
+    &.tablet {
+      width: 100%;
+    }
+    &.phone {
+      width: 52%;
+    }
   }
 }
