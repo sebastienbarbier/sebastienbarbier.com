@@ -39,6 +39,7 @@ src/assets/images/instagram/
 /coverage
 /libpeerconnection.log
 npm-debug.log
+pnpm-debug.log
 testem.log
 /typings
 yarn-error.log

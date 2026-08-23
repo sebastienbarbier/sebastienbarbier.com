@@ -4,14 +4,14 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "node dist/server/main.js",
+    "start": "ng serve --host 0.0.0.0",
     "build": "ng run sebastienbarbier:prerender",
-    "serve": "npx ng serve --host 0.0.0.0",
-    "serve:static": "npm run serve:prerender",
+    "serve": "pnpm start",
+    "serve:static": "pnpm run serve:prerender",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "fetch:socials": "npm run instagram && npm run nomads",
+    "fetch:socials": "pnpm run instagram && pnpm run nomads",
     "instagram": "node scripts/instagram.js",
     "nomads": "node scripts/nomads.js",
     "dev:ssr": "ng run sebastienbarbier:serve-ssr",
@@ -21,7 +21,18 @@
     "serve:prerender": "cd dist/en && http-server"
   },
   "engines": {
-    "node": "24"
+    "node": "24",
+    "pnpm": ">=10"
+  },
+  "packageManager": "pnpm@10.15.1",
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@parcel/watcher",
+      "core-js",
+      "esbuild",
+      "lmdb",
+      "msgpackr-extract"
+    ]
   },
   "private": true,
   "dependencies": {

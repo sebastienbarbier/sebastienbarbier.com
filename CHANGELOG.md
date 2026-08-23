@@ -21,7 +21,18 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 See for sample https://raw.githubusercontent.com/favoloso/conventional-changelog-emoji/master/CHANGELOG.md
 -->
 
-## [2.6.0] - 2026-MM-DD
+## [2.6.0] - 2026-08-23
+
+### 🚨 Changed
+
+- Rename Twitter to X
+- Migrate from npm to pnpm
+- Deploy to GitHub Pages only
+
+### 🗑 Removed
+
+- Remove `@sebastienbarbier/design-system` and keep the theme locally in the site
+
 
 ## [2.5.2] - 2026-01-02
 

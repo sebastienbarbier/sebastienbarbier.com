@@ -11,13 +11,13 @@ It is powered by [angular framework](https://angular.io), and published with [an
 ```
 git clone git@github.com:sebastienbarbier/sebastienbarbier.com.git
 cd sebastienbarbier.com
-npm install
+pnpm install
 ```
 
 ## Serve locally
 
 ```
-npx ng serve
+pnpm start
 ```
 
 Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
@@ -27,7 +27,7 @@ Navigate to `http://localhost:4200/`. The app will automatically reload if you c
 Default build will prerender static file for each page specified in `static.paths.txt`.
 
 ```
-npm run build
+pnpm run build
 ```
 
 ## Deploy to production
