@@ -1,11 +1,9 @@
-import { Component, OnInit, Inject, Renderer2, ElementRef, PLATFORM_ID, Optional } from '@angular/core';
-import { ActivatedRoute, Router, NavigationStart, NavigationEnd, RouteConfigLoadStart, RouteConfigLoadEnd, RouterOutlet } from '@angular/router';
+import { Component, OnInit, Inject, Renderer2, ElementRef, PLATFORM_ID } from '@angular/core';
+import { Router, NavigationStart, NavigationEnd, RouteConfigLoadStart, RouteConfigLoadEnd, RouterOutlet } from '@angular/router';
 import { routerTransition } from './router.animations';
 
-import { isPlatformBrowser, isPlatformServer } from '@angular/common';
+import { isPlatformServer, DOCUMENT } from '@angular/common';
 import { Title, Meta } from '@angular/platform-browser';
-import { DOCUMENT, Location } from '@angular/common';
-import { Routes } from '@angular/router';
 
 import {
   trigger,
@@ -30,7 +28,6 @@ export class AppComponent implements OnInit {
    **/
 
   navigationMenuStatus: Boolean;
-  lang: string;
   path: string;
   headerState: string;
   hideMenuAnimation: Boolean;
@@ -38,31 +35,20 @@ export class AppComponent implements OnInit {
   contentIsScrolledTop: Boolean;
 
   constructor(
-      private route: ActivatedRoute,
       private router: Router,
       private element: ElementRef,
       private renderer: Renderer2,
       private titleService: Title,
       private metaService: Meta,
       @Inject(PLATFORM_ID) private platformId: Object,
-      @Inject(DOCUMENT) private _document: Document,
-      @Optional() @Inject('serverUrl') protected serverUrl: string
+      @Inject(DOCUMENT) private _document: Document
     ) {
     this.navigationMenuStatus = false;
     this.hideMenuAnimation = true;
     this.contentIsScrolledTop = false;
 
-    this.lang = 'en';
     this.path = '';
     this.headerState = '';
-    // if (isPlatformBrowser(platformId) && d.location.hostname.endsWith('sebastienbarbier.fr')) {
-    //   this.lang = 'en';
-    // } else if (isPlatformServer(platformId) && serverUrl.split(':')[1].endsWith('sebastienbarbier.fr')) {
-    //   this.lang = 'en';
-    // }
-    // translate.setDefaultLang(this.lang);
-    // translate.use(this.lang);
-
   }
 
   closeNavigation() {

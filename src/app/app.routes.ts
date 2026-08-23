@@ -2,10 +2,6 @@ import { Routes } from '@angular/router';
 
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
-export function _(str: string) {
-  return str;
-}
-
 const DESCRIPTION = {
   'home': `Welcome on Sebastien Barbier's personal portfolio. He is a software engineer based in Zurich Switzerland, currently working at Unique AG building a platform using AI for the financial industry. Sebastien Barbier worked as a full-stack web developer for companies like SAP, Chefclub, Mozilla, or Mila. His latest projects are Seven23.io or FromEdwin.com.`,
   'resume': `Working as a Software Engineer, this is a short resume of my past experiences, introducing technologies I like, my work experiences, educations, and conferences I attended.`,

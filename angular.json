@@ -20,17 +20,17 @@
               "src/assets",
               {
                 "glob": "keybase.txt",
-                "input": "static/en",
+                "input": "static",
                 "output": "/"
               },
               {
                 "glob": "robots.txt",
-                "input": "static/en",
+                "input": "static",
                 "output": "/"
               },
               {
                 "glob": "sitemap.xml",
-                "input": "static/en",
+                "input": "static",
                 "output": "/"
               }
             ],
@@ -81,12 +81,6 @@
 
           }
         },
-        "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n",
-          "options": {
-            "buildTarget": "sebastienbarbier:build"
-          }
-        },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
@@ -103,17 +97,17 @@
               "src/assets",
               {
                 "glob": "keybase.txt",
-                "input": "static/en",
+                "input": "static",
                 "output": "/"
               },
               {
                 "glob": "robots.txt",
-                "input": "static/en",
+                "input": "static",
                 "output": "/"
               },
               {
                 "glob": "sitemap.xml",
-                "input": "static/en",
+                "input": "static",
                 "output": "/"
               }
             ]
