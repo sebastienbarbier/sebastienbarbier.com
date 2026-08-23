@@ -1,4 +1,4 @@
-import { Component, OnInit, HostBinding } from '@angular/core';
+import { Component, OnInit, HostBinding, ChangeDetectionStrategy } from '@angular/core';
 
 import {
   sequence,
@@ -24,6 +24,7 @@ const mozillaTransition = trigger('mozillaTransition', [
   templateUrl: './mozilla.component.html',
   styleUrls: ['./mozilla.component.scss'],
   animations: [ mozillaTransition ],
+  changeDetection: ChangeDetectionStrategy.Eager,
   standalone: false
 })
 export class MozillaComponent {

@@ -1,4 +1,4 @@
-import { Component, OnInit, HostBinding } from '@angular/core';
+import { Component, OnInit, HostBinding, ChangeDetectionStrategy } from '@angular/core';
 
 import {
   sequence,
@@ -24,6 +24,7 @@ const resourcesTransition = trigger('resourcesTransition', [
   templateUrl: './resources.component.html',
   styleUrls: ['./resources.component.scss'],
   animations: [ resourcesTransition ],
+  changeDetection: ChangeDetectionStrategy.Eager,
   standalone: false
 })
 export class ResourcesComponent implements OnInit {

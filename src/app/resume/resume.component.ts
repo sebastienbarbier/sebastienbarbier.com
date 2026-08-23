@@ -1,4 +1,4 @@
-import { Component, Inject, OnInit, HostBinding, PLATFORM_ID } from '@angular/core';
+import { Component, Inject, OnInit, HostBinding, PLATFORM_ID, ChangeDetectionStrategy } from '@angular/core';
 
 import {
   trigger,
@@ -29,6 +29,7 @@ function getAge (birthDate: Date) {
   templateUrl: './resume.component.html',
   styleUrls: ['./resume.component.scss'],
   animations: [ resumeTransition ],
+  changeDetection: ChangeDetectionStrategy.Eager,
   standalone: false
 })
 export class ResumeComponent implements OnInit {

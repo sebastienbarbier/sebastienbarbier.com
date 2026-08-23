@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject, Renderer2, ElementRef, PLATFORM_ID } from '@angular/core';
+import { Component, OnInit, Inject, Renderer2, ElementRef, PLATFORM_ID, ChangeDetectionStrategy } from '@angular/core';
 import { Router, NavigationStart, NavigationEnd, RouteConfigLoadStart, RouteConfigLoadEnd, RouterOutlet } from '@angular/router';
 import { routerTransition } from './router.animations';
 
@@ -18,6 +18,7 @@ import {
   animations: [ routerTransition ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
+  changeDetection: ChangeDetectionStrategy.Eager,
   standalone: false
 })
 export class AppComponent implements OnInit {

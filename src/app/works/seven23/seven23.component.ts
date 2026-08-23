@@ -1,4 +1,4 @@
-import { Component, OnInit, HostBinding } from '@angular/core';
+import { Component, OnInit, HostBinding, ChangeDetectionStrategy } from '@angular/core';
 
 import {
   sequence,
@@ -24,6 +24,7 @@ const seven23Transition = trigger('seven23Transition', [
   templateUrl: './seven23.component.html',
   styleUrls: ['./seven23.component.scss'],
   animations: [ seven23Transition ],
+  changeDetection: ChangeDetectionStrategy.Eager,
   standalone: false
 })
 export class Seven23Component implements OnInit {

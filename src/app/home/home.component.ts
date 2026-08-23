@@ -1,4 +1,4 @@
-import { Component, OnInit, HostBinding } from '@angular/core';
+import { Component, OnInit, HostBinding, ChangeDetectionStrategy } from '@angular/core';
 
 import {
   sequence,
@@ -44,6 +44,7 @@ const homeTransition = trigger('homeTransition', [
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
   animations: [ homeTransition ],
+  changeDetection: ChangeDetectionStrategy.Eager,
   standalone: false
 })
 export class HomeComponent implements OnInit {

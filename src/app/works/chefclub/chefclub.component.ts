@@ -1,4 +1,4 @@
-import { Component, OnInit, HostBinding } from '@angular/core';
+import { Component, OnInit, HostBinding, ChangeDetectionStrategy } from '@angular/core';
 
 import {
   sequence,
@@ -24,6 +24,7 @@ const chefclubTransition = trigger('chefclubTransition', [
   templateUrl: './chefclub.component.html',
   styleUrls: ['./chefclub.component.scss'],
   animations: [ chefclubTransition ],
+  changeDetection: ChangeDetectionStrategy.Eager,
   standalone: false
 })
 export class ChefclubComponent {

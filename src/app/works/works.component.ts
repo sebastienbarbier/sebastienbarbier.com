@@ -1,4 +1,4 @@
-import { Component, OnInit, HostBinding } from '@angular/core';
+import { Component, OnInit, HostBinding, ChangeDetectionStrategy } from '@angular/core';
 
 import {
   sequence,
@@ -33,6 +33,7 @@ const worksTransition = trigger('worksTransition', [
   templateUrl: './works.component.html',
   styleUrls: ['./works.component.scss'],
   animations: [ worksTransition ],
+  changeDetection: ChangeDetectionStrategy.Eager,
   standalone: false
 })
 export class WorksComponent implements OnInit {

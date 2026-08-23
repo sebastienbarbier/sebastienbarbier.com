@@ -30,6 +30,12 @@ See for sample https://raw.githubusercontent.com/favoloso/conventional-changelog
 - Deploy to GitHub Pages only
 - Generate `static.paths.txt` and `sitemap.xml` from Angular routes before prerender
 
+### 🏗 Chore
+
+- Upgrade Angular from 20 to 22 and bump remaining dependencies
+- Replace deprecated TSLint with ESLint
+- Remove deprecated Protractor, Codelyzer, and ecstatic packages
+
 ### 🗑 Removed
 
 - Remove `@sebastienbarbier/design-system` and keep the theme locally in the site

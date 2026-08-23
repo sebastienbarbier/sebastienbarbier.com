@@ -86,146 +86,170 @@
 
     <h2>Work experience</h2>
     <ul class="experiences">
-      <li *ngFor="let experience of experiences" class="experience">
-        <aside>
-          <img
-            [src]="experience.logo"
-            alt="Logo from {{ experience.company }}"
-          />
-        </aside>
-        <div>
-          <ng-container *ngIf="experience.positions.length == 1">
-            <p>
-              <strong>{{ experience.positions[0].title }}</strong
-              ><br />
-              {{ experience.name }} • {{ experience.type }}
-            </p>
-            <p
-              *ngIf="experience.positions[0].date.end"
-              class="date_and_location"
-            >
-              {{ experience.positions[0].date.start | date: "MMMM y" }} -
-              {{ experience.positions[0].date.end | date: "MMMM y" }} •
-              {{ experience.positions[0] | duration }}<br />
-              {{ experience.location }}
-            </p>
-            <p
-              *ngIf="!experience.positions[0].date.end"
-              class="date_and_location"
-            >
-              {{ experience.positions[0].date.start | date: "MMMM y" }} -
-              Present • {{ experience.positions[0] | duration }}<br />
-              {{ experience.location }}
-            </p>
-            <div class="description" markdown>
-              {{ experience.positions[0].description }}
-            </div>
-            <ul class="images" *ngIf="experience.positions[0].images">
-              <li *ngFor="let image of experience.positions[0].images">
-                <img src="{{ image.src }}" alt="{{ image.alt }}" />
-              </li>
-            </ul>
-          </ng-container>
-
-          <ng-container *ngIf="experience.positions.length > 1">
-            <p>
-              <strong>{{ experience.name }} </strong>
-            </p>
-            <p class="date_and_location">
-              {{ experience.type }} • {{ experience.positions | duration
-              }}<br />{{ experience.location }}
-            </p>
-            <ul class="experience">
-              <li class="dot" *ngFor="let position of experience.positions">
-                <p>
-                  <strong>{{ position.title }}</strong>
+      @for (experience of experiences; track experience) {
+        <li class="experience">
+          <aside>
+            <img
+              [src]="experience.logo"
+              alt="Logo from {{ experience.company }}"
+              />
+          </aside>
+          <div>
+            @if (experience.positions.length == 1) {
+              <p>
+                <strong>{{ experience.positions[0].title }}</strong
+                  ><br />
+                  {{ experience.name }} • {{ experience.type }}
                 </p>
-                <p *ngIf="position.date.end" class="date_and_location">
-                  {{ position.date.start | date: "MMMM y" }} -
-                  {{ position.date.end | date: "MMMM y" }} •
-                  {{ position | duration }}
-                </p>
-                <p *ngIf="!position.date.end" class="date_and_location">
-                  {{ position.date.start | date: "MMMM y" }} - Present •
-                  {{ position | duration }}
-                </p>
+                @if (experience.positions[0].date.end) {
+                  <p
+                    class="date_and_location"
+                    >
+                    {{ experience.positions[0].date.start | date: "MMMM y" }} -
+                    {{ experience.positions[0].date.end | date: "MMMM y" }} •
+                    {{ experience.positions[0] | duration }}<br />
+                    {{ experience.location }}
+                  </p>
+                }
+                @if (!experience.positions[0].date.end) {
+                  <p
+                    class="date_and_location"
+                    >
+                    {{ experience.positions[0].date.start | date: "MMMM y" }} -
+                    Present • {{ experience.positions[0] | duration }}<br />
+                    {{ experience.location }}
+                  </p>
+                }
                 <div class="description" markdown>
-                  {{ position.description }}
+                  {{ experience.positions[0].description }}
                 </div>
-                <ul class="images" *ngIf="position.images">
-                  <li *ngFor="let image of experience.positions[0].images">
-                    <img src="{{ image.src }}" alt="{{ image.alt }}" />
-                  </li>
+                @if (experience.positions[0].images) {
+                  <ul class="images">
+                    @for (image of experience.positions[0].images; track image) {
+                      <li>
+                        <img src="{{ image.src }}" alt="{{ image.alt }}" />
+                      </li>
+                    }
+                  </ul>
+                }
+              }
+              @if (experience.positions.length > 1) {
+                <p>
+                  <strong>{{ experience.name }} </strong>
+                </p>
+                <p class="date_and_location">
+                  {{ experience.type }} • {{ experience.positions | duration
+                  }}<br />{{ experience.location }}
+                </p>
+                <ul class="experience">
+                  @for (position of experience.positions; track position) {
+                    <li class="dot">
+                      <p>
+                        <strong>{{ position.title }}</strong>
+                      </p>
+                      @if (position.date.end) {
+                        <p class="date_and_location">
+                          {{ position.date.start | date: "MMMM y" }} -
+                          {{ position.date.end | date: "MMMM y" }} •
+                          {{ position | duration }}
+                        </p>
+                      }
+                      @if (!position.date.end) {
+                        <p class="date_and_location">
+                          {{ position.date.start | date: "MMMM y" }} - Present •
+                          {{ position | duration }}
+                        </p>
+                      }
+                      <div class="description" markdown>
+                        {{ position.description }}
+                      </div>
+                      @if (position.images) {
+                        <ul class="images">
+                          @for (image of experience.positions[0].images; track image) {
+                            <li>
+                              <img src="{{ image.src }}" alt="{{ image.alt }}" />
+                            </li>
+                          }
+                        </ul>
+                      }
+                    </li>
+                  }
                 </ul>
+              }
+            </div>
+          </li>
+        }
+      </ul>
+
+      <h2>Education</h2>
+      <ul class="education">
+        @for (education of educations; track education) {
+          <li>
+            <p class="year">{{ education.year }}</p>
+            <div>
+              <header>
+                <strong>{{ education.title }}</strong
+                  >@if (education.grade) {
+                  <span> - {{ education.grade }}</span
+                    >
+                    }<br />
+                    {{ education.university }} -
+                    <span class="location">{{ education.location }}</span>
+                  </header>
+                  @if (education.internship) {
+                    <p class="internship">
+                      Internship: <strong>{{ education.internship.company }}</strong> -
+                      <span class="location">{{ education.internship.location }}</span>
+                      - {{ education.internship.duration_in_months }} months.<br />{{
+                      education.internship.description
+                      }}
+                    </p>
+                  }
+                </div>
               </li>
-            </ul>
-          </ng-container>
+            }
+          </ul>
+
+          <h2>About me</h2>
+
+          <p>
+            Building tools to make life easier. Exploring blockchain, crypto, and
+            trading. Passionate about photography, motorcycles, travel, and connecting
+            with people in tech.
+          </p>
+
+          <h2>Attending conferences</h2>
+          <p>Here's a list of the conferences I attended in the past years:</p>
+
+          <table>
+            <tr>
+              <th>Year</th>
+              <th>Conference's name</th>
+              <th>Location</th>
+            </tr>
+            @for (year of years; track year) {
+              @for (confs of conferences[year]; track confs; let loopcounter = $index) {
+                <tr>
+                  @if (loopcounter == 0) {
+                    <td
+                      class="year"
+                      [attr.rowspan]="conferences[year].length"
+                      >
+                      {{ year }}
+                    </td>
+                  }
+                  <td class="name">{{ confs.name }}</td>
+                  <td class="location">{{ confs.location }}</td>
+                </tr>
+              }
+            }
+          </table>
         </div>
-      </li>
-    </ul>
-
-    <h2>Education</h2>
-    <ul class="education">
-      <li *ngFor="let education of educations">
-        <p class="year">{{ education.year }}</p>
-        <div>
-          <header>
-            <strong>{{ education.title }}</strong
-            ><span *ngIf="education.grade"> - {{ education.grade }}</span
-            ><br />
-            {{ education.university }} -
-            <span class="location">{{ education.location }}</span>
-          </header>
-          <ng-container *ngIf="education.internship">
-            <p class="internship">
-              Internship: <strong>{{ education.internship.company }}</strong> -
-              <span class="location">{{ education.internship.location }}</span>
-              - {{ education.internship.duration_in_months }} months.<br />{{
-                education.internship.description
-              }}
-            </p>
-          </ng-container>
+        <nav class="end_page">
+          <a routerLink="/works" class="back" role="button"
+            >Explore recent projects</a
+            >
+            <a routerLink="/contact" class="back" role="button">Contact me</a>
+          </nav>
+          <route-footer></route-footer>
         </div>
-      </li>
-    </ul>
-
-    <h2>About me</h2>
-
-    <p>
-      Building tools to make life easier. Exploring blockchain, crypto, and
-      trading. Passionate about photography, motorcycles, travel, and connecting
-      with people in tech.
-    </p>
-
-    <h2>Attending conferences</h2>
-    <p>Here's a list of the conferences I attended in the past years:</p>
-
-    <table>
-      <tr>
-        <th>Year</th>
-        <th>Conference's name</th>
-        <th>Location</th>
-      </tr>
-      <ng-container *ngFor="let year of years">
-        <tr *ngFor="let confs of conferences[year]; let loopcounter = index">
-          <td
-            class="year"
-            *ngIf="loopcounter == 0"
-            [attr.rowspan]="conferences[year].length"
-          >
-            {{ year }}
-          </td>
-          <td class="name">{{ confs.name }}</td>
-          <td class="location">{{ confs.location }}</td>
-        </tr>
-      </ng-container>
-    </table>
-  </div>
-  <nav class="end_page">
-    <a routerLink="/works" class="back" role="button"
-      >Explore recent projects</a
-    >
-    <a routerLink="/contact" class="back" role="button">Contact me</a>
-  </nav>
-  <route-footer></route-footer>
-</div>

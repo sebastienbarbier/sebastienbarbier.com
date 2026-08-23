@@ -1,4 +1,4 @@
-import { Component, OnInit, HostBinding } from '@angular/core';
+import { Component, OnInit, HostBinding, ChangeDetectionStrategy } from '@angular/core';
 
 import {
   sequence,
@@ -33,6 +33,7 @@ const contactTransition = trigger('contactTransition', [
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss'],
   animations: [ contactTransition ],
+  changeDetection: ChangeDetectionStrategy.Eager,
   standalone: false
 })
 export class ContactComponent implements OnInit {

@@ -1,4 +1,4 @@
-import { Component, OnInit, HostBinding } from '@angular/core';
+import { Component, OnInit, HostBinding, ChangeDetectionStrategy } from '@angular/core';
 
 import {
   sequence,
@@ -24,6 +24,7 @@ const fromEdwinTransition = trigger('fromEdwinTransition', [
   templateUrl: './fromedwin.component.html',
   styleUrls: ['./fromedwin.component.scss'],
   animations: [ fromEdwinTransition ],
+  changeDetection: ChangeDetectionStrategy.Eager,
   standalone: false
 })
 export class FromedwinComponent {
