@@ -34,6 +34,7 @@ See for sample https://raw.githubusercontent.com/favoloso/conventional-changelog
 
 - Improve SEO by keeping prerendered HTML visible (remove noscript wrapper) and skipping first-load enter animations to avoid a hydrate flash
 - Shorten meta descriptions and fix missing image alt attributes on work pages
+- Add Open Graph and Twitter Card tags, per-page canonical URLs, and richer Person JSON-LD
 
 ### 🏗 Chore
 

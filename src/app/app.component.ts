@@ -31,6 +31,10 @@ export class AppComponent implements OnInit {
   @HostBinding('@.disabled')
   animationsDisabled = true;
 
+  private readonly siteOrigin = 'https://sebastienbarbier.com';
+  private readonly defaultShareImage =
+    `${this.siteOrigin}/assets/images/ressources/sebastienbarbier_profile_1024.jpg`;
+
   constructor(
       private router: Router,
       private element: ElementRef,
@@ -116,32 +120,93 @@ export class AppComponent implements OnInit {
     /**
      * Will be triggered on every page navigation
      **/
-
-    // Update page title, different on every page
-    if (outlet.activatedRouteData.title) {
-      this.titleService.setTitle(`${outlet.activatedRouteData.title} - Sebastien Barbier`);
-    } else {
-      this.titleService.setTitle(`Sebastien Barbier`);
-    }
-
-    // Update metadata description field
-
-    this.metaService.removeTag('name="description"');
-    if (outlet.activatedRouteData.description) {
-      // Update title and meta data
-      this.metaService.addTag({ name: 'description', content: outlet.activatedRouteData.description }, false);
-    }
-
-    // Add noindex on page 404 to avoid browser referencing it
-    this.metaService.removeTag('name=robots');
-    if (outlet.activatedRouteData.state === '404') {
-      this.metaService.addTag({ name: 'robots', content: 'noindex'});
-    }
+    this.updatePageSeo(outlet);
 
     // Update theme value (light/dark) based on route description
     this.renderer.setAttribute(this.renderer.parentNode(this.element.nativeElement), 'class', outlet.activatedRouteData.theme);
 
     // Return state
     return outlet.activatedRouteData.state;
+  }
+
+  private updatePageSeo(outlet: RouterOutlet) {
+    const data = outlet.activatedRouteData;
+    const is404 = data.state === '404';
+    const title = data.title
+      ? `${data.title} - Sebastien Barbier`
+      : 'Sebastien Barbier';
+    const description: string = data.description || '';
+
+    this.titleService.setTitle(title);
+
+    if (description) {
+      this.metaService.updateTag({ name: 'description', content: description });
+    } else {
+      this.metaService.removeTag('name="description"');
+    }
+
+    if (is404) {
+      this.metaService.updateTag({ name: 'robots', content: 'noindex' });
+      this.removeCanonicalLink();
+      this.clearShareMeta();
+      return;
+    }
+
+    this.metaService.removeTag('name="robots"');
+
+    const canonicalUrl = this.canonicalUrlFor(this.router.url);
+    this.setCanonicalLink(canonicalUrl);
+
+    this.metaService.updateTag({ property: 'og:type', content: 'website' });
+    this.metaService.updateTag({ property: 'og:site_name', content: 'Sebastien Barbier' });
+    this.metaService.updateTag({ property: 'og:title', content: title });
+    this.metaService.updateTag({ property: 'og:description', content: description });
+    this.metaService.updateTag({ property: 'og:url', content: canonicalUrl });
+    this.metaService.updateTag({ property: 'og:image', content: this.defaultShareImage });
+
+    this.metaService.updateTag({ name: 'twitter:card', content: 'summary_large_image' });
+    this.metaService.updateTag({ name: 'twitter:title', content: title });
+    this.metaService.updateTag({ name: 'twitter:description', content: description });
+    this.metaService.updateTag({ name: 'twitter:image', content: this.defaultShareImage });
+  }
+
+  private canonicalUrlFor(routerUrl: string): string {
+    const path = routerUrl.split('?')[0].split('#')[0] || '/';
+    const normalized = path.length > 1 && path.endsWith('/') ? path.slice(0, -1) : path;
+    return normalized === '/' ? this.siteOrigin : `${this.siteOrigin}${normalized}`;
+  }
+
+  private setCanonicalLink(url: string) {
+    let link = this._document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
+    if (!link) {
+      link = this.renderer.createElement('link');
+      this.renderer.setAttribute(link, 'rel', 'canonical');
+      this.renderer.appendChild(this._document.head, link);
+    }
+    this.renderer.setAttribute(link, 'href', url);
+  }
+
+  private removeCanonicalLink() {
+    const link = this._document.querySelector('link[rel="canonical"]');
+    if (link?.parentNode) {
+      this.renderer.removeChild(link.parentNode, link);
+    }
+  }
+
+  private clearShareMeta() {
+    for (const selector of [
+      'property="og:type"',
+      'property="og:site_name"',
+      'property="og:title"',
+      'property="og:description"',
+      'property="og:url"',
+      'property="og:image"',
+      'name="twitter:card"',
+      'name="twitter:title"',
+      'name="twitter:description"',
+      'name="twitter:image"',
+    ]) {
+      this.metaService.removeTag(selector);
+    }
   }
 }
