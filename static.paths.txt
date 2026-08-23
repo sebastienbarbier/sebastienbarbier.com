@@ -1,10 +1,10 @@
 /contact
 /legal
+/projects
+/projects/chefclub
+/projects/fromedwin
+/projects/mozilla
+/projects/seven23
 /resources
 /resume
-/works
-/works/chefclub
-/works/fromedwin
-/works/mozilla
-/works/seven23
 /

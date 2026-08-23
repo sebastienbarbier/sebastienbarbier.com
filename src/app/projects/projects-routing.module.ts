@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { WorksComponent } from './works.component';
+import { ProjectsPageComponent } from './projects.component';
 import { Seven23Component } from './seven23/seven23.component';
 import { FromedwinComponent } from './fromedwin/fromedwin.component';
 import { MozillaComponent } from './mozilla/mozilla.component';
 import { ChefclubComponent } from './chefclub/chefclub.component';
 
 const DESCRIPTION = {
-  'work': `Selected projects by Sébastien Barbier, including FromEdwin monitoring, Seven23 expenses, Chefclub, and Notes by Firefox.`,
+  'projects': `Projects by Sébastien Barbier, including FromEdwin monitoring, Seven23 expenses, Chefclub, and Notes by Firefox.`,
   'seven23': `Seven23 is an open-source, privacy-first personal expense tracker with secure end-to-end encryption built in by design.`,
   'fromedwin': `FromEdwin is an opinionated no-code monitoring tool for web projects. It is currently under development and coming soon.`,
   'mozilla': `Freelance frontend work at Mozilla's Test Pilot team: building Notes by Firefox and validating the Firefox Sync stack.`,
@@ -17,11 +17,11 @@ const DESCRIPTION = {
 const routes: Routes = [
   {
     path: '',
-    component: WorksComponent,
+    component: ProjectsPageComponent,
     data: {
-      title: 'Works',
-      description: DESCRIPTION.work,
-      state: 'works',
+      title: 'Projects',
+      description: DESCRIPTION.projects,
+      state: 'projects',
       shareImage: '/assets/images/fromedwin/fromedwin_layout.png',
     },
   },
@@ -71,4 +71,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class WorksRoutingModule { }
+export class ProjectsRoutingModule { }

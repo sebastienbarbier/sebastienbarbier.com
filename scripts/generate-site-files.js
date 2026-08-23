@@ -30,14 +30,24 @@ function joinUrl(...parts) {
 }
 
 function extractRouteBlocks(source) {
-  const blocks = [];
+  const matches = [];
   const re = /path:\s*['"]([^'"]*)['"]/g;
   let match;
   while ((match = re.exec(source))) {
-    const window = source.slice(match.index, match.index + 800);
-    const load = window.match(/import\(\s*['"]\.\/([^'"]+)\.module['"]\s*\)/);
+    matches.push({ path: match[1], index: match.index });
+  }
+
+  const blocks = [];
+  for (let i = 0; i < matches.length; i++) {
+    const start = matches[i].index;
+    const end = i + 1 < matches.length ? matches[i + 1].index : start + 800;
+    const block = source.slice(start, end);
+    if (/redirectTo:/.test(block)) {
+      continue;
+    }
+    const load = block.match(/import\(\s*['"]\.\/([^'"]+)\.module['"]\s*\)/);
     blocks.push({
-      path: match[1],
+      path: matches[i].path,
       loadChildren: load ? load[1] : null,
     });
   }
@@ -118,6 +128,41 @@ ${urls}
   fs.writeFileSync(SITEMAP_FILE, xml);
 }
 
+function writeDistRedirects(routes) {
+  const distEn = path.join(ROOT, 'dist', 'en');
+  if (!fs.existsSync(distEn)) {
+    console.log('Skipped dist/en redirects (folder not found).');
+    return;
+  }
+
+  const projectRoutes = routes.filter(
+    (route) => route === '/projects' || route.startsWith('/projects/'),
+  );
+  for (const dest of projectRoutes) {
+    const from = dest.replace(/^\/projects/, '/works');
+    const dir = path.join(distEn, ...from.slice(1).split('/'));
+    fs.mkdirSync(dir, { recursive: true });
+    fs.writeFileSync(
+      path.join(dir, 'index.html'),
+      `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Redirecting…</title>
+  <link rel="canonical" href="${SITE_ORIGIN}${dest}">
+  <meta http-equiv="refresh" content="0; url=${dest}">
+  <script>location.replace(${JSON.stringify(dest)} + location.search + location.hash);</script>
+</head>
+<body>
+  <p>This page has moved to <a href="${dest}">${dest}</a>.</p>
+</body>
+</html>
+`,
+    );
+  }
+  console.log(`Wrote ${projectRoutes.length} /works → /projects redirects in dist/en`);
+}
+
 const routes = collectRoutes();
 writePaths(routes);
 writeSitemap(routes);
@@ -128,3 +173,7 @@ for (const route of routes) {
 }
 console.log(`Wrote ${path.relative(ROOT, PATHS_FILE)}`);
 console.log(`Wrote ${path.relative(ROOT, SITEMAP_FILE)}`);
+
+if (process.argv.includes('--dist-redirects')) {
+  writeDistRedirects(routes);
+}

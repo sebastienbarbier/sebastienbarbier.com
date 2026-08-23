@@ -29,6 +29,7 @@ See for sample https://raw.githubusercontent.com/favoloso/conventional-changelog
 - Migrate from npm to pnpm
 - Deploy to GitHub Pages only
 - Generate `static.paths.txt` and `sitemap.xml` from Angular routes before prerender
+- Rename the Works page to Projects (`/works` → `/projects`) and redirect the old URLs
 
 ### 🛠 Improvements
 

@@ -1,6 +1,6 @@
 {
   "name": "sebastienbarbier",
-  "version": "2.5.2",
+  "version": "2.6.0",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
@@ -10,7 +10,7 @@
     "prebuild": "node scripts/generate-site-files.js",
     "preprerender": "node scripts/generate-site-files.js",
     "optimize:images": "node scripts/optimize-images.js",
-    "build": "NG_BUILD_MAX_WORKERS=1 ng run sebastienbarbier:prerender",
+    "build": "NG_BUILD_MAX_WORKERS=1 ng run sebastienbarbier:prerender && node scripts/generate-site-files.js --dist-redirects",
     "serve": "pnpm start",
     "serve:static": "pnpm run serve:prerender",
     "test": "ng test",
@@ -21,7 +21,7 @@
     "dev:ssr": "ng run sebastienbarbier:serve-ssr",
     "serve:ssr": "node dist/server/main.js",
     "build:ssr": "ng build && ng run sebastienbarbier:server",
-    "prerender": "NG_BUILD_MAX_WORKERS=1 ng run sebastienbarbier:prerender",
+    "prerender": "NG_BUILD_MAX_WORKERS=1 ng run sebastienbarbier:prerender && node scripts/generate-site-files.js --dist-redirects",
     "serve:prerender": "cd dist/en && http-server"
   },
   "engines": {

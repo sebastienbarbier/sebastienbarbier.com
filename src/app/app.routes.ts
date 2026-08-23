@@ -18,8 +18,17 @@ export const appRoutes: Routes = [
     data: { title: null, description: DESCRIPTION.home, state: 'home' }
   },
   {
+    path: 'projects',
+    loadChildren: () => import('./projects/projects.module').then(mod => mod.ProjectsModule),
+  },
+  {
     path: 'works',
-    loadChildren: () => import('./works/works.module').then(mod => mod.WorksModule),
+    redirectTo: '/projects',
+    pathMatch: 'full',
+  },
+  {
+    path: 'works/:project',
+    redirectTo: '/projects/:project',
   },
   {
     path: 'contact',

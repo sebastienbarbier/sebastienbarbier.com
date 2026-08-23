@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { WorksComponent } from './works.component';
-import { WorksRoutingModule } from './works-routing.module';
+import { ProjectsPageComponent } from './projects.component';
+import { ProjectsRoutingModule } from './projects-routing.module';
 
 import { SharedModule } from '../shared/shared.module';
 import { Seven23Component } from './seven23/seven23.component';
@@ -12,7 +12,7 @@ import { ChefclubComponent } from './chefclub/chefclub.component';
 
 @NgModule({
   declarations: [
-    WorksComponent,
+    ProjectsPageComponent,
     Seven23Component,
     FromedwinComponent,
     MozillaComponent,
@@ -21,7 +21,7 @@ import { ChefclubComponent } from './chefclub/chefclub.component';
   imports: [
     CommonModule,
     SharedModule,
-    WorksRoutingModule,
+    ProjectsRoutingModule,
   ]
 })
-export class WorksModule { }
+export class ProjectsModule { }
