@@ -75,14 +75,18 @@ ul.projects {
       }
 
       &.browser {
+        box-sizing: border-box;
         justify-content: center;
+        align-items: center;
+        height: 300px;
         min-height: 300px;
-        padding: 28px 20px;
+        padding: 24px 16px;
 
         .window {
           z-index: 10;
-          width: 64%;
-          max-width: 360px;
+          flex: 0 0 auto;
+          width: 70%;
+          max-width: 340px;
           background: #fff;
           border-radius: 8px;
           overflow: hidden;
@@ -94,7 +98,7 @@ ul.projects {
           display: flex;
           align-items: center;
           gap: 10px;
-          height: 28px;
+          height: 26px;
           padding: 0 10px;
           background: #efeae4;
         }
@@ -134,7 +138,11 @@ ul.projects {
           text-overflow: ellipsis;
         }
 
-        picture,
+        picture {
+          display: block;
+          line-height: 0;
+        }
+
         picture img {
           display: block;
           width: 100%;
