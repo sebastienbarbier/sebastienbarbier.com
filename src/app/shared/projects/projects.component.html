@@ -1,7 +1,10 @@
 <ul class="projects" [ngClass]="{'quinconce': quinconce}">
   <li>
     <div class="thumbnail">
-      <img src="/assets/images/fromedwin/fromedwin_layout.png" alt="FromEdwin screenshots"/>
+      <picture>
+        <source type="image/webp" srcset="/assets/images/fromedwin/fromedwin_layout.webp" />
+        <img src="/assets/images/fromedwin/fromedwin_layout.png" width="1280" height="720" loading="lazy" alt="FromEdwin screenshots"/>
+      </picture>
       <img src="/assets/images/fromedwin/fromedwin_favicon.svg" alt="FromEdwin logo" class="logo"/>
     </div>
     <h3><span>2022 - Present</span>FromEdwin</h3>
@@ -14,7 +17,10 @@
   </li>
   <li>
     <div class="thumbnail">
-      <img src="/assets/images/seven23/seven23_layout.png" alt="Seven23 screenshots"/>
+      <picture>
+        <source type="image/webp" srcset="/assets/images/seven23/seven23_layout.webp" />
+        <img src="/assets/images/seven23/seven23_layout.png" width="1280" height="720" loading="lazy" alt="Seven23 screenshots"/>
+      </picture>
       <img src="/assets/images/seven23/seven23_logo.svg" alt="Seven23 logo" class="logo"/>
     </div>
     <h3><span>2011 - Present</span> Seven23</h3>
@@ -30,7 +36,10 @@
   @if (quinconce) {
     <li>
       <div class="thumbnail">
-        <img src="/assets/images/chefclub/chefclub-thumbnail.png" alt="Chefclubs"/>
+        <picture>
+          <source type="image/webp" srcset="/assets/images/chefclub/chefclub-thumbnail.webp" />
+          <img src="/assets/images/chefclub/chefclub-thumbnail.png" width="1400" height="753" loading="lazy" alt="Chefclubs"/>
+        </picture>
         <img src="/assets/images/chefclub/chefclub-logo-square.png" alt="Chefclub logo" class="logo"/>
       </div>
       <h3><span>2018 - 2019</span> Chefclub</h3>
@@ -45,7 +54,10 @@
   @if (quinconce) {
     <li>
       <div class="thumbnail">
-        <img src="/assets/images/mozilla/note_thumbnail.png" alt="Notes by Firefox screenshots"/>
+        <picture>
+          <source type="image/webp" srcset="/assets/images/mozilla/note_thumbnail.webp" />
+          <img src="/assets/images/mozilla/note_thumbnail.png" width="1200" height="645" loading="lazy" alt="Notes by Firefox screenshots"/>
+        </picture>
         <img src="/assets/images/mozilla/firefox.svg" alt="Firefox logo" class="logo"/>
       </div>
       <h3><span>2018</span> Notes by Firefox</h3>

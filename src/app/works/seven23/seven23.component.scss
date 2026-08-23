@@ -47,4 +47,10 @@ span.censored {
   .mobile_rotated {
       width: 25%;
   }
+
+  picture img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
 }

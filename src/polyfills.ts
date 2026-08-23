@@ -40,21 +40,14 @@
 /** Evergreen browsers require these. **/
 // import 'core-js/es6/reflect';
 
-
 /**
- * Required to support Web Animations `@angular/animation`.
- * Needed for: All but Chrome, Firefox and Opera. http://caniuse.com/#feat=web-animation
- **/
-// import 'web-animations-js';  // Run `npm install --save web-animations-js`.
-
-
+ * Web Animations API is available in evergreen browsers; Angular animations no longer
+ * need the web-animations-js polyfill for current Safari/Chrome/Firefox targets.
+ */
 
 /***************************************************************************************************
- * Zone JS is required by Angular itself.
+ * Zone JS is required by Angular itself (also imported from AppModule for SSR).
  */
-import 'web-animations-js/web-animations.min';
-
-import 'aos';
 
 /***************************************************************************************************
  * APPLICATION IMPORTS

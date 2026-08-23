@@ -17,7 +17,22 @@
             "tsConfig": "src/tsconfig.app.json",
             "polyfills": "src/polyfills.ts",
             "assets": [
-              "src/assets",
+              {
+                "glob": "**/*",
+                "input": "src/assets",
+                "output": "/assets",
+                "ignore": [
+                  "**/*.full.jpg",
+                  "**/*.full.jpeg",
+                  "**/*.full.png",
+                  "**/shotsnapp-*.png"
+                ]
+              },
+              {
+                "glob": "sebastienbarbier_profile_full.jpg",
+                "input": "src/assets/images/ressources",
+                "output": "/assets/images/ressources"
+              },
               {
                 "glob": "keybase.txt",
                 "input": "static",

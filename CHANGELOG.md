@@ -37,6 +37,8 @@ See for sample https://raw.githubusercontent.com/favoloso/conventional-changelog
 - Add Open Graph and Twitter Card tags, per-page canonical URLs, and richer Person JSON-LD
 - Strengthen the home page title for search click-through
 - Add lastmod to the generated sitemap, update legal hosting to GitHub Pages, and use project images for work-page social previews
+- Compress and resize large work screenshots, serve WebP via picture elements, and exclude unused full-resolution assets from the build
+- Shrink the main JS bundle by lazy-loading Sentry, scoping markdown to the resume route, and dropping unused polyfills/deps (aos, web-animations-js, mapbox, katex)
 
 ### 🏗 Chore
 

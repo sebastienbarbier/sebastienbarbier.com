@@ -47,8 +47,19 @@ ul.projects {
         justify-content: flex-end;
       }
 
-      img {
+      img,
+      picture {
         z-index: 10;
+        max-height: 300px;
+        max-width: 100%;
+      }
+
+      picture img {
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        max-height: 300px;
+        display: block;
       }
 
       .logo {
@@ -79,6 +90,8 @@ ul.projects {
     img {
       max-height: 300px;
       max-width: 100%;
+      height: auto;
+      width: auto;
     }
 
     a {
