@@ -29,6 +29,9 @@ const jobs = [
   { rel: 'images/mozilla/note_thumbnail.png', max: 1200 },
   { rel: 'images/fromedwin/fromedwin_layout.png', max: 1280 },
   { rel: 'images/seven23/seven23_layout.png', max: 1280 },
+  { rel: 'images/shellui/shellui_layout.png', max: 1280 },
+  { rel: 'images/shellui/website.png', max: 1400 },
+  { rel: 'images/shellui/docs.png', max: 1400 },
   { rel: 'images/ressources/sebastienbarbier_profile_1024.jpg', max: 1024 },
 ];
 

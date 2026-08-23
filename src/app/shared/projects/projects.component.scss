@@ -6,7 +6,7 @@ ul.projects {
 
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row-reverse;
+  flex-direction: row;
   justify-content: space-between;
 
   // ul.projects has ngClass for quinconce attributs to add spacing on top of one column
@@ -72,6 +72,81 @@ ul.projects {
         z-index: 0;
         transition: opacity 0.5s ease-in-out;
         -webkit-touch-callout: none;
+      }
+
+      &.browser {
+        justify-content: center;
+        min-height: 300px;
+        padding: 28px 20px;
+
+        .window {
+          z-index: 10;
+          width: 64%;
+          max-width: 360px;
+          background: #fff;
+          border-radius: 8px;
+          overflow: hidden;
+          box-shadow: 0 10px 28px rgba(22, 22, 29, 0.1);
+          border: 1px solid rgba(22, 22, 29, 0.08);
+        }
+
+        .chrome {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          height: 28px;
+          padding: 0 10px;
+          background: #efeae4;
+        }
+
+        .dots {
+          display: flex;
+          gap: 5px;
+          flex-shrink: 0;
+
+          i {
+            display: block;
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #cfc6bb;
+
+            &:nth-child(1) { background: #d9a79f; }
+            &:nth-child(2) { background: #d9c89a; }
+            &:nth-child(3) { background: #b4c9ae; }
+          }
+        }
+
+        .url {
+          flex: 1;
+          min-width: 0;
+          font-size: 10px;
+          line-height: 1;
+          letter-spacing: 0.02em;
+          text-align: center;
+          color: $color-on-surface;
+          opacity: 0.55;
+          background: rgba(255, 255, 255, 0.72);
+          border-radius: 4px;
+          padding: 4px 8px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        picture,
+        picture img {
+          display: block;
+          width: 100%;
+          height: auto;
+          max-width: 100%;
+          max-height: none;
+        }
+
+        .logo {
+          width: 40px;
+          max-height: none;
+        }
       }
 
     }

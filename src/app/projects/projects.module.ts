@@ -9,10 +9,12 @@ import { Seven23Component } from './seven23/seven23.component';
 import { FromedwinComponent } from './fromedwin/fromedwin.component';
 import { MozillaComponent } from './mozilla/mozilla.component';
 import { ChefclubComponent } from './chefclub/chefclub.component';
+import { ShelluiComponent } from './shellui/shellui.component';
 
 @NgModule({
   declarations: [
     ProjectsPageComponent,
+    ShelluiComponent,
     Seven23Component,
     FromedwinComponent,
     MozillaComponent,

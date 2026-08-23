@@ -1,19 +1,26 @@
 <ul class="projects" [ngClass]="{'quinconce': quinconce}">
   <li>
-    <div class="thumbnail">
-      <picture>
-        <source type="image/webp" srcset="/assets/images/fromedwin/fromedwin_layout.webp" />
-        <img src="/assets/images/fromedwin/fromedwin_layout.png" width="1280" height="720" loading="lazy" alt="FromEdwin screenshots"/>
-      </picture>
-      <img src="/assets/images/fromedwin/fromedwin_favicon.svg" alt="FromEdwin logo" class="logo"/>
+    <div class="thumbnail browser">
+      <div class="window">
+        <div class="chrome" aria-hidden="true">
+          <span class="dots"><i></i><i></i><i></i></span>
+          <span class="url">shellui.com</span>
+        </div>
+        <picture>
+          <source type="image/webp" srcset="/assets/images/shellui/website.webp" />
+          <img src="/assets/images/shellui/website.png" width="1400" height="875" loading="lazy" alt="shellui.com homepage"/>
+        </picture>
+      </div>
+      <img src="/assets/images/shellui/shellui_mark.svg" alt="Shellui logo" class="logo"/>
     </div>
-    <h3><span>2022 - Present</span>FromEdwin</h3>
-    <p><strong>Opinionated no code monitoring tool</strong> for web projects.</p>
+    <h3><span>2026 - Present</span>Shellui</h3>
+    <p><strong>Opinionated microfrontend shell</strong> so you can build the app, not the infrastructure.</p>
     <ul class="badges">
+      <li>TypeScript</li>
+      <li>React</li>
       <li>Django</li>
-      <li>Tailwind.css</li>
     </ul>
-    <a routerLink="/projects/fromedwin" role="button">More about it</a>
+    <a routerLink="/projects/shellui" role="button">More about it</a>
   </li>
   <li>
     <div class="thumbnail">
@@ -37,6 +44,22 @@
     <li>
       <div class="thumbnail">
         <picture>
+          <source type="image/webp" srcset="/assets/images/fromedwin/fromedwin_layout.webp" />
+          <img src="/assets/images/fromedwin/fromedwin_layout.png" width="1280" height="720" loading="lazy" alt="FromEdwin screenshots"/>
+        </picture>
+        <img src="/assets/images/fromedwin/fromedwin_favicon.svg" alt="FromEdwin logo" class="logo"/>
+      </div>
+      <h3><span>2022 - Present</span>FromEdwin</h3>
+      <p><strong>Opinionated no code monitoring tool</strong> for web projects.</p>
+      <ul class="badges">
+        <li>Django</li>
+        <li>Tailwind.css</li>
+      </ul>
+      <a routerLink="/projects/fromedwin" role="button">More about it</a>
+    </li>
+    <li>
+      <div class="thumbnail">
+        <picture>
           <source type="image/webp" srcset="/assets/images/chefclub/chefclub-thumbnail.webp" />
           <img src="/assets/images/chefclub/chefclub-thumbnail.png" width="1400" height="753" loading="lazy" alt="Chefclubs"/>
         </picture>
@@ -50,8 +73,6 @@
       </ul>
       <a routerLink="/projects/chefclub" role="button">More about it</a>
     </li>
-  }
-  @if (quinconce) {
     <li>
       <div class="thumbnail">
         <picture>

@@ -23,6 +23,10 @@ See for sample https://raw.githubusercontent.com/favoloso/conventional-changelog
 
 ## [2.6.0] - 2026-08-23
 
+### ✨ Feature
+
+- Add Shellui to the projects list, ahead of Seven23, and move FromEdwin to the full projects page
+
 ### 🚨 Changed
 
 - Rename Twitter to X

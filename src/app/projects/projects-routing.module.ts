@@ -5,9 +5,11 @@ import { Seven23Component } from './seven23/seven23.component';
 import { FromedwinComponent } from './fromedwin/fromedwin.component';
 import { MozillaComponent } from './mozilla/mozilla.component';
 import { ChefclubComponent } from './chefclub/chefclub.component';
+import { ShelluiComponent } from './shellui/shellui.component';
 
 const DESCRIPTION = {
-  'projects': `Projects by Sébastien Barbier, including FromEdwin monitoring, Seven23 expenses, Chefclub, and Notes by Firefox.`,
+  'projects': `Projects by Sébastien Barbier, including Shellui, Seven23 expenses, FromEdwin monitoring, Chefclub, and Notes by Firefox.`,
+  'shellui': `Shellui is an open-source, opinionated microfrontend shell for building web apps without rebuilding shared infrastructure.`,
   'seven23': `Seven23 is an open-source, privacy-first personal expense tracker with secure end-to-end encryption built in by design.`,
   'fromedwin': `FromEdwin is an opinionated no-code monitoring tool for web projects. It is currently under development and coming soon.`,
   'mozilla': `Freelance frontend work at Mozilla's Test Pilot team: building Notes by Firefox and validating the Firefox Sync stack.`,
@@ -22,7 +24,17 @@ const routes: Routes = [
       title: 'Projects',
       description: DESCRIPTION.projects,
       state: 'projects',
-      shareImage: '/assets/images/fromedwin/fromedwin_layout.png',
+      shareImage: '/assets/images/shellui/shellui_layout.png',
+    },
+  },
+  {
+    path: 'shellui',
+    component: ShelluiComponent,
+    data: {
+      title: 'Shellui',
+      description: DESCRIPTION.shellui,
+      state: 'shellui',
+      shareImage: '/assets/images/shellui/shellui_layout.png',
     },
   },
   {

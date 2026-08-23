@@ -5,6 +5,7 @@
 /projects/fromedwin
 /projects/mozilla
 /projects/seven23
+/projects/shellui
 /resources
 /resume
 /
