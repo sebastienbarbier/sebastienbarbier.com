@@ -17,14 +17,14 @@ jobs:
       - run: npm i
       - run: npm run build --if-present
       - name: Update gh-pages
-        if: github.ref == 'refs/heads/develop'
+        if: github.ref == 'refs/heads/main'
         uses: Cecilapp/GitHub-Pages-deploy@v3
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           email: contact@sebastienbarbier.com
           build_dir: dist/en
-          cname: develop.sebastienbarbier.com
+          cname: sebastienbarbier.com
       - name: "Predeploy"
         if: github.ref == 'refs/heads/main'
         run: npm run predeploy
