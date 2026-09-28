@@ -5,7 +5,7 @@
   "scripts": {
     "ng": "ng",
     "start": "node dist/server/main.js",
-    "build": "ng run sebastienbarbier:prerender",
+    "build": "node scripts/sync-critical-shell.js && ng run sebastienbarbier:prerender",
     "serve": "npx ng serve --host 0.0.0.0",
     "serve:static": "npm run serve:prerender",
     "test": "ng test",
