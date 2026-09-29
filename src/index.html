@@ -33,6 +33,158 @@
       name="msapplication-config"
       content="/assets/favicon/browserconfig.xml"
     />
+    <!-- Critical shell: src/critical-shell.css (inlined for first paint) -->
+    <style id="critical-shell">:root {
+  --sys-color-background: #f8f5f2;
+  --sys-color-on-background: #202124;
+  --sys-color-surface: #f2edea;
+  --sys-color-on-surface: #202124;
+  --sys-color-primary: #1f1d1d;
+  --sys-color-on-primary: #e8eaed;
+  --sys-color-secondary: #a37200;
+  --sys-color-on-secondary: #fff9eb;
+  --sys-color-secondary-variant: #dbb778;
+  --sys-color-on-secondary-variant: #202124;
+  --sys-color-shadow: #16161d;
+  --sys-typeface-serif-variable: "Source Serif Variable", "Source Serif", Arial, serif;
+  --sys-typeface-sans-variable: "Open Sans Variable", "Open Sans", Helvetica, sans-serif;
+  --sys-typeface-serif: "Source Serif", Arial, serif;
+  --sys-typeface-sans: "Open Sans", Helvetica, sans-serif;
+  --comp-title-color: #202124;
+  --comp-title-font-family: "Source Serif Variable", "Source Serif", Arial, serif;
+  --comp-title-headline-color: #202124;
+  --comp-title-headline-font-family: "Open Sans Variable", "Open Sans", Helvetica, sans-serif;
+}
+
+html {
+  background: var(--sys-color-background);
+  font-size: 16px;
+  line-height: 1.6;
+  font-family: var(--sys-typeface-sans);
+}
+
+@supports (font-variation-settings: "wdth" 115) {
+  html {
+    font-family: var(--sys-typeface-sans-variable);
+  }
+}
+
+html body {
+  margin: 0;
+  background: var(--sys-color-background);
+  color: var(--sys-color-on-background);
+  font-family: var(--sys-typeface-sans-variable);
+  font-weight: 400;
+  font-variation-settings: "opsz" 24;
+}
+
+html body a {
+  color: var(--sys-color-secondary);
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  font-variation-settings: "opsz" 24;
+  line-height: 1.2em;
+  padding: 4px 0;
+  margin-top: 1.2em;
+  margin-bottom: 0.8em;
+  color: var(--comp-title-color);
+  font-family: var(--comp-title-font-family);
+}
+
+h1 {
+  font-size: 4.2em;
+}
+
+@media (max-width: 899px) {
+  h1 {
+    font-size: 3.2em;
+  }
+}
+
+@media (max-width: 599px) {
+  h1 {
+    font-size: 2.7em;
+  }
+}
+
+h2 {
+  font-size: 2.8em;
+}
+
+@media (max-width: 899px) {
+  h2 {
+    font-size: 2.4em;
+  }
+}
+
+@media (max-width: 599px) {
+  h2 {
+    font-size: 2.2em;
+  }
+}
+
+.wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: calc(-1 * env(safe-area-inset-top));
+  right: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  z-index: 1;
+}
+
+.wrapper .container {
+  max-width: 1200px;
+  margin: auto;
+  padding-right: env(safe-area-inset-right);
+  padding-left: env(safe-area-inset-left);
+}
+
+@media (min-width: 900px) {
+  .wrapper .container {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+
+@media (max-width: 899px) {
+  .wrapper .container {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+@media (max-width: 599px) {
+  .wrapper .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+a.btn {
+  display: flex;
+  justify-content: center;
+  color: var(--sys-color-secondary);
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  padding: 16px 40px;
+}
+
+a.btn.small {
+  letter-spacing: 1px;
+  font-size: 0.7em;
+  padding: 4px 10px;
+  font-weight: 600;
+}</style>
     <link
       rel="preload"
       href="/assets/fonts/OpenSans-Variable.woff2"
