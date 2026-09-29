@@ -239,11 +239,6 @@ export default {
       location: "Zurich, Switzerland",
     },
     {
-      date: new Date("April 15, 2026"),
-      name: "DjangoCon Europe",
-      location: "Athens, Greece",
-    },
-    {
       date: new Date("June 04, 2024"),
       name: "DjangoCon Europe",
       location: "Vigo, Spain",
