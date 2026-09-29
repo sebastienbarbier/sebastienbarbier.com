@@ -21,6 +21,21 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 See for sample https://raw.githubusercontent.com/favoloso/conventional-changelog-emoji/master/CHANGELOG.md
 -->
 
+## [2.6.1] - 2026-09-29
+
+### 🛠 Improvements
+
+- Reduce home page flash of unstyled content with critical shell CSS inlined in `index.html`, a build-time sync script, and Angular critical CSS inlining
+- Restructure Person JSON-LD as an `@graph` linking Shellui, FromEdwin, and Seven23, with an unaccented primary name and `alternateName` for Sébastien Barbier
+- Point FromEdwin project links to the GitHub organization instead of the retired site
+- Update Seven23 project thumbnail corner radius and refresh layout preview images
+
+### 🐛 Bug Fixes
+
+- Fix footer "Get in touch" heading contrast on the dark background
+- Set FromEdwin project dates to 2022-2024 on the projects list and project page
+- Remove duplicate upcoming DjangoCon Europe 2026 entry from the resume conferences list
+
 ## [2.6.0] - 2026-08-23
 
 ### ✨ Feature
