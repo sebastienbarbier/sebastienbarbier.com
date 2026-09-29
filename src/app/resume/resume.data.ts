@@ -51,7 +51,7 @@ export default {
       type: "Full-time",
       positions: [
         {
-          title: "Development Architect",
+          title: "Associate Development Architect",
           date: {
             start: new Date("November 01, 2020"),
             end: new Date("July 31, 2021"),

@@ -1,20 +1,41 @@
 <ul class="projects" [ngClass]="{'quinconce': quinconce}">
   <li>
-    <div class="thumbnail">
-      <img src="/assets/images/fromedwin/fromedwin_layout.png" alt="FromEdwin screenshots"/>
-      <img src="/assets/images/fromedwin/fromedwin_favicon.svg" alt="Seven23 logo" class="logo"/>
+    <div class="thumbnail browser">
+      <div class="window">
+        <div class="chrome" aria-hidden="true">
+          <span class="dots"><i></i><i></i><i></i></span>
+          <span class="url">shellui.com</span>
+        </div>
+        <picture>
+          <source type="image/webp" srcset="/assets/images/shellui/website.webp" />
+          <img src="/assets/images/shellui/website.png" width="1400" height="875" loading="lazy" alt="shellui.com homepage"/>
+        </picture>
+      </div>
+      <img src="/assets/images/shellui/shellui_mark.svg" alt="Shellui logo" class="logo"/>
     </div>
-    <h3><span>2022 - 2024</span>FromEdwin</h3>
-    <p><strong>Opinionated no code monitoring tool</strong> for web projects.</p>
+    <h3><span>2026 - Present</span>Shellui</h3>
+    <p><strong>Opinionated microfrontend shell</strong> so you can build the app, not the infrastructure.</p>
     <ul class="badges">
+      <li>TypeScript</li>
+      <li>React</li>
       <li>Django</li>
-      <li>Tailwind.css</li>
     </ul>
-    <a routerLink="/works/fromedwin" role="button">More about it</a>
+    <a routerLink="/projects/shellui" role="button">More about it</a>
   </li>
   <li>
-    <div class="thumbnail">
-      <img src="/assets/images/seven23/seven23_layout.png" alt="Seven23 screenshots"/>
+    <div class="thumbnail devices">
+      <div class="device phone">
+        <picture>
+          <source type="image/webp" srcset="/assets/images/seven23/screens/iphone-transactions.webp" />
+          <img src="/assets/images/seven23/screens/iphone-transactions.png" width="1179" height="2556" loading="lazy" alt="Seven23 transactions on iPhone"/>
+        </picture>
+      </div>
+      <div class="device tablet">
+        <picture>
+          <source type="image/webp" srcset="/assets/images/seven23/screens/ipad-dashboard.webp" />
+          <img src="/assets/images/seven23/screens/ipad-dashboard.png" width="2388" height="1668" loading="lazy" alt="Seven23 dashboard on iPad"/>
+        </picture>
+      </div>
       <img src="/assets/images/seven23/seven23_logo.svg" alt="Seven23 logo" class="logo"/>
     </div>
     <h3><span>2011 - Present</span> Seven23</h3>
@@ -25,32 +46,56 @@
       <li>Material-ui</li>
       <li>Next.js</li>
     </ul>
-    <a routerLink="/works/seven23" role="button">More about it</a>
+    <a routerLink="/projects/seven23" role="button">More about it</a>
   </li>
-  <li *ngIf="quinconce">
-    <div class="thumbnail">
-      <img src="/assets/images/chefclub/chefclub-thumbnail.png" alt="Chefclubs"/>
-      <img src="/assets/images/chefclub/chefclub-logo-square.png" alt="Chefclub logo" class="logo"/>
-    </div>
-    <h3><span>2018 - 2019</span> Chefclub</h3>
-    <p>Enhancing the <strong>user experience</strong> and optimizing <strong>web performance</strong> for Chefclub's website</p>
-    <ul class="badges">
-      <li>Django</li>
-      <li>Vus.js</li>
-    </ul>
-    <a routerLink="/works/chefclub" role="button">More about it</a>
-  </li>
-  <li *ngIf="quinconce">
-    <div class="thumbnail">
-      <img src="/assets/images/mozilla/note_thumbnail.png" alt="Notes by Firefox screenshots"/>
-      <img src="/assets/images/mozilla/firefox.svg" alt="Firefox logo" class="logo"/>
-    </div>
-    <h3><span>2018</span> Notes by Firefox</h3>
-    <p><strong>Notes by Firefox</strong> is a simple, secure notepad extension for Firefox that lets you take notes on web pages.</p>
-    <ul class="badges">
-      <li>Web extention</li>
-      <li>React native</li>
-    </ul>
-    <a routerLink="/works/mozilla" role="button">More about it</a>
-  </li>
+  @if (quinconce) {
+    <li>
+      <div class="thumbnail">
+        <picture>
+          <source type="image/webp" srcset="/assets/images/fromedwin/fromedwin_layout.webp" />
+          <img src="/assets/images/fromedwin/fromedwin_layout.png" width="1280" height="720" loading="lazy" alt="FromEdwin screenshots"/>
+        </picture>
+        <img src="/assets/images/fromedwin/fromedwin_favicon.svg" alt="FromEdwin logo" class="logo"/>
+      </div>
+      <h3><span>2022 - 2024</span>FromEdwin</h3>
+      <p><strong>Opinionated no code monitoring tool</strong> for web projects.</p>
+      <ul class="badges">
+        <li>Django</li>
+        <li>Tailwind.css</li>
+      </ul>
+      <a routerLink="/projects/fromedwin" role="button">More about it</a>
+    </li>
+    <li>
+      <div class="thumbnail">
+        <picture>
+          <source type="image/webp" srcset="/assets/images/chefclub/chefclub-thumbnail.webp" />
+          <img src="/assets/images/chefclub/chefclub-thumbnail.png" width="1400" height="753" loading="lazy" alt="Chefclubs"/>
+        </picture>
+        <img src="/assets/images/chefclub/chefclub-logo-square.png" alt="Chefclub logo" class="logo"/>
+      </div>
+      <h3><span>2018 - 2019</span> Chefclub</h3>
+      <p>Enhancing the <strong>user experience</strong> and optimizing <strong>web performance</strong> for Chefclub's website</p>
+      <ul class="badges">
+        <li>Django</li>
+        <li>Vus.js</li>
+      </ul>
+      <a routerLink="/projects/chefclub" role="button">More about it</a>
+    </li>
+    <li>
+      <div class="thumbnail">
+        <picture>
+          <source type="image/webp" srcset="/assets/images/mozilla/note_thumbnail.webp" />
+          <img src="/assets/images/mozilla/note_thumbnail.png" width="1200" height="645" loading="lazy" alt="Notes by Firefox screenshots"/>
+        </picture>
+        <img src="/assets/images/mozilla/firefox.svg" alt="Firefox logo" class="logo"/>
+      </div>
+      <h3><span>2018</span> Notes by Firefox</h3>
+      <p><strong>Notes by Firefox</strong> is a simple, secure notepad extension for Firefox that lets you take notes on web pages.</p>
+      <ul class="badges">
+        <li>Web extention</li>
+        <li>React native</li>
+      </ul>
+      <a routerLink="/projects/mozilla" role="button">More about it</a>
+    </li>
+  }
 </ul>
