@@ -1,0 +1,90 @@
+@use '../projects.include.component' as *;
+@use '../../../assets/scss/_variables' as *;
+
+span.censored {
+    position: relative;
+    color: transparent;
+
+    &:after {
+        background: $color-surface;
+        position: absolute;
+        content: '';
+        transform: rotate(-5deg);
+        top: 0; left: 0; right: 0; bottom: 0;
+    }
+
+    &:before {
+        position: absolute;
+        content: '🤬';
+        z-index: 999;
+        font-style: normal;
+        font-size: 1.3em;
+        text-align: center;
+        opacity: 1;
+        color: black;
+        top: -0.3em; left: 0; right: 0; bottom: 0;
+    }
+}
+
+.devices {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  gap: 48px 0;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.device {
+  @include device-shell;
+
+  picture,
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  &.tablet {
+    @include device-tablet-buttons(3px);
+    width: 62%;
+    padding: 5px;
+    border-radius: 16px;
+
+    picture,
+    img {
+      border-radius: 12px;
+    }
+  }
+
+  &.phone {
+    @include device-phone-buttons(3px);
+    width: 22%;
+    padding: 5px;
+    border-radius: 28px;
+
+    picture,
+    img {
+      border-radius: 24px;
+    }
+  }
+
+  @include for-tablet-landscape-down {
+    &.tablet {
+      width: 64%;
+    }
+    &.phone {
+      width: 28%;
+    }
+  }
+
+  @include for-phone-only {
+    &.tablet {
+      width: 100%;
+    }
+    &.phone {
+      width: 52%;
+    }
+  }
+}

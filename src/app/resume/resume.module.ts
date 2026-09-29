@@ -18,7 +18,8 @@ import { MarkdownModule } from 'ngx-markdown';
     CommonModule,
     SharedModule,
     ResumeRoutingModule,
-    MarkdownModule.forChild(),
+    // forRoot here (lazy route) so marked stays out of the main bundle
+    MarkdownModule.forRoot(),
   ]
 })
 export class ResumeModule { }

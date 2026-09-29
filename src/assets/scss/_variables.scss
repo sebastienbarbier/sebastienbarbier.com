@@ -80,3 +80,75 @@ $zindex_navigation: 100;
 @mixin for-big-desktop-up {
   @media (min-width: 1800px) { @content; }
 }
+
+// Light device shells (Seven23), matching the browser chrome beige
+@mixin device-shell {
+  position: relative;
+  box-sizing: border-box;
+  overflow: visible;
+  background: #c6bdb3;
+  border: 1px solid rgba(22, 22, 29, 0.16);
+  box-shadow:
+    inset 0 0.5px 0 rgba(255, 255, 255, 0.45),
+    0 10px 28px rgba(22, 22, 29, 0.1);
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    background: #a89f95;
+    pointer-events: none;
+  }
+}
+
+@mixin device-phone-buttons($w: 3px) {
+  &::before {
+    left: -$w;
+    top: 14%;
+    width: $w;
+    height: 26%;
+    border-radius: 2px 0 0 2px;
+    background: linear-gradient(
+      to bottom,
+      #a89f95 0 11%,
+      transparent 11% 24%,
+      #a89f95 24% 52%,
+      transparent 52% 60%,
+      #a89f95 60% 88%,
+      transparent 88% 100%
+    );
+  }
+
+  &::after {
+    right: -$w;
+    top: 22%;
+    width: $w;
+    height: 12%;
+    border-radius: 0 2px 2px 0;
+  }
+}
+
+@mixin device-tablet-buttons($w: 3px) {
+  &::before {
+    left: -$w;
+    top: 30%;
+    width: $w;
+    height: 15%;
+    border-radius: 2px 0 0 2px;
+    background: linear-gradient(
+      to bottom,
+      #a89f95 0 42%,
+      transparent 42% 54%,
+      #a89f95 54% 96%,
+      transparent 96% 100%
+    );
+  }
+
+  &::after {
+    top: -$w;
+    right: 12%;
+    width: 8%;
+    height: $w;
+    border-radius: 2px 2px 0 0;
+  }
+}

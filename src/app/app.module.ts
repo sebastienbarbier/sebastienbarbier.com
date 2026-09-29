@@ -3,11 +3,10 @@ import 'reflect-metadata';
 
 import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
-import { NgModule, ErrorHandler, Injectable, Input, Component } from '@angular/core';
-import { HttpClientModule, HttpClient } from '@angular/common/http';
-import { MarkdownModule } from 'ngx-markdown';
+import { NgModule, ErrorHandler, Injectable } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 
@@ -19,24 +18,34 @@ import { environment } from '../environments/environment';
 
 import { appRoutes } from './app.routes';
 
-import * as Sentry from '@sentry/browser';
+const SENTRY_DSN = 'https://c36d29ca446044659f503c09282f68b5@sentry.io/1488195';
 
+/** Lazy-loads Sentry only when an error is reported (keeps it out of the main bundle). */
 @Injectable()
 export class SentryErrorHandler implements ErrorHandler {
-  constructor() {}
+  private sentryPromise: Promise<typeof import('@sentry/browser')> | null = null;
+
+  private loadSentry() {
+    if (!this.sentryPromise) {
+      this.sentryPromise = import('@sentry/browser').then((Sentry) => {
+        Sentry.init({ dsn: SENTRY_DSN });
+        return Sentry;
+      });
+    }
+    return this.sentryPromise;
+  }
+
   handleError(error: any) {
-    const eventId = Sentry.captureException(error?.originalError || error);
-    Sentry.showReportDialog({ eventId });
+    console.error(error);
+    this.loadSentry().then((Sentry) => {
+      const eventId = Sentry.captureException(error?.originalError || error);
+      Sentry.showReportDialog({ eventId });
+    });
   }
 }
 
 const providers = [];
 if (environment.production) {
-
-  Sentry.init({
-    dsn: 'https://c36d29ca446044659f503c09282f68b5@sentry.io/1488195'
-  });
-
   providers.push({ provide: ErrorHandler, useClass: SentryErrorHandler });
 }
 
@@ -46,7 +55,6 @@ if (environment.production) {
     BrowserModule,
     CommonModule,
     HttpClientModule,
-    MarkdownModule.forRoot(),
     BrowserAnimationsModule,
     FormsModule,
     RouterModule.forRoot(appRoutes, { onSameUrlNavigation: 'ignore' }),
