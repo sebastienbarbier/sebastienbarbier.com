@@ -220,23 +220,56 @@ a.btn.small {
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Person",
-        "email": "mailto:hello@sebastienbarbier.com",
-        "image": "https://sebastienbarbier.com/assets/images/ressources/sebastienbarbier_profile_1024.jpg",
-        "jobTitle": "Software Engineer",
-        "name": "Sebastien Barbier",
-        "givenName": "Sebastien",
-        "familyName": "Barbier",
-        "nationality": "France",
-        "url": "https://sebastienbarbier.com",
-        "sameAs": [
-          "https://x.com/SebBarbier",
-          "https://github.com/sebastienbarbier",
-          "https://www.linkedin.com/in/sebbarbier",
-          "https://instagram.com/sebastienbarbier",
-          "https://seven23.io",
-          "https://fromedwin.com",
-          "https://shellui.com"
+        "@graph": [
+          {
+            "@type": "Person",
+            "@id": "https://sebastienbarbier.com/#person",
+            "email": "mailto:hello@sebastienbarbier.com",
+            "image": "https://sebastienbarbier.com/assets/images/ressources/sebastienbarbier_profile_1024.jpg",
+            "jobTitle": "Software Engineer",
+            "name": "Sebastien Barbier",
+            "givenName": "Sebastien",
+            "alternateName": "Sébastien Barbier",
+            "familyName": "Barbier",
+            "nationality": "France",
+            "url": "https://sebastienbarbier.com",
+            "sameAs": [
+              "https://x.com/SebBarbier",
+              "https://github.com/sebastienbarbier",
+              "https://www.linkedin.com/in/sebbarbier",
+              "https://instagram.com/sebastienbarbier"
+            ],
+            "worksFor": {
+              "@id": "https://sebastienbarbier.com/#shellui"
+            }
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://sebastienbarbier.com/#shellui",
+            "name": "Shellui",
+            "url": "https://shellui.com",
+            "founder": {
+              "@id": "https://sebastienbarbier.com/#person"
+            }
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://sebastienbarbier.com/#fromedwin",
+            "name": "FromEdwin",
+            "url": "https://github.com/fromedwin",
+            "founder": {
+              "@id": "https://sebastienbarbier.com/#person"
+            }
+          },
+          {
+            "@type": "SoftwareApplication",
+            "@id": "https://sebastienbarbier.com/#seven23",
+            "name": "Seven23",
+            "url": "https://seven23.io",
+            "creator": {
+              "@id": "https://sebastienbarbier.com/#person"
+            }
+          }
         ]
       }
     </script>

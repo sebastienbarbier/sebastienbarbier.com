@@ -30,7 +30,7 @@ export default {
             start: new Date("August 01, 2021"),
             end: new Date("November 30, 2023"),
           },
-          description: `Full-time solo entrepreneur developing two projects, Seven23.io and FromEdwin.com, while independently managing the entire stack from architecture and development to DevOps, CI/CD, and delivery.`,
+          description: `Full-time solo entrepreneur developing two projects, Seven23.io and FromEdwin, while independently managing the entire stack from architecture and development to DevOps, CI/CD, and delivery.`,
         },
         {
           title: "Crypto Liquidity Provider",
