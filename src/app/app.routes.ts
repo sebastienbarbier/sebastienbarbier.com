@@ -3,8 +3,8 @@ import { Routes } from '@angular/router';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const DESCRIPTION = {
-  'home': `Sébastien Barbier is a software engineer in Zurich. Portfolio of full-stack work for Unique AG, SAP, Mozilla, and personal projects.`,
-  'resume': `Resume of Sébastien Barbier, software engineer in Zurich: skills, work experience, education, and conferences attended over the years.`,
+  'home': `Sébastien Barbier is a staff software engineer in Zürich and founder of Shellui. Portfolio spanning agentic AI at Unique AG, SAP FSM extensibility, Mozilla, and open-source projects.`,
+  'resume': `Resume of Sébastien Barbier, staff software engineer in Zürich: TypeScript, React, and Python skills, work experience, education, and conferences.`,
   'contact': `Get in touch with Sébastien Barbier by email, or find him on X, GitHub, LinkedIn, Instagram, and other social networks.`,
   'resources': `Photos, logos, and brand assets you can download when sharing or writing about Sébastien Barbier online.`,
   'legal': `Legal information for sebastienbarbier.com, covering copyright, MIT licence terms, and site hosting details.`,

@@ -155,10 +155,10 @@ export class AppComponent implements OnInit {
     const data = outlet.activatedRouteData;
     const is404 = data.state === "404";
     const title = data.title
-      ? `${data.title} - Sebastien Barbier`
+      ? `${data.title} - Sébastien Barbier`
       : data.state === "home"
-        ? "Sebastien Barbier — Software Engineer in Zurich"
-        : "Sebastien Barbier";
+        ? "Sébastien Barbier | Staff Software Engineer in Zürich"
+        : "Sébastien Barbier";
     const description: string = data.description || "";
 
     this.titleService.setTitle(title);
@@ -186,7 +186,7 @@ export class AppComponent implements OnInit {
     this.metaService.updateTag({ property: "og:type", content: "website" });
     this.metaService.updateTag({
       property: "og:site_name",
-      content: "Sebastien Barbier",
+      content: "Sébastien Barbier",
     });
     this.metaService.updateTag({ property: "og:title", content: title });
     this.metaService.updateTag({
