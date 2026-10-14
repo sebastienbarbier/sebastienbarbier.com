@@ -1,23 +1,6 @@
 export default {
   experiences: [
     {
-      name: "Shellui",
-      company: "shellui",
-      location: "Zürich, Switzerland",
-      type: "Personal project",
-      logo: "/assets/images/shellui/shellui_mark.svg",
-      positions: [
-        {
-          title: "Full-Stack Developer",
-          date: {
-            start: new Date("January 01, 2026"),
-            end: null,
-          },
-          description: `Building Shellui (shellui.com), an open-source microfrontend shell and CLI that gives apps one navigation and theme. Unified sign-in across apps with OAuth, SAML SSO, magic links, and Supabase Auth. Designed multi-tenant PostgreSQL schemas in Django services and built signed webhooks and Celery jobs with retries and an outbox. Protected releases with 1,000+ tests and CI/CD on each pull request (web and Tauri).`,
-        },
-      ],
-    },
-    {
       name: "Unique AG",
       company: "sebastienbarbier",
       location: "Zürich, Switzerland / Remote",
