@@ -1,6 +1,6 @@
 <div class="wrapper pt">
   <div class="container pb">
-    <h1 class="center"><span>My resume</span> Software Engineer</h1>
+    <h1 class="center"><span>My resume</span> Staff Software Engineer</h1>
 
     <div class="presentation">
       <dl>
@@ -18,68 +18,91 @@
       <dl>
         <dt>Languages</dt>
         <dd>
-          French <em>(native language)</em>, English <em>(fluent)</em>, and
-          German <em>(B1)</em>
+          French <em>(native)</em>, English <em>(fluent)</em>, and<br />
+          German <em>(B1, Goethe-Zertifikat, July 2026)</em>
         </dd>
       </dl>
     </div>
 
+    <h2>About me</h2>
+
+    <p>
+      Staff-level software engineer with 16+ years of experience shipping
+      products from first idea to production. Led frontend for an agentic AI
+      platform at Unique AG and co-designed SAP FSM's extensibility concept.
+      Improving my German beyond B1.
+    </p>
+    <p>
+      I am currently building
+      <a routerLink="/projects/shellui">Shellui</a>, an open-source
+      microfrontend shell and CLI (TypeScript, React, Python/Django).
+    </p>
+
     <h2 class="relevantSkills">Relevant skills</h2>
 
     <div>
-      <!-- <h3>Front-end</h3> -->
       <div>
-        <h3>Front-End</h3>
+        <h3>Frontend</h3>
         <ul class="badges">
-          <li>System designs</li>
-          <li>Microfrontends</li>
+          <li>TypeScript</li>
+          <li>JavaScript</li>
           <li>React</li>
+          <li>Next.js</li>
           <li>Angular</li>
-          <li>GraphQL</li>
-          <li>Redux</li>
+          <li>Tailwind CSS</li>
           <li>PWA</li>
-          <li>Web/Service workers</li>
-          <li>UX/UI design</li>
           <li>Accessibility</li>
-          <li>SEO</li>
-          <li>D3.js</li>
-          <li>Cypress</li>
-          <li>IndexedDB</li>
-          <li>Tailwind</li>
-          <li>CSS Animation</li>
-          <li>Pixel perfect integration</li>
+          <li>UX/UI</li>
+          <li>Microfrontends</li>
+          <li>Redux</li>
+          <li>MUI</li>
+          <li>D3</li>
+          <li>Streaming chat UI</li>
+          <li>React Native</li>
         </ul>
 
-        <!-- <h3>Back-end</h3> -->
-
-        <h3>Back-End</h3>
+        <h3>Backend and architecture</h3>
         <ul class="badges">
-          <li>Distributed systems</li>
-          <li>Microservices</li>
-          <li>Open-source advocate</li>
           <li>Python</li>
-          <li>Javascript</li>
-          <li>Django</li>
-          <li>FastAPI</li>
-          <li>Restful API</li>
+          <li>Django REST Framework</li>
+          <li>Java</li>
+          <li>REST APIs</li>
+          <li>OpenAPI</li>
           <li>SSO</li>
           <li>Celery</li>
-          <li>RabbitMQ</li>
-          <li>InfluxDB</li>
-          <li>Unitary test</li>
+          <li>PostgreSQL</li>
+          <li>Supabase</li>
+          <li>Multi-tenant SaaS</li>
+          <li>Event-driven services</li>
+          <li>Signed webhooks</li>
+          <li>Redis</li>
         </ul>
 
-        <!-- <h3>Skills</h3> -->
-
-        <h3>Devops</h3>
+        <h3>Delivery and ops</h3>
         <ul class="badges">
           <li>CI/CD</li>
+          <li>GitHub Actions</li>
           <li>Docker</li>
-          <li>E2E testing</li>
+          <li>Cypress</li>
+          <li>Unit and E2E testing</li>
+          <li>Sentry</li>
           <li>Prometheus</li>
           <li>Grafana</li>
-          <li>Loki</li>
-          <li>Server admin.</li>
+          <li>Git</li>
+          <li>Linux server admin</li>
+          <li>Tauri desktop builds</li>
+        </ul>
+
+        <h3>AI</h3>
+        <ul class="badges">
+          <li>Agentic AI</li>
+          <li>LLMs</li>
+          <li>Streaming responses</li>
+          <li>Structured outputs</li>
+          <li>Tool calling</li>
+          <li>RAG</li>
+          <li>MCP</li>
+          <li>AI-assisted engineering</li>
         </ul>
       </div>
     </div>
@@ -99,7 +122,11 @@
               <p>
                 <strong>{{ experience.positions[0].title }}</strong
                   ><br />
-                  {{ experience.name }} • {{ experience.type }}
+                  {{ experience.name }}@if (experience.promotionNote) {
+                  <span
+                    >; <em>{{ experience.promotionNote }}</em></span
+                  >
+                  } • {{ experience.type }}
                 </p>
                 @if (experience.positions[0].date.end) {
                   <p
@@ -181,6 +208,15 @@
         }
       </ul>
 
+      <h2>Soft skills</h2>
+      <div class="soft-skills">
+        @for (skill of softSkills; track skill) {
+          <p>
+            <strong>{{ skill.title }}:</strong> {{ skill.description }}
+          </p>
+        }
+      </div>
+
       <h2>Education</h2>
       <ul class="education">
         @for (education of educations; track education) {
@@ -209,14 +245,6 @@
               </li>
             }
           </ul>
-
-          <h2>About me</h2>
-
-          <p>
-            Building tools to make life easier. Exploring blockchain, crypto, and
-            trading. Passionate about photography, motorcycles, travel, and connecting
-            with people in tech.
-          </p>
 
           <h2>Attending conferences</h2>
           <p>Here's a list of the conferences I attended in the past years:</p>

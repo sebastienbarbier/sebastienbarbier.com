@@ -3,7 +3,7 @@ export default {
     {
       name: "Unique AG",
       company: "sebastienbarbier",
-      location: "Zurich, Switzerland",
+      location: "Zürich, Switzerland / Remote",
       type: "Full-time",
       logo: "/assets/images/unique/unique-logo-black.svg",
       positions: [
@@ -13,76 +13,71 @@ export default {
             start: new Date("December 01, 2023"),
             end: new Date("December 30, 2025"),
           },
-          description: `Leading frontend engineering at Unique AG to build an agentic AI chat platform for financial services, leveraging RAG and MCP to provide context-aware, compliant, and insightful client interactions.`,
+          description: `- Led frontend for an agentic AI chat platform used by financial services clients.
+- Streamed LLM answers live in the UI, with structured outputs and tool calling in production.
+- Integrated RAG and MCP into the chat flows, so answers use client context and stay compliant.
+- Partnered with product, design, and backend teams on delivery, keeping release quality high.`,
         },
       ],
     },
     {
-      name: "Self employed",
+      name: "Private investor (own capital)",
       company: "sebastienbarbier",
-      location: "Zurich, Switzerland",
-      type: "Full-time",
+      location: "Zürich, Switzerland",
+      type: "Self-directed",
       logo: "/assets/images/sprb/sebastienbarbier_logo.png",
       positions: [
         {
-          title: "Full-stack Software Engineer",
+          title: "Liquidity Provider, Decentralized Finance (DeFi)",
           date: {
             start: new Date("August 01, 2021"),
             end: new Date("November 30, 2023"),
           },
-          description: `Full-time solo entrepreneur developing two projects, Seven23.io and FromEdwin, while independently managing the entire stack from architecture and development to DevOps, CI/CD, and delivery.`,
-        },
-        {
-          title: "Crypto Liquidity Provider",
-          date: {
-            start: new Date("October 01, 2021"),
-            end: new Date("July 31, 2023"),
-          },
-          description: `Actively provided liquidity on various DeFi crypto markets, supporting decentralized trading platforms and learning about emerging projects within the blockchain ecosystem. Explored new protocols, gained hands-on experience with yield farming, and kept up with innovations in decentralized finance infrastructure.`,
+          description: `- Provided liquidity to on-chain DeFi AMM pools, fully funding my living costs for 2+ years.
+- In parallel, maintained Seven23, an open-source, end-to-end encrypted budget app (React, Redux, Django REST Framework, Docker), with 170+ GitHub stars across its repositories.
+- Built FromEdwin.com as a learning project on asynchronous performance metrics, owning architecture, backend, observability, and CI/CD.`,
         },
       ],
     },
     {
-      name: "SAP",
+      name: "SAP (Schweiz) AG, FSM",
+      promotionNote: "promoted from Technical Lead",
       company: "SAP",
       url: "sap.com",
-      location: "Zurich, Switzerland",
+      location: "Zürich, Switzerland / Remote",
       logo: "/assets/images/sap/sap.svg",
       type: "Full-time",
       positions: [
         {
           title: "Associate Development Architect",
           date: {
-            start: new Date("November 01, 2020"),
+            start: new Date("February 01, 2020"),
             end: new Date("July 31, 2021"),
           },
-          description: `Contributing to the design and implementation of the FSM extensibility concept - a distributed protocol enabling secure third-party integrations - while leading architecture decisions, mentoring developers, and ensuring high-quality, scalable product delivery.`,
-        },
-        {
-          title: "Senior Developer",
-          date: {
-            start: new Date("February 01, 2020"),
-            end: new Date("October 31, 2020"),
-          },
-          description:
-            "Joined as tech lead, supporting the migration of the Field Service Management (FSM) application to a micro- frontend architecture, contributing to its modernization and scalability.",
+          description: `- Joined the team building FSM's microfrontends as Technical Lead, advising on architecture.
+- Co-designed the FSM extensibility concept for secure third-party integrations, driving partner adoption with code samples and public webinars.
+- Prepared management decisions on FSM's target architecture by assessing risks and effort.
+- Designed, coded and tested complex FSM features, and helped others resolve complex issues.
+- Mentored junior developers and coached the team on architecture, simplicity and best practices.`,
         },
       ],
     },
     {
-      name: "Self employed",
+      name: "Self-employed",
       company: "sebastienbarbier",
-      location: "Chiang-Mai, Thailand. Remote work.",
+      location: "Chiang Mai, Thailand / Remote",
       type: "Freelance",
       logo: "/assets/images/sprb/sebastienbarbier_logo.png",
       positions: [
         {
-          title: "Web technologies consultant and freelancer",
+          title: "Web Technologies Consultant and Freelancer",
           date: {
             start: new Date("September 01, 2016"),
             end: new Date("January 31, 2020"),
           },
-          description: `Leveraged my web technology expertise to contribute to diverse projects - including chatbots, PWAs, web extensions, React Native apps, and web integrations - for clients such as Chefclub, Mozilla, and Mila AG.`,
+          description: `- Built the UI of Mozilla's Notes by Firefox extension and contributed to its React Native app.
+- Delivered chatbots, PWAs, and web integrations for clients including Chefclub and Mila AG.
+- Worked remotely and independently with international clients, from first call to release.`,
           images: [
             {
               src: "/assets/images/chefclub/chefclub-logo.png",
@@ -109,13 +104,13 @@ export default {
       logo: "/assets/images/fluance/fluance_logo.png",
       positions: [
         {
-          title: "Frontend Developer",
+          title: "Front-end Developer / Technical Lead",
           date: {
             start: new Date("June 01, 2014"),
             end: new Date("August 31, 2016"),
           },
-          description:
-            "Served as tech lead front-end developer on a four-person team, building a cross-platform HL7 patient data interface using jQuery and AngularJS with FoundationCSS, while managing documentation, testing, and deployment under strict SCRUM practices.",
+          description: `- Led frontend in a four-person Scrum team building a cross-platform HL7 patient data interface.
+- Owned documentation, testing, and deployment; stack: AngularJS, jQuery, and Foundation CSS.`,
         },
       ],
     },
@@ -132,7 +127,7 @@ export default {
             start: new Date("September 01, 2012"),
             end: new Date("June 30, 2014"),
           },
-          description: `Worked on the Covotem team developing a unified telemedicine platform, focusing on Java-based library maintenance and real-time interoperability with HL7 and DICOM, while supporting deployment, customer assistance, and compliance with ISO 13485.`,
+          description: `- Maintained Java HL7/DICOM exchange for a telemedicine platform under ISO 13485.`,
         },
       ],
     },
@@ -141,26 +136,16 @@ export default {
       company: "University of Franche-Comté",
       url: "univ-fcomte.fr",
       location: "Besançon, France",
-      type: "Part-time contractor",
+      type: "Part-time",
       logo: "/assets/images/univ-fcomte/univ-fcomte_logo.png",
       positions: [
         {
           title: "Part-time Lecturer",
           date: {
-            start: new Date("September 01, 2012"),
-            end: new Date("January 31, 2013"),
-          },
-          description:
-            "Alongside my role at Covalia Interactive S.A., I taught 32 hours of practical Java and HTML/CSS courses to third-year students at ISIFC and UFR ST through tutorials and project-based learning.",
-        },
-        {
-          title: "Part-time Lecturer",
-          date: {
             start: new Date("September 01, 2011"),
-            end: new Date("January 31, 2012"),
+            end: new Date("September 30, 2012"),
           },
-          description:
-            "Alongside my role at Ionyse, I taught 66 hours of practical Java courses to third-year students at ISIFC and UFR ST through hands-on tutorials and project-based learning.",
+          description: `- Taught 98 hours of practical Java and HTML/CSS to third-year engineering students.`,
         },
       ],
     },
@@ -172,14 +157,41 @@ export default {
       logo: "/assets/images/ionyse/ionyse_logo.png",
       positions: [
         {
-          title: "Co-founder and Full-stack developer",
+          title: "Co-founder and Full-stack Developer",
           date: {
             start: new Date("July 01, 2009"),
             end: new Date("June 30, 2012"),
           },
-          description: `Co-founded a web agency during my master’s, developing websites and web applications with a custom Python/Django CMS, while specializing in front-end development and pixel-perfect integrations using HTML5, CSS3, and jQuery.`,
+          description: `- Co-founded a web agency during my master's, building client websites on a Python/Django CMS.`,
         },
       ],
+    },
+  ],
+  softSkills: [
+    {
+      title: "Ownership",
+      description:
+        "built Shellui and Seven23 end to end, from architecture and UI to CI/CD and hosting.",
+    },
+    {
+      title: "Collaboration",
+      description:
+        "Aligned several SAP teams on microfrontends; partnered with product and design at Unique.",
+    },
+    {
+      title: "Mentoring",
+      description:
+        "Mentored junior developers at SAP and taught 98 hours of programming at university.",
+    },
+    {
+      title: "Communication",
+      description:
+        "Presented the FSM extensibility concept to SAP partners in public webinars.",
+    },
+    {
+      title: "Pragmatism and quality",
+      description:
+        "Simple, well-tested solutions shipped in small steps, backed by 1,000+ tests.",
     },
   ],
   educations: [

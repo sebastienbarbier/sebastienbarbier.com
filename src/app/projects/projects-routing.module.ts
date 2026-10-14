@@ -8,10 +8,10 @@ import { ChefclubComponent } from './chefclub/chefclub.component';
 import { ShelluiComponent } from './shellui/shellui.component';
 
 const DESCRIPTION = {
-  'projects': `Projects by Sébastien Barbier, including Shellui, Seven23 expenses, FromEdwin monitoring, Chefclub, and Notes by Firefox.`,
-  'shellui': `Shellui is an open-source, opinionated microfrontend shell for building web apps without rebuilding shared infrastructure.`,
+  'projects': `Projects by Sébastien Barbier, including Shellui, Seven23, FromEdwin, Chefclub, and Notes by Firefox.`,
+  'shellui': `Shellui is an open-source React and TypeScript microfrontend shell with unified auth, multi-tenant Django services, and 1,000+ tests in CI.`,
   'seven23': `Seven23 is an open-source, privacy-first personal expense tracker with secure end-to-end encryption built in by design.`,
-  'fromedwin': `FromEdwin is an opinionated no-code monitoring tool for web projects. It is currently under development and coming soon.`,
+  'fromedwin': `FromEdwin.com is a learning project on asynchronous performance metrics: architecture, backend, observability, and CI/CD.`,
   'mozilla': `Freelance frontend work at Mozilla's Test Pilot team: building Notes by Firefox and validating the Firefox Sync stack.`,
   'chefclub': `Frontend work at Chefclub focused on UX improvements and web performance for the cooking brand's public website.`,
 };
