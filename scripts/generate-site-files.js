@@ -112,6 +112,7 @@ function writePaths(routes) {
 function writeSitemap(routes) {
   const lastmod = new Date().toISOString().slice(0, 10);
   const urls = routes
+    .filter((route) => route !== '/404')
     .map((route) => {
       const loc = route === '/' ? SITE_ORIGIN : `${SITE_ORIGIN}${route}`;
       return `  <url>\n    <loc>${loc}</loc>\n    <lastmod>${lastmod}</lastmod>\n  </url>`;
@@ -163,6 +164,31 @@ function writeDistRedirects(routes) {
   console.log(`Wrote ${projectRoutes.length} /works → /projects redirects in dist/en`);
 }
 
+function writeDist404Page() {
+  const distEn = path.join(ROOT, 'dist', 'en');
+  if (!fs.existsSync(distEn)) {
+    console.log('Skipped dist/en/404.html (folder not found).');
+    return;
+  }
+
+  const prerendered404 = path.join(distEn, '404', 'index.html');
+  const target = path.join(distEn, '404.html');
+
+  if (fs.existsSync(prerendered404)) {
+    fs.copyFileSync(prerendered404, target);
+    console.log('Wrote dist/en/404.html from prerendered /404 route.');
+    return;
+  }
+
+  const indexOriginal = path.join(distEn, 'index.original.html');
+  const index = path.join(distEn, 'index.html');
+  const source = fs.existsSync(indexOriginal) ? indexOriginal : index;
+  if (fs.existsSync(source)) {
+    fs.copyFileSync(source, target);
+    console.log('Wrote dist/en/404.html from app shell (prerendered /404 missing).');
+  }
+}
+
 const routes = collectRoutes();
 writePaths(routes);
 writeSitemap(routes);
@@ -176,4 +202,5 @@ console.log(`Wrote ${path.relative(ROOT, SITEMAP_FILE)}`);
 
 if (process.argv.includes('--dist-redirects')) {
   writeDistRedirects(routes);
+  writeDist404Page();
 }
