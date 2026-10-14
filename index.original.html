@@ -114,20 +114,17 @@ h2 {
   position: absolute;
   top: 0;
   left: 0;
-  bottom: calc(-1 * env(safe-area-inset-top));
+  bottom: 0;
   right: 0;
   overflow-x: hidden;
   overflow-y: auto;
   z-index: 1;
   display: flex;
   flex-direction: column;
-  min-height: 100%;
 }
 
 .wrapper > .container {
   flex: 1 1 auto;
-  display: flex;
-  flex-direction: column;
 }
 
 .wrapper route-footer {
@@ -187,7 +184,7 @@ a.btn.small {
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="keywords" content="Sébastien Barbier, staff software engineer, Shellui, TypeScript, React, Python, Django, microfrontends, Zürich, Switzerland, Seven23, open source.">
-  <style>@font-face{font-family:Open Sans Variable;src:url(/assets/fonts/OpenSans-Variable.woff2) format("woff2");font-weight:125 950;font-stretch:75% 125%;font-style:normal;font-display:swap}@font-face{font-family:Open Sans Variable;src:url(/assets/fonts/OpenSans-Italic-Variable.woff2) format("woff2");font-weight:125 950;font-stretch:75% 125%;font-style:italic;font-display:swap}@font-face{font-family:"Source Serif Variable";src:url(/assets/fonts/SourceSerif4-Variable.woff2) format("woff2");font-weight:125 950;font-stretch:75% 125%;font-style:normal;font-display:swap}@font-face{font-family:"Source Serif Variable";src:url(/assets/fonts/SourceSerif4-Italic-Variable.woff2) format("woff2");font-weight:125 950;font-stretch:75% 125%;font-style:italic;font-display:swap}:root{--sys-color-background:#f8f5f2;--sys-color-on-background:#202124;--sys-color-surface:#f2edea;--sys-color-on-surface:#202124;--sys-color-primary:#1f1d1d;--sys-color-on-primary:#e8eaed;--sys-color-secondary:#a37200;--sys-color-on-secondary:#fff9eb;--sys-color-secondary-variant:#dbb778;--sys-color-on-secondary-variant:#202124;--sys-color-shadow:#16161d;--sys-typeface-serif-variable:"Source Serif Variable", "Source Serif", ui-serif, Georgia, "Times New Roman", Times, serif;--sys-typeface-sans-variable:"Open Sans Variable", "Open Sans", Helvetica, sans-serif;--sys-typeface-serif:"Source Serif", ui-serif, Georgia, "Times New Roman", Times, serif;--sys-typeface-sans:"Open Sans", Helvetica, sans-serif;--comp-badge-background-color:#f2edea;--comp-badge-color:#202124;--comp-badge-font-family:"Open Sans Variable", "Open Sans", Helvetica, sans-serif;--comp-badge-font-size:.8em;--comp-title-color:#202124;--comp-title-font-family:"Source Serif Variable", "Source Serif", ui-serif, Georgia, "Times New Roman", Times, serif;--comp-title-fontSizeH1:4.2em;--comp-title-fontSizeH2:2.8em;--comp-title-fontSizeH3:2.2em;--comp-title-fontSizeH4:2em;--comp-title-fontSizeH5:1.8em;--comp-title-fontSizeH6:1.6em;--comp-title-selection-backgroundColor:#dbb778;--comp-title-selection-color:#202124;--comp-title-headline-color:#202124;--comp-title-headline-font-family:"Open Sans Variable", "Open Sans", Helvetica, sans-serif;--comp-title-headline-font-size:.8em}html{background:var(--sys-color-background)}html body{background:var(--sys-color-background);font-family:var(--sys-typeface-sans-variable);font-weight:400;font-variation-settings:"opsz" 24}html{font-size:16px;line-height:1.6;font-family:var(--sys-typeface-sans)}@supports (font-variation-settings: "wdth" 115){html{font-family:var(--sys-typeface-sans-variable)}}html body{margin:0}*::selection{color:var(--sys-color-on-secondary-variant);background-color:var(--sys-color-secondary-variant)}</style><link rel="stylesheet" href="styles.bdfdfb11a6f4e96c.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles.bdfdfb11a6f4e96c.css"></noscript></head>
+  <style>@font-face{font-family:Open Sans Variable;src:url(/assets/fonts/OpenSans-Variable.woff2) format("woff2");font-weight:125 950;font-stretch:75% 125%;font-style:normal;font-display:swap}@font-face{font-family:Open Sans Variable;src:url(/assets/fonts/OpenSans-Italic-Variable.woff2) format("woff2");font-weight:125 950;font-stretch:75% 125%;font-style:italic;font-display:swap}@font-face{font-family:"Source Serif Variable";src:url(/assets/fonts/SourceSerif4-Variable.woff2) format("woff2");font-weight:125 950;font-stretch:75% 125%;font-style:normal;font-display:swap}@font-face{font-family:"Source Serif Variable";src:url(/assets/fonts/SourceSerif4-Italic-Variable.woff2) format("woff2");font-weight:125 950;font-stretch:75% 125%;font-style:italic;font-display:swap}:root{--sys-color-background:#f8f5f2;--sys-color-on-background:#202124;--sys-color-surface:#f2edea;--sys-color-on-surface:#202124;--sys-color-primary:#1f1d1d;--sys-color-on-primary:#e8eaed;--sys-color-secondary:#a37200;--sys-color-on-secondary:#fff9eb;--sys-color-secondary-variant:#dbb778;--sys-color-on-secondary-variant:#202124;--sys-color-shadow:#16161d;--sys-typeface-serif-variable:"Source Serif Variable", "Source Serif", ui-serif, Georgia, "Times New Roman", Times, serif;--sys-typeface-sans-variable:"Open Sans Variable", "Open Sans", Helvetica, sans-serif;--sys-typeface-serif:"Source Serif", ui-serif, Georgia, "Times New Roman", Times, serif;--sys-typeface-sans:"Open Sans", Helvetica, sans-serif;--comp-badge-background-color:#f2edea;--comp-badge-color:#202124;--comp-badge-font-family:"Open Sans Variable", "Open Sans", Helvetica, sans-serif;--comp-badge-font-size:.8em;--comp-title-color:#202124;--comp-title-font-family:"Source Serif Variable", "Source Serif", ui-serif, Georgia, "Times New Roman", Times, serif;--comp-title-fontSizeH1:4.2em;--comp-title-fontSizeH2:2.8em;--comp-title-fontSizeH3:2.2em;--comp-title-fontSizeH4:2em;--comp-title-fontSizeH5:1.8em;--comp-title-fontSizeH6:1.6em;--comp-title-selection-backgroundColor:#dbb778;--comp-title-selection-color:#202124;--comp-title-headline-color:#202124;--comp-title-headline-font-family:"Open Sans Variable", "Open Sans", Helvetica, sans-serif;--comp-title-headline-font-size:.8em}html{background:var(--sys-color-background)}html body{background:var(--sys-color-background);font-family:var(--sys-typeface-sans-variable);font-weight:400;font-variation-settings:"opsz" 24}html{font-size:16px;line-height:1.6;font-family:var(--sys-typeface-sans)}@supports (font-variation-settings: "wdth" 115){html{font-family:var(--sys-typeface-sans-variable)}}html body{margin:0}*::selection{color:var(--sys-color-on-secondary-variant);background-color:var(--sys-color-secondary-variant)}</style><link rel="stylesheet" href="styles.1bbe400e6efaddcd.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles.1bbe400e6efaddcd.css"></noscript></head>
   <body id="body">
     <script type="application/ld+json">
       {
@@ -237,5 +234,5 @@ a.btn.small {
       }
     </script>
     <app-root></app-root>
-  <script src="runtime.3a36ed9b0b4fea56.js" type="module"></script><script src="polyfills.3e8676702733b9d1.js" type="module"></script><script src="main.d676265b022af9d9.js" type="module"></script></body>
+  <script src="runtime.e8414a4223acbd19.js" type="module"></script><script src="polyfills.3e8676702733b9d1.js" type="module"></script><script src="main.b4ebb4f8723f6878.js" type="module"></script></body>
 </html>
