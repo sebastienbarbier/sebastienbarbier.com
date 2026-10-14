@@ -39,6 +39,13 @@ See for sample https://raw.githubusercontent.com/favoloso/conventional-changelog
 
 - Bump `@angular/router` to 22.2.0, `@angular/ssr` to 22.1.7, and sharp to 0.35.5
 
+## [2.7.1] - 2026-10-14
+
+### 🐛 Bug Fixes
+
+- Float the top nav and menu control over page content with a transparent header bar
+- Left align the resume conferences list at natural width instead of stretching full width
+
 ## [2.6.1] - 2026-09-29
 
 ### 🛠 Improvements
