@@ -21,6 +21,24 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 See for sample https://raw.githubusercontent.com/favoloso/conventional-changelog-emoji/master/CHANGELOG.md
 -->
 
+## [2.7.0] - 2026-10-14
+
+### 🛠 Improvements
+
+- Align resume page and site copy with the current resume (SAP role, education, layout, and experience bullets)
+- Reorder home and footer social links to LinkedIn, GitHub, X, Instagram
+- Shorten the projects page subtitle to On the side
+- Add prerendered `/404` route and GitHub Pages `404.html` for missing URLs
+- Keep the site footer at the bottom on short pages
+
+### 🚨 Changed
+
+- Simplify the not-found page to a single title
+
+### 🏗 Chore
+
+- Bump `@angular/router` to 22.2.0, `@angular/ssr` to 22.1.7, and sharp to 0.35.5
+
 ## [2.6.1] - 2026-09-29
 
 ### 🛠 Improvements
