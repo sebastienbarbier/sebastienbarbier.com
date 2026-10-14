@@ -122,7 +122,11 @@
               <p>
                 <strong>{{ experience.positions[0].title }}</strong
                   ><br />
-                  {{ experience.name }} • {{ experience.type }}
+                  {{ experience.name }}@if (experience.promotionNote) {
+                  <span
+                    >; <em>{{ experience.promotionNote }}</em></span
+                  >
+                  } • {{ experience.type }}
                 </p>
                 @if (experience.positions[0].date.end) {
                   <p

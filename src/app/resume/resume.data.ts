@@ -40,7 +40,8 @@ export default {
       ],
     },
     {
-      name: "SAP (Schweiz) AG, FSM; promoted from Technical Lead",
+      name: "SAP (Schweiz) AG, FSM",
+      promotionNote: "promoted from Technical Lead",
       company: "SAP",
       url: "sap.com",
       location: "Zürich, Switzerland / Remote",
