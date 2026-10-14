@@ -48,16 +48,23 @@ export default {
       type: "Full-time",
       positions: [
         {
+          title: "Technical Lead",
+          date: {
+            start: new Date("February 01, 2020"),
+            end: new Date("July 31, 2021"),
+          },
+          description: `- Joined the team building FSM's microfrontends as Technical Lead, advising on architecture.`,
+        },
+        {
           title: "Associate Development Architect",
           date: {
             start: new Date("February 01, 2020"),
             end: new Date("July 31, 2021"),
           },
-          description: `- Joined the team building FSM's microfrontends as Technical Lead, advising on architecture.
-- Co-designed the FSM extensibility concept for secure third-party integrations, driving partner adoption with code samples and public webinars.
+          description: `- Co-designed the FSM extensibility concept for secure third-party integrations, driving partner adoption with code samples and public webinars.
 - Prepared management decisions on FSM's target architecture by assessing risks and effort.
-- Designed, coded, and tested complex FSM features, and helped others resolve complex issues.
-- Mentored junior developers and coached the team on architecture, simplicity, and best practices.`,
+- Designed, coded and tested complex FSM features, and helped others resolve complex issues.
+- Mentored junior developers and coached the team on architecture, simplicity and best practices.`,
         },
       ],
     },
