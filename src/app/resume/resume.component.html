@@ -107,15 +107,6 @@
       </div>
     </div>
 
-    <h2>Soft skills</h2>
-    <div class="soft-skills">
-      @for (skill of softSkills; track skill) {
-        <p>
-          <strong>{{ skill.title }}:</strong> {{ skill.description }}
-        </p>
-      }
-    </div>
-
     <h2>Work experience</h2>
     <ul class="experiences">
       @for (experience of experiences; track experience) {
@@ -212,6 +203,15 @@
           </li>
         }
       </ul>
+
+      <h2>Soft skills</h2>
+      <div class="soft-skills">
+        @for (skill of softSkills; track skill) {
+          <p>
+            <strong>{{ skill.title }}:</strong> {{ skill.description }}
+          </p>
+        }
+      </div>
 
       <h2>Education</h2>
       <ul class="education">
