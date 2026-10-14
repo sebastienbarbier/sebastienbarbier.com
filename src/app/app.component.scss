@@ -21,14 +21,22 @@ main {
   min-height: 0;
 }
 
-// Header logo as svg
+// Header logo as svg — fixed over scrolling page content, no full-width bar
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  box-sizing: border-box;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   padding: 30px 50px;
   padding-top: calc(30px + env(safe-area-inset-top));
+  background: transparent;
+  pointer-events: none;
+  z-index: $zindex_navigation + 1;
 
   @include for-tablet-landscape-down {
     padding: 20px 20px 20px 18px;
@@ -36,15 +44,11 @@ header {
   }
   // @include for-phone-only ...
 
-  &:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: env(safe-area-inset-top);
-    background: $color-primary;
-    z-index: $zindex_navigation+1;
+  a.logo,
+  input#navigation,
+  input#navigation + label,
+  nav {
+    pointer-events: auto;
   }
 
   a.logo {
