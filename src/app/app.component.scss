@@ -1,5 +1,26 @@
 @use '../assets/scss/_variables' as *;
 
+:host {
+  display: block;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+:host > div {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 0;
+}
+
 // Header logo as svg
 header {
   display: flex;
