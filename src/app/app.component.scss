@@ -178,9 +178,9 @@ input#navigation + label {
 
 // Navigation Menu
 input#navigation + label +  nav {
-  position: absolute;
+  position: fixed;
   top: 0;
-  bottom: calc(-1 * env(safe-area-inset-top));
+  bottom: 0;
   left: 0;
   right: 0;
   opacity: 0;
