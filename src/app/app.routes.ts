@@ -51,8 +51,21 @@ export const appRoutes: Routes = [
     data: { title: 'Resume', description: DESCRIPTION.resume, state: 'resume' }
   },
   {
+    path: '404',
+    component: PageNotFoundComponent,
+    data: {
+      title: 'Page not found',
+      description: 'This page does not exist on sebastienbarbier.com. Try the home page, projects, or contact.',
+      state: '404',
+    },
+  },
+  {
     path: '**',
     component: PageNotFoundComponent,
-    data: { title: null, description: null, state: '404' }
-  }
+    data: {
+      title: 'Page not found',
+      description: 'This page does not exist on sebastienbarbier.com. Try the home page, projects, or contact.',
+      state: '404',
+    },
+  },
 ];

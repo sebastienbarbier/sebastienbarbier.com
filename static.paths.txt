@@ -1,3 +1,4 @@
+/404
 /contact
 /legal
 /projects
