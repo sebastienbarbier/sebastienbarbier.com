@@ -164,6 +164,9 @@
                   {{ experience.type }} • {{ experience.positions | duration
                   }}<br />{{ experience.location }}
                 </p>
+                @if (experience.promotionNote) {
+                  <p class="date_and_location">{{ experience.promotionNote }}</p>
+                }
                 <ul class="experience">
                   @for (position of experience.positions; track position) {
                     <li class="dot">

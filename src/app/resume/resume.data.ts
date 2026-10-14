@@ -46,6 +46,7 @@ export default {
       location: "Zürich, Switzerland / Remote",
       logo: "/assets/images/sap/sap.svg",
       type: "Full-time",
+      promotionNote: "promoted from Technical Lead",
       positions: [
         {
           title: "Technical Lead",
