@@ -198,13 +198,22 @@
             <div>
               <header>
                 <strong>{{ education.title }}</strong
-                  >@if (education.subtitle) {
-                  <span> - {{ education.subtitle }}</span
+                  >@if (education.grade) {
+                  <span> - {{ education.grade }}</span
                     >
                     }<br />
                     {{ education.university }} -
                     <span class="location">{{ education.location }}</span>
                   </header>
+                  @if (education.internship) {
+                    <p class="internship">
+                      Internship: <strong>{{ education.internship.company }}</strong> -
+                      <span class="location">{{ education.internship.location }}</span>
+                      - {{ education.internship.duration_in_months }} months.<br />{{
+                      education.internship.description
+                      }}
+                    </p>
+                  }
                 </div>
               </li>
             }

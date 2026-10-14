@@ -176,16 +176,51 @@ export default {
   educations: [
     {
       year: 2011,
-      title: "Master's in Computer Science",
-      university: "University of Franche-Comté",
+      title:
+        "Master degree in Computer Science - Distributed systems and networks",
+      grade: "magna cum laude",
+      university: "University of Franche-Comté, Science and technology",
       location: "Besançon, France",
-      subtitle: "Distributed Systems and Networks",
+      internship: {
+        company: "Nav6 Laboratory",
+        location: "Penang, Malaysia",
+        description:
+          "Developed a C# application using Google APIs for real-time collaborative document editing, integrated with a video chat platform.",
+        duration_in_months: 4,
+      },
     },
     {
       year: 2009,
-      title: "Bachelor's in Computer Science",
-      university: "University of Franche-Comté",
+      title: "Bachelor degree in Computer Science",
+      grade: "cum laude",
+      university: "University of Franche-Comté, Science and technology",
       location: "Besançon, France",
+      internship: {
+        company: "MagicLabVision Laboratory",
+        location: "Adelaide, Australia",
+        description:
+          "Joined a research team developing an augmented reality application using Python.",
+        duration_in_months: 3,
+      },
+    },
+    {
+      year: 2008,
+      title: "Final year in Computer Science - ERASMUS",
+      university: "University of Portsmouth",
+      location: "Portsmouth, England",
+    },
+    {
+      year: 2007,
+      title: "Higher National Certificate in Computer Science",
+      university: "IUT of Belfort",
+      location: "Belfort, France",
+      internship: {
+        company: "Thales Avionics Electrical Systems",
+        location: "Chatou, Île-de-France, France",
+        description:
+          "Developed a PHP web interface providing read-only access to a deprecated, archived ERP database.",
+        duration_in_months: 3,
+      },
     },
   ],
   conferences: [
