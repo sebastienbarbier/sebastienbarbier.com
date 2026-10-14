@@ -1,9 +1,15 @@
 @use '../../assets/scss/_variables' as *;
 
-img {
-  float: right;
-  width: 2em;
-  margin: 1em 2em;
+h3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1em;
+
+  img {
+    width: 32px;
+    margin-right: 32px;
+  }
 }
 
 h1 {

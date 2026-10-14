@@ -19,6 +19,7 @@ main {
   flex-direction: column;
   position: relative;
   min-height: 0;
+  overflow: hidden;
 }
 
 // Header logo as svg — fixed over scrolling page content, no full-width bar
