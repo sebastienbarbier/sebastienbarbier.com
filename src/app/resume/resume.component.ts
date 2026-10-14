@@ -35,6 +35,7 @@ function getAge (birthDate: Date) {
 export class ResumeComponent implements OnInit {
 
   experiences: any;
+  softSkills: any;
   conferences: any;
   educations: any;
   years: any;
@@ -49,6 +50,7 @@ export class ResumeComponent implements OnInit {
     // Data are stored within a typescipt object
     // (not json to have Date object instead of string)
     this.experiences = resume_json.experiences;
+    this.softSkills = resume_json.softSkills;
     this.educations = resume_json.educations;
     this.conferences = resume_json.conferences;
 

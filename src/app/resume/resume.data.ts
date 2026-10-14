@@ -13,7 +13,10 @@ export default {
             start: new Date("December 01, 2023"),
             end: new Date("December 30, 2025"),
           },
-          description: `Led frontend for an agentic AI chat platform used by financial services clients. Streamed LLM answers live in the UI, with structured outputs and tool calling in production. Integrated RAG and MCP into chat flows so answers use client context and stay compliant. Partnered with product, design, and backend teams on delivery, keeping release quality high.`,
+          description: `- Led frontend for an agentic AI chat platform used by financial services clients.
+- Streamed LLM answers live in the UI, with structured outputs and tool calling in production.
+- Integrated RAG and MCP into the chat flows, so answers use client context and stay compliant.
+- Partnered with product, design, and backend teams on delivery, keeping release quality high.`,
         },
       ],
     },
@@ -30,7 +33,9 @@ export default {
             start: new Date("August 01, 2021"),
             end: new Date("November 30, 2023"),
           },
-          description: `Provided liquidity to on-chain DeFi AMM pools, fully funding living costs for 2+ years. In parallel, maintained Seven23, an open-source, end-to-end encrypted budget app (React, Redux, Django REST Framework, Docker), with 170+ GitHub stars across its repositories. Built FromEdwin.com as a learning project on asynchronous performance metrics, owning architecture, backend, observability, and CI/CD.`,
+          description: `- Provided liquidity to on-chain DeFi AMM pools, fully funding my living costs for 2+ years.
+- In parallel, maintained Seven23, an open-source, end-to-end encrypted budget app (React, Redux, Django REST Framework, Docker), with 170+ GitHub stars across its repositories.
+- Built FromEdwin.com as a learning project on asynchronous performance metrics, owning architecture, backend, observability, and CI/CD.`,
         },
       ],
     },
@@ -48,7 +53,11 @@ export default {
             start: new Date("February 01, 2020"),
             end: new Date("July 31, 2021"),
           },
-          description: `Joined the team building FSM microfrontends as Technical Lead, then promoted to Associate Development Architect. Co-designed the FSM extensibility concept for secure third-party integrations, driving partner adoption with code samples and public webinars. Prepared management decisions on FSM target architecture by assessing risks and effort. Designed, coded, and tested complex FSM features, mentored junior developers, and coached the team on architecture, simplicity, and best practices.`,
+          description: `- Joined the team building FSM's microfrontends as Technical Lead, advising on architecture.
+- Co-designed the FSM extensibility concept for secure third-party integrations, driving partner adoption with code samples and public webinars.
+- Prepared management decisions on FSM's target architecture by assessing risks and effort.
+- Designed, coded, and tested complex FSM features, and helped others resolve complex issues.
+- Mentored junior developers and coached the team on architecture, simplicity, and best practices.`,
         },
       ],
     },
@@ -65,7 +74,9 @@ export default {
             start: new Date("September 01, 2016"),
             end: new Date("January 31, 2020"),
           },
-          description: `Built the UI of Mozilla's Notes by Firefox extension and contributed to its React Native app. Delivered chatbots, PWAs, and web integrations for clients including Chefclub and Mila AG. Worked remotely and independently with international clients, from first call to release.`,
+          description: `- Built the UI of Mozilla's Notes by Firefox extension and contributed to its React Native app.
+- Delivered chatbots, PWAs, and web integrations for clients including Chefclub and Mila AG.
+- Worked remotely and independently with international clients, from first call to release.`,
           images: [
             {
               src: "/assets/images/chefclub/chefclub-logo.png",
@@ -97,8 +108,8 @@ export default {
             start: new Date("June 01, 2014"),
             end: new Date("August 31, 2016"),
           },
-          description:
-            "Led frontend in a four-person Scrum team building a cross-platform HL7 patient data interface. Owned documentation, testing, and deployment; stack: AngularJS, jQuery, and Foundation CSS.",
+          description: `- Led frontend in a four-person Scrum team building a cross-platform HL7 patient data interface.
+- Owned documentation, testing, and deployment; stack: AngularJS, jQuery, and Foundation CSS.`,
         },
       ],
     },
@@ -115,7 +126,7 @@ export default {
             start: new Date("September 01, 2012"),
             end: new Date("June 30, 2014"),
           },
-          description: `Maintained Java HL7/DICOM exchange for a telemedicine platform under ISO 13485.`,
+          description: `- Maintained Java HL7/DICOM exchange for a telemedicine platform under ISO 13485.`,
         },
       ],
     },
@@ -133,8 +144,7 @@ export default {
             start: new Date("September 01, 2011"),
             end: new Date("September 30, 2012"),
           },
-          description:
-            "Taught 98 hours of practical Java and HTML/CSS to third-year engineering students (September 2011 and September 2012).",
+          description: `- Taught 98 hours of practical Java and HTML/CSS to third-year engineering students.`,
         },
       ],
     },
@@ -151,9 +161,36 @@ export default {
             start: new Date("July 01, 2009"),
             end: new Date("June 30, 2012"),
           },
-          description: `Co-founded a web agency during my master's, building client websites on a Python/Django CMS.`,
+          description: `- Co-founded a web agency during my master's, building client websites on a Python/Django CMS.`,
         },
       ],
+    },
+  ],
+  softSkills: [
+    {
+      title: "Ownership",
+      description:
+        "built Shellui and Seven23 end to end, from architecture and UI to CI/CD and hosting.",
+    },
+    {
+      title: "Collaboration",
+      description:
+        "Aligned several SAP teams on microfrontends; partnered with product and design at Unique.",
+    },
+    {
+      title: "Mentoring",
+      description:
+        "Mentored junior developers at SAP and taught 98 hours of programming at university.",
+    },
+    {
+      title: "Communication",
+      description:
+        "Presented the FSM extensibility concept to SAP partners in public webinars.",
+    },
+    {
+      title: "Pragmatism and quality",
+      description:
+        "Simple, well-tested solutions shipped in small steps, backed by 1,000+ tests.",
     },
   ],
   educations: [
