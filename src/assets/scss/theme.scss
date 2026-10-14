@@ -147,6 +147,20 @@ a {
   overflow-x: hidden;
   overflow-y: auto;
   z-index: $zindex_wrapper;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+
+  > .container {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  route-footer {
+    margin-top: auto;
+    flex-shrink: 0;
+  }
 
   &.pt {
     padding-top: 130px;
