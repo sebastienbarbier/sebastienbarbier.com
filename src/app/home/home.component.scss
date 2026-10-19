@@ -3,11 +3,12 @@
 header {
   display: flex;
   flex-direction: column;
-  align-items: align-items;
   justify-content: center;
 
+  // Keep a definite viewport height. max-height: -webkit-fill-available
+  // collapses to 0 in Safari because this block's parent height depends on it.
   height: 100vh;
-  max-height: -webkit-fill-available;
+  height: 100dvh;
 
   @include for-tablet-landscape-down {
     justify-content: flex-end;
