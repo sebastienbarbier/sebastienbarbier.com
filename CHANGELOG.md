@@ -21,6 +21,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 See for sample https://raw.githubusercontent.com/favoloso/conventional-changelog-emoji/master/CHANGELOG.md
 -->
 
+## [2.7.3] - 2026-10-20
+
+### 🛠 Improvements
+
+- GraphQL added to resume skills
+
 ## [2.7.2] - 2026-10-19
 
 ### 🐛 Bug Fixes
