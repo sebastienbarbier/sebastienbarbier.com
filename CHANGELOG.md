@@ -21,6 +21,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 See for sample https://raw.githubusercontent.com/favoloso/conventional-changelog-emoji/master/CHANGELOG.md
 -->
 
+## [2.7.4] - 2026-10-23
+
+### 🛠 Improvements
+
+- Move AI skills to first on resume relevant skills and add autonomous systems
+
 ## [2.7.3] - 2026-10-20
 
 ### 🛠 Improvements
