@@ -21,6 +21,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 See for sample https://raw.githubusercontent.com/favoloso/conventional-changelog-emoji/master/CHANGELOG.md
 -->
 
+## [2.7.3] - 2026-10-23
+
+### 🏗 Chore
+
+- Bump `@angular/router` to 22.2.1
+
 ## [2.7.2] - 2026-10-19
 
 ### 🐛 Bug Fixes
