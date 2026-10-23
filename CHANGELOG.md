@@ -23,6 +23,11 @@ See for sample https://raw.githubusercontent.com/favoloso/conventional-changelog
 
 ## [2.7.3] - 2026-10-23
 
+### 🛠 Improvements
+
+- Move AI skills to first on resume relevant skills and add autonomous systems
+- GraphQL added to resume skills
+
 ### 🏗 Chore
 
 - Bump `@angular/router` to 22.2.1
