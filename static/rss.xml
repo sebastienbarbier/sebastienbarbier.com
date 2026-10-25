@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Sébastien Barbier</title>
+    <link>https://sebastienbarbier.com/blog</link>
+    <description>Writing by Sébastien Barbier, staff software engineer in Zürich.</description>
+    <language>en</language>
+    <item>
+      <title>Why I am starting a blog when AI writes everything</title>
+      <link>https://sebastienbarbier.com/blog/why-write-when-ai-writes-everything</link>
+      <guid isPermaLink="true">https://sebastienbarbier.com/blog/why-write-when-ai-writes-everything</guid>
+      <description>Honest first post on whether personal writing still matters for a staff engineer in Zürich, with 16+ years in production software.</description>
+      <pubDate>Sun, 25 Oct 2026 12:00:00 GMT</pubDate>
+    </item>
+  </channel>
+</rss>

@@ -8,6 +8,7 @@ const DESCRIPTION = {
   'contact': `Get in touch with Sébastien Barbier by email, or find him on X, GitHub, LinkedIn, Instagram, and other social networks.`,
   'resources': `Photos, logos, and brand assets you can download when sharing or writing about Sébastien Barbier online.`,
   'legal': `Legal information for sebastienbarbier.com, covering copyright, MIT licence terms, and site hosting details.`,
+  'blog': `Blog posts by Sébastien Barbier on engineering, clarity, and building software from Zürich.`,
 };
 
 // State is use to bind animation
@@ -79,6 +80,20 @@ export const appRoutes: Routes = [
         eyebrow: 'Legal',
         description:
           'Copyright, MIT licence terms, and hosting details for sebastienbarbier.com.',
+      },
+    },
+  },
+  {
+    path: 'blog',
+    loadChildren: () => import('./blog/blog.module').then((mod) => mod.BlogModule),
+    data: {
+      title: 'Blog',
+      description: DESCRIPTION.blog,
+      state: 'blog',
+      og: {
+        eyebrow: 'Blog',
+        description:
+          'Writing on engineering and software by Sébastien Barbier, staff engineer in Zürich.',
       },
     },
   },

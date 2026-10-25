@@ -1,0 +1,19 @@
+@use '../../assets/scss/_variables' as *;
+
+.blog-post {
+  max-width: 720px;
+
+  .meta {
+    color: $color-muted;
+    margin-bottom: 2rem;
+  }
+
+  markdown.description {
+    display: block;
+    line-height: 1.65;
+
+    ::ng-deep p {
+      margin: 0 0 1.1em;
+    }
+  }
+}

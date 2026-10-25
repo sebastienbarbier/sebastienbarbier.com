@@ -255,7 +255,11 @@ async function main() {
   const themes = parseTokensFromScss(scss);
   const theme = themes.light;
 
-  const pages = collectOgPages();
+  let pages = collectOgPages();
+  const blogOgFile = path.join(ROOT, 'static', 'blog-og-pages.json');
+  if (fs.existsSync(blogOgFile)) {
+    pages = pages.concat(JSON.parse(fs.readFileSync(blogOgFile, 'utf8')));
+  }
   if (pages.length === 0) {
     throw new Error('No og pages collected from routes');
   }

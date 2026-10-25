@@ -1,6 +1,6 @@
 # Sébastien Barbier (sebastienbarbier.com)
 
-> Staff Software Engineer in Zürich; founder of Shellui. Prerendered Angular portfolio.
+> Staff Software Engineer in Zürich; founder of Shellui. Available for staff-level roles and freelance work. Prerendered Angular portfolio.
 
 ## Summary
 
@@ -16,6 +16,8 @@
 - Resume (HTML): https://sebastienbarbier.com/resume
 - Resume (PDF): https://sebastienbarbier.com/sebastien-barbier-resume.pdf
 - Projects: https://sebastienbarbier.com/projects
+- Blog: https://sebastienbarbier.com/blog
+- RSS: https://sebastienbarbier.com/rss.xml
 - Contact: https://sebastienbarbier.com/contact
 - Resources (press kit): https://sebastienbarbier.com/resources
 - Legal: https://sebastienbarbier.com/legal

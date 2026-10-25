@@ -78,10 +78,24 @@ export const OG_SHARE_MANIFEST: Record<string, OgShareEntry> = {
     "width": 1200,
     "height": 630
   },
+  "/blog": {
+    "imagePath": "/og/blog.fa35978e.png",
+    "absoluteUrl": "https://sebastienbarbier.com/og/blog.fa35978e.png",
+    "alt": "Blog, Blog",
+    "width": 1200,
+    "height": 630
+  },
   "/resume": {
     "imagePath": "/og/resume.5fcdceaa.png",
     "absoluteUrl": "https://sebastienbarbier.com/og/resume.5fcdceaa.png",
     "alt": "Staff software engineer in Zürich, Resume",
+    "width": 1200,
+    "height": 630
+  },
+  "/blog/why-write-when-ai-writes-everything": {
+    "imagePath": "/og/blog-why-write-when-ai-writes-everything.930b317d.png",
+    "absoluteUrl": "https://sebastienbarbier.com/og/blog-why-write-when-ai-writes-everything.930b317d.png",
+    "alt": "Why write when AI writes everything, Blog",
     "width": 1200,
     "height": 630
   }

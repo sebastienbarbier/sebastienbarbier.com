@@ -17,7 +17,15 @@ const PATHS_FILE = path.join(ROOT, 'static.paths.txt');
 const SITEMAP_FILE = path.join(ROOT, 'static', 'sitemap.xml');
 const SITE_ORIGIN = 'https://sebastienbarbier.com';
 /** Static files at site root (not Angular routes) included in sitemap.xml */
-const EXTRA_SITEMAP_PATHS = ['/sebastien-barbier-resume.pdf'];
+const EXTRA_SITEMAP_PATHS = ['/sebastien-barbier-resume.pdf', '/rss.xml'];
+const BLOG_OG_FILE = path.join(ROOT, 'static', 'blog-og-pages.json');
+
+function collectBlogPaths() {
+  if (!fs.existsSync(BLOG_OG_FILE)) {
+    return [];
+  }
+  return JSON.parse(fs.readFileSync(BLOG_OG_FILE, 'utf8')).map((p) => p.path);
+}
 
 function read(file) {
   return fs.readFileSync(file, 'utf8');
@@ -85,12 +93,17 @@ function collectRoutes() {
 
     for (const routingFile of routingModulesFor(route.loadChildren)) {
       for (const child of extractRouteBlocks(read(routingFile))) {
-        if (child.path === '**') {
+        if (child.path === '**' || child.path.includes(':')) {
           continue;
         }
         urls.add(joinUrl(parent, child.path));
       }
     }
+  }
+
+  urls.add('/blog');
+  for (const blogPath of collectBlogPaths()) {
+    urls.add(blogPath);
   }
 
   if (urls.size === 0) {
