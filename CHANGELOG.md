@@ -10,6 +10,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### 🛠 Improvements
 
 - Dark mode logo fixes: transparent Mozilla wordmark with a white variant in the partner row; resume, contact, and project watermark logos adjusted so dark-on-white assets no longer show as white boxes
+- Route navigation scrolls to top on new pages (`withInMemoryScrolling`, View Transition aware); back/forward restores position; single router config for browser and SSR
+- Recommendations meta no longer shows dates on the site (dates remain in `testimonials.data.ts`)
 
 
 - Home availability line and primary CTAs (Download resume, Contact); same CTAs in the footer

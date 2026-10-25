@@ -31,10 +31,6 @@
               <span class="sep" aria-hidden="true"> · </span>
               <span>{{ item.relation }}</span>
             }
-            @if (item.date) {
-              <span class="sep" aria-hidden="true"> · </span>
-              <time [attr.datetime]="item.date">{{ item.date }}</time>
-            }
             <span class="sep" aria-hidden="true"> · </span>
             <span class="source">{{ item.source }}</span>
           </footer>
