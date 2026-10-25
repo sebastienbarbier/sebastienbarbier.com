@@ -35,6 +35,7 @@ header {
 
   h1 {
     padding-bottom: 0;
+    font-size: 4.2em;
 
     @include for-desktop-down {
       font-size: 3.5em;
@@ -46,6 +47,18 @@ header {
 
     @include for-phone-only {
       font-size: 2.2em;
+    }
+  }
+
+  h2 {
+    font-size: 2rem;
+
+    @include for-tablet-landscape-down {
+      font-size: 1.75rem;
+    }
+
+    @include for-phone-only {
+      font-size: 1.5rem;
     }
   }
 

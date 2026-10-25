@@ -5,6 +5,8 @@ export type Testimonial = {
   company: string;
   source: string;
   date?: string;
+  linkedIn?: string;
+  relation?: string;
   quoteFr?: string;
   quoteEn?: string;
   quote?: string;
@@ -14,7 +16,7 @@ export const TESTIMONIALS: Testimonial[] = [
   {
     id: 'greg-tappero-chefclub',
     name: 'Greg Tappero',
-    role: '',
+    role: 'CTO',
     company: 'Chefclub',
     source: 'External recommendation',
     date: '30.01.2019',
@@ -31,5 +33,17 @@ export const TESTIMONIALS: Testimonial[] = [
     source: 'LinkedIn',
     quote:
       'Working with Sebastien Barbier is one of the best decision you can make',
+  },
+  {
+    id: 'derek-smith',
+    name: 'Derek Smith',
+    role: 'Event & Public Speaking Coach, Host & Master of Ceremonies',
+    company: '',
+    source: 'LinkedIn',
+    linkedIn: 'https://www.linkedin.com/in/dereksmithcanada/',
+    date: '2020-11-06',
+    relation: 'worked with Sébastien on the same team',
+    quote:
+      'Sébastien is a tremendously dedicated professional with a thirst for creative problem-solving, international experiences and proven results. He is a trusted thinker and an absolute pleasure to work with. Highly recommend!',
   },
 ];

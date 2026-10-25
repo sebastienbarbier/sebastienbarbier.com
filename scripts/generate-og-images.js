@@ -258,7 +258,9 @@ async function main() {
   let pages = collectOgPages();
   const blogOgFile = path.join(ROOT, 'static', 'blog-og-pages.json');
   if (fs.existsSync(blogOgFile)) {
-    pages = pages.concat(JSON.parse(fs.readFileSync(blogOgFile, 'utf8')));
+    pages = pages.concat(
+      JSON.parse(fs.readFileSync(blogOgFile, 'utf8')).filter((p) => !p.draft),
+    );
   }
   if (pages.length === 0) {
     throw new Error('No og pages collected from routes');

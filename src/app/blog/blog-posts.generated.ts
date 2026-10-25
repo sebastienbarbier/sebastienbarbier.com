@@ -5,16 +5,42 @@ export type BlogPostMeta = {
   ogTitle?: string;
   description: string;
   date: string;
+  draft?: boolean;
   og: { eyebrow: string; description: string };
 };
 
 export const BLOG_POSTS: BlogPostMeta[] = [
+  {
+    "slug": "sample-notes-from-a-code-review",
+    "title": "Sample: Notes from a code review",
+    "ogTitle": "Sample: Notes from a code review",
+    "description": "Second placeholder post with headings, a list, and a blockquote for blog design QA.",
+    "date": "2026-10-18",
+    "draft": true,
+    "og": {
+      "eyebrow": "Blog",
+      "description": "Placeholder article for typography and spacing review."
+    }
+  },
+  {
+    "slug": "sample-shipping-small-ui-changes",
+    "title": "Sample: Shipping small UI changes without drama",
+    "ogTitle": "Sample: Shipping small UI changes without drama",
+    "description": "Placeholder post showing blog typography, code blocks, and lists for design review.",
+    "date": "2026-10-20",
+    "draft": true,
+    "og": {
+      "eyebrow": "Blog",
+      "description": "Placeholder layout sample for the blog template."
+    }
+  },
   {
     "slug": "why-write-when-ai-writes-everything",
     "title": "Why I am starting a blog when AI writes everything",
     "ogTitle": "Why write when AI writes everything",
     "description": "Honest first post on whether personal writing still matters for a staff engineer in Zürich, with 16+ years in production software.",
     "date": "2026-10-25",
+    "draft": false,
     "og": {
       "eyebrow": "Blog",
       "description": "Whether a personal blog still makes sense when models draft text in seconds."
@@ -22,6 +48,16 @@ export const BLOG_POSTS: BlogPostMeta[] = [
   }
 ] as const;
 
+export const BLOG_POST_BODIES: Record<string, string> = {
+  "sample-notes-from-a-code-review": "## Context\n\nStaff-level reviews are less about syntax and more about whether the change survives contact with production. This sample walks through that narrative shape.\n\n### What I look for first\n\n- **Scope**: one logical change per pull request when possible.\n- **Tests**: behavior that would hurt users if it regressed.\n- **Observability**: logs or metrics when the feature touches money or auth.\n\n### Example feedback block\n\nWhen a button regresses visually, I describe what changed, what the target state is, and where to compare:\n\n```scss\na.btn.small {\n  font-size: 0.9375rem;\n  padding: 4px 10px;\n}\n```\n\n## Pull quote\n\n> If the reviewer needs a screenshot to understand the bug, the pull request description is not done yet.\n\n## Closing list\n\nShip when:\n\n1. The diff matches the design tokens on `develop`.\n2. Lighthouse performance stays at or above 90 on mobile.\n3. The author can explain the rollback plan in one sentence.\n\nDelete this draft after the blog launch checklist is complete.",
+  "sample-shipping-small-ui-changes": "## Why this sample exists\n\nThis draft post is here so the blog list and article page can be reviewed before real publishing. It uses the same markdown pipeline as production posts.\n\n## A short checklist\n\nBefore merging a UI tweak on a portfolio site, I usually confirm:\n\n1. Light and dark mode both look intentional.\n2. Focus rings and contrast still pass WCAG AA for body text.\n3. Font loading does not swap headings to the wrong family.\n\n## Code snippet\n\nA tiny helper for formatting dates in templates:\n\n```typescript\nexport function formatPostDate(iso: string): string {\n  const [year, month, day] = iso.split('-');\n  return `${year}-${month}-${day}`;\n}\n```\n\n## Quote\n\n> Good design is as little design as possible, but never less clarity than the reader needs.\n\n## Figure\n\n![Portrait placeholder used for blog layout review](/assets/images/ressources/sebastienbarbier_profile_1024.jpg)\n\nRemove this sample when real posts cover the same layout cases.",
+  "why-write-when-ai-writes-everything": "<!-- draft_review: true -->\n\nI am starting this blog at a strange moment. Tools can draft emails, specs, and blog posts in seconds. A recruiter or a client can paste my resume into a model and get a summary before they finish their coffee. So why add another page of words to the internet?\n\nI do not have a grand theory. I have sixteen years of shipping software, a staff role mindset, and a habit of caring about clarity. I led frontend for an agentic AI platform at Unique AG. I co-designed SAP FSM's extensibility concept. I am building Shellui, an open-source microfrontend shell, from Zürich. Those facts already live on this site and in my resume. None of them require a blog to be true.\n\nStill, I want a place that is mine. Project pages here are case studies: problem, role, stack, result. The resume is a timeline. Neither format leaves room for the messy middle, the tradeoffs I rejected, or the question I am still chewing on. A blog is where I can show how I think, not only what I shipped.\n\nAI text is fast and often fluent. It is also anonymous. It averages the web. When I hire or when I choose a freelance collaborator, I look for judgment: what they notice, what they skip, what they push back on. I cannot see that in generated prose. I see it when someone writes from their own constraints, with their own name on the line.\n\nI will not pretend models are useless. I use them in my daily work like any other tool in the stack. They help me explore APIs, sketch tests, and rewrite a clumsy paragraph. They do not replace the work of deciding what belongs in production, what the user sees first, or what we refuse to ship. That decision layer is still human, and it is still the job.\n\nWriting in my own voice is a way to practice that layer in public. Short posts. No invented war stories. If I mention a project, you can click through to the page on this site. If I am unsure, I will say so. If a post ages badly, I would rather update it or write a follow-up than hide behind polished vagueness.\n\nI also miss the slower rhythm of text. Social feeds reward hot takes. I prefer sentences that hold up when someone reads them six months later. RSS still exists. I will publish a feed for this blog for anyone who reads that way, including future me.\n\nSo yes, it still makes sense to write, even now. Not because the world needs more content, but because trust is built from specific, accountable words. I am available for staff-level engineering roles and freelance work, based in Zürich. If something here resonates, download my resume or email me. This blog is one more way to see whether we would work well together.\n\nThat is enough for a first post. The rest I will figure out in public."
+};
+
 export function blogPostBySlug(slug: string): BlogPostMeta | undefined {
   return BLOG_POSTS.find((p) => p.slug === slug);
+}
+
+export function blogPostBodyBySlug(slug: string): string {
+  return BLOG_POST_BODIES[slug] ?? '';
 }

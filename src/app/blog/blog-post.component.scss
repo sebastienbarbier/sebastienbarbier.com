@@ -3,17 +3,52 @@
 .blog-post {
   max-width: 720px;
 
+  h1 .draft-badge {
+    display: inline-block;
+    margin-left: 0.35em;
+    vertical-align: middle;
+    font-size: 0.35em;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    background: color-mix(in srgb, $color-secondary 18%, transparent);
+    color: $color-secondary;
+    @include sansserif;
+  }
+
   .meta {
     color: $color-muted;
     margin-bottom: 2rem;
   }
 
-  markdown.description {
+  .description {
     display: block;
     line-height: 1.65;
 
-    ::ng-deep p {
+    :where(p) {
       margin: 0 0 1.1em;
+    }
+
+    :where(h2, h3) {
+      margin-top: 1.5em;
+    }
+
+    :where(blockquote) {
+      margin: 1.25em 0;
+      padding-left: 1rem;
+      border-left: 3px solid $color-border;
+    }
+
+    :where(pre) {
+      overflow-x: auto;
+      padding: 0.75rem 1rem;
+      background: $color-surface;
+      border-radius: 4px;
+      font-size: 0.875rem;
+    }
+
+    :where(img) {
+      max-width: 100%;
+      height: auto;
     }
   }
 }

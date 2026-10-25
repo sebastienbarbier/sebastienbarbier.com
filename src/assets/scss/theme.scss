@@ -26,8 +26,8 @@ p.centered {
   text-align: center;
 }
 
-$h1_size: 4.2em;
-$h2_size: $h1_size - 1.4em;
+$h1_size: 3.2em;
+$h2_size: 2.2em;
 $h3_size: $h2_size - 0.6em;
 $h4_size: $h3_size - 0.2em;
 $h5_size: $h4_size - 0.2em;
@@ -106,15 +106,18 @@ h6  {
 
 a {
   &.btn {
+    @include sansserif;
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    background: $color-secondary;
-    color: $color-on-secondary;
+    background: transparent;
+    color: $color-secondary;
     text-transform: none;
     letter-spacing: 0.02em;
     font-weight: 600;
-    border-radius: 8px;
+    font-size: 0.9375rem;
+    line-height: 1.4;
+    border-radius: 0;
     padding: 16px 40px;
 
     &.centered {
@@ -131,11 +134,9 @@ a {
     }
 
     &.small {
-      letter-spacing: 1px;
-      font-size: 0.7em;
-      min-height: 44px;
-      min-width: 44px;
-      padding: 10px 16px;
+      letter-spacing: 0.02em;
+      font-size: 0.9375rem;
+      padding: 4px 10px;
       font-weight: 600;
       align-items: center;
     }

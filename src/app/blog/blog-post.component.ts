@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
@@ -10,8 +9,10 @@ import {
 } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { DOCUMENT, isPlatformBrowser } from '@angular/common';
-import { of, Subscription, switchMap } from 'rxjs';
-import { blogPostBySlug } from './blog-posts.generated';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { marked } from 'marked';
+import { Subscription } from 'rxjs';
+import { blogPostBodyBySlug, blogPostBySlug } from './blog-posts.generated';
 
 @Component({
   selector: 'app-blog-post',
@@ -22,47 +23,45 @@ import { blogPostBySlug } from './blog-posts.generated';
 })
 export class BlogPostComponent implements OnInit, OnDestroy {
   markdown = '';
+  htmlContent: SafeHtml | null = null;
   post = blogPostBySlug('');
+  private activeSlug = '';
   private sub?: Subscription;
   private jsonLdEl?: HTMLScriptElement;
 
   constructor(
     private route: ActivatedRoute,
-    private http: HttpClient,
     private cdr: ChangeDetectorRef,
+    private sanitizer: DomSanitizer,
     @Inject(DOCUMENT) private readonly document: Document,
     @Inject(PLATFORM_ID) private readonly platformId: object,
-  ) {}
+  ) {
+    this.applySlug(this.route.snapshot.paramMap.get('slug') || '');
+  }
 
   ngOnInit() {
-    this.sub = this.route.paramMap
-      .pipe(
-        switchMap((params) => {
-          const slug = params.get('slug') || '';
-          this.post = blogPostBySlug(slug);
-          if (!this.post) {
-            this.markdown = '';
-            return of('');
-          }
-          return this.http.get(`/assets/blog/${slug}.md`, { responseType: 'text' });
-        }),
-      )
-      .subscribe({
-        next: (text) => {
-          this.markdown = typeof text === 'string' ? text : '';
-          this.setJsonLd();
-          this.cdr.markForCheck();
-        },
-        error: () => {
-          this.markdown = '';
-          this.cdr.markForCheck();
-        },
-      });
+    this.sub = this.route.paramMap.subscribe((params) => {
+      const slug = params.get('slug') || '';
+      if (slug !== this.activeSlug) {
+        this.applySlug(slug);
+      }
+    });
   }
 
   ngOnDestroy() {
     this.sub?.unsubscribe();
     this.jsonLdEl?.remove();
+  }
+
+  private applySlug(slug: string) {
+    this.activeSlug = slug;
+    this.post = blogPostBySlug(slug);
+    this.markdown = slug ? blogPostBodyBySlug(slug) : '';
+    this.htmlContent = this.markdown
+      ? this.sanitizer.bypassSecurityTrustHtml(marked.parse(this.markdown, { async: false }) as string)
+      : null;
+    this.setJsonLd();
+    this.cdr.markForCheck();
   }
 
   private setJsonLd() {

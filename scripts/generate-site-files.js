@@ -20,11 +20,19 @@ const SITE_ORIGIN = 'https://sebastienbarbier.com';
 const EXTRA_SITEMAP_PATHS = ['/sebastien-barbier-resume.pdf', '/rss.xml'];
 const BLOG_OG_FILE = path.join(ROOT, 'static', 'blog-og-pages.json');
 
-function collectBlogPaths() {
+function collectBlogOgPages() {
   if (!fs.existsSync(BLOG_OG_FILE)) {
     return [];
   }
-  return JSON.parse(fs.readFileSync(BLOG_OG_FILE, 'utf8')).map((p) => p.path);
+  return JSON.parse(fs.readFileSync(BLOG_OG_FILE, 'utf8'));
+}
+
+function collectBlogPaths() {
+  return collectBlogOgPages().map((p) => p.path);
+}
+
+function draftBlogPaths() {
+  return new Set(collectBlogOgPages().filter((p) => p.draft).map((p) => p.path));
 }
 
 function read(file) {
@@ -126,8 +134,9 @@ function writePaths(routes) {
 
 function writeSitemap(routes) {
   const lastmod = new Date().toISOString().slice(0, 10);
+  const skipDrafts = draftBlogPaths();
   const paths = [
-    ...routes.filter((route) => route !== '/404'),
+    ...routes.filter((route) => route !== '/404' && !skipDrafts.has(route)),
     ...EXTRA_SITEMAP_PATHS,
   ];
   const urls = paths
