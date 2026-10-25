@@ -1,0 +1,35 @@
+<section class="testimonials" aria-labelledby="testimonials-heading">
+  <div class="container">
+    <h2 id="testimonials-heading">Recommendations</h2>
+    <ul class="testimonial-list">
+      @for (item of testimonials; track item.id) {
+        <li class="testimonial-card">
+          <blockquote>
+            @if (item.quoteFr) {
+              <p class="quote quote-fr" lang="fr">{{ item.quoteFr }}</p>
+              <p class="quote-label sansserif">English translation</p>
+              <p class="quote quote-en" lang="en">{{ item.quoteEn }}</p>
+            } @else if (item.quote) {
+              <p class="quote" lang="en">{{ item.quote }}</p>
+            }
+          </blockquote>
+          <footer class="testimonial-meta sansserif">
+            <cite>{{ item.name }}</cite>
+            <span class="sep" aria-hidden="true"> · </span>
+            @if (item.role) {
+              <span>{{ item.role }}, {{ item.company }}</span>
+            } @else {
+              <span>{{ item.company }}</span>
+            }
+            @if (item.date) {
+              <span class="sep" aria-hidden="true"> · </span>
+              <time>{{ item.date }}</time>
+            }
+            <span class="sep" aria-hidden="true"> · </span>
+            <span class="source">{{ item.source }}</span>
+          </footer>
+        </li>
+      }
+    </ul>
+  </div>
+</section>

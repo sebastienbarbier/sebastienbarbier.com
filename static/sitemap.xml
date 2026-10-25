@@ -2,6 +2,14 @@
 <!-- Generated from Angular routes. Do not edit. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://sebastienbarbier.com/blog</loc>
+    <lastmod>2026-10-25</lastmod>
+  </url>
+  <url>
+    <loc>https://sebastienbarbier.com/blog/why-write-when-ai-writes-everything</loc>
+    <lastmod>2026-10-25</lastmod>
+  </url>
+  <url>
     <loc>https://sebastienbarbier.com/contact</loc>
     <lastmod>2026-10-25</lastmod>
   </url>
@@ -47,6 +55,10 @@
   </url>
   <url>
     <loc>https://sebastienbarbier.com/sebastien-barbier-resume.pdf</loc>
+    <lastmod>2026-10-25</lastmod>
+  </url>
+  <url>
+    <loc>https://sebastienbarbier.com/rss.xml</loc>
     <lastmod>2026-10-25</lastmod>
   </url>
 </urlset>

@@ -248,7 +248,7 @@ export default {
     {
       date: new Date("September 11, 2026"),
       name: "ZurichJS Conf",
-      location: "Zurich, Switzerland",
+      location: "Zürich, Switzerland",
     },
     {
       date: new Date("June 04, 2024"),
@@ -263,12 +263,12 @@ export default {
     {
       date: new Date("August 01, 2022"),
       name: "Front Conference",
-      location: "Zurich, Switzerland",
+      location: "Zürich, Switzerland",
     },
     {
       date: new Date("June 01, 2022"),
       name: "NFT Art Day ZRH",
-      location: "Zurich, Switzerland",
+      location: "Zürich, Switzerland",
     },
     {
       date: new Date("April 01, 2022"),
@@ -283,7 +283,7 @@ export default {
     {
       date: new Date("August 01, 2021"),
       name: "Front Conference",
-      location: "Zurich, Switzerland",
+      location: "Zürich, Switzerland",
     },
     {
       date: new Date("January 01, 2020"),
@@ -298,7 +298,7 @@ export default {
     {
       date: new Date("August 01, 2018"),
       name: "Front Conference",
-      location: "Zurich, Switzerland",
+      location: "Zürich, Switzerland",
     },
     {
       date: new Date("May 01, 2018"),

@@ -18,6 +18,21 @@ header {
     padding-bottom: 48px;
   }
 
+  p.availability {
+    margin: 0 0 1rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: $color-secondary;
+    max-width: 36em;
+  }
+
+  .hero-ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 1.25rem;
+  }
+
   h1 {
     padding-bottom: 0;
 

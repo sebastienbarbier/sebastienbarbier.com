@@ -6,6 +6,7 @@ import { FooterComponent } from './footer/footer.component';
 import { LogosComponent } from './logos/logos.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ThemeToggleComponent } from './theme-toggle/theme-toggle.component';
+import { TestimonialsComponent } from './testimonials/testimonials.component';
 
 export const providers = [
     // ... your shared services here
@@ -17,6 +18,7 @@ export const providers = [
     LogosComponent,
     ProjectsComponent,
     ThemeToggleComponent,
+    TestimonialsComponent,
   ],
   imports: [
     RouterModule,
@@ -27,6 +29,7 @@ export const providers = [
     LogosComponent,
     ProjectsComponent,
     ThemeToggleComponent,
+    TestimonialsComponent,
   ]
 })
 export class SharedModule {

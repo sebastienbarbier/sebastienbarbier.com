@@ -1,4 +1,6 @@
 /404
+/blog
+/blog/why-write-when-ai-writes-everything
 /contact
 /legal
 /projects

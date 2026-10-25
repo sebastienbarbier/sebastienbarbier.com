@@ -1,0 +1,62 @@
+@use '../../../assets/scss/_variables' as *;
+
+.testimonials {
+  background: $color-surface;
+
+  .container {
+    padding-top: 55px;
+    padding-bottom: 50px;
+  }
+
+  h2 {
+    margin-top: 0;
+  }
+}
+
+ul.testimonial-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.testimonial-card {
+  blockquote {
+    margin: 0;
+  }
+
+  .quote {
+    @include serif;
+    font-size: 1.15rem;
+    line-height: 1.55;
+    margin: 0 0 0.75rem;
+    color: $color-on-background;
+  }
+
+  .quote-fr {
+    font-style: italic;
+  }
+
+  .quote-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: $color-muted;
+    margin: 0 0 0.35rem;
+  }
+
+  .testimonial-meta {
+    font-size: 0.85rem;
+    color: $color-muted;
+    margin-top: 0.75rem;
+
+    cite {
+      font-style: normal;
+      font-weight: 600;
+      color: $color-on-background;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+<div class="wrapper pt pb">
+  @if (post) {
+    <div class="container centered blog-post">
+      <p class="eyebrow center">Blog</p>
+      <h1 class="center">{{ post.title }}</h1>
+      <p class="meta sansserif center">
+        <time [attr.datetime]="post.date">{{ post.date }}</time>
+        · Zürich
+      </p>
+      @if (markdown) {
+        <markdown class="description" [data]="markdown"></markdown>
+      }
+    </div>
+  } @else {
+    <div class="container centered">
+      <h1>Post not found</h1>
+      <p><a routerLink="/blog">Back to the blog</a></p>
+    </div>
+  }
+  <route-footer></route-footer>
+</div>

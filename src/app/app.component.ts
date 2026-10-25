@@ -20,6 +20,7 @@ import {
 import { isPlatformBrowser, DOCUMENT } from "@angular/common";
 import { Title, Meta } from "@angular/platform-browser";
 import { OG_SHARE_MANIFEST } from "./og-share-manifest.generated";
+import { blogPostBySlug } from "./blog/blog-posts.generated";
 
 @Component({
   selector: "app-root",
@@ -132,15 +133,34 @@ export class AppComponent implements OnInit, OnDestroy {
     return path || "/";
   }
 
+  private leafRouteData(outlet: RouterOutlet): Record<string, unknown> {
+    let route = outlet.activatedRoute;
+    while (route.firstChild) {
+      route = route.firstChild;
+    }
+    return route.snapshot.data;
+  }
+
   private updatePageSeo(outlet: RouterOutlet) {
-    const data = outlet.activatedRouteData;
-    const is404 = data.state === "404";
-    const title = data.title
-      ? `${data.title} - Sébastien Barbier`
-      : data.state === "home"
+    const data = this.leafRouteData(outlet);
+    const pathKey = this.normalizedPath(this.router.url);
+    const is404 = data["state"] === "404";
+
+    let title = data["title"]
+      ? `${data["title"]} - Sébastien Barbier`
+      : data["state"] === "home"
         ? "Sébastien Barbier | Staff Software Engineer in Zürich"
         : "Sébastien Barbier";
-    const description: string = data.description || "";
+    let description: string = (data["description"] as string) || "";
+
+    if (pathKey.startsWith("/blog/") && pathKey !== "/blog") {
+      const slug = pathKey.slice("/blog/".length);
+      const post = blogPostBySlug(slug);
+      if (post) {
+        title = `${post.title} - Sébastien Barbier`;
+        description = post.description;
+      }
+    }
 
     this.titleService.setTitle(title);
 
@@ -162,11 +182,7 @@ export class AppComponent implements OnInit, OnDestroy {
     const canonicalUrl = this.canonicalUrlFor(this.router.url);
     this.setCanonicalLink(canonicalUrl);
 
-    const pathKey = this.normalizedPath(this.router.url);
     const share = OG_SHARE_MANIFEST[pathKey];
-    if (!share) {
-      console.warn(`Missing og share manifest entry for ${pathKey}`);
-    }
 
     const shareImage = share?.absoluteUrl ?? `${this.siteOrigin}/og/home.png`;
     const shareAlt = share?.alt ?? title;

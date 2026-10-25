@@ -9,6 +9,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### 🛠 Improvements
 
+- Home availability line and primary CTAs (Download resume, Contact); same CTAs in the footer
+- Recommendations section with Greg Tappero (Chefclub) and Florian Rüegg (Houzy) quotes from `testimonials.data.ts`
+- Blog at `/blog` with Markdown posts in `content/blog/`, RSS at `/rss.xml`, prerender, og covers, and BlogPosting JSON-LD
+- First post: "Why I am starting a blog when AI writes everything" (marked `draft_review` in source)
+- Navigation link to Blog; spell place as Zürich across site copy and resume presentation
+- Guidelines README updated with Sébastien's decisions (audience, no analytics, testimonials, blog, Zürich)
+
 - Draft v1 content guidelines under `content/guidelines/` (writing, design, brand, og:image, README)
 - Build-time og:image covers (Satori + sharp): route `data.og`, content-hashed PNGs in `static/og/`, `og:image` / `twitter:image` with width, height, type, and alt on every page
 - Muted and border design tokens; og generator reads palette from `_tokens.scss`

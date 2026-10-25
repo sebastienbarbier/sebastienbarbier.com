@@ -1,0 +1,24 @@
+<div class="wrapper pt pb">
+  <div class="container centered blog-index">
+    <p class="eyebrow center">Blog</p>
+    <h1 class="center">Writing</h1>
+    <p class="intro">
+      Notes on engineering, clarity, and building software in Zürich. Subscribe via
+      <a href="/rss.xml">RSS</a>.
+    </p>
+
+    <ul class="post-list">
+      @for (post of posts; track post.slug) {
+        <li>
+          <article>
+            <time class="sansserif" [attr.datetime]="post.date">{{ post.date }}</time>
+            <h2><a [routerLink]="['/blog', post.slug]">{{ post.title }}</a></h2>
+            <p>{{ post.description }}</p>
+            <a class="read-more sansserif" [routerLink]="['/blog', post.slug]">Read post</a>
+          </article>
+        </li>
+      }
+    </ul>
+  </div>
+  <route-footer></route-footer>
+</div>

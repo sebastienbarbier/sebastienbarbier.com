@@ -54,6 +54,11 @@
                 "output": "/"
               },
               {
+                "glob": "rss.xml",
+                "input": "static",
+                "output": "/"
+              },
+              {
                 "glob": "sebastien-barbier-resume.pdf",
                 "input": "static",
                 "output": "/"
@@ -150,6 +155,11 @@
               },
               {
                 "glob": "llms.txt",
+                "input": "static",
+                "output": "/"
+              },
+              {
+                "glob": "rss.xml",
                 "input": "static",
                 "output": "/"
               },

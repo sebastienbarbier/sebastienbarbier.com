@@ -162,6 +162,9 @@ function collectOgPages() {
     for (const routingFile of routingModulesFor(route.loadChildren)) {
       const childSource = read(routingFile);
       for (const child of extractRouteBlocks(childSource)) {
+        if (child.path.includes(':')) {
+          continue;
+        }
         const url = joinUrl(parentPath, child.path);
         const childData = parseRouteData(child.block);
         const merged = {

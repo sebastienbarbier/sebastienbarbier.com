@@ -25,11 +25,11 @@ The facts below are the only identity claims copy may make. Add new ones here fi
 - **Name**: Sébastien Barbier, with the accent, everywhere a font supports it. `Sebastien Barbier` only in URLs, handles, and the JSON-LD `alternateName`. The footer currently says "Sebastien Barbier"; fix it
 - **Wordmark text**: `sebastienbarbier`, lowercase, one word. Only inside the logo, never typed as a name in prose
 - **Role**: Staff Software Engineer (page `<title>`, JSON-LD `jobTitle`, resume `h1`). Use the same role on every surface
-- **Place**: Zürich, Switzerland. **Open question**: the resume says "Zurich" and the meta tags say "Zürich". Pick one spelling and use it everywhere
+- **Place**: Zürich, Switzerland. Use **Zürich** everywhere (not "Zurich"). Event names like ZurichJS Conf keep their proper spelling
 - **Experience**: 16+ years ("sixteen years" in the home `h1`, "16+ years" on the resume). Use numerals: `16+ years`
 - **Current work**: building [Shellui](https://shellui.com), an open-source microfrontend shell and CLI (TypeScript, React, Python/Django)
 - **Proof to name**: frontend lead for an agentic AI platform at Unique AG (2023 to 2025, Staff Frontend Engineer), SAP FSM extensibility concept (Associate Development Architect, 2020 to 2021), Mozilla Test Pilot (Notes by Firefox), Chefclub, Seven23
-- **Availability**: **Open question**. Not stated anywhere today. Do not write "open to work", "available from", or a rate until Sébastien decides
+- **Availability**: Available now for staff-level engineering roles and freelance work (Zürich or remote). Stated on the home availability line and via Download resume / Contact CTAs. Do not invent rates or start dates
 
 ## Positioning and headlines
 
