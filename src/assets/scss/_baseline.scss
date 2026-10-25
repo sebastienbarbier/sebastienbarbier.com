@@ -32,6 +32,21 @@ ul.badges {
   }
 }
 
+p.eyebrow {
+  margin: 0 0 0.35em;
+
+  &.center {
+    text-align: center;
+  }
+  font-size: 0.8rem;
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--comp-title-headline-color);
+  font-family: var(--comp-title-headline-font-family);
+}
+
 h1,
 h2,
 h3,

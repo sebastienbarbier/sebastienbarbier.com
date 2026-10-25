@@ -1,30 +1,10 @@
-import { Component, OnInit, HostBinding, ChangeDetectionStrategy } from '@angular/core';
-
-import {
-  sequence,
-  trigger,
-  stagger,
-  animate,
-  style,
-  group,
-  query,
-  transition,
-  keyframes,
-  animateChild } from '@angular/animations';
-
-const pageNotFoundTransition = trigger('pageNotFoundTransition', []);
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'app-page-not-found',
   templateUrl: './page-not-found.component.html',
   styleUrls: ['./page-not-found.component.scss'],
   changeDetection: ChangeDetectionStrategy.Eager,
-  standalone: false
+  standalone: false,
 })
-export class PageNotFoundComponent {
-
-  constructor() { }
-
-  @HostBinding('@pageNotFoundTransition') '': string;
-
-}
+export class PageNotFoundComponent {}

@@ -1,18 +1,6 @@
-import { Component, Inject, OnInit, HostBinding, PLATFORM_ID, ChangeDetectionStrategy } from '@angular/core';
-
-import {
-  trigger,
-  transition,
-} from '@angular/animations';
+import { Component, Inject, OnInit, PLATFORM_ID, ChangeDetectionStrategy } from '@angular/core';
 
 import resume_json from './resume.data';
-
-const resumeTransition = trigger('resumeTransition', [
-  transition(':enter', [
-  ]),
-  transition(':leave', [
-  ])
-]);
 
 function getAge (birthDate: Date) {
   var today = new Date();
@@ -28,7 +16,6 @@ function getAge (birthDate: Date) {
   selector: 'app-resume',
   templateUrl: './resume.component.html',
   styleUrls: ['./resume.component.scss'],
-  animations: [ resumeTransition ],
   changeDetection: ChangeDetectionStrategy.Eager,
   standalone: false
 })
@@ -70,8 +57,6 @@ export class ResumeComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-  @HostBinding('@resumeTransition') '': string;
 
   // // Event to update skill graph on resize
   // @HostListener('window:resize', ['$event'])

@@ -7,8 +7,20 @@
           <span class="url">shellui.com</span>
         </div>
         <picture>
-          <source type="image/webp" srcset="/assets/images/shellui/website.webp" />
-          <img src="/assets/images/shellui/website.png" width="1400" height="875" loading="lazy" alt="shellui.com homepage"/>
+          <source
+            type="image/webp"
+            sizes="(max-width: 599px) 100vw, 45vw"
+            srcset="/assets/images/shellui/website.600.webp 600w, /assets/images/shellui/website.900.webp 900w, /assets/images/shellui/website.webp 1400w"
+          />
+          <img
+            src="/assets/images/shellui/website.600.png"
+            srcset="/assets/images/shellui/website.600.png 600w, /assets/images/shellui/website.900.png 900w, /assets/images/shellui/website.png 1400w"
+            sizes="(max-width: 599px) 100vw, 45vw"
+            width="1400"
+            height="875"
+            loading="lazy"
+            alt="shellui.com homepage"
+          />
         </picture>
       </div>
       <img src="/assets/images/shellui/shellui_mark.svg" alt="Shellui logo" class="logo"/>
@@ -26,14 +38,38 @@
     <div class="thumbnail devices">
       <div class="device phone">
         <picture>
-          <source type="image/webp" srcset="/assets/images/seven23/screens/iphone-transactions.webp" />
-          <img src="/assets/images/seven23/screens/iphone-transactions.png" width="1179" height="2556" loading="lazy" alt="Seven23 transactions on iPhone"/>
+          <source
+            type="image/webp"
+            sizes="120px"
+            srcset="/assets/images/seven23/screens/iphone-transactions.400.webp 400w, /assets/images/seven23/screens/iphone-transactions.800.webp 800w, /assets/images/seven23/screens/iphone-transactions.webp 1179w"
+          />
+          <img
+            src="/assets/images/seven23/screens/iphone-transactions.400.png"
+            srcset="/assets/images/seven23/screens/iphone-transactions.400.png 400w, /assets/images/seven23/screens/iphone-transactions.800.png 800w, /assets/images/seven23/screens/iphone-transactions.png 1179w"
+            sizes="120px"
+            width="1179"
+            height="2556"
+            loading="lazy"
+            alt="Seven23 transactions on iPhone"
+          />
         </picture>
       </div>
       <div class="device tablet">
         <picture>
-          <source type="image/webp" srcset="/assets/images/seven23/screens/ipad-dashboard.webp" />
-          <img src="/assets/images/seven23/screens/ipad-dashboard.png" width="2388" height="1668" loading="lazy" alt="Seven23 dashboard on iPad"/>
+          <source
+            type="image/webp"
+            sizes="200px"
+            srcset="/assets/images/seven23/screens/ipad-dashboard.600.webp 600w, /assets/images/seven23/screens/ipad-dashboard.900.webp 900w, /assets/images/seven23/screens/ipad-dashboard.webp 2388w"
+          />
+          <img
+            src="/assets/images/seven23/screens/ipad-dashboard.600.png"
+            srcset="/assets/images/seven23/screens/ipad-dashboard.600.png 600w, /assets/images/seven23/screens/ipad-dashboard.900.png 900w, /assets/images/seven23/screens/ipad-dashboard.png 2388w"
+            sizes="200px"
+            width="2388"
+            height="1668"
+            loading="lazy"
+            alt="Seven23 dashboard on iPad"
+          />
         </picture>
       </div>
       <img src="/assets/images/seven23/seven23_logo.svg" alt="Seven23 logo" class="logo"/>
@@ -52,8 +88,8 @@
     <li>
       <div class="thumbnail">
         <picture>
-          <source type="image/webp" srcset="/assets/images/fromedwin/fromedwin_layout.webp" />
-          <img src="/assets/images/fromedwin/fromedwin_layout.png" width="1280" height="720" loading="lazy" alt="FromEdwin screenshots"/>
+          <source type="image/webp" sizes="(max-width: 599px) 100vw, 45vw" srcset="/assets/images/fromedwin/fromedwin_layout.600.webp 600w, /assets/images/fromedwin/fromedwin_layout.900.webp 900w, /assets/images/fromedwin/fromedwin_layout.webp 1280w" />
+          <img src="/assets/images/fromedwin/fromedwin_layout.600.png" srcset="/assets/images/fromedwin/fromedwin_layout.600.png 600w, /assets/images/fromedwin/fromedwin_layout.900.png 900w, /assets/images/fromedwin/fromedwin_layout.png 1280w" sizes="(max-width: 599px) 100vw, 45vw" width="1280" height="720" loading="lazy" alt="FromEdwin screenshots"/>
         </picture>
         <img src="/assets/images/fromedwin/fromedwin_favicon.svg" alt="FromEdwin logo" class="logo"/>
       </div>
@@ -68,8 +104,8 @@
     <li>
       <div class="thumbnail">
         <picture>
-          <source type="image/webp" srcset="/assets/images/chefclub/chefclub-thumbnail.webp" />
-          <img src="/assets/images/chefclub/chefclub-thumbnail.png" width="1400" height="753" loading="lazy" alt="Chefclubs"/>
+          <source type="image/webp" sizes="(max-width: 599px) 100vw, 45vw" srcset="/assets/images/chefclub/chefclub-thumbnail.600.webp 600w, /assets/images/chefclub/chefclub-thumbnail.900.webp 900w, /assets/images/chefclub/chefclub-thumbnail.webp 1400w" />
+          <img src="/assets/images/chefclub/chefclub-thumbnail.600.png" srcset="/assets/images/chefclub/chefclub-thumbnail.600.png 600w, /assets/images/chefclub/chefclub-thumbnail.900.png 900w, /assets/images/chefclub/chefclub-thumbnail.png 1400w" sizes="(max-width: 599px) 100vw, 45vw" width="1400" height="753" loading="lazy" alt="Chefclubs"/>
         </picture>
         <img src="/assets/images/chefclub/chefclub-logo-square.png" alt="Chefclub logo" class="logo"/>
       </div>
@@ -77,22 +113,22 @@
       <p>Enhancing the <strong>user experience</strong> and optimizing <strong>web performance</strong> for Chefclub's website</p>
       <ul class="badges">
         <li>Django</li>
-        <li>Vus.js</li>
+        <li>Vue.js</li>
       </ul>
       <a routerLink="/projects/chefclub" role="button">More about it</a>
     </li>
     <li>
       <div class="thumbnail">
         <picture>
-          <source type="image/webp" srcset="/assets/images/mozilla/note_thumbnail.webp" />
-          <img src="/assets/images/mozilla/note_thumbnail.png" width="1200" height="645" loading="lazy" alt="Notes by Firefox screenshots"/>
+          <source type="image/webp" sizes="(max-width: 599px) 100vw, 45vw" srcset="/assets/images/mozilla/note_thumbnail.600.webp 600w, /assets/images/mozilla/note_thumbnail.900.webp 900w, /assets/images/mozilla/note_thumbnail.webp 1200w" />
+          <img src="/assets/images/mozilla/note_thumbnail.600.png" srcset="/assets/images/mozilla/note_thumbnail.600.png 600w, /assets/images/mozilla/note_thumbnail.900.png 900w, /assets/images/mozilla/note_thumbnail.png 1200w" sizes="(max-width: 599px) 100vw, 45vw" width="1200" height="645" loading="lazy" alt="Notes by Firefox screenshots"/>
         </picture>
         <img src="/assets/images/mozilla/firefox.svg" alt="Firefox logo" class="logo"/>
       </div>
       <h3><span>2018</span> Notes by Firefox</h3>
       <p><strong>Notes by Firefox</strong> is a simple, secure notepad extension for Firefox that lets you take notes on web pages.</p>
       <ul class="badges">
-        <li>Web extention</li>
+        <li>Web extension</li>
         <li>React native</li>
       </ul>
       <a routerLink="/projects/mozilla" role="button">More about it</a>

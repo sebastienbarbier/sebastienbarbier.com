@@ -91,7 +91,7 @@ main.site-main {
 .header-nav {
   display: none;
 
-  @include for-tablet-landscape-up {
+  @media (min-width: 768px) {
     display: block;
   }
 
@@ -139,7 +139,7 @@ $navigation_button_size: 46px;
 input#navigation {
   display: none;
 
-  @include for-tablet-landscape-up {
+  @media (min-width: 768px) {
     &,
     & + label {
       display: none !important;
@@ -234,7 +234,7 @@ input#navigation + label {
   z-index: $zindex_navigation;
   transition: opacity 0.2s ease-in-out, visibility 0s 0.2s;
 
-  @include for-tablet-landscape-up {
+  @media (min-width: 768px) {
     display: none;
   }
 

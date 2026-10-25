@@ -1,10 +1,10 @@
-<div class="wrapper">
+<div class="wrapper" ngSkipHydration>
   <div class="container">
     <header id="home">
       <h1>Hi, I’m Sébastien,<br/>I am a full-stack developer with over sixteen years of work experience.</h1>
       <ul>
-        <li><a href="https://www.linkedin.com/in/sebbarbier/" role="button"><img src="/assets/images/logos/linkedin_logo_gold.svg" alt="Linkedin logo" /></a></li>
-        <li><a href="https://github.com/sebastienbarbier/" role="button"><img src="/assets/images/logos/github_logo_gold.svg" alt="Github logo" /></a></li>
+        <li><a href="https://www.linkedin.com/in/sebbarbier/" role="button"><img src="/assets/images/logos/linkedin_logo_gold.svg" alt="LinkedIn logo" /></a></li>
+        <li><a href="https://github.com/sebastienbarbier/" role="button"><img src="/assets/images/logos/github_logo_gold.svg" alt="GitHub logo" /></a></li>
         <li><a href="https://x.com/SebBarbier" role="button"><img src="/assets/images/logos/x_logo.png" alt="x.com logo" /></a></li>
         <li><a href="https://instagram.com/sebastienbarbier/" role="button"><img src="/assets/images/logos/instagram_logo_gold.svg" alt="Instagram logo" /></a></li>
         <li><a routerLink="/contact" role="button" class="btn small">Contact me</a></li>
@@ -13,10 +13,10 @@
 
     <h2>Projects</h2>
 
-    <app-projects></app-projects>
+    <app-projects ngSkipHydration></app-projects>
 
     <a routerLink="/projects" role="button" class="btn centered mt mb">See more projects</a>
   </div>
-  <app-logos></app-logos>
-  <route-footer></route-footer>
+  <app-logos ngSkipHydration></app-logos>
+  <route-footer ngSkipHydration></route-footer>
 </div>

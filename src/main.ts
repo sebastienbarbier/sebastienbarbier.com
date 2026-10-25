@@ -3,7 +3,6 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import {
   provideClientHydration,
   withEventReplay,
-  withIncrementalHydration,
 } from '@angular/platform-browser';
 import {
   provideRouter,
@@ -31,12 +30,8 @@ const bootstrap = () =>
           anchorScrolling: 'enabled',
         }),
       ),
-      provideClientHydration(withEventReplay(), withIncrementalHydration()),
+      provideClientHydration(withEventReplay()),
     ],
   });
 
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', bootstrap);
-} else {
-  bootstrap();
-}
+bootstrap().catch((err) => console.error(err));
