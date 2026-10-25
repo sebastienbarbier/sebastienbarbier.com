@@ -4,7 +4,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const ROOT = path.resolve(__dirname, '..', '..');
+const ROOT = path.resolve(__dirname, '..');
 const APP_DIR = path.join(ROOT, 'src', 'app');
 const APP_ROUTES = path.join(APP_DIR, 'app.routes.ts');
 
