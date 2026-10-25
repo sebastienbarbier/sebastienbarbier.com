@@ -35,7 +35,6 @@ header {
 
   h1 {
     padding-bottom: 0;
-    font-size: 4.2em;
 
     @include for-desktop-down {
       font-size: 3.5em;
