@@ -9,6 +9,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### 🛠 Improvements
 
+- Draft v1 content guidelines under `content/guidelines/` (writing, design, brand, og:image, README)
+- Build-time og:image covers (Satori + sharp): route `data.og`, content-hashed PNGs in `static/og/`, `og:image` / `twitter:image` with width, height, type, and alt on every page
+- Muted and border design tokens; og generator reads palette from `_tokens.scss`
+- Dark mode fixes: header wordmark contrast, footer and mobile menu on `$color-surface`, social icon variants, Unique/Chefclub logo band contrast
+- Primary `.btn` style: filled gold background, sentence-case labels
+- Renamed misnamed `*_gold.svg` social icons to `*_dark.svg`
+
 - Public resume PDF at `/sebastien-barbier-resume.pdf` with a download link on the resume page
 - Desktop primary navigation links in the header; mobile keeps the fullscreen menu
 - Document-level scrolling (removed nested `.wrapper` scroll container)

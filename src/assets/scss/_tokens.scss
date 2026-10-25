@@ -16,6 +16,9 @@
   --sys-color-secondary-variant: #c9922e;
   --sys-color-on-secondary-variant: #202124;
   --sys-color-shadow: #16161d;
+  --sys-color-muted: #5f6368;
+  --sys-color-muted-on-primary: #a8a2a0;
+  --sys-color-border: #8a8178;
 
   // Type
   --sys-typeface-serif-variable: "Source Serif Variable", "Source Serif", ui-serif, Georgia, "Times New Roman", Times, serif;
@@ -59,6 +62,9 @@ html.dark {
   --sys-color-secondary-variant: #e8c878;
   --sys-color-on-secondary-variant: #121110;
   --sys-color-shadow: #000000;
+  --sys-color-muted: #9aa0a6;
+  --sys-color-muted-on-primary: #9aa0a6;
+  --sys-color-border: #7a7168;
 
   --comp-badge-background-color: #1a1816;
   --comp-badge-color: #e8eaed;

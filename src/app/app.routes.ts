@@ -15,7 +15,17 @@ export const appRoutes: Routes = [
   {
     path: '',
     loadChildren: () => import('./home/home.module').then(mod => mod.HomeModule),
-    data: { title: null, description: DESCRIPTION.home, state: 'home' }
+    data: {
+      title: null,
+      description: DESCRIPTION.home,
+      state: 'home',
+      og: {
+        eyebrow: 'Staff Software Engineer in Zürich',
+        title: 'Sébastien Barbier',
+        description:
+          'Founder of Shellui. Agentic AI at Unique AG, SAP FSM extensibility, Mozilla, and open-source projects.',
+      },
+    },
   },
   {
     path: 'projects',
@@ -33,22 +43,59 @@ export const appRoutes: Routes = [
   {
     path: 'contact',
     loadChildren: () => import('./contact/contact.module').then(mod => mod.ContactModule),
-    data: { title: 'Contact', description: DESCRIPTION.contact, state: 'contact' }
+    data: {
+      title: 'Contact',
+      description: DESCRIPTION.contact,
+      state: 'contact',
+      og: {
+        eyebrow: 'Contact',
+        description:
+          'Email Sébastien Barbier, or find him on X, GitHub, LinkedIn, Instagram, and other social networks.',
+      },
+    },
   },
   {
     path: 'resources',
     loadChildren: () => import('./resources/resources.module').then(mod => mod.ResourcesModule),
-    data: { title: 'Resources', description: DESCRIPTION.resources, state: 'resources' }
+    data: {
+      title: 'Resources',
+      description: DESCRIPTION.resources,
+      state: 'resources',
+      og: {
+        eyebrow: 'Resources',
+        description:
+          'Photos, logos, and brand assets for sharing or writing about Sébastien Barbier online.',
+      },
+    },
   },
   {
     path: 'legal',
     loadChildren: () => import('./legal/legal.module').then(mod => mod.LegalModule),
-    data: { title: 'Legal & copyright', description: DESCRIPTION.legal, state: 'legal' }
+    data: {
+      title: 'Legal & copyright',
+      description: DESCRIPTION.legal,
+      state: 'legal',
+      og: {
+        eyebrow: 'Legal',
+        description:
+          'Copyright, MIT licence terms, and hosting details for sebastienbarbier.com.',
+      },
+    },
   },
   {
     path: 'resume',
     loadChildren: () => import('./resume/resume.module').then(mod => mod.ResumeModule),
-    data: { title: 'Resume', description: DESCRIPTION.resume, state: 'resume' }
+    data: {
+      title: 'Resume',
+      description: DESCRIPTION.resume,
+      state: 'resume',
+      og: {
+        eyebrow: 'Resume',
+        title: 'Staff software engineer in Zürich',
+        description:
+          'TypeScript, React, and Python skills, work experience, education, and conferences.',
+      },
+    },
   },
   {
     path: '404',

@@ -24,7 +24,11 @@ const routes: Routes = [
       title: 'Projects',
       description: DESCRIPTION.projects,
       state: 'projects',
-      shareImage: '/assets/images/shellui/shellui_layout.png',
+      og: {
+        eyebrow: 'Projects',
+        description:
+          'Shellui, Seven23, FromEdwin, Chefclub, and Notes by Firefox: selected work by Sébastien Barbier.',
+      },
     },
   },
   {
@@ -34,7 +38,11 @@ const routes: Routes = [
       title: 'Shellui',
       description: DESCRIPTION.shellui,
       state: 'shellui',
-      shareImage: '/assets/images/shellui/shellui_layout.png',
+      og: {
+        eyebrow: 'Project',
+        description:
+          'Open-source React and TypeScript microfrontend shell: unified auth, multi-tenant Django services, 1,000+ tests in CI.',
+      },
     },
   },
   {
@@ -44,7 +52,11 @@ const routes: Routes = [
       title: 'Seven23',
       description: DESCRIPTION.seven23,
       state: 'seven23',
-      shareImage: '/assets/images/seven23/seven23_layout.png',
+      og: {
+        eyebrow: 'Project',
+        description:
+          'Open-source, privacy-first expense tracker with end-to-end encryption built in by design.',
+      },
     },
   },
   {
@@ -54,7 +66,11 @@ const routes: Routes = [
       title: 'FromEdwin',
       description: DESCRIPTION.fromedwin,
       state: 'fromedwin',
-      shareImage: '/assets/images/fromedwin/fromedwin_layout.png',
+      og: {
+        eyebrow: 'Project',
+        description:
+          'Learning project on async performance metrics: architecture, backend, observability, and CI/CD.',
+      },
     },
   },
   {
@@ -64,7 +80,11 @@ const routes: Routes = [
       title: 'Notes by Firefox',
       description: DESCRIPTION.mozilla,
       state: 'mozilla',
-      shareImage: '/assets/images/mozilla/note_thumbnail.png',
+      og: {
+        eyebrow: 'Project',
+        description:
+          'Freelance frontend at Mozilla Test Pilot: Notes by Firefox and validating the Firefox Sync stack.',
+      },
     },
   },
   {
@@ -74,7 +94,11 @@ const routes: Routes = [
       title: 'Chefclub',
       description: DESCRIPTION.chefclub,
       state: 'chefclub',
-      shareImage: '/assets/images/chefclub/chefclub-thumbnail.png',
+      og: {
+        eyebrow: 'Project',
+        description:
+          'Frontend work at Chefclub: UX improvements and web performance for the cooking brand website.',
+      },
     },
   },
 ];

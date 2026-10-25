@@ -73,6 +73,10 @@ footer {
     font-size: 0.8em;
     text-align: right;
 
+    .credit-muted {
+      color: $color-muted-on-primary;
+    }
+
     @include for-tablet-landscape-down {
       text-align: center;
     }
@@ -83,5 +87,32 @@ footer {
         text-decoration: none;
       }
     }
+  }
+}
+
+:host-context(html.dark) footer {
+  background: $color-surface;
+  color: $color-on-surface;
+
+  .getintouch {
+    h2 {
+      color: $color-on-surface;
+    }
+
+    a {
+      color: $color-on-surface;
+    }
+
+    ul li a {
+      color: $color-secondary;
+    }
+  }
+
+  .links p a {
+    color: $color-on-surface;
+  }
+
+  .links p .credit-muted {
+    color: $color-muted;
   }
 }
