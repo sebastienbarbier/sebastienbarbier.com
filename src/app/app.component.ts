@@ -2,11 +2,11 @@ import {
   Component,
   OnInit,
   Inject,
-  Renderer2,
   ElementRef,
   PLATFORM_ID,
   ChangeDetectionStrategy,
-  HostBinding,
+  OnDestroy,
+  ViewChild,
 } from "@angular/core";
 import {
   Router,
@@ -16,139 +16,112 @@ import {
   RouteConfigLoadEnd,
   RouterOutlet,
 } from "@angular/router";
-import { routerTransition } from "./router.animations";
 
 import { isPlatformBrowser, DOCUMENT } from "@angular/common";
 import { Title, Meta } from "@angular/platform-browser";
 
 @Component({
   selector: "app-root",
-  animations: [routerTransition],
   templateUrl: "./app.component.html",
   styleUrls: ["./app.component.scss"],
   changeDetection: ChangeDetectionStrategy.Eager,
   standalone: false,
 })
-export class AppComponent implements OnInit {
-  /**
-   * AppComponent define the general layout common to all pages.
-   * It include header, navigation, and footer.
-   * It also include some logic regarding Angular for smooth transitions between pages.
-   **/
+export class AppComponent implements OnInit, OnDestroy {
+  @ViewChild(RouterOutlet) private outlet?: RouterOutlet;
 
   navigationMenuStatus: Boolean;
   path: string;
   headerState: string;
   hideMenuAnimation: Boolean;
-  // Boolean to toggle the logo opacity effect
   contentIsScrolledTop: Boolean;
-
-  // Skip enter animations on first paint / hydration so prerendered HTML does not flash.
-  @HostBinding("@.disabled")
-  animationsDisabled = true;
 
   private readonly siteOrigin = "https://sebastienbarbier.com";
   private readonly defaultShareImage = `${this.siteOrigin}/assets/images/ressources/sebastienbarbier_profile_1024.jpg`;
+  private scrollListener?: () => void;
+  private readonly scrollTriggerPx = 40;
 
   constructor(
     private router: Router,
     private element: ElementRef,
-    private renderer: Renderer2,
     private titleService: Title,
     private metaService: Meta,
     @Inject(PLATFORM_ID) private platformId: Object,
-    @Inject(DOCUMENT) private _document: Document,
+    @Inject(DOCUMENT) private readonly document: Document,
   ) {
     this.navigationMenuStatus = false;
     this.hideMenuAnimation = true;
-    this.contentIsScrolledTop = false;
+    this.contentIsScrolledTop = true;
 
     this.path = "";
     this.headerState = "";
   }
 
-  closeNavigation() {
-    this.navigationMenuStatus = false;
-  }
-
   ngOnInit() {
+    if (isPlatformBrowser(this.platformId)) {
+      this.attachScrollListener();
+    }
+
     this.router.events.subscribe((event) => {
-      // Main instanceof event:
-      // NavigationStart, NavigationEnd, NavigationCancel, NavigationError, RoutesRecognized
       if (event instanceof NavigationStart) {
-        // On page change, we close navigation menu
         if (this.navigationMenuStatus === true) {
           this.navigationMenuStatus = !this.navigationMenuStatus;
         }
       }
-      // Start loading animation on menu icon
       if (event instanceof RouteConfigLoadStart && !this.hideMenuAnimation) {
-        this._document
+        this.document
           .getElementById("navigation__button")
           ?.classList.add("isLoading");
       }
-      // Stop loading animation on menu icon
       if (event instanceof RouteConfigLoadEnd && !this.hideMenuAnimation) {
-        this._document
+        this.document
           .getElementById("navigation__button")
           ?.classList.remove("isLoading");
       }
       if (event instanceof NavigationEnd) {
         this.path = event.url;
-        // We enable overflow on body if fullscreen action had disabled it
-        this._document.body.style.overflow = "auto";
+        this.document.body.style.overflow = "";
 
         if (this.hideMenuAnimation) {
           this.hideMenuAnimation = false;
-          // Re-enable route/page animations after the first paint.
-          if (isPlatformBrowser(this.platformId)) {
-            this.animationsDisabled = false;
-          }
         }
 
-        /**
-         * Handle header animation on scroll to avoid overlapping content together
-         *
-         **/
-        const SCROLL_PX_TRIGGER_HEADER_ANIMATION = 40;
-        const wrappers = this._document.getElementsByClassName("wrapper");
-        if (wrappers.length != 0) {
-          const element = wrappers[wrappers.length - 1];
+        if (this.outlet) {
+          this.updatePageSeo(this.outlet);
+        }
 
-          if (element.scrollTop < SCROLL_PX_TRIGGER_HEADER_ANIMATION) {
-            setTimeout(() => {
-              this.contentIsScrolledTop = true;
-            }, 400);
-          }
-
-          // Add listenner to hider with opacity te header logo
-          element.addEventListener("scroll", (event) => {
-            if (element.scrollTop < SCROLL_PX_TRIGGER_HEADER_ANIMATION) {
-              this.contentIsScrolledTop = true;
-            } else {
-              this.contentIsScrolledTop = false;
-            }
-          });
+        this.syncLogoVisibility();
+        if (isPlatformBrowser(this.platformId)) {
+          this.attachScrollListener();
         }
       }
     });
   }
 
-  getState(outlet: RouterOutlet) {
-    /**
-     * Will be triggered on every page navigation
-     **/
-    this.updatePageSeo(outlet);
+  ngOnDestroy() {
+    this.detachScrollListener();
+  }
 
-    // Update theme value (light/dark) based on route description
-    this.renderer.setAttribute(
-      this.renderer.parentNode(this.element.nativeElement),
-      "class",
-      outlet.activatedRouteData.theme,
-    );
+  private attachScrollListener() {
+    this.detachScrollListener();
+    this.syncLogoVisibility();
 
-    // Return state
-    return outlet.activatedRouteData.state;
+    this.scrollListener = () => this.syncLogoVisibility();
+    window.addEventListener("scroll", this.scrollListener, { passive: true });
+  }
+
+  private detachScrollListener() {
+    if (this.scrollListener) {
+      window.removeEventListener("scroll", this.scrollListener);
+      this.scrollListener = undefined;
+    }
+  }
+
+  private syncLogoVisibility() {
+    if (!isPlatformBrowser(this.platformId)) {
+      return;
+    }
+    this.contentIsScrolledTop = window.scrollY < this.scrollTriggerPx;
   }
 
   private updatePageSeo(outlet: RouterOutlet) {
@@ -234,21 +207,21 @@ export class AppComponent implements OnInit {
   }
 
   private setCanonicalLink(url: string) {
-    let link = this._document.querySelector(
+    let link = this.document.querySelector(
       'link[rel="canonical"]',
     ) as HTMLLinkElement | null;
     if (!link) {
-      link = this.renderer.createElement("link");
-      this.renderer.setAttribute(link, "rel", "canonical");
-      this.renderer.appendChild(this._document.head, link);
+      link = this.document.createElement("link");
+      link.setAttribute("rel", "canonical");
+      this.document.head.appendChild(link);
     }
-    this.renderer.setAttribute(link, "href", url);
+    link.setAttribute("href", url);
   }
 
   private removeCanonicalLink() {
-    const link = this._document.querySelector('link[rel="canonical"]');
+    const link = this.document.querySelector('link[rel="canonical"]');
     if (link?.parentNode) {
-      this.renderer.removeChild(link.parentNode, link);
+      link.parentNode.removeChild(link);
     }
   }
 

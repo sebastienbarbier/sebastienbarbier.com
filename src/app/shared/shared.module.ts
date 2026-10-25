@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { FooterComponent } from './footer/footer.component';
 import { LogosComponent } from './logos/logos.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { ThemeToggleComponent } from './theme-toggle/theme-toggle.component';
 
 export const providers = [
     // ... your shared services here
@@ -15,6 +16,7 @@ export const providers = [
     FooterComponent,
     LogosComponent,
     ProjectsComponent,
+    ThemeToggleComponent,
   ],
   imports: [
     RouterModule,
@@ -24,6 +26,7 @@ export const providers = [
     FooterComponent,
     LogosComponent,
     ProjectsComponent,
+    ThemeToggleComponent,
   ]
 })
 export class SharedModule {

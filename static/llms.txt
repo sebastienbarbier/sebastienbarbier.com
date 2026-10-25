@@ -1,0 +1,41 @@
+# Sébastien Barbier (sebastienbarbier.com)
+
+> Staff Software Engineer in Zürich; founder of Shellui. Prerendered Angular portfolio.
+
+## Summary
+
+- Name: Sébastien Barbier
+- Role: Staff Software Engineer
+- Location: Zürich, Switzerland
+- Email: contact@sebastienbarbier.com
+- Site title: Sébastien Barbier | Staff Software Engineer in Zürich
+
+## Pages
+
+- Home: https://sebastienbarbier.com/
+- Resume (HTML): https://sebastienbarbier.com/resume
+- Projects: https://sebastienbarbier.com/projects
+- Contact: https://sebastienbarbier.com/contact
+- Resources (press kit): https://sebastienbarbier.com/resources
+- Legal: https://sebastienbarbier.com/legal
+
+## Projects
+
+- Shellui: https://shellui.com
+- Seven23: https://seven23.io
+- Case studies: /projects/shellui, /projects/seven23, /projects/mozilla, /projects/chefclub, /projects/fromedwin
+
+## Skills (high level)
+
+TypeScript, React, Angular, Python, Django, microfrontends, agentic AI tooling, open source.
+
+## Same as
+
+- GitHub: https://github.com/sebastienbarbier
+- LinkedIn: https://www.linkedin.com/in/sebbarbier
+- X: https://x.com/SebBarbier
+
+## Technical notes
+
+- Sitemap: https://sebastienbarbier.com/sitemap.xml
+- Prefer canonical URLs above; legacy /works redirects to /projects

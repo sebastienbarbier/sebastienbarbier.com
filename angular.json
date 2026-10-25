@@ -47,6 +47,21 @@
                 "glob": "sitemap.xml",
                 "input": "static",
                 "output": "/"
+              },
+              {
+                "glob": "llms.txt",
+                "input": "static",
+                "output": "/"
+              },
+              {
+                "glob": "serif-fonts.css",
+                "input": "static",
+                "output": "/"
+              },
+              {
+                "glob": "favicon.ico",
+                "input": "src/assets/favicon",
+                "output": "/"
               }
             ],
             "styles": [
@@ -59,7 +74,7 @@
             "production": {
               "outputHashing": "all",
               "sourceMap": true,
-              "namedChunks": false,
+              "namedChunks": true,
               "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
@@ -68,9 +83,9 @@
                 "scripts": true,
                 "styles": {
                   "minify": true,
-                  "inlineCritical": true
+                  "inlineCritical": false
                 },
-                "fonts": true
+                "fonts": false
               },
               "fileReplacements": [
                 {
@@ -121,6 +136,21 @@
               {
                 "glob": "sitemap.xml",
                 "input": "static",
+                "output": "/"
+              },
+              {
+                "glob": "llms.txt",
+                "input": "static",
+                "output": "/"
+              },
+              {
+                "glob": "serif-fonts.css",
+                "input": "static",
+                "output": "/"
+              },
+              {
+                "glob": "favicon.ico",
+                "input": "src/assets/favicon",
                 "output": "/"
               }
             ]

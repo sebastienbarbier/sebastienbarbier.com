@@ -1,6 +1,8 @@
 // Design tokens (formerly @sebastienbarbier/design-system)
 
 :root {
+  color-scheme: light;
+
   // Color
   --sys-color-background: #f8f5f2;
   --sys-color-on-background: #202124;
@@ -8,9 +10,10 @@
   --sys-color-on-surface: #202124;
   --sys-color-primary: #1f1d1d;
   --sys-color-on-primary: #e8eaed;
-  --sys-color-secondary: #a37200;
+  // Darkened gold for >= 4.5:1 on background
+  --sys-color-secondary: #8a6100;
   --sys-color-on-secondary: #fff9eb;
-  --sys-color-secondary-variant: #dbb778;
+  --sys-color-secondary-variant: #c9922e;
   --sys-color-on-secondary-variant: #202124;
   --sys-color-shadow: #16161d;
 
@@ -35,9 +38,32 @@
   --comp-title-fontSizeH4: 2em;
   --comp-title-fontSizeH5: 1.8em;
   --comp-title-fontSizeH6: 1.6em;
-  --comp-title-selection-backgroundColor: #dbb778;
+  --comp-title-selection-backgroundColor: #c9922e;
   --comp-title-selection-color: #202124;
   --comp-title-headline-color: #202124;
   --comp-title-headline-font-family: "Open Sans Variable", "Open Sans", Helvetica, sans-serif;
   --comp-title-headline-font-size: 0.8em;
+}
+
+html.dark {
+  color-scheme: dark;
+
+  --sys-color-background: #121110;
+  --sys-color-on-background: #e8eaed;
+  --sys-color-surface: #1a1816;
+  --sys-color-on-surface: #e8eaed;
+  --sys-color-primary: #e8eaed;
+  --sys-color-on-primary: #121110;
+  --sys-color-secondary: #d4a84b;
+  --sys-color-on-secondary: #121110;
+  --sys-color-secondary-variant: #e8c878;
+  --sys-color-on-secondary-variant: #121110;
+  --sys-color-shadow: #000000;
+
+  --comp-badge-background-color: #1a1816;
+  --comp-badge-color: #e8eaed;
+  --comp-title-color: #e8eaed;
+  --comp-title-headline-color: #e8eaed;
+  --comp-title-selection-backgroundColor: #865500;
+  --comp-title-selection-color: #fff9eb;
 }

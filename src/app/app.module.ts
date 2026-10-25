@@ -7,7 +7,6 @@ import { NgModule, ErrorHandler, Injectable } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
 import { RouterModule } from '@angular/router';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
@@ -55,7 +54,6 @@ if (environment.production) {
     BrowserModule,
     CommonModule,
     HttpClientModule,
-    BrowserAnimationsModule,
     FormsModule,
     RouterModule.forRoot(appRoutes, { onSameUrlNavigation: 'ignore' }),
     SharedModule.forRoot(),

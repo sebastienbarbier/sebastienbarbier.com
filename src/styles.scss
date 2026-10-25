@@ -2,6 +2,7 @@
 // It is injected using angular.json description within styles
 
 @use "./assets/scss/fonts";
+@use "./assets/scss/view-transitions";
 @use "./assets/scss/theme" as *;
 
 .content {

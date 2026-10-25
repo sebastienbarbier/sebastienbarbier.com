@@ -1,39 +1,12 @@
-import { Component, OnInit, HostBinding, ChangeDetectionStrategy } from '@angular/core';
-
-import {
-  sequence,
-  trigger,
-  stagger,
-  animate,
-  style,
-  group,
-  query,
-  transition,
-  keyframes,
-  animateChild } from '@angular/animations';
-
-const resourcesTransition = trigger('resourcesTransition', [
-  transition(':enter', [
-  ]),
-  transition(':leave', [
-  ])
-]);
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'app-resources',
   templateUrl: './resources.component.html',
   styleUrls: ['./resources.component.scss'],
-  animations: [ resourcesTransition ],
   changeDetection: ChangeDetectionStrategy.Eager,
-  standalone: false
+  standalone: false,
 })
 export class ResourcesComponent implements OnInit {
-
-  constructor() { }
-
-  @HostBinding('@resourcesTransition') '': string;
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "Source Serif Variable";
+  src: url("/assets/fonts/SourceSerif4-Variable.woff2") format("woff2");
+  font-weight: 400 700;
+  font-stretch: 100%;
+  font-style: normal;
+  font-display: optional;
+}
+
+@font-face {
+  font-family: "Source Serif Variable";
+  src: url("/assets/fonts/SourceSerif4-Italic-Variable.woff2") format("woff2");
+  font-weight: 400 700;
+  font-stretch: 100%;
+  font-style: italic;
+  font-display: optional;
+}

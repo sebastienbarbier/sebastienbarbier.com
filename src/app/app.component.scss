@@ -13,17 +13,14 @@
   flex-direction: column;
 }
 
-main {
+main.site-main {
   flex: 1 1 auto;
   display: flex;
   flex-direction: column;
   position: relative;
-  min-height: 0;
-  overflow: hidden;
 }
 
-// Header logo as svg — fixed over scrolling page content, no full-width bar
-header {
+.site-header {
   position: fixed;
   top: 0;
   left: 0;
@@ -43,31 +40,22 @@ header {
     padding: 20px 20px 20px 18px;
     padding-top: calc(20px + env(safe-area-inset-top));
   }
-  // @include for-phone-only ...
 
   a.logo,
-  input#navigation,
-  input#navigation + label,
-  nav {
+  .header-actions,
+  .header-actions > *,
+  .mobile-nav {
     pointer-events: auto;
   }
 
   a.logo {
     -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
-
     display: inline-block;
-
     z-index: $zindex_header;
     transition: visibility 0s, left 0.3s ease, opacity 0.3s ease;
     position: relative;
-    left: 0px;
-    visibility: visible;
-
+    left: 0;
 
     &.hidden {
       opacity: 0;
@@ -80,8 +68,9 @@ header {
       width: 240px;
       color: transparent;
       transition: all 0.3s ease;
+
       g {
-        fill: #16161D;
+        fill: $color-shadow;
       }
 
       @include for-phone-only {
@@ -91,45 +80,99 @@ header {
   }
 }
 
+.header-actions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  z-index: $zindex_navigation + 2;
+}
+
+.header-nav {
+  display: none;
+
+  @media (min-width: 768px) {
+    display: block;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  a {
+    @include sansserif;
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 8px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: $color-primary;
+    transition: color 0.2s ease, background-color 0.2s ease;
+
+    &:hover,
+    &.active {
+      color: $color-secondary;
+    }
+
+    &.active {
+      background: color-mix(in srgb, $color-secondary 12%, transparent);
+    }
+  }
+}
+
 //
-// HAMBURGER MENU
+// HAMBURGER MENU (mobile / tablet portrait)
 //
 
 $navigation_button_size: 46px;
 
-// Input checkbox store the navigation menu state to open/close
 input#navigation {
   display: none;
+
+  @media (min-width: 768px) {
+    &,
+    & + label {
+      display: none !important;
+    }
+  }
 
   &:checked + label div {
     span {
       &:first-of-type {
         transform: rotate(45deg);
         top: 5px;
-        background-color: $color-background !important;
+        background-color: $color-on-primary !important;
       }
       &:last-of-type {
         transform: rotate(-45deg);
         bottom: 5px;
-        background-color: $color-background !important;
+        background-color: $color-on-primary !important;
       }
     }
   }
-  // hover when checked keep size consiste and override preivous styling
+
   &:checked + label:hover div span:first-of-type,
   &:checked + label:hover div span:last-of-type {
     width: 32px;
   }
 }
 
-// Button object to toggle navigation state
 input#navigation + label {
   position: relative;
   width: $navigation_button_size;
   height: $navigation_button_size;
   cursor: pointer;
   display: block;
-
   z-index: 999;
 
   div {
@@ -141,11 +184,9 @@ input#navigation + label {
     bottom: 0;
     width: 32px;
     height: 12px;
-
     cursor: pointer;
   }
 
-  // Button bars are represented as span
   span {
     position: absolute;
     display: block;
@@ -154,6 +195,7 @@ input#navigation + label {
     background-color: $color-primary;
     border-radius: 1px;
     transition: all 0.2s cubic-bezier(0.1, 0.82, 0.76, 0.965);
+
     &:first-of-type {
       top: 0;
     }
@@ -162,14 +204,11 @@ input#navigation + label {
     }
   }
 
-  // Animate menu bar on hover effect
-  &:hover {
-    // Disable hover effect on mobile.
-    @media (min-width: 1024px) {
+  @media (min-width: 900px) {
+    &:hover {
       span:first-of-type {
         width: 26px;
       }
-
       span:last-of-type {
         width: 12px;
       }
@@ -177,8 +216,7 @@ input#navigation + label {
   }
 }
 
-// Navigation Menu
-input#navigation + label +  nav {
+.mobile-nav {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -188,36 +226,44 @@ input#navigation + label +  nav {
   visibility: hidden;
   overflow-x: hidden;
   overflow-y: auto;
-
   background: $color-primary;
   color: $color-on-primary;
-
   display: flex;
   align-items: center;
   justify-content: flex-end;
-
   z-index: $zindex_navigation;
   transition: opacity 0.2s ease-in-out, visibility 0s 0.2s;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
 
   ul {
     text-align: left;
     width: 40%;
+    margin: 0;
+    padding: 0;
+
     li {
       list-style: none;
       margin: 0;
       padding: 5px 0;
+
       a {
         @include serif;
-        & {
-          text-decoration: none;
-          font-size: 3.6em;
-          color: $color-on-primary;
-          font-variation-settings: 'opsz' 24;
-          transition: all 0.2s cubic-bezier(0.1, 0.82, 0.76, 0.965);
-        }
+        display: inline-flex;
+        align-items: center;
+        min-height: 44px;
+        text-decoration: none;
+        font-size: 3.6em;
+        color: $color-on-primary;
+        font-variation-settings: 'opsz' 24;
+        transition: all 0.2s cubic-bezier(0.1, 0.82, 0.76, 0.965);
+
         &.active {
           color: $color-secondary-variant;
         }
+
         &:hover {
           color: $color-secondary-variant;
         }
@@ -225,26 +271,18 @@ input#navigation + label +  nav {
     }
 
     @include for-tablet-landscape-down {
-        width: 100%;
-        padding: 0;
-        text-align: center;
-        li a {
-          font-size: 3em;
-        }
-    }
+      width: 100%;
+      padding: 0;
+      text-align: center;
 
-    @include for-tablet-landscape-up {
-        width: 50%;
-    }
-
-    @include for-desktop-up {
-        width: 40%;
+      li a {
+        font-size: 3em;
+      }
     }
   }
 }
 
-// Animation to display navigation menu
-input#navigation:checked + label + nav {
+.site-header:has(input#navigation:checked) .mobile-nav {
   visibility: visible;
   opacity: 1;
   transition: visibility 0s, opacity 0.2s ease-in-out;

@@ -11,7 +11,11 @@ header {
   height: 100dvh;
 
   @include for-tablet-landscape-down {
-    justify-content: flex-end;
+    justify-content: flex-start;
+    padding-top: 120px;
+    min-height: auto;
+    height: auto;
+    padding-bottom: 48px;
   }
 
   h1 {
@@ -65,6 +69,15 @@ header {
     li {
       list-style: none;
       padding: 2px 4px;
+
+      a[role='button'] {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 44px;
+        min-height: 44px;
+      }
+
       img {
         height: 1.6em;
         opacity: 0.7;

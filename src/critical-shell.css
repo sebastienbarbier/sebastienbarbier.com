@@ -3,15 +3,16 @@
  * Inlined in index.html — keep in sync when changing _tokens.scss, _baseline.scss, or theme.scss.
  */
 :root {
+  color-scheme: light;
   --sys-color-background: #f8f5f2;
   --sys-color-on-background: #202124;
   --sys-color-surface: #f2edea;
   --sys-color-on-surface: #202124;
   --sys-color-primary: #1f1d1d;
   --sys-color-on-primary: #e8eaed;
-  --sys-color-secondary: #a37200;
+  --sys-color-secondary: #8a6100;
   --sys-color-on-secondary: #fff9eb;
-  --sys-color-secondary-variant: #dbb778;
+  --sys-color-secondary-variant: #c9922e;
   --sys-color-on-secondary-variant: #202124;
   --sys-color-shadow: #16161d;
   --sys-typeface-serif-variable: "Source Serif Variable", "Source Serif", Arial, serif;
@@ -19,9 +20,26 @@
   --sys-typeface-serif: "Source Serif", Arial, serif;
   --sys-typeface-sans: "Open Sans", Helvetica, sans-serif;
   --comp-title-color: #202124;
-  --comp-title-font-family: "Source Serif Variable", "Source Serif", Arial, serif;
+  --comp-title-font-family: Georgia, "Times New Roman", serif;
   --comp-title-headline-color: #202124;
   --comp-title-headline-font-family: "Open Sans Variable", "Open Sans", Helvetica, sans-serif;
+}
+
+html.dark {
+  color-scheme: dark;
+  --sys-color-background: #121110;
+  --sys-color-on-background: #e8eaed;
+  --sys-color-surface: #1a1816;
+  --sys-color-on-surface: #e8eaed;
+  --sys-color-primary: #e8eaed;
+  --sys-color-on-primary: #121110;
+  --sys-color-secondary: #d4a84b;
+  --sys-color-on-secondary: #121110;
+  --sys-color-secondary-variant: #e8c878;
+  --sys-color-on-secondary-variant: #121110;
+  --sys-color-shadow: #000000;
+  --comp-title-color: #e8eaed;
+  --comp-title-headline-color: #e8eaed;
 }
 
 html {
@@ -100,16 +118,11 @@ h2 {
 }
 
 .wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  overflow-x: hidden;
-  overflow-y: auto;
-  z-index: 1;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
+  min-height: 100dvh;
+  z-index: 1;
 }
 
 .wrapper > .container {
@@ -161,6 +174,9 @@ a.btn {
 a.btn.small {
   letter-spacing: 1px;
   font-size: 0.7em;
-  padding: 4px 10px;
+  min-height: 44px;
+  min-width: 44px;
+  padding: 10px 16px;
   font-weight: 600;
+  align-items: center;
 }

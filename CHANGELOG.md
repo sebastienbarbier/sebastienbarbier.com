@@ -5,6 +5,38 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [Unreleased]
+
+### 🛠 Improvements
+
+- Desktop primary navigation links in the header; mobile keeps the fullscreen menu
+- Document-level scrolling (removed nested `.wrapper` scroll container)
+- SSR client hydration with event replay; home prerender marked `ngSkipHydration` so the hero H1 stays the LCP element
+- Router View Transitions (subtle main slide/fade; fixed header)
+- Light/dark theme toggle (system default, localStorage, no-flash head script; Shellui-style circular reveal)
+- Subset variable fonts (Latin) and preload only Open Sans for first paint
+- Darkened gold accent for WCAG 2.1 AA contrast; larger tap targets on home actions
+- Added `/llms.txt` and `rel="describedby"` for LLM crawlers
+- Fixed invalid `</li>` markup on the home social list
+- Remove per-route Angular enter animations and `BrowserAnimationsModule` (fixes LCP with hydration)
+- Split serif fonts into async `/serif-fonts.css`; main bundle loads Open Sans only (~100 KB)
+- Disable critical CSS re-inlining that duplicated the stylesheet in HTML
+- Responsive `srcset`/`sizes` for project thumbnails; generated 600w/900w variants
+- Move page eyebrows out of `h1` for screen readers; fix projects heading order
+- Desktop nav from 768px; mobile hero starts below header (same hero copy)
+- Audit copy fixes (Vue.js, Web extension, grammar, LinkedIn/GitHub, punctuation)
+- JSON-LD `knowsAbout` and `alumniOf`; expanded `llms.txt`; root `favicon.ico`
+- Project detail nav: “All projects” + “Next project” labels
+- Post-process prerender HTML: defer Angular bootstrap until `load`, load app CSS non-blocking, dedupe stylesheets
+- Critical shell uses system serif for the hero H1 until async `/serif-fonts.css` loads (faster LCP)
+- Production `namedChunks` for lazy route bundles; Seven23 gallery `srcset` on key screenshots
+- Legal page privacy note (no analytics; theme in localStorage only)
+
+### Lighthouse (local mobile simulated, `dist/en`)
+
+- Before audit baseline: performance 57 (LCP 13.0 s), accessibility 96
+- After this phase: performance **97** (LCP **2.6 s**, FCP 1.0 s), accessibility **100**, SEO 100, best practices 100
+
 <!---
 ## [Unreleased] - yyyy-mm-dd
 
