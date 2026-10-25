@@ -19,6 +19,7 @@ import {
 
 import { isPlatformBrowser, DOCUMENT } from "@angular/common";
 import { Title, Meta } from "@angular/platform-browser";
+import { OG_SHARE_MANIFEST } from "./og-share-manifest.generated";
 
 @Component({
   selector: "app-root",
@@ -37,7 +38,6 @@ export class AppComponent implements OnInit, OnDestroy {
   contentIsScrolledTop: Boolean;
 
   private readonly siteOrigin = "https://sebastienbarbier.com";
-  private readonly defaultShareImage = `${this.siteOrigin}/assets/images/ressources/sebastienbarbier_profile_1024.jpg`;
   private scrollListener?: () => void;
   private readonly scrollTriggerPx = 40;
 
@@ -124,6 +124,14 @@ export class AppComponent implements OnInit, OnDestroy {
     this.contentIsScrolledTop = window.scrollY < this.scrollTriggerPx;
   }
 
+  private normalizedPath(routerUrl: string): string {
+    const path = routerUrl.split("?")[0].split("#")[0] || "/";
+    if (path.length > 1 && path.endsWith("/")) {
+      return path.slice(0, -1);
+    }
+    return path || "/";
+  }
+
   private updatePageSeo(outlet: RouterOutlet) {
     const data = outlet.activatedRouteData;
     const is404 = data.state === "404";
@@ -154,7 +162,16 @@ export class AppComponent implements OnInit, OnDestroy {
     const canonicalUrl = this.canonicalUrlFor(this.router.url);
     this.setCanonicalLink(canonicalUrl);
 
-    const shareImage = this.absoluteShareImage(data.shareImage);
+    const pathKey = this.normalizedPath(this.router.url);
+    const share = OG_SHARE_MANIFEST[pathKey];
+    if (!share) {
+      console.warn(`Missing og share manifest entry for ${pathKey}`);
+    }
+
+    const shareImage = share?.absoluteUrl ?? `${this.siteOrigin}/og/home.png`;
+    const shareAlt = share?.alt ?? title;
+    const shareWidth = share?.width ?? 1200;
+    const shareHeight = share?.height ?? 630;
 
     this.metaService.updateTag({ property: "og:type", content: "website" });
     this.metaService.updateTag({
@@ -171,6 +188,22 @@ export class AppComponent implements OnInit, OnDestroy {
       property: "og:image",
       content: shareImage,
     });
+    this.metaService.updateTag({
+      property: "og:image:width",
+      content: String(shareWidth),
+    });
+    this.metaService.updateTag({
+      property: "og:image:height",
+      content: String(shareHeight),
+    });
+    this.metaService.updateTag({
+      property: "og:image:type",
+      content: "image/png",
+    });
+    this.metaService.updateTag({
+      property: "og:image:alt",
+      content: shareAlt,
+    });
 
     this.metaService.updateTag({
       name: "twitter:card",
@@ -185,22 +218,14 @@ export class AppComponent implements OnInit, OnDestroy {
       name: "twitter:image",
       content: shareImage,
     });
-  }
-
-  private absoluteShareImage(shareImage?: string): string {
-    if (!shareImage) {
-      return this.defaultShareImage;
-    }
-    if (shareImage.startsWith("http://") || shareImage.startsWith("https://")) {
-      return shareImage;
-    }
-    return `${this.siteOrigin}${shareImage.startsWith("/") ? "" : "/"}${shareImage}`;
+    this.metaService.updateTag({
+      name: "twitter:image:alt",
+      content: shareAlt,
+    });
   }
 
   private canonicalUrlFor(routerUrl: string): string {
-    const path = routerUrl.split("?")[0].split("#")[0] || "/";
-    const normalized =
-      path.length > 1 && path.endsWith("/") ? path.slice(0, -1) : path;
+    const normalized = this.normalizedPath(routerUrl);
     return normalized === "/"
       ? this.siteOrigin
       : `${this.siteOrigin}${normalized}`;
@@ -233,10 +258,15 @@ export class AppComponent implements OnInit, OnDestroy {
       'property="og:description"',
       'property="og:url"',
       'property="og:image"',
+      'property="og:image:width"',
+      'property="og:image:height"',
+      'property="og:image:type"',
+      'property="og:image:alt"',
       'name="twitter:card"',
       'name="twitter:title"',
       'name="twitter:description"',
       'name="twitter:image"',
+      'name="twitter:image:alt"',
     ]) {
       this.metaService.removeTag(selector);
     }

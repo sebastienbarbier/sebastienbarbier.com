@@ -78,7 +78,7 @@ header {
         min-height: 44px;
       }
 
-      img {
+      img.social-icon {
         height: 1.6em;
         opacity: 0.7;
         transition: opacity ease 0.2s;
@@ -86,7 +86,25 @@ header {
           opacity: 1;
         }
       }
+
+      img.social-icon--dark {
+        display: none;
+      }
     }
+  }
+}
+
+:host-context(html.dark) header ul {
+  img.social-icon--light {
+    display: none;
+  }
+
+  img.social-icon--dark {
+    display: inline;
+  }
+
+  li:nth-child(3) img.social-icon--dark {
+    filter: brightness(0) invert(1);
   }
 }
 

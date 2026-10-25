@@ -67,6 +67,11 @@
                 "glob": "favicon.ico",
                 "input": "src/assets/favicon",
                 "output": "/"
+              },
+              {
+                "glob": "**/*",
+                "input": "static/og",
+                "output": "/og"
               }
             ],
             "styles": [
@@ -162,6 +167,11 @@
                 "glob": "favicon.ico",
                 "input": "src/assets/favicon",
                 "output": "/"
+              },
+              {
+                "glob": "**/*",
+                "input": "static/og",
+                "output": "/og"
               }
             ]
           }

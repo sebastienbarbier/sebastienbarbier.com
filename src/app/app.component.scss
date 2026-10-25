@@ -70,7 +70,7 @@ main.site-main {
       transition: all 0.3s ease;
 
       g {
-        fill: $color-shadow;
+        fill: $color-on-background;
       }
 
       @include for-phone-only {
@@ -167,6 +167,14 @@ input#navigation {
   }
 }
 
+:host-context(html.dark) input#navigation + label span {
+  background-color: $color-on-background;
+}
+
+:host-context(html.dark) input#navigation:checked + label div span {
+  background-color: $color-on-surface !important;
+}
+
 input#navigation + label {
   position: relative;
   width: $navigation_button_size;
@@ -212,6 +220,20 @@ input#navigation + label {
       span:last-of-type {
         width: 12px;
       }
+    }
+  }
+}
+
+:host-context(html.dark) .mobile-nav {
+  background: $color-surface;
+  color: $color-on-surface;
+
+  ul li a {
+    color: $color-on-surface;
+
+    &.active,
+    &:hover {
+      color: $color-secondary;
     }
   }
 }

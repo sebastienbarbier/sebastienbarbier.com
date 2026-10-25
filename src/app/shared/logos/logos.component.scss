@@ -47,6 +47,10 @@ ul.logos {
         max-height: 80px;
       }
     }
+    img.logo-dark {
+      display: none;
+    }
+
     img {
       max-height: 80px;
       width: 50%;
@@ -61,5 +65,27 @@ ul.logos {
         width: 60%;
       }
     }
+  }
+}
+
+:host-context(html.dark) ul.logos {
+  img.logo-light {
+    display: none;
+  }
+
+  img.logo-dark {
+    display: block;
+    max-height: 80px;
+    width: 50%;
+    filter: grayscale(100%);
+  }
+
+  li.logo-chefclub img.logo-dark {
+    filter: grayscale(100%) brightness(0) invert(1);
+  }
+
+  li.logo-sap img,
+  li.logo-mozilla img {
+    filter: grayscale(100%) brightness(1.35);
   }
 }

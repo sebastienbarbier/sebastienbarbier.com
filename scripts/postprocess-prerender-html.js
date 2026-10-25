@@ -7,6 +7,7 @@ const fs = require('fs');
 const path = require('path');
 
 const distDir = path.join(__dirname, '..', 'dist', 'en');
+const manifestPath = path.join(__dirname, '..', 'static', 'og-manifest.json');
 
 const scriptRe =
   /<script src="(runtime[^"]+\.js)" type="module"><\/script><script src="(polyfills[^"]+\.js)" type="module"><\/script><script src="(main[^"]+\.js)" type="module"><\/script>/;
@@ -64,7 +65,47 @@ function fixSerifNoscript(html) {
   );
 }
 
-function processFile(filePath) {
+function urlPathForHtml(filePath) {
+  const rel = path.relative(distDir, filePath).replace(/\\/g, '/');
+  if (rel === 'index.html') {
+    return '/';
+  }
+  const dir = path.dirname(rel);
+  return dir === '.' ? '/' : `/${dir}`;
+}
+
+function upsertMeta(html, attr, key, content) {
+  if (!content) {
+    return html;
+  }
+  const re = new RegExp(
+    `<meta ${attr}="${key}" content="[^"]*">`,
+    'i',
+  );
+  const tag = `<meta ${attr}="${key}" content="${content.replace(/"/g, '&quot;')}">`;
+  if (re.test(html)) {
+    return html.replace(re, tag);
+  }
+  return html.replace('</head>', `  ${tag}\n</head>`);
+}
+
+function injectOgMeta(html, filePath, manifest) {
+  const routePath = urlPathForHtml(filePath);
+  const entry = manifest[routePath];
+  if (!entry) {
+    return html;
+  }
+  html = upsertMeta(html, 'property', 'og:image', entry.absoluteUrl);
+  html = upsertMeta(html, 'property', 'og:image:width', String(entry.width));
+  html = upsertMeta(html, 'property', 'og:image:height', String(entry.height));
+  html = upsertMeta(html, 'property', 'og:image:type', 'image/png');
+  html = upsertMeta(html, 'property', 'og:image:alt', entry.alt);
+  html = upsertMeta(html, 'name', 'twitter:image', entry.absoluteUrl);
+  html = upsertMeta(html, 'name', 'twitter:image:alt', entry.alt);
+  return html;
+}
+
+function processFile(filePath, manifest) {
   let html = fs.readFileSync(filePath, 'utf8');
   const match = html.match(scriptRe);
   if (match) {
@@ -73,17 +114,18 @@ function processFile(filePath) {
   html = deferAppStylesheet(html);
   html = dedupeStylesheets(html);
   html = fixSerifNoscript(html);
+  html = injectOgMeta(html, filePath, manifest);
   fs.writeFileSync(filePath, html);
 }
 
-function walk(dir) {
+function walk(dir, manifest) {
   for (const name of fs.readdirSync(dir)) {
     const full = path.join(dir, name);
     const stat = fs.statSync(full);
     if (stat.isDirectory()) {
-      walk(full);
+      walk(full, manifest);
     } else if (name.endsWith('.html') && name !== 'index.original.html') {
-      processFile(full);
+      processFile(full, manifest);
     }
   }
 }
@@ -93,5 +135,12 @@ if (!fs.existsSync(distDir)) {
   process.exit(1);
 }
 
-walk(distDir);
+let manifest = {};
+if (fs.existsSync(manifestPath)) {
+  manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
+} else {
+  console.warn('postprocess-prerender-html: og-manifest.json missing, skipping og injection');
+}
+
+walk(distDir, manifest);
 console.log('postprocess-prerender-html: deferred bootstrap and styles on prerendered HTML');
