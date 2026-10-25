@@ -1,0 +1,61 @@
+@use '../../../assets/scss/_variables' as *;
+
+.theme-toggle {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: $color-primary;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+
+  &:hover {
+    background: color-mix(in srgb, $color-primary 8%, transparent);
+  }
+
+  &:focus-visible {
+    outline: 2px solid $color-secondary;
+    outline-offset: 2px;
+  }
+
+  svg {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+html.dark .theme-toggle {
+  color: $color-on-background;
+}
+
+.theme-toggle__icon {
+  position: absolute;
+  display: flex;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.theme-toggle__icon--sun {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.theme-toggle__icon--moon {
+  opacity: 0;
+  transform: scale(0.85);
+}
+
+html.dark .theme-toggle__icon--sun {
+  opacity: 0;
+  transform: scale(0.85);
+}
+
+html.dark .theme-toggle__icon--moon {
+  opacity: 1;
+  transform: scale(1);
+}
