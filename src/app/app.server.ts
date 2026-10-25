@@ -1,19 +1,18 @@
 import { NgModule } from '@angular/core';
 import { ServerModule } from '@angular/platform-server';
-import { HttpClientModule } from '@angular/common/http';
+import { provideRouter } from '@angular/router';
 
 import { AppModule } from './app.module';
 import { AppComponent } from './app.component';
+import { appRoutes } from './app.routes';
+import { serverRouterFeatures } from './app-router.config';
 
 @NgModule({
   imports: [
-    // The AppServerModule should import your AppModule followed
-    // by the ServerModule from @angular/platform-server.
     AppModule,
     ServerModule,
   ],
-  // Since the bootstrapped component is not inherited from your
-  // imported AppModule, it needs to be repeated here.
-  bootstrap: [ AppComponent ],
+  providers: [provideRouter(appRoutes, ...serverRouterFeatures)],
+  bootstrap: [AppComponent],
 })
 export class AppServerModule {}

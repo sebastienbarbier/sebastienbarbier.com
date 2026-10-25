@@ -1,4 +1,5 @@
 @use '../../assets/scss/_variables' as *;
+@use '../../assets/scss/_logo-dark' as *;
 
 h3 {
   display: flex;
@@ -6,9 +7,30 @@ h3 {
   justify-content: space-between;
   gap: 1em;
 
-  img {
+  .contact-icon {
     width: 32px;
     margin-right: 32px;
+  }
+
+  .contact-icon--dark {
+    display: none;
+  }
+}
+
+:host-context(html.dark) h3 {
+  .contact-icon--light {
+    display: none;
+  }
+
+  .contact-icon--dark {
+    display: inline;
+  }
+
+  .contact-icon--dark[src*='x_logo'],
+  .contact-icon--dark[src*='stackoverflow'],
+  .contact-icon--dark[src*='nomads_logo'],
+  .contact-icon--dark[src*='ethereum'] {
+    @include logo-mark-invert-for-dark;
   }
 }
 

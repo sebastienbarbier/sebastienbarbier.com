@@ -15,7 +15,6 @@ import { SharedModule } from './shared/shared.module';
 
 import { environment } from '../environments/environment';
 
-import { appRoutes } from './app.routes';
 
 const SENTRY_DSN = 'https://c36d29ca446044659f503c09282f68b5@sentry.io/1488195';
 
@@ -55,7 +54,7 @@ if (environment.production) {
     CommonModule,
     HttpClientModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes, { onSameUrlNavigation: 'ignore' }),
+    RouterModule,
     SharedModule.forRoot(),
   ],
   declarations: [

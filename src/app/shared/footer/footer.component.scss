@@ -24,14 +24,15 @@ footer {
       margin-bottom: 4px;
     }
 
-    .footer-ctas {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin: 1.25rem 0 1.5rem;
+    p.availability-line {
+      margin: 0 0 0.75rem;
+      font-size: 0.85rem;
+      font-weight: 500;
+      line-height: 1.4;
+      color: $color-muted-on-primary;
     }
 
-    a:not(.btn) {
+    a[href^='mailto:'] {
       color: $color-on-primary;
       text-decoration: none;
       @include serif;
@@ -43,12 +44,6 @@ footer {
         text-align: center;
         font-size: 1.5em;
       }
-    }
-
-    a.btn {
-      @include sansserif;
-      color: $color-secondary-variant;
-      font-size: 0.9375rem;
     }
 
     ul {
@@ -112,8 +107,12 @@ footer {
       color: $color-on-surface;
     }
 
-    a {
+    a[href^='mailto:'] {
       color: $color-on-surface;
+    }
+
+    p.availability-line {
+      color: $color-muted;
     }
 
     ul li a {
