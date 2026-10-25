@@ -3,6 +3,28 @@
   <head>
     <meta charset="utf-8" />
     <title>Sébastien Barbier | Staff Software Engineer in Zürich</title>
+    <meta
+      name="description"
+      content="Sébastien Barbier is a staff software engineer in Zürich and founder of Shellui. Portfolio spanning agentic AI at Unique AG, SAP FSM extensibility, Mozilla, and open-source projects."
+    />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="describedby" href="/llms.txt" />
+    <script>
+      (function () {
+        var stored = localStorage.getItem("theme");
+        var theme =
+          stored ||
+          (window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light");
+        if (theme === "dark") {
+          document.documentElement.classList.add("dark");
+          document.documentElement.style.colorScheme = "dark";
+          var themeColor = document.querySelector('meta[name="theme-color"]');
+          if (themeColor) themeColor.setAttribute("content", "#121110");
+        }
+      })();
+    </script>
     <base href="/" />
     <link
       rel="apple-touch-icon"
@@ -35,15 +57,16 @@
     />
     <!-- Critical shell: src/critical-shell.css (inlined for first paint) -->
     <style id="critical-shell">:root {
+  color-scheme: light;
   --sys-color-background: #f8f5f2;
   --sys-color-on-background: #202124;
   --sys-color-surface: #f2edea;
   --sys-color-on-surface: #202124;
   --sys-color-primary: #1f1d1d;
   --sys-color-on-primary: #e8eaed;
-  --sys-color-secondary: #a37200;
+  --sys-color-secondary: #865500;
   --sys-color-on-secondary: #fff9eb;
-  --sys-color-secondary-variant: #dbb778;
+  --sys-color-secondary-variant: #c9922e;
   --sys-color-on-secondary-variant: #202124;
   --sys-color-shadow: #16161d;
   --sys-typeface-serif-variable: "Source Serif Variable", "Source Serif", Arial, serif;
@@ -54,6 +77,23 @@
   --comp-title-font-family: "Source Serif Variable", "Source Serif", Arial, serif;
   --comp-title-headline-color: #202124;
   --comp-title-headline-font-family: "Open Sans Variable", "Open Sans", Helvetica, sans-serif;
+}
+
+html.dark {
+  color-scheme: dark;
+  --sys-color-background: #121110;
+  --sys-color-on-background: #e8eaed;
+  --sys-color-surface: #1a1816;
+  --sys-color-on-surface: #e8eaed;
+  --sys-color-primary: #e8eaed;
+  --sys-color-on-primary: #121110;
+  --sys-color-secondary: #d4a84b;
+  --sys-color-on-secondary: #121110;
+  --sys-color-secondary-variant: #e8c878;
+  --sys-color-on-secondary-variant: #121110;
+  --sys-color-shadow: #000000;
+  --comp-title-color: #e8eaed;
+  --comp-title-headline-color: #e8eaed;
 }
 
 html {
@@ -132,16 +172,11 @@ h2 {
 }
 
 .wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  overflow-x: hidden;
-  overflow-y: auto;
-  z-index: 1;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
+  min-height: 100dvh;
+  z-index: 1;
 }
 
 .wrapper > .container {
@@ -193,8 +228,11 @@ a.btn {
 a.btn.small {
   letter-spacing: 1px;
   font-size: 0.7em;
-  padding: 4px 10px;
+  min-height: 44px;
+  min-width: 44px;
+  padding: 10px 16px;
   font-weight: 600;
+  align-items: center;
 }</style>
     <link
       rel="preload"
@@ -203,14 +241,7 @@ a.btn.small {
       type="font/woff2"
       crossorigin
     />
-    <link
-      rel="preload"
-      href="/assets/fonts/SourceSerif4-Variable.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <meta name="theme-color" content="rgb(250,248,245)" />
+    <meta name="theme-color" content="#f8f5f2" />
     <meta
       name="viewport"
       content="width=device-width,minimum-scale=1.0,initial-scale=1.0,maximum-scale=5.0,viewport-fit=cover"
