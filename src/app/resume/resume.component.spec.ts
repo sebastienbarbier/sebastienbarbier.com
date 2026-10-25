@@ -22,4 +22,12 @@ describe('ResumeComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should link to the public resume PDF', () => {
+    const link: HTMLAnchorElement | null =
+      fixture.nativeElement.querySelector('a.resume-pdf__link');
+    expect(link).withContext('download link').toBeTruthy();
+    expect(link?.getAttribute('href')).toBe('/sebastien-barbier-resume.pdf');
+    expect(link?.textContent?.trim()).toBe('Download PDF');
+  });
 });

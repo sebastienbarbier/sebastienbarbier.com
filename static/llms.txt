@@ -14,6 +14,7 @@
 
 - Home: https://sebastienbarbier.com/
 - Resume (HTML): https://sebastienbarbier.com/resume
+- Resume (PDF): https://sebastienbarbier.com/sebastien-barbier-resume.pdf
 - Projects: https://sebastienbarbier.com/projects
 - Contact: https://sebastienbarbier.com/contact
 - Resources (press kit): https://sebastienbarbier.com/resources

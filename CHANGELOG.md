@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### 🛠 Improvements
 
+- Public resume PDF at `/sebastien-barbier-resume.pdf` with a download link on the resume page
 - Desktop primary navigation links in the header; mobile keeps the fullscreen menu
 - Document-level scrolling (removed nested `.wrapper` scroll container)
 - SSR client hydration with event replay; home prerender marked `ngSkipHydration` so the hero H1 stays the LCP element
