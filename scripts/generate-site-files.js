@@ -16,6 +16,8 @@ const APP_ROUTES = path.join(APP_DIR, 'app.routes.ts');
 const PATHS_FILE = path.join(ROOT, 'static.paths.txt');
 const SITEMAP_FILE = path.join(ROOT, 'static', 'sitemap.xml');
 const SITE_ORIGIN = 'https://sebastienbarbier.com';
+/** Static files at site root (not Angular routes) included in sitemap.xml */
+const EXTRA_SITEMAP_PATHS = ['/sebastien-barbier-resume.pdf'];
 
 function read(file) {
   return fs.readFileSync(file, 'utf8');
@@ -111,8 +113,11 @@ function writePaths(routes) {
 
 function writeSitemap(routes) {
   const lastmod = new Date().toISOString().slice(0, 10);
-  const urls = routes
-    .filter((route) => route !== '/404')
+  const paths = [
+    ...routes.filter((route) => route !== '/404'),
+    ...EXTRA_SITEMAP_PATHS,
+  ];
+  const urls = paths
     .map((route) => {
       const loc = route === '/' ? SITE_ORIGIN : `${SITE_ORIGIN}${route}`;
       return `  <url>\n    <loc>${loc}</loc>\n    <lastmod>${lastmod}</lastmod>\n  </url>`;
