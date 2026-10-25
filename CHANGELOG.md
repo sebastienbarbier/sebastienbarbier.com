@@ -5,6 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [Unreleased]
+
+### 🛠 Improvements
+
+- Desktop primary navigation links in the header; mobile keeps the fullscreen menu
+- Document-level scrolling (removed nested `.wrapper` scroll container)
+- SSR client hydration with event replay and incremental hydration for reliable LCP
+- Router View Transitions (subtle main slide/fade; fixed header)
+- Light/dark theme toggle (system default, localStorage, no-flash head script; Shellui-style circular reveal)
+- Subset variable fonts (Latin) and preload only Open Sans for first paint
+- Darkened gold accent for WCAG 2.1 AA contrast; larger tap targets on home actions
+- Added `/llms.txt` and `rel="describedby"` for LLM crawlers
+- Fixed invalid `</li>` markup on the home social list
+
 <!---
 ## [Unreleased] - yyyy-mm-dd
 

@@ -47,6 +47,11 @@
                 "glob": "sitemap.xml",
                 "input": "static",
                 "output": "/"
+              },
+              {
+                "glob": "llms.txt",
+                "input": "static",
+                "output": "/"
               }
             ],
             "styles": [
@@ -120,6 +125,11 @@
               },
               {
                 "glob": "sitemap.xml",
+                "input": "static",
+                "output": "/"
+              },
+              {
+                "glob": "llms.txt",
                 "input": "static",
                 "output": "/"
               }

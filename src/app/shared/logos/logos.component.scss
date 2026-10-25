@@ -1,5 +1,10 @@
 @use '../../../assets/scss/_variables' as *;
 
+p.centered a {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
 ul.logos {
   display: flex;
   justify-content: space-around;
