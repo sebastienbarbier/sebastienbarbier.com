@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### 🛠 Improvements
 
+- Dark mode logo fixes: transparent Mozilla wordmark with a white variant in the partner row; resume, contact, and project watermark logos adjusted so dark-on-white assets no longer show as white boxes
+
+
 - Home availability line and primary CTAs (Download resume, Contact); same CTAs in the footer
 - Recommendations on home and resume: Greg Tappero (CTO, Chefclub), Florian Rüegg (Houzy), and Derek Smith (2020-11-06); English default for Greg with an accessible French toggle; minimalist section styling
 - Blog at `/blog` with Markdown posts in `content/blog/`, RSS at `/rss.xml`, prerender, og covers, and BlogPosting JSON-LD

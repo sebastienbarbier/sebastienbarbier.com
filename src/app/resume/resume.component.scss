@@ -1,4 +1,5 @@
 @use '../../assets/scss/_variables' as *;
+@use '../../assets/scss/_logo-dark' as *;
 
 .resume-pdf {
   margin: 0 0 1.5em;
@@ -345,6 +346,22 @@ h2.relevantSkills + div {
       max-height: 320px;
       margin-bottom: 0px;
     }
+  }
+}
+
+:host-context(html.dark) {
+  .experiences aside img {
+    @include logo-mark-invert-for-dark;
+  }
+
+  .experiences aside img[src*='sap.svg'] {
+    @include logo-mark-lighten-for-dark;
+  }
+
+  ul.images img[src*='mozilla_logo'],
+  ul.images img[src*='chefclub-logo'],
+  ul.images img[src*='sebastienbarbier_logo'] {
+    @include logo-mark-invert-for-dark;
   }
 }
 

@@ -1,4 +1,5 @@
 @use '../../../assets/scss/_variables' as *;
+@use '../../../assets/scss/_logo-dark' as *;
 
 p.centered a {
   text-decoration: underline;
@@ -81,11 +82,14 @@ ul.logos {
   }
 
   li.logo-chefclub img.logo-dark {
-    filter: grayscale(100%) brightness(0) invert(1);
+    @include logo-mark-invert-for-dark;
   }
 
-  li.logo-sap img,
-  li.logo-mozilla img {
-    filter: grayscale(100%) brightness(1.35);
+  li.logo-mozilla img.logo-dark {
+    filter: grayscale(100%);
+  }
+
+  li.logo-sap img {
+    @include logo-mark-lighten-for-dark;
   }
 }

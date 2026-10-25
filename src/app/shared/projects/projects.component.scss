@@ -1,4 +1,5 @@
 @use '../../../assets/scss/_variables' as *;
+@use '../../../assets/scss/_logo-dark' as *;
 
 ul.projects {
   margin: 40px 0 0 0;
@@ -243,4 +244,13 @@ ul.projects {
       margin-bottom: 1.4em;
     }
   }
+}
+
+:host-context(html.dark) ul.projects > li .thumbnail .logo[src*='chefclub-logo-square'] {
+  filter: grayscale(100%) brightness(0) invert(1);
+  opacity: 0.05;
+}
+
+:host-context(html.dark) ul.projects > li:hover .thumbnail .logo[src*='chefclub-logo-square'] {
+  opacity: 0.1;
 }

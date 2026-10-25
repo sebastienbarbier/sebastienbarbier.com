@@ -1,0 +1,9 @@
+// Monochrome partner/social marks on dark surfaces (transparent background assets).
+
+@mixin logo-mark-invert-for-dark {
+  filter: grayscale(100%) brightness(0) invert(1);
+}
+
+@mixin logo-mark-lighten-for-dark {
+  filter: grayscale(100%) brightness(1.35);
+}
