@@ -5,32 +5,11 @@ header {
   flex-direction: column;
   justify-content: center;
 
-  // Keep a definite viewport height. max-height: -webkit-fill-available
-  // collapses to 0 in Safari because this block's parent height depends on it.
   height: 100vh;
   height: 100dvh;
 
   @include for-tablet-landscape-down {
-    justify-content: flex-start;
-    padding-top: 120px;
-    min-height: auto;
-    height: auto;
-    padding-bottom: 48px;
-  }
-
-  p.availability {
-    margin: 0 0 1rem;
-    font-size: 0.95rem;
-    font-weight: 600;
-    color: $color-secondary;
-    max-width: 36em;
-  }
-
-  .hero-ctas {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 1.25rem;
+    justify-content: flex-end;
   }
 
   h1 {
@@ -46,18 +25,6 @@ header {
 
     @include for-phone-only {
       font-size: 2.2em;
-    }
-  }
-
-  h2 {
-    font-size: 2rem;
-
-    @include for-tablet-landscape-down {
-      font-size: 1.75rem;
-    }
-
-    @include for-phone-only {
-      font-size: 1.5rem;
     }
   }
 
@@ -97,12 +64,11 @@ header {
       list-style: none;
       padding: 2px 4px;
 
-      a[role='button'] {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        min-width: 44px;
-        min-height: 44px;
+      a.btn.small {
+        text-transform: uppercase;
+        letter-spacing: 1.2px;
+        font-size: 0.7em;
+        padding: 4px 10px;
       }
 
       img.social-icon {
@@ -134,4 +100,3 @@ header {
     filter: brightness(0) invert(1);
   }
 }
-
