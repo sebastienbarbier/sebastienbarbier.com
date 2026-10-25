@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### 🛠 Improvements
 
 - Home availability line and primary CTAs (Download resume, Contact); same CTAs in the footer
-- Recommendations section with Greg Tappero (Chefclub) and Florian Rüegg (Houzy) quotes from `testimonials.data.ts`
+- Recommendations on home and resume: Greg Tappero (CTO, Chefclub), Florian Rüegg (Houzy), and Derek Smith (2020-11-06); English default for Greg with an accessible French toggle; minimalist section styling
 - Blog at `/blog` with Markdown posts in `content/blog/`, RSS at `/rss.xml`, prerender, og covers, and BlogPosting JSON-LD
 - First post: "Why I am starting a blog when AI writes everything" (marked `draft_review` in source)
 - Navigation link to Blog; spell place as Zürich across site copy and resume presentation
@@ -20,7 +20,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Build-time og:image covers (Satori + sharp): route `data.og`, content-hashed PNGs in `static/og/`, `og:image` / `twitter:image` with width, height, type, and alt on every page
 - Muted and border design tokens; og generator reads palette from `_tokens.scss`
 - Dark mode fixes: header wordmark contrast, footer and mobile menu on `$color-surface`, social icon variants, Unique/Chefclub logo band contrast
-- Primary `.btn` style: filled gold background, sentence-case labels
+- Restored minimalist `.btn` links (Open Sans, ~15px, sentence case); calmer page heading scale; Source Serif loading/rendering aligned with `main`; blog post bodies embedded at build time for prerender; two `draft: true` sample posts for layout review (excluded from RSS/sitemap)
 - Renamed misnamed `*_gold.svg` social icons to `*_dark.svg`
 
 - Public resume PDF at `/sebastien-barbier-resume.pdf` with a download link on the resume page

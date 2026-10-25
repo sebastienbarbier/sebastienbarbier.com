@@ -2,13 +2,18 @@
   @if (post) {
     <div class="container centered blog-post">
       <p class="eyebrow center">Blog</p>
-      <h1 class="center">{{ post.title }}</h1>
+      <h1 class="center">
+        {{ post.title }}
+        @if (post.draft) {
+          <span class="badge draft-badge">Draft</span>
+        }
+      </h1>
       <p class="meta sansserif center">
         <time [attr.datetime]="post.date">{{ post.date }}</time>
         · Zürich
       </p>
-      @if (markdown) {
-        <markdown class="description" [data]="markdown"></markdown>
+      @if (htmlContent) {
+        <div class="description" [innerHTML]="htmlContent"></div>
       }
     </div>
   } @else {

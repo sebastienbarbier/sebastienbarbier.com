@@ -40,6 +40,16 @@ ul.post-list {
         color: $color-secondary;
       }
     }
+
+    .draft-badge {
+      margin-left: 0.5rem;
+      vertical-align: middle;
+      font-size: 0.65rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      background: color-mix(in srgb, $color-secondary 18%, transparent);
+      color: $color-secondary;
+    }
   }
 
   .read-more {

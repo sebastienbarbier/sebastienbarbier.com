@@ -1,5 +1,7 @@
 /404
 /blog
+/blog/sample-notes-from-a-code-review
+/blog/sample-shipping-small-ui-changes
 /blog/why-write-when-ai-writes-everything
 /contact
 /legal

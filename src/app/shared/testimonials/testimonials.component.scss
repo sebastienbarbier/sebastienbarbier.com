@@ -4,12 +4,18 @@
   background: $color-surface;
 
   .container {
-    padding-top: 55px;
-    padding-bottom: 50px;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
 
   h2 {
     margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+
+    @include for-phone-only {
+      font-size: 1.75rem;
+    }
   }
 }
 
@@ -19,7 +25,7 @@ ul.testimonial-list {
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.75rem;
 }
 
 .testimonial-card {
@@ -29,29 +35,41 @@ ul.testimonial-list {
 
   .quote {
     @include serif;
-    font-size: 1.15rem;
+    font-size: 1.05rem;
     line-height: 1.55;
-    margin: 0 0 0.75rem;
+    margin: 0 0 0.5rem;
     color: $color-on-background;
   }
 
-  .quote-fr {
-    font-style: italic;
-  }
-
-  .quote-label {
-    font-size: 0.75rem;
+  .locale-toggle {
+    appearance: none;
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.8125rem;
     font-weight: 600;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: $color-muted;
-    margin: 0 0 0.35rem;
+    letter-spacing: 0.02em;
+    color: $color-secondary;
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+    cursor: pointer;
+
+    &:hover {
+      color: $color-on-background;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $color-secondary;
+      outline-offset: 2px;
+    }
   }
 
   .testimonial-meta {
-    font-size: 0.85rem;
+    font-size: 0.8125rem;
+    line-height: 1.45;
     color: $color-muted;
-    margin-top: 0.75rem;
+    margin-top: 0.65rem;
 
     cite {
       font-style: normal;

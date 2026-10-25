@@ -5,25 +5,35 @@
       @for (item of testimonials; track item.id) {
         <li class="testimonial-card">
           <blockquote>
-            @if (item.quoteFr) {
-              <p class="quote quote-fr" lang="fr">{{ item.quoteFr }}</p>
-              <p class="quote-label sansserif">English translation</p>
-              <p class="quote quote-en" lang="en">{{ item.quoteEn }}</p>
-            } @else if (item.quote) {
-              <p class="quote" lang="en">{{ item.quote }}</p>
+            <p class="quote" [lang]="quoteLang(item)">{{ quoteText(item) }}</p>
+            @if (item.quoteFr && item.quoteEn) {
+              <button
+                type="button"
+                class="locale-toggle sansserif"
+                (click)="toggleLocale(item.id)"
+                [attr.aria-pressed]="isFrench(item.id)"
+              >
+                {{ toggleLabel(item.id) }}
+              </button>
             }
           </blockquote>
           <footer class="testimonial-meta sansserif">
             <cite>{{ item.name }}</cite>
             <span class="sep" aria-hidden="true"> · </span>
-            @if (item.role) {
+            @if (item.role && item.company) {
               <span>{{ item.role }}, {{ item.company }}</span>
-            } @else {
+            } @else if (item.role) {
+              <span>{{ item.role }}</span>
+            } @else if (item.company) {
               <span>{{ item.company }}</span>
+            }
+            @if (item.relation) {
+              <span class="sep" aria-hidden="true"> · </span>
+              <span>{{ item.relation }}</span>
             }
             @if (item.date) {
               <span class="sep" aria-hidden="true"> · </span>
-              <time>{{ item.date }}</time>
+              <time [attr.datetime]="item.date">{{ item.date }}</time>
             }
             <span class="sep" aria-hidden="true"> · </span>
             <span class="source">{{ item.source }}</span>

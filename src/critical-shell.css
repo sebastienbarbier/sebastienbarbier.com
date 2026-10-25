@@ -15,12 +15,12 @@
   --sys-color-secondary-variant: #c9922e;
   --sys-color-on-secondary-variant: #202124;
   --sys-color-shadow: #16161d;
-  --sys-typeface-serif-variable: "Source Serif Variable", "Source Serif", Arial, serif;
+  --sys-typeface-serif-variable: "Source Serif Variable", "Source Serif", ui-serif, Georgia, "Times New Roman", Times, serif;
   --sys-typeface-sans-variable: "Open Sans Variable", "Open Sans", Helvetica, sans-serif;
-  --sys-typeface-serif: "Source Serif", Arial, serif;
+  --sys-typeface-serif: "Source Serif", ui-serif, Georgia, "Times New Roman", Times, serif;
   --sys-typeface-sans: "Open Sans", Helvetica, sans-serif;
   --comp-title-color: #202124;
-  --comp-title-font-family: Georgia, "Times New Roman", serif;
+  --comp-title-font-family: "Source Serif Variable", "Source Serif", ui-serif, Georgia, "Times New Roman", Times, serif;
   --comp-title-headline-color: #202124;
   --comp-title-headline-font-family: "Open Sans Variable", "Open Sans", Helvetica, sans-serif;
 }
@@ -86,34 +86,58 @@ h6 {
 }
 
 h1 {
+  font-size: 3.2em;
+}
+
+header#home h1 {
   font-size: 4.2em;
 }
 
 @media (max-width: 899px) {
   h1 {
+    font-size: 2.6em;
+  }
+
+  header#home h1 {
     font-size: 3.2em;
   }
 }
 
 @media (max-width: 599px) {
   h1 {
+    font-size: 2.2em;
+  }
+
+  header#home h1 {
     font-size: 2.7em;
   }
 }
 
 h2 {
-  font-size: 2.8em;
+  font-size: 2.2em;
+}
+
+header#home h2 {
+  font-size: 2rem;
 }
 
 @media (max-width: 899px) {
   h2 {
-    font-size: 2.4em;
+    font-size: 1.9em;
+  }
+
+  header#home h2 {
+    font-size: 1.75rem;
   }
 }
 
 @media (max-width: 599px) {
   h2 {
-    font-size: 2.2em;
+    font-size: 1.75em;
+  }
+
+  header#home h2 {
+    font-size: 1.5rem;
   }
 }
 
@@ -166,21 +190,21 @@ a.btn {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  background: var(--sys-color-secondary);
-  color: var(--sys-color-on-secondary);
+  background: transparent;
+  color: var(--sys-color-secondary);
+  font-family: var(--sys-typeface-sans-variable);
   text-transform: none;
   letter-spacing: 0.02em;
   font-weight: 600;
-  border-radius: 8px;
+  font-size: 0.9375rem;
+  line-height: 1.4;
   padding: 16px 40px;
 }
 
 a.btn.small {
-  letter-spacing: 1px;
-  font-size: 0.7em;
-  min-height: 44px;
-  min-width: 44px;
-  padding: 10px 16px;
+  letter-spacing: 0.02em;
+  font-size: 0.9375rem;
+  padding: 4px 10px;
   font-weight: 600;
   align-items: center;
 }

@@ -1,10 +1,29 @@
 [
   {
+    "slug": "blog-sample-notes-from-a-code-review",
+    "path": "/blog/sample-notes-from-a-code-review",
+    "state": "blog-sample-notes-from-a-code-review",
+    "title": "Sample: Notes from a code review",
+    "eyebrow": "Blog",
+    "description": "Placeholder article for typography and spacing review.",
+    "draft": true
+  },
+  {
+    "slug": "blog-sample-shipping-small-ui-changes",
+    "path": "/blog/sample-shipping-small-ui-changes",
+    "state": "blog-sample-shipping-small-ui-changes",
+    "title": "Sample: Shipping small UI changes without drama",
+    "eyebrow": "Blog",
+    "description": "Placeholder layout sample for the blog template.",
+    "draft": true
+  },
+  {
     "slug": "blog-why-write-when-ai-writes-everything",
     "path": "/blog/why-write-when-ai-writes-everything",
     "state": "blog-why-write-when-ai-writes-everything",
     "title": "Why write when AI writes everything",
     "eyebrow": "Blog",
-    "description": "Whether a personal blog still makes sense when models draft text in seconds."
+    "description": "Whether a personal blog still makes sense when models draft text in seconds.",
+    "draft": false
   }
 ]

@@ -12,7 +12,12 @@
         <li>
           <article>
             <time class="sansserif" [attr.datetime]="post.date">{{ post.date }}</time>
-            <h2><a [routerLink]="['/blog', post.slug]">{{ post.title }}</a></h2>
+            <h2>
+              <a [routerLink]="['/blog', post.slug]">{{ post.title }}</a>
+              @if (post.draft) {
+                <span class="badge draft-badge">Draft</span>
+              }
+            </h2>
             <p>{{ post.description }}</p>
             <a class="read-more sansserif" [routerLink]="['/blog', post.slug]">Read post</a>
           </article>
